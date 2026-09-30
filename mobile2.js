@@ -122,3 +122,23 @@
     });
   });
 })();
+
+// ── Lazy-load CSS background-image ───────────────────────────────────────────
+(function() {
+  if (!('IntersectionObserver' in window)) return;
+
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      var bg = el.getAttribute('data-bg');
+      if (bg) {
+        el.style.backgroundImage = 'url(' + bg + ')';
+        el.removeAttribute('data-bg');
+      }
+      io.unobserve(el);
+    });
+  }, { rootMargin: '200px' });
+
+  document.querySelectorAll('[data-bg]').forEach(function(el) { io.observe(el); });
+})();
