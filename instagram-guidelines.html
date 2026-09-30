@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Guidelines — THNKFOR.ME</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bone: #F8F8F8;
+    --black: #0A0A0A;
+    --orange: #FF3B00;
+    --muted: #666666;
+    --border: rgba(0,0,0,0.1);
+    --dark-surface: #141414;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Space Grotesk', sans-serif; background: var(--bone); color: var(--black); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--black);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px; height: 56px;
+    position: sticky; top: 0; z-index: 200;
+  }
+  .header-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 18px; letter-spacing: -0.02em; color: #fff; }
+  .header-logo span { color: var(--orange); }
+  .header-badge {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--bone); display: flex; align-items: center; gap: 8px;
+  }
+  .header-badge::before { content: ''; width: 6px; height: 6px; background: var(--orange); display: inline-block; }
+
+  /* ── NAV ── */
+  .site-nav {
+    background: var(--bone); border-bottom: 1px solid var(--border);
+    display: flex; gap: 0; padding: 0 48px;
+    position: sticky; top: 56px; z-index: 100; overflow-x: auto;
+  }
+  .site-nav a {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
+    color: var(--muted); padding: 16px 20px; display: block;
+    border-bottom: 2px solid transparent; white-space: nowrap;
+    transition: color .15s, border-color .15s;
+  }
+  .site-nav a:hover, .site-nav a.active { color: var(--black); border-bottom-color: var(--orange); }
+
+  /* ── SECTIONS ── */
+  .section { padding: 80px 48px; border-bottom: 1px solid var(--border); }
+  .section:last-of-type { border-bottom: none; }
+
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 56px; display: flex; align-items: center; gap: 16px;
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  h2 { font-size: 40px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 32px; line-height: 1.1; }
+  h3 { font-size: 22px; font-weight: 500; margin-bottom: 16px; margin-top: 48px; }
+  h3:first-of-type { margin-top: 0; }
+  p { margin-bottom: 16px; color: #333; }
+  strong { color: var(--black); font-weight: 600; }
+
+  /* ── STRATEGY ── */
+  .strategy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 40px; }
+  .strategy-cell { background: var(--bone); padding: 32px; }
+  .strategy-cell .label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+  .strategy-cell .value { font-size: 16px; line-height: 1.5; }
+
+  .who-table { width: 100%; border-collapse: collapse; margin-top: 40px; }
+  .who-table th { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+  .who-table td { padding: 20px 16px; border-bottom: 1px solid var(--border); font-size: 15px; vertical-align: top; }
+  .who-table tr:last-child td { border-bottom: none; }
+  .who-table td:first-child { font-weight: 600; }
+
+  /* ── FORMATS ── */
+  .formats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 48px; }
+  .format-card { display: flex; flex-direction: column; gap: 20px; }
+  .format-mockup { display: flex; justify-content: center; }
+  .format-info { }
+  .format-badge {
+    display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 9px;
+    font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 4px 10px; margin-bottom: 10px;
+  }
+  .badge-primary { background: var(--orange); color: #fff; }
+  .badge-secondary { background: var(--black); color: var(--bone); }
+  .badge-avoid { background: var(--border); color: var(--muted); }
+  .format-name { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .format-size { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 10px; }
+  .format-desc { font-size: 14px; color: #444; line-height: 1.5; }
+
+  /* ── RUBRICS ── */
+  .rubrics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
+  .rubric-card { background: var(--bone); padding: 48px; display: flex; flex-direction: column; gap: 32px; }
+  .rubric-card.dark { background: var(--black); color: var(--bone); }
+  .rubric-num { font-family: 'IBM Plex Mono', monospace; font-size: 48px; font-weight: 500; color: var(--orange); line-height: 1; }
+  .rubric-name { font-size: 24px; font-weight: 600; }
+  .rubric-share { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: -16px; }
+  .rubric-card.dark .rubric-share { color: #555; }
+  .rubric-desc { font-size: 15px; line-height: 1.6; color: #444; }
+  .rubric-card.dark .rubric-desc { color: #aaa; }
+  .post-preview {
+    border: 1px solid var(--border); padding: 0; aspect-ratio: 4/5;
+    max-width: 200px; position: relative; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .post-preview.dark-preview { background: var(--black); border-color: #333; }
+  .post-preview.light-preview { background: var(--bone); border-color: var(--border); }
+  .preview-tag {
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange);
+    padding: 12px 14px;
+  }
+  .preview-content { padding: 12px 14px; flex: 1; display: flex; align-items: center; }
+  .preview-big-num { font-size: 56px; font-weight: 600; color: #fff; line-height: 1; letter-spacing: -0.03em; }
+  .preview-big-num span { display: block; font-size: 11px; font-weight: 400; color: #666; letter-spacing: 0; margin-top: 4px; }
+  .preview-quote { font-size: 13px; font-weight: 500; color: var(--black); line-height: 1.4; }
+  .preview-line { width: 3px; height: 100%; background: var(--orange); position: absolute; left: 0; top: 0; }
+  .preview-cite { font-size: 12px; font-weight: 500; color: #fff; line-height: 1.4; padding: 0 14px 12px; }
+  .preview-dot { width: 6px; height: 6px; background: var(--orange); margin: 0 14px 14px auto; display: block; }
+
+  /* ── CONTENT PLAN ── */
+  .plan-table { width: 100%; border-collapse: collapse; margin-top: 48px; font-size: 14px; }
+  .plan-table th { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 12px 16px; border-bottom: 2px solid var(--border); background: var(--bone); }
+  .plan-table td { padding: 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .plan-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+  .plan-table tr:hover td { background: rgba(255,59,0,0.04); }
+  .rubric-tag {
+    display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 9px;
+    font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 3px 8px; white-space: nowrap;
+  }
+  .tag-sistema { background: var(--black); color: var(--bone); }
+  .tag-razbor { background: var(--bone); color: var(--black); border: 1px solid var(--border); }
+  .tag-cifry { background: var(--orange); color: #fff; }
+  .tag-pozicia { background: #222; color: var(--bone); }
+  .tag-storis { background: var(--bone); color: var(--muted); border: 1px solid var(--border); font-style: italic; }
+  .format-pill { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); }
+  .day-num { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; color: var(--black); }
+
+  /* ── COPY ── */
+  .hooks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
+  .hook-card { background: var(--bone); padding: 40px; position: relative; }
+  .hook-q { font-size: 72px; font-weight: 700; color: var(--orange); line-height: 0.8; margin-bottom: 16px; font-family: 'Space Grotesk', sans-serif; }
+  .hook-text { font-size: 19px; font-weight: 500; line-height: 1.4; color: var(--black); margin-bottom: 20px; }
+  .hook-why { font-size: 13px; color: var(--muted); line-height: 1.5; font-family: 'IBM Plex Mono', monospace; border-top: 1px solid var(--border); padding-top: 16px; }
+
+  .copy-rules { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
+  .copy-block { border: 1px solid var(--border); padding: 32px; }
+  .copy-block-title { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 20px; }
+  .copy-block ul { list-style: none; }
+  .copy-block li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 15px; color: #333; }
+  .copy-block li:last-child { border-bottom: none; }
+  .copy-block li.forbidden { color: var(--muted); text-decoration: line-through; }
+
+  /* ── METRICS ── */
+  .metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 48px; }
+  .metric-card { background: var(--bone); padding: 40px 32px; }
+  .metric-num { font-size: 56px; font-weight: 600; letter-spacing: -0.03em; color: var(--orange); line-height: 1; margin-bottom: 8px; }
+  .metric-label { font-size: 15px; font-weight: 500; color: var(--black); margin-bottom: 8px; }
+  .metric-time { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .metric-priority { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; display: inline-block; margin-bottom: 12px; }
+  .prio-high { background: var(--orange); color: #fff; }
+  .prio-med { background: var(--black); color: var(--bone); }
+  .prio-low { background: var(--border); color: var(--muted); }
+
+  /* ── FIRST POST ── */
+  .first-post { display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: start; margin-top: 48px; border: 1px solid var(--border); padding: 48px; }
+  .first-post-visual { width: 240px; background: var(--black); aspect-ratio: 4/5; display: flex; flex-direction: column; justify-content: space-between; padding: 20px; flex-shrink: 0; }
+  .first-post-tag { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); }
+  .first-post-quote { font-size: 20px; font-weight: 500; color: #fff; line-height: 1.3; letter-spacing: -0.01em; }
+  .first-post-dot { width: 8px; height: 8px; background: var(--orange); margin-left: auto; }
+  .first-post-text h4 { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
+  .post-body { font-size: 15px; line-height: 1.7; color: #333; white-space: pre-line; }
+  .post-tags { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted); margin-top: 16px; }
+
+  /* ── STRUCTURE BLOCK ── */
+  .struct-block { border-left: 3px solid var(--orange); padding: 24px 32px; margin-top: 24px; background: rgba(255,59,0,0.03); }
+  .struct-block code { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--black); display: block; line-height: 2; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .site-header { padding: 0 24px; }
+    .site-nav { padding: 0 24px; }
+    .section { padding: 60px 24px; }
+    .formats-grid { grid-template-columns: 1fr 1fr; }
+    .rubrics-grid { grid-template-columns: 1fr; }
+    .hooks-grid { grid-template-columns: 1fr; }
+    .metrics-grid { grid-template-columns: 1fr 1fr; }
+    .copy-rules { grid-template-columns: 1fr; }
+    .strategy-grid { grid-template-columns: 1fr; }
+    .first-post { grid-template-columns: 1fr; }
+    .first-post-visual { width: 100%; max-width: 240px; }
+    h2 { font-size: 28px; }
+  }
+  @media (max-width: 600px) {
+    .formats-grid { grid-template-columns: 1fr; }
+    .metrics-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-logo">THNKFOR<span>.</span>ME</div>
+  <div class="header-badge">Instagram Guidelines 2026</div>
+</header>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="#strategy">Стратегия</a>
+  <a href="#formats">Форматы</a>
+  <a href="#rubrics">Рубрики</a>
+  <a href="#copy">Копирайтинг</a>
+  <a href="#plan">Контент-план</a>
+  <a href="#metrics">Метрики</a>
+</nav>
+
+<!-- STRATEGY -->
+<section class="section" id="strategy">
+  <div class="section-label">01 — Стратегия</div>
+  <h2>Цель — заявки.<br>Не подписчики.</h2>
+  <p>Генерация входящих заявок от владельцев бизнеса, которые готовы платить за системную автоматизацию маркетинга.</p>
+
+  <div class="strategy-grid">
+    <div class="strategy-cell">
+      <div class="label">Наша позиция</div>
+      <div class="value">Показываем системы изнутри. Не советы — а то, как это работает на самом деле. Читатель думает: <strong>«Они знают то, чего не знаю я. Хочу с ними.»</strong></div>
+    </div>
+    <div class="strategy-cell">
+      <div class="label">Чем отличаемся</div>
+      <div class="value">Большинство AI/маркетинг аккаунтов делают «5 лайфхаков» или «до/после». Мы не делаем ни то, ни другое в привычном виде.</div>
+    </div>
+  </div>
+
+  <table class="who-table">
+    <thead>
+      <tr>
+        <th>Кто смотрит</th>
+        <th>Что получает</th>
+        <th>Целевое действие</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Владелец бизнеса, 35–45</td>
+        <td>Понимает, что теряет деньги без автоматизации</td>
+        <td>Пишет в директ</td>
+      </tr>
+      <tr>
+        <td>Маркетолог, 28–38</td>
+        <td>Видит инструменты и подходы, которые хочет внедрить</td>
+        <td>Сохраняет, потом пишет</td>
+      </tr>
+      <tr>
+        <td>Предприниматель на стадии роста</td>
+        <td>Понимает, что команда не справится вручную</td>
+        <td>Переходит на сайт</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- FORMATS -->
+<section class="section" id="formats">
+  <div class="section-label">02 — Форматы 2026</div>
+  <h2>Актуальные форматы.<br>Квадрат больше не рекомендуется.</h2>
+
+  <div class="formats-grid">
+
+    <!-- Reels -->
+    <div class="format-card">
+      <div class="format-mockup">
+        <svg width="100" height="178" viewBox="0 0 100 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="98" height="176" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="2"/>
+          <!-- play icon -->
+          <circle cx="50" cy="89" r="22" fill="none" stroke="#FF3B00" stroke-width="2"/>
+          <polygon points="44,80 44,98 62,89" fill="#FF3B00"/>
+          <!-- reels label -->
+          <text x="50" y="148" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="#666" letter-spacing="1">REELS</text>
+          <rect x="12" y="158" width="76" height="1" fill="#222"/>
+          <rect x="12" y="162" width="50" height="1" fill="#222"/>
+        </svg>
+      </div>
+      <div class="format-info">
+        <div class="format-badge badge-primary">Приоритет №1</div>
+        <div class="format-name">Reels</div>
+        <div class="format-size">1080 × 1920px · 9:16 · до 3 мин</div>
+        <div class="format-desc">Максимальный охват новой аудитории. Алгоритм показывает незнакомым. <strong>1–2 Reels в неделю обязательно.</strong> Оптимум: 30–60 сек.</div>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="format-card">
+      <div class="format-mockup">
+        <svg width="100" height="125" viewBox="0 0 100 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- shadow cards -->
+          <rect x="12" y="8" width="76" height="95" fill="#ddd" stroke="#ccc" stroke-width="1"/>
+          <rect x="6" y="4" width="76" height="95" fill="#eee" stroke="#ccc" stroke-width="1"/>
+          <!-- main card -->
+          <rect x="1" y="1" width="76" height="95" fill="var(--bone)" stroke="#0A0A0A" stroke-width="2"/>
+          <!-- orange tag -->
+          <rect x="8" y="8" width="32" height="10" fill="#FF3B00"/>
+          <text x="24" y="16" text-anchor="middle" font-family="IBM Plex Mono" font-size="5" fill="white" letter-spacing="0.5">КАРУСЕЛЬ</text>
+          <!-- lines -->
+          <rect x="8" y="28" width="60" height="3" fill="#0A0A0A"/>
+          <rect x="8" y="36" width="44" height="3" fill="#ccc"/>
+          <rect x="8" y="50" width="60" height="2" fill="#eee"/>
+          <rect x="8" y="56" width="60" height="2" fill="#eee"/>
+          <rect x="8" y="62" width="60" height="2" fill="#eee"/>
+          <!-- arrow -->
+          <circle cx="88" cy="49" r="8" fill="#0A0A0A"/>
+          <text x="88" y="53" text-anchor="middle" font-family="sans-serif" font-size="10" fill="white">›</text>
+          <!-- dots -->
+          <circle cx="34" cy="108" r="3" fill="#0A0A0A"/>
+          <circle cx="44" cy="108" r="3" fill="#ddd"/>
+          <circle cx="54" cy="108" r="3" fill="#ddd"/>
+        </svg>
+      </div>
+      <div class="format-info">
+        <div class="format-badge badge-primary">Приоритет №2</div>
+        <div class="format-name">Карусель</div>
+        <div class="format-size">1080 × 1350px · 4:5 · до 20 слайдов</div>
+        <div class="format-desc">Прогрев, обучение, кейсы. Используем 6–8 слайдов — длинные дочитывают редко. Можно миксовать фото и видео.</div>
+      </div>
+    </div>
+
+    <!-- Feed Portrait -->
+    <div class="format-card">
+      <div class="format-mockup">
+        <svg width="100" height="125" viewBox="0 0 100 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="98" height="122" fill="var(--bone)" stroke="#0A0A0A" stroke-width="2"/>
+          <!-- orange accent line -->
+          <rect x="1" y="1" width="3" height="122" fill="#FF3B00"/>
+          <!-- text lines -->
+          <rect x="16" y="16" width="70" height="8" fill="#0A0A0A"/>
+          <rect x="16" y="30" width="55" height="8" fill="#0A0A0A"/>
+          <rect x="16" y="54" width="70" height="3" fill="#ddd"/>
+          <rect x="16" y="62" width="70" height="3" fill="#ddd"/>
+          <rect x="16" y="70" width="50" height="3" fill="#ddd"/>
+          <rect x="16" y="96" width="40" height="6" fill="#0A0A0A"/>
+          <text x="18" y="10" font-family="IBM Plex Mono" font-size="6" fill="#FF3B00" letter-spacing="1">РАЗБОР</text>
+        </svg>
+      </div>
+      <div class="format-info">
+        <div class="format-badge badge-secondary">Приоритет №3</div>
+        <div class="format-name">Feed Portrait</div>
+        <div class="format-size">1080 × 1350px · 4:5</div>
+        <div class="format-desc">Основной формат ленты. Занимает больше экрана, чем квадрат — выше вероятность остановки взгляда.</div>
+      </div>
+    </div>
+
+    <!-- Stories -->
+    <div class="format-card">
+      <div class="format-mockup">
+        <svg width="100" height="178" viewBox="0 0 100 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="98" height="176" fill="var(--bone)" stroke="#0A0A0A" stroke-width="2"/>
+          <!-- safe zone marks -->
+          <rect x="1" y="1" width="98" height="24" fill="#f0f0f0" opacity="0.5"/>
+          <rect x="1" y="135" width="98" height="42" fill="#f0f0f0" opacity="0.5"/>
+          <text x="50" y="16" text-anchor="middle" font-family="IBM Plex Mono" font-size="5" fill="#999">250px safe zone</text>
+          <text x="50" y="157" text-anchor="middle" font-family="IBM Plex Mono" font-size="5" fill="#999">400px safe zone</text>
+          <!-- content area -->
+          <rect x="16" y="40" width="68" height="5" fill="#0A0A0A"/>
+          <rect x="16" y="52" width="50" height="5" fill="#0A0A0A"/>
+          <rect x="16" y="72" width="68" height="3" fill="#ddd"/>
+          <rect x="16" y="80" width="68" height="3" fill="#ddd"/>
+          <rect x="16" y="88" width="40" height="3" fill="#ddd"/>
+          <!-- story progress bar -->
+          <rect x="8" y="29" width="84" height="2" fill="#ddd"/>
+          <rect x="8" y="29" width="40" height="2" fill="#0A0A0A"/>
+        </svg>
+      </div>
+      <div class="format-info">
+        <div class="format-badge badge-secondary">Ежедневно</div>
+        <div class="format-name">Сторис</div>
+        <div class="format-size">1080 × 1920px · 9:16 · 3–5/день</div>
+        <div class="format-desc">Безопасная зона: отступ 250px сверху, 400px снизу. Текстовые, с вопросом, behind-the-scenes.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RUBRICS -->
+<section class="section" id="rubrics">
+  <div class="section-label">03 — Рубрики</div>
+  <h2>4 рубрики.<br>Баланс: 40 / 25 / 20 / 15%</h2>
+
+  <div class="rubrics-grid">
+
+    <!-- СИСТЕМА -->
+    <div class="rubric-card dark">
+      <div>
+        <div class="rubric-num">01</div>
+        <div class="rubric-name">СИСТЕМА</div>
+        <div class="rubric-share">~40% контента</div>
+      </div>
+      <div class="rubric-desc">Показываем как устроена автоматизация изнутри: архитектуры, схемы, результаты в цифрах. Тёмный фон, оранжевая метка, крупные числа.</div>
+      <div class="post-preview dark-preview">
+        <div class="preview-tag">СИСТЕМА</div>
+        <div class="preview-content">
+          <div class="preview-big-num">×40<span>постов/месяц</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- РАЗБОР -->
+    <div class="rubric-card">
+      <div>
+        <div class="rubric-num">02</div>
+        <div class="rubric-name">РАЗБОР</div>
+        <div class="rubric-share">~25% контента</div>
+      </div>
+      <div class="rubric-desc">Разбираем ошибки, кейсы, инструменты. Не советы — анализ. Светлый фон, оранжевая вертикальная линия слева.</div>
+      <div class="post-preview light-preview" style="position:relative; padding-left: 8px;">
+        <div class="preview-line"></div>
+        <div class="preview-tag" style="padding-left: 20px;">РАЗБОР</div>
+        <div class="preview-content" style="padding-left: 20px;">
+          <div class="preview-quote">Контент-план не работает не потому что плохой план.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ЦИФРЫ -->
+    <div class="rubric-card">
+      <div>
+        <div class="rubric-num">03</div>
+        <div class="rubric-name">ЦИФРЫ</div>
+        <div class="rubric-share">~20% контента</div>
+      </div>
+      <div class="rubric-desc">Конкретные результаты или индустриальные данные с нашим комментарием. Одна большая цифра на 60% карточки.</div>
+      <div class="post-preview light-preview">
+        <div class="preview-tag">ЦИФРЫ</div>
+        <div class="preview-content">
+          <div style="font-size: 52px; font-weight: 600; color: var(--orange); line-height: 1; letter-spacing: -0.03em;">3 ч<span style="display:block; font-size:11px; font-weight:400; color:#666; letter-spacing:0;">в день на контент вручную</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ПОЗИЦИЯ -->
+    <div class="rubric-card dark">
+      <div>
+        <div class="rubric-num">04</div>
+        <div class="rubric-name">ПОЗИЦИЯ</div>
+        <div class="rubric-share">~15% контента</div>
+      </div>
+      <div class="rubric-desc">Наше мнение о рынке, трендах, инструментах. Спорное, но обоснованное. Тёмный фон, крупная цитата, оранжевая точка.</div>
+      <div class="post-preview dark-preview">
+        <div class="preview-tag">ПОЗИЦИЯ</div>
+        <div class="preview-content" style="align-items: flex-start;">
+          <div class="preview-cite">AI не заменит маркетолога. Но маркетолог с AI заменит вас.</div>
+        </div>
+        <span class="preview-dot"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FIRST POST -->
+  <h3 style="margin-top: 64px;">Первый пост — целиком</h3>
+  <div class="first-post">
+    <div class="first-post-visual">
+      <div class="first-post-tag">ПОЗИЦИЯ</div>
+      <div class="first-post-quote">"AI не заменит маркетолога. Но маркетолог с AI заменит вас."</div>
+      <div class="first-post-dot"></div>
+    </div>
+    <div class="first-post-text">
+      <h4>День 1 · Feed Portrait 4:5 · 1080×1350px</h4>
+      <div class="post-body">Это не мотивационная цитата.
+
+За 6 месяцев мы запустили 12 контент-систем. В каждом случае один человек с правильной системой заменял отдел из 3–4.
+
+Не потому что AI умнее людей. Потому что система не уходит в отпуск, не забывает брифы и не устаёт в пятницу.
+
+Рынок в маркетинге меняется прямо сейчас. Вопрос только — строите ли вы систему или ждёте пока это сделают конкуренты.
+
+Мы строим системы. Если хочешь — напиши "система" в директ или: thnkfor.me/services/content-machine/</div>
+      <div class="post-tags">#автоматизациямаркетинга #aiагентство #маркетингдлябизнеса #контентмашина #smm</div>
+    </div>
+  </div>
+</section>
+
+<!-- COPYWRITING -->
+<section class="section" id="copy">
+  <div class="section-label">04 — Копирайтинг</div>
+  <h2>Структура. Крючки. Запреты.</h2>
+
+  <div class="struct-block">
+    <code>КРЮЧОК — первые 125 символов, до кнопки «ещё»</code>
+    <code>——</code>
+    <code>СУТЬ — 3–6 предложений, один тезис</code>
+    <code>——</code>
+    <code>ВЫВОД или ФАКТ — 1–2 предложения</code>
+    <code>——</code>
+    <code>CTA с прямой ссылкой — 1 предложение</code>
+  </div>
+
+  <h3>5 рабочих крючков</h3>
+  <div class="hooks-grid">
+    <div class="hook-card">
+      <div class="hook-q">"</div>
+      <div class="hook-text">Ваш конкурент уже сделал 40 постов, пока вы согласовывали один.</div>
+      <div class="hook-why">Конкретная ситуация + скрытое обвинение → читатель узнаёт себя и чувствует тревогу</div>
+    </div>
+    <div class="hook-card">
+      <div class="hook-q">"</div>
+      <div class="hook-text">18 000 ₽ против 198 000 ₽. Это не скидка — это другая модель.</div>
+      <div class="hook-why">Два числа + парадокс → мозг хочет понять откуда такая разница</div>
+    </div>
+    <div class="hook-card">
+      <div class="hook-q">"</div>
+      <div class="hook-text">Мы уволили копирайтера. Не потому что плохой. Потому что система лучше.</div>
+      <div class="hook-why">Провокация + немедленное объяснение → снимает тревогу, но создаёт новый вопрос</div>
+    </div>
+    <div class="hook-card">
+      <div class="hook-q">"</div>
+      <div class="hook-text">Контент-план не работает. Работает контент-система. Разница принципиальная.</div>
+      <div class="hook-why">Отрицание привычного + замена термина → читатель хочет узнать в чём разница</div>
+    </div>
+    <div class="hook-card">
+      <div class="hook-q">"</div>
+      <div class="hook-text">12 компаний. 12 разных ниш. Одна архитектура. Работает везде.</div>
+      <div class="hook-why">Числа + неожиданный вывод → сильное утверждение требует доказательства</div>
+    </div>
+    <div class="hook-card" style="background: var(--black);">
+      <div class="hook-q" style="color: var(--orange);">"</div>
+      <div class="hook-text" style="color: var(--bone);">3 часа в день — столько тратит средний маркетолог на создание контента вручную.</div>
+      <div class="hook-why" style="color: #555; border-color: #333;">Один факт + пауза → читатель считает в голове и понимает масштаб проблемы</div>
+    </div>
+  </div>
+
+  <div class="copy-rules">
+    <div class="copy-block">
+      <div class="copy-block-title">Запрещённые фразы</div>
+      <ul>
+        <li class="forbidden">«Контент-маркетинг — это важно»</li>
+        <li class="forbidden">«В эпоху цифровизации...»</li>
+        <li class="forbidden">«Поставьте 🔥 если согласны»</li>
+        <li class="forbidden">«Сохрани, чтобы не потерять»</li>
+        <li class="forbidden">«Подписывайтесь, чтобы не пропустить»</li>
+        <li class="forbidden">Любое предложение длиннее 20 слов</li>
+      </ul>
+    </div>
+    <div class="copy-block">
+      <div class="copy-block-title">Длина по рубрикам</div>
+      <ul>
+        <li><strong>СИСТЕМА</strong> — 150–300 символов</li>
+        <li><strong>РАЗБОР</strong> — 300–500 символов</li>
+        <li><strong>ЦИФРЫ</strong> — 100–250 символов</li>
+        <li><strong>ПОЗИЦИЯ</strong> — 250–400 символов</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT PLAN -->
+<section class="section" id="plan">
+  <div class="section-label">05 — Контент-план</div>
+  <h2>Первые 2 недели.</h2>
+
+  <table class="plan-table">
+    <thead>
+      <tr>
+        <th>День</th>
+        <th>Рубрика</th>
+        <th>Формат</th>
+        <th>Тема</th>
+        <th>Визуал</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="day-num">01</span></td><td><span class="rubric-tag tag-pozicia">Позиция</span></td><td><span class="format-pill">Feed 4:5</span></td><td>AI не заменит маркетолога — но...</td><td>Тёмный фон, крупная цитата</td></tr>
+      <tr><td><span class="day-num">02</span></td><td><span class="rubric-tag tag-storis">Сторис</span></td><td><span class="format-pill">Stories ×3</span></td><td>За кадром: начинаем новый проект</td><td>Скрины, схема, вопрос</td></tr>
+      <tr><td><span class="day-num">03</span></td><td><span class="rubric-tag tag-sistema">Система</span></td><td><span class="format-pill">Карусель 4:5</span></td><td>Как работает контент-машина (7 слайдов)</td><td>Тёмные слайды со схемами</td></tr>
+      <tr><td><span class="day-num">04</span></td><td><span class="rubric-tag tag-cifry">Цифры</span></td><td><span class="format-pill">Feed 4:5</span></td><td>3 часа в день — цена ручного контента</td><td>Светлый фон, крупная цифра</td></tr>
+      <tr><td><span class="day-num">05</span></td><td><span class="rubric-tag tag-sistema">Система</span></td><td><span class="format-pill">Reels 9:16</span></td><td>Демо: система в реальном времени</td><td>Скринкаст, 45 сек</td></tr>
+      <tr><td><span class="day-num">06</span></td><td><span class="rubric-tag tag-razbor">Разбор</span></td><td><span class="format-pill">Feed 4:5</span></td><td>Почему не работает контент-план</td><td>Светлый фон, оранжевая линия</td></tr>
+      <tr><td><span class="day-num">07</span></td><td><span class="rubric-tag tag-storis">Сторис</span></td><td><span class="format-pill">Stories ×4</span></td><td>Итоги недели + вопрос аудитории</td><td>Текст, опрос</td></tr>
+      <tr><td><span class="day-num">08</span></td><td><span class="rubric-tag tag-sistema">Система</span></td><td><span class="format-pill">Feed 4:5</span></td><td>Результат клиента: ×40 постов/месяц</td><td>Тёмный фон, цифра</td></tr>
+      <tr><td><span class="day-num">09</span></td><td><span class="rubric-tag tag-pozicia">Позиция</span></td><td><span class="format-pill">Feed 4:5</span></td><td>Почему мы не берём задачи — только системы</td><td>Тёмный фон, тезис</td></tr>
+      <tr><td><span class="day-num">10</span></td><td><span class="rubric-tag tag-razbor">Разбор</span></td><td><span class="format-pill">Карусель 4:5</span></td><td>5 ошибок при внедрении AI в маркетинг</td><td>Светлые слайды</td></tr>
+      <tr><td><span class="day-num">11</span></td><td><span class="rubric-tag tag-cifry">Цифры</span></td><td><span class="format-pill">Feed 4:5</span></td><td>ROI автоматизации: считаем вместе</td><td>Светлый фон, формула</td></tr>
+      <tr><td><span class="day-num">12</span></td><td><span class="rubric-tag tag-storis">Сторис</span></td><td><span class="format-pill">Stories ×5</span></td><td>За кадром: запуск системы у клиента</td><td>Живые скрины</td></tr>
+      <tr><td><span class="day-num">13</span></td><td><span class="rubric-tag tag-razbor">Разбор</span></td><td><span class="format-pill">Feed 4:5</span></td><td>Как устроена воронка без менеджера</td><td>Схема на светлом фоне</td></tr>
+      <tr><td><span class="day-num">14</span></td><td><span class="rubric-tag tag-sistema">Система</span></td><td><span class="format-pill">Reels 9:16</span></td><td>До/после: команда vs система</td><td>60 сек, сравнение</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- METRICS -->
+<section class="section" id="metrics">
+  <div class="section-label">06 — Метрики</div>
+  <h2>Что считать. Когда пересматривать.</h2>
+  <p style="font-size:18px; max-width: 600px;"><strong>Сохранения важнее лайков. Клики по ссылкам важнее охвата.</strong></p>
+
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-priority prio-high">Высокий</div>
+      <div class="metric-num">5%</div>
+      <div class="metric-label">Сохранений от охвата</div>
+      <div class="metric-time">Цель через 1 месяц · СИСТЕМА и РАЗБОР</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-priority prio-high">Высокий</div>
+      <div class="metric-num">5–10</div>
+      <div class="metric-label">Входящих в директ</div>
+      <div class="metric-time">Цель через 1 месяц · органически</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-priority prio-high">Высокий</div>
+      <div class="metric-num">1</div>
+      <div class="metric-label">Квалифицированный лид из Instagram</div>
+      <div class="metric-time">Цель через 1 месяц</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-priority prio-med">Средний</div>
+      <div class="metric-num">2K+</div>
+      <div class="metric-label">Просмотров Reels</div>
+      <div class="metric-time">Цель через 1 месяц · органика</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-priority prio-med">Средний</div>
+      <div class="metric-num">5K+</div>
+      <div class="metric-label">Уникальных охвата в неделю</div>
+      <div class="metric-time">Цель через 3 месяца · через Reels</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-priority prio-med">Средний</div>
+      <div class="metric-num">3–5</div>
+      <div class="metric-label">Закрытых сделок из Instagram</div>
+      <div class="metric-time">Цель через 3 месяца</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 48px;">Если не работает</h3>
+  <div class="strategy-grid" style="margin-top: 24px;">
+    <div class="strategy-cell">
+      <div class="label">Мало сохранений (&lt;2%)</div>
+      <div class="value">Контент слишком общий. Больше конкретики и цифр.</div>
+    </div>
+    <div class="strategy-cell">
+      <div class="label">Мало директов</div>
+      <div class="value">CTA слабые. Каждый пост должен иметь одно действие с прямой ссылкой.</div>
+    </div>
+    <div class="strategy-cell">
+      <div class="label">Мало охвата</div>
+      <div class="value">Проверить частоту Reels (минимум 1 в неделю) и регулярность постинга (5+ в неделю).</div>
+    </div>
+    <div class="strategy-cell">
+      <div class="label">Высокий охват, мало конверсий</div>
+      <div class="value">Аудитория не та. Пересмотреть хэштеги и темы.</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Active nav on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.site-nav a');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const link = document.querySelector(`.site-nav a[href="#${e.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>

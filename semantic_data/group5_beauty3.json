@@ -1,0 +1,968 @@
+[
+  {
+    "niche": "Перманентный макияж",
+    "category": "Beauty",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для перманентного макияжа",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~5000"
+      },
+      {
+        "query": "продвижение мастера перманентного макияжа в инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3000"
+      },
+      {
+        "query": "контент-план для студии перманентного макияжа",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~1500"
+      },
+      {
+        "query": "таргет реклама перманентный макияж вконтакте",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "раскрутка студии татуажа соцсети",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2500"
+      },
+      {
+        "query": "онлайн запись для мастера перманентного макияжа",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~4000"
+      },
+      {
+        "query": "crm для мастера перманентного макияжа",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "чат-бот для записи на перманентный макияж",
+        "cluster": "Боты/AI",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~1000"
+      },
+      {
+        "query": "автоматизация бьюти студии перманентный макияж",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~800"
+      },
+      {
+        "query": "маркетинг для мастера перманентного макияжа",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3500"
+      },
+      {
+        "query": "агентство продвижение студия татуажа",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "реклама перманентного макияжа яндекс директ",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "смм для перманентного макияжа продвижение мастера",
+        "position": 1,
+        "url": "https://direct.yandex.ru/base/articles/reklama-i-prodvizhenie-uslug-permanentnogo-makiyazha-i-tatuazha",
+        "domain": "direct.yandex.ru",
+        "title": "Реклама перманентного макияжа и татуажа: продвижение услуг мастера",
+        "description": "Статья о методах рекламы и продвижения услуг мастера перманентного макияжа через Яндекс Директ и РСЯ",
+        "pages_count": "~10000+"
+      },
+      {
+        "query_used": "смм для перманентного макияжа продвижение мастера",
+        "position": 2,
+        "url": "https://smm-tattoo.ru/article/45-reklamnyj-tekst-dlja-mastera-permanentnogo-makijazha-i-studij.html",
+        "domain": "smm-tattoo.ru",
+        "title": "Рекламный текст для мастера перманентного макияжа и студий - SMM",
+        "description": "Статьи и руководства по SMM и таргетинговой рекламе для тату-сферы и перманентного макияжа",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "смм для перманентного макияжа продвижение мастера",
+        "position": 3,
+        "url": "https://nutex-digital.ru/makeupvk",
+        "domain": "nutex-digital.ru",
+        "title": "Продвижение перманентного макияжа ВКонтакте",
+        "description": "Цифровое маркетинговое агентство Nutex Digital — кейсы и услуги по продвижению ВКонтакте",
+        "pages_count": "~30"
+      },
+      {
+        "query_used": "смм для перманентного макияжа продвижение мастера",
+        "position": 4,
+        "url": "https://expert-pmu.ru/tpost/32xe1exvt1-marketing-i-prodvizhenie-uslug-permanent",
+        "domain": "expert-pmu.ru",
+        "title": "МАРКЕТИНГ И ПРОДВИЖЕНИЕ УСЛУГ ПЕРМАНЕНТНОГО МАКИЯЖА",
+        "description": "Статья о маркетинге и продвижении услуг перманентного макияжа от школы Expert PMU",
+        "pages_count": "~40"
+      },
+      {
+        "query_used": "смм для перманентного макияжа продвижение мастера",
+        "position": 5,
+        "url": "https://petr-panda.ru/kak-prodvigat-permanentnyy-makiyazh/",
+        "domain": "petr-panda.ru",
+        "title": "Продвижение перманентного макияжа: 28 новых форматов с примерами",
+        "description": "Обзор 28 форматов продвижения перманентного макияжа с примерами от Панда-копирайтинга",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "агентство продвижение студия перманентного макияжа таргет реклама",
+        "position": 1,
+        "url": "https://direct.yandex.ru/base/articles/reklama-i-prodvizhenie-uslug-permanentnogo-makiyazha-i-tatuazha",
+        "domain": "direct.yandex.ru",
+        "title": "Реклама перманентного макияжа и татуажа: продвижение услуг мастера",
+        "description": "Официальная статья Яндекс Директ о рекламе мастеров перманентного макияжа",
+        "pages_count": "~10000+"
+      },
+      {
+        "query_used": "агентство продвижение студия перманентного макияжа таргет реклама",
+        "position": 2,
+        "url": "https://t4ka.ru/prodvizhenie-vkontakte/tpost/0jblfe7gz1-keis-prodvizheniya-zayavok-na-permanentn",
+        "domain": "t4ka.ru",
+        "title": "Кейс продвижения заявок на перманентный макияж с таргета ВК",
+        "description": "Кейс: 17 записей на 77150 руб. с таргетированной рекламы ВКонтакте для мастера перманентного макияжа",
+        "pages_count": "~80"
+      },
+      {
+        "query_used": "агентство продвижение студия перманентного макияжа таргет реклама",
+        "position": 3,
+        "url": "https://place-start.ru/portfolio/keys-po-prodvizheniyu-studii-permanentnogo-makiyazha-vkontakte/",
+        "domain": "place-start.ru",
+        "title": "Кейс по продвижению студии перманентного макияжа «ВКонтакте»",
+        "description": "Кейс цифрового агентства по продвижению студии перманентного макияжа во ВКонтакте",
+        "pages_count": "~60"
+      },
+      {
+        "query_used": "онлайн запись для мастера перманентного макияжа автоматизация crm",
+        "position": 1,
+        "url": "https://easyweek.ru/solutions/permanent-make-up",
+        "domain": "easyweek.ru",
+        "title": "Программа для салона перманентного макияжа - EasyWeek",
+        "description": "Онлайн-запись и автоматизация для мастеров перманентного макияжа, устранение ручного учёта",
+        "pages_count": "~300"
+      },
+      {
+        "query_used": "онлайн запись для мастера перманентного макияжа автоматизация crm",
+        "position": 2,
+        "url": "https://www.yclients.com/beauty-salon",
+        "domain": "yclients.com",
+        "title": "Программа для салонов красоты: онлайн-запись клиентов и CRM YCLIENTS",
+        "description": "Автоматизация записи, управление клиентской базой и аналитика для бьюти-салонов от YCLIENTS",
+        "pages_count": "~500+"
+      }
+    ]
+  },
+  {
+    "niche": "Бровисты / лешмейкеры",
+    "category": "Beauty",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для бровиста продвижение в соцсетях",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "продвижение бровиста в инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3500"
+      },
+      {
+        "query": "контент план для лешмейкера инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~1500"
+      },
+      {
+        "query": "таргетированная реклама для наращивания ресниц",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "раскрутка мастера по бровям вконтакте телеграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~1000"
+      },
+      {
+        "query": "онлайн запись для бровиста автоматизация",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2500"
+      },
+      {
+        "query": "чат-бот для бровиста запись клиентов",
+        "cluster": "Боты/AI",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~800"
+      },
+      {
+        "query": "crm для лешмейкера управление клиентами",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~1200"
+      },
+      {
+        "query": "AI напоминания клиентам бровист лешмейкер",
+        "cluster": "Боты/AI",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~400"
+      },
+      {
+        "query": "маркетинг для бровиста привлечение клиентов",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "агентство продвижение наращивание ресниц",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~1500"
+      },
+      {
+        "query": "как найти клиентов лешмейкеру бровисту",
+        "cluster": "SMM/контент",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "продвижение бровиста в инстаграм smm агентство",
+        "position": 1,
+        "url": "https://smm-agency.ru/seo/prodvizhenie-brovista-v-instagram/",
+        "domain": "smm-agency.ru",
+        "title": "продвижение бровиста в инстаграм - SMM-агентство \"ЕЩЁ\"",
+        "description": "SMM-агентство с более чем 1500 положительными отзывами, рост трафика из поисковых систем в первый месяц, рост активных подписчиков в Instagram, ВКонтакте, Facebook и других соцсетях",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "продвижение бровиста в инстаграм smm агентство",
+        "position": 2,
+        "url": "https://t4ka.ru/prodvizhenie-v-instagram",
+        "domain": "t4ka.ru",
+        "title": "SMM продвижение в Инстаграм, раскрутка и реклама аккаунта",
+        "description": "Комплексное SMM-продвижение в Instagram: привлечение клиентов через таргет, контент, сторис",
+        "pages_count": "~80"
+      },
+      {
+        "query_used": "продвижение бровиста в инстаграм smm агентство",
+        "position": 3,
+        "url": "https://kosmmos.ru/beauty",
+        "domain": "kosmmos.ru",
+        "title": "SMM продвижение салонов красоты, косметологий, стилистов в Вконтакте, Одноклассники, Telegram",
+        "description": "SMM-продвижение для beauty-бизнеса: салоны красоты, косметологии, мастера по ресницам, депиляция, массаж",
+        "pages_count": "~40"
+      },
+      {
+        "query_used": "продвижение бровиста в инстаграм smm агентство",
+        "position": 4,
+        "url": "https://smm.academy/blog/kak-najti-klientov-lashmeikeru/",
+        "domain": "smm.academy",
+        "title": "Как найти клиентов лэшмейкеру | SMM-Академия",
+        "description": "Советы и стратегии по поиску клиентов для лешмейкеров через социальные сети и рекламные инструменты",
+        "pages_count": "~150"
+      },
+      {
+        "query_used": "продвижение бровиста в инстаграм smm агентство",
+        "position": 5,
+        "url": "https://pixelplus.ru/smm/instagram/",
+        "domain": "pixelplus.ru",
+        "title": "Продвижение в Instagram — заказать SMM-раскрутку в Инстаграм",
+        "description": "Услуги SMM-раскрутки в Инстаграм в Москве: тарифы и цены, комплексный подход к продвижению",
+        "pages_count": "~500+"
+      },
+      {
+        "query_used": "чат-бот для бровиста автоматизация записи клиентов",
+        "position": 1,
+        "url": "https://www.voxys.ru/cifrovye-reshenija/chat-bot/dlja-zapisi-klientov.html",
+        "domain": "voxys.ru",
+        "title": "Чат-бот для записи клиентов — Voxys",
+        "description": "Создание ботов для автоматизации записи клиентов в мессенджерах: Telegram, WhatsApp",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "чат-бот для бровиста автоматизация записи клиентов",
+        "position": 2,
+        "url": "https://lubava.ai/zakazat-chat-bota/dlya-zapisi-klientov/",
+        "domain": "lubava.ai",
+        "title": "Чат-бот для записи клиентов — заказать ИИ бота под ключ",
+        "description": "Разработка AI чат-бота для записи клиентов: автоматическое бронирование, напоминания, интеграция с CRM",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "smm агентство для лешмейкера наращивание ресниц продвижение соцсети",
+        "position": 1,
+        "url": "https://smm.academy/blog/klienty-dlja-mastera-resnic/",
+        "domain": "smm.academy",
+        "title": "Клиенты для мастера ресниц: от поиска до удержания | SMM-Академия",
+        "description": "Стратегии привлечения и удержания клиентов для мастеров по наращиванию ресниц",
+        "pages_count": "~150"
+      }
+    ]
+  },
+  {
+    "niche": "Массажные студии",
+    "category": "Beauty",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для массажного салона продвижение",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3000"
+      },
+      {
+        "query": "ведение соцсетей для массажного кабинета",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "контент план массажный салон вконтакте инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~1500"
+      },
+      {
+        "query": "таргетированная реклама для массажного салона spa",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2500"
+      },
+      {
+        "query": "привлечение клиентов в массажную студию реклама",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~4000"
+      },
+      {
+        "query": "crm система для массажного салона онлайн запись",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~5000"
+      },
+      {
+        "query": "автоматизация массажной студии программа учета",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "чат-бот для записи на массаж телеграм",
+        "cluster": "Боты/AI",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~1200"
+      },
+      {
+        "query": "онлайн запись клиентов массаж yclients",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~1500"
+      },
+      {
+        "query": "маркетинг для массажного салона привлечение клиентов",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~6000"
+      },
+      {
+        "query": "агентство продвижение массажный салон",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3000"
+      },
+      {
+        "query": "digital маркетинг для spa массаж",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "маркетинг для массажного салона продвижение",
+        "position": 1,
+        "url": "https://www.sostav.ru/blogs/275100/80006",
+        "domain": "sostav.ru",
+        "title": "Маркетинг массажного кабинета: стратегия продаж и привлечения клиентов",
+        "description": "Статья в блоге на Sostav.ru о стратегиях маркетинга и продаж для массажного кабинета",
+        "pages_count": "~10000+"
+      },
+      {
+        "query_used": "маркетинг для массажного салона продвижение",
+        "position": 2,
+        "url": "https://vc.ru/marketing/585682-prodvizhenie-massazhnogo-salona",
+        "domain": "vc.ru",
+        "title": "Продвижение массажного салона — Маркетинг на vc.ru",
+        "description": "Кейс и стратегии продвижения массажного салона, использование контекстной рекламы и соцсетей",
+        "pages_count": "~10000+"
+      },
+      {
+        "query_used": "маркетинг для массажного салона продвижение",
+        "position": 3,
+        "url": "https://noomarketing.net/marketing-massazhnogo-salona",
+        "domain": "noomarketing.net",
+        "title": "Эффективный маркетинг массажного салона",
+        "description": "Описание стратегий ноомаркетинга для привлечения потока клиентов в массажный салон",
+        "pages_count": "~60"
+      },
+      {
+        "query_used": "маркетинг для массажного салона продвижение",
+        "position": 4,
+        "url": "https://medbranding.ru/massazhnye-salony",
+        "domain": "medbranding.ru",
+        "title": "Продвижение и маркетинг для массажных салонов",
+        "description": "Агентство медицинского digital-маркетинга MedBranding — комплексное продвижение массажных салонов: SEO, контекст, SMM",
+        "pages_count": "~80"
+      },
+      {
+        "query_used": "маркетинг для массажного салона продвижение",
+        "position": 5,
+        "url": "https://petr-panda.ru/kak-prodvigat-massazhnyy-salon/",
+        "domain": "petr-panda.ru",
+        "title": "Продвижение массажного салона: 31 новый формат с примерами",
+        "description": "31 формат продвижения массажного салона с примерами от Панда-копирайтинга",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "таргетированная реклама массажный салон spa привлечение клиентов",
+        "position": 1,
+        "url": "https://direct.yandex.ru/base/articles/prodvizhenie-salona-krasoty-i-reklama-massazha",
+        "domain": "direct.yandex.ru",
+        "title": "Эффективная реклама массажа и привлечение новых клиентов в салон красоты — Яндекс Директ",
+        "description": "Статья Яндекс Директ: стратегии рекламы массажа и привлечения клиентов через Директ, РСЯ и Карты",
+        "pages_count": "~10000+"
+      },
+      {
+        "query_used": "таргетированная реклама массажный салон spa привлечение клиентов",
+        "position": 2,
+        "url": "https://au-agency.ru/portfolio/target-dlya-spa-salona-kakie-instrumenty-ispolzovali-i-chto-poluchalos/",
+        "domain": "au-agency.ru",
+        "title": "Таргет для спа-салона: какие инструменты использовали и что получалось — AU-agency",
+        "description": "Кейс таргетированной рекламы для SPA-салона: инструменты, настройки, результаты",
+        "pages_count": "~70"
+      },
+      {
+        "query_used": "taргетированная реклама массажный салон spa привлечение клиентов",
+        "position": 3,
+        "url": "https://new-point.bz/cases/target/kejs-po-nastrojke-targetirovannoj-reklamy-dlya-studii-massazha/",
+        "domain": "new-point.bz",
+        "title": "Таргетированная реклама в ВКонтакте для студии массажа",
+        "description": "Кейс настройки таргетированной рекламы ВКонтакте для студии массажа",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "crm система для массажного салона онлайн запись автоматизация",
+        "position": 1,
+        "url": "https://www.yclients.com/massage",
+        "domain": "yclients.com",
+        "title": "CRM для массажных салонов — приложение для онлайн-записи и автоматизации YCLIENTS",
+        "description": "YCLIENTS — платформа автоматизации массажных салонов: онлайн-запись, CRM, зарплата, аналитика",
+        "pages_count": "~500+"
+      },
+      {
+        "query_used": "crm система для массажного салона онлайн запись автоматизация",
+        "position": 2,
+        "url": "https://salon1c.ru/crm-dlya-massajnogo-salona/",
+        "domain": "salon1c.ru",
+        "title": "Программа для массажного салона - CRM система для учета и автоматизации",
+        "description": "CRM на базе 1С для массажных салонов: управление записями, персоналом, склад, финансы",
+        "pages_count": "~200"
+      }
+    ]
+  },
+  {
+    "niche": "Детские центры развития",
+    "category": "Образование",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "smm для детского центра развития",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~4000"
+      },
+      {
+        "query": "продвижение детского центра в соцсетях вконтакте",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~5000"
+      },
+      {
+        "query": "контент план для детского развивающего центра",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "таргет реклама для детского центра набор детей",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3000"
+      },
+      {
+        "query": "ведение инстаграм для детского кружка секции",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2500"
+      },
+      {
+        "query": "crm для детского центра развития автоматизация",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~6000"
+      },
+      {
+        "query": "онлайн запись детский центр расписание занятий",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~4000"
+      },
+      {
+        "query": "чат-бот для детского образовательного центра запись",
+        "cluster": "Боты/AI",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~1000"
+      },
+      {
+        "query": "управление абонементами детский центр программа",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2500"
+      },
+      {
+        "query": "маркетинг для детского центра привлечение клиентов",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~5000"
+      },
+      {
+        "query": "реклама детского центра яндекс директ",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": "~4000"
+      },
+      {
+        "query": "агентство продвижение детский образовательный центр",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "smm для детского центра развития продвижение",
+        "position": 1,
+        "url": "https://ratingruneta.ru/cases/case-8919/",
+        "domain": "ratingruneta.ru",
+        "title": "Реклама детского центра развития — Кейс Рейтинг Рунета",
+        "description": "Кейс по рекламе детского центра развития: каналы, инструменты, результаты",
+        "pages_count": "~5000+"
+      },
+      {
+        "query_used": "smm для детского центра развития продвижение",
+        "position": 2,
+        "url": "https://webnauts.pro/portfolio/smm-detskogo-razvlekatelnogo-tsentra/",
+        "domain": "webnauts.pro",
+        "title": "Кейс: SMM-продвижение детского развлекательного центра в соцсетях",
+        "description": "Кейс украинской веб-студии Webnauts по SMM-продвижению детского развлекательного центра",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "smm для детского центра развития продвижение",
+        "position": 3,
+        "url": "https://t4ka.ru/instructions-promoting-centers-schools-clubs-social",
+        "domain": "t4ka.ru",
+        "title": "Стратегия продвижения детских центров, школ и кружков в соцсетях",
+        "description": "Инструкция и примеры стратегии SMM-продвижения детских центров, школ и кружков с кейсами",
+        "pages_count": "~80"
+      },
+      {
+        "query_used": "smm для детского центра развития продвижение",
+        "position": 4,
+        "url": "https://adnet.digital/centr_razvitiya_detej",
+        "domain": "adnet.digital",
+        "title": "Детский центр - Реклама, ведение и продвижение в Instagram SMM",
+        "description": "Услуги SMM-продвижения детских центров развития: ведение Instagram, реклама, контент",
+        "pages_count": "~30"
+      },
+      {
+        "query_used": "smm для детского центра развития продвижение",
+        "position": 5,
+        "url": "https://smmplanner.com/blog/gotovyi-kontient-plan-dlia-sotssietiei-dietskogho-razvivaiushchiegho-tsientra/",
+        "domain": "smmplanner.com",
+        "title": "Контент-план для продвижения детского центра в Инстаграме и других соцсетях",
+        "description": "Готовый контент-план для продвижения детского развивающего центра в соцсетях от SMMplanner",
+        "pages_count": "~300"
+      },
+      {
+        "query_used": "реклама детского центра яндекс директ таргет вконтакте",
+        "position": 1,
+        "url": "https://direct.yandex.ru/base/articles/reklama-i-prodvizhenie-detskogo-centra-podgotovki-k-shkole",
+        "domain": "direct.yandex.ru",
+        "title": "Реклама детского центра и подготовки к школе: примеры продвижения и маркетинг",
+        "description": "Официальная статья Яндекс Директ о рекламе и маркетинге для детских центров подготовки к школе",
+        "pages_count": "~10000+"
+      },
+      {
+        "query_used": "реклама детского центра яндекс директ таргет вконтакте",
+        "position": 2,
+        "url": "https://babymarketing.ru/",
+        "domain": "babymarketing.ru",
+        "title": "Маркетолог для детского центра",
+        "description": "Специализированное маркетинговое агентство для детских центров: реклама, набор детей, рост прибыли",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "реклама детского центра яндекс директ таргет вконтакте",
+        "position": 3,
+        "url": "https://babylike-marketing.ru/prodvizheniye-detskogo-centra",
+        "domain": "babylike-marketing.ru",
+        "title": "Продвижение детского центра: реклама, набор детей и рост прибыли | Baby Like",
+        "description": "Агентство Baby Like специализируется на продвижении детских центров: таргет ВК, Яндекс Директ, Карты, 2ГИС",
+        "pages_count": "~60"
+      },
+      {
+        "query_used": "crm для детского центра развития автоматизация",
+        "position": 1,
+        "url": "https://alfacrm.pro/news/useful-info/crm-dlya-centra-detskogo-razvitiya",
+        "domain": "alfacrm.pro",
+        "title": "CRM Система для детского центра - АльфаCRM",
+        "description": "АльфаCRM — специализированная CRM для детских центров и образовательных организаций: расписание, абонементы, платежи",
+        "pages_count": "~300"
+      },
+      {
+        "query_used": "crm для детского центра развития автоматизация",
+        "position": 2,
+        "url": "https://moyklass.com/crm-dlya-detskogo-centra",
+        "domain": "moyklass.com",
+        "title": "CRM для детского центра — учёт, расписание и онлайн-запись | Мой Класс",
+        "description": "Мой Класс — CRM для детских центров: автоматизация расписания, посещаемости, оплаты, онлайн-запись",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "crm для детского центра развития автоматизация",
+        "position": 3,
+        "url": "https://okocrm.com/for/crm-for-child-centers/",
+        "domain": "okocrm.com",
+        "title": "CRM для детского центра — OkoCRM",
+        "description": "OkoCRM для детских центров: автоматические напоминания, управление группами, рост LTV и продаж",
+        "pages_count": "~250"
+      }
+    ]
+  },
+  {
+    "niche": "Ветеринарные клиники",
+    "category": "Ветеринария",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "smm для ветеринарной клиники продвижение",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3000"
+      },
+      {
+        "query": "ведение соцсетей для ветклиники вконтакте телеграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "контент для ветеринарной клиники инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2500"
+      },
+      {
+        "query": "таргет реклама ветеринарная клиника привлечение",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "реклама зоомагазина ветклиники в соцсетях",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3000"
+      },
+      {
+        "query": "чат-бот для ветеринарной клиники онлайн запись",
+        "cluster": "Боты/AI",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~1500"
+      },
+      {
+        "query": "crm для ветеринарной клиники автоматизация vetmanager",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3000"
+      },
+      {
+        "query": "онлайн запись в ветеринарную клинику без звонка",
+        "cluster": "Автоматизация/CRM",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~4000"
+      },
+      {
+        "query": "напоминание о вакцинации чат-бот ветклиника",
+        "cluster": "Боты/AI",
+        "type": "Automation",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~800"
+      },
+      {
+        "query": "маркетинг для ветеринарной клиники привлечение клиентов",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~5000"
+      },
+      {
+        "query": "продвижение ветеринарной клиники яндекс директ",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~4000"
+      },
+      {
+        "query": "агентство маркетинг реклама ветклиника",
+        "cluster": "Продвижение/реклама",
+        "type": "General",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "маркетинг для ветеринарной клиники продвижение smm",
+        "position": 1,
+        "url": "https://vetmanager.ru/marketing-reklama-prodvizhenie-veterinarnoy-kliniki/",
+        "domain": "vetmanager.ru",
+        "title": "Маркетинг, продвижение и реклама для ветеринарной клиники в 2024 году",
+        "description": "Статья от Ветменеджер — ведущая CRM для ветклиник в РФ и СНГ: маркетинговые инструменты, каналы рекламы, геосервисы, SEO",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "маркетинг для ветеринарной клиники продвижение smm",
+        "position": 2,
+        "url": "https://t4ka.ru/statya-prodvizhenie-veterinarnoj-kliniki",
+        "domain": "t4ka.ru",
+        "title": "Продвижение ветеринарной клиники. Что важно учесть",
+        "description": "Статья о ключевых факторах и каналах продвижения ветеринарных клиник в интернете",
+        "pages_count": "~80"
+      },
+      {
+        "query_used": "маркетинг для ветеринарной клиники продвижение smm",
+        "position": 3,
+        "url": "https://www.aaccent.ru/blog/marketing-prodvizhenie-i-reklama-veterinarnoj-kliniki/",
+        "domain": "aaccent.ru",
+        "title": "Продвижение и реклама ветеринарной клиники. Маркетинг ветклиник с примерами",
+        "description": "Агентство Accent — маркетинг и реклама для ветеринарных клиник: SEO, контекст, SMM, примеры",
+        "pages_count": "~150"
+      },
+      {
+        "query_used": "маркетинг для ветеринарной клиники продвижение smm",
+        "position": 4,
+        "url": "https://smm-agentstvo.ru/blog/smm-dlia-veterinarnyx-klinik/",
+        "domain": "smm-agentstvo.ru",
+        "title": "Эффективные SMM стратегии для ветеринарных клиник",
+        "description": "SMM-агентство в Москве — стратегии продвижения ветклиник в соцсетях с 2008 года",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "маркетинг для ветеринарной клиники продвижение smm",
+        "position": 5,
+        "url": "https://freud-pr.ru/4-rabochih-svyazki-dlya-prodvizheniya-veterinarnoy-kliniki",
+        "domain": "freud-pr.ru",
+        "title": "4 рабочих связки для продвижения ветеринарной клиники",
+        "description": "Digital-агентство Freud — разбор 4 эффективных маркетинговых связок для продвижения ветклиник",
+        "pages_count": "~70"
+      },
+      {
+        "query_used": "продвижение ветеринарной клиники яндекс директ контекстная реклама",
+        "position": 1,
+        "url": "https://blog.promopult.ru/sales/prodvizhenie-veterinarnoj-kliniki.html",
+        "domain": "blog.promopult.ru",
+        "title": "Продвижение ветеринарной клиники: 12 работающих каналов, бюджеты и ошибки",
+        "description": "Подробный гайд по 12 каналам продвижения ветеринарной клиники с бюджетами и планом запуска от PromoPult",
+        "pages_count": "~500+"
+      },
+      {
+        "query_used": "продвижение ветеринарной клиники яндекс директ контекстная реклама",
+        "position": 2,
+        "url": "https://vc.ru/marketing/3086859-prodvizhenie-veterinarnoj-kliniki-strategii-i-budjet",
+        "domain": "vc.ru",
+        "title": "Продвижение ветеринарной клиники: 12 каналов, бюджет и план запуска — Маркетинг на vc.ru",
+        "description": "Статья на VC.ru о стратегиях и бюджетах продвижения ветеринарных клиник",
+        "pages_count": "~10000+"
+      },
+      {
+        "query_used": "продвижение ветеринарной клиники яндекс директ контекстная реклама",
+        "position": 3,
+        "url": "https://seohead.pro/blog/yandeks-direkt-veterinarnoy-kliniki-vedenie-kontekstnoy-rekl/",
+        "domain": "seohead.pro",
+        "title": "Яндекс Директ для ветеринарной клиники: как настроить рекламу",
+        "description": "Практическое руководство по настройке Яндекс Директ для ветеринарных клиник: ключи, геотаргетинг, минус-слова",
+        "pages_count": "~150"
+      },
+      {
+        "query_used": "чат-бот для ветеринарной клиники онлайн запись автоматизация",
+        "position": 1,
+        "url": "https://www.yclients.com/veterinary",
+        "domain": "yclients.com",
+        "title": "Приложение для ветеринарной клиники — CRM для автоматизации и онлайн-запись YCLIENTS",
+        "description": "YCLIENTS для ветклиник: онлайн-запись без звонков, автоматические напоминания, CRM, аналитика",
+        "pages_count": "~500+"
+      },
+      {
+        "query_used": "чат-бот для ветеринарной клиники онлайн запись автоматизация",
+        "position": 2,
+        "url": "https://else-digital.ru/services/razrabotka-max-messanger/cases/bot-dlya-vetkliniki/",
+        "domain": "else-digital.ru",
+        "title": "Чат-бот для ветеринарной клиники в MAX — запись онлайн",
+        "description": "Кейс разработки чат-бота для ветклиники в MAX messenger: онлайн-запись выросла на 60%, пропущенные вакцинации снизились на 70%",
+        "pages_count": "~40"
+      }
+    ]
+  }
+]

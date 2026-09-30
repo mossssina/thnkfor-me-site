@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — THNKFOR.ME</title>
+<meta name="description" content="Страница не найдена. Возможно, она переехала или больше не существует. Вернитесь на главную THNKFOR.ME.">
+<meta name="robots" content="noindex, follow">
+<meta property="og:title" content="404 — THNKFOR.ME">
+<meta property="og:description" content="Страница не найдена. Возможно, она переехала или больше не существует.">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://thnkfor.me/404/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/mobile2.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#0A0A0A;color:#F8F8F8;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;display:flex;flex-direction:column;min-height:100vh;}
+a{text-decoration:none;color:inherit;}
+ul,ol{list-style:none;}
+button{cursor:pointer;font-family:inherit;border:none;}
+
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,59,0,0);}60%{box-shadow:0 0 0 6px rgba(255,59,0,0.18);}}
+
+/* ── HEADER ── */
+.site-header{position:sticky!important;top:0!important;z-index:200!important;background:#0A0A0A!important;border-bottom:1px solid rgba(255,255,255,0.08)!important;display:block!important;padding:0!important;height:auto!important;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item>a,.nav-item>span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item>a:hover,.nav-item>span:hover,.nav-item:hover>a,.nav-item:hover>span{color:#FFFFFF;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.nav-subitem{position:relative;}
+.nav-subitem>a{display:flex!important;align-items:center;justify-content:space-between;}
+.sub-arrow{opacity:0.4;}
+.nav-subdropdown{display:none;background:#161616;border-left:2px solid rgba(255,59,0,0.3);}
+.nav-subitem:hover .nav-subdropdown{display:block;}
+.nav-subdropdown a{padding-left:28px!important;}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.nav-toggle{display:none;}
+
+/* ── 404 CONTENT ── */
+.error-section{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 48px;background:#0A0A0A;}
+.error-code{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;margin-bottom:20px;}
+.error-title{font-size:clamp(48px,10vw,96px);font-weight:700;letter-spacing:-0.04em;line-height:1;margin-bottom:16px;color:#F8F8F8;}
+.error-sub{font-family:'IBM Plex Mono',monospace;font-size:13px;color:rgba(248,248,248,0.4);margin-bottom:48px;max-width:420px;line-height:1.6;}
+.error-cta{display:inline-block;background:#FF3B00;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;padding:12px 28px;text-decoration:none;transition:background .15s;}
+.error-cta:hover{background:#cc3000;}
+.error-cat{width:160px;height:auto;margin-bottom:36px;display:block;}
+
+/* ── FOOTER ── */
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid!important;grid-template-columns:1fr 1fr 1fr 1fr!important;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}
+.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-main">
+    <a href="/" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="/services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="/services/smm/">SMM и соцсети</a>
+          <a href="/services/targeting/">Таргетированная реклама</a>
+          <a href="/services/direct/">Яндекс Директ</a>
+          <div class="nav-subitem">
+            <a href="/services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+            <div class="nav-subdropdown">
+              <a href="/services/content-machine/restaurant/">Для ресторанов</a>
+              <a href="/services/content-machine/beauty/">Для салонов красоты</a>
+              <a href="/services/content-machine/ecom/">Для интернет-магазинов</a>
+              <a href="/services/content-machine/marketplace/">Для маркетплейсов</a>
+              <a href="/services/content-machine/fitness/">Для фитнеса</a>
+              <a href="/services/content-machine/construction/">Для строительства</a>
+            </div>
+          </div>
+          <a href="/services/video/">Видеопроизводство</a>
+          <a href="/services/reputation/">Управление репутацией</a>
+          <a href="/services/seo/">Продвижение в поиске</a>
+          <a href="/services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="/niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="/niches/restaurants/">Рестораны</a>
+          <a href="/niches/beauty/">Салоны красоты</a>
+          <a href="/niches/clinic/">Медицина</a>
+          <a href="/niches/fitness/">Фитнес</a>
+          <a href="/niches/saas/">IT и SaaS</a>
+          <a href="/niches/ecommerce-fashion/">E-commerce</a>
+          <a href="/niches/realestate/">Недвижимость</a>
+          <a href="/niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="/cases/">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="/cases/werent/">WeRent — Content Machine</a>
+          <a href="/cases/tennispoint/">Tennis Point — бот новинок</a>
+          <a href="/cases/4room/">4room.studio — три AI-системы</a>
+          <a href="/cases/studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="/cases/">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="/blog/">Блог</a>
+        <div class="nav-dropdown">
+          <a href="/blog/ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="/blog/content-factory/">Контент-завод</a>
+          <a href="/blog/midjourney-business/">Midjourney для бизнеса</a>
+          <a href="/blog/prompt-engineering/">Prompt Engineering</a>
+          <a href="/blog/n8n-vs-make/">n8n vs Make</a>
+          <a href="/blog/seo-ai-2026/">SEO и AI 2026</a>
+          <a href="/blog/">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="/pricing/">Цены</a>
+      </div>
+      <div class="nav-item">
+        <a href="/about/">О нас</a>
+      </div>
+      <a href="/contacts/" class="header-cta">Обсудить проект</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="/services/smm/" class="header-pill">01 · SMM</a>
+    <a href="/services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="/services/direct/" class="header-pill">03 · Директ</a>
+    <a href="/services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="/services/video/" class="header-pill">05 · Видео</a>
+    <a href="/services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="/services/seo/" class="header-pill">07 · SEO</a>
+    <a href="/services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<main class="error-section">
+  <!-- Sad cat — THNKFOR.ME brand style: geometric, no border-radius, #FF3B00 accent -->
+  <svg class="error-cat" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- Ears -->
+    <polygon points="48,52 65,8 90,52" fill="#F8F8F8"/>
+    <polygon points="110,52 135,8 152,52" fill="#F8F8F8"/>
+    <!-- Inner ear -->
+    <polygon points="55,52 65,22 83,52" fill="#FF3B00"/>
+    <polygon points="117,52 135,22 145,52" fill="#FF3B00"/>
+    <!-- Head -->
+    <rect x="42" y="52" width="116" height="92" fill="#F8F8F8"/>
+    <!-- Sad eyebrows (inner-up, outer-down = worried) -->
+    <line x1="64" y1="76" x2="88" y2="82" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="square"/>
+    <line x1="112" y1="82" x2="136" y2="76" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="square"/>
+    <!-- Sad eyes: outer corners droop down -->
+    <line x1="62" y1="97" x2="92" y2="87" stroke="#0A0A0A" stroke-width="4" stroke-linecap="square"/>
+    <line x1="108" y1="87" x2="138" y2="97" stroke="#0A0A0A" stroke-width="4" stroke-linecap="square"/>
+    <!-- Tear (orange) -->
+    <rect x="67" y="99" width="5" height="13" fill="#FF3B00"/>
+    <!-- Nose -->
+    <rect x="96" y="111" width="8" height="6" fill="#FF3B00"/>
+    <!-- Sad mouth: corners pointing down (frown) -->
+    <polyline points="83,122 100,131 117,122" fill="none" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="miter" stroke-linecap="square"/>
+    <!-- Whiskers -->
+    <line x1="42" y1="114" x2="88" y2="118" stroke="#0A0A0A" stroke-width="1.5"/>
+    <line x1="42" y1="123" x2="88" y2="123" stroke="#0A0A0A" stroke-width="1.5"/>
+    <line x1="112" y1="118" x2="158" y2="114" stroke="#0A0A0A" stroke-width="1.5"/>
+    <line x1="112" y1="123" x2="158" y2="123" stroke="#0A0A0A" stroke-width="1.5"/>
+    <!-- Body -->
+    <rect x="58" y="144" width="84" height="62" fill="#F8F8F8"/>
+    <!-- Collar (orange) -->
+    <rect x="58" y="144" width="84" height="12" fill="#FF3B00"/>
+    <!-- Collar tag -->
+    <rect x="94" y="155" width="12" height="10" fill="#0A0A0A"/>
+    <!-- Left paw -->
+    <rect x="52" y="200" width="38" height="16" fill="#F8F8F8"/>
+    <line x1="64" y1="200" x2="64" y2="211" stroke="#0A0A0A" stroke-width="1.5"/>
+    <line x1="76" y1="200" x2="76" y2="211" stroke="#0A0A0A" stroke-width="1.5"/>
+    <!-- Right paw -->
+    <rect x="110" y="200" width="38" height="16" fill="#F8F8F8"/>
+    <line x1="122" y1="200" x2="122" y2="211" stroke="#0A0A0A" stroke-width="1.5"/>
+    <line x1="134" y1="200" x2="134" y2="211" stroke="#0A0A0A" stroke-width="1.5"/>
+    <!-- Tail (drooping, angular) -->
+    <polyline points="142,185 172,168 170,214" fill="none" stroke="#F8F8F8" stroke-width="9" stroke-linejoin="miter" stroke-linecap="square"/>
+  </svg>
+  <p class="error-code">// error 404</p>
+  <h1 class="error-title">Страница<br>не найдена</h1>
+  <p class="error-sub">Похоже, эта страница переехала или никогда не существовала. Зато всё остальное — на месте.</p>
+  <a class="error-cta" href="/">На главную</a>
+</main>
+
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="/" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="/services/smm/">SMM и ведение соцсетей</a>
+        <a href="/services/targeting/">Таргетированная реклама</a>
+        <a href="/services/direct/">Яндекс Директ</a>
+        <a href="/services/content-machine/">Контент завод</a>
+        <a href="/services/video/">Видеопроизводство</a>
+        <a href="/services/reputation/">Управление репутацией</a>
+        <a href="/services/seo/">Продвижение в поиске</a>
+        <a href="/services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="/niches/restaurants/">Рестораны</a>
+        <a href="/niches/beauty/">Салоны красоты</a>
+        <a href="/niches/clinic/">Медицина</a>
+        <a href="/niches/fitness/">Фитнес</a>
+        <a href="/niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="/niches/saas/">IT и SaaS</a>
+        <a href="/niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="/about/">О нас</a>
+        <a href="/cases/">Кейсы</a>
+        <a href="/blog/">Блог</a>
+        <a href="/pricing/">Цены</a>
+        <a href="/contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+<script src="/mobile2.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>

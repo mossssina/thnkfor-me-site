@@ -1,0 +1,10 @@
+Tool: built-in image_gen.
+Status: six high-resolution redraws generated; transparency FAILED, files have baked-in checkerboard RGB backgrounds, including after an extraction retry.
+
+Recreate ONE individual sticker from the supplied WeRent sticker-sheet screenshot as a high-resolution 1024x1024 PNG with genuine transparent alpha background. Input is reference for precise character, lettering and composition. Faithfully redraw the selected sticker only, no screenshot UI or other stickers. Preserve original cute hand-drawn cartoon style: small white astronaut robot, round white helmet with dark slate blue glass face and two blue eyes, thin dark outlines, soft grey shading, bright blue accents, blue W on chest when visible. Bold playful hand-lettered black Cyrillic text, precisely spelled. Crisp polished edges, subtle white sticker contour around art and lettering, transparent outside contour, no background or checkerboard baked in. Entire sticker centered and fully visible with safe margins. Do not use the ivory human-faced Tink mascot; use ONLY this screenshot's WeRent astronaut. Selected sticker: 
+01-good-morning: top left: astronaut holding a large blue-and-white mug with WeRent written on it, text «ДОБРОЕ УТРО».
+02-thanks-review: top row fourth: astronaut hugging a bright pink heart to chest, text below «СПАСИБО ЗА ОТЗЫВ».
+03-under-control: second row first: full body astronaut raising both hands with small cleaning tools, blue W on chest, arched text «ВСЁ ПОД» above and «КОНТРОЛЕМ» below.
+04-in-touch: sixth row fourth: friendly full body astronaut waving one hand, blue W on chest, arched text above «ЗДРАВСТВУЙТЕ».
+05-gift: seventh row third: astronaut holding a blue gift box with a white ribbon, three-quarter pose, text below «ВАМ ПОДАРОК».
+06-thank-you: third row first: waist-up astronaut with one hand at chest and other making a friendly gesture, blue W, text to left «СПАСИБО».

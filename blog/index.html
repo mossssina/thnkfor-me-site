@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блог THNKFOR.ME — маркетинг без лишних слов</title>
+    <link rel="canonical" href="https://thnkfor.me/blog/">
+    <meta property="og:title" content="Блог THNKFOR.ME — маркетинг без лишних слов">
+<meta name="description" content="Практические статьи о digital-маркетинге, AI-автоматизации и контент-стратегиях. Только то, что проверено на реальных проектах.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}ul,ol{list-style:none;}
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+.site-header{position:sticky;top:0;z-index:100;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);white-space:nowrap;text-decoration:none;transition:color .15s,border-color .15s;}
+.header-pill:hover,.header-pill.active{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;}
+.header-logo .dot{color:#FF3B00;}.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:32px;}
+.header-nav a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .15s;}
+.header-nav a:hover{color:#FFFFFF;}.header-nav a.active{color:#FF3B00;}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 20px;transition:background .15s;text-decoration:none;}
+.header-cta:hover{background:#FFFFFF;color:#0A0A0A;}
+.section{padding:80px 48px;border-bottom:1px solid rgba(0,0,0,0.1);}
+.section-dark{background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);}
+.section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:48px;display:flex;align-items:center;gap:16px;}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(0,0,0,0.1);}
+.section-dark .section-label{color:rgba(255,255,255,0.3);}
+.section-dark .section-label::after{background:rgba(255,255,255,0.08);}
+.page-hero{background:#0A0A0A;padding:80px 48px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.hero-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(48px,7vw,96px);letter-spacing:-0.05em;line-height:0.92;color:#FFFFFF;margin-bottom:32px;}
+.hero-h1 em{font-style:normal;color:#FF3B00;}
+.hero-sub{font-size:16px;color:rgba(255,255,255,0.45);line-height:1.65;max-width:560px;margin-bottom:40px;}
+.filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0;}
+.filter-btn{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.35);background:transparent;cursor:pointer;transition:all .12s;}
+.filter-btn:hover{color:#FFFFFF;border-color:rgba(255,255,255,0.3);}
+.filter-btn.active{background:#FF3B00;color:#FFFFFF;border-color:#FF3B00;}
+.featured-article{display:block;background:#111;border:1px solid rgba(255,255,255,0.08);padding:40px;text-decoration:none;transition:background .15s;margin-top:48px;}
+.featured-article:hover{background:#1a1a1a;}
+.fa-cat{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;margin-bottom:12px;}
+.fa-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(22px,3vw,40px);letter-spacing:-0.03em;line-height:1.1;color:#FFFFFF;margin-bottom:16px;}
+.fa-sub{font-size:15px;color:rgba(255,255,255,0.4);line-height:1.6;max-width:600px;}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.1);border:1px solid rgba(0,0,0,0.1);}
+.blog-card{background:#FFFFFF;padding:32px 28px;display:flex;flex-direction:column;gap:14px;text-decoration:none;transition:background .15s;}
+.blog-card:nth-child(3n+2){background:#F8F8F8;}
+.blog-card:hover{background:#0A0A0A;}
+.blog-card:hover .bc-title{color:#FFFFFF;}
+.blog-card:hover .bc-desc{color:rgba(255,255,255,0.45);}
+.blog-card:hover .bc-meta{color:rgba(255,255,255,0.25);}
+.blog-card:hover .bc-cat{color:#FF3B00;}
+.blog-card.hidden{display:none;}
+.bc-cat{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;transition:color .15s;}
+.bc-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:17px;letter-spacing:-0.02em;color:#0A0A0A;line-height:1.3;transition:color .15s;}
+.bc-desc{font-size:13px;color:#666;line-height:1.55;flex:1;transition:color .15s;}
+.bc-meta{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#999;transition:color .15s;}
+.count-label{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#999;margin-top:20px;letter-spacing:.06em;}
+.topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);}
+.topic-card{background:#111;padding:40px 32px;display:flex;flex-direction:column;gap:14px;}
+.topic-icon{font-family:'IBM Plex Mono',monospace;font-size:32px;color:rgba(255,59,0,0.3);line-height:1;}
+.topic-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.02em;color:#FFFFFF;}
+.topic-count{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:#FF3B00;margin-bottom:4px;}
+.topic-desc{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.6;}
+.cta-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,0.1);border:1px solid rgba(0,0,0,0.1);}
+.cta-left{background:#0A0A0A;padding:56px 48px;display:flex;flex-direction:column;gap:20px;}
+.cta-right{background:#FF3B00;padding:56px 48px;display:flex;flex-direction:column;gap:20px;}
+.cta-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.3);}
+.cta-right .cta-label{color:rgba(255,255,255,0.5);}
+.cta-h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(28px,3vw,44px);letter-spacing:-0.04em;line-height:1.05;color:#FFFFFF;}
+.cta-sub{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.6;}
+.cta-right .cta-sub{color:rgba(255,255,255,0.7);}
+.btn{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;padding:13px 26px;border-radius:0;cursor:pointer;transition:background .15s,color .15s;display:inline-flex;align-items:center;gap:8px;text-decoration:none;align-self:flex-start;}
+.btn-outline-light{background:transparent;color:#FFFFFF;border:1.5px solid rgba(255,255,255,0.3);}.btn-outline-light:hover{border-color:#FFFFFF;}
+.btn-dark{background:#0A0A0A;color:#FFFFFF;border:none;}.btn-dark:hover{background:#111;}
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:14px;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.3);line-height:1.5;margin-bottom:18px;}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:14px;}
+.footer-links{display:flex;flex-direction:column;gap:9px;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color .15s;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:18px 48px;border-top:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;color:rgba(255,255,255,0.15);}
+
+/* ═══ UNIFIED SITE HEADER + FOOTER ═══ */
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,59,0,0);}60%{box-shadow:0 0 0 6px rgba(255,59,0,0.18);}}
+.site-header{position:sticky!important;top:0!important;z-index:200!important;background:#0A0A0A!important;border-bottom:1px solid rgba(255,255,255,0.08)!important;display:block!important;padding:0!important;height:auto!important;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item > span:hover,.nav-item:hover > a,.nav-item:hover > span{color:#FFFFFF;}
+.nav-item > a.active,.nav-item > span.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover,.header-nav .header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;box-shadow:none;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid!important;grid-template-columns:1fr 1fr 1fr 1fr!important;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" / loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "url": "https://thnkfor.me/blog/",
+      "name": "Блог — THNKFOR.ME",
+      "description": "Статьи об AI-маркетинге, SMM-автоматизации и контент-стратегии"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://thnkfor.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Блог",
+          "item": "https://thnkfor.me/blog/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="../services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="../services/smm/">SMM и соцсети</a>
+          <a href="../services/targeting/">Таргетированная реклама</a>
+          <a href="../services/direct/">Яндекс Директ</a>
+          <div class="nav-subitem">
+          <a href="../services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+          <div class="nav-subdropdown">
+            <a href="../services/content-machine/restaurant/">Для ресторанов</a>
+            <a href="../services/content-machine/beauty/">Для салонов красоты</a>
+            <a href="../services/content-machine/ecom/">Для интернет-магазинов</a>
+            <a href="../services/content-machine/marketplace/">Для маркетплейсов</a>
+            <a href="../services/content-machine/fitness/">Для фитнеса</a>
+            <a href="../services/content-machine/construction/">Для строительства</a>
+          </div>
+        </div>
+          <a href="../services/video/">Видеопроизводство</a>
+          <a href="../services/reputation/">Управление репутацией</a>
+          <a href="../services/seo/">Продвижение в поиске</a>
+          <a href="../services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="../niches/restaurants/">Рестораны</a>
+          <a href="../niches/beauty/">Салоны красоты</a>
+          <a href="../niches/clinic/">Медицина</a>
+          <a href="../niches/fitness/">Фитнес</a>
+          <a href="../niches/saas/">IT и SaaS</a>
+          <a href="../niches/ecommerce-fashion/">E-commerce</a>
+          <a href="../niches/realestate/">Недвижимость</a>
+          <a href="../niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../cases/">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="../cases/werent/">WeRent — Content Machine</a>
+          <a href="../cases/tennispoint/">Tennis Point — бот новинок</a>
+          <a href="../cases/4room/">4room.studio — три AI-системы</a>
+          <a href="../cases/studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="../cases/">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="./" class="active">Блог</a>
+        <div class="nav-dropdown">
+          <a href="ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="content-factory/">Контент-завод</a>
+          <a href="midjourney-business/">Midjourney для бизнеса</a>
+          <a href="prompt-engineering/">Prompt Engineering</a>
+          <a href="n8n-vs-make/">n8n vs Make</a>
+          <a href="seo-ai-2026/">SEO и AI 2026</a>
+          <a href="./">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../pricing/">Цены</a><a href="../contacts/">Контакты</a>
+      </div>
+      <div class="nav-item">
+        <a href="../about/">О нас</a>
+      </div>
+      <a href="../contacts/" class="header-cta">Обсудить проект</a>
+    
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="../services/smm/" class="header-pill">01 · SMM</a>
+    <a href="../services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="../services/direct/" class="header-pill">03 · Директ</a>
+    <a href="../services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="../services/video/" class="header-pill">05 · Видео</a>
+    <a href="../services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="../services/seo/" class="header-pill">07 · SEO</a>
+    <a href="../services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:32px;">// 00 · Блог</div>
+  <h1 class="hero-h1">Маркетинг<br>без<br><em>лишних слов</em></h1>
+  <p class="hero-sub">Пишем о том, что проверили на реальных проектах. AI-маркетинг, SMM, контент, performance — только практика, никакой теории ради теории. 30 статей.</p>
+  <div class="filter-row">
+    <button class="filter-btn active" data-cat="all">Все (30)</button>
+    <button class="filter-btn" data-cat="ai">AI-маркетинг (7)</button>
+    <button class="filter-btn" data-cat="smm">SMM (8)</button>
+    <button class="filter-btn" data-cat="ecom">E-commerce (4)</button>
+    <button class="filter-btn" data-cat="performance">Performance (6)</button>
+    <button class="filter-btn" data-cat="niches">Ниши (5)</button>
+  </div>
+  <a href="yandex-direct-2026/" class="featured-article">
+    <div class="fa-cat">Performance · Сентябрь 2026 · 10 мин чтения</div>
+    <div class="fa-title">Яндекс Директ в 2026:<br>Мастер кампаний и автостратегии</div>
+    <div class="fa-sub">Директ в 2026 — это не ручная настройка ставок. Разбираем, как Мастер кампаний работает с ML и как настроить систему правильно, чтобы CPA был на 25% ниже.</div>
+  </a>
+</div>
+
+<!-- ARTICLES -->
+<div class="section" style="background:#FFFFFF;">
+  <div class="section-label">// 01 · Все статьи</div>
+  <div id="blog-grid" class="blog-grid">
+
+    <!-- AI-маркетинг -->
+    <a href="ai-marketing-2026/" class="blog-card" data-cat="ai">
+      <div class="bc-cat">AI-маркетинг · 8 мин</div>
+      <div class="bc-title">AI в маркетинге 2026: что работает, что нет</div>
+      <div class="bc-desc">Три задачи, где AI лучше человека, и три, где человек незаменим. Инструменты с реальным ROI.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="content-factory/" class="blog-card" data-cat="ai">
+      <div class="bc-cat">AI-маркетинг · 9 мин</div>
+      <div class="bc-title">Контент-завод: как автоматизировать 300+ постов в месяц</div>
+      <div class="bc-desc">Промпт-архитектура, многоуровневая проверка и автопостинг. Система, которая работает с 1 редактором.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="prompt-engineering/" class="blog-card" data-cat="ai">
+      <div class="bc-cat">AI-маркетинг · 7 мин</div>
+      <div class="bc-title">Prompt engineering для маркетологов: не ChatGPT, а инструмент</div>
+      <div class="bc-desc">Как строить промпт-конвейеры вместо разовых запросов. 6 техник, которые реально улучшают вывод.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="midjourney-business/" class="blog-card" data-cat="ai">
+      <div class="bc-cat">AI-маркетинг · 8 мин</div>
+      <div class="bc-title">Midjourney v7 для бизнеса: как убрать «AI-вид»</div>
+      <div class="bc-desc">Параметры, промпты и техники, которые дают профессиональный визуал без узнаваемого нейросетевого стиля.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="n8n-vs-make/" class="blog-card" data-cat="ai">
+      <div class="bc-cat">AI-маркетинг · 6 мин</div>
+      <div class="bc-title">n8n vs Make.com: какой инструмент выбрать для маркетинга</div>
+      <div class="bc-desc">Честное сравнение двух платформ автоматизации. 5 сценариев с примерами для маркетолога.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="seo-ai-2026/" class="blog-card" data-cat="ai">
+      <div class="bc-cat">AI-маркетинг · 9 мин</div>
+      <div class="bc-title">SEO в 2026: как AI меняет поиск и что с этим делать</div>
+      <div class="bc-desc">AI Overviews и нейро-поиск меняют органику. Какой контент попадает в AI-ответы и как адаптировать стратегию.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="brand-analytics/" class="blog-card" data-cat="ai">
+      <div class="bc-cat">AI-маркетинг · 7 мин</div>
+      <div class="bc-title">Brand Analytics и мониторинг репутации в 2026</div>
+      <div class="bc-desc">Как системно отслеживать упоминания, работать с SERM и превращать отзывы в конкурентное преимущество.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+
+    <!-- SMM -->
+    <a href="smm-restaurant/" class="blog-card" data-cat="smm">
+      <div class="bc-cat">SMM · 10 мин</div>
+      <div class="bc-title">SMM для ресторана: полное руководство 2026</div>
+      <div class="bc-desc">Форматы, которые работают в алгоритмах, контент-план и главные ошибки рестораторов.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="smm-fitness/" class="blog-card" data-cat="smm">
+      <div class="bc-cat">SMM · 9 мин</div>
+      <div class="bc-title">SMM для фитнес-клуба: расписание, тренеры, трансформации</div>
+      <div class="bc-desc">Специфика фитнес-контента: сезонность, мотивационные форматы, работа с UGC. Контент-план на месяц.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="telegram-channel/" class="blog-card" data-cat="smm">
+      <div class="bc-cat">SMM · 8 мин</div>
+      <div class="bc-title">Telegram-канал для бизнеса: 1000 подписчиков без рекламы</div>
+      <div class="bc-desc">Контент-стратегия, форматы и методы роста. Реальный путь от 0 до 1000 подписчиков за 2–4 месяца.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="content-plan-beauty/" class="blog-card" data-cat="smm">
+      <div class="bc-cat">SMM · 7 мин</div>
+      <div class="bc-title">Контент-план для бьюти-студии на месяц: шаблон</div>
+      <div class="bc-desc">Готовый контент-план на 4 недели: рубрики, форматы, расписание. Без хаоса и «что бы сегодня запостить».</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="vkontakte-2026/" class="blog-card" data-cat="smm">
+      <div class="bc-cat">SMM · 8 мин</div>
+      <div class="bc-title">ВКонтакте в 2026: алгоритмы, форматы, что изменилось</div>
+      <div class="bc-desc">Как работает алгоритм ВКонтакте и какие форматы дают охват в 2026. Клипы, VK Ads, работа с сообществом.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="reels-business/" class="blog-card" data-cat="smm">
+      <div class="bc-cat">SMM · 7 мин</div>
+      <div class="bc-title">Reels для бизнеса: 10 форматов без танцев и трендов</div>
+      <div class="bc-desc">80% результативных бизнес-Reels — это скучные на вид видео. Разбираем форматы, которые конвертируют.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="beauty-master-smm/" class="blog-card" data-cat="smm">
+      <div class="bc-cat">SMM · 6 мин</div>
+      <div class="bc-title">SMM для бьюти-мастера: без бюджета, только телефон</div>
+      <div class="bc-desc">Что снимать, когда публиковать и как получать клиентов бесплатно. Стратегия для мастера-одиночки.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="b2b-content/" class="blog-card" data-cat="smm">
+      <div class="bc-cat">Контент · 9 мин</div>
+      <div class="bc-title">Контент-маркетинг для B2B: длинный цикл, длинный контент</div>
+      <div class="bc-desc">Воронка от Awareness до Decision. Что публиковать на каждом этапе, чтобы дозревать клиента 3–12 месяцев.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+
+    <!-- E-commerce -->
+    <a href="marketplace-promotion/" class="blog-card" data-cat="ecom">
+      <div class="bc-cat">E-commerce · 12 мин</div>
+      <div class="bc-title">Продвижение на WB и Ozon: полное руководство</div>
+      <div class="bc-desc">Почему 80% продавцов не растут на маркетплейсах и как правильно строить пирамиду продвижения.</div>
+      <div class="bc-meta">Август 2026</div>
+    </a>
+    <a href="wildberries-seo/" class="blog-card" data-cat="ecom">
+      <div class="bc-cat">E-commerce · 8 мин</div>
+      <div class="bc-title">SEO-карточки на Wildberries: как попасть в ТОП-10</div>
+      <div class="bc-desc">70% покупок через поиск WB. Семантика, структура карточки, рейтинг — как попасть в первые позиции.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="marketplace-external-traffic/" class="blog-card" data-cat="ecom">
+      <div class="bc-cat">E-commerce · 7 мин</div>
+      <div class="bc-title">Внешний трафик на маркетплейсы: таргет, блогеры, контекст</div>
+      <div class="bc-desc">Внутренняя реклама дорожает. Три канала внешнего трафика с разным ROAS и сравнением по эффективности.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="rich-content-marketplace/" class="blog-card" data-cat="ecom">
+      <div class="bc-cat">E-commerce · 6 мин</div>
+      <div class="bc-title">Rich Content на маркетплейсах: делаем и измеряем результат</div>
+      <div class="bc-desc">+30% конверсии при правильном RC. Что включать, как создать без дизайнера и как проверить эффект.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+
+    <!-- Performance -->
+    <a href="yandex-direct-2026/" class="blog-card" data-cat="performance">
+      <div class="bc-cat">Performance · 10 мин</div>
+      <div class="bc-title">Яндекс Директ в 2026: Мастер кампаний и автостратегии</div>
+      <div class="bc-desc">ML вместо ручных ставок. Как помочь алгоритму обучиться и что проверять еженедельно для снижения CPA.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="vk-targeting-local/" class="blog-card" data-cat="performance">
+      <div class="bc-cat">Performance · 8 мин</div>
+      <div class="bc-title">Таргет ВКонтакте для локального бизнеса: гео и аудитории</div>
+      <div class="bc-desc">VK Ads с геотаргетингом от 500 метров. Аудитории, форматы и бюджет для кафе, салона или студии.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="telegram-ads/" class="blog-card" data-cat="performance">
+      <div class="bc-cat">Performance · 7 мин</div>
+      <div class="bc-title">Реклама в Telegram: каналы, Telegram Ads, закупка у авторов</div>
+      <div class="bc-desc">Три принципиально разных продукта с разным CPM. Сравнение и рекомендации по нишам.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="roas-vs-roi/" class="blog-card" data-cat="performance">
+      <div class="bc-cat">Performance · 6 мин</div>
+      <div class="bc-title">ROAS vs ROI: как правильно считать эффективность рекламы</div>
+      <div class="bc-desc">Высокий ROAS при отрицательном ROI — вы теряете деньги. Разбираем формулы и ловушки метрик.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="yandex-metrika/" class="blog-card" data-cat="performance">
+      <div class="bc-cat">Performance · 8 мин</div>
+      <div class="bc-title">Яндекс Метрика 3.0: читаем отчёты и принимаем решения</div>
+      <div class="bc-desc">Только 12% смотрят дальше базовых отчётов. Какие данные важны и как выстроить недельный ритм аналитика.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="marketing-dashboard/" class="blog-card" data-cat="performance">
+      <div class="bc-cat">Performance · 7 мин</div>
+      <div class="bc-title">Маркетинговый дашборд в Google Sheets: собираем сами</div>
+      <div class="bc-desc">Единый дашборд без платных сервисов. Как подключить Метрику, Директ и VK Ads в Google Таблицы.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+
+    <!-- Ниши -->
+    <a href="saas-marketing/" class="blog-card" data-cat="niches">
+      <div class="bc-cat">SaaS · 9 мин</div>
+      <div class="bc-title">Маркетинг для SaaS: CAC, LTV, churn — как считать</div>
+      <div class="bc-desc">Математика SaaS-маркетинга. Почему снижение churn на 2% эффективнее удвоения бюджета.</div>
+      <div class="bc-meta">Август 2026</div>
+    </a>
+    <a href="construction-marketing/" class="blog-card" data-cat="niches">
+      <div class="bc-cat">Ниши · 9 мин</div>
+      <div class="bc-title">Маркетинг для строительной компании: длинный цикл и репутация</div>
+      <div class="bc-desc">Цикл сделки 6–18 месяцев, чек от 5 млн. Почему обычный таргет не работает и что использовать вместо.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="clinic-smm/" class="blog-card" data-cat="niches">
+      <div class="bc-cat">Ниши · 8 мин</div>
+      <div class="bc-title">SMM для медицинской клиники: ограничения, доверие, форматы</div>
+      <div class="bc-desc">Что нельзя по закону о рекламе и какие форматы строят доверие. Работа с пациентами в соцсетях.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="legal-marketing/" class="blog-card" data-cat="niches">
+      <div class="bc-cat">Ниши · 9 мин</div>
+      <div class="bc-title">Как продвигать юридическую фирму: SEO, контент, репутация</div>
+      <div class="bc-desc">SEO даёт в 5× ниже CAC чем платная реклама. Стратегия на 12 месяцев для юридического рынка.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+    <a href="edtech-marketing/" class="blog-card" data-cat="niches">
+      <div class="bc-cat">Ниши · 8 мин</div>
+      <div class="bc-title">Маркетинг для образовательного проекта: воронка и retention</div>
+      <div class="bc-desc">EdTech — это не «продать курс». Как выстроить воронку от бесплатного контента до повторной покупки.</div>
+      <div class="bc-meta">Сентябрь 2026</div>
+    </a>
+
+  </div>
+  <div class="count-label" id="count-label">Показано: 30 из 30 статей</div>
+</div>
+
+<!-- TOPICS -->
+<div class="section section-dark">
+  <div class="section-label">// 02 · О чём пишем</div>
+  <div class="topics-grid">
+    <div class="topic-card">
+      <div class="topic-icon">AI_</div>
+      <div class="topic-count">7 статей</div>
+      <div class="topic-title">AI-маркетинг</div>
+      <div class="topic-desc">Нейросети в реальных задачах. Контент-заводы, автоматизация на n8n и Make, prompt-архитектура, Midjourney для бизнеса. Что работает уже сейчас.</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-icon">SMM</div>
+      <div class="topic-count">8 статей</div>
+      <div class="topic-title">SMM и контент</div>
+      <div class="topic-desc">Стратегии для разных ниш — ресторанов, бьюти, фитнеса. Telegram-каналы, ВКонтакте в 2026, Reels без танцев. Форматы, частота, метрики.</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-icon">ECO</div>
+      <div class="topic-count">4 статьи</div>
+      <div class="topic-title">E-commerce</div>
+      <div class="topic-desc">WB и Ozon: SEO карточек, Rich Content, внешний трафик. Как расти на маркетплейсах когда внутренняя реклама дорожает каждый квартал.</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-icon">ROI</div>
+      <div class="topic-count">6 статей</div>
+      <div class="topic-title">Performance</div>
+      <div class="topic-desc">Яндекс Директ, таргет ВКонтакте, реклама в Telegram. Как считать ROAS и ROI правильно. Аналитика в Метрике 3.0 и Google Sheets.</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-icon">B2B</div>
+      <div class="topic-count">5 статей</div>
+      <div class="topic-title">Ниши и SaaS</div>
+      <div class="topic-desc">Маркетинг для строителей, клиник, юристов, EdTech. SaaS-метрики: CAC, LTV, churn. Специфика длинного цикла сделки в разных отраслях.</div>
+    </div>
+    <div class="topic-card" style="background:#0A0A0A;border-top:2px solid #FF3B00;">
+      <div class="topic-icon" style="color:rgba(255,255,255,0.15);">NEW_</div>
+      <div class="topic-count" style="color:rgba(255,255,255,0.3);">Каждый месяц</div>
+      <div class="topic-title">Новые статьи</div>
+      <div class="topic-desc" style="color:rgba(255,255,255,0.25);">Подпишитесь в Telegram, чтобы первыми получать новые материалы о маркетинге и AI-автоматизации.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="section" style="padding:0;">
+  <div class="cta-wrap">
+    <div class="cta-left">
+      <div class="cta-label">Всё, о чём пишем — проверено на практике</div>
+      <div class="cta-h2">Хотите такой же результат для своего бизнеса?</div>
+      <div class="cta-sub">Контент-завод THNKFOR.ME производит 300–500 единиц контента в месяц. AI генерирует — редактор проверяет — автопостинг публикует.</div>
+      <a href="../services/content-machine/" class="btn btn-outline-light">Узнать о контент-заводе →</a>
+    </div>
+    <div class="cta-right">
+      <div class="cta-label">Бесплатная консультация</div>
+      <div class="cta-h2">Обсудить проект</div>
+      <div class="cta-sub">Расскажем, как контент-завод работает для вашей ниши. Аудит текущих соцсетей — бесплатно.</div>
+      <a href="../contacts/" class="btn btn-dark">Написать нам →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="../" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="../services/smm/">SMM и ведение соцсетей</a>
+        <a href="../services/targeting/">Таргетированная реклама</a>
+        <a href="../services/direct/">Яндекс Директ</a>
+        <a href="../services/content-machine/">Контент завод</a>
+        <a href="../services/video/">Видеопроизводство</a>
+        <a href="../services/reputation/">Управление репутацией</a>
+        <a href="../services/seo/">Продвижение в поиске</a>
+        <a href="../services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="../niches/restaurants/">Рестораны</a>
+        <a href="../niches/beauty/">Салоны красоты</a>
+        <a href="../niches/clinic/">Медицина</a>
+        <a href="../niches/fitness/">Фитнес</a>
+        <a href="../niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="../niches/saas/">IT и SaaS</a>
+        <a href="../niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="../about/">О нас</a>
+        <a href="../cases/">Кейсы</a>
+        <a href="./">Блог</a>
+        <a href="../pricing/">Цены</a><a href="../contacts/">Контакты</a>
+        <a href="../contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+<script>
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.blog-card');
+const countLabel = document.getElementById('count-label');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    let visible = 0;
+    cards.forEach(card => {
+      if(cat === 'all' || card.dataset.cat === cat){
+        card.classList.remove('hidden');
+        visible++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+    countLabel.textContent = `Показано: ${visible} из 30 статей`;
+  });
+});
+</script>
+</body>
+</html>

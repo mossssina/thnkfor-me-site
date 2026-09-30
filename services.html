@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Услуги — SMM, реклама, AI-автоматизация для бизнеса | THNKFOR.ME</title>
+    <link rel="canonical" href="https://thnkfor.me/services/">
+    <meta property="og:title" content="Услуги — SMM, реклама, AI-автоматизация для бизнеса | THNKFOR.ME">
+<meta name="description" content="Полный цикл digital-маркетинга: ведение соцсетей, таргет, контент, Яндекс Директ и AI-автоматизация. Работаем с конкретными нишами.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@keyframes b-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:100;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#fff;}
+.header-logo .dot{color:#FF3B00;}.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:32px;}
+.header-nav a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);transition:color .15s;}
+.header-nav a:hover,.header-nav a.active{color:#fff;}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#fff;padding:10px 20px;transition:background .15s;}
+.header-cta:hover{background:#fff;color:#0A0A0A;}
+
+/* SECTION */
+.section{padding:80px 48px;border-bottom:1px solid rgba(0,0,0,0.1);}
+.section-dark{background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.06);}
+.section-white{background:#fff;}
+.section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#666;margin-bottom:48px;display:flex;align-items:center;gap:16px;}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(0,0,0,0.1);}
+.section-dark .section-label{color:rgba(255,255,255,0.3);}
+.section-dark .section-label::after{background:rgba(255,255,255,0.08);}
+
+/* HERO */
+.hero{background:#0A0A0A;padding:80px 48px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.hero-meta{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:48px;}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;}
+.hero-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(40px,5.5vw,72px);letter-spacing:-0.04em;line-height:0.95;color:#fff;}
+.hero-h1 span{color:#FF3B00;}
+.hero-right{display:flex;flex-direction:column;gap:24px;}
+.hero-desc{font-size:17px;color:rgba(255,255,255,0.45);line-height:1.55;max-width:440px;}
+.hero-desc strong{color:#fff;font-weight:500;}
+.hero-nav{display:flex;flex-wrap:wrap;gap:8px;}
+.hero-nav-item{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.4);transition:all .15s;cursor:pointer;}
+.hero-nav-item:hover{border-color:#FF3B00;color:#FF3B00;}
+
+/* SERVICE CARDS */
+.services-list{display:flex;flex-direction:column;gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.service-row{background:#fff;display:grid;grid-template-columns:280px 1fr 220px;gap:0;transition:background .2s;}
+.service-row:hover{background:#F8F8F8;}
+.service-row-dark{background:#0A0A0A;}
+.service-row-dark:hover{background:#111;}
+
+.service-id{padding:40px 32px;border-right:1px solid rgba(0,0,0,0.08);display:flex;flex-direction:column;justify-content:space-between;}
+.service-row-dark .service-id{border-right-color:rgba(255,255,255,0.06);}
+.service-num{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#FF3B00;margin-bottom:12px;}
+.service-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:20px;letter-spacing:-0.02em;line-height:1.15;margin-bottom:8px;}
+.service-row-dark .service-title{color:#fff;}
+.service-subtitle{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:#888;}
+.service-row-dark .service-subtitle{color:rgba(255,255,255,0.3);}
+
+.service-body{padding:40px 40px;border-right:1px solid rgba(0,0,0,0.08);}
+.service-row-dark .service-body{border-right-color:rgba(255,255,255,0.06);}
+.service-desc{font-size:14px;color:#555;line-height:1.65;margin-bottom:24px;max-width:520px;}
+.service-row-dark .service-desc{color:rgba(255,255,255,0.45);}
+.service-includes{display:flex;flex-wrap:wrap;gap:6px;}
+.service-tag{font-family:'IBM Plex Mono',monospace;font-size:8.5px;padding:3px 10px;border:1px solid rgba(0,0,0,0.1);color:#666;}
+.service-row-dark .service-tag{border-color:rgba(255,255,255,0.1);color:rgba(255,255,255,0.4);}
+.service-niches{font-family:'IBM Plex Mono',monospace;font-size:9px;color:#aaa;margin-top:16px;letter-spacing:0.04em;}
+.service-row-dark .service-niches{color:rgba(255,255,255,0.2);}
+
+.service-cta{padding:40px 32px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;}
+.service-price{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#888;letter-spacing:0.04em;margin-bottom:8px;}
+.service-row-dark .service-price{color:rgba(255,255,255,0.3);}
+.service-price-val{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.03em;color:#0A0A0A;margin-bottom:24px;}
+.service-row-dark .service-price-val{color:#fff;}
+.btn{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:13px;padding:11px 22px;border-radius:0;border:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s;display:inline-flex;align-items:center;gap:6px;text-decoration:none;}
+.btn-primary{background:#0A0A0A;color:#F8F8F8;}
+.btn-primary:hover{background:#FF3B00;color:#fff;}
+.btn-accent{background:#FF3B00;color:#fff;}
+.btn-accent:hover{background:#fff;color:#0A0A0A;}
+.btn-outline{background:transparent;color:#0A0A0A;border:1.5px solid rgba(0,0,0,0.2);}
+.btn-outline:hover{background:#0A0A0A;color:#F8F8F8;border-color:#0A0A0A;}
+.btn-outline-light{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.2);}
+.btn-outline-light:hover{border-color:#fff;}
+
+/* WHICH ONE */
+.which-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.which-card{background:#fff;padding:36px 32px;display:flex;flex-direction:column;gap:20px;}
+.which-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:17px;letter-spacing:-0.02em;}
+.which-list{display:flex;flex-direction:column;gap:10px;}
+.which-item{font-size:14px;color:#555;line-height:1.5;display:flex;align-items:flex-start;gap:10px;}
+.which-item::before{content:'·';font-family:'IBM Plex Mono',monospace;color:#FF3B00;flex-shrink:0;font-size:16px;line-height:1.4;}
+
+/* NICHES TABLE */
+.niches-table{width:100%;border-collapse:collapse;font-size:14px;}
+.niches-table th{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#888;padding:12px 20px;text-align:left;border-bottom:1px solid rgba(0,0,0,0.1);background:#F8F8F8;}
+.niches-table td{padding:14px 20px;border-bottom:1px solid rgba(0,0,0,0.06);color:#555;vertical-align:top;}
+.niches-table td:first-child{font-weight:500;color:#0A0A0A;}
+.niches-table tr:last-child td{border-bottom:none;}
+.niches-table tr:hover td{background:rgba(255,59,0,.03);}
+.check{color:#FF3B00;font-family:'IBM Plex Mono',monospace;font-size:11px;}
+
+/* COMPLEX BANNER */
+.complex-banner{background:#0A0A0A;padding:48px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;border:1px solid rgba(0,0,0,0.08);border-top:none;}
+.complex-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#FF3B00;margin-bottom:12px;}
+.complex-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(22px,3vw,36px);letter-spacing:-0.03em;color:#fff;line-height:1.1;margin-bottom:12px;}
+.complex-desc{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.6;max-width:560px;}
+.complex-right{display:flex;flex-direction:column;align-items:flex-end;gap:12px;flex-shrink:0;}
+.complex-price{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:0.06em;}
+.complex-price-val{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:28px;letter-spacing:-0.04em;color:#fff;}
+
+/* CTA */
+.cta-bar{background:#0A0A0A;padding:64px 48px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.06);}
+.cta-bar h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(22px,3vw,40px);letter-spacing:-0.03em;color:#fff;line-height:1.1;max-width:520px;}
+.cta-bar h2 span{color:#FF3B00;}
+.cta-buttons{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap;}
+.btn-lg{padding:16px 32px;font-size:15px;}
+
+/* FOOTER */
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#fff;margin-bottom:16px;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:24px;}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;}
+.footer-links a:hover{color:#fff;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:0.06em;}
+
+/* ═══ UNIFIED SITE HEADER + FOOTER ═══ */
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,59,0,0);}60%{box-shadow:0 0 0 6px rgba(255,59,0,0.18);}}
+.site-header{position:sticky!important;top:0!important;z-index:200!important;background:#0A0A0A!important;border-bottom:1px solid rgba(255,255,255,0.08)!important;display:block!important;padding:0!important;height:auto!important;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item > span:hover,.nav-item:hover > a,.nav-item:hover > span{color:#FFFFFF;}
+.nav-item > a.active,.nav-item > span.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover,.header-nav .header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;box-shadow:none;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid!important;grid-template-columns:1fr 1fr 1fr 1fr!important;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" / loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "url": "https://thnkfor.me/services/",
+      "name": "Услуги — SMM, реклама, AI-автоматизация для бизнеса | THNKFOR.ME",
+      "description": "Полный цикл digital-маркетинга: ведение соцсетей, таргет, контент, Яндекс Директ и AI-автоматизация. Работаем с конкретными нишами."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://thnkfor.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Услуги",
+          "item": "https://thnkfor.me/services/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="services/smm/">SMM и соцсети</a>
+          <a href="services/targeting/">Таргетированная реклама</a>
+          <a href="services/direct/">Яндекс Директ</a>
+          <div class="nav-subitem">
+          <a href="services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+          <div class="nav-subdropdown">
+            <a href="services/content-machine/restaurant/">Для ресторанов</a>
+            <a href="services/content-machine/beauty/">Для салонов красоты</a>
+            <a href="services/content-machine/ecom/">Для интернет-магазинов</a>
+            <a href="services/content-machine/marketplace/">Для маркетплейсов</a>
+            <a href="services/content-machine/fitness/">Для фитнеса</a>
+            <a href="services/content-machine/construction/">Для строительства</a>
+          </div>
+        </div>
+          <a href="services/video/">Видеопроизводство</a>
+          <a href="services/reputation/">Управление репутацией</a>
+          <a href="services/seo/">Продвижение в поиске</a>
+          <a href="services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="niches/restaurants/">Рестораны</a>
+          <a href="niches/beauty/">Салоны красоты</a>
+          <a href="niches/clinic/">Медицина</a>
+          <a href="niches/fitness/">Фитнес</a>
+          <a href="niches/saas/">IT и SaaS</a>
+          <a href="niches/ecommerce-fashion/">E-commerce</a>
+          <a href="niches/realestate/">Недвижимость</a>
+          <a href="niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="cases/">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="cases/werent/">WeRent — Content Machine</a>
+          <a href="cases/tennispoint/">Tennis Point — бот новинок</a>
+          <a href="cases/4room/">4room.studio — три AI-системы</a>
+          <a href="cases/studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="cases/">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="blog/">Блог</a>
+        <div class="nav-dropdown">
+          <a href="blog/ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="blog/content-factory/">Контент-завод</a>
+          <a href="blog/midjourney-business/">Midjourney для бизнеса</a>
+          <a href="blog/prompt-engineering/">Prompt Engineering</a>
+          <a href="blog/n8n-vs-make/">n8n vs Make</a>
+          <a href="blog/seo-ai-2026/">SEO и AI 2026</a>
+          <a href="blog/">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="pricing/">Цены</a><a href="contacts/">Контакты</a>
+      </div>
+      <div class="nav-item">
+        <a href="about/">О нас</a>
+      </div>
+      <a href="contacts/" class="header-cta">Обсудить проект</a>
+    
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="services/smm/" class="header-pill">01 · SMM</a>
+    <a href="services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="services/direct/" class="header-pill">03 · Директ</a>
+    <a href="services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="services/video/" class="header-pill">05 · Видео</a>
+    <a href="services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="services/seo/" class="header-pill">07 · SEO</a>
+    <a href="services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-meta">THNKFOR.ME · Услуги · 8 направлений</div>
+  <div class="hero-grid">
+    <h1 class="hero-h1">
+      Весь маркетинг<br>в соцсетях —<br>под одной<br><span>крышей</span>
+    </h1>
+    <div class="hero-right">
+      <p class="hero-desc">
+        Восемь направлений. Можно взять одно, можно всё сразу.
+        <strong>Каждое работает на AI:</strong> быстрее, точнее и дешевле
+        стандартного агентства — без потери голоса бренда.
+      </p>
+      <div class="hero-nav">
+        <a href="#smm" class="hero-nav-item">01 · SMM</a>
+        <a href="#target" class="hero-nav-item">02 · Таргет</a>
+        <a href="#direct" class="hero-nav-item">03 · Директ</a>
+        <a href="#content" class="hero-nav-item">04 · Контент завод</a>
+        <a href="#video" class="hero-nav-item">05 · Видео</a>
+        <a href="#reputation" class="hero-nav-item">06 · Репутация</a>
+        <a href="#seo" class="hero-nav-item">07 · SEO</a>
+        <a href="#complex" class="hero-nav-item">08 · Комплекс</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES LIST -->
+<section class="section" style="padding:0;border-bottom:none;">
+  <div class="services-list">
+
+    <!-- 01 SMM -->
+    <div class="service-row" id="smm">
+      <div class="service-id">
+        <div>
+          <div class="service-num">01_</div>
+          <div class="service-title">SMM и ведение соцсетей</div>
+          <div class="service-subtitle">Контент · Стратегия · Рост</div>
+        </div>
+      </div>
+      <div class="service-body">
+        <p class="service-desc">
+          Полный цикл ведения соцсетей: стратегия под нишу, контент-план, тексты, визуалы и публикации.
+          AI пишет в голосе вашего бренда — не шаблонно, а как живой автор, который знает вашу аудиторию.
+          ВКонтакте, Telegram, Instagram*, TikTok, Pinterest, Яндекс Дзен.
+        </p>
+        <div class="service-includes">
+          <span class="service-tag">AI-контент-стратегия</span>
+          <span class="service-tag">30 постов/мес</span>
+          <span class="service-tag">AI-визуалы</span>
+          <span class="service-tag">Stories · Reels-брифы</span>
+          <span class="service-tag">Хэштеги и геометки</span>
+          <span class="service-tag">Ежемесячный отчёт</span>
+          <span class="service-tag">Корректировка стратегии</span>
+        </div>
+        <p class="service-niches">Для кого: кафе · салоны · фитнес · клиники · ретейл · IT</p>
+      </div>
+      <div class="service-cta">
+        <div>
+          <div class="service-price">от</div>
+          <div class="service-price-val">22 000 ₽/мес</div>
+        </div>
+        <a href="contacts/" class="btn btn-primary">Обсудить →</a>
+      </div>
+    </div>
+
+    <!-- 02 ТАРГЕТ -->
+    <div class="service-row" id="target">
+      <div class="service-id">
+        <div>
+          <div class="service-num">02_</div>
+          <div class="service-title">Таргетированная реклама</div>
+          <div class="service-subtitle">Трафик · Лиды · AI-оптимизация</div>
+        </div>
+      </div>
+      <div class="service-body">
+        <p class="service-desc">
+          Запуск и ведение таргетированной рекламы ВКонтакте, myTarget и Telegram Ads.
+          AI анализирует аудитории в реальном времени, оптимизирует ставки и генерирует
+          креативы — CPL снижается в первые 30 дней.
+        </p>
+        <div class="service-includes">
+          <span class="service-tag">Аудит рекламного аккаунта</span>
+          <span class="service-tag">Сегментация аудиторий</span>
+          <span class="service-tag">AI-креативы</span>
+          <span class="service-tag">A/B-тесты объявлений</span>
+          <span class="service-tag">Оптимизация ставок</span>
+          <span class="service-tag">ВКонтакте · myTarget · TG Ads</span>
+          <span class="service-tag">Еженедельная аналитика</span>
+        </div>
+        <p class="service-niches">Для кого: e-commerce · услуги · мероприятия · мобильные приложения</p>
+      </div>
+      <div class="service-cta">
+        <div>
+          <div class="service-price">от</div>
+          <div class="service-price-val">18 000 ₽/мес</div>
+        </div>
+        <a href="contacts/" class="btn btn-primary">Обсудить →</a>
+      </div>
+    </div>
+
+    <!-- 03 ЯНДЕКС ДИРЕКТ -->
+    <div class="service-row" id="direct">
+      <div class="service-id">
+        <div>
+          <div class="service-num">03_</div>
+          <div class="service-title">Яндекс Директ</div>
+          <div class="service-subtitle">Контекст · Поиск · РСЯ</div>
+        </div>
+      </div>
+      <div class="service-body">
+        <p class="service-desc">
+          Контекстная реклама в поиске и РСЯ. AI собирает семантику, пишет объявления
+          и оптимизирует ставки — трафик из Яндекса с первых дней. Настройка и ведение
+          под ключ: от сбора слов до сквозной аналитики.
+        </p>
+        <div class="service-includes">
+          <span class="service-tag">Сбор семантики</span>
+          <span class="service-tag">AI-объявления</span>
+          <span class="service-tag">Поиск + РСЯ</span>
+          <span class="service-tag">A/B-тесты объявлений</span>
+          <span class="service-tag">Ретаргетинг</span>
+          <span class="service-tag">Яндекс Метрика</span>
+          <span class="service-tag">Отчёт по стоимости лида</span>
+        </div>
+        <p class="service-niches">Для кого: услуги · клиники · e-commerce · строительство · юридические компании</p>
+      </div>
+      <div class="service-cta">
+        <div>
+          <div class="service-price">от</div>
+          <div class="service-price-val">35 000 ₽</div>
+        </div>
+        <a href="contacts/" class="btn btn-primary">Обсудить →</a>
+      </div>
+    </div>
+
+    <!-- 04 КОНТЕНТ ЗАВОД -->
+    <div class="service-row service-row-dark" id="content">
+      <div class="service-id">
+        <div>
+          <div class="service-num">04_</div>
+          <div class="service-title">Контент завод · AI</div>
+          <div class="service-subtitle">Автопостинг · Нейросеть · 24/7</div>
+        </div>
+      </div>
+      <div class="service-body">
+        <p class="service-desc">
+          Контент-машина, обученная на вашем бренде: нейросеть пишет тексты, генерирует визуалы
+          и публикует по расписанию без участия вашей команды. Голос бренда — без выгорания и задержек.
+          Первый контент — через 2–3 дня после старта.
+        </p>
+        <div class="service-includes">
+          <span class="service-tag">Fine-tune под бренд</span>
+          <span class="service-tag">Автопостинг в 13 каналов</span>
+          <span class="service-tag">AI-тексты + визуалы</span>
+          <span class="service-tag">Контент-план на месяц</span>
+          <span class="service-tag">Telegram-бот согласования</span>
+          <span class="service-tag">SEO-хэштеги</span>
+          <span class="service-tag">Аналитика и итерации</span>
+        </div>
+        <p class="service-niches">Для кого: любой бизнес с потребностью в системном контенте</p>
+      </div>
+      <div class="service-cta">
+        <div>
+          <div class="service-price">от</div>
+          <div class="service-price-val">9 000 ₽/мес</div>
+        </div>
+        <a href="contacts/" class="btn btn-accent">Запустить →</a>
+      </div>
+    </div>
+
+    <!-- 05 ВИДЕО -->
+    <div class="service-row" id="video">
+      <div class="service-id">
+        <div>
+          <div class="service-num">05_</div>
+          <div class="service-title">Видеопроизводство</div>
+          <div class="service-subtitle">Reels · TikTok · Shorts</div>
+        </div>
+      </div>
+      <div class="service-body">
+        <p class="service-desc">
+          Короткие видео с AI-монтажом, автоматическими субтитрами и адаптацией под каждую платформу.
+          Сценарии, монтаж, озвучка, обложки — всё производится in-house.
+          Регулярно, быстро, в вашем бренде.
+        </p>
+        <div class="service-includes">
+          <span class="service-tag">8–16 видео/мес</span>
+          <span class="service-tag">AI-сценарии</span>
+          <span class="service-tag">Монтаж и субтитры</span>
+          <span class="service-tag">Адаптация под платформы</span>
+          <span class="service-tag">Обложки и превью</span>
+          <span class="service-tag">Reels · TikTok · Shorts · ВКонтакте</span>
+        </div>
+        <p class="service-niches">Для кого: рестораны · фитнес · бьюти · e-commerce · эксперты</p>
+      </div>
+      <div class="service-cta">
+        <div>
+          <div class="service-price">от</div>
+          <div class="service-price-val">35 000 ₽/мес</div>
+        </div>
+        <a href="contacts/" class="btn btn-primary">Обсудить →</a>
+      </div>
+    </div>
+
+    <!-- 06 РЕПУТАЦИЯ -->
+    <div class="service-row" id="reputation">
+      <div class="service-id">
+        <div>
+          <div class="service-num">06_</div>
+          <div class="service-title">Управление репутацией</div>
+          <div class="service-subtitle">SERM · Отзывы · Мониторинг</div>
+        </div>
+      </div>
+      <div class="service-body">
+        <p class="service-desc">
+          Мониторинг отзывов, работа с негативом и формирование позитивного образа бренда
+          в поиске и на картах. AI отвечает на отзывы персонально, от имени заведения —
+          за 15 минут, а не на следующий день.
+        </p>
+        <div class="service-includes">
+          <span class="service-tag">Мониторинг 24/7</span>
+          <span class="service-tag">AI-ответы на отзывы</span>
+          <span class="service-tag">Работа с негативом</span>
+          <span class="service-tag">Яндекс · Google · 2ГИС · Отзовик</span>
+          <span class="service-tag">SERM в поиске</span>
+          <span class="service-tag">Отчёт по динамике рейтинга</span>
+        </div>
+        <p class="service-niches">Для кого: клиники · рестораны · салоны · сервисы · гостиницы</p>
+      </div>
+      <div class="service-cta">
+        <div>
+          <div class="service-price">от</div>
+          <div class="service-price-val">20 000 ₽/мес</div>
+        </div>
+        <a href="contacts/" class="btn btn-primary">Обсудить →</a>
+      </div>
+    </div>
+
+    <!-- 07 SEO -->
+    <div class="service-row" id="seo">
+      <div class="service-id">
+        <div>
+          <div class="service-num">07_</div>
+          <div class="service-title">Продвижение в поиске</div>
+          <div class="service-subtitle">SEO · Контент · Органика</div>
+        </div>
+      </div>
+      <div class="service-body">
+        <p class="service-desc">
+          SEO и контент-маркетинг для роста органического трафика.
+          AI-конвейер производит статьи, посадочные страницы и тексты для карточек товаров —
+          оптимизированные, в бренде, без шаблонного языка.
+        </p>
+        <div class="service-includes">
+          <span class="service-tag">Семантическое ядро</span>
+          <span class="service-tag">Кластеризация запросов</span>
+          <span class="service-tag">AI-статьи и лендинги</span>
+          <span class="service-tag">Перелинковка</span>
+          <span class="service-tag">Техническое SEO</span>
+          <span class="service-tag">Яндекс · Google</span>
+          <span class="service-tag">Ежемесячный отчёт по позициям</span>
+        </div>
+        <p class="service-niches">Для кого: e-commerce · услуги · агрегаторы · SaaS · клиники</p>
+      </div>
+      <div class="service-cta">
+        <div>
+          <div class="service-price">от</div>
+          <div class="service-price-val">35 000 ₽/мес</div>
+        </div>
+        <a href="contacts/" class="btn btn-primary">Обсудить →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 07 КОМПЛЕКС — ОТДЕЛЬНЫЙ БАННЕР -->
+  <div class="complex-banner" id="complex">
+    <div>
+      <div class="complex-badge">08_ · Флагман</div>
+      <div class="complex-title">Комплексный маркетинг —<br>всё под одной стратегией</div>
+      <p class="complex-desc">
+        SMM + таргет + контент завод + SEO + репутация + видео.
+        Единая стратегия, один аккаунт-менеджер, единая аналитика.
+        Для тех, кто строит систему, а не разовое решение.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;padding:3px 10px;border:1px solid rgba(255,59,0,.3);color:#FF3B00;">SMM</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;padding:3px 10px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);">Таргет</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;padding:3px 10px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);">Контент завод</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;padding:3px 10px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);">SEO</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;padding:3px 10px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);">Репутация</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;padding:3px 10px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);">Видео</span>
+      </div>
+    </div>
+    <div class="complex-right">
+      <div>
+        <div class="complex-price">от</div>
+        <div class="complex-price-val">75 000 ₽/мес</div>
+      </div>
+      <a href="contacts/" class="btn btn-accent btn-lg">Обсудить комплекс →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT SUITS YOU -->
+<section class="section section-white">
+  <div class="section-label">// 01 · Что подходит вашей ситуации</div>
+  <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(24px,3vw,40px);letter-spacing:-0.03em;margin-bottom:40px;line-height:1.1;">Как выбрать<br>нужное направление</h2>
+  <div class="which-grid">
+    <div class="which-card">
+      <div class="which-title">Нужен контент и охваты</div>
+      <div class="which-list">
+        <div class="which-item">Соцсети есть, но публикуются редко и без системы</div>
+        <div class="which-item">Фотографа нанять некогда или дорого</div>
+        <div class="which-item">Хотите 3–4 поста в неделю без съёмок</div>
+        <div class="which-item">Нужна реклама, но нет нормальных креативов</div>
+      </div>
+      <a href="contacts/" class="btn btn-outline" style="margin-top:auto;">→ SMM + Контент завод</a>
+    </div>
+    <div class="which-card">
+      <div class="which-title">Нужны лиды и продажи</div>
+      <div class="which-list">
+        <div class="which-item">Есть бюджет на рекламу, но она не окупается</div>
+        <div class="which-item">Хотите снизить стоимость лида</div>
+        <div class="which-item">Нужна аудитория быстро, без ожидания органики</div>
+        <div class="which-item">Важна аналитика и прозрачность расходов</div>
+      </div>
+      <a href="contacts/" class="btn btn-outline" style="margin-top:auto;">→ Таргет + Аналитика</a>
+    </div>
+    <div class="which-card">
+      <div class="which-title">Нужна система под ключ</div>
+      <div class="which-list">
+        <div class="which-item">Хотите закрыть и привлечение, и удержание</div>
+        <div class="which-item">Устали переключаться между разными подрядчиками</div>
+        <div class="which-item">Строите бренд надолго, а не разовые акции</div>
+        <div class="which-item">Нужен один аккаунт-менеджер для всего</div>
+      </div>
+      <a href="contacts/" class="btn btn-primary" style="margin-top:auto;">→ Комплексный маркетинг</a>
+    </div>
+  </div>
+</section>
+
+<!-- NICHES TABLE -->
+<section class="section">
+  <div class="section-label">// 02 · Ниши</div>
+  <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(22px,3vw,36px);letter-spacing:-0.03em;margin-bottom:40px;">Знаем специфику<br>вашей отрасли</h2>
+  <div style="border:1px solid rgba(0,0,0,0.08);overflow-x:auto;">
+    <table class="niches-table">
+      <thead>
+        <tr>
+          <th>Ниша</th>
+          <th>SMM</th>
+          <th>Таргет</th>
+          <th>Директ</th>
+          <th>Контент завод</th>
+          <th>Видео</th>
+          <th>Репутация</th>
+          <th>SEO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Рестораны и кафе</td><td class="check">✓</td><td class="check">✓</td><td>—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td>—</td></tr>
+        <tr><td>Салоны красоты</td><td class="check">✓</td><td class="check">✓</td><td>—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td>—</td></tr>
+        <tr><td>Медицина и клиники</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td>—</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Фитнес и спорт</td><td class="check">✓</td><td class="check">✓</td><td>—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td>—</td></tr>
+        <tr><td>Интернет-магазины</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>IT и SaaS</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td>—</td><td>—</td><td class="check">✓</td></tr>
+        <tr><td>Строительство</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Психологи и коучи</td><td class="check">✓</td><td class="check">✓</td><td>—</td><td class="check">✓</td><td class="check">✓</td><td>—</td><td class="check">✓</td></tr>
+        <tr><td>Детские центры</td><td class="check">✓</td><td class="check">✓</td><td>—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#aaa;letter-spacing:0.06em;margin-top:16px;">40+ ниш — смотреть все → <a href="niches/" style="color:#FF3B00;border-bottom:1px solid rgba(255,59,0,.3);">thnkfor.me/niches</a></p>
+</section>
+
+<!-- CTA -->
+<div class="cta-bar">
+  <h2>Не знаете с чего начать?<br><span>Разберёмся вместе</span> — бесплатно</h2>
+  <div class="cta-buttons">
+    <a href="contacts/" class="btn btn-accent btn-lg">Оставить заявку</a>
+    <a href="https://t.me/anastasiia_thinkfor" class="btn btn-outline-light btn-lg">Написать в Telegram</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="./" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="services/smm/">SMM и ведение соцсетей</a>
+        <a href="services/targeting/">Таргетированная реклама</a>
+        <a href="services/direct/">Яндекс Директ</a>
+        <a href="services/content-machine/">Контент завод</a>
+        <a href="services/video/">Видеопроизводство</a>
+        <a href="services/reputation/">Управление репутацией</a>
+        <a href="services/seo/">Продвижение в поиске</a>
+        <a href="services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="niches/restaurants/">Рестораны</a>
+        <a href="niches/beauty/">Салоны красоты</a>
+        <a href="niches/clinic/">Медицина</a>
+        <a href="niches/fitness/">Фитнес</a>
+        <a href="niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="niches/saas/">IT и SaaS</a>
+        <a href="niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="about/">О нас</a>
+        <a href="cases/">Кейсы</a>
+        <a href="blog/">Блог</a>
+        <a href="pricing/">Цены</a><a href="contacts/">Контакты</a>
+        <a href="contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+</body>
+</html>

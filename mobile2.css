@@ -1,0 +1,558 @@
+/* ══════════════════════════════════════════════════════════════
+   THNKFOR.ME · mobile.css
+   Подключается после инлайн-стилей страницы
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Decorative section numbers — hidden everywhere ── */
+.hero-icon,
+.feature-icon { display: none !important; }
+
+/* ── Nav sub-dropdown (Контент завод) ──────────────────────── */
+.nav-subitem { position: relative; }
+.sub-arrow { display: inline-block; margin-left: 4px; transition: transform .15s; font-size: 10px; opacity: .5; }
+.nav-subitem:hover .sub-arrow { transform: rotate(90deg); opacity: 1; }
+
+.nav-subdropdown {
+  display: none;
+  flex-direction: column;
+  padding: 0;
+  margin: 0 0 6px 14px;
+  border-left: 2px solid rgba(255,59,0,0.35);
+}
+.nav-subdropdown a {
+  display: block !important;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4) !important;
+  padding: 8px 14px !important;
+  border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+  transition: color .15s;
+}
+.nav-subdropdown a:last-child { border-bottom: none !important; }
+.nav-subdropdown a:hover { color: #FF3B00 !important; background: rgba(255,59,0,0.06) !important; }
+.nav-subitem:hover .nav-subdropdown,
+.nav-subitem.sub-open .nav-subdropdown { display: flex; }
+
+/* ── Desktop: click-open dropdown state ────────────────────── */
+.nav-item.click-open .nav-dropdown {
+  opacity: 1 !important;
+  pointer-events: all !important;
+  transform: translateY(0) !important;
+}
+
+/* ── Hamburger toggle (hidden on desktop) ───────────────────── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  z-index: 200;
+  position: relative;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #FFFFFF;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* X-state when nav is open */
+.site-header.nav-open .nav-toggle span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.site-header.nav-open .nav-toggle span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.site-header.nav-open .nav-toggle span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE BREAKPOINT — max-width: 768px
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Prevent horizontal scroll ── */
+  /* Note: overflow-x:hidden on body breaks position:sticky — use clip instead */
+  html { overflow-x: clip !important; }
+  body { overflow-x: hidden !important; max-width: 100% !important; }
+
+  /* ── Show hamburger ── */
+  .nav-toggle { display: flex !important; }
+
+  /* ── Sticky header (fixed on mobile — sticky breaks when body has overflow-x:hidden) ── */
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 100 !important;
+    padding: 0 !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Compensate for fixed header height so content isn't hidden beneath it */
+  body { padding-top: 56px !important; }
+
+  /* ── Header layout ── */
+  .header-main {
+    padding: 0 20px !important;
+    height: 56px !important;
+  }
+
+  /* Hide: desktop nav, pills, CTA button */
+  .header-nav   { display: none !important; }
+  .header-pills { display: none !important; }
+  .header-cta   { display: none !important; }
+
+  /* ── Mobile nav overlay ── */
+  .site-header.nav-open {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    height: auto !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    overflow-y: auto !important;
+    z-index: 1000 !important;
+    background: #0A0A0A !important;
+  }
+
+  /* Keep header bar (logo + toggle) at top inside overlay */
+  .site-header.nav-open .header-main {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 56px !important;
+    flex-shrink: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+    position: sticky !important;
+    top: 0 !important;
+    background: #0A0A0A !important;
+    z-index: 10 !important;
+  }
+
+  /* Nav visible in overlay — position:fixed escapes the header-main flex row
+     so width is always 100vw instead of ~220px (space between logo and toggle) */
+  .site-header.nav-open .header-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    position: fixed !important;
+    top: 56px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    padding: 8px 0 32px !important;
+    gap: 0 !important;
+    background: #0A0A0A !important;
+    overflow-y: auto !important;
+    z-index: 999 !important;
+  }
+
+  /* Nav items — override display:flex from desktop so dropdown stacks below link */
+  .site-header.nav-open .nav-item {
+    display: block !important;
+    width: 100% !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+  }
+
+  .site-header.nav-open .nav-item > a {
+    display: block !important;
+    padding: 16px 24px !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
+    text-transform: none !important;
+    color: rgba(255,255,255,0.85) !important;
+    text-decoration: none !important;
+  }
+
+  /* ── Accordion: dropdowns hidden by default, shown on tap ── */
+  .site-header.nav-open .nav-dropdown {
+    display: none !important;
+  }
+
+  /* Arrow on nav items that have a dropdown */
+  .site-header.nav-open .nav-item > a,
+  .site-header.nav-open .nav-item > span {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  /* Chevron indicator (only for items with dropdowns — added via JS) */
+  .site-header.nav-open .nav-item.has-dropdown > a::after,
+  .site-header.nav-open .nav-item.has-dropdown > span::after {
+    content: '›';
+    font-size: 20px;
+    opacity: 0.4;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+  .site-header.nav-open .nav-item.has-dropdown.sub-open > a::after,
+  .site-header.nav-open .nav-item.has-dropdown.sub-open > span::after {
+    transform: rotate(90deg);
+    opacity: 0.8;
+  }
+
+  /* Dropdown visible when accordion open */
+  .site-header.nav-open .nav-item.sub-open .nav-dropdown {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 24px 12px !important;
+    gap: 0 !important;
+    background: transparent !important;
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: none !important;
+    border: none !important;
+    min-width: unset !important;
+    transform: none !important;
+    pointer-events: all !important;
+  }
+
+  .site-header.nav-open .nav-item.sub-open .nav-dropdown a {
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    color: rgba(255,255,255,0.35) !important;
+    padding: 8px 0 !important;
+    display: block !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+  }
+
+  /* Sub-dropdown (Контент завод) — also accordion, hidden until sub-open */
+  .site-header.nav-open .nav-subdropdown {
+    display: none !important;
+  }
+  .site-header.nav-open .nav-subitem.sub-open .nav-subdropdown {
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 0 0 8px 16px !important;
+    border-left: 2px solid rgba(255,59,0,0.25) !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  .site-header.nav-open .nav-subitem.sub-open .nav-subdropdown a {
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 10px !important;
+    letter-spacing: 0.07em !important;
+    text-transform: uppercase !important;
+    color: rgba(255,255,255,0.3) !important;
+    padding: 8px 14px !important;
+    display: block !important;
+    border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+    background: transparent !important;
+  }
+  .site-header.nav-open .sub-arrow { display: none !important; }
+
+  /* Simple nav links (no dropdown) */
+  .site-header.nav-open .header-nav > a {
+    display: block !important;
+    padding: 16px 24px !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    color: rgba(255,255,255,0.85) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+  }
+
+  /* CTA visible in overlay */
+  .site-header.nav-open .header-cta {
+    display: block !important;
+    margin: 24px 24px 0 !important;
+    text-align: center !important;
+    padding: 16px 24px !important;
+    font-size: 16px !important;
+    background: #FF3B00 !important;
+    color: #fff !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+  }
+
+  /* Prevent body scroll when nav open */
+  body.nav-overlay { overflow: hidden !important; }
+
+  /* ── Sections ── */
+  .section { padding: 40px 20px !important; }
+
+  /* ── Cover / homepage hero ── */
+  .cover {
+    padding: 48px 20px !important;
+    min-height: auto !important;
+  }
+  .cover-meta {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin-bottom: 32px !important;
+  }
+  .cover-thnk,
+  .cover-forme {
+    font-size: clamp(48px, 14vw, 80px) !important;
+  }
+  .cover-manifesto {
+    max-width: 100% !important;
+    font-size: 16px !important;
+    margin-bottom: 32px !important;
+  }
+  .cover-footer {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-top: 40px !important;
+  }
+  .cover-cta { gap: 12px !important; }
+
+  /* ── Hero sections ── */
+  .hero                { padding: 48px 20px 0 !important; }
+  .article-hero        { padding: 48px 20px !important; }
+  .hero-meta           { gap: 16px !important; flex-wrap: wrap !important; margin-bottom: 28px !important; }
+  .hero-body           { padding-bottom: 40px !important; }
+
+  /* ── Hero + intro 2-col grids → 1 col ── */
+  .hero-body,
+  .hero-grid,
+  .hero-layout,
+  .intro-grid,
+  .intro-2col,
+  .two-col,
+  .split-panel,
+  .founder-grid        { grid-template-columns: 1fr !important; gap: 32px !important; }
+
+  /* ── Stats grids (keep 2-col, just reduce padding) ── */
+  .hero-stats,
+  .stat-row,
+  .stat-grid,
+  .kpi-grid            { grid-template-columns: 1fr 1fr !important; }
+
+  /* ── Service / content grids ── */
+  .service-grid,
+  .srv-grid,
+  .srv-grid.cols3,
+  .services-grid,
+  .features-grid,
+  .features,
+  .channels,
+  .pain-grid,
+  .utp-grid,
+  .values-grid,
+  .deliver-grid,
+  .tools-grid,
+  .format-grid,
+  .topics-grid,
+  .rules-grid,
+  .tech-grid,
+  .platform-grid,
+  .extra-grid,
+  .which-grid,
+  .verdict-grid,
+  .sem-grid            { grid-template-columns: 1fr !important; }
+
+  /* ── Niches grid (4 col → 2 col on mobile) ── */
+  .niches-grid         { grid-template-columns: 1fr 1fr !important; gap: 1px !important; }
+
+  /* ── Blog / cases / related ── */
+  .blog-grid,
+  .post-grid,
+  .cases-grid,
+  .card-grid,
+  .related-grid,
+  .article-grid        { grid-template-columns: 1fr !important; }
+
+  /* ── Process / results ── */
+  .process-grid,
+  .process-row,
+  .results-grid,
+  .results-row,
+  .results,
+  .cta-grid,
+  .cta-wrap,
+  .challenge-grid,
+  .ecosystem-grid,
+  .compare-grid,
+  .pipeline,
+  .flow,
+  .flow-row,
+  .tracks,
+  .diff-table,
+  .compare,
+  .sm-full-grid,
+  .social-grid         { grid-template-columns: 1fr !important; }
+
+  /* ── Team grid (4 → 2 col) ── */
+  .team-grid           { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+
+  /* ── Contact grid ── */
+  .contact-grid        { grid-template-columns: 1fr !important; }
+
+  /* ── Pricing ── */
+  .pricing-grid,
+  .scenarios           { grid-template-columns: 1fr !important; }
+
+  .service-header {
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding: 32px 20px 0 !important;
+  }
+
+  .pricing-cards,
+  .service-cards       { padding: 0 20px 32px !important; grid-template-columns: 1fr !important; }
+
+  .legend {
+    padding: 12px 20px !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* ── Article layout (remove sidebar) ── */
+  .article-layout      { grid-template-columns: 1fr !important; }
+  .article-sidebar     { display: none !important; }
+  .article-body {
+    padding: 32px 20px !important;
+    border-right: none !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  .article-footer-cta  { grid-template-columns: 1fr !important; }
+
+  /* ── Bot / AI section ── */
+  .bot-grid,
+  .bot-split           { grid-template-columns: 1fr !important; }
+
+  /* ── Sitemap ── */
+  .sitemap-grid        { grid-template-columns: 1fr 1fr !important; }
+
+  /* ── Case-specific ── */
+  .case-cta,
+  .next-case,
+  .mascot-section,
+  .mascot-use,
+  .ba-wrap,
+  .c-agent-card,
+  .c-arch-branches,
+  .c-dash-body,
+  .c-dash-metrics      { grid-template-columns: 1fr !important; }
+
+  .cmp-row,
+  .cmp-summary-grid    { grid-template-columns: 1fr !important; }
+
+  /* ── Footer (4 col → 2 col) ── */
+  .site-footer {
+    grid-template-columns: 1fr 1fr !important;
+    padding: 40px 20px !important;
+    gap: 32px !important;
+  }
+
+  .footer-grid         { grid-template-columns: 1fr 1fr !important; }
+
+  /* Footer: first col (logo+tagline) spans full width */
+  .site-footer > *:first-child {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* ── Section label ── */
+  .section-label {
+    font-size: 9px !important;
+    margin-bottom: 28px !important;
+  }
+
+  /* ── Section header flex ── */
+  .section-header {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: flex-start !important;
+  }
+
+  /* ── Overflow safety ── */
+  table         { display: block !important; overflow-x: auto !important; }
+  pre, code     { overflow-x: auto !important; }
+  .diff-table   { overflow-x: auto !important; }
+
+  /* ── Block 03 (Content machine) + Block 07 (FAQ): 2-col → 1-col ── */
+  .cm-grid  { grid-template-columns: 1fr !important; }
+  .faq-grid { grid-template-columns: 1fr !important; }
+
+  /* ── Inline grids without classes ── */
+  .svc-full-inner { grid-template-columns: 1fr !important; gap: 24px !important; } /* Full-service card 3-col */
+  .platforms-grid { grid-template-columns: 1fr 1fr !important; }                   /* Targeting platforms 5-col → 2-col */
+
+  /* ── Services page: service-row (280px 1fr 220px → stack) ── */
+  .service-row    { grid-template-columns: 1fr !important; }
+
+  /* ── Cases: results bar (4-col → 2-col), company card (2-col → 1-col) ── */
+  .results-bar-inner { grid-template-columns: 1fr 1fr !important; }
+  .company-card      { grid-template-columns: 1fr !important; }
+
+  /* ── Case WeRent: sticker grid (6-col → 3-col) ── */
+  .sticker-grid   { grid-template-columns: repeat(3,1fr) !important; }
+
+  /* ── Services: complex banner ── */
+  .complex-banner { grid-template-columns: 1fr !important; }
+
+  /* ── Misc ── */
+  .topic-row,
+  .type-row,
+  .col-headers,
+  .field-row,
+  .form-grid,
+  .faq-item     { grid-template-columns: 1fr !important; }
+
+  .info-row,
+  .rule-nums    { grid-template-columns: 1fr !important; }
+
+  .error-item,
+  .start-item   { grid-template-columns: 1fr !important; }
+
+  /* ── Content type / format grids ── */
+  .content-types,
+  .content-types-grid { grid-template-columns: 1fr !important; }
+
+  /* ── 404 page ── */
+  .error-layout { flex-direction: column !important; gap: 24px !important; }
+
+} /* end @media 768px */
+
+/* ══════════════════════════════════════════════════════════════
+   TABLET — max-width: 1024px (light touch)
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .section          { padding: 60px 32px !important; }
+  .hero             { padding: 60px 32px 0 !important; }
+  .header-main      { padding: 0 32px !important; }
+  .site-footer      { padding: 48px 32px !important; }
+
+  .niches-grid      { grid-template-columns: 1fr 1fr !important; }
+  .results-grid     { grid-template-columns: 1fr 1fr !important; }
+  .cta-grid         { grid-template-columns: 1fr 1fr !important; }
+  .team-grid        { grid-template-columns: 1fr 1fr !important; }
+  .site-footer      { grid-template-columns: 1fr 1fr !important; }
+}

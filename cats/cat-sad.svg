@@ -1,0 +1,42 @@
+<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ears -->
+  <polygon points="48,52 65,8 90,52" fill="#F8F8F8"/>
+  <polygon points="110,52 135,8 152,52" fill="#F8F8F8"/>
+  <!-- Inner ear -->
+  <polygon points="55,52 65,22 83,52" fill="#FF3B00"/>
+  <polygon points="117,52 135,22 145,52" fill="#FF3B00"/>
+  <!-- Head -->
+  <rect x="42" y="52" width="116" height="92" fill="#F8F8F8"/>
+  <!-- Sad eyebrows (inner-up, outer-down) -->
+  <line x1="64" y1="76" x2="88" y2="82" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="square"/>
+  <line x1="112" y1="82" x2="136" y2="76" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="square"/>
+  <!-- Sad eyes: outer corners droop down -->
+  <line x1="62" y1="97" x2="92" y2="87" stroke="#0A0A0A" stroke-width="4" stroke-linecap="square"/>
+  <line x1="108" y1="87" x2="138" y2="97" stroke="#0A0A0A" stroke-width="4" stroke-linecap="square"/>
+  <!-- Tear (orange) -->
+  <rect x="67" y="99" width="5" height="13" fill="#FF3B00"/>
+  <!-- Nose -->
+  <rect x="96" y="111" width="8" height="6" fill="#FF3B00"/>
+  <!-- Sad mouth: frown -->
+  <polyline points="83,122 100,131 117,122" fill="none" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="miter" stroke-linecap="square"/>
+  <!-- Whiskers -->
+  <line x1="42" y1="114" x2="88" y2="118" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="42" y1="123" x2="88" y2="123" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="112" y1="118" x2="158" y2="114" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="112" y1="123" x2="158" y2="123" stroke="#0A0A0A" stroke-width="1.5"/>
+  <!-- Body -->
+  <rect x="58" y="144" width="84" height="62" fill="#F8F8F8"/>
+  <!-- Collar -->
+  <rect x="58" y="144" width="84" height="12" fill="#FF3B00"/>
+  <rect x="94" y="155" width="12" height="10" fill="#0A0A0A"/>
+  <!-- Left paw -->
+  <rect x="52" y="200" width="38" height="16" fill="#F8F8F8"/>
+  <line x1="64" y1="200" x2="64" y2="211" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="76" y1="200" x2="76" y2="211" stroke="#0A0A0A" stroke-width="1.5"/>
+  <!-- Right paw -->
+  <rect x="110" y="200" width="38" height="16" fill="#F8F8F8"/>
+  <line x1="122" y1="200" x2="122" y2="211" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="134" y1="200" x2="134" y2="211" stroke="#0A0A0A" stroke-width="1.5"/>
+  <!-- Tail (drooping) -->
+  <polyline points="142,185 172,168 170,214" fill="none" stroke="#F8F8F8" stroke-width="9" stroke-linejoin="miter" stroke-linecap="square"/>
+</svg>

@@ -1,0 +1,908 @@
+[
+  {
+    "niche": "Косметологические клиники",
+    "category": "Beauty/Медицина",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "продвижение косметологии в социальных сетях",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "smm для косметологической клиники",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "контент для косметолога инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 3,
+        "results_count": null
+      },
+      {
+        "query": "ведение соцсетей косметологической клиники",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "таргетированная реклама для косметологии",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": null
+      },
+      {
+        "query": "crm для косметологической клиники",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 2,
+        "results_count": null
+      },
+      {
+        "query": "автоматизация записи в косметологии",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "чат-бот для косметологии онлайн запись",
+        "cluster": "Боты/AI",
+        "type": "AI",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "ии бот для косметологической клиники",
+        "cluster": "Боты/AI",
+        "type": "AI",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "маркетинговое агентство для косметологии",
+        "cluster": "Продвижение/реклама",
+        "type": "Общее",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "продвижение косметологической клиники в интернете",
+        "cluster": "Продвижение/реклама",
+        "type": "Общее",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "интернет-маркетинг для beauty клиники",
+        "cluster": "Продвижение/реклама",
+        "type": "Общее",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "продвижение косметологии в социальных сетях smm",
+        "position": 1,
+        "url": "https://direct.yandex.ru/base/articles/kak-kosmetologicheskoj-klinike-privlech-klientov-iz-interneta",
+        "domain": "direct.yandex.ru",
+        "title": "Реклама косметологии — продвижение клиники и маркетинг косметологических услуг",
+        "description": "Как косметологической клинике привлечь клиентов из интернета — инструкция Яндекс Директ",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение косметологии в социальных сетях smm",
+        "position": 2,
+        "url": "https://tck-b.ru/smm/for-medical/cosmetology",
+        "domain": "tck-b.ru",
+        "title": "SMM для косметологии: продвижение косметологов в соцсетях 2026",
+        "description": "Агентство Точка Б — SMM для медицинских клиник и косметологии. Специализируется только на медицинской нише 4+ года.",
+        "pages_count": "~30"
+      },
+      {
+        "query_used": "продвижение косметологии в социальных сетях smm",
+        "position": 3,
+        "url": "https://kosmmos.ru/beauty",
+        "domain": "kosmmos.ru",
+        "title": "SMM продвижение салонов красоты, косметологий, стилистов в Вконтакте, Одноклассники, Telegram",
+        "description": "Продвижение beauty-бизнеса в социальных сетях: ВКонтакте, ОК, Telegram",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение косметологии в социальных сетях smm",
+        "position": 4,
+        "url": "https://smm-agentstvo.ru/blog/smm-dlia-salonov-krasoty/",
+        "domain": "smm-agentstvo.ru",
+        "title": "Эффективные стратегии smm для салонов красоты: привлекайте клиентов через соцсети!",
+        "description": "Стратегии SMM для салонов красоты и косметологии — как привлекать клиентов через соцсети",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение косметологии в социальных сетях smm",
+        "position": 5,
+        "url": "https://smmplanner.com/blog/gotovyi-kontient-plan-dlia-sotssietiei-kosmietologha/",
+        "domain": "smmplanner.com",
+        "title": "Готовый контент-план для профиля косметолога в соцсетях",
+        "description": "Готовый контент-план для косметолога в социальных сетях от SMMplanner",
+        "pages_count": null
+      },
+      {
+        "query_used": "smm для косметологической клиники",
+        "position": 1,
+        "url": "https://direct.yandex.ru/base/articles/kak-kosmetologicheskoj-klinike-privlech-klientov-iz-interneta",
+        "domain": "direct.yandex.ru",
+        "title": "Реклама косметологии — продвижение клиники и маркетинг косметологических услуг",
+        "description": "Как косметологической клинике привлечь клиентов из интернета",
+        "pages_count": null
+      },
+      {
+        "query_used": "smm для косметологической клиники",
+        "position": 2,
+        "url": "https://aventon.agency/tori",
+        "domain": "aventon.agency",
+        "title": "Кейс: SMM-продвижение клиники косметологии и эстетической медицины Tori в социальных сетях",
+        "description": "Кейс агентства Aventon: SMM-продвижение клиники косметологии и эстетической медицины Tori",
+        "pages_count": null
+      },
+      {
+        "query_used": "smm для косметологической клиники",
+        "position": 3,
+        "url": "https://www.smmedicine.com/",
+        "domain": "smmedicine.com",
+        "title": "Рекламное smm агентство медицинского маркетинга | smmedicine",
+        "description": "SMM агентство медицинского маркетинга — продвижение клиник и врачей в соцсетях",
+        "pages_count": null
+      },
+      {
+        "query_used": "smm для косметологической клиники",
+        "position": 4,
+        "url": "https://startsmileagency.ru/cases/smm/kosmetologicheskaya-klinika-sm-kosmetologiya/",
+        "domain": "startsmileagency.ru",
+        "title": "Кейс: SMM косметологической клиники в Москве - Startsmile Agency",
+        "description": "Кейс SMM продвижения косметологической клиники SM Косметология в Москве",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "smm для косметологической клиники",
+        "position": 5,
+        "url": "https://cmdigital.ru/prodvizhenie-v-vk/tpost/dbvyk3b5e1-keis-smm-prodvizhenie-kliniki-kosmetolog",
+        "domain": "cmdigital.ru",
+        "title": "Кейс: SMM-продвижение клиники косметологии и лазерной эпиляции",
+        "description": "Кейс: SMM-продвижение клиники косметологии и лазерной эпиляции — CM Digital",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для косметологии",
+        "position": 1,
+        "url": "https://voropaevmedia.com/promotion_beauty",
+        "domain": "voropaevmedia.com",
+        "title": "Комплексный интернет-маркетинг для beauty-индустрии, косметологии и медицинских услуг",
+        "description": "Voropaev Media — комплексный интернет-маркетинг для beauty, косметологии и медицины. Офисы в Пензе и Москве.",
+        "pages_count": "~20"
+      },
+      {
+        "query_used": "маркетинговое агентство для косметологии",
+        "position": 2,
+        "url": "https://myod.agency/",
+        "domain": "myod.agency",
+        "title": "Мёд — маркетинговое агентство для клиник, косметологии и бьюти",
+        "description": "Маркетинговое агентство Мёд — специализируется на косметологии, медицине и бьюти-бизнесе",
+        "pages_count": "~15"
+      },
+      {
+        "query_used": "маркетинговое агентство для косметологии",
+        "position": 3,
+        "url": "https://digitalriff.ru/services/marketing-dlya-kosmetologii/",
+        "domain": "digitalriff.ru",
+        "title": "Маркетинг для косметологии под ключ: увеличение первичных пациентов для косметологии",
+        "description": "DigitalRiff — комплексный маркетинг для косметологии в Москве и регионах. Рост потока пациентов на 50-200% в первые 6 месяцев.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для косметологии",
+        "position": 4,
+        "url": "https://medtarget.ru/project/marketing-for-cosmetology",
+        "domain": "medtarget.ru",
+        "title": "Алгоритм продвижения Косметологической клиники — Маркетинг для косметологии",
+        "description": "MedTarget — маркетинг для косметологических клиник: алгоритм продвижения и привлечения пациентов",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для косметологии",
+        "position": 5,
+        "url": "https://marketing-tech.ru/company_tags/marketing/krasota-i-kosmetologiya/kosmetologi/",
+        "domain": "marketing-tech.ru",
+        "title": "ТОП маркетинговых агентств для косметологов — каталог MARKETING-TECH",
+        "description": "Каталог маркетинговых агентств для косметологов: свыше 25 агентств с рейтингами и отзывами",
+        "pages_count": null
+      }
+    ]
+  },
+  {
+    "niche": "Стоматологические клиники",
+    "category": "Медицина",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "продвижение стоматологии в социальных сетях",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 4,
+        "results_count": null
+      },
+      {
+        "query": "smm для стоматологической клиники",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 4,
+        "results_count": null
+      },
+      {
+        "query": "ведение соцсетей стоматологии контент план",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "таргетированная реклама для стоматологии вконтакте",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": null
+      },
+      {
+        "query": "контент маркетинг для стоматологии instagram telegram",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "crm для стоматологической клиники автоматизация",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "онлайн запись в стоматологию автоматизация",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "чат-бот для стоматологии онлайн запись",
+        "cluster": "Боты/AI",
+        "type": "AI",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "ии автоматизация общения с пациентами стоматологии",
+        "cluster": "Боты/AI",
+        "type": "AI",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "маркетинговое агентство для стоматологии",
+        "cluster": "Продвижение/реклама",
+        "type": "Общее",
+        "search_engines": "Yandex, Google",
+        "frequency": 4,
+        "results_count": null
+      },
+      {
+        "query": "продвижение стоматологии в интернете привлечение пациентов",
+        "cluster": "Продвижение/реклама",
+        "type": "Общее",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": null
+      },
+      {
+        "query": "агентство стоматологического маркетинга",
+        "cluster": "Продвижение/реклама",
+        "type": "Общее",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "продвижение стоматологии в социальных сетях smm",
+        "position": 1,
+        "url": "https://t4ka.ru/prodvizhenie-stomatologii",
+        "domain": "t4ka.ru",
+        "title": "Комплексное продвижение стоматологии в интернете. Привлечение клиентов, примеры акций.",
+        "description": "Комплексное продвижение стоматологии в интернете: SMM, таргет, SEO, акции для привлечения клиентов",
+        "pages_count": "~40"
+      },
+      {
+        "query_used": "продвижение стоматологии в социальных сетях smm",
+        "position": 2,
+        "url": "https://startsmileagency.ru/blog/stati/prodvizhenie-stomatologii-v-sotsialnykh-setyakh/",
+        "domain": "startsmileagency.ru",
+        "title": "Продвижение стоматологии в социальных сетях - Startsmile Agency",
+        "description": "Startsmile Agency — специализированное агентство по продвижению стоматологий в соцсетях",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "продвижение стоматологии в социальных сетях smm",
+        "position": 3,
+        "url": "https://enjoy-digital.ru/blog/sotsialnye-seti-dlya-stomatologii-marketingovaya-strategiya/",
+        "domain": "enjoy-digital.ru",
+        "title": "Социальные сети для стоматологии. Маркетинговая стратегия - ENJOY медицинский маркетинг",
+        "description": "Маркетинговая стратегия продвижения стоматологии в социальных сетях — ENJOY digital",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение стоматологии в социальных сетях smm",
+        "position": 4,
+        "url": "https://kvadrat-digital.ru/keisy/smm/dantist",
+        "domain": "kvadrat-digital.ru",
+        "title": "Продвижение стоматологии в соцсетях: кейс SMM",
+        "description": "Кейс по SMM-продвижению стоматологической клиники — агентство Квадрат Digital",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение стоматологии в социальных сетях smm",
+        "position": 5,
+        "url": "https://doctorpromo.ru/services/smm-prodvizhenie/",
+        "domain": "doctorpromo.ru",
+        "title": "SMM для медицинских клиник и стоматологий — продвижение в соцсетях",
+        "description": "DoctorPromo — SMM продвижение медицинских клиник и стоматологий в соцсетях под ключ",
+        "pages_count": "~60"
+      },
+      {
+        "query_used": "smm агентство для стоматологии контент маркетинг",
+        "position": 1,
+        "url": "https://advertmed.com/marketing/smm/",
+        "domain": "advertmed.com",
+        "title": "SMM для клиник и врачей под ключ в Москве - AdvertMed",
+        "description": "AdvertMed — SMM продвижение клиник и врачей под ключ в Москве",
+        "pages_count": null
+      },
+      {
+        "query_used": "smm агентство для стоматологии контент маркетинг",
+        "position": 2,
+        "url": "https://lead.media/prodvizhenie-v-socsetjah-dlja-stomatologii/",
+        "domain": "lead.media",
+        "title": "SMM для стоматологии в Москве — от 3 000 руб./час | Lead.Media",
+        "description": "Lead.Media — SMM для стоматологии в Москве. Контент от имени врачей, формат «врач объясняет».",
+        "pages_count": null
+      },
+      {
+        "query_used": "smm агентство для стоматологии контент маркетинг",
+        "position": 3,
+        "url": "https://startsmileagency.ru/services/smm/",
+        "domain": "startsmileagency.ru",
+        "title": "SMM для медицинских клиник и стоматологий - Startsmile Agency",
+        "description": "Startsmile Agency — SMM продвижение стоматологий с акцентом на привлечение пациентов",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "smm агентство для стоматологии контент маркетинг",
+        "position": 4,
+        "url": "https://crossmd.ru/blog/smm/smm-dlya-stomatologii-kak-effektivno-vesti-soobshchestva/",
+        "domain": "crossmd.ru",
+        "title": "SMM для стоматологии: как эффективно вести сообщества",
+        "description": "Руководство по эффективному ведению соцсетей стоматологической клиники — crossmd.ru",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для стоматологии продвижение",
+        "position": 1,
+        "url": "https://sinergium.ru/",
+        "domain": "sinergium.ru",
+        "title": "Синергиум: продвижение стоматологий и медицинских клиник №1 — агентство комплексного стом маркетинга",
+        "description": "Синергиум — продвижение стоматологий и медицинских клиник. 17+ лет на рынке, 150+ стоматологических клиник.",
+        "pages_count": "~25"
+      },
+      {
+        "query_used": "маркетинговое агентство для стоматологии продвижение",
+        "position": 2,
+        "url": "https://dwide.ru/",
+        "domain": "dwide.ru",
+        "title": "DWIDE - маркетинговое агентство для стоматологий",
+        "description": "DWIDE — маркетинговое агентство для стоматологий: аналитика данных, сайты, реклама",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для стоматологии продвижение",
+        "position": 3,
+        "url": "https://dental-is.pro/",
+        "domain": "dental-is.pro",
+        "title": "Продвижение стоматологий в интернете | агентство стоматологического маркетинга Dentalis",
+        "description": "Dentalis — агентство стоматологического маркетинга, продвижение стоматологий в интернете с 2015 года",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "маркетинговое агентство для стоматологии продвижение",
+        "position": 4,
+        "url": "https://doctor-marketing.pro/",
+        "domain": "doctor-marketing.pro",
+        "title": "Комплексный маркетинг для стоматологических клиник с акцентом на выручку",
+        "description": "Doctor Marketing Pro — комплексный маркетинг для стоматологий с ориентацией на рост выручки",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для стоматологии продвижение",
+        "position": 5,
+        "url": "https://www.medsteg.com/ru/stomatology-marketing",
+        "domain": "medsteg.com",
+        "title": "Маркетинг для стоматологии - MEDSTEG",
+        "description": "MEDSTEG — маркетинговое агентство с полным спектром услуг для стоматологий на основе данных",
+        "pages_count": null
+      }
+    ]
+  },
+  {
+    "niche": "Частные клиники",
+    "category": "Медицина",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "продвижение частной клиники в социальных сетях",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "smm для медицинской клиники",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": null
+      },
+      {
+        "query": "ведение соцсетей для медицинского центра",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "контент-маркетинг для клиники врач блог",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "таргетированная реклама для медицинского центра",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "crm для медицинского центра автоматизация записи пациентов",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "онлайн запись в клинику автоматизация",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": null
+      },
+      {
+        "query": "чат-бот для медицинской клиники запись пациентов",
+        "cluster": "Боты/AI",
+        "type": "AI",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "ии ассистент для частной клиники автоматизация",
+        "cluster": "Боты/AI",
+        "type": "AI",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "маркетинговое агентство для частной клиники",
+        "cluster": "Продвижение/реклама",
+        "type": "Общее",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "продвижение медицинского центра в интернете",
+        "cluster": "Продвижение/реклама",
+        "type": "Общее",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "агентство медицинского маркетинга привлечение пациентов",
+        "cluster": "Продвижение/реклама",
+        "type": "Общее",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "продвижение частной клиники в социальных сетях smm",
+        "position": 1,
+        "url": "https://sinergium.ru/blog/smm-v-medicine-celi-metody-i-osobennosti",
+        "domain": "sinergium.ru",
+        "title": "Разработка SMM-стратегии для клиники: шаги, ошибки, особенности продвижения в соцсетях",
+        "description": "Синергиум — руководство по разработке SMM-стратегии для медицинских клиник",
+        "pages_count": "~25"
+      },
+      {
+        "query_used": "продвижение частной клиники в социальных сетях smm",
+        "position": 2,
+        "url": "https://remarka.agency/journal/smm-v-mediczine-kak-prodvigat-kliniku-v-soczsetyakh-strategii-i-oshibki",
+        "domain": "remarka.agency",
+        "title": "SMM в медицине: как продвигать клинику в соцсетях — стратегии и ошибки",
+        "description": "Remarka Agency — стратегии и ошибки SMM-продвижения медицинских клиник в соцсетях",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение частной клиники в социальных сетях smm",
+        "position": 3,
+        "url": "https://voropaevmedia.com/smm-dly-medicinskih-klinik",
+        "domain": "voropaevmedia.com",
+        "title": "SMM для медицинских клиник: полное руководство по продвижению в социальных сетях 2026",
+        "description": "Voropaev Media — полное руководство по SMM для медицинских клиник в 2026 году",
+        "pages_count": "~20"
+      },
+      {
+        "query_used": "продвижение частной клиники в социальных сетях smm",
+        "position": 4,
+        "url": "https://med-agency.com/blog/smm-v-medicine",
+        "domain": "med-agency.com",
+        "title": "SMM в медицине: как вести соцсети клиники",
+        "description": "Агентство Анастасии Гришковой — руководство по ведению соцсетей медицинской клиники",
+        "pages_count": "~30"
+      },
+      {
+        "query_used": "продвижение частной клиники в социальных сетях smm",
+        "position": 5,
+        "url": "https://medanalytics.ru/blog/prodvizhenie-klinik-v-sotsialnyh-setyah/",
+        "domain": "medanalytics.ru",
+        "title": "Продвижение клиник в социальных сетях — МедАналитика — медицинский маркетинг",
+        "description": "МедАналитика — продвижение медицинских клиник в социальных сетях",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для частной клиники продвижение",
+        "position": 1,
+        "url": "https://kosatka-marketing.ru/otraslevye-resheniya/medical-marketing/",
+        "domain": "kosatka-marketing.ru",
+        "title": "Услуги маркетинга для клиник в Москве, продвижение медицинских центров и клиник — Косатка Маркетинг",
+        "description": "Косатка Маркетинг — маркетинговые решения для частных клиник и медицинских центров",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для частной клиники продвижение",
+        "position": 2,
+        "url": "https://dimed.agency/",
+        "domain": "dimed.agency",
+        "title": "Агентство медицинского маркетинга DIMED",
+        "description": "DIMED — агентство медицинского маркетинга с комплексным подходом и аналитикой",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для частной клиники продвижение",
+        "position": 3,
+        "url": "https://med-agency.com/",
+        "domain": "med-agency.com",
+        "title": "Медицинский маркетинг под ключ: привлечение пациентов | Агентство Анастасии Гришковой",
+        "description": "Агентство Анастасии Гришковой — медицинский маркетинг под ключ, 17 лет опыта, 9 лет в медицине",
+        "pages_count": "~30"
+      },
+      {
+        "query_used": "маркетинговое агентство для частной клиники продвижение",
+        "position": 4,
+        "url": "https://belberry.net/",
+        "domain": "belberry.net",
+        "title": "Медицинский маркетинг, разработка и продвижение сайтов для медицинских организаций — Belberry",
+        "description": "Belberry — digital-агентство, медицинский маркетинг и разработка сайтов для медицинских организаций",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для частной клиники продвижение",
+        "position": 5,
+        "url": "https://webtomed.ru/",
+        "domain": "webtomed.ru",
+        "title": "Агентство медицинского маркетинга для клиник и медцентров",
+        "description": "WebToMed — ТОП-5 агентств по медицинскому маркетингу, специализация на продвижении дорогих медуслуг",
+        "pages_count": null
+      },
+      {
+        "query_used": "crm для медицинского центра автоматизация записи пациентов",
+        "position": 1,
+        "url": "https://www.bitrix24.ru/journal/crm-sistema-v-meditsinskom-tsentre/",
+        "domain": "bitrix24.ru",
+        "title": "CRM для клиник и медицинских центров: какие задачи решает, как внедрить систему",
+        "description": "Bitrix24 — CRM для медицинских центров: автоматизация записи, управление пациентами, аналитика",
+        "pages_count": null
+      },
+      {
+        "query_used": "crm для медицинского центра автоматизация записи пациентов",
+        "position": 2,
+        "url": "https://www.medesk.ru/medcrm/",
+        "domain": "medesk.ru",
+        "title": "CRM для клиники и медицинского центра - Medesk",
+        "description": "Medesk — CRM для клиник и медицинских центров: запись, расписание, аналитика",
+        "pages_count": null
+      },
+      {
+        "query_used": "crm для медицинского центра автоматизация записи пациентов",
+        "position": 3,
+        "url": "https://medangel.angelsit.ru/crm-dlya-kliniki/",
+        "domain": "medangel.angelsit.ru",
+        "title": "CRM для медицинских центров, больниц, частной клиники | МедАнгел",
+        "description": "МедАнгел — CRM для медицинских центров и частных клиник с автоматизацией",
+        "pages_count": null
+      }
+    ]
+  },
+  {
+    "niche": "Студии лазерной эпиляции",
+    "category": "Beauty",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "продвижение студии лазерной эпиляции в социальных сетях",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "smm для лазерной эпиляции таргет вконтакте",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "контент для студии эпиляции инстаграм telegram",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "реклама лазерной эпиляции привлечение клиентов",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 3,
+        "results_count": null
+      },
+      {
+        "query": "ведение соцсетей beauty студии эпиляции",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "crm для студии лазерной эпиляции автоматизация",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "онлайн запись в студию эпиляции программа",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "чат-бот для студии лазерной эпиляции онлайн запись",
+        "cluster": "Боты/AI",
+        "type": "AI",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "автоматизация записи клиентов салон красоты telegram бот",
+        "cluster": "Боты/AI",
+        "type": "AI",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "маркетинговое агентство для лазерной эпиляции",
+        "cluster": "Продвижение/реклама",
+        "type": "Общее",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "продвижение студии эпиляции в интернете привлечение клиентов",
+        "cluster": "Продвижение/реклама",
+        "type": "Общее",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "комплексное продвижение beauty студии лазерная эпиляция косметология",
+        "cluster": "Продвижение/реклама",
+        "type": "Общее",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "продвижение студии лазерной эпиляции в социальных сетях smm",
+        "position": 1,
+        "url": "https://vk.ru/@smmvalley-keis-prodvizhenie-studii-lazernoi-epilyacii-v-moskve",
+        "domain": "vk.ru",
+        "title": "Кейс: продвижение студии лазерной эпиляции в Москве | VK",
+        "description": "Кейс SMM Valley: продвижение студии лазерной эпиляции в Москве в VK",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение студии лазерной эпиляции в социальных сетях smm",
+        "position": 2,
+        "url": "https://blog.tochkadostupa.pro/kak-delat-posevy-dlya-prodvizheniya-studii-lazernoj-epilyatsii/",
+        "domain": "blog.tochkadostupa.pro",
+        "title": "Кейс о продвижении студии лазерной эпиляции: таргетированная реклама и посевы в Телеграм и ВКонтакте",
+        "description": "Кейс продвижения студии лазерной эпиляции: таргет и посевы в Telegram и VK — Точка Доступа",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение студии лазерной эпиляции в социальных сетях smm",
+        "position": 3,
+        "url": "https://t4ka.ru/instructions-promoting-laser",
+        "domain": "t4ka.ru",
+        "title": "Комплексное продвижение лазерной эпиляции в интернете. Привлечение клиентов. Стратегия продвижения в соцсетях.",
+        "description": "T4ka.ru — комплексная стратегия продвижения студии лазерной эпиляции в интернете и соцсетях",
+        "pages_count": "~40"
+      },
+      {
+        "query_used": "продвижение студии лазерной эпиляции в социальных сетях smm",
+        "position": 4,
+        "url": "https://voropaevmedia.com/blog/studiya-epilyacii-kak-privlech-klientov-i-uvelichit-vyruchku",
+        "domain": "voropaevmedia.com",
+        "title": "Продвижение студии лазерной эпиляции — как найти клиентов и увеличить выручку, кейс",
+        "description": "Voropaev Media — кейс и стратегия привлечения клиентов для студии лазерной эпиляции",
+        "pages_count": "~20"
+      },
+      {
+        "query_used": "продвижение студии лазерной эпиляции в социальных сетях smm",
+        "position": 5,
+        "url": "https://ap-cosmetics.ru/blog/dlya-biznesmenov/sovety-po-poisku-smm-specialista/",
+        "domain": "ap-cosmetics.ru",
+        "title": "Продвижение студии лазерной эпиляции в соцсетях",
+        "description": "Советы по SMM-продвижению студии лазерной эпиляции и поиску специалистов",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение студии лазерной эпиляции в социальных сетях smm",
+        "position": 6,
+        "url": "https://beauty-marketing.ru/prodvizhenie-lazernoj-ehpilyacii-v-instagram",
+        "domain": "beauty-marketing.ru",
+        "title": "Кейс №4 - Продвижение лазерной эпиляции и косметологии «Сапфир» в инстаграм",
+        "description": "Beauty-marketing.ru — кейс продвижения студии лазерной эпиляции и косметологии в Instagram",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для лазерной эпиляции продвижение",
+        "position": 1,
+        "url": "https://vc.ru/marketing/1434397-sotni-klientov-kazhdyi-mesyac-dlya-studii-lazernoi-epilyacii",
+        "domain": "vc.ru",
+        "title": "Сотни клиентов каждый месяц для студии Лазерной Эпиляции — Маркетинг на vc.ru",
+        "description": "Статья на VC.ru: как привлекать сотни клиентов в месяц для студии лазерной эпиляции",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для лазерной эпиляции продвижение",
+        "position": 2,
+        "url": "https://t4ka.ru/reklama-dlya-lazernoj-epilyacii",
+        "domain": "t4ka.ru",
+        "title": "Реклама лазерной эпиляции",
+        "description": "T4ka.ru — инструкция по настройке рекламы студии лазерной эпиляции: аудитория, офферы, Яндекс Директ",
+        "pages_count": "~40"
+      },
+      {
+        "query_used": "маркетинговое агентство для лазерной эпиляции продвижение",
+        "position": 3,
+        "url": "https://krasivo.biz/marketing-v-lazernoj-epilyatsii-top-5-sposobov-prodvizheniya/",
+        "domain": "krasivo.biz",
+        "title": "Маркетинг в лазерной эпиляции: ТОП-5 способов продвижения студии",
+        "description": "Krasivo.biz — ТОП-5 способов маркетинга и продвижения студии лазерной эпиляции",
+        "pages_count": null
+      },
+      {
+        "query_used": "crm для студии лазерной эпиляции автоматизация запись",
+        "position": 1,
+        "url": "https://rubitime.ru/blog/business/poshagovyj-razbor-zapuska-kabineta-lazernoj-epilyaczii-ot-idei-do-pervyh-klientov",
+        "domain": "rubitime.ru",
+        "title": "Пошаговый разбор запуска кабинета лазерной эпиляции: от идеи до первых клиентов",
+        "description": "Rubitime — пошаговый разбор запуска студии лазерной эпиляции, включая CRM и онлайн-запись",
+        "pages_count": null
+      },
+      {
+        "query_used": "crm для студии лазерной эпиляции автоматизация запись",
+        "position": 2,
+        "url": "https://cliently.me/articles/crm-dlya-kosmetologa-zapis-klientov-raspisanie-i-avtomatizaciya-raboty-besplatno",
+        "domain": "cliently.me",
+        "title": "CRM для косметолога и студии эпиляции — запись клиентов, расписание и автоматизация работы [Бесплатно]",
+        "description": "Cliently — бесплатная CRM для косметологов и студий эпиляции: онлайн-запись, уведомления, аналитика",
+        "pages_count": null
+      },
+      {
+        "query_used": "crm для студии лазерной эпиляции автоматизация запись",
+        "position": 3,
+        "url": "https://myrubikon.ru/cases/beauty-and-sport",
+        "domain": "myrubikon.ru",
+        "title": "CRM для салона красоты и автоматизация beauty-бизнеса — amoCRM, онлайн-запись, контроль клиентов",
+        "description": "Rubikon — CRM и автоматизация beauty-бизнеса: amoCRM, онлайн-запись, контроль клиентов",
+        "pages_count": null
+      }
+    ]
+  }
+]

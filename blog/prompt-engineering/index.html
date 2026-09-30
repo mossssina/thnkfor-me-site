@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt engineering для маркетологов: не ChatGPT, а инструмент — THNKFOR.ME</title>
+    <link rel="canonical" href="https://thnkfor.me/blog/prompt-engineering/">
+    <meta property="og:title" content="Prompt engineering для маркетологов: не ChatGPT, а инструмент — THNKFOR.ME">
+<meta name="description" content="Большинство маркетологов используют AI как поисковик. Prompt engineering — это другое: вы строите конвейер, а не задаёте вопросы. 6 техник, которые реально улучшают вывод.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}ul,ol{list-style:none;}
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+.site-header{position:sticky;top:0;z-index:100;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);white-space:nowrap;text-decoration:none;transition:color .15s,border-color .15s;}
+.header-pill:hover,.header-pill.active{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;}
+.header-logo .dot{color:#FF3B00;}.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:32px;}
+.header-nav a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .15s;}
+.header-nav a:hover{color:#FFFFFF;}.header-nav a.active{color:#FF3B00;}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 20px;transition:background .15s;text-decoration:none;}
+.header-cta:hover{background:#FFFFFF;color:#0A0A0A;}
+.article-hero{background:#0A0A0A;padding:80px 48px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.article-cat{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;margin-bottom:20px;}
+.article-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(40px,6vw,80px);letter-spacing:-0.05em;line-height:0.95;color:#FFFFFF;margin-bottom:28px;max-width:800px;}
+.article-meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(255,255,255,0.25);display:flex;gap:24px;flex-wrap:wrap;}
+.article-layout{display:grid;grid-template-columns:1fr 300px;gap:0;align-items:start;max-width:1200px;margin:0 auto;}
+.article-body{padding:56px 48px;border-right:1px solid rgba(0,0,0,0.1);}
+.article-sidebar{padding:40px 32px;position:sticky;top:80px;}
+.toc-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:16px;}
+.toc-list{display:flex;flex-direction:column;gap:2px;}
+.toc-list a{font-size:13px;color:#666;text-decoration:none;padding:6px 0;border-bottom:1px solid rgba(0,0,0,0.06);transition:color .12s;line-height:1.35;}
+.toc-list a:hover{color:#FF3B00;}
+.sidebar-cta{margin-top:40px;background:#0A0A0A;padding:28px 24px;}
+.sidebar-cta-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:12px;}
+.sidebar-cta-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;color:#FFFFFF;letter-spacing:-0.02em;line-height:1.3;margin-bottom:10px;}
+.sidebar-cta-sub{font-size:12px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.sidebar-cta-btn{display:block;background:#FF3B00;color:#FFFFFF;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:13px;padding:11px 16px;text-align:center;transition:background .12s;}
+.sidebar-cta-btn:hover{background:#e03400;}
+h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:28px;letter-spacing:-0.03em;line-height:1.15;color:#0A0A0A;margin:52px 0 20px;padding-top:8px;}
+h3{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:20px;letter-spacing:-0.02em;color:#0A0A0A;margin:32px 0 12px;}
+p{font-size:17px;color:#2a2a2a;line-height:1.7;margin-bottom:20px;}
+.article-lead{font-size:20px;font-weight:400;color:#0A0A0A;line-height:1.55;margin-bottom:28px;letter-spacing:-0.01em;}
+.callout{border-left:3px solid #FF3B00;padding:18px 24px;background:#FFFFFF;margin:28px 0;}
+.callout p{margin:0;font-size:15px;color:#333;line-height:1.65;}
+.callout-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;margin-bottom:8px;}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);margin:32px 0;}
+.stat-cell{background:#FFFFFF;padding:24px 20px;}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:36px;letter-spacing:-0.04em;color:#FF3B00;line-height:1;}
+.stat-desc{font-size:13px;color:#666;line-height:1.45;margin-top:8px;}
+.format-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);margin:28px 0;}
+.format-card{background:#FFFFFF;padding:24px;}
+.format-card:nth-child(odd){background:#F8F8F8;}
+.fc-num{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:#FF3B00;margin-bottom:10px;}
+.fc-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.02em;margin-bottom:8px;}
+.fc-desc{font-size:13px;color:#666;line-height:1.55;}
+.plan-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.plan-table th{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#666;padding:10px 12px;border-bottom:2px solid rgba(0,0,0,0.1);text-align:left;background:#F8F8F8;}
+.plan-table td{padding:12px 12px;border-bottom:1px solid rgba(0,0,0,0.06);vertical-align:top;line-height:1.5;}
+.plan-table tr:hover td{background:#FFFBF8;}
+.error-list{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+.error-item{background:#FFFFFF;border:1px solid rgba(0,0,0,0.08);padding:20px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;}
+.error-x{font-family:'IBM Plex Mono',monospace;font-size:16px;color:#FF3B00;font-weight:500;padding-top:2px;}
+.error-title{font-size:15px;font-weight:500;margin-bottom:5px;}
+.error-desc{font-size:13px;color:#666;line-height:1.5;}
+.rule-box{background:#0A0A0A;color:#FFFFFF;padding:32px;margin:32px 0;}
+.rule-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:14px;}
+.rule-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.03em;line-height:1.25;color:#FFFFFF;margin-bottom:12px;}
+.rule-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.08);margin-top:20px;}
+.rule-num-cell{background:#111;padding:16px;text-align:center;}
+.rule-num-val{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:28px;color:#FF3B00;letter-spacing:-0.04em;}
+.rule-num-desc{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.3);margin-top:4px;letter-spacing:.06em;}
+.article-footer-cta{background:#FF3B00;padding:64px 48px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;}
+.afc-text h3{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(24px,3vw,40px);color:#FFFFFF;letter-spacing:-0.04em;line-height:1.1;margin-bottom:12px;}
+.afc-text p{color:rgba(255,255,255,0.7);font-size:15px;margin:0;line-height:1.5;}
+.btn-light{background:#FFFFFF;color:#0A0A0A;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;padding:14px 28px;white-space:nowrap;transition:background .15s;text-decoration:none;display:inline-block;}
+.btn-light:hover{background:#F0F0F0;}
+.site-footer{background:#0A0A0A;padding:48px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:14px;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.3);line-height:1.5;margin-bottom:18px;}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:14px;}
+.footer-links{display:flex;flex-direction:column;gap:9px;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color .15s;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:18px 48px;border-top:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;color:rgba(255,255,255,0.15);}
+.prompt-block{background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);padding:20px 24px;margin:20px 0;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.7;color:#333;position:relative;}
+.prompt-block::before{content:'ПРОМПТ';font-size:9px;letter-spacing:.12em;color:#FF3B00;display:block;margin-bottom:12px;}
+
+/* ═══ UNIFIED SITE HEADER + FOOTER ═══ */
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,59,0,0);}60%{box-shadow:0 0 0 6px rgba(255,59,0,0.18);}}
+.site-header{position:sticky!important;top:0!important;z-index:200!important;background:#0A0A0A!important;border-bottom:1px solid rgba(255,255,255,0.08)!important;display:block!important;padding:0!important;height:auto!important;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item > span:hover,.nav-item:hover > a,.nav-item:hover > span{color:#FFFFFF;}
+.nav-item > a.active,.nav-item > span.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover,.header-nav .header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;box-shadow:none;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid!important;grid-template-columns:1fr 1fr 1fr 1fr!important;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" / loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Prompt engineering для маркетологов: не ChatGPT, а инструмент — THNKFOR.ME",
+      "url": "https://thnkfor.me/blog/prompt-engineering/",
+      "description": "Большинство маркетологов используют AI как поисковик. Prompt engineering — это другое: вы строите конвейер, а не задаёте вопросы. 6 техник, которые реально улучшают вывод.",
+      "datePublished": "2024-09-13",
+      "publisher": {
+        "@type": "Organization",
+        "name": "THNKFOR.ME",
+        "url": "https://thnkfor.me",
+        "logo": "https://thnkfor.me/logo.svg",
+        "image": "https://thnkfor.me/team/team_group.jpg",
+        "foundingDate": "2024-09-13",
+        "description": "AI-агентство контент-маркетинга. Автоматизируем SMM, производство контента и аналитику с помощью AI-систем.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+7-995-629-39-31",
+          "contactType": "customer service",
+          "email": "hello@thnkfor.me",
+          "availableLanguage": [
+            "Russian",
+            "English"
+          ]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "sameAs": [
+          "https://t.me/anastasiia_thinkfor"
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Анастасия Мосина",
+          "jobTitle": "Founder & CEO"
+        }
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "THNKFOR.ME",
+        "url": "https://thnkfor.me",
+        "logo": "https://thnkfor.me/logo.svg",
+        "image": "https://thnkfor.me/team/team_group.jpg",
+        "foundingDate": "2024-09-13",
+        "description": "AI-агентство контент-маркетинга. Автоматизируем SMM, производство контента и аналитику с помощью AI-систем.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+7-995-629-39-31",
+          "contactType": "customer service",
+          "email": "hello@thnkfor.me",
+          "availableLanguage": [
+            "Russian",
+            "English"
+          ]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "sameAs": [
+          "https://t.me/anastasiia_thinkfor"
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Анастасия Мосина",
+          "jobTitle": "Founder & CEO"
+        }
+      },
+      "image": "https://thnkfor.me/team/team_group.jpg"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://thnkfor.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Блог",
+          "item": "https://thnkfor.me/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Prompt engineering для маркетологов: не ChatGPT, а инструмент — THNKFOR.ME",
+          "item": "https://thnkfor.me/blog/prompt-engineering/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="../../services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="../../services/smm/">SMM и соцсети</a>
+          <a href="../../services/targeting/">Таргетированная реклама</a>
+          <a href="../../services/direct/">Яндекс Директ</a>
+          <div class="nav-subitem">
+          <a href="../../services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+          <div class="nav-subdropdown">
+            <a href="../../services/content-machine/restaurant/">Для ресторанов</a>
+            <a href="../../services/content-machine/beauty/">Для салонов красоты</a>
+            <a href="../../services/content-machine/ecom/">Для интернет-магазинов</a>
+            <a href="../../services/content-machine/marketplace/">Для маркетплейсов</a>
+            <a href="../../services/content-machine/fitness/">Для фитнеса</a>
+            <a href="../../services/content-machine/construction/">Для строительства</a>
+          </div>
+        </div>
+          <a href="../../services/video/">Видеопроизводство</a>
+          <a href="../../services/reputation/">Управление репутацией</a>
+          <a href="../../services/seo/">Продвижение в поиске</a>
+          <a href="../../services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="../../niches/restaurants/">Рестораны</a>
+          <a href="../../niches/beauty/">Салоны красоты</a>
+          <a href="../../niches/clinic/">Медицина</a>
+          <a href="../../niches/fitness/">Фитнес</a>
+          <a href="../../niches/saas/">IT и SaaS</a>
+          <a href="../../niches/ecommerce-fashion/">E-commerce</a>
+          <a href="../../niches/realestate/">Недвижимость</a>
+          <a href="../../niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../cases/">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="../../cases/werent/">WeRent — Content Machine</a>
+          <a href="../../cases/tennispoint/">Tennis Point — бот новинок</a>
+          <a href="../../cases/4room/">4room.studio — три AI-системы</a>
+          <a href="../../cases/studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="../../cases/">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../" class="active">Блог</a>
+        <div class="nav-dropdown">
+          <a href="../ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="../content-factory/">Контент-завод</a>
+          <a href="../midjourney-business/">Midjourney для бизнеса</a>
+          <a href="./">Prompt Engineering</a>
+          <a href="../n8n-vs-make/">n8n vs Make</a>
+          <a href="../seo-ai-2026/">SEO и AI 2026</a>
+          <a href="../">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../pricing/">Цены</a><a href="../../contacts/">Контакты</a>
+      </div>
+      <div class="nav-item">
+        <a href="../../about/">О нас</a>
+      </div>
+      <a href="../../contacts/" class="header-cta">Обсудить проект</a>
+    
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="../../services/smm/" class="header-pill">01 · SMM</a>
+    <a href="../../services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="../../services/direct/" class="header-pill">03 · Директ</a>
+    <a href="../../services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="../../services/video/" class="header-pill">05 · Видео</a>
+    <a href="../../services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="../../services/seo/" class="header-pill">07 · SEO</a>
+    <a href="../../services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<section class="article-hero">
+  <div class="article-cat">AI-маркетинг</div>
+  <h1 class="article-h1">Prompt engineering для маркетологов: не ChatGPT, а инструмент</h1>
+  <div class="article-meta">
+    <span>THNKFOR.ME</span>
+    <span>Сентябрь 2026</span>
+    <span>12 мин чтения</span>
+  </div>
+</section>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <p class="article-lead">Большинство маркетологов используют AI как поисковик: задают вопрос, получают ответ, переписывают вручную. Prompt engineering — это принципиально другой подход. Вы не задаёте вопросы — вы проектируете конвейер, на выходе которого предсказуемый результат нужного качества.</p>
+
+    <div class="stat-grid">
+      <div class="stat-cell">
+        <div class="stat-num">5×</div>
+        <div class="stat-desc">прирост качества вывода при переходе с простых запросов на структурированные промпты</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">−40%</div>
+        <div class="stat-desc">времени на правки, когда промпт включает чёткие инструкции по формату и тону</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">3</div>
+        <div class="stat-desc">компонента определяют качество промпта: роль, задача, контекст. Без одного из них — угадывание</div>
+      </div>
+    </div>
+
+    <h2 id="why-fail">Почему большинство промптов не работают</h2>
+
+    <p>Маркетологи жалуются: «AI пишет воду», «теряет стиль бренда», «не понимает задачу». Проблема почти всегда не в модели — она в промпте. Вот три системных причины плохих результатов.</p>
+
+    <div class="error-list">
+      <div class="error-item">
+        <div class="error-x">×</div>
+        <div>
+          <div class="error-title">Нет контекста — AI угадывает</div>
+          <div class="error-desc">«Напиши пост про наш продукт» — AI не знает, что за продукт, кто его покупает, какой тон нужен, какая длина, какая площадка. Он заполняет пробелы из обучающих данных — а там усреднённый корпоративный контент.</div>
+        </div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">×</div>
+        <div>
+          <div class="error-title">Задача размыта</div>
+          <div class="error-desc">«Напиши что-нибудь интересное» — это не задача. У хорошего промпта есть чёткий формат (пост/email/скрипт), длина, структура, цель (CTR/вовлечённость/продажа). Чем точнее задача — тем точнее результат.</div>
+        </div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">×</div>
+        <div>
+          <div class="error-title">Нет примеров нужного стиля</div>
+          <div class="error-desc">AI гораздо лучше копирует то, что видит, чем следует абстрактным описаниям. «Пиши дружелюбно и по делу» — расплывчато. Три примера ваших лучших постов — конкретно и работает.</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="anatomy">Анатомия хорошего промпта: роль + задача + контекст + формат</h2>
+
+    <p>Структура работающего промпта — это не волшебная формула, а логика. Каждый компонент отвечает на вопрос, который иначе AI решает самостоятельно — и, как правило, не так, как вам нужно.</p>
+
+    <h3>Роль — кто говорит</h3>
+    <p>Задайте AI конкретную экспертизу и перспективу: «Ты CMO SaaS-компании с 8-летним опытом в B2B-маркетинге». Это влияет на выбор слов, глубину аргументации и примеры. Без роли AI пишет «от агентства» — усреднённо и безлично.</p>
+
+    <h3>Задача — что сделать</h3>
+    <p>Конкретный deliverable: «Напиши email для реактивации подписчиков, которые не открывали рассылку 60 дней. Длина — 150–200 слов. Одна CTA-кнопка в конце». Задача должна содержать формат, параметры и ограничения.</p>
+
+    <h3>Контекст — что важно знать</h3>
+    <p>Информация о продукте, аудитории, ситуации. Это самая недооценённая часть. Вставьте описание продукта, ключевые возражения аудитории, тон бренда, запрещённые слова. Чем больше контекста — тем меньше угадывания.</p>
+
+    <h3>Формат — как выдать результат</h3>
+    <p>Структура ответа: «Верни только текст поста. Без вводных фраз типа "Конечно, вот пост". Хэштеги отдельным блоком в конце. Эмодзи — не более одного на абзац». Без этого AI добавляет пояснения, заголовки и структуру, которая вам не нужна.</p>
+
+    <h2 id="techniques">6 техник, которые реально улучшают вывод</h2>
+
+    <div class="format-grid">
+      <div class="format-card">
+        <div class="fc-num">01 — Few-shot</div>
+        <div class="fc-title">Покажи примеры</div>
+        <div class="fc-desc">Дайте 2–3 примера нужного стиля перед задачей. AI будет следовать паттерну, а не абстрактному описанию. Работает лучше любого описания тона голоса. Примеры должны быть реальными текстами бренда, а не выдуманными.</div>
+      </div>
+      <div class="format-card">
+        <div class="fc-num">02 — Chain-of-thought</div>
+        <div class="fc-title">Попроси думать вслух</div>
+        <div class="fc-desc">Для сложных задач (анализ ЦА, стратегия кампании): «Сначала подумай о ключевых болях аудитории, затем о том, как продукт их решает, и только потом пиши текст». Это повышает логичность аргументации на 30–40%.</div>
+      </div>
+      <div class="format-card">
+        <div class="fc-num">03 — Persona</div>
+        <div class="fc-title">Целевая аудитория в промпте</div>
+        <div class="fc-desc">Опишите конкретного читателя: «Аудитория — Алексей, 38 лет, коммерческий директор производственного предприятия. Читает быстро, ненавидит воду, принимает решения на основе цифр». AI адаптирует язык и аргументацию под персону.</div>
+      </div>
+      <div class="format-card">
+        <div class="fc-num">04 — Negative prompting</div>
+        <div class="fc-title">Скажи, чего не делать</div>
+        <div class="fc-desc">Список запретов работает не хуже требований: «Не используй: "уникальный", "революционный", "в современном мире". Не начинай предложения с "Это". Не пиши больше трёх предложений подряд без разбивки». Конкретные запреты эффективнее абстрактных «пиши хорошо».</div>
+      </div>
+      <div class="format-card">
+        <div class="fc-num">05 — Self-critique</div>
+        <div class="fc-title">Попроси оценить свой ответ</div>
+        <div class="fc-desc">После генерации текста: «Оцени, насколько этот текст соответствует голосу бренда по шкале 1–10 и назови три пункта, которые стоит улучшить». Это запускает второй проход, который часто улучшает результат без вашего участия.</div>
+      </div>
+      <div class="format-card">
+        <div class="fc-num">06 — Output anchoring</div>
+        <div class="fc-title">Начни ответ за AI</div>
+        <div class="fc-desc">Начните желаемый ответ сами: «Напиши email. Начни с фразы: "Вы давно не открывали наши письма — и мы решили выяснить почему."». AI продолжит с вашей точки входа, не начиная заново со своей структуры. Мощно для управления первым предложением.</div>
+      </div>
+    </div>
+
+    <h2 id="templates">Промпты для маркетинга: шаблоны для SMM, email, рекламных текстов</h2>
+
+    <p>Ниже — рабочие шаблоны, которые мы используем в наших проектах. Подставьте свои данные в скобках и доработайте под специфику бренда.</p>
+
+    <h3>SMM-пост: формат «Разрушение мифа»</h3>
+    <div class="prompt-block">
+Ты SMM-редактор [название компании] с 5 годами опыта в [ниша].<br><br>
+Задача: напиши пост для ВКонтакте, разрушающий миф о [МИФ]. Длина: 800–1000 символов. Структура: провокационное утверждение → почему люди в это верят → факт, который опровергает → практический вывод для читателя.<br><br>
+Голос бренда: экспертный но не занудный, с конкретными данными, без корпоративного пафоса.<br>
+Запрещено: "уникальный", "эксклюзивный", "каждый знает".<br><br>
+Верни только текст поста. Хэштеги (3–5) отдельным блоком после текста.
+    </div>
+
+    <h3>Email-рассылка: реактивация</h3>
+    <div class="prompt-block">
+Ты email-маркетолог. Напиши письмо для реактивации подписчиков, которые не открывали рассылку [СРОК].<br><br>
+Продукт: [ОПИСАНИЕ]. Главная ценность для клиента: [ЦЕННОСТЬ].<br>
+Тема письма: предложи 3 варианта с элементом любопытства или пользы.<br>
+Тело письма: 120–160 слов. Тон: живой, без давления, с признанием что мы долго не писали ничего полезного.<br>
+CTA: одна кнопка — [ДЕЙСТВИЕ].<br><br>
+Верни: три варианта темы, тело письма, текст кнопки.
+    </div>
+
+    <h3>Рекламный текст: проблема → решение</h3>
+    <div class="prompt-block">
+Ты копирайтер с опытом в performance-маркетинге. Напиши рекламный текст для [ПЛОЩАДКА].<br><br>
+Продукт: [ПРОДУКТ]. ЦА: [ОПИСАНИЕ ЦА]. Главная боль: [БОЛЬ]. Как продукт решает: [РЕШЕНИЕ].<br>
+Формат: заголовок (до 7 слов) + подзаголовок (до 15 слов) + 2–3 буллита с выгодами + CTA.<br>
+Тон: прямой, без восклицательных знаков, с конкретными цифрами.<br><br>
+Сделай 2 варианта с разными углами подачи.
+    </div>
+
+    <h2 id="library">Промпт-библиотека vs промпт на ходу — как строить систему</h2>
+
+    <p>Одиночный хороший промпт — это удача. Система из 20–30 протестированных промптов — это актив компании. Разница принципиальная: промпт на ходу нельзя масштабировать, нельзя передать в команду, нельзя улучшать итеративно.</p>
+
+    <table class="plan-table">
+      <thead>
+        <tr>
+          <th>Параметр</th>
+          <th>Промпт на ходу</th>
+          <th>Промпт-библиотека</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Предсказуемость результата</td>
+          <td>Низкая — каждый раз по-разному</td>
+          <td>Высокая — известный диапазон качества</td>
+        </tr>
+        <tr>
+          <td>Масштабируемость</td>
+          <td>Не масштабируется</td>
+          <td>Можно использовать в автоматизации</td>
+        </tr>
+        <tr>
+          <td>Передача в команду</td>
+          <td>Зависит от конкретного человека</td>
+          <td>Любой член команды использует одинаково</td>
+        </tr>
+        <tr>
+          <td>Итеративное улучшение</td>
+          <td>Невозможно — нет версионирования</td>
+          <td>Версионируется, можно откатить, A/B-тест</td>
+        </tr>
+        <tr>
+          <td>Стоимость поддержки</td>
+          <td>Постоянно высокая</td>
+          <td>Снижается со временем</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Как строить библиотеку: начните с 7–10 самых частых задач. Для каждой — один базовый промпт, протестированный на 10–15 примерах. Храните в Notion с полями: тип контента, дата последнего обновления, версия, пример хорошего вывода, пример плохого вывода и что изменили.</p>
+
+    <div class="rule-box">
+      <div class="rule-label">Правило библиотеки</div>
+      <div class="rule-title">Промпт считается рабочим, только если три разных человека получили с его помощью приемлемый результат</div>
+      <div class="rule-nums">
+        <div class="rule-num-cell">
+          <div class="rule-num-val">10+</div>
+          <div class="rule-num-desc">тестов перед добавлением в библиотеку</div>
+        </div>
+        <div class="rule-num-cell">
+          <div class="rule-num-val">2 нед</div>
+          <div class="rule-num-desc">цикл ревью и обновлений</div>
+        </div>
+        <div class="rule-num-cell">
+          <div class="rule-num-val">v1.x</div>
+          <div class="rule-num-desc">версионирование каждого промпта обязательно</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="errors">Ошибки, которые убивают качество</h2>
+
+    <p>Из 200+ промптов, которые мы проанализировали в клиентских проектах, 80% проблем качества происходят из одних и тех же пяти ошибок.</p>
+
+    <div class="error-list">
+      <div class="error-item">
+        <div class="error-x">×</div>
+        <div>
+          <div class="error-title">Слишком длинный промпт без структуры</div>
+          <div class="error-desc">Промпт на 500 слов сплошным текстом работает хуже, чем 200 слов с чёткими разделами. AI «теряет» инструкции в конце длинного промпта. Разбивайте на блоки: РОЛЬ / ЗАДАЧА / КОНТЕКСТ / ФОРМАТ / ЗАПРЕТЫ.</div>
+        </div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">×</div>
+        <div>
+          <div class="error-title">Противоречивые инструкции</div>
+          <div class="error-desc">«Пиши кратко, но подробно раскрывай каждый пункт» — AI не знает, что важнее. Расставляйте приоритеты явно: «Краткость важнее полноты. Если нужно выбирать — убирай детали, не основной тезис.»</div>
+        </div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">×</div>
+        <div>
+          <div class="error-title">Отсутствие ограничений по длине</div>
+          <div class="error-desc">Без ограничения длины Claude и GPT пишут столько, сколько считают нужным — обычно слишком много. Всегда указывайте: символы, слова или предложения. «До 1000 символов» работает лучше, чем «кратко».</div>
+        </div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">×</div>
+        <div>
+          <div class="error-title">Нет итерации после плохого результата</div>
+          <div class="error-desc">Получили плохой ответ → написали новый промпт с нуля. Это потеря данных. Правильно: «Этот вариант слишком официальный. Перепиши, сделав тон на 30% разговорнее, и убери вводные конструкции». Итерация в рамках одного чата — мощный инструмент.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Главный вывод</div>
+      <p>Prompt engineering — это не навык написания запросов. Это системное мышление: вы проектируете процесс, а не задаёте вопросы. Вложите неделю в построение библиотеки из 10 промптов — и сэкономите часы каждую неделю на весь остальной год.</p>
+    </div>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="toc-label">Содержание</div>
+    <div class="toc-list">
+      <a href="#why-fail">Почему промпты не работают</a>
+      <a href="#anatomy">Анатомия промпта</a>
+      <a href="#techniques">6 техник улучшения вывода</a>
+      <a href="#templates">Шаблоны для маркетинга</a>
+      <a href="#library">Промпт-библиотека</a>
+      <a href="#errors">Ошибки, которые убивают</a>
+    </div>
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-label">Прокачать команду</div>
+      <div class="sidebar-cta-title">Воркшоп по промптингу для вашей маркетинговой команды</div>
+      <div class="sidebar-cta-sub">Практика на реальных задачах вашего бизнеса. 4 часа — и команда работает с AI эффективно.</div>
+      <a href="../../contacts/" class="sidebar-cta-btn">Узнать подробнее →</a>
+    </div>
+  </aside>
+</div>
+
+<div class="article-footer-cta">
+  <div class="afc-text">
+    <h3>Хотите автоматизировать маркетинг?</h3>
+    <p>Аудит текущих процессов — бесплатно. Расскажем, где AI реально сэкономит время и деньги.</p>
+  </div>
+  <a href="../../contacts/" class="btn-light">Получить аудит →</a>
+</div>
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="../../" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="../../services/smm/">SMM и ведение соцсетей</a>
+        <a href="../../services/targeting/">Таргетированная реклама</a>
+        <a href="../../services/direct/">Яндекс Директ</a>
+        <a href="../../services/content-machine/">Контент завод</a>
+        <a href="../../services/video/">Видеопроизводство</a>
+        <a href="../../services/reputation/">Управление репутацией</a>
+        <a href="../../services/seo/">Продвижение в поиске</a>
+        <a href="../../services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="../../niches/restaurants/">Рестораны</a>
+        <a href="../../niches/beauty/">Салоны красоты</a>
+        <a href="../../niches/clinic/">Медицина</a>
+        <a href="../../niches/fitness/">Фитнес</a>
+        <a href="../../niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="../../niches/saas/">IT и SaaS</a>
+        <a href="../../niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="../../about/">О нас</a>
+        <a href="../../cases/">Кейсы</a>
+        <a href="../">Блог</a>
+        <a href="../../pricing/">Цены</a><a href="../../contacts/">Контакты</a>
+        <a href="../../contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+</body>
+</html>

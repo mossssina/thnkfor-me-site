@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>THNKFOR.ME — Валидация спроса</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;background:#F8F8F8;color:#0A0A0A;}
+.container{max-width:1280px;margin:0 auto;padding:40px 32px;}
+h1{font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:500;letter-spacing:-0.03em;color:#0A0A0A;margin-bottom:4px;}
+h2{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:500;letter-spacing:-0.01em;color:#0A0A0A;margin:40px 0 16px;}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px;}
+.kpi{background:#fff;border:1px solid rgba(0,0,0,0.09);padding:24px;position:relative;}
+.kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:#FF3B00;}
+.kpi-num{font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:500;letter-spacing:-0.03em;color:#0A0A0A;line-height:1;}
+.kpi-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#666;margin-top:8px;}
+.kpi-sub{font-family:'Space Grotesk',sans-serif;font-size:12px;color:#888;margin-top:6px;line-height:1.4;}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid rgba(0,0,0,0.08);}
+th{background:#0A0A0A;color:rgba(255,255,255,0.7);padding:11px 14px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;text-align:left;letter-spacing:.06em;text-transform:uppercase;}
+td{padding:11px 14px;border-bottom:1px solid #EBEBEB;font-family:'Space Grotesk',sans-serif;font-size:13px;color:#1A1A1A;vertical-align:middle;}
+tr:hover td{background:#FAFAFA;}
+.tag-green{background:#E8F4E8;color:#1A7A3C;padding:2px 8px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;}
+.tag-yellow{background:#FFF3E0;color:#A06020;padding:2px 8px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;}
+.tag-red{background:#FEE8E8;color:#C0440A;padding:2px 8px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;}
+.insight{background:#fff;border:1px solid rgba(0,0,0,0.08);border-left:3px solid #FF3B00;padding:20px 24px;margin-bottom:12px;}
+.insight strong{font-weight:500;color:#0A0A0A;display:block;margin-bottom:6px;}
+.insight span{color:#555;font-size:13px;line-height:1.5;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+</style>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+<div class="container">
+
+<h1>Валидация спроса — THNKFOR.ME</h1>
+<p style="color:#999;font-size:12px;margin-bottom:28px;">Данные Яндекс Wordstat · Россия · Все устройства · September 2026</p>
+
+<!-- KPI -->
+<div class="kpi-grid">
+  <div class="kpi">
+    <div class="kpi-num">79 531</div>
+    <div class="kpi-label">Показов/мес — SMM & Digital</div>
+    <div class="kpi-sub">«рекламное агентство», «маркетинговое агентство» и др.</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-num">12 714</div>
+    <div class="kpi-label">Показов/мес — AI & Автоматизация</div>
+    <div class="kpi-sub">Растущий сегмент: «нейросети для бизнеса» 2 019/мес · «контент завод» 4 423/мес</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-num">24</div>
+    <div class="kpi-label">Целевые ниши P0</div>
+    <div class="kpi-sub">Проанализированы и оценены по трём метрикам</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-num">~900k</div>
+    <div class="kpi-label">Потенциальных клиентов в РФ</div>
+    <div class="kpi-sub">Суммарно бизнесов во всех целевых нишах</div>
+  </div>
+</div>
+
+<!-- Key insights -->
+<h2>💡 Ключевые выводы</h2>
+<div class="two-col" style="margin-bottom:32px;">
+  <div>
+    <div class="insight">
+      <strong>Рынок огромный, конкуренция на входе — умеренная</strong><br>
+      <span style="color:#555;font-size:12px;">54 905 показов/мес по «рекламное агентство» — рынок сформирован и платежеспособен. При этом ни один игрок не занял нишевую позицию «AI-агентство для конкретной отрасли».</span>
+    </div>
+    <div class="insight" style="margin-top:12px;">
+      <strong>HoReCa + E-com — самый горячий спрос по нишам</strong><br>
+      <span style="color:#555;font-size:12px;">«Реклама ресторана» 2 766/мес, «Реклама интернет-магазина» 1 146/мес. Бизнесы ищут помощь активно, формулируют запрос самостоятельно.</span>
+    </div>
+  </div>
+  <div>
+    <div class="insight">
+      <strong>AI-угол — чистое конкурентное преимущество</strong><br>
+      <span style="color:#555;font-size:12px;">«Нейросети для бизнеса» 2 019/мес, «Автоматизация бизнеса» 8 225/мес — никто из SMM-агентств не позиционируется через AI для конкретной ниши. Это и есть твоё окно.</span>
+    </div>
+    <div class="insight" style="margin-top:12px;">
+      <strong>Маркетплейсы — внезапно большая ниша</strong><br>
+      <span style="color:#555;font-size:12px;">500k продавцов на WB/Ozon, 3 061 показов/мес по нишевым запросам. Типовые боли: контент карточек, SEO, реклама внутри площадки — отлично автоматизируются.</span>
+      <div class="insight" style="margin-top:12px;">
+      <strong>Контент завод — прямой продуктовый запрос, 11 351/мес</strong><br>
+      <span style="color:#555;font-size:12px;">«контент завод» 4 423/мес, «автопостинг» 2 338/мес, «нейросеть для постов» 1 870/мес — кластер растёт. Конкурентов, занимающих этот запрос с AI-позиционированием, практически нет: страница /services/content-machine/ забирает прямой спрос без борьбы с крупными SMM-агентствами.</span>
+    </div>
+  </div>
+    <div class="insight" style="margin-top:12px;">
+      <strong>Контент завод — прямой продуктовый запрос, 11 351/мес</strong><br>
+      <span style="color:#555;font-size:12px;">«контент завод» 4 423/мес, «автопостинг» 2 338/мес, «нейросеть для постов» 1 870/мес — кластер растёт. Конкурентов, занимающих этот запрос с AI-позиционированием, практически нет: страница /services/content-machine/ забирает прямой спрос без борьбы с крупными SMM-агентствами.</span>
+    </div>
+  </div>
+</div>
+
+<!-- Niche ranking table -->
+<h2>📊 Рейтинг ниш по потенциалу</h2>
+<p style="color:#888;font-size:11px;margin-bottom:12px;">Скоринг: Спрос (40%) + Размер рынка (35%) + Уровень конкуренции (25%)</p>
+<table>
+  <thead>
+    <tr>
+      <th style="width:36px;">#</th>
+      <th>Ниша</th>
+      <th style="width:80px;text-align:center;">Итог</th>
+      <th style="width:160px;">Спрос</th>
+      <th style="width:160px;">Рынок</th>
+      <th style="width:160px;">Конкуренция↑</th>
+      <th style="width:80px;text-align:right;">Wordstat</th>
+      <th style="width:90px;text-align:right;">Шир.запрос</th>
+      <th style="width:70px;text-align:right;">Бизнесов</th>
+      <th style="width:60px;text-align:center;">Конк.</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">1</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#B8860B;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Маркетплейс-продавцы (WB / Ozon)</strong><br>
+        <span style="font-size:10px;color:#999;">E-com</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#1A7A3C;">8.5</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:100%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:100%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:40.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">4.0</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">22</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">3,061</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">500k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">10</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">2</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#8B2FC9;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Салоны красоты</strong><br>
+        <span style="font-size:10px;color:#999;">Beauty</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#1A7A3C;">7.9</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:100%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:95.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">9.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:22.000000000000004%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">2.2</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">219</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">933</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">95k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">13</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">3</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C0440A;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Рестораны</strong><br>
+        <span style="font-size:10px;color:#999;">HoReCa</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#1A7A3C;">7.5</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:100%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:100%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:0.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">185</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">3,189</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">120k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">21</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">4</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C0440A;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Кафе</strong><br>
+        <span style="font-size:10px;color:#999;">HoReCa</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#1A7A3C;">7.0</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:100%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:85.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">8.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:0.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">48</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">3,189</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">85k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">19</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">5</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#8B2FC9;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Ногтевые студии</strong><br>
+        <span style="font-size:10px;color:#999;">Beauty</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C08030;">5.7</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:100%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:40.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">4.0</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:10.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.0</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">68</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">933</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">40k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">15</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">6</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#8B2FC9;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Барбершопы</strong><br>
+        <span style="font-size:10px;color:#999;">Beauty</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C08030;">4.8</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:95.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">9.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:18.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.8</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:16.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.6</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">23</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">933</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">18k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">14</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">7</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#C0440A;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Бары и пабы</strong><br>
+        <span style="font-size:10px;color:#999;">HoReCa</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C08030;">4.5</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:90.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">9.0</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:25.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">2.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:0.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">8</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">3,189</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">25k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">23</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">8</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#1A7A3C;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Фитнес-клубы</strong><br>
+        <span style="font-size:10px;color:#999;">Фитнес</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C08030;">4.5</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:94.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">9.4</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:22.000000000000004%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">2.2</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:0.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">25</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">542</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">22k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">21</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">9</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#1A6B8A;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Стоматологические клиники</strong><br>
+        <span style="font-size:10px;color:#999;">Медицина</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C08030;">4.3</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:55.00000000000001%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">5.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:45.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">4.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:22.000000000000004%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">2.2</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">14</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">438</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">45k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">13</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">10</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#B8860B;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Интернет-магазины мебель и декор</strong><br>
+        <span style="font-size:10px;color:#999;">E-com</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">3.9</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:61.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">6.1</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:8.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0.8</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:46.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">4.6</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">0</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">3,061</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">8k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">9</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">11</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#B8860B;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Интернет-магазины ювелирные украшения</strong><br>
+        <span style="font-size:10px;color:#999;">E-com</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">3.6</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:61.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">6.1</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:5.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:40.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">4.0</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">0</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">3,061</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">5k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">10</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">12</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#8B2FC9;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Бровисты / лешмейкеры</strong><br>
+        <span style="font-size:10px;color:#999;">Beauty</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">3.4</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:19.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.9</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:35.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">3.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:57.99999999999999%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">5.8</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">0</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">933</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">35k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">7</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">13</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#8B2FC9;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Перманентный макияж</strong><br>
+        <span style="font-size:10px;color:#999;">Beauty</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">2.8</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:19.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.9</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:25.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">2.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:46.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">4.6</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">0</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">933</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">25k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">9</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">14</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#8B2FC9;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Массажные студии</strong><br>
+        <span style="font-size:10px;color:#999;">Beauty</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">2.8</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:19.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.9</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:30.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">3.0</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:40.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">4.0</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">0</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">933</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">30k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">10</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">15</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#8B2FC9;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Студии лазерной эпиляции</strong><br>
+        <span style="font-size:10px;color:#999;">Beauty</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">2.5</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:28.999999999999996%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">2.9</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:15.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:34.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">3.4</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">3</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">933</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">15k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">11</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">16</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#1A6B8A;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Частные клиники</strong><br>
+        <span style="font-size:10px;color:#999;">Медицина</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">2.4</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:15.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:30.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">3.0</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:27.999999999999996%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">2.8</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">2</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">438</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">30k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">12</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">17</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#1A6B8A;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Косметологические клиники</strong><br>
+        <span style="font-size:10px;color:#999;">Медицина</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">2.3</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:28.999999999999996%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">2.9</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:20.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">2.0</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:16.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.6</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">6</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">438</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">20k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">14</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">18</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#333366;margin-right:6px;"></span>
+        <strong style="font-size:13px;">SMM-агентства (B2B)</strong><br>
+        <span style="font-size:10px;color:#999;">B2B</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">2.2</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:21.000000000000004%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">2.1</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:5.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:46.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">4.6</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">1</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">879</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">5k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">9</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">19</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#1A5CA0;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Детские центры развития</strong><br>
+        <span style="font-size:10px;color:#999;">Другое</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">1.9</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:9.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0.9</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:18.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.8</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:34.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">3.4</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">1</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">300</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">18k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">11</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">20</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#8B2FC9;margin-right:6px;"></span>
+        <strong style="font-size:13px;">SPA-салоны</strong><br>
+        <span style="font-size:10px;color:#999;">Beauty</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">1.7</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:19.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.9</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:12.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.2</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:22.000000000000004%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">2.2</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">0</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">933</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">12k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">13</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">21</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#2D7D4A;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Ветеринарные клиники</strong><br>
+        <span style="font-size:10px;color:#999;">Другое</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">1.6</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:4.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0.4</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:12.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.2</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:40.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">4.0</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">0</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">200</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">12k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">10</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">22</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#1A7A3C;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Пилатес-студии</strong><br>
+        <span style="font-size:10px;color:#999;">Фитнес</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">1.4</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:18.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.8</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:5.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0.5</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:22.000000000000004%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">2.2</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">2</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">542</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">5k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">13</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">23</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#1A7A3C;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Йога-студии</strong><br>
+        <span style="font-size:10px;color:#999;">Фитнес</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">0.8</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:13.999999999999998%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.4</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:8.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0.8</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:0.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">1</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">542</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">8k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">19</td>
+    </tr>
+    <tr style="border-bottom:1px solid #E8EEF8;">
+      <td style="padding:10px 12px;font-weight:700;color:#666;font-size:12px;">24</td>
+      <td style="padding:10px 12px;">
+        <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#1A7A3C;margin-right:6px;"></span>
+        <strong style="font-size:13px;">Кроссфит-боксы</strong><br>
+        <span style="font-size:10px;color:#999;">Фитнес</span>
+      </td>
+      <td style="padding:10px 12px;text-align:center;">
+        <span style="font-size:18px;font-weight:800;color:#C0440A;">0.7</span><span style="font-size:10px;color:#aaa;">/10</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#2A7A3A;border-radius:4px;width:11.000000000000002%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">1.1</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#1A5CA0;border-radius:4px;width:4.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0.4</span>
+      </td>
+      <td style="padding:10px 12px;">
+        <div style="background:#F0F3F8;border-radius:4px;width:120px;height:8px;display:inline-block;vertical-align:middle;"><div style="background:#C08030;border-radius:4px;width:4.0%;height:8px;"></div></div> <span style="font-size:11px;color:#666;margin-left:4px;">0.4</span>
+      </td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">0</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">542</td>
+      <td style="padding:10px 12px;text-align:right;font-size:12px;color:#555;">4k</td>
+      <td style="padding:10px 12px;text-align:center;font-size:12px;color:#555;">16</td>
+    </tr>
+  </tbody>
+</table>
+<p style="color:#AAA;font-size:10px;margin-top:8px;">Wordstat — сумма частотностей 12 целевых запросов по нише · Шир.запрос — объём головного запроса категории · Конк. — уникальных доменов в выдаче · Бизнесов — оценка по открытым данным</p>
+
+<!-- Market demand breakdown -->
+<h2>📈 Объём рынка по сегментам</h2>
+
+    <div style="background:#fff;border-radius:12px;padding:20px 24px;border:1px solid #E0E6F0;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <div style="font-size:14px;font-weight:700;color:#16213E;">🔷 Рынок SMM / digital</div>
+        <div style="font-size:13px;font-weight:700;color:#2A7A3A;background:#E8F4E8;padding:3px 10px;border-radius:20px;">79,531 показов/мес</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">рекламное агентство</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:100%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">54,905</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">таргетированная реклама</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:14.980420726709772%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">8,225</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">маркетинговое агентство</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:13.62535288225116%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">7,481</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">контент маркетинг</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:5.86649667607686%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">3,221</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">digital агентство</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:3.7064019670339676%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">2,035</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">ведение соцсетей</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:3.5260905199890717%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">1,936</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">smm агентство</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:1.600947090428923%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">879</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение в соцсетях</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:1.5463072579910755%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">849</div>
+        </div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 24px;border:1px solid #E0E6F0;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <div style="font-size:14px;font-weight:700;color:#16213E;">🤖 AI / автоматизация</div>
+        <div style="font-size:13px;font-weight:700;color:#2A7A3A;background:#E8F4E8;padding:3px 10px;border-radius:20px;">12,714 показов/мес</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">автоматизация бизнеса</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:100%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">8,225</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">нейросети для бизнеса</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:24.54711246200608%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">2,019</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">автоматизация маркетинга</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:10.310030395136778%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">848</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">чат бот для бизнеса</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:9.592705167173252%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">789</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">crm автоматизация</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:5.72644376899696%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">471</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">ai маркетинг</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:4.401215805471124%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">362</div>
+        </div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 24px;border:1px solid #E0E6F0;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <div style="font-size:14px;font-weight:700;color:#16213E;">🍽 HoReCa</div>
+        <div style="font-size:13px;font-weight:700;color:#2A7A3A;background:#E8F4E8;padding:3px 10px;border-radius:20px;">3,189 показов/мес</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">реклама ресторана</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:100%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">2,766</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение ресторана</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:8.749096167751265%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">242</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение кафе</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:4.55531453362256%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">126</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">маркетинг для ресторана</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:1.9884309472161965%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">55</div>
+        </div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 24px;border:1px solid #E0E6F0;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <div style="font-size:14px;font-weight:700;color:#16213E;">💅 Beauty</div>
+        <div style="font-size:13px;font-weight:700;color:#2A7A3A;background:#E8F4E8;padding:3px 10px;border-radius:20px;">933 показов/мес</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">реклама салона красоты</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:100%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">824</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение салона красоты</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:10.800970873786406%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">89</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение барбершопа</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:1.4563106796116505%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">12</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">реклама ногтевой студии</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:0.8495145631067961%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">7</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение spa</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:0.12135922330097086%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">1</div>
+        </div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 24px;border:1px solid #E0E6F0;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <div style="font-size:14px;font-weight:700;color:#16213E;">🏥 Медицина</div>
+        <div style="font-size:13px;font-weight:700;color:#2A7A3A;background:#E8F4E8;padding:3px 10px;border-radius:20px;">438 показов/мес</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение стоматологии</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:100%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">239</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">реклама медицинской клиники</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:41.42259414225941%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">99</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение косметологии</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:25.94142259414226%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">62</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">маркетинг для клиники</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:15.899581589958158%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">38</div>
+        </div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 24px;border:1px solid #E0E6F0;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <div style="font-size:14px;font-weight:700;color:#16213E;">💪 Фитнес</div>
+        <div style="font-size:13px;font-weight:700;color:#2A7A3A;background:#E8F4E8;padding:3px 10px;border-radius:20px;">542 показов/мес</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">реклама спортзала</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:100%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">269</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение фитнес клуба</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:92.56505576208178%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">249</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">маркетинг для фитнеса</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:5.947955390334572%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">16</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение йога студии</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:2.973977695167286%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">8</div>
+        </div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 24px;border:1px solid #E0E6F0;border-left:3px solid #FF3B00;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <div style="font-size:14px;font-weight:700;color:#16213E;">📦 Контент завод / Автоматизация контента</div>
+        <div style="font-size:13px;font-weight:700;color:#2A7A3A;background:#E8F4E8;padding:3px 10px;border-radius:20px;">11 351 показов/мес</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">контент завод</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#FF3B00;border-radius:4px;height:10px;width:100.00%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">4,423</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">автопостинг</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#FF3B00;border-radius:4px;height:10px;width:52.86%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">2,338</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">нейросеть для постов</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#FF3B00;border-radius:4px;height:10px;width:42.28%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">1,870</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">фабрика контента</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#FF3B00;border-radius:4px;height:10px;width:22.34%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">988</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">нейросеть для соцсетей</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#FF3B00;border-radius:4px;height:10px;width:21.48%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">950</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">контент машина</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#FF3B00;border-radius:4px;height:10px;width:17.68%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">782</div>
+        </div>
+      <div style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#FF3B00;letter-spacing:0.06em;text-transform:uppercase;">→ Прямой продуктовый запрос · /services/content-machine/</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 24px;border:1px solid #E0E6F0;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <div style="font-size:14px;font-weight:700;color:#16213E;">🛒 E-commerce</div>
+        <div style="font-size:13px;font-weight:700;color:#2A7A3A;background:#E8F4E8;padding:3px 10px;border-radius:20px;">3,061 показов/мес</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">реклама интернет магазина</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:100%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">1,146</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение на маркетплейсе</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:67.45200698080279%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">773</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение ozon</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:38.917975567190226%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">446</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">продвижение wb</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:37.52181500872601%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">430</div>
+        </div><div style="display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #F0F3F8;">
+          <div style="width:220px;font-size:12px;color:#333;">маркетинг маркетплейс</div>
+          <div style="flex:1;background:#F0F3F8;border-radius:4px;height:10px;"><div style="background:#16213E;border-radius:4px;height:10px;width:23.211169284467715%;"></div></div>
+          <div style="width:60px;text-align:right;font-size:13px;font-weight:700;color:#16213E;">266</div>
+        </div>
+    </div>
+
+<p style="color:#AAA;font-size:11px;text-align:center;padding:24px 0;">and36.studio · Анализ спроса · Данные: Яндекс Wordstat API · Россия</p>
+</div>
+</body>
+</html>

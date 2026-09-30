@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — THNKFOR.ME | Связаться с агентством</title>
+    <link rel="canonical" href="https://thnkfor.me/contacts/">
+    <meta property="og:title" content="Контакты — THNKFOR.ME | Связаться с агентством">
+<meta name="description" content="Свяжитесь с THNKFOR.ME: Telegram, email, форма заявки. Ответим за 1 час и сделаем бесплатный аудит маркетинга.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@keyframes b-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes cursor-fade{0%,49%{opacity:1}50%,100%{opacity:0}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:100;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#fff;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:32px;}
+.header-nav a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);transition:color .15s;}
+.header-nav a:hover,.header-nav a.active{color:#fff;}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#fff;padding:10px 20px;transition:background .15s;}
+.header-cta:hover{background:#fff;color:#0A0A0A;}
+
+/* SECTION */
+.section{padding:80px 48px;border-bottom:1px solid rgba(0,0,0,0.1);}
+.section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#666;margin-bottom:48px;display:flex;align-items:center;gap:16px;}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(0,0,0,0.1);}
+
+/* HERO */
+.hero{background:#0A0A0A;padding:80px 48px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.hero-meta{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:48px;}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;}
+.hero-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(44px,6vw,80px);letter-spacing:-0.04em;line-height:0.95;color:#fff;}
+.hero-h1 span{color:#FF3B00;}
+.hero-sub{font-size:17px;color:rgba(255,255,255,0.45);line-height:1.55;max-width:420px;margin-bottom:32px;}
+.hero-sub strong{color:#fff;font-weight:500;}
+.hero-response{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25);border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;}
+.hero-response span{color:#FF3B00;}
+
+/* CONTACT GRID */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.contact-card{background:#fff;padding:40px 40px;display:flex;flex-direction:column;gap:20px;transition:background .2s;}
+.contact-card:hover{background:#F8F8F8;}
+.contact-card-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#888;}
+.contact-card-icon{font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:#FF3B00;line-height:1;}
+.contact-card h3{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em;line-height:1.15;}
+.contact-card p{font-size:14px;color:#666;line-height:1.6;max-width:340px;}
+.contact-link{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.04em;color:#0A0A0A;border-bottom:1px solid rgba(0,0,0,0.15);padding-bottom:2px;align-self:flex-start;margin-top:auto;transition:color .15s,border-color .15s;}
+.contact-link:hover{color:#FF3B00;border-color:#FF3B00;}
+.contact-card-accent{background:#0A0A0A;}
+.contact-card-accent .contact-card-label{color:rgba(255,255,255,0.3);}
+.contact-card-accent h3{color:#fff;}
+.contact-card-accent p{color:rgba(255,255,255,0.45);}
+.contact-card-accent .contact-link{color:#FF3B00;border-color:rgba(255,59,0,.3);}
+.contact-card-accent .contact-link:hover{border-color:#FF3B00;}
+.contact-card-accent:hover{background:#111;}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.form-side{background:#fff;padding:48px 48px;display:flex;flex-direction:column;gap:28px;}
+.form-side h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(24px,3vw,36px);letter-spacing:-0.03em;line-height:1.1;}
+.form-side p{font-size:15px;color:#666;line-height:1.6;max-width:400px;}
+.form-promise{display:flex;flex-direction:column;gap:12px;margin-top:auto;}
+.form-promise-item{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#555;}
+.form-promise-item::before{content:'→';font-family:'IBM Plex Mono',monospace;font-size:12px;color:#FF3B00;flex-shrink:0;margin-top:1px;}
+.form-body{background:#F8F8F8;padding:48px 48px;display:flex;flex-direction:column;gap:20px;}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#888;}
+.field input,.field textarea,.field select{font-family:'Space Grotesk',sans-serif;font-size:15px;color:#0A0A0A;background:#fff;border:1px solid rgba(0,0,0,0.12);border-radius:0;padding:12px 16px;outline:none;transition:border-color .15s;width:100%;}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:#0A0A0A;}
+.field textarea{resize:vertical;min-height:100px;line-height:1.5;}
+.field select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.btn-submit{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;background:#FF3B00;color:#fff;border:none;border-radius:0;padding:16px 32px;cursor:pointer;transition:background .15s;align-self:flex-start;}
+.btn-submit:hover{background:#0A0A0A;}
+.form-note{font-family:'IBM Plex Mono',monospace;font-size:9px;color:#aaa;letter-spacing:0.06em;line-height:1.5;}
+
+/* TEAM PHOTO */
+.team-photo-section{border-bottom:1px solid rgba(0,0,0,0.1);overflow:hidden;}
+.team-photo-header{padding:48px 48px 32px;display:flex;align-items:flex-end;justify-content:space-between;}
+.team-photo-header h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(20px,2.5vw,32px);letter-spacing:-0.03em;line-height:1.1;}
+.team-photo-header p{font-size:14px;color:#666;max-width:340px;text-align:right;}
+.team-photo-wrap{width:100%;overflow:hidden;max-height:520px;}
+.team-photo-wrap img{width:100%;object-fit:cover;object-position:center 20%;display:block;}
+
+/* INFO ROW */
+.info-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.info-cell{background:#fff;padding:28px 32px;}
+.info-cell-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#888;margin-bottom:10px;}
+.info-cell-val{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;letter-spacing:-0.01em;color:#0A0A0A;line-height:1.3;}
+.info-cell-val a{transition:color .15s;}
+.info-cell-val a:hover{color:#FF3B00;}
+
+/* FOOTER */
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#fff;margin-bottom:16px;}
+.footer-logo .dot{color:#FF3B00;}
+.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:24px;}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;}
+.footer-links a:hover{color:#fff;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:0.06em;}
+
+/* ═══ UNIFIED SITE HEADER + FOOTER ═══ */
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,59,0,0);}60%{box-shadow:0 0 0 6px rgba(255,59,0,0.18);}}
+.site-header{position:sticky!important;top:0!important;z-index:200!important;background:#0A0A0A!important;border-bottom:1px solid rgba(255,255,255,0.08)!important;display:block!important;padding:0!important;height:auto!important;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item > span:hover,.nav-item:hover > a,.nav-item:hover > span{color:#FFFFFF;}
+.nav-item > a.active,.nav-item > span.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover,.header-nav .header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;box-shadow:none;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid!important;grid-template-columns:1fr 1fr 1fr 1fr!important;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" / loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "url": "https://thnkfor.me/contacts/",
+      "name": "Контакты — THNKFOR.ME | Связаться с агентством",
+      "description": "Свяжитесь с THNKFOR.ME: Telegram, email, форма заявки. Ответим за 1 час и сделаем бесплатный аудит маркетинга."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://thnkfor.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Контакты",
+          "item": "https://thnkfor.me/contacts/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="../services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="../services/smm/">SMM и соцсети</a>
+          <a href="../services/targeting/">Таргетированная реклама</a>
+          <a href="../services/direct/">Яндекс Директ</a>
+          <div class="nav-subitem">
+          <a href="../services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+          <div class="nav-subdropdown">
+            <a href="../services/content-machine/restaurant/">Для ресторанов</a>
+            <a href="../services/content-machine/beauty/">Для салонов красоты</a>
+            <a href="../services/content-machine/ecom/">Для интернет-магазинов</a>
+            <a href="../services/content-machine/marketplace/">Для маркетплейсов</a>
+            <a href="../services/content-machine/fitness/">Для фитнеса</a>
+            <a href="../services/content-machine/construction/">Для строительства</a>
+          </div>
+        </div>
+          <a href="../services/video/">Видеопроизводство</a>
+          <a href="../services/reputation/">Управление репутацией</a>
+          <a href="../services/seo/">Продвижение в поиске</a>
+          <a href="../services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="../niches/restaurants/">Рестораны</a>
+          <a href="../niches/beauty/">Салоны красоты</a>
+          <a href="../niches/clinic/">Медицина</a>
+          <a href="../niches/fitness/">Фитнес</a>
+          <a href="../niches/saas/">IT и SaaS</a>
+          <a href="../niches/ecommerce-fashion/">E-commerce</a>
+          <a href="../niches/realestate/">Недвижимость</a>
+          <a href="../niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../cases/">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="../cases/werent/">WeRent — Content Machine</a>
+          <a href="../cases/tennispoint/">Tennis Point — бот новинок</a>
+          <a href="../cases/4room/">4room.studio — три AI-системы</a>
+          <a href="../cases/studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="../cases/">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../blog/">Блог</a>
+        <div class="nav-dropdown">
+          <a href="../blog/ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="../blog/content-factory/">Контент-завод</a>
+          <a href="../blog/midjourney-business/">Midjourney для бизнеса</a>
+          <a href="../blog/prompt-engineering/">Prompt Engineering</a>
+          <a href="../blog/n8n-vs-make/">n8n vs Make</a>
+          <a href="../blog/seo-ai-2026/">SEO и AI 2026</a>
+          <a href="../blog/">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../pricing/">Цены</a><a href="../contacts/">Контакты</a>
+      </div>
+      <div class="nav-item">
+        <a href="../about/">О нас</a>
+      </div>
+      <a href="../contacts/" class="header-cta">Обсудить проект</a>
+    
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="../services/smm/" class="header-pill">01 · SMM</a>
+    <a href="../services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="../services/direct/" class="header-pill">03 · Директ</a>
+    <a href="../services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="../services/video/" class="header-pill">05 · Видео</a>
+    <a href="../services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="../services/seo/" class="header-pill">07 · SEO</a>
+    <a href="../services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-meta">THNKFOR.ME · Контакты · Москва</div>
+  <div class="hero-grid">
+    <h1 class="hero-h1">
+      Давайте<br>обсудим<br><span>ваш проект</span>
+    </h1>
+    <div>
+      <p class="hero-sub">
+        Расскажите о задаче — мы разберём её,
+        предложим стратегию и покажем, как <strong>AI-система</strong>
+        решит её быстрее и дешевле ручного подхода.
+      </p>
+      <div class="hero-response">
+        Среднее время ответа — <span>30 минут</span> в рабочее время
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CHANNELS -->
+<section class="section" style="padding-bottom:0;border-bottom:none;">
+  <div class="section-label">// 01 · Как написать</div>
+  <div class="contact-grid">
+
+    <div class="contact-card contact-card-accent">
+      <div class="contact-card-label">Быстрее всего</div>
+      <div class="contact-card-icon">+</div>
+      <h3>Telegram</h3>
+      <p>Самый быстрый способ — написать напрямую в Telegram. Отвечаем за 30 минут, без форм и ожидания.</p>
+      <a href="https://t.me/anastasiia_thinkfor" class="contact-link">Открыть Telegram →</a>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-card-label">Email</div>
+      <div class="contact-card-icon">+</div>
+      <h3>hello@thnkfor.me</h3>
+      <p>Для официальных запросов, брифов и документов. Отвечаем в течение рабочего дня, подробно и по делу.</p>
+      <a href="mailto:hello@thnkfor.me" class="contact-link">Написать письмо →</a>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-card-label">Телефон</div>
+      <div class="contact-card-icon">+</div>
+      <h3>+7 995 629-39-31</h3>
+      <p>Звоним и принимаем звонки в рабочие дни с 10:00 до 19:00 МСК. Для срочных вопросов — лучше Telegram.</p>
+      <a href="tel:+79956293931" class="contact-link">Позвонить →</a>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-card-label">Локация</div>
+      <div class="contact-card-icon">+</div>
+      <h3>Москва</h3>
+      <p>Работаем удалённо со всей Россией и СНГ. Встречи — онлайн или в Москве по договорённости.</p>
+      <a href="mailto:hello@thnkfor.me" class="contact-link">Договориться о встрече →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section" style="padding-top:1px;border-bottom:none;">
+  <div class="section-label" style="margin-top:48px;">// 02 · Оставить заявку</div>
+  <div class="form-grid">
+    <div class="form-side">
+      <h2>Расскажите<br>о задаче</h2>
+      <p>Заполните форму — мы изучим запрос и выйдем с конкретным предложением, а не шаблонной презентацией.</p>
+      <div class="form-promise">
+        <div class="form-promise-item">Ответим в течение рабочего дня</div>
+        <div class="form-promise-item">Предложим стратегию под вашу нишу</div>
+        <div class="form-promise-item">Без навязывания — только если подходим</div>
+      </div>
+    </div>
+    <form class="form-body" id="contact-form-top" novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label>Имя *</label>
+          <input type="text" name="name" placeholder="Анастасия" required>
+        </div>
+        <div class="field">
+          <label>Компания</label>
+          <input type="text" name="company" placeholder="Название или сфера">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Telegram / телефон *</label>
+          <input type="text" name="contact" placeholder="@username или +7..." required>
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="you@company.ru">
+        </div>
+      </div>
+      <div class="field">
+        <label>Нужна услуга</label>
+        <select name="service">
+          <option value="" disabled selected>Выберите направление</option>
+          <option>SMM и ведение соцсетей</option>
+          <option>Таргетированная реклама</option>
+          <option>Контент завод · AI</option>
+          <option>Видеопроизводство</option>
+          <option>Управление репутацией</option>
+          <option>Продвижение в поиске</option>
+          <option>Комплексный маркетинг</option>
+          <option>Пока не определился</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Расскажите о проекте</label>
+        <textarea name="message" placeholder="Что за бизнес, какая задача, какой бюджет — любые детали помогут подготовить точное предложение"></textarea>
+      </div>
+      <button class="btn-submit" type="submit" id="form-submit-top">Отправить заявку →</button>
+      <div id="form-msg-top" style="display:none;padding:12px 16px;font-size:14px;margin-top:4px;"></div>
+      <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.<br>Данные используются только для обработки заявки.</p>
+    </form>
+  </div>
+</section>
+
+<!-- TEAM PHOTO -->
+<section class="team-photo-section">
+  <div class="team-photo-header">
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#888;margin-bottom:12px;">// 03 · Команда</div>
+      <h2>Люди, с которыми<br>вы будете работать</h2>
+    </div>
+    <p>8 специалистов. Стратеги, разработчики, креаторы и AI-инженеры — все в штате, никакого аутсорса.</p>
+  </div>
+  <div class="team-photo-wrap">
+    <img src="../team/team_group.jpg" alt="Команда THNKFOR.ME" loading="lazy">
+  </div>
+</section>
+
+<!-- INFO ROW -->
+<div class="info-row">
+  <div class="info-cell">
+    <div class="info-cell-label">Email</div>
+    <div class="info-cell-val"><a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-cell-label">Телефон / Telegram</div>
+    <div class="info-cell-val"><a href="tel:+79956293931">+7 995 629-39-31</a></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-cell-label">График работы</div>
+    <div class="info-cell-val">Пн–Пт, 10:00–19:00 МСК</div>
+  </div>
+  <div class="info-cell">
+    <div class="info-cell-label">Реквизиты</div>
+    <div class="info-cell-val">ИП Мосина А.А.</div>
+  </div>
+</div>
+
+<!-- CONTACT FORM -->
+<section class="section" style="padding:80px 48px;background:#0A0A0A;">
+  <div style="max-width:600px;">
+    <div class="section-label" style="color:rgba(255,255,255,0.4);">// Оставить заявку</div>
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,42px);font-weight:500;color:#fff;margin-bottom:40px;letter-spacing:-0.02em;">Расскажите о проекте</h2>
+    <form id="contact-form" method="post" action="/contacts/form-handler.php" style="display:flex;flex-direction:column;gap:16px;">
+      <div class="form-field">
+        <label style="display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;">Имя *</label>
+        <input type="text" name="name" placeholder="Как вас зовут?" required
+          style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:15px;outline:none;transition:border-color .15s;"
+          onfocus="this.style.borderColor='#FF3B00'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+      </div>
+      <div class="form-field">
+        <label style="display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;">Телефон или Email *</label>
+        <input type="text" name="contact" placeholder="+7 999 000-00-00 или email" required
+          style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:15px;outline:none;transition:border-color .15s;"
+          onfocus="this.style.borderColor='#FF3B00'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+      </div>
+      <div class="form-field">
+        <label style="display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;">Интересующая услуга</label>
+        <select name="service"
+          style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);font-family:'Space Grotesk',sans-serif;font-size:15px;outline:none;appearance:none;cursor:pointer;transition:border-color .15s;"
+          onfocus="this.style.borderColor='#FF3B00'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+          <option value="" style="background:#0A0A0A;">— выберите услугу —</option>
+          <option value="SMM и соцсети" style="background:#0A0A0A;">SMM и соцсети</option>
+          <option value="Таргетированная реклама" style="background:#0A0A0A;">Таргетированная реклама</option>
+          <option value="Яндекс Директ" style="background:#0A0A0A;">Яндекс Директ</option>
+          <option value="Контент завод" style="background:#0A0A0A;">Контент завод</option>
+          <option value="Видеопроизводство" style="background:#0A0A0A;">Видеопроизводство</option>
+          <option value="Управление репутацией" style="background:#0A0A0A;">Управление репутацией</option>
+          <option value="SEO-продвижение" style="background:#0A0A0A;">SEO-продвижение</option>
+          <option value="Комплексный маркетинг" style="background:#0A0A0A;">Комплексный маркетинг</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label style="display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;">Расскажите о проекте</label>
+        <textarea name="message" rows="4" placeholder="Что нужно сделать? Сфера, задача, бюджет..."
+          style="width:100%;padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:15px;outline:none;resize:vertical;line-height:1.5;transition:border-color .15s;"
+          onfocus="this.style.borderColor='#FF3B00'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'"></textarea>
+      </div>
+      <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:8px;">
+        <button type="submit" id="form-submit"
+          style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;background:#FF3B00;color:#fff;border:none;padding:16px 32px;cursor:pointer;transition:background .15s;flex-shrink:0;"
+          onmouseover="this.style.background='#e03300'" onmouseout="this.style.background='#FF3B00'">
+          Отправить заявку
+        </button>
+        <p style="font-size:13px;color:rgba(255,255,255,0.3);line-height:1.4;">Ответим в течение 1 рабочего часа.<br>Первичная консультация — бесплатно.</p>
+      </div>
+      <div id="form-msg" style="display:none;padding:14px 16px;font-size:14px;font-family:'Space Grotesk',sans-serif;margin-top:4px;"></div>
+    </form>
+    <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = document.getElementById('form-submit');
+      var msg = document.getElementById('form-msg');
+      btn.disabled = true;
+      btn.textContent = 'Отправляем...';
+      var data = new FormData(this);
+      fetch('/contacts/form-handler.php', {method:'POST', body:data})
+        .then(function(r){return r.json();})
+        .then(function(res) {
+          if (res.ok) {
+            msg.style.display = 'block';
+            msg.style.background = 'rgba(50,200,100,0.1)';
+            msg.style.border = '1px solid rgba(50,200,100,0.3)';
+            msg.style.color = '#32c864';
+            msg.innerHTML = '✓ Заявка отправлена! Ответим в течение 1 часа.';
+            document.getElementById('contact-form').reset();
+            btn.textContent = 'Отправлено ✓';
+          } else {
+            msg.style.display = 'block';
+            msg.style.background = 'rgba(255,60,60,0.1)';
+            msg.style.border = '1px solid rgba(255,60,60,0.3)';
+            msg.style.color = '#ff5555';
+            msg.textContent = res.error || 'Ошибка. Напишите нам напрямую: hello@thnkfor.me';
+            btn.disabled = false;
+            btn.textContent = 'Отправить заявку';
+          }
+        })
+        .catch(function() {
+          msg.style.display = 'block';
+          msg.style.background = 'rgba(255,60,60,0.1)';
+          msg.style.color = '#ff5555';
+          msg.textContent = 'Ошибка соединения. Напишите: hello@thnkfor.me';
+          btn.disabled = false;
+          btn.textContent = 'Отправить заявку';
+        });
+    });
+    </script>
+  </div>
+</section>
+
+<script>
+// Top form handler
+document.getElementById('contact-form-top').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('form-submit-top');
+  var msg = document.getElementById('form-msg-top');
+  btn.disabled = true;
+  btn.textContent = 'Отправляем...';
+  var data = new FormData(this);
+  fetch('/contacts/form-handler.php', {method:'POST', body:data})
+    .then(function(r){return r.json();})
+    .then(function(res) {
+      msg.style.display = 'block';
+      if (res.ok) {
+        msg.style.background = 'rgba(50,200,100,0.1)';
+        msg.style.border = '1px solid rgba(50,200,100,0.3)';
+        msg.style.color = '#1a7a3a';
+        msg.innerHTML = '✓ Заявка отправлена! Ответим в течение 1 часа.';
+        document.getElementById('contact-form-top').reset();
+        btn.textContent = 'Отправлено ✓';
+      } else {
+        msg.style.background = 'rgba(255,60,60,0.08)';
+        msg.style.border = '1px solid rgba(255,60,60,0.3)';
+        msg.style.color = '#cc0000';
+        msg.textContent = res.error || 'Ошибка. Напишите нам: hello@thnkfor.me';
+        btn.disabled = false;
+        btn.textContent = 'Отправить заявку →';
+      }
+    })
+    .catch(function() {
+      msg.style.display = 'block';
+      msg.style.color = '#cc0000';
+      msg.textContent = 'Ошибка соединения. Напишите: hello@thnkfor.me';
+      btn.disabled = false;
+      btn.textContent = 'Отправить заявку →';
+    });
+});
+</script>
+
+<!-- FOOTER -->
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="./" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="../services/smm/">SMM и ведение соцсетей</a>
+        <a href="../services/targeting/">Таргетированная реклама</a>
+        <a href="../services/direct/">Яндекс Директ</a>
+        <a href="../services/content-machine/">Контент завод</a>
+        <a href="../services/video/">Видеопроизводство</a>
+        <a href="../services/reputation/">Управление репутацией</a>
+        <a href="../services/seo/">Продвижение в поиске</a>
+        <a href="../services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="../niches/restaurants/">Рестораны</a>
+        <a href="../niches/beauty/">Салоны красоты</a>
+        <a href="../niches/clinic/">Медицина</a>
+        <a href="../niches/fitness/">Фитнес</a>
+        <a href="../niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="../niches/saas/">IT и SaaS</a>
+        <a href="../niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="../about/">О нас</a>
+        <a href="../cases/">Кейсы</a>
+        <a href="../blog/">Блог</a>
+        <a href="../pricing/">Цены</a><a href="../contacts/">Контакты</a>
+        <a href="../contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+</body>
+</html>

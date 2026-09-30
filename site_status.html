@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THNKFOR.ME · Статус сайта</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Space Grotesk', sans-serif; background: #F8F8F8; color: #0A0A0A; font-size: 12px; -webkit-font-smoothing: antialiased; }
+.header { background: #0A0A0A; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
+.logo { font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 14px; color: #fff; letter-spacing: -0.02em; }
+.logo .dot { color: #FF3B00; }
+.header-meta { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+.wrap { max-width: 1800px; margin: 0 auto; padding: 24px 28px 60px; }
+.summary { display: flex; gap: 1px; background: rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.08); margin-bottom: 28px; }
+.s-cell { background: #fff; padding: 16px 20px; flex: 1; }
+.s-num { font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 26px; letter-spacing: -0.04em; line-height: 1; margin-bottom: 4px; }
+.s-num.green { color: #2EA84E; } .s-num.orange { color: #FF3B00; } .s-num.grey { color: #888; } .s-num.blue { color: #3A7BD5; }
+.s-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; }
+.tbl-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 11px; }
+thead tr th { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; padding: 8px 10px; border-bottom: 2px solid rgba(0,0,0,0.1); text-align: left; white-space: nowrap; background: #fff; position: sticky; top: 44px; z-index: 5; }
+tr.group-row td { background: #0A0A0A; color: rgba(255,255,255,0.5); font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; padding: 7px 10px; }
+tr.group-row td span { color: rgba(255,255,255,0.25); margin-left: 8px; }
+tbody tr { border-bottom: 1px solid rgba(0,0,0,0.06); }
+tbody tr:hover { background: rgba(255,59,0,0.03); }
+tbody tr.done { background: rgba(46,168,78,0.04); }
+tbody tr.done:hover { background: rgba(46,168,78,0.08); }
+td { padding: 7px 10px; vertical-align: top; line-height: 1.4; }
+.col-n    { width: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #bbb; }
+.col-url  { width: 200px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #555; word-break: break-all; }
+.col-name { width: 160px; font-weight: 500; color: #0A0A0A; }
+.col-lvl  { width: 36px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; text-align: center; }
+.col-title { width: 240px; color: #333; font-size: 10px; }
+.col-desc  { width: 300px; color: #555; font-size: 10px; }
+.col-link  { width: 60px; text-align: center; }
+.col-st   { width: 90px; }
+.col-pri  { width: 60px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; }
+.col-note { width: 140px; color: #888; font-size: 10px; }
+.col-live { width: 70px; text-align: center; }
+.badge { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 7px; display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+.badge::before { content: ''; width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0; }
+.b-done { background: rgba(46,168,78,0.1); color: #2EA84E; } .b-done::before { background: #2EA84E; }
+.b-todo { background: rgba(0,0,0,0.05); color: #999; } .b-todo::before { background: #ccc; }
+.b-wip  { background: rgba(255,59,0,0.1); color: #FF3B00; } .b-wip::before { background: #FF3B00; }
+.lvl-l0 { color: #FF3B00; font-weight: 500; } .lvl-l1 { color: #3A7BD5; } .lvl-l2 { color: #888; } .lvl-l3 { color: #bbb; }
+.link-btn { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: #2EA84E; text-decoration: none; padding: 2px 6px; border: 1px solid rgba(46,168,78,0.3); transition: background 0.12s; white-space: nowrap; }
+.link-btn:hover { background: rgba(46,168,78,0.1); }
+.pri-high { color: #FF3B00; } .pri-mid { color: #888; } .pri-low { color: #ccc; }
+.internal { background: rgba(58,123,213,0.04); } .internal:hover { background: rgba(58,123,213,0.08); }
+</style>
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">THNKFOR<span class="dot">.</span>ME</div>
+  <div class="header-meta">site_status · v4 · 2026-09-13 · 105 страниц</div>
+</div>
+
+<div class="wrap">
+  <div class="summary">
+    <div class="s-cell"><div class="s-num green">105</div><div class="s-label">Готово</div></div>
+    <div class="s-cell"><div class="s-num orange">2</div><div class="s-label">Не создано</div></div>
+    <div class="s-cell"><div class="s-num" style="color:#FF3B00">1</div><div class="s-label">В работе</div></div>
+    <div class="s-cell"><div class="s-num grey">105</div><div class="s-label">Всего страниц</div></div>
+    <div class="s-cell"><div class="s-num blue">11</div><div class="s-label">L1 хаб-страниц</div></div>
+    <div class="s-cell"><div class="s-num grey">43</div><div class="s-label">Страниц ниш</div></div>
+    <div class="s-cell"><div class="s-num grey">8</div><div class="s-label">Страниц услуг</div></div>
+    <div class="s-cell"><div class="s-num grey">30</div><div class="s-label">Статей блога</div></div>
+  </div>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th class="col-n">#</th>
+        <th class="col-url">URL / файл</th>
+        <th class="col-name">Название страницы</th>
+        <th class="col-lvl">Ур.</th>
+        <th class="col-title">Title (на сайте)</th>
+        <th class="col-desc">Description</th>
+        <th class="col-link">Локал.</th>
+        <th class="col-st">Статус</th>
+        <th class="col-pri">Приор.</th>
+        <th class="col-note">Заметки</th>
+        <th class="col-live">На сайте</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="group-row"><td colspan="11">● Основные страницы <span>L0–L1</span></td></tr>
+      <tr class="done">
+        <td class="col-n">1</td>
+        <td class="col-url">/</td>
+        <td class="col-name">Главная</td>
+        <td class="col-lvl"><span class="lvl-l0">L0</span></td>
+        <td class="col-title">THNKFOR.ME — AI-агентство для бизнеса | SMM, реклама, автоматизация</td>
+        <td class="col-desc">Продвигаем рестораны, салоны, клиники, фитнес и SaaS через AI. SMM, таргет, контент, автоматизация — полный цикл.</td>
+        <td class="col-link"><a href="index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">8 услуг, хедер-пилюли, ниши, CTA</td>
+        <td class="col-live"><a href="https://thnkfor.me/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">2</td>
+        <td class="col-url">/pricing/</td>
+        <td class="col-name">Цены</td>
+        <td class="col-lvl"><span class="lvl-l1">L1</span></td>
+        <td class="col-title">Цены на маркетинг — 3 сценария для каждой услуги | THNKFOR.ME</td>
+        <td class="col-desc">Прозрачные цены на маркетинг: три сценария для каждой из 8 услуг. Рекламный бюджет — всегда отдельно.</td>
+        <td class="col-link"><a href="pricing/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">8 × 3 сценария</td>
+        <td class="col-live"><a href="https://thnkfor.me/pricing/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">3</td>
+        <td class="col-url">/services/</td>
+        <td class="col-name">Услуги (хаб)</td>
+        <td class="col-lvl"><span class="lvl-l1">L1</span></td>
+        <td class="col-title">Услуги — SMM, реклама, AI-автоматизация для бизнеса | THNKFOR.ME</td>
+        <td class="col-desc">Полный цикл digital-маркетинга: ведение соцсетей, таргет, контент, Яндекс Директ и AI-автоматизация.</td>
+        <td class="col-link"><a href="services/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">Обзор 8 направлений</td>
+        <td class="col-live"><a href="https://thnkfor.me/services/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">4</td>
+        <td class="col-url">/niches/</td>
+        <td class="col-name">Ниши (хаб)</td>
+        <td class="col-lvl"><span class="lvl-l1">L1</span></td>
+        <td class="col-title">Ниши — маркетинг для вашего бизнеса | THNKFOR.ME</td>
+        <td class="col-desc">THNKFOR.ME работает с 40+ нишами: HoReCa, Beauty, медицина, фитнес, e-commerce, IT.</td>
+        <td class="col-link"><a href="niches/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">43 ниши, фильтр по категориям</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">5</td>
+        <td class="col-url">/cases/</td>
+        <td class="col-name">Кейсы (хаб)</td>
+        <td class="col-lvl"><span class="lvl-l1">L1</span></td>
+        <td class="col-title">Кейсы — THNKFOR.ME</td>
+        <td class="col-desc">Реальные проекты AI-маркетинга: автоматизация контента, боты, брендинг с нейросетями.</td>
+        <td class="col-link"><a href="cases/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">4 кейса + 1 soon</td>
+        <td class="col-live"><a href="https://thnkfor.me/cases/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">6</td>
+        <td class="col-url">/blog/</td>
+        <td class="col-name">Блог (хаб)</td>
+        <td class="col-lvl"><span class="lvl-l1">L1</span></td>
+        <td class="col-title">Блог THNKFOR.ME — маркетинг без лишних слов</td>
+        <td class="col-desc">Практические статьи о digital-маркетинге, AI-автоматизации и контент-стратегиях.</td>
+        <td class="col-link"><a href="blog/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">30 статей</td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">7</td>
+        <td class="col-url">/about/</td>
+        <td class="col-name">О нас</td>
+        <td class="col-lvl"><span class="lvl-l1">L1</span></td>
+        <td class="col-title">О нас — команда THNKFOR.ME | AI-агентство маркетинга</td>
+        <td class="col-desc">THNKFOR.ME — агентство AI-маркетинга для малого и среднего бизнеса. Работаем с конкретными нишами, мыслим данными.</td>
+        <td class="col-link"><a href="about/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">Команда, фото, миссия</td>
+        <td class="col-live"><a href="https://thnkfor.me/about/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">8</td>
+        <td class="col-url">/contacts/</td>
+        <td class="col-name">Контакты</td>
+        <td class="col-lvl"><span class="lvl-l1">L1</span></td>
+        <td class="col-title">Контакты — THNKFOR.ME | Связаться с агентством</td>
+        <td class="col-desc">Свяжитесь с THNKFOR.ME: Telegram, email, форма заявки. Ответим за 1 час и сделаем бесплатный аудит маркетинга.</td>
+        <td class="col-link"><a href="contacts/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/contacts/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">9</td>
+        <td class="col-url">/privacy/</td>
+        <td class="col-name">Политика конфиденциальности</td>
+        <td class="col-lvl"><span class="lvl-l1">L1</span></td>
+        <td class="col-title">Политика конфиденциальности — THNKFOR.ME</td>
+        <td class="col-desc">Политика конфиденциальности THNKFOR.ME: какие данные собираем, как используем и как защищаем.</td>
+        <td class="col-link"><a href="privacy/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">Технический</td>
+        <td class="col-live"><a href="https://thnkfor.me/privacy/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">10</td>
+        <td class="col-url">/sitemap/</td>
+        <td class="col-name">Карта сайта</td>
+        <td class="col-lvl"><span class="lvl-l1">L1</span></td>
+        <td class="col-title">Карта сайта — THNKFOR.ME</td>
+        <td class="col-desc">Карта сайта THNKFOR.ME: все страницы агентства — услуги, ниши, кейсы, блог.</td>
+        <td class="col-link"><a href="sitemap/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">Технический</td>
+        <td class="col-live"><a href="https://thnkfor.me/sitemap/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">11</td>
+        <td class="col-url">/404</td>
+        <td class="col-name">404 — Страница не найдена</td>
+        <td class="col-lvl"><span class="lvl-l1">L1</span></td>
+        <td class="col-title">404 — THNKFOR.ME</td>
+        <td class="col-desc">Страница не найдена. Возможно, она переехала или больше не существует.</td>
+        <td class="col-link"><a href="404.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">Добавлено в этой сессии</td>
+        <td class="col-live"><a href="https://thnkfor.me/404" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="group-row"><td colspan="11">▸ Услуги · 8 направлений <span>L2 · /services/</span></td></tr>
+      <tr class="done">
+        <td class="col-n">12</td>
+        <td class="col-url">/services/smm/</td>
+        <td class="col-name">SMM и соцсети</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">SMM и ведение соцсетей — от 22 000 ₽/мес | THNKFOR.ME</td>
+        <td class="col-desc">Ведём Instagram, ВКонтакте, Telegram через AI. Контент-план, Reels, сторис, автопостинг.</td>
+        <td class="col-link"><a href="services/smm/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">01 · SMM</td>
+        <td class="col-live"><a href="https://thnkfor.me/services/smm/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">13</td>
+        <td class="col-url">/services/targeting/</td>
+        <td class="col-name">Таргетированная реклама</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Таргетированная реклама — от 28 000 ₽/мес | THNKFOR.ME</td>
+        <td class="col-desc">Таргет в Instagram, ВКонтакте и MyTarget через AI. Быстрая настройка, точные аудитории.</td>
+        <td class="col-link"><a href="services/targeting/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">02 · Таргет</td>
+        <td class="col-live"><a href="https://thnkfor.me/services/targeting/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">14</td>
+        <td class="col-url">/services/direct/</td>
+        <td class="col-name">Яндекс Директ</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Яндекс Директ — от 35 000 ₽/мес | THNKFOR.ME</td>
+        <td class="col-desc">Ведём Яндекс Директ через AI: поиск, РСЯ, Мастер кампаний. Точный подбор ключей.</td>
+        <td class="col-link"><a href="services/direct/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">03 · Директ</td>
+        <td class="col-live"><a href="https://thnkfor.me/services/direct/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">15</td>
+        <td class="col-url">/services/content-machine/</td>
+        <td class="col-name">Контент завод</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Контент завод — AI-производство контента от 18 000 ₽ | THNKFOR.ME</td>
+        <td class="col-desc">AI-контент в промышленных объёмах: статьи, посты, описания товаров, email-рассылки.</td>
+        <td class="col-link"><a href="services/content-machine/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">04 · Контент завод. Ключевая услуга</td>
+        <td class="col-live"><a href="https://thnkfor.me/services/content-machine/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">16</td>
+        <td class="col-url">/services/video/</td>
+        <td class="col-name">Видеопроизводство</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Видеопроизводство для бизнеса — от 35 000 ₽ | THNKFOR.ME</td>
+        <td class="col-desc">Съёмка и монтаж Reels, сторис, рекламных видео. AI-монтаж и озвучка.</td>
+        <td class="col-link"><a href="services/video/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">05 · Видео</td>
+        <td class="col-live"><a href="https://thnkfor.me/services/video/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">17</td>
+        <td class="col-url">/services/reputation/</td>
+        <td class="col-name">Управление репутацией</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Управление репутацией — SERM от 20 000 ₽ | THNKFOR.ME</td>
+        <td class="col-desc">Мониторинг отзывов, работа с негативом, наращивание позитивных упоминаний.</td>
+        <td class="col-link"><a href="services/reputation/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">06 · Репутация</td>
+        <td class="col-live"><a href="https://thnkfor.me/services/reputation/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">18</td>
+        <td class="col-url">/services/seo/</td>
+        <td class="col-name">SEO-продвижение</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">SEO-продвижение сайта — от 35 000 ₽/мес | THNKFOR.ME</td>
+        <td class="col-desc">Продвижение в Яндексе и Google: технический SEO, контент, ссылки. AI-генерация SEO-текстов.</td>
+        <td class="col-link"><a href="services/seo/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">07 · SEO</td>
+        <td class="col-live"><a href="https://thnkfor.me/services/seo/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">19</td>
+        <td class="col-url">/services/full-package/</td>
+        <td class="col-name">Комплексный маркетинг</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Комплексный маркетинг — полный цикл от 75 000 ₽ | THNKFOR.ME</td>
+        <td class="col-desc">Все 8 направлений в одном пакете: SMM, таргет, Директ, контент, видео, SEO, репутация.</td>
+        <td class="col-link"><a href="services/full-package/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">08 · Комплекс</td>
+        <td class="col-live"><a href="https://thnkfor.me/services/full-package/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="group-row"><td colspan="11">▸ Контент завод · подстраницы <span>L3 · /services/content-machine/</span></td></tr>
+      <tr class="done">
+        <td class="col-n">20</td>
+        <td class="col-url">/services/content-machine/restaurant/</td>
+        <td class="col-name">Для ресторанов</td>
+        <td class="col-lvl"><span class="lvl-l3">L3</span></td>
+        <td class="col-title">Контент завод для ресторана — нейросеть и автопостинг | THNKFOR.ME</td>
+        <td class="col-desc">Контент завод для ресторана: 60–100 постов в месяц на автопилоте.</td>
+        <td class="col-link"><a href="services/content-machine/restaurant/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/services/content-machine/restaurant/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">21</td>
+        <td class="col-url">/services/content-machine/beauty/</td>
+        <td class="col-name">Для салонов красоты</td>
+        <td class="col-lvl"><span class="lvl-l3">L3</span></td>
+        <td class="col-title">Контент завод для салона красоты — нейросеть и автопостинг | THNKFOR.ME</td>
+        <td class="col-desc">Контент завод для салонов красоты, барбершопов, ногтевых студий.</td>
+        <td class="col-link"><a href="services/content-machine/beauty/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/services/content-machine/beauty/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">22</td>
+        <td class="col-url">/services/content-machine/ecom/</td>
+        <td class="col-name">Для интернет-магазинов</td>
+        <td class="col-lvl"><span class="lvl-l3">L3</span></td>
+        <td class="col-title">Контент завод для интернет-магазина — SEO-карточки и автопостинг | THNKFOR.ME</td>
+        <td class="col-desc">SEO-карточки товаров, посты во ВКонтакте и Telegram, карточки WB и Ozon.</td>
+        <td class="col-link"><a href="services/content-machine/ecom/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/services/content-machine/ecom/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">23</td>
+        <td class="col-url">/services/content-machine/marketplace/</td>
+        <td class="col-name">Для маркетплейсов</td>
+        <td class="col-lvl"><span class="lvl-l3">L3</span></td>
+        <td class="col-title">Контент завод для маркетплейсов WB и Ozon | THNKFOR.ME</td>
+        <td class="col-desc">SEO-карточки для Wildberries и Ozon. 100 карточек WB за 3–4 дня.</td>
+        <td class="col-link"><a href="services/content-machine/marketplace/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/services/content-machine/marketplace/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">24</td>
+        <td class="col-url">/services/content-machine/fitness/</td>
+        <td class="col-name">Для фитнеса</td>
+        <td class="col-lvl"><span class="lvl-l3">L3</span></td>
+        <td class="col-title">Контент завод для фитнес-клуба — нейросеть и автопостинг | THNKFOR.ME</td>
+        <td class="col-desc">AI производит 80–120 постов в месяц: расписание, мотивация, советы тренеров.</td>
+        <td class="col-link"><a href="services/content-machine/fitness/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/services/content-machine/fitness/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">25</td>
+        <td class="col-url">/services/content-machine/construction/</td>
+        <td class="col-name">Для строительства</td>
+        <td class="col-lvl"><span class="lvl-l3">L3</span></td>
+        <td class="col-title">Контент завод для строительной компании — нейросеть и автопостинг | THNKFOR.ME</td>
+        <td class="col-desc">AI производит посты об объектах, ВК+Дзен+Telegram, SEO-статьи.</td>
+        <td class="col-link"><a href="services/content-machine/construction/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/services/content-machine/construction/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="group-row"><td colspan="11">▸ Ниши — HoReCa <span>L2 · /niches/</span></td></tr>
+      <tr class="done">
+        <td class="col-n">26</td>
+        <td class="col-url">/niches/restaurants/</td>
+        <td class="col-name">Рестораны и кафе</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для ресторанов — SMM, таргет, AI-контент | THNKFOR.ME</td>
+        <td class="col-desc">Продвижение ресторана: SMM, таргет, AI-контент завод, управление репутацией. Полный зал и рейтинг 4.7+.</td>
+        <td class="col-link"><a href="niches/restaurants/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">01_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/restaurants/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">27</td>
+        <td class="col-url">/niches/cafe/</td>
+        <td class="col-name">Кофейни</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для кафе и кофеен — SMM, AI-контент, репутация | THNKFOR.ME</td>
+        <td class="col-desc">Продвижение кафе и кофейни: SMM, геотаргет, AI-контент. Очередь перед открытием.</td>
+        <td class="col-link"><a href="niches/cafe/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">02_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/cafe/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">28</td>
+        <td class="col-url">/niches/bars/</td>
+        <td class="col-name">Бары и пабы</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для баров — SMM, таргет, события | THNKFOR.ME</td>
+        <td class="col-desc">Продвижение бара: SMM, event-маркетинг, таргет. Заполненность в будни и аншлаги.</td>
+        <td class="col-link"><a href="niches/bars/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">03_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/bars/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="group-row"><td colspan="11">▸ Ниши — Beauty <span>L2 · 7 ниш</span></td></tr>
+      <tr class="done">
+        <td class="col-n">29</td>
+        <td class="col-url">/niches/beauty/</td>
+        <td class="col-name">Салоны красоты</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для салона красоты — SMM, таргет, контент | THNKFOR.ME</td>
+        <td class="col-desc">Продвижение салона красоты: SMM, таргет, до/после контент, репутация.</td>
+        <td class="col-link"><a href="niches/beauty/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">04_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/beauty/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">30</td>
+        <td class="col-url">/niches/barbershop/</td>
+        <td class="col-name">Барбершопы</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для барбершопа — SMM, таргет, AI-контент | THNKFOR.ME</td>
+        <td class="col-desc">Продвижение барбершопа: SMM, таргет на мужскую аудиторию, AI-контент.</td>
+        <td class="col-link"><a href="niches/barbershop/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">05_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/barbershop/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">31</td>
+        <td class="col-url">/niches/nail-studio/</td>
+        <td class="col-name">Ногтевые студии</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для ногтевой студии — SMM, таргет, AI-контент | THNKFOR.ME</td>
+        <td class="col-desc">Продвижение ногтевой студии: SMM, AI-контент, таргет. Запись на 2 недели вперёд.</td>
+        <td class="col-link"><a href="niches/nail-studio/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">06_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/nail-studio/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">32</td>
+        <td class="col-url">/niches/spa/</td>
+        <td class="col-name">SPA-салоны</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для спа и велнес-центра — SMM, таргет, AI-контент | THNKFOR.ME</td>
+        <td class="col-desc">Продвижение спа и велнес-центра: SMM, таргет, AI-контент атмосферы.</td>
+        <td class="col-link"><a href="niches/spa/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">07_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/spa/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">33</td>
+        <td class="col-url">/niches/permanent-makeup/</td>
+        <td class="col-name">Перманентный макияж</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для перманентного макияжа — THNKFOR.ME</td>
+        <td class="col-desc">Привлекаем клиенток на перманентный макияж через Reels до/после, таргет и репутацию.</td>
+        <td class="col-link"><a href="niches/permanent-makeup/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">08_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/permanent-makeup/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">34</td>
+        <td class="col-url">/niches/brows/</td>
+        <td class="col-name">Бровисты и лешмейкеры</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Реклама для бровистов и лешмейкеров — THNKFOR.ME</td>
+        <td class="col-desc">Стабильный поток записей. Reels с трансформациями, таргет на готовую аудиторию.</td>
+        <td class="col-link"><a href="niches/brows/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">09_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/brows/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">35</td>
+        <td class="col-url">/niches/massage/</td>
+        <td class="col-name">Массажные студии</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для массажных студий — THNKFOR.ME</td>
+        <td class="col-desc">Привлекаем клиентов через SMM, геотаргет и управление репутацией.</td>
+        <td class="col-link"><a href="niches/massage/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">10_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/massage/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="group-row"><td colspan="11">▸ Ниши — Медицина <span>L2 · 4 ниши</span></td></tr>
+      <tr class="done">
+        <td class="col-n">36</td>
+        <td class="col-url">/niches/cosmetology/</td>
+        <td class="col-name">Косметологические клиники</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для косметологических клиник — THNKFOR.ME</td>
+        <td class="col-desc">Привлекаем пациентов на инъекции, уходы и аппаратную косметологию.</td>
+        <td class="col-link"><a href="niches/cosmetology/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">11_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/cosmetology/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">37</td>
+        <td class="col-url">/niches/dentistry/</td>
+        <td class="col-name">Стоматологии</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для стоматологий — THNKFOR.ME</td>
+        <td class="col-desc">Полная запись стоматологии без скидок. Яндекс Директ, управление репутацией, SEO.</td>
+        <td class="col-link"><a href="niches/dentistry/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">12_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/dentistry/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">38</td>
+        <td class="col-url">/niches/clinic/</td>
+        <td class="col-name">Частные клиники</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для частных клиник — THNKFOR.ME</td>
+        <td class="col-desc">Контент-маркетинг, репутация, SEO и Яндекс Директ. Доверие пациентов и стабильный поток.</td>
+        <td class="col-link"><a href="niches/clinic/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">13_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/clinic/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">39</td>
+        <td class="col-url">/niches/laser-epilation/</td>
+        <td class="col-name">Лазерная эпиляция</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для лазерной эпиляции — THNKFOR.ME</td>
+        <td class="col-desc">Привлекаем клиентов на лазерную эпиляцию круглый год. Таргет, Reels, сезонные кампании.</td>
+        <td class="col-link"><a href="niches/laser-epilation/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">14_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/laser-epilation/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="group-row"><td colspan="11">▸ Ниши — Фитнес <span>L2 · 4 ниши</span></td></tr>
+      <tr class="done">
+        <td class="col-n">40</td>
+        <td class="col-url">/niches/fitness/</td>
+        <td class="col-name">Фитнес-клубы</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для фитнес-клубов — THNKFOR.ME</td>
+        <td class="col-desc">Привлекаем новых членов в фитнес-клубы и удерживаем существующих. SMM, таргет, абонементы.</td>
+        <td class="col-link"><a href="niches/fitness/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">15_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/fitness/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">41</td>
+        <td class="col-url">/niches/yoga/</td>
+        <td class="col-name">Йога-студии</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для йога-студий — THNKFOR.ME</td>
+        <td class="col-desc">Привлекаем учеников в йога-студии. SMM, таргет, пробные уроки, сообщество.</td>
+        <td class="col-link"><a href="niches/yoga/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">16_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/yoga/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">42</td>
+        <td class="col-url">/niches/pilates/</td>
+        <td class="col-name">Пилатес-студии</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для пилатес-студий — THNKFOR.ME</td>
+        <td class="col-desc">Стабильный поток записей. Reels, таргет, онлайн-запись, retention программы.</td>
+        <td class="col-link"><a href="niches/pilates/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">17_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/pilates/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">43</td>
+        <td class="col-url">/niches/crossfit/</td>
+        <td class="col-name">Кроссфит-боксы</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для кроссфит-боксов — THNKFOR.ME</td>
+        <td class="col-desc">Привлекаем спортсменов в кроссфит-боксы. SMM, Reels, таргет, события и соревнования.</td>
+        <td class="col-link"><a href="niches/crossfit/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">18_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/crossfit/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="group-row"><td colspan="11">▸ Ниши — E-com / IT <span>L2 · 13 ниш</span></td></tr>
+      <tr class="done">
+        <td class="col-n">44</td>
+        <td class="col-url">/niches/marketplace/</td>
+        <td class="col-name">Маркетплейсы WB и Ozon</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для маркетплейсов WB и Ozon — THNKFOR.ME</td>
+        <td class="col-desc">Растём продажи на Wildberries и Ozon. Контент завод, инфографика, SEO карточек.</td>
+        <td class="col-link"><a href="niches/marketplace/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">19_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/marketplace/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">45</td>
+        <td class="col-url">/niches/ecommerce-furniture/</td>
+        <td class="col-name">ИМ мебели и декора</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для интернет-магазина мебели — THNKFOR.ME</td>
+        <td class="col-desc">Рост продаж ИМ мебели и декора. SMM, таргет, контент завод, Яндекс Директ.</td>
+        <td class="col-link"><a href="niches/ecommerce-furniture/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">20_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/ecommerce-furniture/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">46</td>
+        <td class="col-url">/niches/ecommerce-jewelry/</td>
+        <td class="col-name">ИМ ювелирных украшений</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для интернет-магазина ювелирных украшений — THNKFOR.ME</td>
+        <td class="col-desc">Растём продажи ювелирного интернет-магазина. SMM, Reels, таргет.</td>
+        <td class="col-link"><a href="niches/ecommerce-jewelry/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">21_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/ecommerce-jewelry/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">47</td>
+        <td class="col-url">/niches/saas/</td>
+        <td class="col-name">SaaS и IT-продукты</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для SaaS и IT-продуктов — THNKFOR.ME</td>
+        <td class="col-desc">B2B-контент, Telegram, SEO и performance-маркетинг для SaaS. CAC снижаем, LTV растим.</td>
+        <td class="col-link"><a href="niches/saas/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">22_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/saas/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">48</td>
+        <td class="col-url">/niches/ecommerce-sport/</td>
+        <td class="col-name">ИМ спортивных товаров</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для интернет-магазина спортивных товаров — THNKFOR.ME</td>
+        <td class="col-desc">Рост продаж интернет-магазинов спортивных товаров. Контент завод, таргет, маркетплейс.</td>
+        <td class="col-link"><a href="niches/ecommerce-sport/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">23_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/ecommerce-sport/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">49</td>
+        <td class="col-url">/niches/ecommerce-lighting/</td>
+        <td class="col-name">ИМ освещения</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для интернет-магазина освещения — THNKFOR.ME</td>
+        <td class="col-desc">Рост продаж ИМ освещения и светильников. SEO, Яндекс Директ, контент, маркетплейс.</td>
+        <td class="col-link"><a href="niches/ecommerce-lighting/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">24_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/ecommerce-lighting/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">50</td>
+        <td class="col-url">/niches/ecommerce-fashion/</td>
+        <td class="col-name">ИМ одежды и аксессуаров</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для интернет-магазина одежды — THNKFOR.ME</td>
+        <td class="col-desc">Рост продаж интернет-магазинов одежды и fashion-брендов. SMM, Reels, таргет.</td>
+        <td class="col-link"><a href="niches/ecommerce-fashion/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">25_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/ecommerce-fashion/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">51</td>
+        <td class="col-url">/niches/ecommerce-kids/</td>
+        <td class="col-name">ИМ детских товаров</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для интернет-магазина детских товаров — THNKFOR.ME</td>
+        <td class="col-desc">Рост продаж ИМ детских товаров. Таргет на мам, SMM, Яндекс Директ, маркетплейс.</td>
+        <td class="col-link"><a href="niches/ecommerce-kids/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">26_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/ecommerce-kids/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">52</td>
+        <td class="col-url">/niches/ecommerce-beauty-products/</td>
+        <td class="col-name">ИМ косметики и ухода</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для интернет-магазина косметики — THNKFOR.ME</td>
+        <td class="col-desc">Рост продаж ИМ косметики и бьюти-товаров. SMM, Reels, таргет, influencer.</td>
+        <td class="col-link"><a href="niches/ecommerce-beauty-products/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">27_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/ecommerce-beauty-products/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">53</td>
+        <td class="col-url">/niches/ecommerce-pets/</td>
+        <td class="col-name">ИМ товаров для животных</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для интернет-магазина товаров для животных — THNKFOR.ME</td>
+        <td class="col-desc">Рост продаж зоомагазина. Таргет на владельцев питомцев, SMM, Директ, маркетплейс.</td>
+        <td class="col-link"><a href="niches/ecommerce-pets/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">28_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/ecommerce-pets/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">54</td>
+        <td class="col-url">/niches/ecommerce-electronics/</td>
+        <td class="col-name">ИМ электроники и гаджетов</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для интернет-магазина электроники — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение ИМ электроники и гаджетов. SEO, контекст, сравнительный контент.</td>
+        <td class="col-link"><a href="niches/ecommerce-electronics/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">29_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/ecommerce-electronics/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">55</td>
+        <td class="col-url">/niches/ecommerce-home/</td>
+        <td class="col-name">ИМ товаров для дома</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для интернет-магазина товаров для дома — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение ИМ товаров для дома. Таргет, Pinterest, UGC-контент.</td>
+        <td class="col-link"><a href="niches/ecommerce-home/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">30_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/ecommerce-home/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">56</td>
+        <td class="col-url">/niches/ecommerce-health/</td>
+        <td class="col-name">ИМ здорового питания и БАД</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для интернет-магазина товаров для здоровья — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение ИМ товаров для здоровья и спорта. Образовательный контент, таргет, email.</td>
+        <td class="col-link"><a href="niches/ecommerce-health/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">31_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/ecommerce-health/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="group-row"><td colspan="11">▸ Ниши — Другие <span>L2 · 12 ниш</span></td></tr>
+      <tr class="done">
+        <td class="col-n">57</td>
+        <td class="col-url">/niches/kids-center/</td>
+        <td class="col-name">Детские центры развития</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для детских центров — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение детских центров развития и секций. Таргет, контент, программы лояльности.</td>
+        <td class="col-link"><a href="niches/kids-center/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">32_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/kids-center/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">58</td>
+        <td class="col-url">/niches/vet/</td>
+        <td class="col-name">Ветеринарные клиники</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для ветеринарных клиник — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение ветеринарных клиник. SEO, геотаргет, репутация.</td>
+        <td class="col-link"><a href="niches/vet/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">33_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/vet/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">59</td>
+        <td class="col-url">/niches/online-school/</td>
+        <td class="col-name">Онлайн-школы и курсы</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для онлайн-школ — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение онлайн-школ и образовательных платформ. Воронки, таргет, email.</td>
+        <td class="col-link"><a href="niches/online-school/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">34_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/online-school/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">60</td>
+        <td class="col-url">/niches/interior-design/</td>
+        <td class="col-name">Дизайн-студии интерьеров</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для дизайн-студий интерьера — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение дизайн-студий интерьера и архитектурных бюро. Pinterest, таргет, контент.</td>
+        <td class="col-link"><a href="niches/interior-design/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">35_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/interior-design/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">61</td>
+        <td class="col-url">/niches/realestate/</td>
+        <td class="col-name">Агентства недвижимости</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для агентств недвижимости — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение агентств недвижимости и девелоперов. Контекст, таргет, CRM.</td>
+        <td class="col-link"><a href="niches/realestate/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">36_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/realestate/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">62</td>
+        <td class="col-url">/niches/autoservice/</td>
+        <td class="col-name">Автосервисы</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для автосервисов и СТО — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение автосервисов. SEO, геотаргет, программы лояльности.</td>
+        <td class="col-link"><a href="niches/autoservice/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">37_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/autoservice/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">63</td>
+        <td class="col-url">/niches/construction/</td>
+        <td class="col-name">Строительство и ремонт</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для строительных компаний — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение строительных компаний и подрядчиков. Контекст, SEO, кейсы.</td>
+        <td class="col-link"><a href="niches/construction/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">38_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/construction/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">64</td>
+        <td class="col-url">/niches/travel/</td>
+        <td class="col-name">Турагентства и отели</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для туристических агентств — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение туристических агентств и туроператоров. Контекст, таргет, email.</td>
+        <td class="col-link"><a href="niches/travel/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">39_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/travel/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">65</td>
+        <td class="col-url">/niches/events/</td>
+        <td class="col-name">Event-агентства</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для event-агентств — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение event-агентств и организаторов мероприятий. LinkedIn, таргет, referral.</td>
+        <td class="col-link"><a href="niches/events/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">40_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/events/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">66</td>
+        <td class="col-url">/niches/language-school/</td>
+        <td class="col-name">Языковые школы</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для языковых школ — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение языковых школ и курсов иностранных языков. Таргет, email, реферальные программы.</td>
+        <td class="col-link"><a href="niches/language-school/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">41_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/language-school/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">67</td>
+        <td class="col-url">/niches/legal/</td>
+        <td class="col-name">Юридические фирмы</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для юридических компаний — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение юридических компаний и адвокатов. SEO, контент-маркетинг, репутация.</td>
+        <td class="col-link"><a href="niches/legal/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">42_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/legal/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">68</td>
+        <td class="col-url">/niches/cleaning/</td>
+        <td class="col-name">Клининговые компании</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для клининговых компаний — THNKFOR.ME</td>
+        <td class="col-desc">Продвижение клининговых компаний. Геотаргет, SMS, программы лояльности, SEO.</td>
+        <td class="col-link"><a href="niches/cleaning/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note">43_</td>
+        <td class="col-live"><a href="https://thnkfor.me/niches/cleaning/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="group-row"><td colspan="11">▸ Кейсы <span>L2 · /cases/</span></td></tr>
+      <tr class="done">
+        <td class="col-n">69</td>
+        <td class="col-url">/cases/studiosuccess/</td>
+        <td class="col-name">Кейс: StudioSuccess</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Кейс Studio Success — THNKFOR.ME</td>
+        <td class="col-desc">Как мы построили контент-экосистему на 4 платформы и AI-ассистента в Telegram. Производство контента ускорилось в 3 раза.</td>
+        <td class="col-link"><a href="cases/studiosuccess/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">Готово</td>
+        <td class="col-live"><a href="https://thnkfor.me/cases/studiosuccess/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">70</td>
+        <td class="col-url">/cases/werent/</td>
+        <td class="col-name">Кейс: WeRent</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Кейс WeRent — THNKFOR.ME</td>
+        <td class="col-desc">Content Machine для WeRent: 4 платформы, ИИ-аватар руководителя, маскот Рентик и командный бот.</td>
+        <td class="col-link"><a href="cases/werent/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">Готово</td>
+        <td class="col-live"><a href="https://thnkfor.me/cases/werent/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">71</td>
+        <td class="col-url">/cases/tennispoint/</td>
+        <td class="col-name">Кейс: Tennis Point</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Кейс Tennis Point — THNKFOR.ME</td>
+        <td class="col-desc">Бот парсит новинки с сайта Tennis Point и автоматически публикует карточки товаров в соцсети. 0 ручных постов.</td>
+        <td class="col-link"><a href="cases/tennispoint/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">Готово</td>
+        <td class="col-live"><a href="https://thnkfor.me/cases/tennispoint/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">72</td>
+        <td class="col-url">/cases/4room/</td>
+        <td class="col-name">Кейс: 4room.studio</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Кейс 4room.studio — THNKFOR.ME</td>
+        <td class="col-desc">Три AI-системы для интерьерной студии: автопостинг в соцсети, Яндекс Дзен на семантике, и запуск бренда 4room.me.</td>
+        <td class="col-link"><a href="cases/4room/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">Добавлено в этой сессии</td>
+        <td class="col-live"><a href="https://thnkfor.me/cases/4room/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr>
+        <td class="col-n">73</td>
+        <td class="col-url">/cases/bahome/</td>
+        <td class="col-name">Кейс: Bahome Group</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Кейс Bahome Group — THNKFOR.ME</td>
+        <td class="col-desc">Маркетинг для девелопера Bahome Group: контент, лидогенерация. В работе.</td>
+        <td class="col-link">—</td>
+        <td class="col-st"><span class="badge b-wip">В работе</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">Soon — нет исходников</td>
+        <td class="col-live"><span class="badge b-wip">soon</span></td>
+      </tr>
+      <tr>
+        <td class="col-n">74</td>
+        <td class="col-url">/cases/zexter/</td>
+        <td class="col-name">Кейс: Zexter</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Кейс Zexter | THNKFOR.ME</td>
+        <td class="col-desc">Результаты продвижения Zexter: стратегия, инструменты и метрики.</td>
+        <td class="col-link">—</td>
+        <td class="col-st"><span class="badge b-todo">Не создано</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">Реальный клиент</td>
+        <td class="col-live"><span style="color:#bbb;">—</span></td>
+      </tr>
+      <tr>
+        <td class="col-n">75</td>
+        <td class="col-url">/cases/terrafactura/</td>
+        <td class="col-name">Кейс: Terrafaktura</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Кейс Terrafaktura | THNKFOR.ME</td>
+        <td class="col-desc">Результаты продвижения Terrafaktura от THNKFOR.ME.</td>
+        <td class="col-link">—</td>
+        <td class="col-st"><span class="badge b-todo">Не создано</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">Реальный клиент</td>
+        <td class="col-live"><span style="color:#bbb;">—</span></td>
+      </tr>
+      <tr class="group-row"><td colspan="11">▸ Блог <span>L2 · /blog/ · 30 статей</span></td></tr>
+      <tr class="done">
+        <td class="col-n">76</td>
+        <td class="col-url">/blog/smm-restaurant/</td>
+        <td class="col-name">Статья: SMM для ресторана</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">SMM для ресторана 2026: полное руководство — THNKFOR.ME</td>
+        <td class="col-desc">Форматы контента, которые работают в алгоритмах, контент-план на месяц и главные ошибки рестораторов.</td>
+        <td class="col-link"><a href="blog/smm-restaurant/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">SEO-статья</td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/smm-restaurant/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">77</td>
+        <td class="col-url">/blog/ai-marketing-2026/</td>
+        <td class="col-name">Статья: AI в маркетинге 2026</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">AI в маркетинге 2026: что работает для малого бизнеса — THNKFOR.ME</td>
+        <td class="col-desc">Три задачи, где AI лучше человека, три — где нет. ChatGPT, Claude, Midjourney, n8n, HeyGen с реальным ROI.</td>
+        <td class="col-link"><a href="blog/ai-marketing-2026/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">Ключевая статья</td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/ai-marketing-2026/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">78</td>
+        <td class="col-url">/blog/marketplace-promotion/</td>
+        <td class="col-name">Статья: WB и Ozon</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Продвижение на WB и Ozon: полное руководство 2026 | THNKFOR.ME</td>
+        <td class="col-desc">SEO карточек, внутренняя реклама, внешний трафик. Пирамида продвижения и типичные ошибки.</td>
+        <td class="col-link"><a href="blog/marketplace-promotion/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">SEO-статья</td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/marketplace-promotion/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">79</td>
+        <td class="col-url">/blog/saas-marketing/</td>
+        <td class="col-name">Статья: Маркетинг для SaaS</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для SaaS в 2026: CAC, LTV, churn | THNKFOR.ME</td>
+        <td class="col-desc">PLG vs Traditional. Контент-маркетинг, performance-реклама, автоматизация коммуникаций.</td>
+        <td class="col-link"><a href="blog/saas-marketing/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">SEO-статья</td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/saas-marketing/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">80</td>
+        <td class="col-url">/blog/b2b-content/</td>
+        <td class="col-name">Статья: B2B-контент</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Контент-маркетинг для B2B: длинный цикл, длинный контент — THNKFOR.ME</td>
+        <td class="col-desc">Цикл решения 3–12 месяцев, высокий чек, несколько стейкхолдеров. Стратегия контента для B2B.</td>
+        <td class="col-link"><a href="blog/b2b-content/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/b2b-content/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">81</td>
+        <td class="col-url">/blog/beauty-master-smm/</td>
+        <td class="col-name">Статья: SMM для бьюти-мастера</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">SMM для бьюти-мастера: без бюджета, только телефон — THNKFOR.ME</td>
+        <td class="col-desc">Что снимать, когда публиковать, как получать клиентов бесплатно.</td>
+        <td class="col-link"><a href="blog/beauty-master-smm/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/beauty-master-smm/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">82</td>
+        <td class="col-url">/blog/brand-analytics/</td>
+        <td class="col-name">Статья: Мониторинг репутации</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Brand Analytics и мониторинг репутации в 2026 — THNKFOR.ME</td>
+        <td class="col-desc">Как мониторить и системно работать с репутацией в интернете в 2026 году.</td>
+        <td class="col-link"><a href="blog/brand-analytics/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/brand-analytics/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">83</td>
+        <td class="col-url">/blog/clinic-smm/</td>
+        <td class="col-name">Статья: SMM для клиники</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">SMM для медицинской клиники: ограничения, доверие, форматы — THNKFOR.ME</td>
+        <td class="col-desc">Медицинский маркетинг в соцсетях: что нельзя по ФЗ, как строить доверие.</td>
+        <td class="col-link"><a href="blog/clinic-smm/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/clinic-smm/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">84</td>
+        <td class="col-url">/blog/construction-marketing/</td>
+        <td class="col-name">Статья: Маркетинг строительства</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для строительной компании: длинный цикл и репутация — THNKFOR.ME</td>
+        <td class="col-desc">Цикл сделки 6–18 месяцев, средний чек от 5 млн.</td>
+        <td class="col-link"><a href="blog/construction-marketing/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/construction-marketing/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">85</td>
+        <td class="col-url">/blog/content-factory/</td>
+        <td class="col-name">Статья: Контент-завод</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Контент-завод: как автоматизировать 300+ постов в месяц — THNKFOR.ME</td>
+        <td class="col-desc">300–500 единиц контента в месяц с одним редактором.</td>
+        <td class="col-link"><a href="blog/content-factory/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">Ключевая статья</td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/content-factory/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">86</td>
+        <td class="col-url">/blog/content-plan-beauty/</td>
+        <td class="col-name">Статья: Контент-план бьюти</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Контент-план для бьюти-студии на месяц: шаблон и принципы — THNKFOR.ME</td>
+        <td class="col-desc">Рубрики, форматы, таблица на 4 недели.</td>
+        <td class="col-link"><a href="blog/content-plan-beauty/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/content-plan-beauty/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">87</td>
+        <td class="col-url">/blog/edtech-marketing/</td>
+        <td class="col-name">Статья: EdTech маркетинг</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинг для образовательного проекта: воронка, контент, retention — THNKFOR.ME</td>
+        <td class="col-desc">Как построить воронку и снизить churn.</td>
+        <td class="col-link"><a href="blog/edtech-marketing/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/edtech-marketing/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">88</td>
+        <td class="col-url">/blog/legal-marketing/</td>
+        <td class="col-name">Статья: Маркетинг для юристов</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Как продвигать юридическую фирму: SEO, контент, репутация — THNKFOR.ME</td>
+        <td class="col-desc">Стратегия на 12 месяцев с конкретными KPI.</td>
+        <td class="col-link"><a href="blog/legal-marketing/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/legal-marketing/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">89</td>
+        <td class="col-url">/blog/marketing-dashboard/</td>
+        <td class="col-name">Статья: Маркетинговый дашборд</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Маркетинговый дашборд в Google Sheets: собираем сами — THNKFOR.ME</td>
+        <td class="col-desc">Единый дашборд из рекламных кабинетов, CRM и сайта.</td>
+        <td class="col-link"><a href="blog/marketing-dashboard/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/marketing-dashboard/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">90</td>
+        <td class="col-url">/blog/marketplace-external-traffic/</td>
+        <td class="col-name">Статья: Внешний трафик WB/Ozon</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Внешний трафик на маркетплейсы: таргет, блогеры, контекст — THNKFOR.ME</td>
+        <td class="col-desc">Три канала внешнего трафика: ВКонтакте, блогеры, Директ.</td>
+        <td class="col-link"><a href="blog/marketplace-external-traffic/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/marketplace-external-traffic/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">91</td>
+        <td class="col-url">/blog/midjourney-business/</td>
+        <td class="col-name">Статья: Midjourney v7 для бизнеса</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Midjourney v7 для бизнеса: как использовать без «AI-вида» — THNKFOR.ME</td>
+        <td class="col-desc">Как получать визуал, который выглядит профессионально.</td>
+        <td class="col-link"><a href="blog/midjourney-business/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-low">LOW</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/midjourney-business/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">92</td>
+        <td class="col-url">/blog/n8n-vs-make/</td>
+        <td class="col-name">Статья: n8n vs Make</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">n8n vs Make.com: какой инструмент выбрать для маркетинга — THNKFOR.ME</td>
+        <td class="col-desc">Make — для не-технарей, n8n — открытый код с полным контролем.</td>
+        <td class="col-link"><a href="blog/n8n-vs-make/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/n8n-vs-make/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">93</td>
+        <td class="col-url">/blog/prompt-engineering/</td>
+        <td class="col-name">Статья: Prompt engineering</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Prompt engineering для маркетологов: не ChatGPT, а инструмент — THNKFOR.ME</td>
+        <td class="col-desc">6 техник, которые реально улучшают вывод.</td>
+        <td class="col-link"><a href="blog/prompt-engineering/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/prompt-engineering/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">94</td>
+        <td class="col-url">/blog/reels-business/</td>
+        <td class="col-name">Статья: Reels для бизнеса</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Reels для бизнеса: 10 форматов без танцев и трендов — THNKFOR.ME</td>
+        <td class="col-desc">10 форматов Reels для бизнеса, которые конвертируют.</td>
+        <td class="col-link"><a href="blog/reels-business/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/reels-business/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">95</td>
+        <td class="col-url">/blog/rich-content-marketplace/</td>
+        <td class="col-name">Статья: Rich Content маркетплейс</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Rich Content на маркетплейсах: делаем и измеряем результат — THNKFOR.ME</td>
+        <td class="col-desc">Повышает конверсию карточки на 20–40%.</td>
+        <td class="col-link"><a href="blog/rich-content-marketplace/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/rich-content-marketplace/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">96</td>
+        <td class="col-url">/blog/roas-vs-roi/</td>
+        <td class="col-name">Статья: ROAS vs ROI</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">ROAS vs ROI: как правильно считать эффективность рекламы — THNKFOR.ME</td>
+        <td class="col-desc">90% маркетологов путают ROAS и ROI. Разбираем формулы.</td>
+        <td class="col-link"><a href="blog/roas-vs-roi/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/roas-vs-roi/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">97</td>
+        <td class="col-url">/blog/seo-ai-2026/</td>
+        <td class="col-name">Статья: SEO в 2026</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">SEO в 2026: как AI меняет поиск и что с этим делать — THNKFOR.ME</td>
+        <td class="col-desc">AI Overviews и нейро-ответы изменили SEO навсегда.</td>
+        <td class="col-link"><a href="blog/seo-ai-2026/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-high">HIGH</td>
+        <td class="col-note">Ключевая статья</td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/seo-ai-2026/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">98</td>
+        <td class="col-url">/blog/smm-fitness/</td>
+        <td class="col-name">Статья: SMM для фитнеса</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">SMM для фитнес-клуба: расписание, тренеры, истории трансформаций — THNKFOR.ME</td>
+        <td class="col-desc">Что конкретно снимать и публиковать.</td>
+        <td class="col-link"><a href="blog/smm-fitness/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/smm-fitness/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">99</td>
+        <td class="col-url">/blog/telegram-ads/</td>
+        <td class="col-name">Статья: Реклама в Telegram</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Реклама в Telegram: каналы, Telegram Ads, закупка у авторов — THNKFOR.ME</td>
+        <td class="col-desc">Три канала с разным CPM и механикой.</td>
+        <td class="col-link"><a href="blog/telegram-ads/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/telegram-ads/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">100</td>
+        <td class="col-url">/blog/telegram-channel/</td>
+        <td class="col-name">Статья: Telegram-канал для бизнеса</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Telegram-канал для бизнеса: как набрать 1000 подписчиков без рекламы — THNKFOR.ME</td>
+        <td class="col-desc">Пошаговое руководство за 2–4 месяца.</td>
+        <td class="col-link"><a href="blog/telegram-channel/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/telegram-channel/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">101</td>
+        <td class="col-url">/blog/vk-targeting-local/</td>
+        <td class="col-name">Статья: Таргет ВК для локального</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Таргет ВКонтакте для локального бизнеса: гео, аудитории, бюджет — THNKFOR.ME</td>
+        <td class="col-desc">Геотаргетинг в радиусе 500 м.</td>
+        <td class="col-link"><a href="blog/vk-targeting-local/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note"></td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/vk-targeting-local/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">102</td>
+        <td class="col-url">/blog/vkontakte-2026/</td>
+        <td class="col-name">Статья: ВКонтакте в 2026</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">ВКонтакте в 2026: алгоритмы, форматы и что изменилось — THNKFOR.ME</td>
+        <td class="col-desc">Новые форматы, Clips, рекламный кабинет и чек-лист.</td>
+        <td class="col-link"><a href="blog/vkontakte-2026/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">Добавлено в этой сессии</td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/vkontakte-2026/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">103</td>
+        <td class="col-url">/blog/wildberries-seo/</td>
+        <td class="col-name">Статья: SEO-карточки WB</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">SEO-карточки на Wildberries: как попасть в ТОП-10 выдачи — THNKFOR.ME</td>
+        <td class="col-desc">Семантика, структура карточки, рейтинг и динамическое SEO.</td>
+        <td class="col-link"><a href="blog/wildberries-seo/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">Добавлено в этой сессии</td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/wildberries-seo/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">104</td>
+        <td class="col-url">/blog/yandex-direct-2026/</td>
+        <td class="col-name">Статья: Яндекс Директ 2026</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Яндекс Директ в 2026: Мастер кампаний и автостратегии — THNKFOR.ME</td>
+        <td class="col-desc">Автостратегии, ускорение обучения алгоритма, снижение CPA на 25%.</td>
+        <td class="col-link"><a href="blog/yandex-direct-2026/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">Добавлено в этой сессии</td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/yandex-direct-2026/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="done">
+        <td class="col-n">105</td>
+        <td class="col-url">/blog/yandex-metrika/</td>
+        <td class="col-name">Статья: Яндекс Метрика 3.0</td>
+        <td class="col-lvl"><span class="lvl-l2">L2</span></td>
+        <td class="col-title">Яндекс Метрика 3.0: читаем отчёты и принимаем решения — THNKFOR.ME</td>
+        <td class="col-desc">Ключевые отчёты, настройка целей и недельный ритм аналитика.</td>
+        <td class="col-link"><a href="blog/yandex-metrika/index.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri pri-mid">MED</td>
+        <td class="col-note">Добавлено в этой сессии</td>
+        <td class="col-live"><a href="https://thnkfor.me/blog/yandex-metrika/" class="link-btn" target="_blank" style="color:#2EA84E;border-color:rgba(46,168,78,0.4);">200 ↗</a></td>
+      </tr>
+      <tr class="group-row"><td colspan="11">● Внутренние документы <span>не индексируются</span></td></tr>
+      <tr class="internal">
+        <td class="col-n">—</td>
+        <td class="col-url">brand_guide 2.html</td>
+        <td class="col-name">Бренд-гайд</td>
+        <td class="col-lvl"><span class="lvl-l1" style="color:#3A7BD5;">INT</span></td>
+        <td class="col-title">—</td>
+        <td class="col-desc">Эталон фирменного стиля: цвета, шрифты, компоненты, анимации</td>
+        <td class="col-link"><a href="brand_guide 2.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri">—</td>
+        <td class="col-note">Только для внутреннего использования</td>
+        <td class="col-live"><span style="color:#bbb;">—</span></td>
+      </tr>
+      <tr class="internal">
+        <td class="col-n">—</td>
+        <td class="col-url">website_structure.html</td>
+        <td class="col-name">Структура сайта</td>
+        <td class="col-lvl"><span class="lvl-l1" style="color:#3A7BD5;">INT</span></td>
+        <td class="col-title">—</td>
+        <td class="col-desc">Полная структура: 100+ страниц, SEO-данные, контент-план, pricing</td>
+        <td class="col-link"><a href="website_structure.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri">—</td>
+        <td class="col-note">v1.1 · 2026-09-13</td>
+        <td class="col-live"><span style="color:#bbb;">—</span></td>
+      </tr>
+      <tr class="internal">
+        <td class="col-n">—</td>
+        <td class="col-url">site_status.html</td>
+        <td class="col-name">Чеклист статусов</td>
+        <td class="col-lvl"><span class="lvl-l1" style="color:#3A7BD5;">INT</span></td>
+        <td class="col-title">—</td>
+        <td class="col-desc">Этот файл. Отслеживание статусов всех страниц.</td>
+        <td class="col-link"><a href="site_status.html" class="link-btn">↗ открыть</a></td>
+        <td class="col-st"><span class="badge b-done">Готово</span></td>
+        <td class="col-pri">—</td>
+        <td class="col-note">v4 · 105 стр.</td>
+        <td class="col-live"><span style="color:#bbb;">—</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</body>
+</html>

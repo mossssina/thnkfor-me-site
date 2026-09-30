@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THNKFOR.ME — Архитектура Контент-Машины · Dark</title>
+    <link rel="canonical" href="https://thnkfor.me/content_machine_architecture_dark/">
+    <meta property="og:title" content="THNKFOR.ME — Архитектура Контент-Машины · Dark">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@keyframes b-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Space Grotesk',sans-serif;font-size:13px;background:#0A0A0A;color:#F8F8F8;-webkit-font-smoothing:antialiased;min-width:1200px;}
+
+/* NAV */
+.nav{background:#111;padding:18px 40px;display:flex;align-items:center;gap:32px;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,0.06);}
+.nav-logo{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:#F8F8F8;letter-spacing:.06em;text-decoration:none;}
+.nav-logo span{color:#FF3B00;animation:b-blink 1s infinite;display:inline-block;}
+.nav-badge{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:.06em;text-transform:uppercase;margin-left:auto;}
+
+/* HERO */
+.hero{padding:48px 40px 32px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.hero-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;}
+.hero h1{font-size:32px;font-weight:500;letter-spacing:-.04em;line-height:1.1;margin-bottom:8px;}
+.hero h1 span{color:#FF3B00;}
+.hero-note{max-width:700px;font-size:13px;color:rgba(255,255,255,0.45);line-height:1.65;}
+
+/* COLUMN HEADERS */
+.col-headers{display:grid;grid-template-columns:168px 28px 1fr 28px 188px 28px 170px 28px 198px;padding:16px 40px 8px;gap:0;}
+.col-h{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.3);}
+
+/* MAIN FLOW */
+.flow{display:grid;grid-template-columns:168px 28px 1fr 28px 188px 28px 170px 28px 198px;margin:0 40px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.03);gap:1px;align-items:stretch;}
+
+/* ZONE */
+.zone{background:#141414;padding:18px 16px;position:relative;overflow:hidden;}
+.zone-stripe{position:absolute;top:0;left:0;right:0;height:3px;}
+.zone-stripe.s1{background:#FF3B00;}
+.zone-stripe.s2{background:#3A7BD5;}
+.zone-stripe.s3{background:#2EA84E;}
+.zone-stripe.s4{background:#7C5CFC;}
+.zone-stripe.s5{background:rgba(255,255,255,0.2);}
+
+.zone-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:14px;margin-top:6px;}
+
+/* ARROW */
+.arrow-col{background:#0A0A0A;display:flex;align-items:center;justify-content:center;}
+
+/* INPUT */
+.inp{padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;align-items:flex-start;gap:8px;}
+.inp:last-child{border-bottom:none;}
+.inp-icon{font-size:13px;flex-shrink:0;line-height:1.5;}
+.inp-name{font-size:11px;font-weight:500;color:#E8E8E8;line-height:1.3;}
+.inp-desc{font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(255,255,255,0.3);margin-top:1px;}
+
+/* AI ZONE */
+.zone-ai{background:#0D0D0D;color:#F8F8F8;border-left:1px solid rgba(255,59,0,0.15);border-right:1px solid rgba(255,59,0,0.15);}
+.ai-header{border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:14px;margin-bottom:14px;text-align:center;}
+.ai-name{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500;color:#FF3B00;letter-spacing:.04em;margin-bottom:5px;}
+.ai-name span{animation:b-blink 1s infinite;display:inline-block;}
+.ai-desc{font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(255,255,255,0.3);line-height:1.5;margin-bottom:10px;}
+.ai-tags{display:flex;flex-wrap:wrap;gap:3px;justify-content:center;}
+.ai-tag{font-family:'IBM Plex Mono',monospace;font-size:8px;padding:2px 7px;border:1px solid rgba(255,59,0,.3);color:#FF3B00;white-space:nowrap;}
+.ai-groups{display:flex;flex-direction:column;gap:10px;}
+.ai-group-label{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin-bottom:4px;}
+.ai-group-label.t{color:#6BA3FF;} .ai-group-label.i{color:#C07EFF;} .ai-group-label.v{color:#FF3B00;} .ai-group-label.a{color:#4CC97A;} .ai-group-label.d{color:#F59E0B;} .ai-group-label.s{color:#888;}
+.ai-chips{display:flex;flex-wrap:wrap;gap:2px;}
+.ai-chip{font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:rgba(255,255,255,0.4);padding:1px 5px;border:1px solid rgba(255,255,255,0.08);white-space:nowrap;}
+
+/* APPROVAL */
+.step{display:flex;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.step:last-child{border-bottom:none;}
+.step-n{font-family:'IBM Plex Mono',monospace;font-size:8px;font-weight:500;color:#FF3B00;flex-shrink:0;padding-top:2px;min-width:14px;}
+.step-title{font-size:11px;font-weight:500;color:#E8E8E8;margin-bottom:2px;}
+.step-sub{font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(255,255,255,0.3);line-height:1.4;}
+.step-badges{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;}
+.step-badge{font-family:'IBM Plex Mono',monospace;font-size:8px;padding:2px 5px;border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.4);}
+
+/* AUTO */
+.auto{padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;gap:8px;align-items:flex-start;}
+.auto:last-child{border-bottom:none;}
+.auto-bar{width:2px;flex-shrink:0;margin-top:4px;align-self:stretch;}
+.auto-name{font-size:11px;font-weight:500;color:#E8E8E8;}
+.auto-role{font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(255,255,255,0.3);margin-top:1px;}
+
+/* PUBLISH */
+.net-group{margin-bottom:12px;}
+.net-group:last-child{margin-bottom:0;}
+.net-group-label{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:5px;}
+.net{padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;align-items:baseline;gap:5px;}
+.net:last-child{border-bottom:none;}
+.net-name{font-size:11px;font-weight:500;color:#E8E8E8;flex-shrink:0;}
+.net-fmt{font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:rgba(255,255,255,0.3);}
+
+/* ANALYTICS */
+.analytics{margin:1px 40px 0;border:1px solid rgba(255,255,255,0.06);border-top:3px solid #2EA84E;background:#141414;padding:14px 20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.a-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#2EA84E;font-weight:500;flex-shrink:0;}
+.a-items{display:flex;flex-wrap:wrap;gap:5px;flex:1;}
+.a-tag{font-family:'IBM Plex Mono',monospace;font-size:9px;padding:2px 8px;border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.5);background:#111;white-space:nowrap;}
+.a-loop{font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(255,255,255,0.3);flex-shrink:0;}
+
+/* FOOTER */
+.footer{padding:28px 40px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.foot-legend{display:flex;flex-wrap:wrap;gap:16px;}
+.leg{display:flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(255,255,255,0.3);}
+.leg-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.foot-copy{font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(255,255,255,0.2);}
+</style>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="#">THNKFOR<span>|</span>.ME</a>
+  <div class="nav-badge">Контент-Машина · AI Pipeline Architecture · 2026</div>
+</nav>
+
+<div class="hero">
+  <div class="hero-sub">THNKFOR.ME · Внутренний документ · Архитектура · September 2026</div>
+  <h1>Как работает<br><span>Контент-Машина</span></h1>
+  <p class="hero-note">Полный AI-пайплайн для всех ниш: от входных данных через AI-ядро и согласование к автоматической публикации в 13+ каналах с замкнутым аналитическим циклом.</p>
+</div>
+
+<div class="col-headers">
+  <div class="col-h">01 / Входные<br>данные</div><div></div>
+  <div class="col-h">02 / AI-ядро + сервисы генерации</div><div></div>
+  <div class="col-h">03 / Согласование<br>с клиентом</div><div></div>
+  <div class="col-h">04 / Автоматизация<br>и постинг</div><div></div>
+  <div class="col-h">05 / Каналы<br>публикации</div>
+</div>
+
+<div class="flow">
+
+  <!-- INPUTS -->
+  <div class="zone"><div class="zone-stripe s1"></div>
+    <div class="zone-label">Источники данных</div>
+    <div class="inp"><span class="inp-icon">📋</span><div><div class="inp-name">Бриф клиента</div><div class="inp-desc">tone of voice, УТП, аудитория</div></div></div>
+    <div class="inp"><span class="inp-icon">📚</span><div><div class="inp-name">Брендбук</div><div class="inp-desc">цвета, шрифты, визуал</div></div></div>
+    <div class="inp"><span class="inp-icon">📅</span><div><div class="inp-name">Контент-план</div><div class="inp-desc">темы, рубрики, частота</div></div></div>
+    <div class="inp"><span class="inp-icon">🛍️</span><div><div class="inp-name">Каталог / меню</div><div class="inp-desc">продукты, цены, акции</div></div></div>
+    <div class="inp"><span class="inp-icon">🔍</span><div><div class="inp-name">Семантика SEO</div><div class="inp-desc">ключи, кластеры, конкуренты</div></div></div>
+    <div class="inp"><span class="inp-icon">📊</span><div><div class="inp-name">Прошлая аналитика</div><div class="inp-desc">ER, охваты, топ-контент</div></div></div>
+  </div>
+
+  <div class="arrow-col">
+    <svg width="28" height="20" viewBox="0 0 28 20"><defs><marker id="m1" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0L5,2.5L0,5Z" fill="#FF3B00"/></marker></defs><line x1="2" y1="10" x2="22" y2="10" stroke="#FF3B00" stroke-width="1.5" marker-end="url(#m1)"/></svg>
+  </div>
+
+  <!-- AI ENGINE -->
+  <div class="zone zone-ai"><div class="zone-stripe s1"></div>
+    <div class="ai-header">
+      <div class="ai-name">🤖 THNK AI-BOT<span>|</span></div>
+      <div class="ai-desc">специально обученная модель под нишу клиента<br>кастомный system prompt · RAG-база · memory</div>
+      <div class="ai-tags">
+        <span class="ai-tag">GPT-4o fine-tune</span><span class="ai-tag">Claude 3.5 Sonnet</span>
+        <span class="ai-tag">YandexGPT Pro</span><span class="ai-tag">RAG-база знаний</span><span class="ai-tag">Memory по клиенту</span>
+      </div>
+    </div>
+    <div class="ai-groups">
+      <div><div class="ai-group-label t">Текст</div><div class="ai-chips"><span class="ai-chip">ChatGPT-4o</span><span class="ai-chip">Claude 3.5</span><span class="ai-chip">YandexGPT</span><span class="ai-chip">GigaChat</span><span class="ai-chip">Mistral</span></div></div>
+      <div><div class="ai-group-label i">Изображения</div><div class="ai-chips"><span class="ai-chip">Midjourney</span><span class="ai-chip">DALL-E 4</span><span class="ai-chip">Flux</span><span class="ai-chip">Leonardo.ai</span><span class="ai-chip">Ideogram</span></div></div>
+      <div><div class="ai-group-label v">Видео</div><div class="ai-chips"><span class="ai-chip">Runway Gen-3</span><span class="ai-chip">Pika 2.0</span><span class="ai-chip">HeyGen</span><span class="ai-chip">Sora</span><span class="ai-chip">Kling AI</span></div></div>
+      <div><div class="ai-group-label a">Голос / Аудио</div><div class="ai-chips"><span class="ai-chip">ElevenLabs</span><span class="ai-chip">Murf AI</span><span class="ai-chip">Suno</span><span class="ai-chip">Udio</span></div></div>
+      <div><div class="ai-group-label d">Дизайн</div><div class="ai-chips"><span class="ai-chip">Canva API</span><span class="ai-chip">Adobe Firefly</span><span class="ai-chip">Figma API</span><span class="ai-chip">Remove.bg</span></div></div>
+      <div><div class="ai-group-label s">SEO / Данные</div><div class="ai-chips"><span class="ai-chip">Wordstat</span><span class="ai-chip">Serpstat</span><span class="ai-chip">Keys.so</span><span class="ai-chip">SimilarWeb</span></div></div>
+    </div>
+  </div>
+
+  <div class="arrow-col">
+    <svg width="28" height="20" viewBox="0 0 28 20"><defs><marker id="m2" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0L5,2.5L0,5Z" fill="#3A7BD5"/></marker></defs><line x1="2" y1="10" x2="22" y2="10" stroke="#3A7BD5" stroke-width="1.5" marker-end="url(#m2)"/></svg>
+  </div>
+
+  <!-- APPROVAL -->
+  <div class="zone"><div class="zone-stripe s2"></div>
+    <div class="zone-label">Согласование</div>
+    <div class="step"><span class="step-n">01</span><div><div class="step-title">Черновик готов</div><div class="step-sub">текст + медиа + хэштеги</div></div></div>
+    <div class="step"><span class="step-n">02</span><div><div class="step-title">TG-бот → клиент</div><div class="step-sub">превью в Telegram</div><div class="step-badges"><span class="step-badge">✅ Одобрить</span><span class="step-badge">✏️ Правка</span><span class="step-badge">❌ Откл.</span></div></div></div>
+    <div class="step"><span class="step-n">03</span><div><div class="step-title">Правка → AI</div><div class="step-sub">комментарий → перегенерация</div></div></div>
+    <div class="step"><span class="step-n">04</span><div><div class="step-title">Одобрено</div><div class="step-sub">→ база знаний</div><div class="step-badges"><span class="step-badge">Notion</span><span class="step-badge">Airtable</span><span class="step-badge">GSheets</span></div></div></div>
+    <div class="step"><span class="step-n">05</span><div><div class="step-title">В очередь</div><div class="step-sub">планировщик по расписанию</div></div></div>
+  </div>
+
+  <div class="arrow-col">
+    <svg width="28" height="20" viewBox="0 0 28 20"><defs><marker id="m3" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0L5,2.5L0,5Z" fill="#7C5CFC"/></marker></defs><line x1="2" y1="10" x2="22" y2="10" stroke="#7C5CFC" stroke-width="1.5" marker-end="url(#m3)"/></svg>
+  </div>
+
+  <!-- AUTOMATION -->
+  <div class="zone"><div class="zone-stripe s4"></div>
+    <div class="zone-label">Автоматизация</div>
+    <div class="auto"><div class="auto-bar" style="background:#FF6D3B;"></div><div><div class="auto-name">Make.com</div><div class="auto-role">оркестрация сценариев</div></div></div>
+    <div class="auto"><div class="auto-bar" style="background:#E94A4A;"></div><div><div class="auto-name">n8n</div><div class="auto-role">self-hosted логика</div></div></div>
+    <div class="auto"><div class="auto-bar" style="background:#F59E0B;"></div><div><div class="auto-name">Zapier</div><div class="auto-role">SaaS-интеграции</div></div></div>
+    <div class="auto"><div class="auto-bar" style="background:#3A7BD5;"></div><div><div class="auto-name">Albato</div><div class="auto-role">рос. интеграции</div></div></div>
+    <div class="auto"><div class="auto-bar" style="background:#7C5CFC;"></div><div><div class="auto-name">SMMplanner</div><div class="auto-role">очередь + расписание</div></div></div>
+    <div class="auto"><div class="auto-bar" style="background:#2EA84E;"></div><div><div class="auto-name">Buffer</div><div class="auto-role">EN-рынок</div></div></div>
+    <div class="auto"><div class="auto-bar" style="background:#06B6D4;"></div><div><div class="auto-name">Постер</div><div class="auto-role">ВКонтакте / ОК</div></div></div>
+    <div class="auto"><div class="auto-bar" style="background:#FF3B00;"></div><div><div class="auto-name">TGStat / Teletype</div><div class="auto-role">Telegram-каналы</div></div></div>
+  </div>
+
+  <div class="arrow-col">
+    <svg width="28" height="20" viewBox="0 0 28 20"><defs><marker id="m4" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0L5,2.5L0,5Z" fill="#2EA84E"/></marker></defs><line x1="2" y1="10" x2="22" y2="10" stroke="#2EA84E" stroke-width="1.5" marker-end="url(#m4)"/></svg>
+  </div>
+
+  <!-- PUBLISH -->
+  <div class="zone"><div class="zone-stripe s3"></div>
+    <div class="zone-label">Каналы публикации</div>
+    <div class="net-group">
+      <div class="net-group-label">Россия</div>
+      <div class="net"><div class="net-name">ВКонтакте</div><div class="net-fmt">посты · клипы · истории</div></div>
+      <div class="net"><div class="net-name">Telegram</div><div class="net-fmt">канал · бот · рассылки</div></div>
+      <div class="net"><div class="net-name">Одноклассники</div><div class="net-fmt">посты · видео</div></div>
+      <div class="net"><div class="net-name">Дзен</div><div class="net-fmt">статьи · ролики</div></div>
+      <div class="net"><div class="net-name">RuTube</div><div class="net-fmt">видео · шорты</div></div>
+    </div>
+    <div class="net-group">
+      <div class="net-group-label">Глобал</div>
+      <div class="net"><div class="net-name">Instagram</div><div class="net-fmt">посты · reels · stories</div></div>
+      <div class="net"><div class="net-name">TikTok</div><div class="net-fmt">видео · слайды</div></div>
+      <div class="net"><div class="net-name">YouTube</div><div class="net-fmt">Shorts · видео · community</div></div>
+      <div class="net"><div class="net-name">Pinterest</div><div class="net-fmt">пины · коллекции</div></div>
+      <div class="net"><div class="net-name">LinkedIn</div><div class="net-fmt">посты · статьи</div></div>
+      <div class="net"><div class="net-name">Facebook</div><div class="net-fmt">посты · reels</div></div>
+      <div class="net"><div class="net-name">Threads</div><div class="net-fmt">посты · ответы</div></div>
+      <div class="net"><div class="net-name">WhatsApp</div><div class="net-fmt">канал · рассылки</div></div>
+    </div>
+  </div>
+
+</div><!-- end .flow -->
+
+<!-- ANALYTICS -->
+<div class="analytics">
+  <div class="a-label">↑ Аналитика → AI</div>
+  <div class="a-items">
+    <span class="a-tag">SMMplanner Analytics</span><span class="a-tag">Brand Analytics</span>
+    <span class="a-tag">Google Analytics 4</span><span class="a-tag">Яндекс.Метрика</span>
+    <span class="a-tag">Livedune</span><span class="a-tag">TGStat</span>
+    <span class="a-tag">VK Analytics</span><span class="a-tag">YouTube Studio</span>
+    <span class="a-tag">TikTok Analytics</span><span class="a-tag">Meta Insights</span>
+  </div>
+  <div class="a-loop">данные о лучшем контенте → AI-ядро ↺</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="foot-legend">
+    <div class="leg"><div class="leg-dot" style="background:#FF3B00;"></div>AI-генерация</div>
+    <div class="leg"><div class="leg-dot" style="background:#3A7BD5;"></div>Согласование</div>
+    <div class="leg"><div class="leg-dot" style="background:#7C5CFC;"></div>Автоматизация</div>
+    <div class="leg"><div class="leg-dot" style="background:#2EA84E;"></div>Аналитика ↺</div>
+  </div>
+  <div class="foot-copy">THNKFOR.ME · Content Machine Architecture · 2026</div>
+</div>
+
+</body>
+</html>

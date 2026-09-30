@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>THNKFOR.ME — Сценарии и цены</title>
+    <link rel="canonical" href="https://thnkfor.me/pricing_scenarios/">
+    <meta property="og:title" content="THNKFOR.ME — Сценарии и цены">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;background:#F8F8F8;color:#0A0A0A;}
+
+/* ── NAV ── */
+.nav{background:#0A0A0A;padding:18px 40px;display:flex;align-items:center;gap:32px;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,0.08);}
+.nav-logo{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:#F8F8F8;letter-spacing:0.06em;text-decoration:none;}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap;}
+.nav-link{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;color:rgba(255,255,255,0.4);text-decoration:none;padding:4px 10px;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.15s;}
+.nav-link:hover,.nav-link.active{color:#FF3B00;}
+.nav-sep{color:rgba(255,255,255,0.1);font-size:12px;}
+
+/* ── HERO ── */
+.hero{padding:56px 40px 40px;border-bottom:1px solid rgba(0,0,0,0.08);}
+.hero h1{font-size:36px;font-weight:500;letter-spacing:-0.04em;line-height:1.1;margin-bottom:10px;}
+.hero h1 span{color:#FF3B00;}
+.hero-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px;}
+.hero-note{max-width:680px;font-size:13px;color:#555;line-height:1.65;}
+
+/* ── LEGEND ── */
+.legend{display:flex;gap:24px;padding:20px 40px;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.06);}
+.legend-item{display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.5);letter-spacing:0.04em;}
+.dot{width:8px;height:8px;flex-shrink:0;}
+.dot-orange{background:#FF3B00;}
+.dot-blue{background:#3A7BD5;}
+.dot-green{background:#2EA84E;}
+
+/* ── SERVICE BLOCK ── */
+.service-block{border-bottom:1px solid rgba(0,0,0,0.06);}
+.service-header{padding:28px 40px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;}
+.service-title-group{}
+.service-num{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;}
+.service-name{font-size:20px;font-weight:500;letter-spacing:-0.02em;margin-bottom:4px;}
+.service-url{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;}
+.market-ref{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.08);padding:6px 12px;text-align:right;line-height:1.6;flex-shrink:0;max-width:220px;}
+.market-ref strong{color:#0A0A0A;font-weight:500;display:block;margin-bottom:2px;font-size:10px;}
+
+/* ── SCENARIOS ── */
+.scenarios{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;padding:20px 40px 32px;}
+.scenario{border:1px solid rgba(0,0,0,0.08);position:relative;}
+.scenario+.scenario{border-left:none;}
+.scenario-badge{position:absolute;top:-1px;left:-1px;right:-1px;height:3px;}
+.badge-1{background:#FF3B00;}
+.badge-2{background:#3A7BD5;}
+.badge-3{background:#2EA84E;}
+.scenario-inner{padding:18px 20px;}
+.scenario-num{font-family:'IBM Plex Mono',monospace;font-size:9px;color:#888;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;}
+.scenario-name{font-size:16px;font-weight:500;letter-spacing:-0.02em;margin-bottom:10px;}
+.scenario-price{margin-bottom:14px;padding:10px 0;border-top:1px solid rgba(0,0,0,0.06);border-bottom:1px solid rgba(0,0,0,0.06);}
+.price-main{font-family:'IBM Plex Mono',monospace;font-size:16px;font-weight:500;}
+.price-main.orange{color:#FF3B00;}
+.price-main.blue{color:#3A7BD5;}
+.price-main.green{color:#2EA84E;}
+.price-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;margin-top:2px;}
+.scenario-desc{font-size:12px;color:#444;line-height:1.55;margin-bottom:12px;font-style:italic;}
+.includes-title{font-family:'IBM Plex Mono',monospace;font-size:9px;color:#888;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;}
+.includes-list{list-style:none;}
+.includes-list li{font-size:12px;color:#222;line-height:1.5;padding:2px 0;padding-left:14px;position:relative;}
+.includes-list li::before{content:'·';position:absolute;left:0;color:#FF3B00;font-weight:700;}
+.scenario-note{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:9px;color:#888;padding-top:8px;border-top:1px dashed rgba(0,0,0,0.08);}
+
+/* ── BUDGET NOTE ── */
+.budget-note{margin:0 40px 20px;padding:10px 16px;background:#fff;border-left:3px solid rgba(0,0,0,0.12);font-size:12px;color:#666;line-height:1.5;}
+.budget-note strong{color:#0A0A0A;font-weight:500;}
+
+/* ── FOOTER ── */
+.footer{padding:32px 40px;border-top:2px solid #0A0A0A;display:flex;align-items:center;justify-content:space-between;background:#0A0A0A;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:0.06em;}
+.footer-note{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);}
+
+/* ── SUMMARY TABLE ── */
+.summary-section{padding:40px;}
+.summary-section h2{font-size:16px;font-weight:500;letter-spacing:-0.02em;margin-bottom:20px;}
+table.summary{width:100%;border-collapse:collapse;}
+table.summary th{background:#0A0A0A;color:rgba(255,255,255,0.7);padding:10px 14px;font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:500;text-align:left;letter-spacing:.06em;text-transform:uppercase;}
+table.summary td{padding:10px 14px;border-bottom:1px solid #EBEBEB;font-size:12px;vertical-align:top;line-height:1.4;background:#fff;}
+table.summary tr:hover td{background:#FAFAFA;}
+.sc-name{font-weight:500;}
+.sc-1{color:#FF3B00;}
+.sc-2{color:#3A7BD5;}
+.sc-3{color:#2EA84E;}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:11px;}
+.tag{display:inline-block;padding:2px 8px;font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:500;}
+.tag-setup{background:#E0E8F8;color:#1A5CA0;}
+.tag-monthly{background:#E8F4E8;color:#1A7A3C;}
+.tag-once{background:#FFF0E0;color:#A04010;}
+</style>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="#">THNKFOR.ME</a>
+  <div class="nav-links">
+    <a class="nav-link" href="#">← Структура сайта</a>
+    <span class="nav-sep">·</span>
+    <a class="nav-link active" href="#">Сценарии и цены</a>
+    <span class="nav-sep">·</span>
+    <a class="nav-link" href="#">Тексты сайта</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-sub">THNKFOR.ME · Внутренний документ · Сценарии услуг · September 2026</div>
+  <h1>Сценарии работы<br>и <span>ценовые диапазоны</span></h1>
+  <p class="hero-note">7 услуг × 3 сценария. Сценарии названы по логике работы, не по уровню. Рыночные ориентиры — SMM-агентства Москвы и СПб 2025–2026. Рекламный бюджет и платформенные расходы (Make, Claude API) везде указаны отдельно.</p>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="dot dot-orange"></div> Сценарий 1 — точечный запуск</div>
+  <div class="legend-item"><div class="dot dot-blue"></div> Сценарий 2 — рабочая система</div>
+  <div class="legend-item"><div class="dot dot-green"></div> Сценарий 3 — полная экосистема</div>
+</div>
+
+
+<!-- ── 1. SMM ── -->
+<div class="service-block">
+  <div class="service-header">
+    <div class="service-title-group">
+      <div class="service-num">01 / 07</div>
+      <div class="service-name">SMM / Ведение соцсетей</div>
+      <div class="service-url">/services/smm/</div>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок: SMM-агентства Москвы</strong>
+      18 000–65 000 ₽/мес<br>
+      (10–30 постов, 1–2 платформы)<br>
+      Фрилансер: 8–15 000 ₽/мес
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="scenario-badge badge-1"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 1</div>
+        <div class="scenario-name">Голос</div>
+        <div class="scenario-price">
+          <div class="price-main orange">от 22 000 ₽/мес</div>
+          <div class="price-sub">1 платформа · 20 постов</div>
+        </div>
+        <div class="scenario-desc">Один канал работает стабильно. AI генерирует тексты и визуалы, человек контролирует.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>1 платформа (Instagram или Telegram)</li>
+          <li>20 постов/мес + контент-план</li>
+          <li>AI-тексты + визуалы</li>
+          <li>Ежемесячный отчёт</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-2"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 2</div>
+        <div class="scenario-name">Поток</div>
+        <div class="scenario-price">
+          <div class="price-main blue">от 38 000 ₽/мес</div>
+          <div class="price-sub">2 платформы · 30 постов</div>
+        </div>
+        <div class="scenario-desc">Постоянный контент-поток на двух площадках с аналитикой роста.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>2 платформы</li>
+          <li>30 постов + Stories + Reels-сценарии</li>
+          <li>AI-визуалы под каждый пост</li>
+          <li>Отчёт + рекомендации по росту</li>
+          <li>Стратегия (разово на старте)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-3"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 3</div>
+        <div class="scenario-name">Штаб</div>
+        <div class="scenario-price">
+          <div class="price-main green">от 58 000 ₽/мес</div>
+          <div class="price-sub">3 платформы · 45 постов</div>
+        </div>
+        <div class="scenario-desc">Максимальный охват: бренд-голос на всех площадках, производство видео-сценариев.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>3 платформы (в т.ч. ВКонтакте)</li>
+          <li>45 постов + полный видео-план</li>
+          <li>AI-сценарии Reels + монтажные раскадровки</li>
+          <li>Полная аналитика + стратегия</li>
+          <li>Ежемесячный созвон-разбор</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 2. TARGET ── -->
+<div class="service-block">
+  <div class="service-header">
+    <div class="service-title-group">
+      <div class="service-num">02 / 07</div>
+      <div class="service-name">Таргетированная реклама</div>
+      <div class="service-url">/services/target/</div>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок: таргет Москва</strong>
+      Ведение: 12 000–25 000 ₽/мес<br>
+      Настройка: 20 000–45 000 ₽ (разово)<br>
+      Рекламный бюджет — отдельно
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="scenario-badge badge-1"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 1</div>
+        <div class="scenario-name">Запуск</div>
+        <div class="scenario-price">
+          <div class="price-main orange">от 30 000 ₽</div>
+          <div class="price-sub">разово · настройка + первый месяц</div>
+        </div>
+        <div class="scenario-desc">Быстрый старт: настроить, запустить, посмотреть что работает.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Настройка кабинета + пикселя</li>
+          <li>До 3 аудиторий</li>
+          <li>AI-креативы (5 вариантов)</li>
+          <li>Ведение 1 месяц</li>
+          <li>Отчёт по итогам</li>
+        </ul>
+        <div class="scenario-note">+ рекламный бюджет от 15 000 ₽/мес</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-2"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 2</div>
+        <div class="scenario-name">Машина</div>
+        <div class="scenario-price">
+          <div class="price-main blue">от 18 000 ₽/мес</div>
+          <div class="price-sub">+ настройка 20 000 ₽ (разово)</div>
+        </div>
+        <div class="scenario-desc">Ежемесячное ведение: оптимизация ставок, новые креативы, A/B-тесты.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Ведение действующих кампаний</li>
+          <li>Еженедельная оптимизация ставок</li>
+          <li>2–4 новых AI-креатива/мес</li>
+          <li>A/B-тесты аудиторий</li>
+          <li>Еженедельные отчёты</li>
+        </ul>
+        <div class="scenario-note">+ рекламный бюджет от 20 000 ₽/мес</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-3"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 3</div>
+        <div class="scenario-name">Полигон</div>
+        <div class="scenario-price">
+          <div class="price-main green">от 30 000 ₽/мес</div>
+          <div class="price-sub">+ настройка 35 000 ₽ (разово)</div>
+        </div>
+        <div class="scenario-desc">Полный контроль воронки: таргет + ретаргет + сквозная аналитика по заявкам.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Таргет + ретаргетинг (look-alike)</li>
+          <li>Неограниченные AI-креативы</li>
+          <li>Интеграция с CRM (заявки → CRM)</li>
+          <li>Сквозная аналитика ROAS</li>
+          <li>Созвон-разбор 2×/мес</li>
+        </ul>
+        <div class="scenario-note">+ рекламный бюджет от 30 000 ₽/мес</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 3. CONTENT ── -->
+<div class="service-block">
+  <div class="service-header">
+    <div class="service-title-group">
+      <div class="service-num">03 / 07</div>
+      <div class="service-name">AI-контент / Контент-маркетинг</div>
+      <div class="service-url">/services/content/</div>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок: контент-агентства</strong>
+      Текстовый контент: 15 000–40 000 ₽/мес<br>
+      Визуальный: +10 000–20 000 ₽<br>
+      THNKFOR.ME: AI ×3 объём за ту же цену
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="scenario-badge badge-1"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 1</div>
+        <div class="scenario-name">Лаборатория</div>
+        <div class="scenario-price">
+          <div class="price-main orange">от 15 000 ₽/мес</div>
+          <div class="price-sub">тексты · до 20 единиц</div>
+        </div>
+        <div class="scenario-desc">Регулярный текстовый контент в вашем голосе — посты, статьи, карточки.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Тон голоса (адаптация на старте)</li>
+          <li>До 20 текстовых единиц/мес</li>
+          <li>Контент-план по рубрикам</li>
+          <li>Правки по фидбэку</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-2"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 2</div>
+        <div class="scenario-name">Студия</div>
+        <div class="scenario-price">
+          <div class="price-main blue">от 28 000 ₽/мес</div>
+          <div class="price-sub">текст + визуал · до 30 единиц</div>
+        </div>
+        <div class="scenario-desc">Контент под ключ: текст + AI-визуалы готовы к публикации без правок.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>До 30 единиц/мес (посты, статьи)</li>
+          <li>AI-визуалы к каждой единице</li>
+          <li>Форматирование под платформы</li>
+          <li>Контент-план + редполитика</li>
+          <li>Еженедельный пакет готовых материалов</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-3"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 3</div>
+        <div class="scenario-name">Редакция</div>
+        <div class="scenario-price">
+          <div class="price-main green">от 45 000 ₽/мес</div>
+          <div class="price-sub">полная стратегия · без лимита</div>
+        </div>
+        <div class="scenario-desc">Контент-отдел на аутсорсе: стратегия, производство всех форматов, аналитика.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Без лимита на единицы контента</li>
+          <li>Все форматы: посты, статьи, рассылки, лендинги</li>
+          <li>Контентная стратегия на квартал</li>
+          <li>AI-видео-сценарии + транскрипты</li>
+          <li>Аналитика вовлечённости + рекомендации</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 4. DIRECT ── -->
+<div class="service-block">
+  <div class="service-header">
+    <div class="service-title-group">
+      <div class="service-num">04 / 07</div>
+      <div class="service-name">Яндекс Директ</div>
+      <div class="service-url">/services/direct/</div>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок: контекстная реклама</strong>
+      Настройка: 20 000–50 000 ₽ (разово)<br>
+      Ведение: 15 000–25 000 ₽/мес<br>
+      Рекламный бюджет — отдельно
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="scenario-badge badge-1"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 1</div>
+        <div class="scenario-name">Калибровка</div>
+        <div class="scenario-price">
+          <div class="price-main orange">от 35 000 ₽</div>
+          <div class="price-sub">разово · настройка под ключ</div>
+        </div>
+        <div class="scenario-desc">Настройка кампаний с нуля — семантика, объявления, ставки — и запуск.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Сбор и кластеризация семантики</li>
+          <li>Написание объявлений (AI + ручная проверка)</li>
+          <li>Настройка аудиторий и стратегий ставок</li>
+          <li>Настройка целей в Метрике</li>
+          <li>Запуск + первая неделя ведения</li>
+        </ul>
+        <div class="scenario-note">+ рекламный бюджет от 20 000 ₽/мес</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-2"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 2</div>
+        <div class="scenario-name">Орбита</div>
+        <div class="scenario-price">
+          <div class="price-main blue">от 18 000 ₽/мес</div>
+          <div class="price-sub">+ настройка 25 000 ₽ (разово)</div>
+        </div>
+        <div class="scenario-desc">Постоянная оптимизация: ставки, минус-слова, новые объявления каждый месяц.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Еженедельная оптимизация ставок</li>
+          <li>Расширение/чистка семантики</li>
+          <li>A/B-тест объявлений</li>
+          <li>Отчёт по стоимости лида</li>
+        </ul>
+        <div class="scenario-note">+ рекламный бюджет от 20 000 ₽/мес</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-3"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 3</div>
+        <div class="scenario-name">Доминанта</div>
+        <div class="scenario-price">
+          <div class="price-main green">от 28 000 ₽/мес</div>
+          <div class="price-sub">+ настройка 40 000 ₽ (разово)</div>
+        </div>
+        <div class="scenario-desc">Весь трафик под контролем: поиск + РСЯ + ретаргетинг + сквозная аналитика.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Поиск + РСЯ + ретаргетинг</li>
+          <li>Интеграция с CRM (сделки из Директа)</li>
+          <li>Сквозная аналитика ROMI</li>
+          <li>Яндекс Аудитории (look-alike)</li>
+          <li>Созвон-разбор 2×/мес</li>
+        </ul>
+        <div class="scenario-note">+ рекламный бюджет от 30 000 ₽/мес</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 5. AI-AUTOMATION ── -->
+<div class="service-block">
+  <div class="service-header">
+    <div class="service-title-group">
+      <div class="service-num">05 / 07</div>
+      <div class="service-name">AI-автоматизация</div>
+      <div class="service-url">/services/ai-automation/</div>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок: автоматизация</strong>
+      Make/n8n no-code: 35 000–90 000 ₽ setup<br>
+      Кастом full-stack: 200 000–600 000 ₽<br>
+      Сопровождение: 7 000–20 000 ₽/мес
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="scenario-badge badge-1"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 1</div>
+        <div class="scenario-name">Пилот</div>
+        <div class="scenario-price">
+          <div class="price-main orange">от 40 000 ₽ setup</div>
+          <div class="price-sub">+ от 7 000 ₽/мес сопровождение</div>
+        </div>
+        <div class="scenario-desc">Один процесс автоматизирован полностью — с нуля до работающего сценария.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>1 автоматизация (Make или n8n)</li>
+          <li>Аудит и картирование процесса</li>
+          <li>Интеграция с 1–2 системами (CRM, мессенджер)</li>
+          <li>Обучение команды</li>
+          <li>Сопровождение 1 мес включено</li>
+        </ul>
+        <div class="scenario-note">Платформа Make/n8n: ~3 000–5 000 ₽/мес сверху</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-2"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 2</div>
+        <div class="scenario-name">Сеть</div>
+        <div class="scenario-price">
+          <div class="price-main blue">от 80 000 ₽ setup</div>
+          <div class="price-sub">+ от 12 000 ₽/мес сопровождение</div>
+        </div>
+        <div class="scenario-desc">Несколько связанных процессов образуют единую сеть: заявка → CRM → контент → отчёт.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>3–5 автоматизаций, связанных сценарием</li>
+          <li>Единый хаб входящих (TG + WA + соцсети)</li>
+          <li>CRM-интеграция + квалификация лида</li>
+          <li>Автоонбординг нового клиента</li>
+          <li>Документация + обучение</li>
+        </ul>
+        <div class="scenario-note">Платформа: ~5 000–10 000 ₽/мес сверху</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-3"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 3</div>
+        <div class="scenario-name">Нейрокор</div>
+        <div class="scenario-price">
+          <div class="price-main green">от 150 000 ₽ setup</div>
+          <div class="price-sub">+ от 20 000 ₽/мес сопровождение</div>
+        </div>
+        <div class="scenario-desc">Полная экосистема: Claude API внутри процессов, AI-решения без участия человека.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Архитектура автоматизации под бизнес</li>
+          <li>Claude API в ключевых точках (решения, тексты)</li>
+          <li>Мультиканальный хаб + CRM + аналитика</li>
+          <li>Автоматическая отчётность клиентам</li>
+          <li>Приоритетное сопровождение</li>
+        </ul>
+        <div class="scenario-note">Платформа + Claude API: ~8 000–15 000 ₽/мес сверху</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 6. ANALYTICS ── -->
+<div class="service-block">
+  <div class="service-header">
+    <div class="service-title-group">
+      <div class="service-num">06 / 07</div>
+      <div class="service-name">Аналитика</div>
+      <div class="service-url">/services/analytics/</div>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок: BI и аналитика</strong>
+      Дашборд setup: 30 000–80 000 ₽<br>
+      Сквозная: 50 000–120 000 ₽ setup<br>
+      Сопровождение: 8 000–30 000 ₽/мес
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="scenario-badge badge-1"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 1</div>
+        <div class="scenario-name">Обзор</div>
+        <div class="scenario-price">
+          <div class="price-main orange">от 30 000 ₽ setup</div>
+          <div class="price-sub">+ от 8 000 ₽/мес</div>
+        </div>
+        <div class="scenario-desc">Дашборд с ключевыми метриками — видно всё главное в одном экране.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Дашборд в Looker Studio / Metabase</li>
+          <li>Подключение до 3 источников (рекламный кабинет, Метрика, CRM)</li>
+          <li>Базовые KPI: трафик, лиды, конверсия</li>
+          <li>Ежемесячный отчёт PDF</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-2"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 2</div>
+        <div class="scenario-name">Радар</div>
+        <div class="scenario-price">
+          <div class="price-main blue">от 60 000 ₽ setup</div>
+          <div class="price-sub">+ от 15 000 ₽/мес</div>
+        </div>
+        <div class="scenario-desc">Сквозная аналитика: от первого клика до оплаты, с когортами и воронками.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Сквозная аналитика (реклама → CRM → сделка)</li>
+          <li>Когортный анализ + воронки</li>
+          <li>До 6 источников данных</li>
+          <li>Еженедельные AI-инсайты (аномалии, тренды)</li>
+          <li>Созвон-разбор 1×/мес</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-3"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 3</div>
+        <div class="scenario-name">Контроль</div>
+        <div class="scenario-price">
+          <div class="price-main green">от 100 000 ₽ setup</div>
+          <div class="price-sub">+ от 25 000 ₽/мес</div>
+        </div>
+        <div class="scenario-desc">Полный BI: прогнозная аналитика, автоматические алерты, отчёты для инвестора.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Полноценный BI-стек</li>
+          <li>Прогнозная аналитика (тренды, сезонность)</li>
+          <li>AI-алерты на отклонения</li>
+          <li>Автоматические инвесторские отчёты</li>
+          <li>Неограниченные источники данных</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 7. CONTENT MACHINE ── -->
+<div class="service-block">
+  <div class="service-header">
+    <div class="service-title-group">
+      <div class="service-num">07 / 07</div>
+      <div class="service-name">Контент завод</div>
+      <div class="service-url">/services/content-machine/</div>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок: контент-автоматизация</strong>
+      B2B контент-фабрика: 80 000 setup<br>
+      + 15 000 ₽/мес сопровождение<br>
+      Ниша свободна — AI-позиция незанята
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="scenario-badge badge-1"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 1</div>
+        <div class="scenario-name">Конвейер</div>
+        <div class="scenario-price">
+          <div class="price-main orange">от 45 000 ₽ setup</div>
+          <div class="price-sub">+ от 9 000 ₽/мес</div>
+        </div>
+        <div class="scenario-desc">Одна платформа на полном автопилоте: AI пишет, система публикует.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>AI-цепочка: бриф → Claude API → текст → визуал</li>
+          <li>Автопостинг на 1 платформу (Make)</li>
+          <li>База контента в Airtable/Notion</li>
+          <li>30+ постов/мес в автоматическом режиме</li>
+          <li>Сопровождение включено (1 мес)</li>
+        </ul>
+        <div class="scenario-note">Claude API: ~2 000–4 000 ₽/мес сверху</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-2"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 2</div>
+        <div class="scenario-name">Завод</div>
+        <div class="scenario-price">
+          <div class="price-main blue">от 75 000 ₽ setup</div>
+          <div class="price-sub">+ от 15 000 ₽/мес</div>
+        </div>
+        <div class="scenario-desc">Полный конвейер с петлёй согласования: генерация → ревью → публикация → аналитика.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>2–3 платформы</li>
+          <li>Цикл: генерация → флаг на ревью → автопубликация</li>
+          <li>AI-визуалы (Midjourney/DALL-E API)</li>
+          <li>45+ единиц контента/мес</li>
+          <li>Базовая аналитика охватов</li>
+        </ul>
+        <div class="scenario-note">Claude API + генерация: ~5 000–8 000 ₽/мес сверху</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="scenario-badge badge-3"></div>
+      <div class="scenario-inner">
+        <div class="scenario-num">Сценарий 3</div>
+        <div class="scenario-name">Экосистема</div>
+        <div class="scenario-price">
+          <div class="price-main green">от 120 000 ₽ setup</div>
+          <div class="price-sub">+ от 22 000 ₽/мес</div>
+        </div>
+        <div class="scenario-desc">Мультиплатформенный завод: все каналы, A/B контента, реактивация аудитории.</div>
+        <div class="includes-title">Что входит</div>
+        <ul class="includes-list">
+          <li>Все платформы (Instagram, TG, ВК, сайт)</li>
+          <li>A/B-тест форматов (что работает — масштабируется)</li>
+          <li>Реактивация: AI анализирует что не зашло</li>
+          <li>60+ единиц в мес без ограничений</li>
+          <li>Полная аналитика + ежемес. стратегия</li>
+        </ul>
+        <div class="scenario-note">Платформа + API: ~8 000–12 000 ₽/мес сверху</div>
+      </div>
+    </div>
+  </div>
+  <div class="budget-note">
+    <strong>Примечание по контент заводу:</strong> Это самая дифференцированная услуга — прямых аналогов с AI-позиционированием на рынке нет. «Конвейер» подходит малому бизнесу (кафе, салон), «Завод» — активному SMB и агентствам, «Экосистема» — сетям и e-commerce.
+  </div>
+</div>
+
+
+<!-- ── SUMMARY TABLE ── -->
+<div class="summary-section">
+  <h2>Сводная таблица — все сценарии</h2>
+  <table class="summary">
+    <thead>
+      <tr>
+        <th>Услуга</th>
+        <th>Сценарий 1</th>
+        <th>Сценарий 2</th>
+        <th>Сценарий 3</th>
+        <th>Тип оплаты</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>SMM</strong><br><span style="color:#888;font-size:11px;">/services/smm/</span></td>
+        <td><span class="sc-name sc-1">Голос</span><br><span class="mono">от 22 000 ₽/мес</span></td>
+        <td><span class="sc-name sc-2">Поток</span><br><span class="mono">от 38 000 ₽/мес</span></td>
+        <td><span class="sc-name sc-3">Штаб</span><br><span class="mono">от 58 000 ₽/мес</span></td>
+        <td><span class="tag tag-monthly">ежемесячно</span></td>
+      </tr>
+      <tr>
+        <td><strong>Таргет</strong><br><span style="color:#888;font-size:11px;">/services/target/</span></td>
+        <td><span class="sc-name sc-1">Запуск</span><br><span class="mono">от 30 000 ₽ разово</span></td>
+        <td><span class="sc-name sc-2">Машина</span><br><span class="mono">20k setup + 18k/мес</span></td>
+        <td><span class="sc-name sc-3">Полигон</span><br><span class="mono">35k setup + 30k/мес</span></td>
+        <td><span class="tag tag-setup">setup</span> <span class="tag tag-monthly">+ ежемес</span></td>
+      </tr>
+      <tr>
+        <td><strong>AI-контент</strong><br><span style="color:#888;font-size:11px;">/services/content/</span></td>
+        <td><span class="sc-name sc-1">Лаборатория</span><br><span class="mono">от 15 000 ₽/мес</span></td>
+        <td><span class="sc-name sc-2">Студия</span><br><span class="mono">от 28 000 ₽/мес</span></td>
+        <td><span class="sc-name sc-3">Редакция</span><br><span class="mono">от 45 000 ₽/мес</span></td>
+        <td><span class="tag tag-monthly">ежемесячно</span></td>
+      </tr>
+      <tr>
+        <td><strong>Яндекс Директ</strong><br><span style="color:#888;font-size:11px;">/services/direct/</span></td>
+        <td><span class="sc-name sc-1">Калибровка</span><br><span class="mono">от 35 000 ₽ разово</span></td>
+        <td><span class="sc-name sc-2">Орбита</span><br><span class="mono">25k setup + 18k/мес</span></td>
+        <td><span class="sc-name sc-3">Доминанта</span><br><span class="mono">40k setup + 28k/мес</span></td>
+        <td><span class="tag tag-setup">setup</span> <span class="tag tag-monthly">+ ежемес</span></td>
+      </tr>
+      <tr>
+        <td><strong>AI-автоматизация</strong><br><span style="color:#888;font-size:11px;">/services/ai-automation/</span></td>
+        <td><span class="sc-name sc-1">Пилот</span><br><span class="mono">40k setup + 7k/мес</span></td>
+        <td><span class="sc-name sc-2">Сеть</span><br><span class="mono">80k setup + 12k/мес</span></td>
+        <td><span class="sc-name sc-3">Нейрокор</span><br><span class="mono">150k setup + 20k/мес</span></td>
+        <td><span class="tag tag-setup">setup</span> <span class="tag tag-monthly">+ ежемес</span></td>
+      </tr>
+      <tr>
+        <td><strong>Аналитика</strong><br><span style="color:#888;font-size:11px;">/services/analytics/</span></td>
+        <td><span class="sc-name sc-1">Обзор</span><br><span class="mono">30k setup + 8k/мес</span></td>
+        <td><span class="sc-name sc-2">Радар</span><br><span class="mono">60k setup + 15k/мес</span></td>
+        <td><span class="sc-name sc-3">Контроль</span><br><span class="mono">100k setup + 25k/мес</span></td>
+        <td><span class="tag tag-setup">setup</span> <span class="tag tag-monthly">+ ежемес</span></td>
+      </tr>
+      <tr>
+        <td><strong>Контент завод</strong><br><span style="color:#888;font-size:11px;">/services/content-machine/</span></td>
+        <td><span class="sc-name sc-1">Конвейер</span><br><span class="mono">45k setup + 9k/мес</span></td>
+        <td><span class="sc-name sc-2">Завод</span><br><span class="mono">75k setup + 15k/мес</span></td>
+        <td><span class="sc-name sc-3">Экосистема</span><br><span class="mono">120k setup + 22k/мес</span></td>
+        <td><span class="tag tag-setup">setup</span> <span class="tag tag-monthly">+ ежемес</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:20px;padding:16px 20px;background:#fff;border:1px solid rgba(0,0,0,0.08);font-size:12px;color:#555;line-height:1.65;">
+    <strong style="color:#0A0A0A;font-weight:500;display:block;margin-bottom:6px;">Общие условия</strong>
+    Рекламный бюджет (таргет, Директ) — всегда отдельно от стоимости ведения. ·
+    Платформенные расходы (Make, n8n, Claude API, Midjourney) — на клиенте или включены в сопровождение, уточняется на старте. ·
+    Все цены — минимальный «от», финальная стоимость формируется после аудита задачи. ·
+    Позиция THNKFOR.ME: дешевле крупных агентств, дороже фрилансера — AI компенсирует разницу объёмом и скоростью.
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-copy">THNKFOR.ME · Внутренний документ · Не для публикации</div>
+  <div class="footer-note">September 2026 · Цены актуальны для Москвы и СПб</div>
+</footer>
+
+</body>
+</html>

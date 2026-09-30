@@ -1,0 +1,45 @@
+<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ears -->
+  <polygon points="48,52 65,8 90,52" fill="#F8F8F8"/>
+  <polygon points="110,52 135,8 152,52" fill="#F8F8F8"/>
+  <polygon points="55,52 65,22 83,52" fill="#FF3B00"/>
+  <polygon points="117,52 135,22 145,52" fill="#FF3B00"/>
+  <!-- Head -->
+  <rect x="42" y="52" width="116" height="92" fill="#F8F8F8"/>
+  <!-- Happy brows: raised and relaxed -->
+  <line x1="64" y1="70" x2="88" y2="66" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="square"/>
+  <line x1="112" y1="66" x2="136" y2="70" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="square"/>
+  <!-- Happy squinting eyes: ^ shape (upward angle = squinting with joy) -->
+  <polyline points="62,96 77,84 92,96" fill="none" stroke="#0A0A0A" stroke-width="4" stroke-linejoin="miter" stroke-linecap="square"/>
+  <polyline points="108,96 123,84 138,96" fill="none" stroke="#0A0A0A" stroke-width="4" stroke-linejoin="miter" stroke-linecap="square"/>
+  <!-- Blush marks on cheeks (orange, subtle) -->
+  <rect x="46" y="104" width="16" height="4" fill="#FF3B00" opacity="0.35"/>
+  <rect x="138" y="104" width="16" height="4" fill="#FF3B00" opacity="0.35"/>
+  <!-- Nose -->
+  <rect x="96" y="106" width="8" height="6" fill="#FF3B00"/>
+  <!-- Big angular smile (U shape) -->
+  <polyline points="82,114 90,126 110,126 118,114" fill="none" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="miter" stroke-linecap="square"/>
+  <!-- Whiskers (upbeat, slightly angled up) -->
+  <line x1="42" y1="110" x2="88" y2="107" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="42" y1="118" x2="88" y2="116" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="112" y1="107" x2="158" y2="110" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="112" y1="116" x2="158" y2="118" stroke="#0A0A0A" stroke-width="1.5"/>
+  <!-- Body -->
+  <rect x="58" y="144" width="84" height="62" fill="#F8F8F8"/>
+  <!-- Collar -->
+  <rect x="58" y="144" width="84" height="12" fill="#FF3B00"/>
+  <rect x="94" y="155" width="12" height="10" fill="#0A0A0A"/>
+  <!-- Paws -->
+  <rect x="52" y="200" width="38" height="16" fill="#F8F8F8"/>
+  <line x1="64" y1="200" x2="64" y2="211" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="76" y1="200" x2="76" y2="211" stroke="#0A0A0A" stroke-width="1.5"/>
+  <rect x="110" y="200" width="38" height="16" fill="#F8F8F8"/>
+  <line x1="122" y1="200" x2="122" y2="211" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="134" y1="200" x2="134" y2="211" stroke="#0A0A0A" stroke-width="1.5"/>
+  <!-- Tail: high and sweeping (happy) -->
+  <polyline points="142,182 170,148 182,110" fill="none" stroke="#F8F8F8" stroke-width="9" stroke-linejoin="miter" stroke-linecap="square"/>
+  <!-- Small angular heart near tail tip -->
+  <rect x="176" y="96" width="8" height="10" fill="#FF3B00"/>
+  <rect x="184" y="96" width="8" height="10" fill="#FF3B00"/>
+  <polygon points="176,106 192,106 184,118" fill="#FF3B00"/>
+</svg>

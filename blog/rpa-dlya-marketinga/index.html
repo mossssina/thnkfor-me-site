@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RPA для маркетинга: что автоматизировать в первую очередь — THNKFOR.ME</title>
+<link rel="canonical" href="https://thnkfor.me/blog/rpa-dlya-marketinga/">
+<meta property="og:title" content="RPA для маркетинга: что автоматизировать в первую очередь — THNKFOR.ME">
+<meta name="description" content="Топ-5 рутинных задач маркетолога, которые автоматизируются за неделю с помощью RPA. Инструменты, примеры и стоимость.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}ul,ol{list-style:none;}
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+.site-header{position:sticky;top:0;z-index:100;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);white-space:nowrap;text-decoration:none;transition:color .15s,border-color .15s;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;}
+.header-logo .dot{color:#FF3B00;}.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item:hover > a{color:#FFFFFF;}
+.nav-item > a.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;text-decoration:none;transition:background .15s;}
+.header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;}
+.article-hero{background:#0A0A0A;padding:80px 48px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.article-cat{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;margin-bottom:20px;}
+.article-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(40px,6vw,80px);letter-spacing:-0.05em;line-height:0.95;color:#FFFFFF;margin-bottom:28px;max-width:800px;}
+.article-meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(255,255,255,0.25);display:flex;gap:24px;flex-wrap:wrap;}
+.article-layout{display:grid;grid-template-columns:1fr 300px;gap:0;align-items:start;max-width:1200px;margin:0 auto;}
+.article-body{padding:56px 48px;border-right:1px solid rgba(0,0,0,0.1);}
+.article-sidebar{padding:40px 32px;position:sticky;top:80px;}
+.toc-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:16px;}
+.toc-list{display:flex;flex-direction:column;gap:2px;}
+.toc-list a{font-size:13px;color:#666;text-decoration:none;padding:6px 0;border-bottom:1px solid rgba(0,0,0,0.06);transition:color .12s;line-height:1.35;}
+.toc-list a:hover{color:#FF3B00;}
+.sidebar-cta{margin-top:40px;background:#0A0A0A;padding:28px 24px;}
+.sidebar-cta-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:12px;}
+.sidebar-cta-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;color:#FFFFFF;letter-spacing:-0.02em;line-height:1.3;margin-bottom:10px;}
+.sidebar-cta-sub{font-size:12px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.sidebar-cta-btn{display:block;background:#FF3B00;color:#FFFFFF;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:13px;padding:11px 16px;text-align:center;transition:background .12s;}
+.sidebar-cta-btn:hover{background:#e03400;}
+h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:28px;letter-spacing:-0.03em;line-height:1.15;color:#0A0A0A;margin:52px 0 20px;padding-top:8px;}
+h3{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:20px;letter-spacing:-0.02em;color:#0A0A0A;margin:32px 0 12px;}
+p{font-size:17px;color:#2a2a2a;line-height:1.7;margin-bottom:20px;}
+.article-lead{font-size:20px;font-weight:400;color:#0A0A0A;line-height:1.55;margin-bottom:28px;letter-spacing:-0.01em;}
+.callout{border-left:3px solid #FF3B00;padding:18px 24px;background:#FFFFFF;margin:28px 0;}
+.callout p{margin:0;font-size:15px;color:#333;line-height:1.65;}
+.callout-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;margin-bottom:8px;}
+.task-cards{display:grid;grid-template-columns:1fr;gap:16px;margin:28px 0;}
+.task-card{background:#FFFFFF;border:1px solid rgba(0,0,0,0.08);padding:24px;}
+.tc-header{display:flex;align-items:center;gap:16px;margin-bottom:14px;}
+.tc-num{font-family:'IBM Plex Mono',monospace;font-size:24px;font-weight:500;color:#FF3B00;line-height:1;}
+.tc-title{font-size:17px;font-weight:500;letter-spacing:-0.02em;}
+.tc-desc{font-size:14px;color:#444;line-height:1.6;margin-bottom:12px;}
+.tc-meta{display:flex;gap:16px;flex-wrap:wrap;}
+.tc-tag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#666;background:#F8F8F8;border:1px solid rgba(0,0,0,0.08);padding:4px 8px;}
+.article-footer-cta{background:#FF3B00;padding:64px 48px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;}
+.afc-text h3{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(24px,3vw,40px);color:#FFFFFF;letter-spacing:-0.04em;line-height:1.1;margin-bottom:12px;}
+.afc-text p{color:rgba(255,255,255,0.7);font-size:15px;margin:0;line-height:1.5;}
+.btn-light{background:#FFFFFF;color:#0A0A0A;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;padding:14px 28px;white-space:nowrap;transition:background .15s;text-decoration:none;display:inline-block;}
+.btn-light:hover{background:#F0F0F0;}
+.site-footer{background:#0A0A0A;padding:48px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" loading="lazy"></div></noscript>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "RPA для маркетинга: что автоматизировать в первую очередь",
+      "url": "https://thnkfor.me/blog/rpa-dlya-marketinga/",
+      "description": "Топ-5 рутинных задач маркетолога, которые автоматизируются за неделю. Инструменты и стоимость.",
+      "datePublished": "2026-10-13",
+      "publisher": {"@type": "Organization","name": "THNKFOR.ME","url": "https://thnkfor.me"},
+      "author": {"@type": "Organization","name": "THNKFOR.ME","url": "https://thnkfor.me"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Главная","item": "https://thnkfor.me/"},
+        {"@type": "ListItem","position": 2,"name": "Блог","item": "https://thnkfor.me/blog/"},
+        {"@type": "ListItem","position": 3,"name": "RPA для маркетинга","item": "https://thnkfor.me/blog/rpa-dlya-marketinga/"}
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="../../services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="../../services/smm/">SMM и соцсети</a>
+          <a href="../../services/targeting/">Таргетированная реклама</a>
+          <a href="../../services/direct/">Яндекс Директ</a>
+          <a href="../../services/content-machine/">Контент завод</a>
+          <a href="../../services/video/">Видеопроизводство</a>
+          <a href="../../services/reputation/">Управление репутацией</a>
+          <a href="../../services/seo/">Продвижение в поиске</a>
+          <a href="../../services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="../../niches/restaurants/">Рестораны</a>
+          <a href="../../niches/beauty/">Салоны красоты</a>
+          <a href="../../niches/clinic/">Медицина</a>
+          <a href="../../niches/fitness/">Фитнес</a>
+          <a href="../../niches/saas/">IT и SaaS</a>
+          <a href="../../niches/ecommerce-fashion/">E-commerce</a>
+          <a href="../../niches/realestate/">Недвижимость</a>
+          <a href="../../niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../cases/">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="../../cases/werent/">WeRent — Content Machine</a>
+          <a href="../../cases/tennispoint/">Tennis Point — бот новинок</a>
+          <a href="../../cases/4room/">4room.studio — три AI-системы</a>
+          <a href="../../cases/studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="../../cases/">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../" class="active">Блог</a>
+        <div class="nav-dropdown">
+          <a href="../ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="../avtomatizaciya-kontenta-n8n/">Автоматизация контента</a>
+          <a href="../ai-lidogeneraciya/">AI-лидогенерация</a>
+          <a href="../">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="../../pricing/">Цены</a></div>
+      <div class="nav-item"><a href="../../about/">О нас</a></div>
+      <a href="../../contacts/" class="header-cta">Обсудить проект</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="../../services/smm/" class="header-pill">01 · SMM</a>
+    <a href="../../services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="../../services/direct/" class="header-pill">03 · Директ</a>
+    <a href="../../services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="../../services/video/" class="header-pill">05 · Видео</a>
+    <a href="../../services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="../../services/seo/" class="header-pill">07 · SEO</a>
+    <a href="../../services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<div class="article-hero">
+  <div class="article-cat">// AI-автоматизация · RPA · Маркетинг · 6 мин чтения</div>
+  <h1 class="article-h1">RPA для маркетинга:<br>что автоматизировать<br>в первую очередь</h1>
+  <div class="article-meta">
+    <span>Октябрь 2026</span>
+    <span>THNKFOR.ME</span>
+    <span>~1 300 слов</span>
+  </div>
+</div>
+
+<div class="article-layout">
+  <div class="article-body">
+    <p class="article-lead">RPA (Robotic Process Automation) — это когда программа делает за маркетолога то, что раньше делал маркетолог руками: копирует данные, заполняет формы, переносит файлы, отправляет отчёты. Без кода, за неделю, окупается за месяц.</p>
+
+    <div class="callout">
+      <div class="callout-label">Чем RPA отличается от AI</div>
+      <p>AI генерирует и принимает решения. RPA выполняет повторяющиеся действия по чёткому сценарию. Лучший результат — когда AI определяет что делать, а RPA делает. Вместе они закрывают 60–80% маркетинговой рутины.</p>
+    </div>
+
+    <h2 id="what-is-rpa">Что такое RPA и при чём тут маркетинг</h2>
+    <p>Маркетолог тратит в среднем 40% рабочего времени на задачи, которые не требуют творчества: собрать отчёты из разных систем в один файл, перенести лиды из одного инструмента в другой, проверить статус публикаций, выгрузить аналитику и отправить её руководителю.</p>
+    <p>RPA-инструменты — n8n, Make.com, UiPath, Zapier, Python-скрипты с Selenium — выполняют эти действия автоматически, имитируя работу пользователя. Они открывают браузер, кликают кнопки, заполняют поля, копируют данные — всё, что раньше делали вы.</p>
+    <p>Порог входа снизился до нуля: Make.com и n8n работают без кода, через визуальные сценарии. За один день можно настроить автоматизацию, которая экономит 2–4 часа ежедневно.</p>
+
+    <h2 id="top5">Топ-5 задач для автоматизации</h2>
+
+    <div class="task-cards">
+      <div class="task-card">
+        <div class="tc-header">
+          <div class="tc-num">01</div>
+          <div class="tc-title">Сбор и агрегация отчётов</div>
+        </div>
+        <div class="tc-desc">Ежедневный ритуал: зайти в Яндекс Метрику, скачать данные, зайти в VK Ads, скачать данные, открыть таблицу, вставить, посчитать итоги. 45–60 минут, которые повторяются каждый день. RPA делает это за 3 минуты без участия человека. Триггер: 9:00 → автосбор из всех источников → обновление Google Sheets → уведомление в Telegram.</div>
+        <div class="tc-meta">
+          <span class="tc-tag">Экономия: 4–6 ч/нед</span>
+          <span class="tc-tag">Сложность: низкая</span>
+          <span class="tc-tag">Инструмент: n8n / Make</span>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <div class="tc-header">
+          <div class="tc-num">02</div>
+          <div class="tc-title">Перенос лидов между системами</div>
+        </div>
+        <div class="tc-desc">Заявка упала на сайт → нужно создать сделку в amoCRM → написать в Telegram менеджеру → поставить задачу → записать в таблицу учёта. Этот путь занимает 5–10 минут на лид, а при 30 лидах в день — 3 часа ежедневно. RPA-сценарий делает это мгновенно: лид с сайта → вебхук → CRM → Telegram → Таблица. Параллельно.</div>
+        <div class="tc-meta">
+          <span class="tc-tag">Экономия: 3–5 ч/нед</span>
+          <span class="tc-tag">Сложность: средняя</span>
+          <span class="tc-tag">Инструмент: Make / n8n + CRM API</span>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <div class="tc-header">
+          <div class="tc-num">03</div>
+          <div class="tc-title">Мониторинг публикаций и контент-плана</div>
+        </div>
+        <div class="tc-desc">Проверить, опубликовались ли все запланированные посты, нет ли ошибок, правильные ли хэштеги — ежедневная рутина SMM-специалиста. RPA проверяет каждую платформу по расписанию, сравнивает с планом и отправляет отчёт: «Опубликовано 4 из 5, в ВКонтакте пост не прошёл — причина: нарушение правил». Исправление занимает 2 минуты вместо 20.</div>
+        <div class="tc-meta">
+          <span class="tc-tag">Экономия: 2–3 ч/нед</span>
+          <span class="tc-tag">Сложность: средняя</span>
+          <span class="tc-tag">Инструмент: n8n + SMMplanner API</span>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <div class="tc-header">
+          <div class="tc-num">04</div>
+          <div class="tc-title">Обновление прайсов и карточек на маркетплейсах</div>
+        </div>
+        <div class="tc-desc">Для e-commerce — ежедневная задача: обновить цены, остатки, характеристики на WB, Ozon, в интернет-магазине. При 500+ SKU это часы работы. RPA берёт данные из ERP или таблицы и обновляет все площадки одновременно через API. Ошибки исключены — нет ручного ввода. Работает ночью, пока менеджер спит.</div>
+        <div class="tc-meta">
+          <span class="tc-tag">Экономия: 5–10 ч/нед</span>
+          <span class="tc-tag">Сложность: высокая</span>
+          <span class="tc-tag">Инструмент: n8n + Wildberries API</span>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <div class="tc-header">
+          <div class="tc-num">05</div>
+          <div class="tc-title">Еженедельные отчёты для клиентов</div>
+        </div>
+        <div class="tc-desc">Агентства тратят 2–4 часа на подготовку каждого клиентского отчёта: собрать данные, оформить в шаблон, написать комментарии. RPA собирает данные автоматически, Claude пишет резюме «что выросло, что упало, что делаем дальше», готовый PDF отправляется клиенту. Без участия менеджера.</div>
+        <div class="tc-meta">
+          <span class="tc-tag">Экономия: 4–8 ч/клиент/мес</span>
+          <span class="tc-tag">Сложность: высокая</span>
+          <span class="tc-tag">Инструмент: n8n + Claude + Google Slides API</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="tools">Инструменты: что выбрать</h2>
+    <p><strong>Make.com (Integromat)</strong> — лучший старт без кода. Визуальный конструктор, 1000+ готовых интеграций, бесплатный тариф до 1000 операций/мес. Ограничение: дорожает при масштабе.</p>
+    <p><strong>n8n</strong> — open-source, можно развернуть на своём сервере. Гибче Make, дешевле при объёме, требует чуть больше технической грамотности. Оптимален для агентств и компаний с 10+ сценариями.</p>
+    <p><strong>Zapier</strong> — самый простой, самый дорогой. Для быстрых интеграций «одна система → другая» без сложной логики. До 5 сценариев — бесплатно.</p>
+    <p><strong>Python + Selenium</strong> — для задач, где нет готового API: скрейпинг, автоматизация браузера, работа с legacy-системами. Требует разработчика, зато нет ограничений.</p>
+
+    <h2 id="start">С чего начать</h2>
+    <p>Не пытайтесь автоматизировать всё сразу. Правило первого проекта: выберите одну задачу, которая повторяется ежедневно и занимает от 30 минут. Рассчитайте время за месяц. Умножьте на стоимость часа. Сравните с ценой настройки RPA (обычно 15 000–50 000 ₽). Если окупается за 2–3 месяца — делайте.</p>
+    <p>Лучший первый проект: автоматический сбор аналитики в Google Sheets. Займёт 4–8 часов настройки, сэкономит 2–4 часа в неделю, ROI очевиден с первого месяца.</p>
+
+    <div class="callout">
+      <div class="callout-label">Критерий выбора задачи</div>
+      <p>Хорошая задача для RPA: повторяется регулярно, имеет чёткий алгоритм (одни и те же шаги), данные берутся из систем с API или веб-интерфейсом, ошибка в выполнении — некритична (можно откатить).</p>
+    </div>
+
+  </div>
+
+  <div class="article-sidebar">
+    <div class="toc-label">Содержание</div>
+    <div class="toc-list">
+      <a href="#what-is-rpa">RPA и маркетинг</a>
+      <a href="#top5">Топ-5 задач</a>
+      <a href="#tools">Инструменты</a>
+      <a href="#start">С чего начать</a>
+    </div>
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-label">AI-автоматизация</div>
+      <div class="sidebar-cta-title">Аудит рутины<br>и план автоматизации</div>
+      <div class="sidebar-cta-sub">Найдём 3–5 задач, которые съедают ваше время, и настроим автоматизацию за 2 недели.</div>
+      <a href="../../contacts/" class="sidebar-cta-btn">Получить аудит →</a>
+    </div>
+  </div>
+</div>
+
+<div class="article-footer-cta">
+  <div class="afc-text">
+    <h3>Сколько времени<br>вы тратите на рутину?</h3>
+    <p>Проведём аудит маркетинговых процессов и покажем, что можно автоматизировать за 2 недели.</p>
+  </div>
+  <a href="../../contacts/" class="btn-light">Обсудить проект →</a>
+</div>
+
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="../../" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="../../services/smm/">SMM и ведение соцсетей</a>
+        <a href="../../services/targeting/">Таргетированная реклама</a>
+        <a href="../../services/direct/">Яндекс Директ</a>
+        <a href="../../services/content-machine/">Контент завод</a>
+        <a href="../../services/video/">Видеопроизводство</a>
+        <a href="../../services/reputation/">Управление репутацией</a>
+        <a href="../../services/seo/">Продвижение в поиске</a>
+        <a href="../../services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="../../niches/restaurants/">Рестораны</a>
+        <a href="../../niches/beauty/">Салоны красоты</a>
+        <a href="../../niches/clinic/">Медицина</a>
+        <a href="../../niches/fitness/">Фитнес</a>
+        <a href="../../niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="../../niches/saas/">IT и SaaS</a>
+        <a href="../../niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="../../about/">О нас</a>
+        <a href="../../cases/">Кейсы</a>
+        <a href="../">Блог</a>
+        <a href="../../pricing/">Цены</a>
+        <a href="../../contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+</body>
+</html>

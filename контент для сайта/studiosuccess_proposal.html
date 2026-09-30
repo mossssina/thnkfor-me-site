@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Success × and36.studio</title>
+    <link rel="canonical" href="https://thnkfor.me/контент для сайта/studiosuccess_proposal/">
+    <meta property="og:title" content="Studio Success × and36.studio">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black:   #1D1D1B;
+    --gray:    #6B6963;
+    --neutral: #E6E4DE;
+    --beige:   #C9B8A6;
+    --green:   #3D4D3D;
+    --white:   #FFFFFF;
+    --bg:      #F8F7F4;
+  }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    background: var(--bg);
+    color: var(--black);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── ШАПКА ── */
+  header {
+    padding: 64px 80px 56px;
+    border-bottom: 1px solid var(--neutral);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .header-left { display: flex; flex-direction: column; gap: 20px; }
+  .logo-line {
+    display: flex; align-items: center; gap: 16px;
+    font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gray);
+  }
+  .logo-line .sep { width: 20px; height: 1px; background: var(--beige); display: inline-block; }
+  h1 {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 300; letter-spacing: -0.02em;
+    line-height: 1.15; color: var(--black); max-width: 560px;
+  }
+  h1 em { font-style: normal; color: var(--green); }
+  .header-meta {
+    text-align: right; font-size: 11px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--beige); line-height: 1.8;
+  }
+
+  /* ── СЕКЦИИ ── */
+  section { padding: 80px 80px; }
+  section + section { border-top: 1px solid var(--neutral); }
+  .section-label {
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--beige); margin-bottom: 40px;
+  }
+  .section-title {
+    font-size: clamp(22px, 2.8vw, 36px);
+    font-weight: 300; letter-spacing: -0.02em;
+    color: var(--black); margin-bottom: 56px;
+    max-width: 520px; line-height: 1.2;
+  }
+
+  /* ── INTRO GRID ── */
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--neutral);
+    border: 1px solid var(--neutral);
+    margin-bottom: 1px;
+  }
+  .intro-cell {
+    background: var(--bg);
+    padding: 36px 40px;
+  }
+  .intro-cell.dark {
+    background: var(--green);
+  }
+  .intro-cell-label {
+    font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--beige);
+    margin-bottom: 16px; display: block;
+  }
+  .intro-cell.dark .intro-cell-label { color: rgba(255,255,255,0.35); }
+  .intro-cell-val {
+    font-size: 28px; font-weight: 300;
+    letter-spacing: -0.03em; color: var(--black); line-height: 1.1;
+  }
+  .intro-cell.dark .intro-cell-val { color: var(--white); }
+  .intro-cell-sub {
+    font-size: 13px; color: var(--gray); margin-top: 8px; line-height: 1.5;
+  }
+  .intro-cell.dark .intro-cell-sub { color: rgba(255,255,255,0.5); }
+
+  /* ── АЛГОРИТМ (TIMELINE) ── */
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .tl-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 40px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--neutral);
+    align-items: start;
+  }
+  .tl-item:first-child { border-top: 1px solid var(--neutral); }
+  .tl-period {
+    font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--beige); padding-top: 3px;
+  }
+  .tl-right { display: flex; flex-direction: column; gap: 14px; }
+  .tl-name { font-size: 17px; font-weight: 400; color: var(--black); letter-spacing: -0.01em; }
+  .tl-desc { font-size: 14px; color: var(--gray); line-height: 1.65; max-width: 580px; }
+  .tl-tasks { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    font-size: 11px; color: var(--gray);
+    background: var(--neutral); padding: 5px 12px;
+    border-radius: 2px; letter-spacing: 0.02em;
+  }
+  .tl-after {
+    margin-top: 40px; padding: 28px 32px;
+    background: var(--neutral); font-size: 13px;
+    color: var(--gray); line-height: 1.7;
+    border-left: 2px solid var(--beige);
+  }
+
+  /* ── КАРТОЧКИ ВОЗМОЖНОСТЕЙ ── */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--neutral);
+    border: 1px solid var(--neutral);
+  }
+  .feat {
+    background: var(--bg);
+    padding: 40px 36px 48px;
+    display: flex; flex-direction: column; gap: 0;
+    transition: background 0.25s;
+  }
+  .feat:hover { background: var(--white); }
+  .feat.accent { background: var(--green); }
+  .feat.accent:hover { background: #2e3b2e; }
+  .feat-num {
+    font-size: 10px; letter-spacing: 0.2em;
+    color: var(--beige); text-transform: uppercase; margin-bottom: 24px;
+  }
+  .feat.accent .feat-num { color: rgba(255,255,255,0.35); }
+  .feat-title {
+    font-size: 17px; font-weight: 400;
+    color: var(--black); margin-bottom: 8px; letter-spacing: -0.01em;
+  }
+  .feat.accent .feat-title { color: var(--white); }
+  .feat-divider { width: 24px; height: 1px; background: var(--neutral); margin-bottom: 24px; }
+  .feat.accent .feat-divider { background: rgba(255,255,255,0.15); }
+  .feat-items {
+    list-style: none; display: flex;
+    flex-direction: column; gap: 11px; flex: 1;
+  }
+  .feat-items li {
+    font-size: 13px; color: var(--gray);
+    padding-left: 14px; position: relative; line-height: 1.55;
+  }
+  .feat-items li::before {
+    content: ''; position: absolute; left: 0; top: 9px;
+    width: 5px; height: 1px; background: var(--beige);
+  }
+  .feat.accent .feat-items li { color: rgba(255,255,255,0.65); }
+  .feat.accent .feat-items li::before { background: rgba(255,255,255,0.3); }
+  .feat-note { margin-top: 24px; font-size: 11px; color: var(--beige); letter-spacing: 0.02em; }
+  .feat.accent .feat-note { color: rgba(255,255,255,0.3); }
+
+  /* ── КАНАЛЫ ── */
+  .channels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--neutral);
+    border: 1px solid var(--neutral);
+    margin-bottom: 1px;
+  }
+  .ch {
+    background: var(--bg);
+    padding: 32px 28px 36px;
+    transition: background 0.2s;
+  }
+  .ch:hover { background: var(--white); }
+  .ch-name {
+    font-size: 15px; font-weight: 400;
+    color: var(--black); margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+  .ch-freq {
+    font-size: 11px; color: var(--green);
+    letter-spacing: 0.05em; margin-bottom: 20px;
+  }
+  .ch-items {
+    list-style: none; display: flex;
+    flex-direction: column; gap: 9px;
+  }
+  .ch-items li {
+    font-size: 12px; color: var(--gray);
+    padding-left: 12px; position: relative; line-height: 1.5;
+  }
+  .ch-items li::before {
+    content: ''; position: absolute; left: 0; top: 8px;
+    width: 4px; height: 1px; background: var(--beige);
+  }
+
+  /* ── РЕЗУЛЬТАТЫ ── */
+  .results {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--neutral);
+    border: 1px solid var(--neutral);
+  }
+  .res {
+    background: var(--bg);
+    padding: 36px 32px;
+  }
+  .res-num {
+    font-size: 36px; font-weight: 300;
+    color: var(--black); letter-spacing: -0.04em;
+    line-height: 1; margin-bottom: 10px;
+  }
+  .res-num span { font-size: 20px; }
+  .res-label { font-size: 13px; color: var(--gray); line-height: 1.5; }
+
+  /* ── FAQ ── */
+  .faq-block { display: flex; flex-direction: column; gap: 0; }
+  .faq-item {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px; padding: 40px 0;
+    border-bottom: 1px solid var(--neutral);
+    align-items: start;
+  }
+  .faq-item:first-child { border-top: 1px solid var(--neutral); }
+  .faq-q { font-size: 13px; color: var(--gray); line-height: 1.6; padding-top: 2px; }
+  .faq-a { display: flex; flex-direction: column; gap: 16px; }
+  .faq-answer-text { font-size: 15px; color: var(--black); line-height: 1.65; }
+  .faq-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 40px 80px;
+    border-top: 1px solid var(--neutral);
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 32px;
+  }
+  .footer-brand {
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--beige);
+  }
+  .footer-contact {
+    font-size: 12px; color: var(--gray);
+    text-align: right; line-height: 1.8;
+  }
+  .footer-contact a { color: var(--gray); text-decoration: none; }
+  .footer-contact a:hover { color: var(--black); }
+
+  /* ── ADAPTIVE ── */
+  @media (max-width: 900px) {
+    header, section, footer { padding-left: 24px; padding-right: 24px; }
+    .features, .channels { grid-template-columns: 1fr; }
+    .results { grid-template-columns: 1fr 1fr; }
+    .intro-grid { grid-template-columns: 1fr; }
+    .tl-item { grid-template-columns: 1fr; gap: 8px; }
+    .faq-item { grid-template-columns: 1fr; gap: 12px; }
+    .header-meta { display: none; }
+  }
+</style>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+</head>
+<body>
+
+<!-- ШАПКА -->
+<header>
+  <div class="header-left">
+    <div class="logo-line">
+      <span>Studio Success</span>
+      <span class="sep"></span>
+      <span>and36.studio</span>
+    </div>
+    <h1>AI-система<br>контентного<br><em>производства</em></h1>
+  </div>
+  <div class="header-meta">
+    Описание системы<br>
+    Сентябрь 2026<br>
+    Конфиденциально
+  </div>
+</header>
+
+<!-- ОБЗОР -->
+<section>
+  <div class="section-label">Что построено</div>
+  <div class="section-title">Единая система,<br>которая помнит, пишет<br>и публикует сама</div>
+
+  <div class="intro-grid">
+    <div class="intro-cell dark">
+      <span class="intro-cell-label">Ядро системы</span>
+      <div class="intro-cell-val">AI-ассистент<br>в Telegram</div>
+      <div class="intro-cell-sub">Живёт в каждом проектном чате. Знает бриф, tone of voice и историю договорённостей с клиентом.</div>
+    </div>
+    <div class="intro-cell">
+      <span class="intro-cell-label">Охват</span>
+      <div class="intro-cell-val">4 канала<br>одновременно</div>
+      <div class="intro-cell-sub">Сайт, Яндекс Дзен, Telegram, Instagram — одна тема, четыре форматированных версии.</div>
+    </div>
+    <div class="intro-cell">
+      <span class="intro-cell-label">Для кого</span>
+      <div class="intro-cell-val">2 интерфейса</div>
+      <div class="intro-cell-sub">Отдельный сценарий для команды агентства и отдельный — для заказчика. Каждый видит только нужное.</div>
+    </div>
+    <div class="intro-cell">
+      <span class="intro-cell-label">Автоматизация</span>
+      <div class="intro-cell-val">Без ручного<br>постинга</div>
+      <div class="intro-cell-sub">Готовый контент публикуется по каналам напрямую из бота — без копирования и переключения между приложениями.</div>
+    </div>
+  </div>
+</section>
+
+<!-- АЛГОРИТМ ПУБЛИКАЦИИ -->
+<section>
+  <div class="section-label">Алгоритм публикации</div>
+  <div class="section-title">От идеи до публикации<br>— один чат</div>
+
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-period">Шаг 01</div>
+      <div class="tl-right">
+        <div class="tl-name">Постановка задачи</div>
+        <div class="tl-desc">Сотрудник выбирает проект в боте и формулирует тему одной фразой. Бот уже знает клиента — бриф, запреты, стиль — и не просит объяснять контекст заново.</div>
+        <div class="tl-tasks">
+          <span class="tag">Выбор проекта</span>
+          <span class="tag">Тема одной строкой</span>
+          <span class="tag">Указание формата (пост / статья / Reels)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-period">Шаг 02</div>
+      <div class="tl-right">
+        <div class="tl-name">AI-генерация с контекстом проекта</div>
+        <div class="tl-desc">Бот обращается к памяти проекта: tone of voice, запрещённые формулировки, предпочтения клиента, история предыдущих диалогов. GPT-4o формирует текст, адаптированный под нишу и площадку.</div>
+        <div class="tl-tasks">
+          <span class="tag">Учёт брифа</span>
+          <span class="tag">Tone of voice клиента</span>
+          <span class="tag">Формат под площадку</span>
+          <span class="tag">Релевантные хэштеги</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-period">Шаг 03</div>
+      <div class="tl-right">
+        <div class="tl-name">Ревью и правки</div>
+        <div class="tl-desc">Редактор просматривает результат прямо в Telegram. Если нужна правка — продолжает диалог с историей, бот учитывает предыдущий ответ. Не нужно повторять задачу с нуля.</div>
+        <div class="tl-tasks">
+          <span class="tag">Продолжение диалога</span>
+          <span class="tag">Правки в том же чате</span>
+          <span class="tag">История сессии сохраняется</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-period">Шаг 04</div>
+      <div class="tl-right">
+        <div class="tl-name">Публикация в канал</div>
+        <div class="tl-desc">Одна команда — готовый текст уходит напрямую в нужный канал: Telegram-канал клиента, пост в очередь Instagram, статья на сайт. Без копирования, без переключения между приложениями.</div>
+        <div class="tl-tasks">
+          <span class="tag">Автопостинг в Telegram</span>
+          <span class="tag">Очередь Instagram</span>
+          <span class="tag">Статья на сайт / Дзен</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-period">Шаг 05</div>
+      <div class="tl-right">
+        <div class="tl-name">Аналитика без ручного ввода</div>
+        <div class="tl-desc">После публикации — скриншоты статистики прямо в бот. Бот читает цифры через GPT-4o Vision и возвращает структурированный отчёт: охваты, вовлечённость, динамика. Ничего вводить вручную не нужно.</div>
+        <div class="tl-tasks">
+          <span class="tag">Скриншоты → отчёт</span>
+          <span class="tag">Охват и вовлечённость</span>
+          <span class="tag">Ссылка на полный отчёт</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tl-after">
+    Весь цикл — постановка задачи, генерация, правки, публикация и аналитика — происходит внутри одного Telegram-чата.<br>
+    Сотрудник не переключается между инструментами. Контекст проекта сохраняется автоматически.
+  </div>
+</section>
+
+<!-- ВОЗМОЖНОСТИ БОТА -->
+<section>
+  <div class="section-label">Возможности ассистента</div>
+  <div class="section-title">Шесть модулей,<br>которые работают<br>без участия менеджера</div>
+
+  <div class="features">
+
+    <div class="feat accent">
+      <div class="feat-num">Модуль 01</div>
+      <div class="feat-title">Память проекта</div>
+      <div class="feat-divider"></div>
+      <ul class="feat-items">
+        <li>Хранит бриф, tone of voice, запреты и договорённости по каждому клиенту</li>
+        <li>Автоматически извлекает новые знания из переписки в рабочем чате</li>
+        <li>Подключает нужные разделы памяти под конкретный запрос</li>
+        <li>Обновляется без ручных правок — накапливается само</li>
+      </ul>
+      <div class="feat-note">Ядро всей системы</div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-num">Модуль 02</div>
+      <div class="feat-title">Онбординг клиента</div>
+      <div class="feat-divider"></div>
+      <ul class="feat-items">
+        <li>Клиент заполняет бриф прямо в Telegram — без форм и почты</li>
+        <li>Структурированный диалог: бизнес, аудитория, tone of voice, требования</li>
+        <li>Прогресс-бар, возможность вернуться к предыдущему вопросу</li>
+        <li>После завершения — автоматическое уведомление команде</li>
+      </ul>
+      <div class="feat-note">Новый клиент без менеджера</div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-num">Модуль 03</div>
+      <div class="feat-title">Рабочее пространство команды</div>
+      <div class="feat-divider"></div>
+      <ul class="feat-items">
+        <li>Выбор проекта из реестра — бот знает всех клиентов</li>
+        <li>Новый запрос с нуля или продолжение диалога с историей</li>
+        <li>Просмотр всех предыдущих сессий по проекту с пагинацией</li>
+        <li>Полный текст брифа — прямо в чате, без переключения</li>
+      </ul>
+      <div class="feat-note">Все проекты в одном месте</div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-num">Модуль 04</div>
+      <div class="feat-title">Дайджест переписки</div>
+      <div class="feat-divider"></div>
+      <ul class="feat-items">
+        <li>По команде в чате — сводка переписки за любой период</li>
+        <li>Что обсуждалось, какие решения приняты, что осталось без ответа</li>
+        <li>Поддержка: неделя, две недели, конкретный месяц</li>
+        <li>Результат публикуется ссылкой — постоянный адрес, удобно шерить</li>
+      </ul>
+      <div class="feat-note">Синхронизация без созвонов</div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-num">Модуль 05</div>
+      <div class="feat-title">Анализ статистики</div>
+      <div class="feat-divider"></div>
+      <ul class="feat-items">
+        <li>Скриншоты из соцсетей → бот читает цифры сам</li>
+        <li>Несколько скриншотов собираются в один запрос автоматически</li>
+        <li>Отчёт: охваты, вовлечённость, динамика подписчиков</li>
+        <li>Готовый отчёт — ссылкой в чат, без ручного ввода данных</li>
+      </ul>
+      <div class="feat-note">Отчёт за 30 секунд</div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-num">Модуль 06</div>
+      <div class="feat-title">Обратная связь</div>
+      <div class="feat-divider"></div>
+      <ul class="feat-items">
+        <li>1-го числа каждого месяца — автоматический NPS-запрос клиенту</li>
+        <li>Оценка кнопками 1–5, текстовый комментарий опционально</li>
+        <li>Ответ сохраняется в памяти проекта с датой</li>
+        <li>Учитывается в контексте следующих GPT-запросов по проекту</li>
+      </ul>
+      <div class="feat-note">Без ручных опросов</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- КАНАЛЫ И КОНТЕНТ -->
+<section>
+  <div class="section-label">Контент-система</div>
+  <div class="section-title">Одна тема —<br>четыре площадки</div>
+
+  <div class="channels" style="margin-bottom: 1px;">
+
+    <div class="ch">
+      <div class="ch-name">Сайт</div>
+      <div class="ch-freq">2 статьи / месяц</div>
+      <ul class="ch-items">
+        <li>SEO-статьи 2500+ слов</li>
+        <li>Структура под поисковый спрос</li>
+        <li>Автопубликация через CMS</li>
+        <li>Внутренние ссылки и мета-теги</li>
+      </ul>
+    </div>
+
+    <div class="ch">
+      <div class="ch-name">Яндекс Дзен</div>
+      <div class="ch-freq">3 статьи / неделя</div>
+      <ul class="ch-items">
+        <li>Адаптация сайт-материала под Дзен</li>
+        <li>Форматирование под алгоритм платформы</li>
+        <li>Обложки и заголовки A/B</li>
+        <li>Автопостинг по расписанию</li>
+      </ul>
+    </div>
+
+    <div class="ch">
+      <div class="ch-name">Telegram</div>
+      <div class="ch-freq">4–5 постов / неделя</div>
+      <ul class="ch-items">
+        <li>Короткий формат из длинной статьи</li>
+        <li>Публикация напрямую из бота</li>
+        <li>Разные рубрики по дням недели</li>
+        <li>Контент-план на 7 дней — одной командой</li>
+      </ul>
+    </div>
+
+    <div class="ch">
+      <div class="ch-name">Instagram</div>
+      <div class="ch-freq">3–4 поста + Stories ежедн.</div>
+      <ul class="ch-items">
+        <li>Посты и карусели с подписями</li>
+        <li>Сценарии Reels по запросу</li>
+        <li>Хэштеги под нишу и платформу</li>
+        <li>Очередь публикаций без ручного постинга</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="tl-after">
+    Каждая тема разрабатывается один раз. Затем адаптируется под формат и алгоритм каждой площадки — команда не производит контент заново, она переупаковывает.
+  </div>
+</section>
+
+<!-- РЕЗУЛЬТАТЫ -->
+<section>
+  <div class="section-label">Результаты</div>
+  <div class="section-title">Что изменилось<br>после запуска</div>
+
+  <div class="results" style="margin-bottom:56px;">
+    <div class="res">
+      <div class="res-num">×3 <span></span></div>
+      <div class="res-label">Скорость производства контента. Пост, который занимал 2 часа, готов за 20 минут</div>
+    </div>
+    <div class="res">
+      <div class="res-num">12 <span style="font-size:20px;">ч/нед</span></div>
+      <div class="res-label">Освобождено от операционной рутины. Команда занимается стратегией, не копированием</div>
+    </div>
+    <div class="res">
+      <div class="res-num">7 <span style="font-size:20px;">дн</span></div>
+      <div class="res-label">Контент-план на неделю формируется одной командой боту — без планёрок и таблиц</div>
+    </div>
+    <div class="res">
+      <div class="res-num">0 <span style="font-size:20px;">ожид.</span></div>
+      <div class="res-label">Заказчик получает нужный контент самостоятельно, без очереди к менеджеру</div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-block">
+
+    <div class="faq-item">
+      <div class="faq-q">Как бот узнаёт о новых договорённостях с клиентом?</div>
+      <div class="faq-a">
+        <div class="faq-answer-text">Автоматически. Бот читает переписку в проектном чате и извлекает из неё новые договорённости, запреты, предпочтения — и записывает в память проекта. Ежедневно в 09:00 запускается офлайн-анализ чата, диалогов команды и брифа. Память обновляется сама — сотрудники ничего не вводят вручную.</div>
+        <div class="faq-tags">
+          <span class="tag">Автообновление памяти</span>
+          <span class="tag">Ежедневный анализ</span>
+          <span class="tag">Три источника данных</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Что видит клиент, а что — только команда?</div>
+      <div class="faq-a">
+        <div class="faq-answer-text">Бот определяет тип пользователя автоматически. Клиент видит онбординг-бриф, страницу услуг и базу знаний. Команда видит рабочее пространство по проектам, историю диалогов и инструкции агентства. Расширенные функции доступны только по белому списку Telegram ID.</div>
+        <div class="faq-tags">
+          <span class="tag">Автоверификация</span>
+          <span class="tag">Раздельный интерфейс</span>
+          <span class="tag">Белый список команды</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Что происходит, если бот перезапустится?</div>
+      <div class="faq-a">
+        <div class="faq-answer-text">Ничего не теряется. Состояние бота — активный проект, незавершённые брифы — сохраняется в отдельном файле и восстанавливается автоматически после перезапуска. Вся память проектов хранится в файлах на сервере, не в оперативной памяти.</div>
+        <div class="faq-tags">
+          <span class="tag">Персистентное состояние</span>
+          <span class="tag">Автовосстановление</span>
+          <span class="tag">Бэкапы памяти</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">and36.studio · AI-маркетинг</div>
+  <div class="footer-contact">
+    <a href="mailto:hello@and36.studio">hello@and36.studio</a><br>
+    Москва · Санкт-Петербург
+  </div>
+</footer>
+
+</body>
+</html>

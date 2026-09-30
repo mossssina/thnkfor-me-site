@@ -1,0 +1,782 @@
+[
+  {
+    "niche": "Маркетплейс-продавцы (WB / Ozon)",
+    "category": "E-commerce",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "продвижение магазина на wildberries",
+        "cluster": "Маркетплейс/Wildberries",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 4,
+        "results_count": "~1200000"
+      },
+      {
+        "query": "смм для продавца на вайлдберриз",
+        "cluster": "Маркетплейс/Wildberries",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~85000"
+      },
+      {
+        "query": "контент маркетинг для маркетплейса",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 4,
+        "results_count": "~120000"
+      },
+      {
+        "query": "продвижение карточек товара на wildberries",
+        "cluster": "Маркетплейс/Wildberries",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 12,
+        "results_count": "~950000"
+      },
+      {
+        "query": "реклама товаров на ozon wildberries агентство",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~430000"
+      },
+      {
+        "query": "автоматизация продаж на wildberries ozon",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~380000"
+      },
+      {
+        "query": "crm для продавцов маркетплейсов wildberries",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~210000"
+      },
+      {
+        "query": "ai контент карточки товаров маркетплейс нейросеть",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 2,
+        "results_count": "~95000"
+      },
+      {
+        "query": "управление маркетплейсами из одного окна сервис",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~75000"
+      },
+      {
+        "query": "агентство для продавцов wildberries ozon под ключ",
+        "cluster": "Маркетплейс/Wildberries",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~560000"
+      },
+      {
+        "query": "маркетинг для интернет магазина на маркетплейсе",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~310000"
+      },
+      {
+        "query": "ведение магазина на вайлдберриз услуги",
+        "cluster": "Маркетплейс/Wildberries",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~480000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "продвижение магазина на wildberries",
+        "position": 1,
+        "url": "https://pixelplus.ru/marketplace/wildberries/",
+        "domain": "pixelplus.ru",
+        "title": "Продвижение на Wildberries (WB) под ключ, заказать платное продвижение и рекламу товара на Вайлдберриз в агентстве",
+        "description": "Агентство Пиксель Плюс предлагает комплексное продвижение на Wildberries: SEO карточек, реклама, аналитика. Работает с 2006 года, более 20 лет опыта.",
+        "pages_count": "~800"
+      },
+      {
+        "query_used": "продвижение магазина на wildberries",
+        "position": 2,
+        "url": "https://exiterra.ru/marketplace/wb/",
+        "domain": "exiterra.ru",
+        "title": "Продвижение карточек товара на Wildberries — агентство Exiterra",
+        "description": "Продвижение и реклама на Wildberries. Оплата услуг привязана к увеличению продаж магазинов на маркетплейсах. Опыт с 2000 года.",
+        "pages_count": "~1500"
+      },
+      {
+        "query_used": "продвижение магазина на wildberries",
+        "position": 3,
+        "url": "https://sellplus.ru/blog/klientam/prodvizhenie-na-wildberries-v-2026-polnoe-poshagovoe-rukovodstvo-dlya-sellerov/",
+        "domain": "sellplus.ru",
+        "title": "Продвижение на Wildberries в 2026: полное пошаговое руководство для селлеров",
+        "description": "Все рабочие способы продвинуть карточку на WB в 2026 году: SEO, реклама, самовыкупы, отзывы, инфографика.",
+        "pages_count": "~120"
+      },
+      {
+        "query_used": "продвижение магазина на wildberries",
+        "position": 4,
+        "url": "https://marketing-tech.ru/company_tags/marketplace-marketing/wildberris/",
+        "domain": "marketing-tech.ru",
+        "title": "ТОП агентств продвижения на маркетплейсе Wildberries 2026 — рейтинг компаний по обороту",
+        "description": "Каталог и рейтинг агентств по продвижению на Wildberries. Отзывы, кейсы, цены на услуги.",
+        "pages_count": "~3000"
+      },
+      {
+        "query_used": "продвижение магазина на wildberries",
+        "position": 5,
+        "url": "https://sholchev.ru/uslugi/prodvizhenie-na-wilberries/",
+        "domain": "sholchev.ru",
+        "title": "Продвижение на Вайлдберриз ваших товаров — услуга раскрутки",
+        "description": "Профессиональное продвижение товаров на Wildberries. Рост продаж и вывод карточек в топ.",
+        "pages_count": "~80"
+      },
+      {
+        "query_used": "агентство для продавцов wildberries ozon под ключ",
+        "position": 1,
+        "url": "https://mp-quick.ru/uslugi/",
+        "domain": "mp-quick.ru",
+        "title": "Услуги продвижения на Ozon и Wildberries — гарантия роста продаж от агентства MP Quick",
+        "description": "5 лет помогаем селлерам, брендам и интернет-магазинам расти и занимать топовые позиции на Wildberries и Ozon. Работаем только с проверенными стратегиями.",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "агентство для продавцов wildberries ozon под ключ",
+        "position": 2,
+        "url": "https://vc.ru/services/3034080-agentstva-po-prodvizheniyu-na-marketpleysakh-wildberries-i-ozon",
+        "domain": "vc.ru",
+        "title": "15 лучших агентств по продвижению на маркетплейсах в 2026/2027 году",
+        "description": "Рейтинг топ компаний по продвижению товаров, карточек, брендов на Ozon, Wildberries, Яндекс-Маркете с отзывами, ценами на услуги.",
+        "pages_count": "~500000"
+      },
+      {
+        "query_used": "автоматизация продаж на wildberries ozon",
+        "position": 1,
+        "url": "https://uniseller.io/",
+        "domain": "uniseller.io",
+        "title": "Автоматизация маркетплейсов: Wildberries, Ozon, Яндекс Маркет — Uniseller",
+        "description": "Автоматизация продаж на маркетплейсах в одном окне. Аналитика, остатки, цены, ответы на отзывы. CRM для продавцов Wildberries и Ozon.",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "автоматизация продаж на wildberries ozon",
+        "position": 2,
+        "url": "https://intellectdialog.com/tpost/wildberries-ozon-yandex-market-amocrm-automation",
+        "domain": "intellectdialog.com",
+        "title": "Wildberries, Ozon, Яндекс Маркет + amoCRM: автоматизация | Гайд 2026",
+        "description": "Как автоматизировать продажи на WB, Ozon и Яндекс Маркете через amoCRM: Digital Pipeline, Salesbot, AI-ассистенты, воронки продаж, триггеры.",
+        "pages_count": "~300"
+      },
+      {
+        "query_used": "автоматизация продаж на wildberries ozon",
+        "position": 3,
+        "url": "https://retailcrm.by/kak-avtomaticheski-obrabatyvat-zakazy-ozon-i-wildberries-v-retailcrm",
+        "domain": "retailcrm.by",
+        "title": "Как автоматически обрабатывать заказы Ozon и Wildberries в RetailCRM",
+        "description": "Объединение заказов с Ozon и Wildberries в RetailCRM. Устранение ручного перебора, снижение ошибок сортировки.",
+        "pages_count": "~400"
+      }
+    ]
+  },
+  {
+    "niche": "SMM-агентства (B2B)",
+    "category": "B2B",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм агентство для бизнеса b2b продвижение",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~210000"
+      },
+      {
+        "query": "контент маркетинг для smm агентства",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": "~95000"
+      },
+      {
+        "query": "аутсорс smm услуги white label для агентств",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~45000"
+      },
+      {
+        "query": "продвижение smm агентства вконтакте телеграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~180000"
+      },
+      {
+        "query": "маркетинг для digital агентства привлечение клиентов",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~130000"
+      },
+      {
+        "query": "автоматизация smm агентства crm инструменты",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~60000"
+      },
+      {
+        "query": "ai контент генерация для smm агентства автоматизация",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~42000"
+      },
+      {
+        "query": "сервис автопостинга контент план smm автоматизация",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~85000"
+      },
+      {
+        "query": "crm для smm агентства управление клиентами",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~38000"
+      },
+      {
+        "query": "smm агентство b2b услуги заказать",
+        "cluster": "SMM/контент",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~350000"
+      },
+      {
+        "query": "топ smm агентств москва рейтинг 2026",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~220000"
+      },
+      {
+        "query": "субподряд для рекламных агентств smm контент",
+        "cluster": "SMM/контент",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~28000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "смм агентство для бизнеса b2b продвижение",
+        "position": 1,
+        "url": "https://ratingruneta.ru/smm/b2b_micro_small_medium/",
+        "domain": "ratingruneta.ru",
+        "title": "Услуги SMM продвижения для малого b2b бизнеса: топ агентств — Рейтинг Рунета",
+        "description": "Рейтинг агентств SMM-продвижения для малого и среднего B2B бизнеса. Отзывы, кейсы, портфолио.",
+        "pages_count": "~10000"
+      },
+      {
+        "query_used": "смм агентство для бизнеса b2b продвижение",
+        "position": 2,
+        "url": "https://ratingruneta.ru/smm/b2b_corporate/",
+        "domain": "ratingruneta.ru",
+        "title": "Услуги SMM продвижения для крупных b2b компаний: топ агентств — Рейтинг Рунета",
+        "description": "Рейтинг и сравнение агентств для корпоративного B2B SMM-продвижения.",
+        "pages_count": "~10000"
+      },
+      {
+        "query_used": "смм агентство для бизнеса b2b продвижение",
+        "position": 3,
+        "url": "https://marketing-tech.ru/company_tags/smm/b2b-uslugi/",
+        "domain": "marketing-tech.ru",
+        "title": "ТОП агентств SMM продвижения для b2b-услуг по обороту — MARKETING-TECH",
+        "description": "Каталог более 35 агентств с фокусом на SMM для B2B. Рейтинг по обороту, кейсы, цены.",
+        "pages_count": "~3000"
+      },
+      {
+        "query_used": "смм агентство для бизнеса b2b продвижение",
+        "position": 4,
+        "url": "https://smmekalka.ru/",
+        "domain": "smmekalka.ru",
+        "title": "SMM агентство в Москве | Агентство СММ продвижения SMMEKALKA",
+        "description": "Трансформация бизнеса через SMM. Работа с промышленными проектами и B2B брендами. Продвижение в соцсетях под ключ.",
+        "pages_count": "~60"
+      },
+      {
+        "query_used": "смм агентство для бизнеса b2b продвижение",
+        "position": 5,
+        "url": "https://smm-agentstvo.ru/",
+        "domain": "smm-agentstvo.ru",
+        "title": "SMM-агентство в Москве — продвижение в соцсетях под ключ",
+        "description": "Специализируется на SMM с 2008 года. Стратегия, креативный контент, рекламные кампании, ведение соцсетей. VK, Telegram, TikTok, YouTube.",
+        "pages_count": "~150"
+      },
+      {
+        "query_used": "автоматизация smm агентства crm инструменты",
+        "position": 1,
+        "url": "https://smmplanner.com/blog/avtomatizatsiia-rutinnykh-zadach-v-smm-polieznyie-instrumienty-dlia-ekonomii-vriemieni/",
+        "domain": "smmplanner.com",
+        "title": "Автоматизация рутинных задач в SMM — полезные инструменты для экономии времени",
+        "description": "Обзор инструментов автоматизации для SMM-специалистов: автопостинг, аналитика, контент-план, управление несколькими аккаунтами.",
+        "pages_count": "~2000"
+      },
+      {
+        "query_used": "автоматизация smm агентства crm инструменты",
+        "position": 2,
+        "url": "https://mypl.pro/blog/ai-planirovshchik-kontenta-avtomatizatsiya-smm-agentstva-s-p",
+        "domain": "mypl.pro",
+        "title": "AI планировщик контента: автоматизация SMM агентства — mypl.pro",
+        "description": "AI-инструменты для планирования и автоматизации контент-маркетинга в SMM агентстве.",
+        "pages_count": "~80"
+      },
+      {
+        "query_used": "аутсорс smm услуги white label для агентств",
+        "position": 1,
+        "url": "https://digitalstrategy.ru/services/subpodryad-white-label-autsorsing/",
+        "domain": "digitalstrategy.ru",
+        "title": "Субподряд для рекламных агентств: white label, аутсорсинг",
+        "description": "Аутсорсинг и white-label для агентств и студий. Разработка, дизайн, автоматизация, маркетинг под брендом клиента.",
+        "pages_count": "~500"
+      },
+      {
+        "query_used": "аутсорс smm услуги white label для агентств",
+        "position": 2,
+        "url": "https://dom-marketing.ru/partners/",
+        "domain": "dom-marketing.ru",
+        "title": "Партнёрам — аутсорс-разработка и white-label для студий и агентств",
+        "description": "White-label маркетинговые услуги для студий и агентств. Разработка, SMM, автоматизация под брендом партнёра.",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "аутсорс smm услуги white label для агентств",
+        "position": 3,
+        "url": "https://t4ka.ru/smm-agency-promotion",
+        "domain": "t4ka.ru",
+        "title": "SMM агентство — заказать услугу продвижения и раскрутки в социальных сетях",
+        "description": "SMM под ключ, кейсы, цены, тарифы. Агентство В точку — полный цикл продвижения в соцсетях.",
+        "pages_count": "~300"
+      }
+    ]
+  },
+  {
+    "niche": "Интернет-магазины мебель и декор",
+    "category": "E-commerce",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для интернет магазина мебели",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~180000"
+      },
+      {
+        "query": "продвижение мебельного магазина в социальных сетях",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~230000"
+      },
+      {
+        "query": "контент маркетинг для мебельного магазина интернет",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~95000"
+      },
+      {
+        "query": "реклама мебельного магазина вконтакте таргетинг",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~140000"
+      },
+      {
+        "query": "агентство smm для магазина декора товары для дома",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~65000"
+      },
+      {
+        "query": "crm для мебельного магазина автоматизация заказов",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~120000"
+      },
+      {
+        "query": "автоматизация интернет магазина мебели битрикс24",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~75000"
+      },
+      {
+        "query": "ai контент для мебельного магазина нейросеть описания",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~38000"
+      },
+      {
+        "query": "автоматизация продаж мебели онлайн воронка клиенты",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~55000"
+      },
+      {
+        "query": "агентство продвижения интернет магазина мебели",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~260000"
+      },
+      {
+        "query": "маркетинг для мебельного магазина онлайн",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~310000"
+      },
+      {
+        "query": "раскрутка магазина мебели в интернете seo smm",
+        "cluster": "SMM/контент",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~145000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "смм для интернет магазина мебели",
+        "position": 1,
+        "url": "https://ruward.ru/smm/industry-furniture-household/",
+        "domain": "ruward.ru",
+        "title": "Рейтинг лучших агентств: SMM-продвижение — Мебель и товары для дома",
+        "description": "Рейтинг агентств по SMM-продвижению в нише мебели и товаров для дома. Проверенные кейсы и отзывы.",
+        "pages_count": "~5000"
+      },
+      {
+        "query_used": "смм для интернет магазина мебели",
+        "position": 2,
+        "url": "https://ratingruneta.ru/smm/furniture/",
+        "domain": "ratingruneta.ru",
+        "title": "SMM для мебельных магазинов и дизайнеров интерьеров, топ агентств — Рейтинг Рунета",
+        "description": "Топ агентств SMM-продвижения для мебельных магазинов и дизайнеров интерьеров.",
+        "pages_count": "~10000"
+      },
+      {
+        "query_used": "смм для интернет магазина мебели",
+        "position": 3,
+        "url": "https://t4ka.ru/prodvizhenie-vkontakte/tpost/mm6jakn2t1-kompleksnoe-smm-prodvizhenie-dlya-intern",
+        "domain": "t4ka.ru",
+        "title": "Комплексное SMM-продвижение для интернет-магазина мебели в ВКонтакте",
+        "description": "Кейс и стратегия комплексного SMM-продвижения мебельного интернет-магазина во ВКонтакте: контент, таргетинг, вовлечённость.",
+        "pages_count": "~300"
+      },
+      {
+        "query_used": "смм для интернет магазина мебели",
+        "position": 4,
+        "url": "https://aventon.agency/roomer",
+        "domain": "aventon.agency",
+        "title": "Кейс: реклама и smm-продвижение мебельного центра Roomer в социальных сетях",
+        "description": "Кейс SMM-продвижения мебельного центра Roomer: рост охвата, привлечение покупателей через соцсети.",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "смм для интернет магазина мебели",
+        "position": 5,
+        "url": "https://smm-agentstvo.ru/blog/smm-dlia-mebelnyx-magazinov/",
+        "domain": "smm-agentstvo.ru",
+        "title": "Эффективные стратегии SMM для мебельных магазинов: привлечение клиентов и продвижение в соцсетях",
+        "description": "Разбор эффективных SMM-стратегий для мебельных магазинов: контент, таргетинг, удержание аудитории.",
+        "pages_count": "~150"
+      },
+      {
+        "query_used": "продвижение мебельного магазина в социальных сетях",
+        "position": 1,
+        "url": "https://magnetto.pro/media/article/reklama-i-prodvizhenie-mebelnogo-magazina-salona-i-tovarov-dlia-doma-polnoe-rukovodstvo/",
+        "domain": "magnetto.pro",
+        "title": "Реклама и продвижение мебельного магазина, салона и товаров для дома: полное руководство",
+        "description": "Полное руководство по каналам, инструментам и практическим советам продвижения мебельного магазина. Включает SMM, Директ, Авито, PR и инфлюенсеров.",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "агентство продвижения интернет магазина мебели",
+        "position": 1,
+        "url": "https://t4ka.ru/mebel-marketing",
+        "domain": "t4ka.ru",
+        "title": "Мебель маркетинг — продвижение мебельного магазина в интернете. Привлечение клиентов в мебельный салон",
+        "description": "Полный цикл маркетинга для мебельного магазина: SEO, контекст, SMM, таргетинг, контент-маркетинг.",
+        "pages_count": "~300"
+      },
+      {
+        "query_used": "агентство продвижения интернет магазина мебели",
+        "position": 2,
+        "url": "https://www.ashmanov.com/education/articles/kak-prodvigat-magazin-mebeli-prakticheskie-rekomendatsii/",
+        "domain": "ashmanov.com",
+        "title": "Продвижение интернет-магазина мебели — маркетинг, реклама и раскрутка мебельного бизнеса",
+        "description": "Практические рекомендации по продвижению интернет-магазина мебели от агентства Ашманов и партнёры.",
+        "pages_count": "~2000"
+      },
+      {
+        "query_used": "crm для мебельного магазина автоматизация заказов",
+        "position": 1,
+        "url": "https://megaplan.ru/blog/crm/21-luchshaya-crm-dlya-mebelnogo-magazina/",
+        "domain": "megaplan.ru",
+        "title": "21 CRM для мебельного магазина: лучшие системы для автоматизации мебельных продаж",
+        "description": "Обзор 21 лучшей CRM-системы для мебельного магазина: функции, цены, интеграции.",
+        "pages_count": "~3000"
+      },
+      {
+        "query_used": "crm для мебельного магазина автоматизация заказов",
+        "position": 2,
+        "url": "https://blog.keycrm.app/crm-dlya-mebelnogo-biznesa-s-nulya-kuhni-shkafy-kupe-i-kachestvennaya-avtomatizaciya-kompanii-ot-keycrm/",
+        "domain": "keycrm.app",
+        "title": "CRM для мебельного бизнеса с нуля: кухни, шкафы-купе и качественная автоматизация компании от KeyCRM",
+        "description": "Как внедрить KeyCRM в мебельный бизнес: автоматизация от приёма заказа до производства и доставки.",
+        "pages_count": "~500"
+      }
+    ]
+  },
+  {
+    "niche": "Интернет-магазины ювелирные украшения",
+    "category": "E-commerce",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для ювелирного магазина украшений продвижение",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~140000"
+      },
+      {
+        "query": "контент маркетинг для магазина украшений",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~85000"
+      },
+      {
+        "query": "продвижение ювелирного бренда в инстаграм вконтакте",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~160000"
+      },
+      {
+        "query": "таргетированная реклама для ювелирного магазина",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~120000"
+      },
+      {
+        "query": "агентство smm для ювелирных украшений кейсы",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~48000"
+      },
+      {
+        "query": "crm для ювелирного магазина автоматизация продаж",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~65000"
+      },
+      {
+        "query": "автоматизация интернет магазина украшений чат-бот заказы",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~32000"
+      },
+      {
+        "query": "ai контент описание украшений генерация нейросеть",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~28000"
+      },
+      {
+        "query": "воронка продаж для ювелирного магазина автоматизация",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~41000"
+      },
+      {
+        "query": "продвижение ювелирного интернет-магазина комплексный маркетинг",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~195000"
+      },
+      {
+        "query": "маркетинг для ювелирного магазина реклама украшений",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~280000"
+      },
+      {
+        "query": "агентство продвижения ювелирных украшений онлайн",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~92000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "смм для ювелирного магазина украшений продвижение",
+        "position": 1,
+        "url": "https://mavr.ua/ru/portfolio/smm-dlya-magazina-yuvelirnyx-izdelij/",
+        "domain": "mavr.ua",
+        "title": "8 шагов по созданию правильной SMM-кампании на примере магазина ювелирных изделий \"Ярко\" — МАВР",
+        "description": "Пошаговое руководство по SMM-кампании для ювелирного магазина: стратегия, контент, таргетинг, аналитика.",
+        "pages_count": "~300"
+      },
+      {
+        "query_used": "смм для ювелирного магазина украшений продвижение",
+        "position": 2,
+        "url": "https://shcherbakovs.com/ru/prodvizhenie-yuvelirnogo-magazina/",
+        "domain": "shcherbakovs.com",
+        "title": "Продвижение ювелирного интернет-магазина в социальных сетях — Shcherbakovs SMM Agency",
+        "description": "SMM-стратегия для ювелирного магазина: контент, реклама, работа с аудиторией в Instagram и ВКонтакте.",
+        "pages_count": "~150"
+      },
+      {
+        "query_used": "смм для ювелирного магазина украшений продвижение",
+        "position": 3,
+        "url": "https://www.adindex.ua/project-view/smm-prodvizhenie-juvelirnyh-izdelij-uvelichili-ohvat-v-instagram-v-4-3-raza/",
+        "domain": "adindex.ua",
+        "title": "Кейс SMM продвижения ювелирных изделий — увеличили охват в Instagram в 4,3 раза",
+        "description": "Реальный кейс: SMM продвижение ювелирных украшений, рост охвата в 4,3 раза через Instagram.",
+        "pages_count": "~2000"
+      },
+      {
+        "query_used": "продвижение ювелирного интернет-магазина комплексный маркетинг",
+        "position": 1,
+        "url": "https://www.calltouch.ru/blog/prodvizhenie-yuvelirnogo-magazina-kak-uvelichit-prodazhi-v-internete/",
+        "domain": "calltouch.ru",
+        "title": "Продвижение ювелирного магазина: как раскрутить ювелирный интернет-магазин — Calltouch",
+        "description": "Комплексный гайд по продвижению ювелирного магазина в интернете: SEO, контекст, SMM, партнёрства.",
+        "pages_count": "~5000"
+      },
+      {
+        "query_used": "продвижение ювелирного интернет-магазина комплексный маркетинг",
+        "position": 2,
+        "url": "https://direct.yandex.ru/base/articles/prodvizhenie-internet-magazina-yuvelirnyh-ukrasheniy",
+        "domain": "direct.yandex.ru",
+        "title": "Продвижение ювелирного интернет-магазина: как повысить продажи ювелирных украшений — Яндекс",
+        "description": "Официальный гайд Яндекс.Директ по продвижению ювелирных магазинов: реклама, аудитории, форматы.",
+        "pages_count": "~100000"
+      },
+      {
+        "query_used": "продвижение ювелирного интернет-магазина комплексный маркетинг",
+        "position": 3,
+        "url": "https://targethunter.ru/blog/kejs-prodvizhenie-yuvelirnogo-internet-magazina/",
+        "domain": "targethunter.ru",
+        "title": "Продвижение ювелирного интернет-магазина — TargetHunter Блог",
+        "description": "Кейс: таргетированная реклама для ювелирного интернет-магазина. Стратегия аудиторий ВКонтакте.",
+        "pages_count": "~1500"
+      },
+      {
+        "query_used": "маркетинг для ювелирного магазина реклама украшений",
+        "position": 1,
+        "url": "https://www.ashmanov.com/education/articles/prodvizhenie-yuvelirnogo-magazina/",
+        "domain": "ashmanov.com",
+        "title": "SEO продвижение ювелирного магазина в интернете — реклама и раскрутка ювелирных изделий",
+        "description": "Практическое руководство по SEO и продвижению ювелирного магазина от Ашманов и партнёры.",
+        "pages_count": "~2000"
+      },
+      {
+        "query_used": "маркетинг для ювелирного магазина реклама украшений",
+        "position": 2,
+        "url": "https://t4ka.ru/jewelery-marketing",
+        "domain": "t4ka.ru",
+        "title": "Ювелирный маркетинг — продвижение ювелирных магазинов в интернете. Привлечение клиентов",
+        "description": "Полный цикл маркетинга для ювелирного магазина: SEO, контекст, SMM, таргетинг.",
+        "pages_count": "~300"
+      },
+      {
+        "query_used": "маркетинг для ювелирного магазина реклама украшений",
+        "position": 3,
+        "url": "https://fireseo.ru/blog/marketing-yuvelirnogo-magazina/",
+        "domain": "fireseo.ru",
+        "title": "Маркетинг ювелирного магазина: стратегия и приёмы — FireSEO",
+        "description": "Разбор маркетинговых стратегий для ювелирного магазина: контент, реклама, SEO, соцсети.",
+        "pages_count": "~800"
+      },
+      {
+        "query_used": "маркетинг для ювелирного магазина реклама украшений",
+        "position": 4,
+        "url": "https://vechkasov.ru/blog/articles/18-idej-dlya-reklamy-yuvelirnogo-magazina-ot-marketologa",
+        "domain": "vechkasov.ru",
+        "title": "18 идей для рекламы ювелирного магазина от маркетолога",
+        "description": "Практические идеи для рекламы и продвижения ювелирного магазина: офлайн и онлайн-каналы.",
+        "pages_count": "~400"
+      }
+    ]
+  }
+]

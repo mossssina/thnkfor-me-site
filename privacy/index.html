@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Политика конфиденциальности — THNKFOR.ME</title>
+    <link rel="canonical" href="https://thnkfor.me/privacy/">
+    <meta property="og:title" content="Политика конфиденциальности — THNKFOR.ME">
+<meta name="description" content="Политика конфиденциальности THNKFOR.ME: какие данные собираем, как используем и как защищаем вашу информацию.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+
+/* ═══ UNIFIED SITE HEADER + FOOTER ═══ */
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+.site-header{position:sticky!important;top:0!important;z-index:200!important;background:#0A0A0A!important;border-bottom:1px solid rgba(255,255,255,0.08)!important;display:block!important;padding:0!important;height:auto!important;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item:hover > a{color:#FFFFFF;}
+.nav-item > a.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover,.header-nav .header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;box-shadow:none;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid!important;grid-template-columns:1fr 1fr 1fr 1fr!important;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+
+/* PAGE */
+.page-hero{background:#0A0A0A;padding:72px 48px 60px;}
+.page-hero-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:24px;}
+.page-hero-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(32px,5vw,64px);letter-spacing:-0.05em;line-height:0.95;color:#FFFFFF;margin-bottom:20px;}
+.page-hero-sub{font-size:15px;color:rgba(255,255,255,0.35);max-width:480px;line-height:1.6;}
+
+.content-wrap{max-width:760px;margin:0 auto;padding:72px 48px 96px;}
+.section-block{margin-bottom:56px;}
+.section-block:last-child{margin-bottom:0;}
+.block-num{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#FF3B00;margin-bottom:12px;}
+.block-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.03em;color:#0A0A0A;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(0,0,0,0.08);}
+.block-text{font-size:15px;color:#444;line-height:1.75;}
+.block-text + .block-text{margin-top:12px;}
+.block-list{margin-top:12px;display:flex;flex-direction:column;gap:8px;}
+.block-list li{display:flex;gap:12px;font-size:15px;color:#444;line-height:1.6;}
+.block-list li::before{content:'—';color:#FF3B00;flex-shrink:0;font-family:'IBM Plex Mono',monospace;}
+.block-link{color:#FF3B00;}
+.block-link:hover{text-decoration:underline;}
+.updated-bar{background:#FFFFFF;border:1px solid rgba(0,0,0,0.08);padding:20px 28px;display:flex;justify-content:space-between;align-items:center;margin-bottom:56px;}
+.updated-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#999;}
+.updated-val{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#0A0A0A;letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" / loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "url": "https://thnkfor.me/privacy/",
+      "name": "Политика конфиденциальности — THNKFOR.ME",
+      "description": "Политика конфиденциальности THNKFOR.ME: какие данные собираем, как используем и как защищаем вашу информацию."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://thnkfor.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Политика конфиденциальности — THNKFOR.ME",
+          "item": "https://thnkfor.me/privacy/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item"><a href="../services/">Услуги</a><div class="nav-dropdown"><a href="../services/smm/">SMM и соцсети</a><a href="../services/targeting/">Таргетированная реклама</a><a href="../services/direct/">Яндекс Директ</a><div class="nav-subitem">
+          <a href="../services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+          <div class="nav-subdropdown">
+            <a href="../services/content-machine/restaurant/">Для ресторанов</a>
+            <a href="../services/content-machine/beauty/">Для салонов красоты</a>
+            <a href="../services/content-machine/ecom/">Для интернет-магазинов</a>
+            <a href="../services/content-machine/marketplace/">Для маркетплейсов</a>
+            <a href="../services/content-machine/fitness/">Для фитнеса</a>
+            <a href="../services/content-machine/construction/">Для строительства</a>
+          </div>
+        </div>
+          <a href="../services/video/">Видеопроизводство</a>
+          <a href="../services/reputation/">Управление репутацией</a>
+          <a href="../services/seo/">Продвижение в поиске</a>
+          <a href="../services/full-package/">Комплексный маркетинг</a></div></div>
+      <div class="nav-item"><a href="../niches/">Ниши</a><div class="nav-dropdown"><a href="../niches/restaurants/">Рестораны</a><a href="../niches/beauty/">Салоны красоты</a><a href="../niches/clinic/">Медицина</a><a href="../niches/fitness/">Фитнес</a><a href="../niches/saas/">IT и SaaS</a><a href="../niches/ecommerce-fashion/">E-commerce</a><a href="../niches/realestate/">Недвижимость</a><a href="../niches/">Все ниши →</a></div></div>
+      <div class="nav-item"><a href="../cases/">Кейсы</a><div class="nav-dropdown"><a href="../cases/werent/">WeRent — Content Machine</a><a href="../cases/tennispoint/">Tennis Point — бот новинок</a><a href="../cases/4room/">4room.studio — три AI-системы</a><a href="../cases/studiosuccess/">Studio Success — AI-ассистент</a><a href="../cases/">Все кейсы →</a></div></div>
+      <div class="nav-item"><a href="../blog/">Блог</a><div class="nav-dropdown"><a href="../blog/ai-marketing-2026/">AI-маркетинг 2026</a><a href="../blog/content-factory/">Контент-завод</a><a href="../blog/midjourney-business/">Midjourney для бизнеса</a><a href="../blog/prompt-engineering/">Prompt Engineering</a><a href="../blog/n8n-vs-make/">n8n vs Make</a><a href="../blog/">Все статьи →</a></div></div>
+      <div class="nav-item"><a href="../pricing/">Цены</a><a href="../contacts/">Контакты</a></div>
+      <div class="nav-item"><a href="../about/">О нас</a></div>
+      <a href="../contacts/" class="header-cta">Обсудить проект</a>
+    
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="../services/smm/" class="header-pill">01 · SMM</a>
+    <a href="../services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="../services/direct/" class="header-pill">03 · Директ</a>
+    <a href="../services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="../services/video/" class="header-pill">05 · Видео</a>
+    <a href="../services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="../services/seo/" class="header-pill">07 · SEO</a>
+    <a href="../services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-label">Юридическая информация</div>
+  <h1 class="page-hero-h1">Политика<br>конфиденциальности</h1>
+  <p class="page-hero-sub">Как THNKFOR.ME работает с вашими персональными данными — прозрачно и по существу.</p>
+</div>
+
+<div class="content-wrap">
+
+  <div class="updated-bar">
+    <span class="updated-label">Последнее обновление</span>
+    <span class="updated-val">Сентябрь 2026</span>
+  </div>
+
+  <div class="section-block">
+    <div class="block-num">01</div>
+    <div class="block-title">Кто мы</div>
+    <p class="block-text">THNKFOR.ME — AI-маркетинговое агентство. Юридическое лицо: ИП Мосина Анастасия Александровна.</p>
+    <p class="block-text">Контакт по вопросам персональных данных: <a href="mailto:hello@thnkfor.me" class="block-link">hello@thnkfor.me</a></p>
+  </div>
+
+  <div class="section-block">
+    <div class="block-num">02</div>
+    <div class="block-title">Какие данные мы собираем</div>
+    <p class="block-text">Мы собираем только те данные, которые вы предоставляете сами при заполнении форм обратной связи:</p>
+    <ul class="block-list">
+      <li>Имя — для обращения к вам</li>
+      <li>Email-адрес — для ответа на ваш запрос</li>
+      <li>Номер телефона — если вы его указали</li>
+      <li>Текст сообщения — описание вашего проекта или вопроса</li>
+    </ul>
+    <p class="block-text" style="margin-top:16px;">Также мы можем собирать обезличенные технические данные аналитики (страницы, время визита, тип устройства) — без привязки к личности пользователя.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="block-num">03</div>
+    <div class="block-title">Как мы используем данные</div>
+    <ul class="block-list">
+      <li>Связь с вами по запросу — ответить на вопрос, обсудить проект</li>
+      <li>Улучшение сайта и сервиса на основе агрегированной аналитики</li>
+      <li>Мы не продаём и не передаём ваши данные третьим лицам без вашего согласия</li>
+      <li>Исключение — случаи, предусмотренные законодательством РФ</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <div class="block-num">04</div>
+    <div class="block-title">Cookies</div>
+    <p class="block-text">Мы используем файлы cookie для работы аналитики сайта (Яндекс Метрика или аналог). Cookies позволяют нам видеть, какие страницы наиболее полезны — без идентификации конкретных пользователей.</p>
+    <p class="block-text">Вы можете отключить cookies в настройках браузера. Это не повлияет на работу сайта.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="block-num">05</div>
+    <div class="block-title">Хранение данных</div>
+    <p class="block-text">Данные из форм обратной связи хранятся только в рабочих инструментах команды (почта, CRM) и не дольше, чем необходимо для обработки запроса. Мы не ведём публичных баз персональных данных.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="block-num">06</div>
+    <div class="block-title">Ваши права</div>
+    <p class="block-text">Вы вправе в любой момент:</p>
+    <ul class="block-list">
+      <li>Запросить, какие данные о вас хранятся</li>
+      <li>Потребовать исправления или удаления ваших данных</li>
+      <li>Отозвать согласие на обработку</li>
+    </ul>
+    <p class="block-text" style="margin-top:16px;">Для любого из этих запросов напишите на <a href="mailto:hello@thnkfor.me" class="block-link">hello@thnkfor.me</a> — ответим в течение 3 рабочих дней.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="block-num">07</div>
+    <div class="block-title">Изменения политики</div>
+    <p class="block-text">Мы можем обновлять эту политику. Актуальная версия всегда доступна на этой странице. Дата последнего обновления указана в верхней части документа.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="../" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges"><span class="footer-badge footer-badge-filled">AI-агентство</span><span class="footer-badge footer-badge-outline">Москва</span></div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="../services/smm/">SMM и ведение соцсетей</a>
+        <a href="../services/targeting/">Таргетированная реклама</a>
+        <a href="../services/direct/">Яндекс Директ</a>
+        <a href="../services/content-machine/">Контент завод</a>
+        <a href="../services/video/">Видеопроизводство</a>
+        <a href="../services/reputation/">Управление репутацией</a>
+        <a href="../services/seo/">Продвижение в поиске</a>
+        <a href="../services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="../niches/restaurants/">Рестораны</a>
+        <a href="../niches/beauty/">Салоны красоты</a>
+        <a href="../niches/clinic/">Медицина</a>
+        <a href="../niches/fitness/">Фитнес</a>
+        <a href="../niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="../niches/saas/">IT и SaaS</a>
+        <a href="../niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="../about/">О нас</a>
+        <a href="../cases/">Кейсы</a>
+        <a href="../blog/">Блог</a>
+        <a href="../pricing/">Цены</a><a href="../contacts/">Контакты</a>
+        <a href="../contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+</body>
+</html>

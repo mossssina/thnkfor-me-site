@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>THNKFOR.ME — Гипотезы по кластерам</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;background:#F8F8F8;color:#0A0A0A;padding:40px 32px;}
+h1{font-size:28px;font-weight:500;letter-spacing:-0.03em;margin-bottom:6px;}
+.sub{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:32px;}
+h2{font-size:15px;font-weight:500;margin:36px 0 12px;letter-spacing:-0.01em;}
+.note{background:#fff;border-left:3px solid #FF3B00;padding:14px 18px;margin-bottom:28px;font-size:13px;line-height:1.6;}
+.note strong{display:block;margin-bottom:4px;font-weight:500;}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid rgba(0,0,0,0.08);margin-bottom:32px;}
+th{background:#0A0A0A;color:rgba(255,255,255,0.7);padding:10px 14px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;text-align:left;letter-spacing:.06em;text-transform:uppercase;}
+td{padding:10px 14px;border-bottom:1px solid #EBEBEB;font-size:13px;vertical-align:top;line-height:1.5;}
+tr:hover td{background:#FAFAFA;}
+.cluster-cm{color:#FF3B00;font-weight:500;}
+.cluster-smm{color:#1A5CA0;font-weight:500;}
+.yes{color:#1A7A3C;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;}
+.no{color:#C0440A;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;}
+.tag{display:inline-block;padding:2px 8px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;}
+.tag-orange{background:#FF3B00;color:#fff;}
+.tag-blue{background:#E0E8F8;color:#1A5CA0;}
+.tag-grey{background:#EBEBEB;color:#555;}
+.tag-green{background:#E8F4E8;color:#1A7A3C;}
+.num{font-family:'IBM Plex Mono',monospace;font-weight:500;}
+</style>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<h1>Гипотезы по кластерам запросов</h1>
+<div class="sub">THNKFOR.ME · Сравнение «Контент завод» vs «SMM / маркетинг соцсетей» · September 2026</div>
+
+<div class="note">
+  <strong>Ответ на вопрос: почему «контент завод» был в H3 нишевых страниц, а не в Title?</strong>
+  На нишевых страницах (/niches/restaurants/) первичный запрос — «маркетинг для ресторана» (2 766/мес), он в Title и H1. «Контент завод для ресторана» — <em>отдельный</em> запрос с другим интентом (ищут инструмент, не агентство), он должен получить свою страницу с «контент завод» в Title. Пока такой страницы нет — отсюда H3 как временный сигнал. Гипотеза: нужны нишевые лендинги /services/content-machine/restaurant/, /services/content-machine/ecom/ и т.д. — тогда «контент завод» уходит в Title.
+</div>
+
+<h2>Таблица 1 — Сравнение кластеров</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Параметр</th>
+      <th>📦 Контент завод (CM-кластер)</th>
+      <th>📱 SMM / Маркетинг соцсетей</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Топ-запросы</strong></td>
+      <td class="cluster-cm">«контент завод» 4 423<br>«автопостинг» 2 338<br>«нейросеть для постов» 1 870<br>«фабрика контента» 988<br>«нейросеть для соцсетей» 950<br>«отложенный постинг» 817<br>«контент машина» 782</td>
+      <td class="cluster-smm">«таргетированная реклама» 8 225<br>«маркетинговое агентство» 7 481<br>«контент маркетинг» 3 221<br>«digital агентство» 2 035<br>«ведение соцсетей» 1 936<br>«smm агентство» 879<br>«продвижение в соцсетях» 849</td>
+    </tr>
+    <tr>
+      <td><strong>Суммарный объём кластера</strong></td>
+      <td><span class="num">~16 369</span>/мес (прямой кластер)<br><span style="font-size:11px;color:#888;">с AI-запросами +4 230</span></td>
+      <td><span class="num">~79 531</span>/мес (P0 ниши)</td>
+    </tr>
+    <tr>
+      <td><strong>Конкуренция</strong></td>
+      <td><span class="yes">ОЧЕНЬ НИЗКАЯ</span><br><span style="font-size:11px;color:#888;">Никто не занял AI-позицию в этом кластере</span></td>
+      <td><span class="no">ВЫСОКАЯ</span><br><span style="font-size:11px;color:#888;">Сотни SMM-агентств, прайс-агрегаторы</span></td>
+    </tr>
+    <tr>
+      <td><strong>Тип интента</strong></td>
+      <td><span class="tag tag-orange">Прямой продукт</span><br><span style="font-size:11px;color:#888;">Человек ищет конкретный инструмент/сервис</span></td>
+      <td><span class="tag tag-blue">Выбор подрядчика</span><br><span style="font-size:11px;color:#888;">Человек ищет агентство или сравнивает</span></td>
+    </tr>
+    <tr>
+      <td><strong>Конверсия (гипотеза)</strong></td>
+      <td><span class="yes">↑ Выше</span> — специфический запрос = высокая готовность к покупке</td>
+      <td><span class="no">↓ Ниже</span> — широкий запрос, много сравнений, долгий цикл</td>
+    </tr>
+    <tr>
+      <td><strong>Где должен быть ключ</strong></td>
+      <td>
+        <span class="yes">Title + H1</span> на:<br>
+        · /services/content-machine/ ✅<br>
+        · /blog/content-machine-guide/ ✅<br>
+        · /services/content-machine/restaurant/ ❌ нет<br>
+        · /services/content-machine/ecom/ ❌ нет<br>
+        <span class="tag tag-grey" style="margin-top:6px;display:inline-block;">H3 только на нишевых /niches/X/</span>
+      </td>
+      <td>
+        <span class="yes">Title + H1</span> на:<br>
+        · / (главная) ✅<br>
+        · /services/ ✅<br>
+        · /niches/X/ ✅<br>
+        <span class="tag tag-grey" style="margin-top:6px;display:inline-block;">Это primary кластер нишевых страниц</span>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Рекомендация страниц</strong></td>
+      <td>
+        1. <strong>Сервисная</strong> /services/content-machine/ — уже есть<br>
+        2. <strong>Нишевые лендинги</strong> /services/content-machine/[niche]/ — нет<br>
+        3. <strong>Блог</strong> /blog/content-machine-guide/ + /blog/autopublishing-guide/ — добавлены
+      </td>
+      <td>
+        1. <strong>Главная</strong> / — уже есть<br>
+        2. <strong>Нишевые</strong> /niches/X/ — уже есть (10 штук)<br>
+        3. <strong>Блог</strong> /blog/smm-restaurant/ и др. — уже есть
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Быстрый выигрыш (≤1 мес)</strong></td>
+      <td><span class="yes">↑ Высокий</span> — малая конкуренция, прямой запрос, AI-позиция свободна</td>
+      <td><span class="no">↓ Низкий</span> — конкурентный, долгий выход в ТОП</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Таблица 2 — Гипотезы по нишевым лендингам «Контент завод для X»</h2>
+<table>
+  <thead>
+    <tr>
+      <th>URL</th>
+      <th>Title-запрос</th>
+      <th>Wordstat</th>
+      <th>Конкуренция</th>
+      <th>Приоритет</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/services/content-machine/restaurant/</td>
+      <td>Контент завод для ресторана</td>
+      <td class="num">~300–500</td>
+      <td><span class="yes">нет</span></td>
+      <td><span class="tag tag-orange">P0</span></td>
+    </tr>
+    <tr>
+      <td>/services/content-machine/ecom/</td>
+      <td>Контент завод для интернет-магазина</td>
+      <td class="num">~400–700</td>
+      <td><span class="yes">нет</span></td>
+      <td><span class="tag tag-orange">P0</span></td>
+    </tr>
+    <tr>
+      <td>/services/content-machine/beauty/</td>
+      <td>Контент завод для салона красоты</td>
+      <td class="num">~200–400</td>
+      <td><span class="yes">нет</span></td>
+      <td><span class="tag tag-orange">P0</span></td>
+    </tr>
+    <tr>
+      <td>/services/content-machine/autoservice/</td>
+      <td>Контент завод для автосервиса</td>
+      <td class="num">~100–200</td>
+      <td><span class="yes">нет</span></td>
+      <td><span class="tag tag-blue">P1</span></td>
+    </tr>
+    <tr>
+      <td>/services/content-machine/construction/</td>
+      <td>Контент завод для строительной компании</td>
+      <td class="num">~100–200</td>
+      <td><span class="yes">нет</span></td>
+      <td><span class="tag tag-blue">P1</span></td>
+    </tr>
+    <tr>
+      <td>/services/content-machine/fitness/</td>
+      <td>Контент завод для фитнес-клуба</td>
+      <td class="num">~100–200</td>
+      <td><span class="yes">нет</span></td>
+      <td><span class="tag tag-blue">P1</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Вывод и следующий шаг</h2>
+<div class="note">
+  <strong>Стратегия: два кластера не конкурируют — они дополняют</strong>
+  SMM-кластер (79k/мес) = трафик на главную и нишевые страницы, длинный цикл сделки.<br>
+  CM-кластер (16k/мес) = прямые заявки на контент-завод, короткий цикл, пустая ниша.<br><br>
+  <strong>Что нужно добавить в website_structure.html:</strong><br>
+  Нишевые лендинги /services/content-machine/[niche]/ — отдельные страницы с «контент завод для X» в Title и H1. Тогда в нишевых /niches/X/ H3 «Контент завод для X» становится <em>внутренней ссылкой</em> на эти лендинги — логичная перелинковка.
+</div>
+
+<p style="color:#AAA;font-size:11px;padding:24px 0;">THNKFOR.ME · Кластерный анализ · Данные: Яндекс Wordstat · Россия · September 2026</p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 48" width="320" height="48">
+  <rect width="320" height="48" fill="#0A0A0A"/>
+  <text x="0" y="35" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="28" letter-spacing="-0.5" fill="#FFFFFF">THNKFOR</text>
+  <text x="193" y="35" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="28" fill="#FF3B00">.</text>
+  <text x="205" y="35" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="28" fill="#FFFFFF">ME</text>
+  <rect x="253" y="10" width="3" height="22" fill="#FF3B00">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.49;0.5;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>

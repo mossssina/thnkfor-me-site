@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Темы статей для блога THNKFOR.ME — редакционный план</title>
+    <link rel="canonical" href="https://thnkfor.me/blog/topics-checklist/">
+    <meta property="og:title" content="Темы статей для блога THNKFOR.ME — редакционный план">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+.page{max-width:1100px;margin:0 auto;padding:40px 32px;}
+.page-header{border-bottom:2px solid #0A0A0A;padding-bottom:24px;margin-bottom:40px;}
+.page-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:12px;}
+h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:40px;letter-spacing:-0.05em;line-height:1;}
+.page-sub{font-size:14px;color:#666;margin-top:12px;}
+.stats-row{display:flex;gap:32px;margin:24px 0;flex-wrap:wrap;}
+.stat{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#666;}
+.stat strong{color:#0A0A0A;font-size:20px;display:block;letter-spacing:-0.04em;font-family:'Space Grotesk',sans-serif;}
+.filter-row{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap;}
+.filter-btn{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border:1px solid rgba(0,0,0,0.2);background:transparent;cursor:pointer;transition:all .12s;color:#666;}
+.filter-btn:hover,.filter-btn.active{background:#0A0A0A;color:#FFFFFF;border-color:#0A0A0A;}
+.filter-btn[data-cat="AI"].active{background:#7C3AED;border-color:#7C3AED;}
+.filter-btn[data-cat="SMM"].active{background:#0284C7;border-color:#0284C7;}
+.filter-btn[data-cat="E-com"].active{background:#059669;border-color:#059669;}
+.filter-btn[data-cat="SaaS"].active{background:#D97706;border-color:#D97706;}
+.filter-btn[data-cat="Performance"].active{background:#DC2626;border-color:#DC2626;}
+.filter-btn[data-cat="Ниши"].active{background:#DB2777;border-color:#DB2777;}
+.section-header{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#999;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.1);margin-bottom:8px;display:grid;grid-template-columns:32px 1fr 120px 100px 80px;gap:12px;}
+.topics-list{display:flex;flex-direction:column;gap:2px;margin-bottom:40px;}
+.topic-row{display:grid;grid-template-columns:32px 1fr 120px 100px 80px;gap:12px;align-items:start;padding:14px 12px;background:#FFFFFF;border:1px solid transparent;transition:border-color .1s;cursor:pointer;}
+.topic-row:hover{border-color:rgba(0,0,0,0.1);}
+.topic-row.done{background:#F0FFF4;}
+.topic-row.done .topic-title{text-decoration:line-through;color:#999;}
+.topic-row.hidden{display:none;}
+.topic-check{width:18px;height:18px;border:1.5px solid rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;transition:all .12s;}
+.topic-row.done .topic-check{background:#10b981;border-color:#10b981;color:#FFFFFF;font-size:11px;}
+.topic-content{}
+.topic-title{font-size:15px;font-weight:500;letter-spacing:-0.01em;line-height:1.3;margin-bottom:4px;}
+.topic-desc{font-size:12px;color:#666;line-height:1.45;}
+.topic-cat{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;display:inline-block;margin-top:2px;}
+.cat-AI{background:rgba(124,58,237,0.1);color:#7C3AED;}
+.cat-SMM{background:rgba(2,132,199,0.1);color:#0284C7;}
+.cat-Ecom{background:rgba(5,150,105,0.1);color:#059669;}
+.cat-SaaS{background:rgba(217,119,6,0.1);color:#D97706;}
+.cat-Perf{background:rgba(220,38,38,0.1);color:#DC2626;}
+.cat-Nishi{background:rgba(219,39,119,0.1);color:#DB2777;}
+.cat-Content{background:rgba(100,116,139,0.1);color:#475569;}
+.topic-priority{font-family:'IBM Plex Mono',monospace;font-size:10px;}
+.priority-h{color:#DC2626;}
+.priority-m{color:#D97706;}
+.priority-l{color:#666;}
+.topic-status{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;}
+.status-done{color:#10b981;}
+.status-todo{color:#ccc;}
+.status-wip{color:#D97706;}
+.topic-vol{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#999;text-align:right;}
+.section-group{margin-bottom:48px;}
+.group-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.03em;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #0A0A0A;}
+.progress-bar{height:4px;background:rgba(0,0,0,0.08);margin-bottom:40px;}
+.progress-fill{height:4px;background:#FF3B00;transition:width .3s;}
+.progress-label{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#666;margin-bottom:6px;}
+</style>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+</head>
+<body>
+<div class="page">
+  <div class="page-header">
+    <div class="page-label">// Редакционный план · THNKFOR.ME Blog · Внутренний документ</div>
+    <h1>Темы для блога</h1>
+    <p class="page-sub">Кликните на строку, чтобы отметить тему выполненной. Фильтр по категориям справа.</p>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat"><strong id="cnt-done">4</strong>Написано</div>
+    <div class="stat"><strong id="cnt-total">30</strong>Всего тем</div>
+    <div class="stat"><strong id="cnt-pct">13%</strong>Прогресс</div>
+  </div>
+
+  <div class="progress-label" id="prog-label">4 из 30 статей написано</div>
+  <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:13%"></div></div>
+
+  <div class="filter-row">
+    <button class="filter-btn active" data-cat="all">Все</button>
+    <button class="filter-btn" data-cat="AI">AI</button>
+    <button class="filter-btn" data-cat="SMM">SMM</button>
+    <button class="filter-btn" data-cat="E-com">E-commerce</button>
+    <button class="filter-btn" data-cat="SaaS">SaaS</button>
+    <button class="filter-btn" data-cat="Performance">Performance</button>
+    <button class="filter-btn" data-cat="Ниши">Ниши</button>
+  </div>
+
+  <!-- WRITTEN -->
+  <div class="section-group">
+    <div class="group-title">Написанные статьи</div>
+    <div class="section-header"><span></span><span>Тема</span><span>Категория</span><span>Приоритет</span><span>Статус</span></div>
+    <div class="topics-list" id="list-written">
+
+      <div class="topic-row done" data-cat="SMM" data-id="1">
+        <div class="topic-check">✓</div>
+        <div class="topic-content">
+          <div class="topic-title">SMM для ресторана: полное руководство 2026</div>
+          <div class="topic-desc">Форматы, контент-план 70/20/10, 5 ошибок рестораторов. 2000 слов.</div>
+          <span class="topic-cat cat-SMM">SMM</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-done">Готово</div>
+        <div class="topic-vol">~800 зап/мес</div>
+      </div>
+
+      <div class="topic-row done" data-cat="AI" data-id="2">
+        <div class="topic-check">✓</div>
+        <div class="topic-content">
+          <div class="topic-title">AI в маркетинге 2026: что работает для малого бизнеса</div>
+          <div class="topic-desc">Где AI лучше человека, где нет. Инструменты с ROI. 1800 слов.</div>
+          <span class="topic-cat cat-AI">AI</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-done">Готово</div>
+        <div class="topic-vol">~1200 зап/мес</div>
+      </div>
+
+      <div class="topic-row done" data-cat="E-com" data-id="3">
+        <div class="topic-check">✓</div>
+        <div class="topic-content">
+          <div class="topic-title">Продвижение на WB и Ozon: полное руководство 2026</div>
+          <div class="topic-desc">Пирамида продвижения, Rich Content, внешний трафик. 2500 слов.</div>
+          <span class="topic-cat cat-Ecom">E-commerce</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-done">Готово</div>
+        <div class="topic-vol">~1500 зап/мес</div>
+      </div>
+
+      <div class="topic-row done" data-cat="SaaS" data-id="4">
+        <div class="topic-check">✓</div>
+        <div class="topic-content">
+          <div class="topic-title">Маркетинг для SaaS: CAC, LTV, churn — как считать</div>
+          <div class="topic-desc">Математика оттока, воронка с метриками, PLG. 2000 слов.</div>
+          <span class="topic-cat cat-SaaS">SaaS</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-done">Готово</div>
+        <div class="topic-vol">~400 зап/мес</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BACKLOG: AI -->
+  <div class="section-group">
+    <div class="group-title">AI-маркетинг</div>
+    <div class="section-header"><span></span><span>Тема</span><span>Категория</span><span>Приоритет</span><span>Статус</span></div>
+    <div class="topics-list">
+
+      <div class="topic-row" data-cat="AI" data-id="5">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Контент-завод: как автоматизировать производство 300+ постов в месяц</div>
+          <div class="topic-desc">Детальный разбор архитектуры: GPT-4o → Telegram-бот → SMMplanner. Подойдёт для агентств и маркетологов.</div>
+          <span class="topic-cat cat-AI">AI</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~300 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="AI" data-id="6">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Prompt engineering для маркетологов: как писать промпты, которые работают</div>
+          <div class="topic-desc">Практическое руководство: структура промпта, примеры для постов/рекламы/email. Без теории.</div>
+          <span class="topic-cat cat-AI">AI</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~600 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="AI" data-id="7">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Midjourney v7 для бизнеса: как создавать контент без фотографа</div>
+          <div class="topic-desc">Реальные кейсы использования для ресторанов, e-commerce, услуг. Промпты для разных стилей.</div>
+          <span class="topic-cat cat-AI">AI</span>
+        </div>
+        <div class="topic-priority priority-m">Средний</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~900 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="AI" data-id="8">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">n8n vs Make.com: что выбрать для автоматизации маркетинга</div>
+          <div class="topic-desc">Сравнение двух платформ автоматизации: стоимость, сложность, возможности. Примеры workflow.</div>
+          <span class="topic-cat cat-AI">AI</span>
+        </div>
+        <div class="topic-priority priority-m">Средний</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~200 зап/мес</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BACKLOG: SMM -->
+  <div class="section-group">
+    <div class="group-title">SMM и контент</div>
+    <div class="section-header"><span></span><span>Тема</span><span>Категория</span><span>Приоритет</span><span>Статус</span></div>
+    <div class="topics-list">
+
+      <div class="topic-row" data-cat="SMM" data-id="9">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">SMM для фитнес-клуба: расписание, тренеры, истории трансформаций</div>
+          <div class="topic-desc">Специфика фитнес-контента: сезонность, мотивационные форматы, работа с UGC клиентов.</div>
+          <span class="topic-cat cat-SMM">SMM</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~500 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="SMM" data-id="10">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Telegram-канал для бизнеса: как набрать 1000 подписчиков без рекламы</div>
+          <div class="topic-desc">Контент-стратегия, форматы, инструменты роста. Реальные кейсы каналов с нуля.</div>
+          <span class="topic-cat cat-SMM">SMM</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~2000 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="SMM" data-id="11">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Контент-план на месяц для бьюти-студии: шаблон и принципы</div>
+          <div class="topic-desc">Готовый шаблон контент-плана для мастеров и студий: форматы, частота, хэштеги.</div>
+          <span class="topic-cat cat-SMM">SMM</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~700 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="SMM" data-id="12">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">ВКонтакте в 2026: алгоритмы, форматы, что изменилось</div>
+          <div class="topic-desc">Актуальный гайд по алгоритмам ВКонтакте: что продвигается, что тормозит, настройки аккаунта.</div>
+          <span class="topic-cat cat-SMM">SMM</span>
+        </div>
+        <div class="topic-priority priority-m">Средний</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~1800 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="SMM" data-id="13">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Reels для бизнеса: 10 форматов, которые работают без танцев</div>
+          <div class="topic-desc">Видео-форматы без вирусных трендов — для серьёзных бизнесов. До-после, процесс, обзор, мнение эксперта.</div>
+          <span class="topic-cat cat-SMM">SMM</span>
+        </div>
+        <div class="topic-priority priority-m">Средний</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~400 зап/мес</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BACKLOG: E-COM -->
+  <div class="section-group">
+    <div class="group-title">E-commerce</div>
+    <div class="section-header"><span></span><span>Тема</span><span>Категория</span><span>Приоритет</span><span>Статус</span></div>
+    <div class="topics-list">
+
+      <div class="topic-row" data-cat="E-com" data-id="14">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">SEO-карточки на Wildberries: как попасть в ТОП-10 выдачи</div>
+          <div class="topic-desc">Семантика для WB, заполнение характеристик, работа с ключами в названии и описании.</div>
+          <span class="topic-cat cat-Ecom">E-commerce</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~1200 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="E-com" data-id="15">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Внешний трафик на маркетплейсы: таргет, блогеры, контекст</div>
+          <div class="topic-desc">Зачем нужен внешний трафик на WB и Ozon, как настраивать кампании с прямыми ссылками на карточки.</div>
+          <span class="topic-cat cat-Ecom">E-commerce</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~800 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="E-com" data-id="16">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Rich Content на маркетплейсах: что это, как делать, насколько влияет</div>
+          <div class="topic-desc">Практика создания Rich Content / A+ контента. Реальные данные по конверсии до/после.</div>
+          <span class="topic-cat cat-Ecom">E-commerce</span>
+        </div>
+        <div class="topic-priority priority-m">Средний</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~300 зап/мес</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BACKLOG: PERFORMANCE -->
+  <div class="section-group">
+    <div class="group-title">Performance-маркетинг</div>
+    <div class="section-header"><span></span><span>Тема</span><span>Категория</span><span>Приоритет</span><span>Статус</span></div>
+    <div class="topics-list">
+
+      <div class="topic-row" data-cat="Performance" data-id="17">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Яндекс Директ в 2026: что изменилось в Мастере кампаний</div>
+          <div class="topic-desc">Новые форматы, автостратегии, как настраивать кампании с минимальным участием специалиста.</div>
+          <span class="topic-cat cat-Perf">Performance</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~2500 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="Performance" data-id="18">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Таргет ВКонтакте для локального бизнеса: гео, аудитории, бюджет</div>
+          <div class="topic-desc">Стратегия продвижения местного бизнеса через VK Ads: радиус, lookalike, ретаргет.</div>
+          <span class="topic-cat cat-Perf">Performance</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~900 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="Performance" data-id="19">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Реклама в Telegram: каналы, Telegram Ads, закупка у авторов</div>
+          <div class="topic-desc">Три канала рекламы в Telegram, сравнение CPM и CAC, что работает для разных ниш.</div>
+          <span class="topic-cat cat-Perf">Performance</span>
+        </div>
+        <div class="topic-priority priority-m">Средний</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~600 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="Performance" data-id="20">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">ROAS vs ROI: как правильно считать эффективность рекламы</div>
+          <div class="topic-desc">Разница между метриками, как считать с учётом маржи, когда ROAS врёт и что использовать вместо.</div>
+          <span class="topic-cat cat-Perf">Performance</span>
+        </div>
+        <div class="topic-priority priority-m">Средний</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~200 зап/мес</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BACKLOG: НИШИ -->
+  <div class="section-group">
+    <div class="group-title">Нишевые статьи</div>
+    <div class="section-header"><span></span><span>Тема</span><span>Категория</span><span>Приоритет</span><span>Статус</span></div>
+    <div class="topics-list">
+
+      <div class="topic-row" data-cat="Ниши" data-id="21">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Маркетинг для строительной компании: длинный цикл сделки, репутация, лиды</div>
+          <div class="topic-desc">SEO + контент для строителей, SERM, работа с Яндекс Картами и агрегаторами.</div>
+          <span class="topic-cat cat-Nishi">Ниши</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~400 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="Ниши" data-id="22">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">SMM для медицинской клиники: ограничения, форматы, доверие</div>
+          <div class="topic-desc">Что нельзя публиковать по закону, какие форматы строят доверие, как работать с отзывами.</div>
+          <span class="topic-cat cat-Nishi">Ниши</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~350 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="Ниши" data-id="23">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Как продвигать юридическую фирму: SEO, контент, репутация</div>
+          <div class="topic-desc">Особенности ниши: длинный цикл, высокий чек, конкурентная выдача. Стратегия на 6–12 месяцев.</div>
+          <span class="topic-cat cat-Nishi">Ниши</span>
+        </div>
+        <div class="topic-priority priority-m">Средний</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~250 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="Ниши" data-id="24">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Маркетинг для образовательного проекта: воронка, контент, retention</div>
+          <div class="topic-desc">EdTech-маркетинг: привлечение в бесплатные материалы, конверсия в платные курсы, снижение оттока студентов.</div>
+          <span class="topic-cat cat-Nishi">Ниши</span>
+        </div>
+        <div class="topic-priority priority-m">Средний</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~300 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="Ниши" data-id="25">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">SMM для бьюти-мастера-одиночки: без бюджета, только телефон</div>
+          <div class="topic-desc">Контент-стратегия для мастера без SMM-специалиста. Что снимать, когда публиковать, как работать с отзывами.</div>
+          <span class="topic-cat cat-Nishi">Ниши</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~600 зап/мес</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BACKLOG: SEO / ОБЩЕЕ -->
+  <div class="section-group">
+    <div class="group-title">SEO и аналитика</div>
+    <div class="section-header"><span></span><span>Тема</span><span>Категория</span><span>Приоритет</span><span>Статус</span></div>
+    <div class="topics-list">
+
+      <div class="topic-row" data-cat="AI" data-id="26">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">SEO в 2026: как AI меняет поисковую выдачу и что с этим делать</div>
+          <div class="topic-desc">AI Overviews в Google, нейро-поиск в Яндексе, что оптимизировать когда есть AI-резюме над результатами.</div>
+          <span class="topic-cat cat-AI">AI</span>
+        </div>
+        <div class="topic-priority priority-h">Высокий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~800 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="Performance" data-id="27">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Яндекс Метрика 3.0: как читать отчёты и принимать решения</div>
+          <div class="topic-desc">Практический гайд по Метрике: цели, вебвизор, когортный анализ. Для маркетологов без аналитического образования.</div>
+          <span class="topic-cat cat-Perf">Performance</span>
+        </div>
+        <div class="topic-priority priority-m">Средний</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~1100 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="AI" data-id="28">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Brand Analytics и мониторинг репутации в 2026</div>
+          <div class="topic-desc">Как отслеживать упоминания, работать с SERM, отвечать на отзывы системно. Инструменты и процессы.</div>
+          <span class="topic-cat cat-AI">AI</span>
+        </div>
+        <div class="topic-priority priority-m">Средний</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~200 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="Performance" data-id="29">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Маркетинговая аналитика без аналитика: дашборд в Google Sheets</div>
+          <div class="topic-desc">Как собрать единый дашборд из рекламных кабинетов, CRM и сайта в Google Таблицы — шаблон.</div>
+          <span class="topic-cat cat-Perf">Performance</span>
+        </div>
+        <div class="topic-priority priority-l">Низкий</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~150 зап/мес</div>
+      </div>
+
+      <div class="topic-row" data-cat="SMM" data-id="30">
+        <div class="topic-check"></div>
+        <div class="topic-content">
+          <div class="topic-title">Контент-маркетинг для B2B: как строить длинный цикл сделки</div>
+          <div class="topic-desc">Воронка контента для B2B: статьи на Awareness → case studies на Decision → email retention после сделки.</div>
+          <span class="topic-cat cat-SMM">SMM</span>
+        </div>
+        <div class="topic-priority priority-m">Средний</div>
+        <div class="topic-status status-todo">—</div>
+        <div class="topic-vol">~300 зап/мес</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+// State: which articles are done
+const doneIds = new Set([1,2,3,4]);
+
+// Toggle done on click
+document.querySelectorAll('.topic-row').forEach(row => {
+  row.addEventListener('click', () => {
+    const id = +row.dataset.id;
+    if(doneIds.has(id)){doneIds.delete(id);row.classList.remove('done');row.querySelector('.topic-check').textContent='';}
+    else{doneIds.add(id);row.classList.add('done');row.querySelector('.topic-check').textContent='✓';}
+    updateStats();
+  });
+});
+
+// Filter buttons
+const filterBtns = document.querySelectorAll('.filter-btn');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    document.querySelectorAll('.topic-row').forEach(row => {
+      if(cat === 'all' || row.dataset.cat === cat) row.classList.remove('hidden');
+      else row.classList.add('hidden');
+    });
+  });
+});
+
+function updateStats(){
+  const total = document.querySelectorAll('.topic-row').length;
+  const done = doneIds.size;
+  const pct = Math.round(done/total*100);
+  document.getElementById('cnt-done').textContent = done;
+  document.getElementById('cnt-total').textContent = total;
+  document.getElementById('cnt-pct').textContent = pct + '%';
+  document.getElementById('prog-label').textContent = `${done} из ${total} статей написано`;
+  document.getElementById('prog-fill').style.width = pct + '%';
+}
+
+// Persist state in localStorage
+function saveState(){localStorage.setItem('blog-checklist-v1', JSON.stringify([...doneIds]));}
+function loadState(){
+  try{
+    const stored = JSON.parse(localStorage.getItem('blog-checklist-v1')||'[]');
+    stored.forEach(id => {
+      doneIds.add(id);
+      const row = document.querySelector(`.topic-row[data-id="${id}"]`);
+      if(row){row.classList.add('done');row.querySelector('.topic-check').textContent='✓';}
+    });
+    updateStats();
+  }catch(e){}
+}
+document.querySelectorAll('.topic-row').forEach(row => {
+  row.addEventListener('click', saveState);
+});
+loadState();
+</script>
+</body>
+</html>

@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Цены на маркетинг — 3 сценария для каждой услуги | THNKFOR.ME</title>
+    <link rel="canonical" href="https://thnkfor.me/pricing/">
+    <meta property="og:title" content="Цены на маркетинг — 3 сценария для каждой услуги | THNKFOR.ME">
+<meta name="description" content="Прозрачные цены на маркетинг: три сценария для каждой из 8 услуг. Рекламный бюджет — всегда отдельно.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@keyframes b-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:100;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#fff;}
+.header-logo .dot{color:#FF3B00;}.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:32px;}
+.header-nav a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);transition:color .15s;}
+.header-nav a:hover,.header-nav a.active{color:#fff;}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#fff;padding:10px 20px;transition:background .15s;}
+.header-cta:hover{background:#fff;color:#0A0A0A;}
+
+/* HERO */
+.hero{background:#0A0A0A;padding:80px 48px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.hero-meta{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:48px;}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;}
+.hero-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(40px,5vw,68px);letter-spacing:-0.04em;line-height:0.95;color:#fff;}
+.hero-h1 span{color:#FF3B00;}
+.hero-right{display:flex;flex-direction:column;gap:24px;}
+.hero-desc{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.6;max-width:420px;}
+.hero-desc strong{color:#fff;font-weight:500;}
+
+/* LEGEND */
+.legend{background:#111;padding:16px 48px;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:40px;flex-wrap:wrap;}
+.legend-item{display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:0.06em;}
+.legend-dot{width:3px;height:32px;flex-shrink:0;}
+.ld-1{background:#FF3B00;}
+.ld-2{background:#3A7BD5;}
+.ld-3{background:#2EA84E;}
+
+/* SERVICE BLOCK */
+.service-block{border-bottom:1px solid rgba(0,0,0,0.08);background:#fff;}
+.service-block:nth-child(even){background:#F8F8F8;}
+
+.service-header{padding:40px 48px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:32px;}
+.service-num{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#FF3B00;letter-spacing:0.14em;margin-bottom:8px;}
+.service-name{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(20px,2.5vw,28px);letter-spacing:-0.03em;margin-bottom:4px;}
+.service-desc{font-size:13px;color:#777;line-height:1.5;max-width:480px;margin-top:8px;}
+.market-ref{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#888;background:#fff;border:1px solid rgba(0,0,0,0.08);padding:12px 16px;line-height:1.7;flex-shrink:0;max-width:240px;}
+.service-block:nth-child(even) .market-ref{background:#F8F8F8;}
+.market-ref strong{color:#0A0A0A;font-weight:500;display:block;margin-bottom:4px;font-size:9.5px;text-transform:uppercase;letter-spacing:0.08em;}
+
+/* SCENARIOS */
+.scenarios{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin:24px 48px 40px;border:1px solid rgba(0,0,0,0.08);}
+.scenario{position:relative;border-right:1px solid rgba(0,0,0,0.08);}
+.scenario:last-child{border-right:none;}
+.sc-stripe{position:absolute;top:0;left:0;right:0;height:3px;}
+.s1{background:#FF3B00;}
+.s2{background:#3A7BD5;}
+.s3{background:#2EA84E;}
+.scenario-inner{padding:24px 24px 28px;}
+.sc-num{font-family:'IBM Plex Mono',monospace;font-size:9px;color:#888;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;}
+.sc-name{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.02em;margin-bottom:16px;}
+.sc-price{padding:14px 0;border-top:1px solid rgba(0,0,0,0.06);border-bottom:1px solid rgba(0,0,0,0.06);margin-bottom:16px;}
+.sc-price-main{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:500;letter-spacing:-0.02em;}
+.p-orange{color:#FF3B00;}
+.p-blue{color:#3A7BD5;}
+.p-green{color:#2EA84E;}
+.sc-price-sub{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#aaa;margin-top:3px;}
+.sc-for{font-size:12px;color:#555;line-height:1.5;margin-bottom:12px;font-style:italic;}
+.inc-label{font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#bbb;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
+.inc-list{list-style:none;display:flex;flex-direction:column;gap:5px;}
+.inc-list li{font-size:12px;color:#333;line-height:1.45;padding-left:14px;position:relative;}
+.inc-list li::before{content:'·';position:absolute;left:0;color:#FF3B00;font-weight:700;font-size:14px;line-height:1.2;}
+.sc-note{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;color:#bbb;padding-top:10px;border-top:1px dashed rgba(0,0,0,0.08);}
+
+/* SUMMARY TABLE */
+.summary-section{padding:64px 48px;border-top:1px solid rgba(0,0,0,0.1);}
+.section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#666;margin-bottom:32px;display:flex;align-items:center;gap:16px;}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(0,0,0,0.1);}
+.summary-h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(22px,3vw,36px);letter-spacing:-0.03em;margin-bottom:40px;}
+.sum-table{width:100%;border-collapse:collapse;}
+.sum-table th{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:12px 16px;text-align:left;background:#0A0A0A;border-right:1px solid rgba(255,255,255,0.06);}
+.sum-table th:last-child{border-right:none;}
+.sum-table td{padding:14px 16px;border-bottom:1px solid rgba(0,0,0,0.06);border-right:1px solid rgba(0,0,0,0.06);font-size:12px;vertical-align:top;line-height:1.4;background:#fff;}
+.sum-table td:last-child{border-right:none;}
+.sum-table tr:hover td{background:#FAFAFA;}
+.sc-tag{display:inline-block;padding:2px 8px;font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:500;}
+.tag-month{background:#E8F4E8;color:#1A7A3C;}
+.tag-setup{background:#E0E8F8;color:#1A5CA0;}
+.tag-mixed{background:#FFF0E0;color:#A04010;}
+.sum-name{font-weight:500;font-size:13px;}
+.sum-price{font-family:'IBM Plex Mono',monospace;font-size:11px;margin-top:2px;}
+.sum-c1{color:#FF3B00;}.sum-c2{color:#3A7BD5;}.sum-c3{color:#2EA84E;}
+.sum-sc-name{font-weight:500;}
+
+/* NOTES */
+.notes-bar{margin:0 48px 0;padding:20px 0;font-size:12px;color:#666;line-height:1.6;}
+.notes-bar strong{color:#0A0A0A;font-weight:500;}
+
+/* CTA */
+.cta-bar{background:#0A0A0A;padding:64px 48px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.cta-bar h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(22px,3vw,40px);letter-spacing:-0.03em;color:#fff;line-height:1.1;max-width:520px;}
+.cta-bar h2 span{color:#FF3B00;}
+.cta-buttons{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap;}
+.btn{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;padding:16px 32px;border:none;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:6px;text-decoration:none;}
+.btn-accent{background:#FF3B00;color:#fff;}.btn-accent:hover{background:#fff;color:#0A0A0A;}
+.btn-outline-light{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.2);}.btn-outline-light:hover{border-color:#fff;}
+
+/* FOOTER */
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#fff;margin-bottom:16px;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:24px;}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;}
+.footer-links a:hover{color:#fff;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:0.06em;}
+
+/* ═══ UNIFIED SITE HEADER + FOOTER ═══ */
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,59,0,0);}60%{box-shadow:0 0 0 6px rgba(255,59,0,0.18);}}
+.site-header{position:sticky!important;top:0!important;z-index:200!important;background:#0A0A0A!important;border-bottom:1px solid rgba(255,255,255,0.08)!important;display:block!important;padding:0!important;height:auto!important;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item > span:hover,.nav-item:hover > a,.nav-item:hover > span{color:#FFFFFF;}
+.nav-item > a.active,.nav-item > span.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover,.header-nav .header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;box-shadow:none;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid!important;grid-template-columns:1fr 1fr 1fr 1fr!important;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" / loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "url": "https://thnkfor.me/pricing/",
+      "name": "Цены на маркетинг — 3 сценария для каждой услуги | THNKFOR.ME",
+      "description": "Прозрачные цены на маркетинг: три сценария для каждой из 8 услуг. Рекламный бюджет — всегда отдельно."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://thnkfor.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Тарифы",
+          "item": "https://thnkfor.me/pricing/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="../services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="../services/smm/">SMM и соцсети</a>
+          <a href="../services/targeting/">Таргетированная реклама</a>
+          <a href="../services/direct/">Яндекс Директ</a>
+          <div class="nav-subitem">
+          <a href="../services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+          <div class="nav-subdropdown">
+            <a href="../services/content-machine/restaurant/">Для ресторанов</a>
+            <a href="../services/content-machine/beauty/">Для салонов красоты</a>
+            <a href="../services/content-machine/ecom/">Для интернет-магазинов</a>
+            <a href="../services/content-machine/marketplace/">Для маркетплейсов</a>
+            <a href="../services/content-machine/fitness/">Для фитнеса</a>
+            <a href="../services/content-machine/construction/">Для строительства</a>
+          </div>
+        </div>
+          <a href="../services/video/">Видеопроизводство</a>
+          <a href="../services/reputation/">Управление репутацией</a>
+          <a href="../services/seo/">Продвижение в поиске</a>
+          <a href="../services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="../niches/restaurants/">Рестораны</a>
+          <a href="../niches/beauty/">Салоны красоты</a>
+          <a href="../niches/clinic/">Медицина</a>
+          <a href="../niches/fitness/">Фитнес</a>
+          <a href="../niches/saas/">IT и SaaS</a>
+          <a href="../niches/ecommerce-fashion/">E-commerce</a>
+          <a href="../niches/realestate/">Недвижимость</a>
+          <a href="../niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../cases/">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="../cases/werent/">WeRent — Content Machine</a>
+          <a href="../cases/tennispoint/">Tennis Point — бот новинок</a>
+          <a href="../cases/4room/">4room.studio — три AI-системы</a>
+          <a href="../cases/studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="../cases/">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../blog/">Блог</a>
+        <div class="nav-dropdown">
+          <a href="../blog/ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="../blog/content-factory/">Контент-завод</a>
+          <a href="../blog/midjourney-business/">Midjourney для бизнеса</a>
+          <a href="../blog/prompt-engineering/">Prompt Engineering</a>
+          <a href="../blog/n8n-vs-make/">n8n vs Make</a>
+          <a href="../blog/seo-ai-2026/">SEO и AI 2026</a>
+          <a href="../blog/">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="active">Цены</a>
+      </div>
+      <div class="nav-item">
+        <a href="../about/">О нас</a>
+      </div>
+      <a href="../contacts/" class="header-cta">Обсудить проект</a>
+    
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="../services/smm/" class="header-pill">01 · SMM</a>
+    <a href="../services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="../services/direct/" class="header-pill">03 · Директ</a>
+    <a href="../services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="../services/video/" class="header-pill">05 · Видео</a>
+    <a href="../services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="../services/seo/" class="header-pill">07 · SEO</a>
+    <a href="../services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-meta">THNKFOR.ME · Цены · 8 направлений × 3 сценария</div>
+  <div class="hero-grid">
+    <h1 class="hero-h1">Прозрачные<br>цены.<br>Три<br><span>сценария</span><br>для каждого.</h1>
+    <div class="hero-right">
+      <p class="hero-desc">
+        Каждая услуга — три варианта работы по логике задачи.
+        <strong>Рекламный бюджет всегда отдельно.</strong>
+        Финальная стоимость — после разбора вашей ситуации.
+      </p>
+      <p class="hero-desc">
+        Дешевле крупного агентства.<br>
+        Быстрее фрилансера.<br>
+        AI компенсирует разницу объёмом.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot ld-1"></div>Сценарий 1 — точечный запуск</div>
+  <div class="legend-item"><div class="legend-dot ld-2"></div>Сценарий 2 — рабочая система</div>
+  <div class="legend-item"><div class="legend-dot ld-3"></div>Сценарий 3 — полная экосистема</div>
+</div>
+
+
+<!-- ── 01 SMM ── -->
+<div class="service-block" id="smm">
+  <div class="service-header">
+    <div>
+      <div class="service-num">01_ SMM и ведение соцсетей</div>
+      <div class="service-name">SMM и ведение соцсетей</div>
+      <p class="service-desc">Стратегия, контент-план, тексты, AI-визуалы, публикации. ВКонтакте, Telegram, Instagram*, TikTok, Pinterest, Яндекс Дзен.</p>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок · SMM Москва</strong>
+      Агентство: 54–195 000 ₽/мес<br>
+      (10–30 постов, 1–2 платформы)<br>
+      Фрилансер: 24–45 000 ₽/мес
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="sc-stripe s1"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 1</div>
+        <div class="sc-name">Голос</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-orange">от 22 000 ₽/мес</div>
+          <div class="sc-price-sub">1 платформа · 20 постов</div>
+        </div>
+        <div class="sc-for">Один канал работает стабильно. AI генерирует тексты и визуалы, человек контролирует.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>1 платформа (Instagram или Telegram)</li>
+          <li>20 постов/мес + контент-план</li>
+          <li>AI-тексты + AI-визуалы</li>
+          <li>Ежемесячный отчёт</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s2"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 2</div>
+        <div class="sc-name">Поток</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-blue">от 38 000 ₽/мес</div>
+          <div class="sc-price-sub">2 платформы · 30 постов</div>
+        </div>
+        <div class="sc-for">Постоянный контент-поток на двух площадках с аналитикой роста.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>2 платформы</li>
+          <li>30 постов + Stories + Reels-брифы</li>
+          <li>AI-визуалы под каждый пост</li>
+          <li>Отчёт + рекомендации по росту</li>
+          <li>Стратегия (разово на старте)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s3"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 3</div>
+        <div class="sc-name">Штаб</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-green">от 58 000 ₽/мес</div>
+          <div class="sc-price-sub">3 платформы · 45 постов</div>
+        </div>
+        <div class="sc-for">Максимальный охват: бренд-голос на всех площадках, производство видео-сценариев.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>3 платформы (в т.ч. ВКонтакте)</li>
+          <li>45 постов + полный видео-план</li>
+          <li>AI-сценарии Reels + раскадровки</li>
+          <li>Полная аналитика + стратегия</li>
+          <li>Ежемесячный созвон-разбор</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 02 ТАРГЕТ ── -->
+<div class="service-block" id="target">
+  <div class="service-header">
+    <div>
+      <div class="service-num">02_ Таргетированная реклама</div>
+      <div class="service-name">Таргетированная реклама</div>
+      <p class="service-desc">ВКонтакте, myTarget, Telegram Ads. AI анализирует аудитории в реальном времени и генерирует креативы.</p>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок · Таргет Москва</strong>
+      Ведение: 36–75 000 ₽/мес<br>
+      Настройка: 60–135 000 ₽ разово<br>
+      Рекламный бюджет — отдельно
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="sc-stripe s1"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 1</div>
+        <div class="sc-name">Запуск</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-orange">от 30 000 ₽</div>
+          <div class="sc-price-sub">разово · настройка + первый месяц</div>
+        </div>
+        <div class="sc-for">Быстрый старт: настроить, запустить, посмотреть что работает.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Настройка кабинета + пикселя</li>
+          <li>До 3 аудиторий</li>
+          <li>AI-креативы (5 вариантов)</li>
+          <li>Ведение 1 месяц</li>
+          <li>Отчёт по итогам</li>
+        </ul>
+        <div class="sc-note">+ рекламный бюджет от 15 000 ₽/мес</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s2"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 2</div>
+        <div class="sc-name">Машина</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-blue">от 18 000 ₽/мес</div>
+          <div class="sc-price-sub">+ настройка 20 000 ₽ разово</div>
+        </div>
+        <div class="sc-for">Ежемесячное ведение: оптимизация ставок, новые креативы, A/B-тесты.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Ведение действующих кампаний</li>
+          <li>Еженедельная оптимизация ставок</li>
+          <li>2–4 новых AI-креатива/мес</li>
+          <li>A/B-тесты аудиторий</li>
+          <li>Еженедельные отчёты</li>
+        </ul>
+        <div class="sc-note">+ рекламный бюджет от 20 000 ₽/мес</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s3"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 3</div>
+        <div class="sc-name">Полигон</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-green">от 30 000 ₽/мес</div>
+          <div class="sc-price-sub">+ настройка 35 000 ₽ разово</div>
+        </div>
+        <div class="sc-for">Полный контроль воронки: таргет + ретаргет + сквозная аналитика по заявкам.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Таргет + ретаргетинг (look-alike)</li>
+          <li>Неограниченные AI-креативы</li>
+          <li>Интеграция с CRM</li>
+          <li>Сквозная аналитика ROAS</li>
+          <li>Созвон-разбор 2×/мес</li>
+        </ul>
+        <div class="sc-note">+ рекламный бюджет от 30 000 ₽/мес</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 03 ЯНДЕКС ДИРЕКТ ── -->
+<div class="service-block" id="direct">
+  <div class="service-header">
+    <div>
+      <div class="service-num">03_ Яндекс Директ</div>
+      <div class="service-name">Яндекс Директ</div>
+      <p class="service-desc">Контекстная реклама: поиск и РСЯ. AI собирает семантику, пишет объявления и оптимизирует ставки. Трафик из поиска с первых дней.</p>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок · Директ Москва</strong>
+      Настройка: 60–150 000 ₽ разово<br>
+      Ведение: 45–75 000 ₽/мес<br>
+      Рекламный бюджет — отдельно
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="sc-stripe s1"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 1</div>
+        <div class="sc-name">Калибровка</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-orange">от 35 000 ₽</div>
+          <div class="sc-price-sub">разово · настройка под ключ</div>
+        </div>
+        <div class="sc-for">Настройка кампаний с нуля — семантика, объявления, ставки — и запуск.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Сбор и кластеризация семантики</li>
+          <li>Написание объявлений (AI + ручная проверка)</li>
+          <li>Настройка аудиторий и стратегий ставок</li>
+          <li>Настройка целей в Яндекс Метрике</li>
+          <li>Запуск + первая неделя ведения</li>
+        </ul>
+        <div class="sc-note">+ рекламный бюджет от 20 000 ₽/мес</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s2"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 2</div>
+        <div class="sc-name">Орбита</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-blue">от 18 000 ₽/мес</div>
+          <div class="sc-price-sub">+ настройка 25 000 ₽ разово</div>
+        </div>
+        <div class="sc-for">Постоянная оптимизация: ставки, минус-слова, новые объявления каждый месяц.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Еженедельная оптимизация ставок</li>
+          <li>Расширение и чистка семантики</li>
+          <li>A/B-тест объявлений</li>
+          <li>Отчёт по стоимости лида</li>
+        </ul>
+        <div class="sc-note">+ рекламный бюджет от 20 000 ₽/мес</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s3"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 3</div>
+        <div class="sc-name">Доминанта</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-green">от 28 000 ₽/мес</div>
+          <div class="sc-price-sub">+ настройка 40 000 ₽ разово</div>
+        </div>
+        <div class="sc-for">Весь трафик под контролем: поиск + РСЯ + ретаргетинг + сквозная аналитика.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Поиск + РСЯ + ретаргетинг</li>
+          <li>Интеграция с CRM (сделки из Директа)</li>
+          <li>Сквозная аналитика ROMI</li>
+          <li>Яндекс Аудитории (look-alike)</li>
+          <li>Созвон-разбор 2×/мес</li>
+        </ul>
+        <div class="sc-note">+ рекламный бюджет от 30 000 ₽/мес</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 04 КОНТЕНТ ЗАВОД ── -->
+<div class="service-block" id="content">
+  <div class="service-header">
+    <div>
+      <div class="service-num">04_ Контент завод · AI</div>
+      <div class="service-name">Контент завод · AI</div>
+      <p class="service-desc">AI-конвейер, обученный на вашем бренде: тексты, визуалы и публикации без участия вашей команды.</p>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок · Контент-автоматизация</strong>
+      B2B контент-фабрика: 240 000 setup<br>
+      + 45 000 ₽/мес сопровождение<br>
+      AI-позиция на рынке свободна
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="sc-stripe s1"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 1</div>
+        <div class="sc-name">Конвейер</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-orange">от 45 000 ₽ setup</div>
+          <div class="sc-price-sub">+ от 9 000 ₽/мес сопровождение</div>
+        </div>
+        <div class="sc-for">Одна платформа на полном автопилоте: AI пишет, система публикует.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>AI-цепочка: бриф → Claude API → текст → визуал</li>
+          <li>Автопостинг на 1 платформу</li>
+          <li>База контента в Airtable/Notion</li>
+          <li>30+ постов/мес автоматически</li>
+          <li>Сопровождение 1 мес включено</li>
+        </ul>
+        <div class="sc-note">Claude API: ~2 000–4 000 ₽/мес сверху</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s2"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 2</div>
+        <div class="sc-name">Завод</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-blue">от 75 000 ₽ setup</div>
+          <div class="sc-price-sub">+ от 15 000 ₽/мес сопровождение</div>
+        </div>
+        <div class="sc-for">Полный конвейер с петлёй согласования: генерация → ревью → публикация → аналитика.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>2–3 платформы</li>
+          <li>Цикл: генерация → флаг на ревью → автопубликация</li>
+          <li>AI-визуалы (DALL-E API)</li>
+          <li>45+ единиц контента/мес</li>
+          <li>Базовая аналитика охватов</li>
+        </ul>
+        <div class="sc-note">Claude API + генерация: ~5 000–8 000 ₽/мес сверху</div>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s3"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 3</div>
+        <div class="sc-name">Экосистема</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-green">от 120 000 ₽ setup</div>
+          <div class="sc-price-sub">+ от 22 000 ₽/мес сопровождение</div>
+        </div>
+        <div class="sc-for">Мультиплатформенный завод: все каналы, A/B контента, реактивация аудитории.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Все платформы (Instagram, TG, ВК, Pinterest, сайт)</li>
+          <li>A/B-тест форматов (что работает — масштабируется)</li>
+          <li>Реактивация: AI анализирует что не зашло</li>
+          <li>60+ единиц/мес без ограничений</li>
+          <li>Полная аналитика + ежемес. стратегия</li>
+        </ul>
+        <div class="sc-note">Платформа + API: ~8 000–12 000 ₽/мес сверху</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 05 ВИДЕО ── -->
+<div class="service-block" id="video">
+  <div class="service-header">
+    <div>
+      <div class="service-num">05_ Видеопроизводство</div>
+      <div class="service-name">Видеопроизводство</div>
+      <p class="service-desc">Reels, TikTok, Shorts. AI-монтаж, субтитры, сценарии, обложки. Регулярно, быстро, в вашем бренде.</p>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок · Видеоконтент</strong>
+      1 Reels: 24–45 000 ₽ (продакшн)<br>
+      Ежемесячное: 120–360 000 ₽/мес<br>
+      THNKFOR.ME: AI-монтаж × скорость
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="sc-stripe s1"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 1</div>
+        <div class="sc-name">Клип</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-orange">от 35 000 ₽/мес</div>
+          <div class="sc-price-sub">8 видео в месяц · 1 платформа</div>
+        </div>
+        <div class="sc-for">Регулярный поток коротких видео для одной платформы.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>8 видео/мес (Reels или TikTok)</li>
+          <li>AI-сценарии + монтаж</li>
+          <li>Автосубтитры</li>
+          <li>Обложки и превью</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s2"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 2</div>
+        <div class="sc-name">Студия</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-blue">от 55 000 ₽/мес</div>
+          <div class="sc-price-sub">12 видео · 2 платформы</div>
+        </div>
+        <div class="sc-for">Системное видеопроизводство для двух площадок с адаптацией форматов.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>12 видео/мес</li>
+          <li>Адаптация под Reels + TikTok/Shorts</li>
+          <li>AI-сценарии + монтаж + музыка</li>
+          <li>Обложки + описания + хэштеги</li>
+          <li>Аналитика просмотров</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s3"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 3</div>
+        <div class="sc-name">Канал</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-green">от 80 000 ₽/мес</div>
+          <div class="sc-price-sub">20+ видео · все платформы</div>
+        </div>
+        <div class="sc-for">Полноценный видеоканал: всё производство in-house под ключ.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>20+ видео/мес без ограничений</li>
+          <li>Все платформы (Reels, TikTok, Shorts, ВК, Pinterest, Яндекс Дзен)</li>
+          <li>Контент-стратегия под видео</li>
+          <li>A/B-тест форматов</li>
+          <li>Аналитика + ежемес. разбор</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 06 РЕПУТАЦИЯ ── -->
+<div class="service-block" id="reputation">
+  <div class="service-header">
+    <div>
+      <div class="service-num">06_ Управление репутацией</div>
+      <div class="service-name">Управление репутацией</div>
+      <p class="service-desc">SERM, мониторинг отзывов, работа с негативом. AI отвечает персонально от имени заведения за 15 минут.</p>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок · SERM / ORM</strong>
+      Мониторинг: 24–45 000 ₽/мес<br>
+      SERM + работа с отзывами: 60–150 000 ₽<br>
+      AI-ответы — конкурентов нет
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="sc-stripe s1"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 1</div>
+        <div class="sc-name">Мониторинг</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-orange">от 20 000 ₽/мес</div>
+          <div class="sc-price-sub">до 2 площадок · мониторинг + ответы</div>
+        </div>
+        <div class="sc-for">Следим за отзывами и отвечаем быстро. Без негатива без ответа.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Мониторинг до 2 площадок (Яндекс, Google)</li>
+          <li>AI-ответы на все новые отзывы</li>
+          <li>Работа с негативом (эскалация)</li>
+          <li>Ежемесячный отчёт по рейтингу</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s2"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 2</div>
+        <div class="sc-name">Защита</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-blue">от 35 000 ₽/мес</div>
+          <div class="sc-price-sub">все площадки · SERM + карты</div>
+        </div>
+        <div class="sc-for">Полный контроль репутации: карты, каталоги, поисковый образ бренда.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Мониторинг всех площадок 24/7</li>
+          <li>AI-ответы в персональном стиле бренда</li>
+          <li>Яндекс/Google карты + 2ГИС + Отзовик</li>
+          <li>SERM: вытеснение негатива в поиске</li>
+          <li>Отчёт по динамике рейтинга</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s3"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 3</div>
+        <div class="sc-name">Доминирование</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-green">от 55 000 ₽/мес</div>
+          <div class="sc-price-sub">сеть или сложная репутация</div>
+        </div>
+        <div class="sc-for">Для сетей или бизнесов с высокой репутационной нагрузкой: системная защита и рост рейтинга.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Мониторинг для сети (несколько точек)</li>
+          <li>Стратегия наращивания позитивных отзывов</li>
+          <li>Отработка кризисных сценариев</li>
+          <li>PR-контент для нейтрализации негатива</li>
+          <li>Ежемес. созвон + стратегия на следующий мес</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 07 SEO ── -->
+<div class="service-block" id="seo">
+  <div class="service-header">
+    <div>
+      <div class="service-num">07_ Продвижение в поиске</div>
+      <div class="service-name">Продвижение в поиске · SEO</div>
+      <p class="service-desc">Семантика, AI-статьи и посадочные страницы, техническое SEO. Яндекс и Google. Органика без рекламного бюджета.</p>
+    </div>
+    <div class="market-ref">
+      <strong>Рынок · SEO Москва</strong>
+      Базовое: 60–105 000 ₽/мес<br>
+      Комплексное: 150–360 000 ₽/мес<br>
+      AI-статьи: ×3 объём за ту же цену
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="sc-stripe s1"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 1</div>
+        <div class="sc-name">Старт</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-orange">от 35 000 ₽/мес</div>
+          <div class="sc-price-sub">до 10 страниц · базовый SEO</div>
+        </div>
+        <div class="sc-for">Фундамент: семантика, техническое SEO, первые AI-тексты.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Семантическое ядро (до 300 запросов)</li>
+          <li>Техническое SEO (скорость, теги, структура)</li>
+          <li>До 10 AI-оптимизированных страниц</li>
+          <li>Ежемесячный отчёт по позициям</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s2"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 2</div>
+        <div class="sc-name">Рост</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-blue">от 55 000 ₽/мес</div>
+          <div class="sc-price-sub">до 30 страниц · контент + SEO</div>
+        </div>
+        <div class="sc-for">Регулярный прирост органики: новые страницы, кластеризация, перелинковка.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Семантика + кластеризация (до 1000 запросов)</li>
+          <li>До 30 страниц AI-контента/мес</li>
+          <li>Перелинковка + внутренняя оптимизация</li>
+          <li>Еженедельные инсайты по позициям</li>
+          <li>Созвон-разбор 1×/мес</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario">
+      <div class="sc-stripe s3"></div>
+      <div class="scenario-inner">
+        <div class="sc-num">Сценарий 3</div>
+        <div class="sc-name">Доминанта</div>
+        <div class="sc-price">
+          <div class="sc-price-main p-green">от 80 000 ₽/мес</div>
+          <div class="sc-price-sub">без лимита страниц · полный SEO</div>
+        </div>
+        <div class="sc-for">SEO-отдел на аутсорсе: весь цикл от стратегии до контентной экспансии.</div>
+        <div class="inc-label">Что входит</div>
+        <ul class="inc-list">
+          <li>Стратегия органического роста на квартал</li>
+          <li>Без лимита страниц и статей</li>
+          <li>Внешняя перелинковка + PR-материалы</li>
+          <li>AI-тексты для карточек товаров и лендингов</li>
+          <li>Полная аналитика трафика + конверсий</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── 08 КОМПЛЕКС ── -->
+<div class="service-block" id="complex" style="background:#0A0A0A;">
+  <div class="service-header" style="padding-bottom:0;">
+    <div>
+      <div class="service-num" style="color:#FF3B00;">08_ · Флагман</div>
+      <div class="service-name" style="color:#fff;">Комплексный маркетинг</div>
+      <p class="service-desc" style="color:rgba(255,255,255,0.45);">Несколько направлений под единой стратегией. Один аккаунт-менеджер. Единая аналитика. Для тех, кто строит систему надолго.</p>
+    </div>
+    <div class="market-ref" style="background:#141414;border-color:rgba(255,255,255,0.08);color:rgba(255,255,255,0.4);">
+      <strong style="color:rgba(255,255,255,0.6);">Рынок · Комплекс</strong>
+      Full-service агентство: от 450 000 ₽<br>
+      THNKFOR.ME: AI снижает себестоимость<br>
+      и увеличивает объём производства
+    </div>
+  </div>
+  <div class="scenarios" style="border-color:rgba(255,255,255,0.08);">
+    <div class="scenario" style="background:#111;border-right-color:rgba(255,255,255,0.06);">
+      <div class="sc-stripe s1"></div>
+      <div class="scenario-inner">
+        <div class="sc-num" style="color:rgba(255,255,255,0.3);">Сценарий 1</div>
+        <div class="sc-name" style="color:#fff;">Связка</div>
+        <div class="sc-price" style="border-color:rgba(255,255,255,0.08);">
+          <div class="sc-price-main p-orange">от 75 000 ₽/мес</div>
+          <div class="sc-price-sub" style="color:rgba(255,255,255,0.3);">3 направления на выбор</div>
+        </div>
+        <div class="sc-for" style="color:rgba(255,255,255,0.45);">Три взаимосвязанных направления с единой стратегией.</div>
+        <div class="inc-label" style="color:rgba(255,255,255,0.25);">Что входит</div>
+        <ul class="inc-list">
+          <li style="color:rgba(255,255,255,0.7);">Выбор 3 из 6 направлений</li>
+          <li style="color:rgba(255,255,255,0.7);">Единая контент-стратегия</li>
+          <li style="color:rgba(255,255,255,0.7);">1 аккаунт-менеджер</li>
+          <li style="color:rgba(255,255,255,0.7);">Сводный дашборд аналитики</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario" style="background:#111;border-right-color:rgba(255,255,255,0.06);">
+      <div class="sc-stripe s2"></div>
+      <div class="scenario-inner">
+        <div class="sc-num" style="color:rgba(255,255,255,0.3);">Сценарий 2</div>
+        <div class="sc-name" style="color:#fff;">Система</div>
+        <div class="sc-price" style="border-color:rgba(255,255,255,0.08);">
+          <div class="sc-price-main p-blue">от 120 000 ₽/мес</div>
+          <div class="sc-price-sub" style="color:rgba(255,255,255,0.3);">5 направлений · полный охват</div>
+        </div>
+        <div class="sc-for" style="color:rgba(255,255,255,0.45);">SMM + Таргет + Контент завод + SEO + Репутация.</div>
+        <div class="inc-label" style="color:rgba(255,255,255,0.25);">Что входит</div>
+        <ul class="inc-list">
+          <li style="color:rgba(255,255,255,0.7);">5 направлений в единой системе</li>
+          <li style="color:rgba(255,255,255,0.7);">AI-конвейер под ключ</li>
+          <li style="color:rgba(255,255,255,0.7);">Автоматизация отчётности</li>
+          <li style="color:rgba(255,255,255,0.7);">Созвон 2×/мес + квартальная стратегия</li>
+          <li style="color:rgba(255,255,255,0.7);">Приоритетная поддержка</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scenario" style="background:#111;border-right:none;">
+      <div class="sc-stripe s3"></div>
+      <div class="scenario-inner">
+        <div class="sc-num" style="color:rgba(255,255,255,0.3);">Сценарий 3</div>
+        <div class="sc-name" style="color:#fff;">Экосистема</div>
+        <div class="sc-price" style="border-color:rgba(255,255,255,0.08);">
+          <div class="sc-price-main p-green">от 200 000 ₽/мес</div>
+          <div class="sc-price-sub" style="color:rgba(255,255,255,0.3);">все 6 направлений + Видео</div>
+        </div>
+        <div class="sc-for" style="color:rgba(255,255,255,0.45);">Весь маркетинг под одной крышей. Максимальный охват, минимум ручной работы.</div>
+        <div class="inc-label" style="color:rgba(255,255,255,0.25);">Что входит</div>
+        <ul class="inc-list">
+          <li style="color:rgba(255,255,255,0.7);">Все 6 направлений (включая Видео)</li>
+          <li style="color:rgba(255,255,255,0.7);">Персональный директор по маркетингу</li>
+          <li style="color:rgba(255,255,255,0.7);">AI-автоматизация всех процессов</li>
+          <li style="color:rgba(255,255,255,0.7);">Еженедельные AI-инсайты + алерты</li>
+          <li style="color:rgba(255,255,255,0.7);">Полная стратегия и аналитика</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SUMMARY TABLE -->
+<section class="summary-section">
+  <div class="section-label">// 01 · Сводная таблица</div>
+  <h2 class="summary-h2">Все сценарии — в одном месте</h2>
+  <div style="overflow-x:auto;border:1px solid rgba(0,0,0,0.08);">
+    <table class="sum-table">
+      <thead>
+        <tr>
+          <th style="width:180px;">Направление</th>
+          <th>Сценарий 1</th>
+          <th>Сценарий 2</th>
+          <th>Сценарий 3</th>
+          <th style="width:120px;">Тип оплаты</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="sum-name">SMM</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#bbb;">ведение соцсетей</div></td>
+          <td><span class="sum-sc-name sum-c1">Голос</span><div class="sum-price">от 22 000 ₽/мес</div></td>
+          <td><span class="sum-sc-name sum-c2">Поток</span><div class="sum-price">от 38 000 ₽/мес</div></td>
+          <td><span class="sum-sc-name sum-c3">Штаб</span><div class="sum-price">от 58 000 ₽/мес</div></td>
+          <td><span class="sc-tag tag-month">ежемесячно</span></td>
+        </tr>
+        <tr>
+          <td><div class="sum-name">Таргет</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#bbb;">ВК · myTarget · TG Ads</div></td>
+          <td><span class="sum-sc-name sum-c1">Запуск</span><div class="sum-price">от 30 000 ₽ разово</div></td>
+          <td><span class="sum-sc-name sum-c2">Машина</span><div class="sum-price">20k setup + от 18k/мес</div></td>
+          <td><span class="sum-sc-name sum-c3">Полигон</span><div class="sum-price">35k setup + от 30k/мес</div></td>
+          <td><span class="sc-tag tag-setup">setup</span><br><span class="sc-tag tag-month" style="margin-top:3px;">+ ежемес.</span></td>
+        </tr>
+        <tr>
+          <td><div class="sum-name">Яндекс Директ</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#bbb;">поиск · РСЯ · ретаргет</div></td>
+          <td><span class="sum-sc-name sum-c1">Калибровка</span><div class="sum-price">от 35 000 ₽ разово</div></td>
+          <td><span class="sum-sc-name sum-c2">Орбита</span><div class="sum-price">25k setup + от 18k/мес</div></td>
+          <td><span class="sum-sc-name sum-c3">Доминанта</span><div class="sum-price">40k setup + от 28k/мес</div></td>
+          <td><span class="sc-tag tag-setup">setup</span><br><span class="sc-tag tag-month" style="margin-top:3px;">+ ежемес.</span></td>
+        </tr>
+        <tr>
+          <td><div class="sum-name">Контент завод</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#bbb;">AI-автопилот</div></td>
+          <td><span class="sum-sc-name sum-c1">Конвейер</span><div class="sum-price">45k setup + от 9k/мес</div></td>
+          <td><span class="sum-sc-name sum-c2">Завод</span><div class="sum-price">75k setup + от 15k/мес</div></td>
+          <td><span class="sum-sc-name sum-c3">Экосистема</span><div class="sum-price">120k setup + от 22k/мес</div></td>
+          <td><span class="sc-tag tag-setup">setup</span><br><span class="sc-tag tag-month" style="margin-top:3px;">+ ежемес.</span></td>
+        </tr>
+        <tr>
+          <td><div class="sum-name">Видео</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#bbb;">Reels · TikTok · Shorts</div></td>
+          <td><span class="sum-sc-name sum-c1">Клип</span><div class="sum-price">от 35 000 ₽/мес</div></td>
+          <td><span class="sum-sc-name sum-c2">Студия</span><div class="sum-price">от 55 000 ₽/мес</div></td>
+          <td><span class="sum-sc-name sum-c3">Канал</span><div class="sum-price">от 80 000 ₽/мес</div></td>
+          <td><span class="sc-tag tag-month">ежемесячно</span></td>
+        </tr>
+        <tr>
+          <td><div class="sum-name">Репутация</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#bbb;">SERM · отзывы · ORM</div></td>
+          <td><span class="sum-sc-name sum-c1">Мониторинг</span><div class="sum-price">от 20 000 ₽/мес</div></td>
+          <td><span class="sum-sc-name sum-c2">Защита</span><div class="sum-price">от 35 000 ₽/мес</div></td>
+          <td><span class="sum-sc-name sum-c3">Доминирование</span><div class="sum-price">от 55 000 ₽/мес</div></td>
+          <td><span class="sc-tag tag-month">ежемесячно</span></td>
+        </tr>
+        <tr>
+          <td><div class="sum-name">SEO</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#bbb;">Яндекс · Google</div></td>
+          <td><span class="sum-sc-name sum-c1">Старт</span><div class="sum-price">от 35 000 ₽/мес</div></td>
+          <td><span class="sum-sc-name sum-c2">Рост</span><div class="sum-price">от 55 000 ₽/мес</div></td>
+          <td><span class="sum-sc-name sum-c3">Доминанта</span><div class="sum-price">от 80 000 ₽/мес</div></td>
+          <td><span class="sc-tag tag-month">ежемесячно</span></td>
+        </tr>
+        <tr>
+          <td><div class="sum-name">Комплекс</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#bbb;">несколько направлений</div></td>
+          <td><span class="sum-sc-name sum-c1">Связка</span><div class="sum-price">от 75 000 ₽/мес</div></td>
+          <td><span class="sum-sc-name sum-c2">Система</span><div class="sum-price">от 120 000 ₽/мес</div></td>
+          <td><span class="sum-sc-name sum-c3">Экосистема</span><div class="sum-price">от 200 000 ₽/мес</div></td>
+          <td><span class="sc-tag tag-month">ежемесячно</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="notes-bar">
+    <strong>Общие условия ·</strong>
+    Рекламный бюджет (таргет) — всегда отдельно. ·
+    Платформенные расходы (Make, Claude API) — уточняется на старте. ·
+    Все цены — минимальный «от», финальная стоимость после разбора задачи.
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-bar">
+  <h2>Не знаете какой<br>сценарий ваш?<br><span>Разберёмся вместе</span> — бесплатно.</h2>
+  <div class="cta-buttons">
+    <a href="../contacts/" class="btn btn-accent">Получить разбор</a>
+    <a href="https://t.me/anastasiia_thinkfor" class="btn btn-outline-light">Telegram →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="../" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="../services/smm/">SMM и ведение соцсетей</a>
+        <a href="../services/targeting/">Таргетированная реклама</a>
+        <a href="../services/direct/">Яндекс Директ</a>
+        <a href="../services/content-machine/">Контент завод</a>
+        <a href="../services/video/">Видеопроизводство</a>
+        <a href="../services/reputation/">Управление репутацией</a>
+        <a href="../services/seo/">Продвижение в поиске</a>
+        <a href="../services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="../niches/restaurants/">Рестораны</a>
+        <a href="../niches/beauty/">Салоны красоты</a>
+        <a href="../niches/clinic/">Медицина</a>
+        <a href="../niches/fitness/">Фитнес</a>
+        <a href="../niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="../niches/saas/">IT и SaaS</a>
+        <a href="../niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="../about/">О нас</a>
+        <a href="../cases/">Кейсы</a>
+        <a href="../blog/">Блог</a>
+        <a href="../pricing/">Цены</a><a href="../contacts/">Контакты</a>
+        <a href="../contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+</body>
+</html>

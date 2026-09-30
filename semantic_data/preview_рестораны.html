@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Рестораны — Семантика</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#F2F4F8; font-family: -apple-system, 'Segoe UI', Arial, sans-serif; font-size:12px; padding:32px; }
+.sheet { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 2px 16px rgba(0,0,0,0.10); max-width:1300px; margin:0 auto; }
+.title-row { background:#16213E; color:#fff; padding:14px 20px; font-size:15px; font-weight:700; letter-spacing:0.03em; }
+.subtitle-row { background:#2A3A5C; color:#AABBDD; padding:7px 20px; font-size:11px; font-style:italic; }
+.section-row { background:#2A3A5C; color:#fff; padding:8px 20px; font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; }
+table { width:100%; border-collapse:collapse; }
+th { background:#16213E; color:#fff; font-size:10px; font-weight:700; padding:9px 10px; text-align:left; border:1px solid #253560; letter-spacing:0.04em; }
+td { padding:8px 10px; border:1px solid #E0E6F0; vertical-align:top; color:#1A1A2E; line-height:1.4; }
+tr.alt td { background:#F0F3F8; }
+tr:not(.alt) td { background:#fff; }
+.freq { color:#AAAAAA; font-style:italic; text-align:center; }
+.tag { background:#E8EDF8; color:#2A3A5C; border-radius:4px; padding:2px 7px; font-size:10px; font-weight:600; white-space:nowrap; }
+.pos { text-align:center; font-weight:700; color:#2A3A5C; }
+.url { font-size:10px; color:#4466AA; }
+.url a { color:#4466AA; text-decoration:none; }
+.desc { color:#555; font-size:11px; }
+.pages { text-align:center; color:#2A3A5C; font-weight:600; }
+.qused { font-size:10px; color:#888; }
+.footnote { padding:10px 20px; font-size:10px; color:#AAA; font-style:italic; border-top:1px solid #E8EEF8; }
+.spacer { height:12px; background:#F8FAFD; }
+</style>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+<div class="sheet">
+  <div class="title-row">Рестораны &nbsp;·&nbsp; HoReCa &nbsp;·&nbsp; P0</div>
+  <div class="subtitle-row">Семантический анализ: запросы и конкуренты</div>
+  <div class="section-row">▸ &nbsp;Семантика — ключевые запросы</div>
+  <table>
+    <thead><tr>
+      <th style="width:28%">Запрос</th>
+      <th style="width:16%">Кластер</th>
+      <th style="width:10%">Тип</th>
+      <th style="width:12%">Поисковик</th>
+      <th style="width:10%">Частотность*</th>
+      <th style="width:10%">Кол-во рез-тов</th>
+    </tr></thead>
+    <tbody><tr class="">
+        <td>смм для ресторана</td>
+        <td><span class="tag">SMM/контент</span></td>
+        <td>SMM</td>
+        <td>Yandex, Google</td>
+        <td class="freq">—</td>
+        <td>~15000</td>
+    </tr><tr class="alt">
+        <td>продвижение ресторана в инстаграм</td>
+        <td><span class="tag">SMM/контент</span></td>
+        <td>SMM</td>
+        <td>Yandex, Google</td>
+        <td class="freq">—</td>
+        <td>~80000</td>
+    </tr><tr class="">
+        <td>маркетинговое агентство для ресторана</td>
+        <td><span class="tag">Продвижение/реклама</span></td>
+        <td>SMM</td>
+        <td>Yandex, Google</td>
+        <td class="freq">—</td>
+        <td>~25000</td>
+    </tr><tr class="alt">
+        <td>таргетированная реклама для ресторана</td>
+        <td><span class="tag">Продвижение/реклама</span></td>
+        <td>SMM</td>
+        <td>Yandex, Google</td>
+        <td class="freq">—</td>
+        <td>~12000</td>
+    </tr><tr class="">
+        <td>ведение соцсетей ресторана</td>
+        <td><span class="tag">SMM/контент</span></td>
+        <td>SMM</td>
+        <td>Yandex, Google</td>
+        <td class="freq">—</td>
+        <td>~9000</td>
+    </tr><tr class="alt">
+        <td>автоматизация ресторана чат-бот</td>
+        <td><span class="tag">Боты/AI</span></td>
+        <td>Автоматизация</td>
+        <td>Yandex, Google</td>
+        <td class="freq">—</td>
+        <td>~8000</td>
+    </tr><tr class="">
+        <td>CRM для ресторана</td>
+        <td><span class="tag">Автоматизация/CRM</span></td>
+        <td>Автоматизация</td>
+        <td>Yandex, Google</td>
+        <td class="freq">—</td>
+        <td>~20000</td>
+    </tr><tr class="alt">
+        <td>чат-бот для бронирования ресторана</td>
+        <td><span class="tag">Боты/AI</span></td>
+        <td>Автоматизация</td>
+        <td>Yandex, Google</td>
+        <td class="freq">—</td>
+        <td>~5000</td>
+    </tr><tr class="">
+        <td>telegram бот для ресторана</td>
+        <td><span class="tag">Боты/AI</span></td>
+        <td>Автоматизация</td>
+        <td>Yandex, Google</td>
+        <td class="freq">—</td>
+        <td>~6000</td>
+    </tr><tr class="alt">
+        <td>раскрутка ресторана</td>
+        <td><span class="tag">Продвижение/реклама</span></td>
+        <td>Общий</td>
+        <td>Yandex, Google</td>
+        <td class="freq">—</td>
+        <td>~35000</td>
+    </tr><tr class="">
+        <td>агентство для ресторана контент</td>
+        <td><span class="tag">SMM/контент</span></td>
+        <td>Общий</td>
+        <td>Yandex, Google</td>
+        <td class="freq">—</td>
+        <td>~10000</td>
+    </tr><tr class="alt">
+        <td>реклама ресторана Москва</td>
+        <td><span class="tag">Продвижение/реклама</span></td>
+        <td>Общий</td>
+        <td>Yandex, Google</td>
+        <td class="freq">—</td>
+        <td>~40000</td>
+    </tr></tbody>
+  </table>
+  <div class="spacer"></div>
+  <div class="section-row">▸ &nbsp;Конкуренты — первая страница выдачи</div>
+  <table>
+    <thead><tr>
+      <th style="width:4%">№</th>
+      <th style="width:10%">Домен</th>
+      <th style="width:18%">URL</th>
+      <th style="width:18%">Тайтл</th>
+      <th style="width:24%">Дескрипшн</th>
+      <th style="width:6%">Страниц</th>
+      <th style="width:14%">По запросу</th>
+    </tr></thead>
+    <tbody><tr class="">
+        <td class="pos">1</td>
+        <td><b>novikovspace.com</b></td>
+        <td class="url"><a href="https://novikovspace.com/school/smm-dlya-restoranov" target="_blank">https://novikovspace.com/school/smm-dlya-restoranov</a></td>
+        <td>СММ для ресторанов - от SMM стратегии до профессионального у…</td>
+        <td class="desc">Курсы и обучение SMM для ресторанов в Novikov Space — от стратегии до управления…</td>
+        <td class="pages">—</td>
+        <td class="qused">смм для ресторана услуги агентство</td>
+    </tr><tr class="alt">
+        <td class="pos">2</td>
+        <td><b>vc.ru</b></td>
+        <td class="url"><a href="https://vc.ru/marketing/232757-smm-dlya-restoranov-kakie-osobennosti" target="_blank">https://vc.ru/marketing/232757-smm-dlya-restoranov-kaki…</a></td>
+        <td>SMM для ресторанов: какие особенности? — Маркетинг на vc.ru</td>
+        <td class="desc">Статья о специфике SMM для ресторанного бизнеса: контент, стратегия, продвижение…</td>
+        <td class="pages">—</td>
+        <td class="qused">смм для ресторана услуги агентство</td>
+    </tr><tr class="">
+        <td class="pos">3</td>
+        <td><b>ugolek.agency</b></td>
+        <td class="url"><a href="https://ugolek.agency/smm-almaty/dlya-restoranov" target="_blank">https://ugolek.agency/smm-almaty/dlya-restoranov</a></td>
+        <td>SMM для ресторанов в Алматы - продвижение в Instagram и соцс…</td>
+        <td class="desc">Агентство Ugolek — SMM-продвижение ресторанов в Instagram и социальных сетях.</td>
+        <td class="pages">—</td>
+        <td class="qused">смм для ресторана услуги агентство</td>
+    </tr><tr class="alt">
+        <td class="pos">4</td>
+        <td><b>voropaevmedia.com</b></td>
+        <td class="url"><a href="https://voropaevmedia.com/blog/smm-dlya-restoranov-sekrety-effektivnogo-prodvizheniya-v-socialnyh-setyah" target="_blank">https://voropaevmedia.com/blog/smm-dlya-restoranov-sekr…</a></td>
+        <td>Вкусное SMM продвижение ресторана: Особенности, стратегия, к…</td>
+        <td class="desc">Секреты эффективного SMM-продвижения ресторанов в социальных сетях, стратегия и …</td>
+        <td class="pages">—</td>
+        <td class="qused">смм для ресторана услуги агентство</td>
+    </tr><tr class="">
+        <td class="pos">5</td>
+        <td><b>horecadigital.ru</b></td>
+        <td class="url"><a href="https://horecadigital.ru/tpost/uhrcj599v1-smm-agentstvo-dlya-restoranov-zachem-nuz" target="_blank">https://horecadigital.ru/tpost/uhrcj599v1-smm-agentstvo…</a></td>
+        <td>СММ агентство для ресторанов: зачем нужен профессиональный п…</td>
+        <td class="desc">Агентство HORECA DIGITAL — профессиональный SMM для ресторанов, отелей и заведен…</td>
+        <td class="pages">~7</td>
+        <td class="qused">смм для ресторана услуги агентство</td>
+    </tr><tr class="alt">
+        <td class="pos">6</td>
+        <td><b>freud-pr.ru</b></td>
+        <td class="url"><a href="https://freud-pr.ru/smm-prodvizhenie/smm-dlya-restoranov" target="_blank">https://freud-pr.ru/smm-prodvizhenie/smm-dlya-restorano…</a></td>
+        <td>SMM для ресторанов, доставок и food-брендов</td>
+        <td class="desc">Агентство Freud PR — SMM-продвижение ресторанов, доставок и food-брендов.</td>
+        <td class="pages">—</td>
+        <td class="qused">смм для ресторана услуги агентство</td>
+    </tr><tr class="">
+        <td class="pos">7</td>
+        <td><b>araich.pro</b></td>
+        <td class="url"><a href="https://araich.pro/smm" target="_blank">https://araich.pro/smm</a></td>
+        <td>SMM продвижение ресторана</td>
+        <td class="desc">Профессиональное SMM-продвижение ресторанного бизнеса.</td>
+        <td class="pages">—</td>
+        <td class="qused">смм для ресторана услуги агентство</td>
+    </tr><tr class="alt">
+        <td class="pos">1</td>
+        <td><b>ratingruneta.ru</b></td>
+        <td class="url"><a href="https://ratingruneta.ru/seo+context/food/" target="_blank">https://ratingruneta.ru/seo+context/food/</a></td>
+        <td>Лучшие маркетинговые агентства для ресторанов | Рейтинг Руне…</td>
+        <td class="desc">Рейтинг агентств, специализирующихся на продвижении ресторанов и food-бизнеса.</td>
+        <td class="pages">—</td>
+        <td class="qused">маркетинговое агентство для рестора…</td>
+    </tr><tr class="">
+        <td class="pos">2</td>
+        <td><b>restoria.agency</b></td>
+        <td class="url"><a href="https://www.restoria.agency/horeca" target="_blank">https://www.restoria.agency/horeca</a></td>
+        <td>Агентство ресторанного маркетинга — Restoria</td>
+        <td class="desc">Restoria — маркетинговое агентство для ресторанов, SMM-продвижение, разработка с…</td>
+        <td class="pages">~1</td>
+        <td class="qused">маркетинговое агентство для рестора…</td>
+    </tr><tr class="alt">
+        <td class="pos">3</td>
+        <td><b>a-m.agency</b></td>
+        <td class="url"><a href="https://a-m.agency/" target="_blank">https://a-m.agency/</a></td>
+        <td>Аппетитный маркетинг, 2026</td>
+        <td class="desc">Агентство ресторанного маркетинга — современные инструменты и тренды для продвиж…</td>
+        <td class="pages">—</td>
+        <td class="qused">маркетинговое агентство для рестора…</td>
+    </tr><tr class="">
+        <td class="pos">4</td>
+        <td><b>paler.agency</b></td>
+        <td class="url"><a href="https://paler.agency/" target="_blank">https://paler.agency/</a></td>
+        <td>Paler Agency — маркетинговое агентство для ресторанов, баров…</td>
+        <td class="desc">Paler Agency — комплексный маркетинг для ресторанов, баров, клубов: сайты, чат-б…</td>
+        <td class="pages">~1</td>
+        <td class="qused">маркетинговое агентство для рестора…</td>
+    </tr><tr class="alt">
+        <td class="pos">5</td>
+        <td><b>horeca-marketing.ru</b></td>
+        <td class="url"><a href="https://horeca-marketing.ru/" target="_blank">https://horeca-marketing.ru/</a></td>
+        <td>Маркетинговое агентство полного цикла №1 для ресторанов HoRe…</td>
+        <td class="desc">15+ лет опыта в ресторанном маркетинге. 45+ ресторанов. Полный цикл: стратегия, …</td>
+        <td class="pages">~3</td>
+        <td class="qused">маркетинговое агентство для рестора…</td>
+    </tr><tr class="">
+        <td class="pos">6</td>
+        <td><b>maxcrow.ru</b></td>
+        <td class="url"><a href="https://maxcrow.ru/" target="_blank">https://maxcrow.ru/</a></td>
+        <td>Продвижение ресторана, маркетинг и реклама — агентство Maxcr…</td>
+        <td class="desc">MaxcroW — специализированное агентство для HoReCa: 117+ клиентов, 18+ лет опыта.…</td>
+        <td class="pages">~7</td>
+        <td class="qused">маркетинговое агентство для рестора…</td>
+    </tr><tr class="alt">
+        <td class="pos">1</td>
+        <td><b>twin24.ai</b></td>
+        <td class="url"><a href="https://twin24.ai/products/horeca/" target="_blank">https://twin24.ai/products/horeca/</a></td>
+        <td>Голосовые и чат-боты для ресторана и отеля, боты для бизнеса…</td>
+        <td class="desc">TWIN — голосовые и чат-боты для HoReCa: автоматизация бронирований, ответов на в…</td>
+        <td class="pages">—</td>
+        <td class="qused">автоматизация ресторана чат-бот CRM</td>
+    </tr><tr class="">
+        <td class="pos">2</td>
+        <td><b>remarked.ru</b></td>
+        <td class="url"><a href="https://remarked.ru/telegram-bot-for-restoran" target="_blank">https://remarked.ru/telegram-bot-for-restoran</a></td>
+        <td>Чат-бот в Telegram для ресторана от CRM ReMarked</td>
+        <td class="desc">CRM ReMarked — Telegram-бот для ресторана: бронирование столиков, предзаказы, ло…</td>
+        <td class="pages">—</td>
+        <td class="qused">автоматизация ресторана чат-бот CRM</td>
+    </tr><tr class="alt">
+        <td class="pos">3</td>
+        <td><b>voxys.ru</b></td>
+        <td class="url"><a href="https://www.voxys.ru/cifrovye-reshenija/chat-bot/dlja-kafe-i-restoranov.html" target="_blank">https://www.voxys.ru/cifrovye-reshenija/chat-bot/dlja-k…</a></td>
+        <td>Чат-бот для кафе и ресторанов — Voxys</td>
+        <td class="desc">Voxys — разработка чат-ботов для кафе и ресторанного бизнеса под ключ.</td>
+        <td class="pages">—</td>
+        <td class="qused">автоматизация ресторана чат-бот CRM</td>
+    </tr><tr class="">
+        <td class="pos">4</td>
+        <td><b>loona.ai</b></td>
+        <td class="url"><a href="https://loona.ai/articles/chat-bot-dlya-restorana" target="_blank">https://loona.ai/articles/chat-bot-dlya-restorana</a></td>
+        <td>Чат-боты и цифровые CRM системы для ресторанов — примеры сце…</td>
+        <td class="desc">Loona AI — примеры сценариев чат-ботов и CRM для ресторанного бизнеса.</td>
+        <td class="pages">—</td>
+        <td class="qused">автоматизация ресторана чат-бот CRM</td>
+    </tr><tr class="alt">
+        <td class="pos">5</td>
+        <td><b>vc.ru</b></td>
+        <td class="url"><a href="https://vc.ru/marketing/2303206-chat-bot-dlya-restorana-avtomatizatsiya" target="_blank">https://vc.ru/marketing/2303206-chat-bot-dlya-restorana…</a></td>
+        <td>Разбор чат-бота для ресторана: как автоматизация повышает ло…</td>
+        <td class="desc">Разбор кейса: чат-бот для ресторана снижает нагрузку на персонал на 15–20%, сокр…</td>
+        <td class="pages">—</td>
+        <td class="qused">автоматизация ресторана чат-бот CRM</td>
+    </tr><tr class="">
+        <td class="pos">6</td>
+        <td><b>tochka-marketinga.ru</b></td>
+        <td class="url"><a href="https://tochka-marketinga.ru/tpost/kocob2e2b1-chat-boti-dlya-restorana-kak-avtomatizat" target="_blank">https://tochka-marketinga.ru/tpost/kocob2e2b1-chat-boti…</a></td>
+        <td>Чат-боты для ресторана: как автоматизация бронирований увели…</td>
+        <td class="desc">Как чат-боты для ресторанов увеличивают объём бронирований на 15–25% и снижают о…</td>
+        <td class="pages">—</td>
+        <td class="qused">автоматизация ресторана чат-бот CRM</td>
+    </tr><tr class="alt">
+        <td class="pos">7</td>
+        <td><b>premiumbonus.ru</b></td>
+        <td class="url"><a href="https://premiumbonus.ru/blog/advantages_chatbot" target="_blank">https://premiumbonus.ru/blog/advantages_chatbot</a></td>
+        <td>Чат-боты в ресторанном бизнесе: автоматизация, сервис и повы…</td>
+        <td class="desc">PremiumBonus — CRM и программы лояльности для ресторанов с интеграцией чат-ботов…</td>
+        <td class="pages">—</td>
+        <td class="qused">автоматизация ресторана чат-бот CRM</td>
+    </tr><tr class="">
+        <td class="pos">8</td>
+        <td><b>chatim.io</b></td>
+        <td class="url"><a href="https://chatim.io/chat-bot-restoran-kafe" target="_blank">https://chatim.io/chat-bot-restoran-kafe</a></td>
+        <td>Чат-бот для ресторана, кафе и службы доставки еды — Чатим</td>
+        <td class="desc">Chatim — готовый чат-бот для ресторана, кафе и доставки: меню, заказы, бронирова…</td>
+        <td class="pages">—</td>
+        <td class="qused">автоматизация ресторана чат-бот CRM</td>
+    </tr><tr class="alt">
+        <td class="pos">9</td>
+        <td><b>lubava.ai</b></td>
+        <td class="url"><a href="https://lubava.ai/zakazat-chat-bota/dlya-restoranov/" target="_blank">https://lubava.ai/zakazat-chat-bota/dlya-restoranov/</a></td>
+        <td>Чат-бот для ресторанов и кафе — заказать ИИ бота под ключ</td>
+        <td class="desc">Lubava AI — разработка AI-ботов для ресторанов под ключ: бронирование, заказы, л…</td>
+        <td class="pages">—</td>
+        <td class="qused">автоматизация ресторана чат-бот CRM</td>
+    </tr></tbody>
+  </table>
+  <div class="footnote">* Частотность будет заполнена через Яндекс Директ API после получения доступа</div>
+</div>
+</body>
+</html>

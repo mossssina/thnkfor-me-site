@@ -1,0 +1,7 @@
+Use case: ads-marketing
+Asset type: landscape welcome cover for the THNKFOR.ME Telegram content assistant, 3:2 aspect ratio.
+Input image: reference image of the exact brand mascot. Preserve its recognizable face, ivory robot shell, large amber-orange eyes, dark eyebrows, grey mechanical neck, ear pieces and orange octagonal chest emblem.
+Create a refined welcoming 3D brand cover. Mascot shown waist-up on the right, looking directly at viewer with the same gentle smile, one hand raised in a small friendly greeting. Anatomically coherent robotic hand. Left side has large clear editorial typography and generous negative space. Warm light grey / ivory studio background, very subtle orange ambient glow behind the mascot. Soft premium studio lighting, tangible ceramic-like ivory surfaces, graphite metal joints, orange details matching reference. Clean and sophisticated.
+Exact text on left, dark graphite modern sans-serif: small brand line "THNKFOR.ME"; beneath it large headline in three lines "Ваш контент\nначинается\nздесь". No other text. Keep typography crisp and readable at small size, generous safe margins. No UI, no buttons, no extra objects, no watermark. Preserve mascot identity faithfully.
+
+Generated with built-in image_gen using team/00_mascot_portrait.png as mascot reference.

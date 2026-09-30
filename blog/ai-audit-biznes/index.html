@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-аудит бизнеса: что это и как найти точки автоматизации — THNKFOR.ME</title>
+<link rel="canonical" href="https://thnkfor.me/blog/ai-audit-biznes/">
+<meta property="og:title" content="AI-аудит бизнеса: что это и как найти точки автоматизации — THNKFOR.ME">
+<meta name="description" content="AI-аудит бизнеса — методология поиска процессов для автоматизации. Что проверяем, как расставляем приоритеты, сколько стоит и что даёт на выходе.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}ul,ol{list-style:none;}
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+.site-header{position:sticky!important;top:0!important;z-index:200!important;background:#0A0A0A!important;border-bottom:1px solid rgba(255,255,255,0.08)!important;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);white-space:nowrap;text-decoration:none;transition:color .15s,border-color .15s;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item:hover > a{color:#FFFFFF;}
+.nav-item > a.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;text-decoration:none;transition:background .15s;}
+.header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;}
+.article-hero{background:#0A0A0A;padding:80px 48px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.article-cat{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;margin-bottom:20px;}
+.article-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(40px,6vw,80px);letter-spacing:-0.05em;line-height:0.95;color:#FFFFFF;margin-bottom:28px;max-width:800px;}
+.article-meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(255,255,255,0.25);display:flex;gap:24px;flex-wrap:wrap;}
+.article-layout{display:grid;grid-template-columns:1fr 300px;gap:0;align-items:start;max-width:1200px;margin:0 auto;}
+.article-body{padding:56px 48px;border-right:1px solid rgba(0,0,0,0.1);}
+.article-sidebar{padding:40px 32px;position:sticky;top:80px;}
+.toc-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:16px;}
+.toc-list{display:flex;flex-direction:column;gap:2px;}
+.toc-list a{font-size:13px;color:#666;text-decoration:none;padding:6px 0;border-bottom:1px solid rgba(0,0,0,0.06);transition:color .12s;line-height:1.35;}
+.toc-list a:hover{color:#FF3B00;}
+.sidebar-cta{margin-top:40px;background:#0A0A0A;padding:28px 24px;}
+.sidebar-cta-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:12px;}
+.sidebar-cta-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;color:#FFFFFF;letter-spacing:-0.02em;line-height:1.3;margin-bottom:10px;}
+.sidebar-cta-sub{font-size:12px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.sidebar-cta-btn{display:block;background:#FF3B00;color:#FFFFFF;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:13px;padding:11px 16px;text-align:center;transition:background .12s;}
+.sidebar-cta-btn:hover{background:#e03400;}
+h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:28px;letter-spacing:-0.03em;line-height:1.15;color:#0A0A0A;margin:52px 0 20px;padding-top:8px;}
+h3{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:20px;letter-spacing:-0.02em;color:#0A0A0A;margin:32px 0 12px;}
+p{font-size:17px;color:#2a2a2a;line-height:1.7;margin-bottom:20px;}
+.article-lead{font-size:20px;font-weight:400;color:#0A0A0A;line-height:1.55;margin-bottom:28px;letter-spacing:-0.01em;}
+.callout{border-left:3px solid #FF3B00;padding:18px 24px;background:#FFFFFF;margin:28px 0;}
+.callout p{margin:0;font-size:15px;color:#333;line-height:1.65;}
+.callout-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;margin-bottom:8px;}
+.pipeline-simple{background:#0A0A0A;padding:40px;margin:32px 0;overflow-x:auto;}
+.ps-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:24px;}
+.ps-flow{display:flex;align-items:center;gap:12px;flex-wrap:nowrap;min-width:600px;}
+.ps-step{background:#1a1a1a;padding:16px 20px;flex:1;}
+.ps-step-label{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:6px;}
+.ps-step-title{font-size:14px;color:#FFFFFF;line-height:1.3;}
+.ps-step-sub{font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px;}
+.ps-arrow{color:#FF3B00;font-size:18px;flex-shrink:0;}
+.start-list{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+.start-item{display:grid;grid-template-columns:28px 1fr;gap:14px;background:#FFFFFF;border:1px solid rgba(0,0,0,0.08);padding:20px;}
+.start-num{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:#FF3B00;}
+.start-title{font-size:15px;font-weight:500;margin-bottom:5px;}
+.start-desc{font-size:13px;color:#666;line-height:1.5;}
+.stat-inline{display:inline-flex;align-items:baseline;gap:6px;}
+.stat-n{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:28px;letter-spacing:-0.04em;color:#FF3B00;}
+.stat-u{font-size:13px;color:#666;}
+.article-footer-cta{background:#FF3B00;padding:64px 48px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;}
+.afc-text h3{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(24px,3vw,40px);color:#FFFFFF;letter-spacing:-0.04em;line-height:1.1;margin-bottom:12px;}
+.afc-text p{color:rgba(255,255,255,0.7);font-size:15px;margin:0;line-height:1.5;}
+.btn-light{background:#FFFFFF;color:#0A0A0A;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;padding:14px 28px;white-space:nowrap;transition:background .15s;text-decoration:none;display:inline-block;}
+.btn-light:hover{background:#F0F0F0;}
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid!important;grid-template-columns:1fr 1fr 1fr 1fr!important;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "AI-аудит бизнеса: что это и как найти точки автоматизации",
+      "url": "https://thnkfor.me/blog/ai-audit-biznes/",
+      "description": "AI-аудит бизнеса — методология поиска процессов для автоматизации. Что проверяем, как расставляем приоритеты, сколько стоит и что даёт на выходе.",
+      "datePublished": "2026-10-23",
+      "publisher": {"@type": "Organization","name": "THNKFOR.ME","url": "https://thnkfor.me"},
+      "author": {"@type": "Organization","name": "THNKFOR.ME","url": "https://thnkfor.me"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Главная","item": "https://thnkfor.me/"},
+        {"@type": "ListItem","position": 2,"name": "Блог","item": "https://thnkfor.me/blog/"},
+        {"@type": "ListItem","position": 3,"name": "AI-аудит бизнеса","item": "https://thnkfor.me/blog/ai-audit-biznes/"}
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="../../services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="../../services/smm/">SMM и соцсети</a>
+          <a href="../../services/targeting/">Таргетированная реклама</a>
+          <a href="../../services/direct/">Яндекс Директ</a>
+          <a href="../../services/content-machine/">Контент-завод</a>
+          <a href="../../services/video/">Видеопроизводство</a>
+          <a href="../../services/reputation/">Управление репутацией</a>
+          <a href="../../services/seo/">Продвижение в поиске</a>
+          <a href="../../services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="../../niches/restaurants/">Рестораны</a>
+          <a href="../../niches/beauty/">Салоны красоты</a>
+          <a href="../../niches/clinic/">Медицина</a>
+          <a href="../../niches/fitness/">Фитнес</a>
+          <a href="../../niches/saas/">IT и SaaS</a>
+          <a href="../../niches/ecommerce-fashion/">E-commerce</a>
+          <a href="../../niches/realestate/">Недвижимость</a>
+          <a href="../../niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../cases/">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="../../cases/werent/">WeRent — Content Machine</a>
+          <a href="../../cases/tennispoint/">Tennis Point — бот новинок</a>
+          <a href="../../cases/4room/">4room.studio — три AI-системы</a>
+          <a href="../../cases/studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="../../cases/">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../" class="active">Блог</a>
+        <div class="nav-dropdown">
+          <a href="../vnedrenie-ai-biznes/">Внедрение AI в бизнес</a>
+          <a href="../roi-avtomatizacii/">ROI автоматизации</a>
+          <a href="./">AI-аудит бизнеса</a>
+          <a href="../">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../pricing/">Цены</a>
+      </div>
+      <div class="nav-item">
+        <a href="../../about/">О нас</a>
+      </div>
+      <a href="../../contacts/" class="header-cta">Обсудить проект</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="../../services/smm/" class="header-pill">01 · SMM</a>
+    <a href="../../services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="../../services/direct/" class="header-pill">03 · Директ</a>
+    <a href="../../services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="../../services/video/" class="header-pill">05 · Видео</a>
+    <a href="../../services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="../../services/seo/" class="header-pill">07 · SEO</a>
+    <a href="../../services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<div class="article-hero">
+  <div class="article-cat">// AI-консалтинг · Автоматизация · 7 мин чтения</div>
+  <h1 class="article-h1">AI-аудит бизнеса:<br>находим точки<br>автоматизации</h1>
+  <div class="article-meta">
+    <span>Октябрь 2026</span>
+    <span>THNKFOR.ME</span>
+    <span>~1 500 слов</span>
+  </div>
+</div>
+
+<div class="article-layout">
+  <div class="article-body">
+    <p class="article-lead">Большинство компаний не знают, где AI поможет им больше всего. AI-аудит — это структурированный процесс поиска и приоритизации задач для автоматизации. Рассказываем, как он проходит, что мы проверяем и какой результат получает клиент.</p>
+
+    <div class="callout">
+      <div class="callout-label">Что такое AI-аудит</div>
+      <p>AI-аудит — это анализ бизнес-процессов компании с целью выявить задачи, которые можно автоматизировать с помощью AI. На выходе — карта процессов с оценкой ROI и приоритетным планом внедрения.</p>
+    </div>
+
+    <h2 id="why-audit">Зачем нужен аудит перед внедрением AI</h2>
+    <p>Компании часто приходят с запросом «хотим внедрить AI» — без конкретики о том, что именно и зачем. Это приводит к двум типичным ошибкам:</p>
+    <p><strong>Ошибка 1 — автоматизировать не то.</strong> Внедряют AI там, где это не даёт ощутимой экономии, и пропускают процессы, где автоматизация окупается за 1–2 месяца.</p>
+    <p><strong>Ошибка 2 — начать с самого сложного.</strong> Выбирают технически сложное внедрение без понимания реальной ценности — и получают провальный первый проект, который дискредитирует саму идею AI в компании.</p>
+    <p>Аудит решает обе проблемы: дает полную картину и помогает начать с тех задач, где эффект будет максимальным и быстрым.</p>
+
+    <h2 id="audit-process">Как проходит AI-аудит: 5 этапов</h2>
+
+    <div class="pipeline-simple">
+      <div class="ps-label">// Методология AI-аудита THNKFOR.ME</div>
+      <div class="ps-flow">
+        <div class="ps-step">
+          <div class="ps-step-label">Этап 1</div>
+          <div class="ps-step-title">Интервью с командой</div>
+          <div class="ps-step-sub">2–4 часа</div>
+        </div>
+        <div class="ps-arrow">→</div>
+        <div class="ps-step">
+          <div class="ps-step-label">Этап 2</div>
+          <div class="ps-step-title">Карта процессов</div>
+          <div class="ps-step-sub">3–5 дней</div>
+        </div>
+        <div class="ps-arrow">→</div>
+        <div class="ps-step">
+          <div class="ps-step-label">Этап 3</div>
+          <div class="ps-step-title">Оценка ROI</div>
+          <div class="ps-step-sub">1–2 дня</div>
+        </div>
+        <div class="ps-arrow">→</div>
+        <div class="ps-step">
+          <div class="ps-step-label">Этап 4</div>
+          <div class="ps-step-title">Приоритизация</div>
+          <div class="ps-step-sub">1 день</div>
+        </div>
+        <div class="ps-arrow">→</div>
+        <div class="ps-step">
+          <div class="ps-step-label">Этап 5</div>
+          <div class="ps-step-title">Роадмап внедрения</div>
+          <div class="ps-step-sub">Финальный отчёт</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Этап 1: Интервью с ключевыми сотрудниками</h3>
+    <p>Разговариваем с теми, кто непосредственно выполняет работу: менеджерами по продажам, маркетологами, операционными руководителями, HR. Цель — понять, на что уходит время, где есть повторяющиеся задачи, где люди «застревают» в рутине.</p>
+    <p>Типичные вопросы: «Что вы делаете каждый день, что занимает больше часа и кажется однотипным?», «Что вы делаете вручную, хотя думаете — это можно автоматизировать?», «Где чаще всего возникают ошибки из-за человеческого фактора?»</p>
+
+    <h3>Этап 2: Картирование процессов</h3>
+    <p>Каждый процесс описываем по схеме: триггер → шаги → результат → ответственный → время → частота. Это даёт полную картину того, что происходит в компании. Обычно обнаруживаем 30–50 потенциальных точек автоматизации в среднем бизнесе.</p>
+
+    <h3>Этап 3: Оценка ROI по каждому процессу</h3>
+    <p>Для каждой точки считаем: сколько времени сотрудника уходит, стоимость этого времени, реалистичный % автоматизации, стоимость внедрения, срок окупаемости. Это превращает абстрактное «хотим AI» в конкретные цифры.</p>
+
+    <h2 id="what-we-find">Что обычно находим в ходе аудита</h2>
+    <p>После десятков аудитов мы видим типичные паттерны — задачи, где AI даёт наибольший эффект практически в любом бизнесе.</p>
+
+    <div class="start-list">
+      <div class="start-item">
+        <div class="start-num">01</div>
+        <div>
+          <div class="start-title">Ответы на типовые вопросы клиентов</div>
+          <div class="start-desc">В среднем 60–80% входящих обращений — повторяющиеся вопросы о цене, условиях, графике работы. AI-бот закрывает их автоматически, освобождая менеджеров для сложных случаев</div>
+        </div>
+      </div>
+      <div class="start-item">
+        <div class="start-num">02</div>
+        <div>
+          <div class="start-title">Создание контента и коммуникаций</div>
+          <div class="start-desc">Написание постов, рассылок, коммерческих предложений, скриптов — всё это можно автоматизировать с AI на 70–90%. Оставить человеку — только финальную правку и одобрение</div>
+        </div>
+      </div>
+      <div class="start-item">
+        <div class="start-num">03</div>
+        <div>
+          <div class="start-title">Квалификация и сортировка лидов</div>
+          <div class="start-desc">Первичный разбор заявок, определение приоритетности, заполнение CRM — AI делает это мгновенно по заданным критериям, без потерь и субъективности</div>
+        </div>
+      </div>
+      <div class="start-item">
+        <div class="start-num">04</div>
+        <div>
+          <div class="start-title">Отчётность и аналитика</div>
+          <div class="start-desc">Сбор данных, формирование отчётов, выявление аномалий — рутина, которая может занимать у аналитика 10–20 часов в неделю. AI + автоматизация сокращают это до нуля</div>
+        </div>
+      </div>
+      <div class="start-item">
+        <div class="start-num">05</div>
+        <div>
+          <div class="start-title">Внутренние HR-процессы</div>
+          <div class="start-desc">Первичный скрининг резюме, ответы на вопросы кандидатов, онбординг новых сотрудников — всё это отлично автоматизируется с сохранением качества</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="prioritization">Как расставляем приоритеты</h2>
+    <p>После того как список задач собран, оцениваем каждую по двум осям: <strong>потенциальный эффект</strong> (экономия денег или рост выручки) и <strong>сложность внедрения</strong> (техническая, организационная, стоимость).</p>
+
+    <div class="callout">
+      <div class="callout-label">Матрица приоритизации</div>
+      <p><strong>Высокий эффект + низкая сложность</strong> → внедряем в первую очередь («быстрые победы»). <strong>Высокий эффект + высокая сложность</strong> → планируем на 3–6 месяцев вперёд. <strong>Низкий эффект + низкая сложность</strong> → реализуем, если есть ресурс. <strong>Низкий эффект + высокая сложность</strong> → пропускаем.</p>
+    </div>
+
+    <p>Такой подход гарантирует, что первое внедрение будет успешным: бизнес увидит реальный результат за 4–8 недель, и дальнейшие инвестиции в AI получают внутреннюю поддержку.</p>
+
+    <h2 id="output">Что получает клиент на выходе</h2>
+    <p>Результат AI-аудита — это не просто список рекомендаций. Это полноценный документ для принятия решений:</p>
+    <p><strong>Карта процессов</strong> с выявленными точками автоматизации (обычно 15–40 позиций).</p>
+    <p><strong>ROI-расчёт</strong> для каждой задачи: стоимость внедрения, ожидаемая экономия в месяц, срок окупаемости.</p>
+    <p><strong>Приоритизированный роадмап</strong> на 6–12 месяцев с разбивкой на спринты.</p>
+    <p><strong>Технический стек</strong> — конкретные инструменты и платформы для каждой задачи.</p>
+    <p><strong>Сметы</strong> на реализацию первых 3–5 приоритетных задач.</p>
+
+    <h2 id="audit-cost">Сколько стоит AI-аудит</h2>
+    <p>Стоимость зависит от размера компании и глубины проработки. Аудит малого бизнеса (5–30 сотрудников): 50 000–100 000 ₽, срок — 1–2 недели. Аудит среднего бизнеса (30–200 сотрудников): 100 000–250 000 ₽, срок — 2–4 недели. Аудит крупной компании: от 300 000 ₽, срок — 4–8 недель.</p>
+
+    <div class="callout">
+      <div class="callout-label">Окупаемость аудита</div>
+      <p>Средняя компания с 20 сотрудниками, прошедшая аудит, внедряет автоматизацию, которая экономит 300 000–800 000 ₽ в год. Стоимость аудита окупается за 1–3 месяца с начала внедрения. Без аудита риск потратить деньги на автоматизацию «не того» — очень высокий.</p>
+    </div>
+  </div>
+
+  <div class="article-sidebar">
+    <div class="toc-label">// Содержание</div>
+    <div class="toc-list">
+      <a href="#why-audit">Зачем нужен аудит</a>
+      <a href="#audit-process">Как проходит аудит</a>
+      <a href="#what-we-find">Что обычно находим</a>
+      <a href="#prioritization">Как расставляем приоритеты</a>
+      <a href="#output">Что получает клиент</a>
+      <a href="#audit-cost">Сколько стоит</a>
+    </div>
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-label">AI-аудит от THNKFOR.ME</div>
+      <div class="sidebar-cta-title">Найдём точки<br>автоматизации</div>
+      <div class="sidebar-cta-sub">Проведём аудит бизнес-процессов и составим роадмап внедрения AI с расчётом ROI.</div>
+      <a href="../../contacts/" class="sidebar-cta-btn">Заказать аудит →</a>
+    </div>
+  </div>
+</div>
+
+<div class="article-footer-cta">
+  <div class="afc-text">
+    <h3>Хотите понять, где AI<br>даст максимальный эффект?</h3>
+    <p>Проведём AI-аудит вашего бизнеса: карта процессов, ROI по каждой задаче, приоритетный план внедрения.</p>
+  </div>
+  <a href="../../contacts/" class="btn-light">Заказать AI-аудит →</a>
+</div>
+
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="../../" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="../../services/smm/">SMM и ведение соцсетей</a>
+        <a href="../../services/targeting/">Таргетированная реклама</a>
+        <a href="../../services/direct/">Яндекс Директ</a>
+        <a href="../../services/content-machine/">Контент завод</a>
+        <a href="../../services/video/">Видеопроизводство</a>
+        <a href="../../services/reputation/">Управление репутацией</a>
+        <a href="../../services/seo/">Продвижение в поиске</a>
+        <a href="../../services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="../../niches/restaurants/">Рестораны</a>
+        <a href="../../niches/beauty/">Салоны красоты</a>
+        <a href="../../niches/clinic/">Медицина</a>
+        <a href="../../niches/fitness/">Фитнес</a>
+        <a href="../../niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="../../niches/saas/">IT и SaaS</a>
+        <a href="../../niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="../../about/">О нас</a>
+        <a href="../../cases/">Кейсы</a>
+        <a href="../">Блог</a>
+        <a href="../../pricing/">Цены</a>
+        <a href="../../contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+</body>
+</html>

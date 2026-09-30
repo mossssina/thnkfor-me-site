@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>THNKFOR.ME — Concepts B & C</title>
+    <link rel="canonical" href="https://thnkfor.me/brand_bc/">
+    <meta property="og:title" content="THNKFOR.ME — Concepts B & C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&family=Fira+Code:wght@400;500;600&display=swap');
+
+/* ============= RESET ============= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #EFEFEC;
+  min-height: 100vh;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: #111110;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 68px;
+}
+
+/* ============= GLOBAL NAV ============= */
+.gnav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 68px;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  gap: 40px;
+}
+.gnav-brand {
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111110;
+}
+.gnav-brand .dot { color: #888; }
+.gnav-tag {
+  font-family: 'Fira Code', monospace;
+  font-size: 10px;
+  color: #888;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 20px;
+}
+.gnav-switch {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+  background: rgba(0,0,0,0.04);
+  padding: 4px;
+  border-radius: 999px;
+}
+.gnav-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 8px 18px;
+  border: none;
+  background: transparent;
+  color: #555;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.gnav-btn:hover { color: #111; }
+.gnav-btn.active {
+  background: #111110;
+  color: #fff;
+}
+
+/* ============= CONCEPT WRAPPER ============= */
+.concept { display: none; padding: 60px 0 120px; }
+.concept.active { display: block; }
+.container { max-width: 1440px; margin: 0 auto; padding: 0 60px; }
+
+/* ============= BLOCK BASE ============= */
+.block { margin-bottom: 72px; }
+.block-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.block-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(0,0,0,0.08);
+}
+
+/* ============================================================ */
+/*                       CONCEPT B                               */
+/*                     HUMAN × MACHINE                           */
+/* ============================================================ */
+#concept-b { background: #F8F8F8; color: #0A0A0A; }
+#concept-b .block-label { font-family: 'IBM Plex Mono', monospace; color: #666; }
+
+.b-header {
+  padding: 80px 60px 100px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.b-header-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 32px;
+}
+.b-header-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 140px;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  color: #0A0A0A;
+  margin-bottom: 28px;
+}
+.b-header-title .gap { display: inline-block; width: 0.4em; position: relative; }
+.b-header-title .gap::after {
+  content: '|';
+  position: absolute;
+  left: 0.05em; top: 0;
+  color: #FF3B00;
+  animation: b-blink 1s infinite;
+}
+.b-header-title .accent { color: #FF3B00; }
+.b-header-sub {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  line-height: 1.4;
+  color: #444;
+  max-width: 620px;
+  font-weight: 400;
+}
+
+/* B LOGO */
+.b-logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.b-logo-tile {
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 60px 48px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.b-logo-tile.wide { grid-column: 1 / -1; }
+.b-logo-tile.dark { background: #0A0A0A; color: #F8F8F8; border-color: transparent; }
+.b-logo-tile.accent { background: #FF3B00; color: #FFFFFF; border-color: transparent; }
+.b-tile-tag {
+  position: absolute; top: 16px; left: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; color: #999;
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.b-logo-tile.dark .b-tile-tag { color: rgba(255,255,255,0.4); }
+.b-logo-tile.accent .b-tile-tag { color: rgba(255,255,255,0.7); }
+
+.b-wordmark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500; font-size: 72px;
+  letter-spacing: -0.04em; color: #0A0A0A; line-height: 1;
+}
+.b-logo-tile.dark .b-wordmark { color: #F8F8F8; }
+.b-logo-tile.accent .b-wordmark { color: #FFFFFF; }
+.b-wordmark .dot { color: #FF3B00; }
+.b-logo-tile.dark .b-wordmark .dot,
+.b-logo-tile.accent .b-wordmark .dot { color: #FF3B00; }
+.b-logo-tile.accent .b-wordmark .dot { color: #FFFFFF; }
+.b-wordmark .cursor {
+  display: inline-block; color: #FF3B00;
+  animation: b-blink 1s infinite;
+  font-weight: 300; padding: 0 2px;
+}
+.b-wordmark .gap-i { display: inline-block; width: 0.35em; }
+.b-wordmark .placeholder {
+  color: #999; border-bottom: 2px dotted #999;
+  padding: 0 6px; font-size: 60px; font-weight: 300;
+}
+.b-wordmark-stacked { text-align: center; line-height: 0.9; }
+.b-wordmark-stacked .thnk,
+.b-wordmark-stacked .forme {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500; font-size: 96px;
+  letter-spacing: -0.05em; color: #0A0A0A;
+}
+.b-wordmark-stacked .forme .dot { color: #FF3B00; }
+
+@keyframes b-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+/* B HERO ANIMATION */
+.b-hero {
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 80px 60px;
+  min-height: 480px;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.b-hero-topbar {
+  position: absolute; top: 0; left: 0; right: 0;
+  padding: 20px 32px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+  color: #666; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.b-hero-topbar .status { display: inline-flex; align-items: center; gap: 8px; }
+.b-hero-topbar .status .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #FF3B00; animation: b-blink 1.4s infinite;
+}
+.b-hero-anim {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500; font-size: 160px;
+  letter-spacing: -0.06em; color: #0A0A0A;
+  line-height: 1; margin: 24px 0;
+  position: relative; min-height: 170px;
+}
+.b-hero-anim .word { display: inline-block; position: relative; }
+.b-hero-anim .letter { display: inline-block; transition: all 0.6s cubic-bezier(0.22, 0.61, 0.36, 1); }
+.b-hero-anim .letter-i { animation: b-remove-i 6s infinite; color: #FF3B00; }
+@keyframes b-remove-i {
+  0%, 20% { opacity: 1; width: auto; letter-spacing: -0.06em; color: #FF3B00; }
+  30%, 60% { opacity: 0; width: 0; letter-spacing: -1em; color: #FF3B00; }
+  70%, 100% { opacity: 0; width: 0; letter-spacing: -1em; }
+}
+.b-hero-anim .forme-block {
+  display: block; color: #FF3B00; font-size: 100px; margin-top: 12px;
+  opacity: 0; transform: translateY(20px);
+  animation: b-forme-in 6s infinite;
+}
+@keyframes b-forme-in {
+  0%, 40% { opacity: 0; transform: translateY(20px); }
+  55%, 100% { opacity: 1; transform: translateY(0); }
+}
+.b-hero-anim .forme-block .dot { color: #0A0A0A; }
+.b-hero-caption {
+  font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+  color: #666; letter-spacing: 0.08em; text-transform: uppercase;
+  max-width: 420px; margin-top: 24px;
+}
+.b-hero-caption .accent { color: #FF3B00; }
+
+/* B COLORS */
+.b-swatch-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.b-swatch {
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 24px 20px; min-height: 200px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.b-swatch .top { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+.b-swatch .bottom { font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 16px; letter-spacing: -0.01em; }
+.b-swatch .hex { font-family: 'IBM Plex Mono', monospace; font-size: 11px; margin-top: 4px; opacity: 0.7; }
+
+/* B TYPE */
+.b-type-row {
+  padding: 32px 0; border-bottom: 1px solid rgba(0,0,0,0.1);
+  display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: baseline;
+}
+.b-type-meta {
+  font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #666;
+  letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.6; padding-top: 6px;
+}
+.b-type-display { font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 120px; letter-spacing: -0.05em; line-height: 0.95; color: #0A0A0A; }
+.b-type-display .accent { color: #FF3B00; }
+.b-type-h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 60px; letter-spacing: -0.03em; line-height: 1; color: #0A0A0A; }
+.b-type-h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 400; font-size: 32px; letter-spacing: -0.02em; line-height: 1.15; color: #0A0A0A; }
+.b-type-body { font-family: 'Space Grotesk', sans-serif; font-weight: 400; font-size: 17px; line-height: 1.55; color: #333; max-width: 640px; }
+.b-type-mono { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #666; letter-spacing: 0.04em; }
+
+/* B SERVICE CARDS */
+.b-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.b-card {
+  background: #FFFFFF; border: 1px solid rgba(0,0,0,0.1);
+  padding: 32px 28px; min-height: 320px;
+  display: flex; flex-direction: column; transition: all 0.2s; position: relative;
+}
+.b-card:hover { border-color: #FF3B00; }
+.b-card.accent { background: #FF3B00; color: #FFFFFF; border-color: transparent; }
+.b-card-topline {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,0.08); margin-bottom: 32px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #666;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.b-card.accent .b-card-topline { border-color: rgba(255,255,255,0.25); color: rgba(255,255,255,0.85); }
+.b-card-title { font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 28px; line-height: 1.05; letter-spacing: -0.02em; color: #0A0A0A; margin-bottom: 12px; }
+.b-card.accent .b-card-title { color: #FFFFFF; }
+.b-card-title .accent { color: #FF3B00; }
+.b-card-desc { font-family: 'Space Grotesk', sans-serif; font-size: 14px; line-height: 1.55; color: #444; flex: 1; }
+.b-card.accent .b-card-desc { color: rgba(255,255,255,0.9); }
+.b-card-cta { margin-top: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #0A0A0A; }
+.b-card.accent .b-card-cta { color: #FFFFFF; }
+
+/* B BUTTONS */
+.b-btn-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.b-btn {
+  font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 14px;
+  letter-spacing: -0.005em; padding: 14px 26px; border-radius: 0; border: none;
+  cursor: pointer; display: inline-flex; align-items: center; gap: 10px; transition: all 0.15s;
+}
+.b-btn-primary { background: #0A0A0A; color: #F8F8F8; }
+.b-btn-primary:hover { background: #FF3B00; }
+.b-btn-accent { background: #FF3B00; color: #FFFFFF; }
+.b-btn-accent:hover { background: #0A0A0A; }
+.b-btn-outline { background: transparent; color: #0A0A0A; border: 1px solid #0A0A0A; }
+.b-btn-outline:hover { background: #0A0A0A; color: #F8F8F8; }
+.b-btn-ghost { background: transparent; color: #0A0A0A; padding: 14px 0; border-bottom: 1px solid #0A0A0A; border-radius: 0; }
+.b-microbadge {
+  display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px;
+  background: #0A0A0A; color: #F8F8F8;
+  font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.b-microbadge.accent { background: #FF3B00; }
+.b-microbadge .dot { width: 6px; height: 6px; border-radius: 50%; background: #FF3B00; }
+.b-microbadge.accent .dot { background: #FFFFFF; }
+
+/* B INSTAGRAM */
+.b-social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.b-ig {
+  aspect-ratio: 1; padding: 32px; position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.b-ig.light { background: #F8F8F8; color: #0A0A0A; border: 1px solid rgba(0,0,0,0.1); }
+.b-ig.dark { background: #0A0A0A; color: #F8F8F8; }
+.b-ig.accent { background: #FF3B00; color: #FFFFFF; }
+.b-ig-tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
+.b-ig-title { font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 48px; line-height: 0.95; letter-spacing: -0.04em; }
+.b-ig-title .accent { color: #FF3B00; }
+.b-ig.accent .b-ig-title .accent { color: #0A0A0A; }
+.b-ig-title .cursor { color: #FF3B00; animation: b-blink 1s infinite; }
+.b-ig.accent .b-ig-title .cursor { color: #FFFFFF; }
+.b-ig-title .placeholder { color: currentColor; opacity: 0.4; border-bottom: 2px dotted currentColor; padding: 0 4px; }
+.b-ig-footer { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.65; }
+
+/* B CYRILLIC SECTION */
+.b-cyril-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.b-cyril-hero {
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 60px 48px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  min-height: 400px;
+  grid-column: 1 / -1;
+}
+.b-cyril-hero-bar {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px; color: #666; letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.b-cyril-big {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500; font-size: 120px;
+  letter-spacing: -0.05em; line-height: 0.9;
+  color: #0A0A0A;
+}
+.b-cyril-big .accent { color: #FF3B00; }
+.b-cyril-caption {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px; color: #666;
+  letter-spacing: 0.08em; text-transform: uppercase; margin-top: 32px;
+}
+.b-cyril-caption .accent { color: #FF3B00; }
+.b-cyril-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 36px 32px;
+  min-height: 280px;
+  display: flex; flex-direction: column;
+}
+.b-cyril-card.accent { background: #FF3B00; color: #FFFFFF; border-color: transparent; }
+.b-cyril-card.dark { background: #0A0A0A; color: #F8F8F8; border-color: transparent; }
+.b-cyril-card-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #666;
+  margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.b-cyril-card.accent .b-cyril-card-label { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.2); }
+.b-cyril-card.dark .b-cyril-card-label { color: rgba(255,255,255,0.4); border-color: rgba(255,255,255,0.1); }
+.b-cyril-card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500; font-size: 32px;
+  letter-spacing: -0.03em; line-height: 1.05; color: #0A0A0A;
+  flex: 1;
+}
+.b-cyril-card.accent .b-cyril-card-title { color: #FFFFFF; }
+.b-cyril-card.dark .b-cyril-card-title { color: #F8F8F8; }
+.b-cyril-card-title .accent { color: #FF3B00; }
+.b-cyril-card-desc {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px; line-height: 1.55; color: #555; margin-top: 12px;
+}
+.b-cyril-card.accent .b-cyril-card-desc { color: rgba(255,255,255,0.85); }
+.b-cyril-card.dark .b-cyril-card-desc { color: rgba(255,255,255,0.65); }
+
+/* B VERBAL */
+.b-verbal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.b-verbal-item {
+  background: #FFFFFF; border: 1px solid rgba(0,0,0,0.1);
+  padding: 40px; min-height: 180px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.b-verbal-item.dark { background: #0A0A0A; color: #F8F8F8; border-color: transparent; }
+.b-verbal-item.accent { background: #FF3B00; color: #FFFFFF; border-color: transparent; }
+.b-verbal-quote { font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 36px; line-height: 1.05; letter-spacing: -0.03em; color: #0A0A0A; }
+.b-verbal-item.dark .b-verbal-quote { color: #F8F8F8; }
+.b-verbal-item.accent .b-verbal-quote { color: #FFFFFF; }
+.b-verbal-quote .accent { color: #FF3B00; }
+.b-verbal-item.accent .b-verbal-quote .accent { color: #0A0A0A; }
+.b-verbal-quote .placeholder { color: currentColor; opacity: 0.4; border-bottom: 2px dotted currentColor; padding: 0 6px; }
+.b-verbal-role {
+  font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+  letter-spacing: 0.1em; text-transform: uppercase; color: #666; margin-top: 20px;
+}
+.b-verbal-item.dark .b-verbal-role,
+.b-verbal-item.accent .b-verbal-role { color: rgba(255,255,255,0.6); }
+
+/* ============================================================ */
+/*                       CONCEPT C                               */
+/*                     OPERATING SYSTEM                          */
+/* ============================================================ */
+#concept-c { background: #F2F2F0; color: #1A1A18; }
+#concept-c .block-label { font-family: 'Fira Code', monospace; color: #888884; }
+
+.c-header {
+  padding: 60px 60px 80px;
+  border-bottom: 1px solid #DDDDD8;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F2F2F0 100%);
+}
+.c-header-bar {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 40px;
+  font-family: 'Fira Code', monospace; font-size: 10px;
+  letter-spacing: 0.1em; text-transform: uppercase; color: #888884;
+}
+.c-header-bar .pill { padding: 4px 10px; border: 1px solid #DDDDD8; border-radius: 4px; background: #FFFFFF; }
+.c-header-bar .pill.active { background: #4A5CFF; color: #FFFFFF; border-color: transparent; }
+.c-header-bar .pill.status {
+  background: rgba(0,135,90,0.08); color: #00875A;
+  border-color: rgba(0,135,90,0.2);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.c-header-bar .pill.status .dot { width: 6px; height: 6px; border-radius: 50%; background: #00875A; }
+.c-header-title {
+  font-family: 'DM Sans', sans-serif; font-weight: 500;
+  font-size: 96px; line-height: 0.95; letter-spacing: -0.045em; color: #1A1A18; margin-bottom: 24px;
+}
+.c-header-title .dot { color: #4A5CFF; }
+.c-header-sub { font-family: 'DM Sans', sans-serif; font-size: 20px; line-height: 1.45; color: #555553; max-width: 640px; font-weight: 400; }
+
+/* C LOGO */
+.c-logo-grid { display: grid; grid-template-columns: 1fr 1fr 240px; gap: 16px; }
+.c-logo-tile {
+  background: #FFFFFF; border: 1px solid #DDDDD8; border-radius: 10px;
+  padding: 48px; min-height: 220px;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  position: relative;
+}
+.c-logo-tile.dark { background: #1A1A18; color: #F2F2F0; border-color: transparent; }
+.c-logo-tile.accent { background: #4A5CFF; color: #FFFFFF; border-color: transparent; }
+.c-tile-tag {
+  position: absolute; top: 16px; left: 20px;
+  font-family: 'Fira Code', monospace; font-size: 10px; color: #888884;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.c-logo-tile.dark .c-tile-tag { color: rgba(255,255,255,0.4); }
+.c-logo-tile.accent .c-tile-tag { color: rgba(255,255,255,0.7); }
+.c-wordmark {
+  font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 56px;
+  letter-spacing: -0.04em; color: #1A1A18; line-height: 1;
+}
+.c-logo-tile.dark .c-wordmark { color: #F2F2F0; }
+.c-logo-tile.accent .c-wordmark { color: #FFFFFF; }
+.c-wordmark .dot { color: #4A5CFF; display: inline-block; animation: c-pulse 2s infinite; }
+.c-logo-tile.dark .c-wordmark .dot { color: #4A5CFF; }
+.c-logo-tile.accent .c-wordmark .dot { color: #FFFFFF; }
+@keyframes c-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+.c-app-icon {
+  width: 140px; height: 140px; background: #1A1A18; border-radius: 32px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 96px;
+  color: #FFFFFF; letter-spacing: -0.05em;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15); position: relative;
+}
+.c-app-icon .dot {
+  position: absolute; bottom: 24px; right: 22px;
+  width: 12px; height: 12px; border-radius: 50%; background: #4A5CFF;
+}
+
+/* C COLORS */
+.c-swatch-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
+.c-swatch { border: 1px solid #DDDDD8; border-radius: 8px; overflow: hidden; background: #FFFFFF; }
+.c-swatch-block { height: 100px; }
+.c-swatch-info { padding: 14px; }
+.c-swatch-name { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 12px; color: #1A1A18; margin-bottom: 2px; }
+.c-swatch-hex { font-family: 'Fira Code', monospace; font-size: 10px; color: #888884; letter-spacing: 0.02em; }
+
+/* C TYPE */
+.c-type-row {
+  padding: 24px 28px; background: #FFFFFF; border: 1px solid #DDDDD8; border-radius: 8px; margin-bottom: 12px;
+  display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: baseline;
+}
+.c-type-meta { font-family: 'Fira Code', monospace; font-size: 10px; color: #888884; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.6; padding-top: 6px; }
+.c-type-meta .var { color: #4A5CFF; }
+.c-type-display { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 88px; letter-spacing: -0.045em; line-height: 0.95; color: #1A1A18; }
+.c-type-h1 { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 48px; letter-spacing: -0.03em; line-height: 1.05; color: #1A1A18; }
+.c-type-h2 { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 28px; letter-spacing: -0.02em; line-height: 1.2; color: #1A1A18; }
+.c-type-body { font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.55; color: #444442; max-width: 640px; }
+.c-type-mono { font-family: 'Fira Code', monospace; font-size: 13px; color: #444442; }
+.c-type-label { font-family: 'Fira Code', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888884; }
+
+/* C DASHBOARD HERO */
+.c-dashboard { background: #FFFFFF; border: 1px solid #DDDDD8; border-radius: 12px; overflow: hidden; }
+.c-dash-topbar {
+  padding: 16px 24px; background: #F2F2F0; border-bottom: 1px solid #DDDDD8;
+  display: flex; align-items: center; gap: 16px;
+  font-family: 'Fira Code', monospace; font-size: 11px; color: #555553; letter-spacing: 0.04em;
+}
+.c-dash-topbar .brand { color: #1A1A18; font-weight: 500; }
+.c-dash-topbar .brand .dot { color: #4A5CFF; }
+.c-dash-topbar .path { color: #888884; }
+.c-dash-topbar .status {
+  margin-left: auto; display: inline-flex; align-items: center; gap: 8px;
+  padding: 4px 10px; background: rgba(0,135,90,0.08); color: #00875A;
+  border-radius: 4px; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.c-dash-topbar .status .dot { width: 6px; height: 6px; border-radius: 50%; background: #00875A; }
+.c-dash-body { display: grid; grid-template-columns: 200px 1fr; min-height: 480px; }
+.c-dash-side { background: #F2F2F0; border-right: 1px solid #DDDDD8; padding: 24px 16px; }
+.c-dash-side .side-label {
+  font-family: 'Fira Code', monospace; font-size: 9px;
+  letter-spacing: 0.14em; text-transform: uppercase; color: #888884; padding: 0 8px 8px;
+}
+.c-dash-side .side-item {
+  font-family: 'DM Sans', sans-serif; font-size: 13px; color: #444442;
+  padding: 8px; border-radius: 6px; display: flex; align-items: center; gap: 8px; margin-bottom: 2px;
+}
+.c-dash-side .side-item.active { background: #FFFFFF; color: #1A1A18; font-weight: 500; }
+.c-dash-side .side-item .marker { width: 4px; height: 4px; border-radius: 50%; background: #888884; }
+.c-dash-side .side-item.active .marker { background: #4A5CFF; }
+.c-dash-main { padding: 32px 32px 40px; }
+.c-dash-title { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 44px; letter-spacing: -0.03em; line-height: 1.05; color: #1A1A18; margin-bottom: 10px; }
+.c-dash-sub { font-family: 'DM Sans', sans-serif; font-size: 15px; color: #555553; margin-bottom: 32px; }
+.c-dash-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+.c-metric { background: #F8F8F6; border: 1px solid #E8E8E4; border-radius: 8px; padding: 18px 20px; }
+.c-metric-label { font-family: 'Fira Code', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #888884; margin-bottom: 8px; }
+.c-metric-value { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 32px; letter-spacing: -0.03em; color: #1A1A18; line-height: 1; margin-bottom: 6px; }
+.c-metric-delta { font-family: 'Fira Code', monospace; font-size: 11px; color: #00875A; }
+.c-metric-delta.negative { color: #888884; }
+.c-dash-agent-strip {
+  padding: 16px 20px; background: #1A1A18; color: #F2F2F0; border-radius: 8px;
+  display: flex; align-items: center; gap: 20px;
+  font-family: 'Fira Code', monospace; font-size: 12px;
+}
+.c-dash-agent-strip .prefix { color: #4A5CFF; }
+.c-dash-agent-strip .cursor {
+  display: inline-block; width: 8px; height: 14px; background: #4A5CFF;
+  animation: b-blink 1s infinite; vertical-align: middle; margin-left: 4px;
+}
+.c-dash-agent-strip .right {
+  margin-left: auto; padding: 4px 10px;
+  background: rgba(255,255,255,0.08); border-radius: 4px;
+  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.65);
+}
+
+/* C SERVICE CARDS */
+.c-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.c-card {
+  background: #FFFFFF; border: 1px solid #DDDDD8; border-radius: 12px;
+  padding: 24px; min-height: 240px;
+  display: flex; flex-direction: column; transition: all 0.2s;
+}
+.c-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+.c-card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.c-card-id { font-family: 'Fira Code', monospace; font-size: 10px; color: #888884; letter-spacing: 0.06em; text-transform: uppercase; }
+.c-card-status {
+  padding: 3px 8px; background: rgba(0,135,90,0.08); color: #00875A;
+  border-radius: 4px; font-family: 'Fira Code', monospace; font-size: 9px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.c-card-title { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 22px; line-height: 1.1; letter-spacing: -0.02em; color: #1A1A18; margin-bottom: 12px; }
+.c-card-desc { font-family: 'DM Sans', sans-serif; font-size: 14px; line-height: 1.5; color: #555553; flex: 1; }
+.c-card-meta {
+  margin-top: 20px; padding-top: 16px; border-top: 1px solid #E8E8E4;
+  display: flex; justify-content: space-between;
+  font-family: 'Fira Code', monospace; font-size: 10px; color: #888884; letter-spacing: 0.04em;
+}
+.c-card-meta .accent { color: #4A5CFF; }
+
+/* C BUTTONS */
+.c-btn-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.c-btn {
+  font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 13px;
+  padding: 10px 18px; border-radius: 6px; border: none; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px; transition: all 0.15s;
+}
+.c-btn-primary { background: #4A5CFF; color: #FFFFFF; }
+.c-btn-primary:hover { background: #3A4CE8; }
+.c-btn-dark { background: #1A1A18; color: #F2F2F0; }
+.c-btn-outline { background: #FFFFFF; color: #1A1A18; border: 1px solid #DDDDD8; }
+.c-btn-outline:hover { border-color: #4A5CFF; color: #4A5CFF; }
+.c-btn-ghost { background: transparent; color: #4A5CFF; }
+.c-microbadge {
+  display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px;
+  background: #FFFFFF; border: 1px solid #DDDDD8; border-radius: 4px;
+  font-family: 'Fira Code', monospace; font-size: 10px;
+  letter-spacing: 0.08em; text-transform: uppercase; color: #444442;
+}
+.c-microbadge .dot { width: 6px; height: 6px; border-radius: 50%; background: #00875A; }
+.c-microbadge.blue .dot { background: #4A5CFF; }
+
+/* C INSTAGRAM */
+.c-social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.c-ig {
+  aspect-ratio: 1; border-radius: 10px; padding: 28px;
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.c-ig.light { background: #FFFFFF; color: #1A1A18; border: 1px solid #DDDDD8; }
+.c-ig.dark { background: #1A1A18; color: #F2F2F0; }
+.c-ig.accent { background: #4A5CFF; color: #FFFFFF; }
+.c-ig-top {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Fira Code', monospace; font-size: 10px;
+  letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.75;
+}
+.c-ig-top .status { display: inline-flex; align-items: center; gap: 6px; }
+.c-ig-top .dot { width: 6px; height: 6px; border-radius: 50%; background: #00875A; }
+.c-ig-title { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 32px; line-height: 1.05; letter-spacing: -0.03em; }
+.c-ig-title .accent { color: #4A5CFF; }
+.c-ig.accent .c-ig-title .accent { color: #1A1A18; }
+.c-ig-metric { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 72px; letter-spacing: -0.05em; line-height: 0.9; }
+.c-ig-metric .unit { font-size: 24px; opacity: 0.7; }
+
+/* C ARCHITECTURE */
+.c-arch { background: #FFFFFF; border: 1px solid #DDDDD8; border-radius: 12px; padding: 32px; }
+.c-arch-title { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 24px; letter-spacing: -0.02em; color: #1A1A18; margin-bottom: 4px; }
+.c-arch-sub { font-family: 'Fira Code', monospace; font-size: 11px; color: #888884; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 28px; }
+.c-arch-tree { display: flex; flex-direction: column; gap: 12px; }
+.c-arch-root {
+  padding: 18px 22px; background: #1A1A18; color: #F2F2F0; border-radius: 8px;
+  font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 20px;
+  letter-spacing: -0.02em; display: flex; align-items: center; gap: 14px;
+}
+.c-arch-root .dot { color: #4A5CFF; }
+.c-arch-root .badge {
+  margin-left: auto; font-family: 'Fira Code', monospace; font-size: 10px;
+  padding: 3px 8px; background: rgba(255,255,255,0.08); border-radius: 4px;
+  letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400; color: rgba(255,255,255,0.7);
+}
+.c-arch-branches {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+  padding-left: 32px; position: relative;
+}
+.c-arch-branches::before {
+  content: ''; position: absolute; top: -12px; left: 16px;
+  width: 1px; height: 24px; background: #DDDDD8;
+}
+.c-arch-node {
+  padding: 14px 16px; background: #F8F8F6; border: 1px solid #E8E8E4;
+  border-radius: 8px; display: flex; flex-direction: column; gap: 6px; position: relative;
+}
+.c-arch-node::before {
+  content: ''; position: absolute; top: -12px; left: 24px;
+  width: 1px; height: 12px; background: #DDDDD8;
+}
+.c-arch-node.active { background: #FFFFFF; border-color: #4A5CFF; }
+.c-arch-node-name { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; letter-spacing: -0.01em; color: #1A1A18; }
+.c-arch-node-role { font-family: 'Fira Code', monospace; font-size: 10px; color: #888884; letter-spacing: 0.05em; }
+.c-arch-node.active .c-arch-node-role { color: #4A5CFF; }
+
+/* C CYRILLIC SECTION */
+.c-cyril-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.c-cyril-hero-card {
+  grid-column: 1 / -1;
+  background: #1A1A18; color: #F2F2F0; border-radius: 12px;
+  padding: 48px;
+  position: relative; overflow: hidden;
+}
+.c-cyril-hero-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: linear-gradient(90deg, #4A5CFF, #00875A);
+}
+.c-cyril-hero-topbar {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 40px;
+  font-family: 'Fira Code', monospace; font-size: 10px;
+  letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5);
+}
+.c-cyril-hero-topbar .pill-ru {
+  padding: 4px 10px; border-radius: 4px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7);
+}
+.c-cyril-hero-topbar .pill-ru.active { background: #4A5CFF; color: #FFFFFF; border-color: transparent; }
+.c-cyril-hero-topbar .pill-ru.status {
+  background: rgba(0,135,90,0.15); color: #00875A;
+  border-color: rgba(0,135,90,0.3);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.c-cyril-hero-topbar .pill-ru.status .dot { width: 6px; height: 6px; border-radius: 50%; background: #00875A; }
+.c-cyril-big-title {
+  font-family: 'DM Sans', sans-serif; font-weight: 500;
+  font-size: 96px; letter-spacing: -0.045em; line-height: 0.95; color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.c-cyril-big-title .accent { color: #4A5CFF; }
+.c-cyril-hero-sub {
+  font-family: 'DM Sans', sans-serif; font-size: 18px; line-height: 1.45;
+  color: rgba(255,255,255,0.6); max-width: 560px;
+}
+.c-cyril-metric-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 36px;
+}
+.c-cyril-metric {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px; padding: 18px 20px;
+}
+.c-cyril-metric-label { font-family: 'Fira Code', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px; }
+.c-cyril-metric-value { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 32px; letter-spacing: -0.03em; color: #FFFFFF; line-height: 1; }
+.c-cyril-metric-delta { font-family: 'Fira Code', monospace; font-size: 11px; color: #00875A; margin-top: 4px; }
+.c-cyril-card-ru {
+  background: #FFFFFF; border: 1px solid #DDDDD8; border-radius: 12px;
+  padding: 28px; display: flex; flex-direction: column; min-height: 220px;
+}
+.c-cyril-card-ru.dark { background: #1A1A18; border-color: transparent; color: #F2F2F0; }
+.c-cyril-card-ru.accent { background: #4A5CFF; border-color: transparent; color: #FFFFFF; }
+.c-cyril-card-id { font-family: 'Fira Code', monospace; font-size: 10px; color: #888884; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 20px; }
+.c-cyril-card-ru.dark .c-cyril-card-id { color: rgba(255,255,255,0.4); }
+.c-cyril-card-ru.accent .c-cyril-card-id { color: rgba(255,255,255,0.7); }
+.c-cyril-card-title { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 24px; letter-spacing: -0.02em; line-height: 1.1; color: #1A1A18; flex: 1; }
+.c-cyril-card-ru.dark .c-cyril-card-title { color: #F2F2F0; }
+.c-cyril-card-ru.accent .c-cyril-card-title { color: #FFFFFF; }
+.c-cyril-card-desc { font-family: 'DM Sans', sans-serif; font-size: 14px; line-height: 1.5; color: #555553; margin-top: 12px; }
+.c-cyril-card-ru.dark .c-cyril-card-desc { color: rgba(255,255,255,0.6); }
+.c-cyril-card-ru.accent .c-cyril-card-desc { color: rgba(255,255,255,0.85); }
+.c-cyril-strip {
+  grid-column: 1 / -1;
+  padding: 16px 24px; background: #1A1A18; color: #F2F2F0; border-radius: 8px;
+  display: flex; align-items: center; gap: 20px;
+  font-family: 'Fira Code', monospace; font-size: 12px;
+}
+.c-cyril-strip .prefix { color: #4A5CFF; }
+.c-cyril-strip .cursor { display: inline-block; width: 8px; height: 14px; background: #4A5CFF; animation: b-blink 1s infinite; vertical-align: middle; margin-left: 4px; }
+.c-cyril-strip .right { margin-left: auto; padding: 4px 10px; background: rgba(255,255,255,0.08); border-radius: 4px; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+
+/* C VERBAL */
+.c-verbal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.c-verbal-item {
+  background: #FFFFFF; border: 1px solid #DDDDD8; border-radius: 10px;
+  padding: 28px 32px; min-height: 140px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.c-verbal-item.dark { background: #1A1A18; color: #F2F2F0; border-color: transparent; }
+.c-verbal-item.accent { background: #4A5CFF; color: #FFFFFF; border-color: transparent; }
+.c-verbal-quote { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 26px; line-height: 1.15; letter-spacing: -0.02em; color: #1A1A18; }
+.c-verbal-item.dark .c-verbal-quote { color: #F2F2F0; }
+.c-verbal-item.accent .c-verbal-quote { color: #FFFFFF; }
+.c-verbal-quote .accent { color: #4A5CFF; }
+.c-verbal-item.accent .c-verbal-quote .accent { color: #1A1A18; }
+.c-verbal-role { font-family: 'Fira Code', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #888884; margin-top: 16px; }
+.c-verbal-item.dark .c-verbal-role,
+.c-verbal-item.accent .c-verbal-role { color: rgba(255,255,255,0.6); }
+
+</style>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+</head>
+<body>
+
+<!-- ============= GLOBAL NAV ============= -->
+<nav class="gnav">
+  <span class="gnav-brand">THNKFOR<span class="dot">.</span>ME</span>
+  <span class="gnav-tag">Brand Concepts / B & C</span>
+  <div class="gnav-switch">
+    <button class="gnav-btn active" data-target="concept-b">B · Human × Machine</button>
+    <button class="gnav-btn" data-target="concept-c">C · Operating System</button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!--  CONCEPT B — HUMAN × MACHINE                                       -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<section id="concept-b" class="concept active">
+  <div class="b-header">
+    <div class="b-header-eyebrow">// Concept B · Human × Machine</div>
+    <h1 class="b-header-title">TH<span class="gap"></span>NK.<br><span class="accent">FOR.ME</span></h1>
+    <p class="b-header-sub">The missing "I" is the point. Between the human and the machine, there's a space — we fill it. Bold, spatial, kinetic. Cursor as identity.</p>
+  </div>
+
+  <div class="container">
+
+    <!-- 01 LOGO -->
+    <div class="block" style="margin-top:80px;">
+      <div class="block-label">// 01 · Logotype system</div>
+      <div class="b-logo-grid">
+        <div class="b-logo-tile">
+          <span class="b-tile-tag">Primary · with cursor</span>
+          <div class="b-wordmark">THNK<span class="cursor">|</span>FOR<span class="dot">.</span>ME</div>
+        </div>
+        <div class="b-logo-tile">
+          <span class="b-tile-tag">Gap · missing I</span>
+          <div class="b-wordmark">THNK<span class="gap-i"></span>FOR<span class="dot">.</span>ME</div>
+        </div>
+        <div class="b-logo-tile dark">
+          <span class="b-tile-tag">Placeholder · TH_NK</span>
+          <div class="b-wordmark">TH<span class="placeholder">&nbsp;</span>NK FOR<span class="dot">.</span>ME</div>
+        </div>
+        <div class="b-logo-tile">
+          <span class="b-tile-tag">Stacked</span>
+          <div class="b-wordmark-stacked">
+            <span class="thnk">THNK</span>
+            <span class="forme">FOR<span class="dot">.</span>ME</span>
+          </div>
+        </div>
+        <div class="b-logo-tile accent wide">
+          <span class="b-tile-tag">Wordmark · on accent</span>
+          <div class="b-wordmark" style="font-size:96px;">THNK<span class="cursor">|</span>FOR.ME</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 HERO ANIMATION -->
+    <div class="block">
+      <div class="block-label">// 02 · Hero screen · Motion identity</div>
+      <div class="b-hero">
+        <div class="b-hero-topbar">
+          <span>THNK.FOR.ME / MARKETING × MACHINE</span>
+          <span class="status"><span class="dot"></span>System live</span>
+        </div>
+        <div class="b-hero-anim">
+          <span class="word">
+            <span class="letter">T</span><span class="letter">H</span><span class="letter letter-i">I</span><span class="letter">N</span><span class="letter">K</span>
+          </span>
+          <span class="forme-block">FOR<span class="dot">.</span>ME</span>
+        </div>
+        <div class="b-hero-caption">// Remove the <span class="accent">"I"</span> and something new appears.<br>The marketing that thinks for you.</div>
+      </div>
+      <div style="margin-top:12px; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#666; letter-spacing:0.08em; text-transform:uppercase;">
+        Animation: THINK → remove I → THNK → FOR.ME resolves. Runs on loop.
+      </div>
+    </div>
+
+    <!-- 03 COLORS -->
+    <div class="block">
+      <div class="block-label">// 03 · Colour system</div>
+      <div class="b-swatch-grid">
+        <div class="b-swatch" style="background:#F8F8F8; color:#0A0A0A;">
+          <div class="top">Background</div>
+          <div><div class="bottom">Bone</div><div class="hex">#F8F8F8</div></div>
+        </div>
+        <div class="b-swatch" style="background:#FFFFFF; color:#0A0A0A;">
+          <div class="top">Surface</div>
+          <div><div class="bottom">Paper</div><div class="hex">#FFFFFF</div></div>
+        </div>
+        <div class="b-swatch" style="background:#FF3B00; color:#FFFFFF;">
+          <div class="top">Accent</div>
+          <div><div class="bottom">Signal</div><div class="hex">#FF3B00</div></div>
+        </div>
+        <div class="b-swatch" style="background:#0A0A0A; color:#F8F8F8;">
+          <div class="top">Ink</div>
+          <div><div class="bottom">Machine Black</div><div class="hex">#0A0A0A</div></div>
+        </div>
+        <div class="b-swatch" style="background:#666; color:#F8F8F8;">
+          <div class="top">Muted</div>
+          <div><div class="bottom">System Grey</div><div class="hex">#666666</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 TYPE -->
+    <div class="block">
+      <div class="block-label">// 04 · Typography</div>
+      <div class="b-type-row">
+        <div class="b-type-meta">Space Grotesk<br>Medium · 120px<br>−0.05em</div>
+        <div class="b-type-display">TH<span class="accent">|</span>NK</div>
+      </div>
+      <div class="b-type-row">
+        <div class="b-type-meta">Space Grotesk<br>Medium · 60px<br>−0.03em</div>
+        <div class="b-type-h1">Marketing built by machines, tuned by humans.</div>
+      </div>
+      <div class="b-type-row">
+        <div class="b-type-meta">Space Grotesk<br>Regular · 32px<br>−0.02em</div>
+        <div class="b-type-h2">The "I" is optional. Keep the work.</div>
+      </div>
+      <div class="b-type-row">
+        <div class="b-type-meta">Space Grotesk<br>Regular · 17px</div>
+        <div class="b-type-body">We build marketing agents that run 24/7 — content, targeting, analytics, iteration. You keep the strategic call. We handle the volume, the tuning, the operations. Together: faster than either alone.</div>
+      </div>
+      <div class="b-type-row">
+        <div class="b-type-meta">IBM Plex Mono<br>13px · System</div>
+        <div class="b-type-mono">// system.status = active<br>// last_deploy = 2026.09.07 · 14:22 UTC</div>
+      </div>
+    </div>
+
+    <!-- 05 SERVICE CARDS -->
+    <div class="block">
+      <div class="block-label">// 05 · Service modules</div>
+      <div class="b-cards">
+        <div class="b-card">
+          <div class="b-card-topline"><span>MODULE.01</span><span>ACTIVE</span></div>
+          <h3 class="b-card-title">Content <span class="accent">×</span> Machine</h3>
+          <p class="b-card-desc">Editorial agents that write, edit, and publish in your voice. Human oversight. Machine consistency.</p>
+          <span class="b-card-cta">→ Deploy</span>
+        </div>
+        <div class="b-card accent">
+          <div class="b-card-topline"><span>MODULE.02</span><span>FLAGSHIP</span></div>
+          <h3 class="b-card-title">Performance ×<br>Automation</h3>
+          <p class="b-card-desc">Targeted campaigns that self-optimise. You set the goal. The system iterates. We tune the outputs.</p>
+          <span class="b-card-cta">→ Deploy</span>
+        </div>
+        <div class="b-card">
+          <div class="b-card-topline"><span>MODULE.03</span><span>ACTIVE</span></div>
+          <h3 class="b-card-title">Strategy <span class="accent">×</span> Signal</h3>
+          <p class="b-card-desc">Analytics that surface the decisions worth making. Less dashboard. More direction.</p>
+          <span class="b-card-cta">→ Deploy</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 BUTTONS -->
+    <div class="block">
+      <div class="block-label">// 06 · Buttons & micro-elements</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div style="background:#FFFFFF; border:1px solid rgba(0,0,0,0.1); padding:32px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#666; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:20px;">// on bone</div>
+          <div class="b-btn-row">
+            <button class="b-btn b-btn-primary">DEPLOY →</button>
+            <button class="b-btn b-btn-accent">RUN SYSTEM</button>
+            <button class="b-btn b-btn-outline">READ DOCS</button>
+            <button class="b-btn b-btn-ghost">MANIFESTO →</button>
+          </div>
+          <div style="margin-top:20px; display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="b-microbadge"><span class="dot"></span>SYSTEM.ACTIVE</span>
+            <span class="b-microbadge accent"><span class="dot"></span>AGENT · LIVE</span>
+            <span class="b-microbadge">v.0.1</span>
+          </div>
+        </div>
+        <div style="background:#0A0A0A; padding:32px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:rgba(255,255,255,0.5); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:20px;">// on machine black</div>
+          <div class="b-btn-row">
+            <button class="b-btn b-btn-accent">DEPLOY →</button>
+            <button class="b-btn" style="background:#F8F8F8; color:#0A0A0A;">RUN SYSTEM</button>
+            <button class="b-btn" style="background:transparent; color:#F8F8F8; border:1px solid #F8F8F8;">READ DOCS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 INSTAGRAM -->
+    <div class="block">
+      <div class="block-label">// 07 · Social · Instagram 1:1</div>
+      <div class="b-social-grid">
+        <div class="b-ig light">
+          <div class="b-ig-tag">// POST.001</div>
+          <div class="b-ig-title">TH<span class="placeholder">&nbsp;</span>NK<br>FOR<span class="accent">.</span>ME</div>
+          <div class="b-ig-footer">// The I is optional.</div>
+        </div>
+        <div class="b-ig accent">
+          <div class="b-ig-tag">// POST.002</div>
+          <div class="b-ig-title">Remove the "I".<br>Keep the work.</div>
+          <div class="b-ig-footer">// THNK<span class="cursor">|</span>FOR.ME · 2026</div>
+        </div>
+        <div class="b-ig dark">
+          <div class="b-ig-tag">// POST.003</div>
+          <div class="b-ig-title">THINK less.<br><span class="accent">DO more.</span><span class="cursor">|</span></div>
+          <div class="b-ig-footer">// SYSTEM v.0.1</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 КИРИЛЛИКА -->
+    <div class="block">
+      <div class="block-label">// 08 · Кириллика — проверка эстетики</div>
+      <div class="b-cyril-container">
+
+        <!-- Hero большая кириллица -->
+        <div class="b-cyril-hero">
+          <div class="b-cyril-hero-bar">// КИРИЛЛ.ТЕСТ · Space Grotesk · −0.05em</div>
+          <div class="b-cyril-big">
+            МАРКЕТИНГ<br>× <span class="accent">МАШИНА</span>
+          </div>
+          <div class="b-cyril-caption">
+            // Убери «<span class="accent">Я</span>». Оставь результат.<br>
+            Маркетинг, который работает за тебя.
+          </div>
+        </div>
+
+        <!-- Карточки в кириллице -->
+        <div class="b-cyril-card">
+          <div class="b-cyril-card-label">МОДУЛЬ.01 / КОНТЕНТ</div>
+          <div class="b-cyril-card-title">Контент <span class="accent">×</span> Машина</div>
+          <div class="b-cyril-card-desc">Агенты, которые пишут, редактируют и публикуют в твоём голосе — в любом масштабе.</div>
+        </div>
+
+        <div class="b-cyril-card accent">
+          <div class="b-cyril-card-label">МОДУЛЬ.02 / ПРОДВИЖЕНИЕ</div>
+          <div class="b-cyril-card-title">Реклама × Автопилот</div>
+          <div class="b-cyril-card-desc">Кампании, которые сами оптимизируются. Ты ставишь цель — система тестирует.</div>
+        </div>
+
+        <div class="b-cyril-card dark">
+          <div class="b-cyril-card-label">МОДУЛЬ.03 / АНАЛИТИКА</div>
+          <div class="b-cyril-card-title">Стратегия <span style="color:#FF3B00;">×</span> Сигнал</div>
+          <div class="b-cyril-card-desc">Данные, которые указывают на решения. Меньше дашбордов. Больше направления.</div>
+        </div>
+
+        <div class="b-cyril-card">
+          <div class="b-cyril-card-label">ТАЙПЧЕКЕР · 32px · −0.02em</div>
+          <div class="b-cyril-card-title" style="font-size:32px;">Стратегия человека. Исполнение <span class="accent">машины.</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 09 VERBAL IDENTITY -->
+    <div class="block">
+      <div class="block-label">// 09 · Verbal identity · Кириллика</div>
+      <div class="b-verbal-grid">
+        <div class="b-verbal-item accent">
+          <div class="b-verbal-quote">TH<span class="placeholder">&nbsp;</span>NK<br>FOR<span class="accent">.</span>ME</div>
+          <div class="b-verbal-role">// Primary lockup</div>
+        </div>
+        <div class="b-verbal-item">
+          <div class="b-verbal-quote">«<span class="accent">Я</span>» необязательно.</div>
+          <div class="b-verbal-role">// Слоган / Tagline</div>
+        </div>
+        <div class="b-verbal-item dark">
+          <div class="b-verbal-quote">Убери «Я».<br>Оставь результат.</div>
+          <div class="b-verbal-role">// Манифест</div>
+        </div>
+        <div class="b-verbal-item">
+          <div class="b-verbal-quote">Думай меньше.<br><span class="accent">Делай больше.</span></div>
+          <div class="b-verbal-role">// Продуктовая страница</div>
+        </div>
+        <div class="b-verbal-item">
+          <div class="b-verbal-quote">Стратегия человека.<br>Исполнение <span class="accent">машины.</span></div>
+          <div class="b-verbal-role">// О нас</div>
+        </div>
+        <div class="b-verbal-item dark">
+          <div class="b-verbal-quote">Твоя точка зрения.<br><span class="accent">Наш масштаб.</span></div>
+          <div class="b-verbal-role">// Закрывающий экран</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!--  CONCEPT C — OPERATING SYSTEM                                      -->
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<section id="concept-c" class="concept">
+  <div class="c-header">
+    <div class="c-header-bar">
+      <span class="pill">Concept C · 02/02</span>
+      <span class="pill active">OS · v.0.1</span>
+      <span class="pill status"><span class="dot"></span>Система активна</span>
+      <span class="pill">Modules: 06</span>
+    </div>
+    <h1 class="c-header-title">Marketing<br>as an OS<span class="dot">.</span></h1>
+    <p class="c-header-sub">THNKFOR.ME — операционная система маркетинга. Модульная, наблюдаемая, всегда на связи. Для команд, которые шипят каждый день.</p>
+  </div>
+
+  <div class="container">
+
+    <!-- 01 LOGO -->
+    <div class="block" style="margin-top:60px;">
+      <div class="block-label"># 01 · Logotype & app icon</div>
+      <div class="c-logo-grid">
+        <div class="c-logo-tile">
+          <span class="c-tile-tag">wordmark / primary</span>
+          <div class="c-wordmark">thnkfor<span class="dot">.</span>me</div>
+        </div>
+        <div class="c-logo-tile dark">
+          <span class="c-tile-tag">wordmark / inverse</span>
+          <div class="c-wordmark">thnkfor<span class="dot">.</span>me</div>
+        </div>
+        <div class="c-logo-tile">
+          <span class="c-tile-tag">app icon</span>
+          <div class="c-app-icon">t<span class="dot"></span></div>
+        </div>
+        <div class="c-logo-tile accent">
+          <span class="c-tile-tag">wordmark / brand</span>
+          <div class="c-wordmark">thnkfor<span class="dot">.</span>me</div>
+        </div>
+        <div class="c-logo-tile" style="grid-column:span 2;">
+          <span class="c-tile-tag">lockup + status indicator</span>
+          <div style="display:flex; align-items:center; gap:24px;">
+            <div class="c-wordmark" style="font-size:44px;">thnkfor<span class="dot">.</span>me</div>
+            <span class="c-microbadge blue"><span class="dot"></span>SYSTEM · ACTIVE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 COLORS -->
+    <div class="block">
+      <div class="block-label"># 02 · Colour system · design tokens</div>
+      <div class="c-swatch-grid">
+        <div class="c-swatch">
+          <div class="c-swatch-block" style="background:#F2F2F0; border-bottom:1px solid #E8E8E4;"></div>
+          <div class="c-swatch-info"><div class="c-swatch-name">Ground</div><div class="c-swatch-hex">#F2F2F0</div></div>
+        </div>
+        <div class="c-swatch">
+          <div class="c-swatch-block" style="background:#FFFFFF; border-bottom:1px solid #E8E8E4;"></div>
+          <div class="c-swatch-info"><div class="c-swatch-name">Surface</div><div class="c-swatch-hex">#FFFFFF</div></div>
+        </div>
+        <div class="c-swatch">
+          <div class="c-swatch-block" style="background:#E8E8E4;"></div>
+          <div class="c-swatch-info"><div class="c-swatch-name">Panel</div><div class="c-swatch-hex">#E8E8E4</div></div>
+        </div>
+        <div class="c-swatch">
+          <div class="c-swatch-block" style="background:#4A5CFF;"></div>
+          <div class="c-swatch-info"><div class="c-swatch-name">System Blue</div><div class="c-swatch-hex">#4A5CFF</div></div>
+        </div>
+        <div class="c-swatch">
+          <div class="c-swatch-block" style="background:#00875A;"></div>
+          <div class="c-swatch-info"><div class="c-swatch-name">System Green</div><div class="c-swatch-hex">#00875A</div></div>
+        </div>
+        <div class="c-swatch">
+          <div class="c-swatch-block" style="background:#888884;"></div>
+          <div class="c-swatch-info"><div class="c-swatch-name">Text Muted</div><div class="c-swatch-hex">#888884</div></div>
+        </div>
+        <div class="c-swatch">
+          <div class="c-swatch-block" style="background:#1A1A18;"></div>
+          <div class="c-swatch-info"><div class="c-swatch-name">Ink</div><div class="c-swatch-hex">#1A1A18</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 TYPE -->
+    <div class="block">
+      <div class="block-label"># 03 · Typography</div>
+      <div class="c-type-row">
+        <div class="c-type-meta"><span class="var">$display</span><br>DM Sans · 500<br>88px · −0.045em</div>
+        <div class="c-type-display">System<br>online<span style="color:#4A5CFF;">.</span></div>
+      </div>
+      <div class="c-type-row">
+        <div class="c-type-meta"><span class="var">$h1</span><br>DM Sans · 500<br>48px · −0.03em</div>
+        <div class="c-type-h1">Your marketing stack, automated.</div>
+      </div>
+      <div class="c-type-row">
+        <div class="c-type-meta"><span class="var">$h2</span><br>DM Sans · 500<br>28px · −0.02em</div>
+        <div class="c-type-h2">Run agents. Ship campaigns. Watch metrics.</div>
+      </div>
+      <div class="c-type-row">
+        <div class="c-type-meta"><span class="var">$body</span><br>DM Sans · 400<br>16px</div>
+        <div class="c-type-body">A marketing OS for teams that ship every day. Deploy content agents, monitor performance in one place, and iterate as fast as the results come in. Modular. Observable. Yours to configure.</div>
+      </div>
+      <div class="c-type-row">
+        <div class="c-type-meta"><span class="var">$mono</span><br>Fira Code · 400<br>13px</div>
+        <div class="c-type-mono">$ thnk deploy --agent=content --channel=telegram --schedule=daily</div>
+      </div>
+      <div class="c-type-row">
+        <div class="c-type-meta"><span class="var">$label</span><br>Fira Code · 500<br>10px · 0.1em</div>
+        <div class="c-type-label">STATUS · ACTIVE — LAST DEPLOY · 14:22 UTC</div>
+      </div>
+    </div>
+
+    <!-- 04 DASHBOARD HERO -->
+    <div class="block">
+      <div class="block-label"># 04 · Hero · Product dashboard</div>
+      <div class="c-dashboard">
+        <div class="c-dash-topbar">
+          <span class="brand">thnkfor<span class="dot">.</span>me</span>
+          <span class="path">/ workspace / mainbrand.ai</span>
+          <span class="status"><span class="dot"></span>All systems operational</span>
+        </div>
+        <div class="c-dash-body">
+          <div class="c-dash-side">
+            <div class="side-label">Workspace</div>
+            <div class="side-item active"><span class="marker"></span>Overview</div>
+            <div class="side-item"><span class="marker"></span>Agents · 4</div>
+            <div class="side-item"><span class="marker"></span>Campaigns</div>
+            <div class="side-item"><span class="marker"></span>Channels</div>
+            <div class="side-item"><span class="marker"></span>Insights</div>
+            <div class="side-label" style="margin-top:24px;">Modules</div>
+            <div class="side-item"><span class="marker" style="background:#4A5CFF;"></span>Content · 3 agents</div>
+            <div class="side-item"><span class="marker" style="background:#00875A;"></span>Growth · 2 agents</div>
+            <div class="side-item"><span class="marker" style="background:#00875A;"></span>Analytics · 1 agent</div>
+          </div>
+          <div class="c-dash-main">
+            <h1 class="c-dash-title">Deploy. Monitor.<br>Optimise.</h1>
+            <p class="c-dash-sub">Your marketing OS is up. 6 agents running. Last 24h below.</p>
+            <div class="c-dash-metrics">
+              <div class="c-metric">
+                <div class="c-metric-label">// content shipped</div>
+                <div class="c-metric-value">128</div>
+                <div class="c-metric-delta">+42 vs. yesterday</div>
+              </div>
+              <div class="c-metric">
+                <div class="c-metric-label">// avg. CPL</div>
+                <div class="c-metric-value">$4.20</div>
+                <div class="c-metric-delta">−18% wow</div>
+              </div>
+              <div class="c-metric">
+                <div class="c-metric-label">// agent uptime</div>
+                <div class="c-metric-value">99.8%</div>
+                <div class="c-metric-delta negative">stable</div>
+              </div>
+            </div>
+            <div class="c-dash-agent-strip">
+              <span class="prefix">agent &gt;</span>
+              <span>publishing week 36 · scheduled 24 posts across 3 channels<span class="cursor"></span></span>
+              <span class="right">Running · 00:00:12</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 SERVICE CARDS -->
+    <div class="block">
+      <div class="block-label"># 05 · Service modules</div>
+      <div class="c-cards">
+        <div class="c-card">
+          <div class="c-card-head">
+            <span class="c-card-id">MOD.01 / CONTENT</span>
+            <span class="c-card-status">● ACTIVE</span>
+          </div>
+          <h3 class="c-card-title">Content Operations</h3>
+          <p class="c-card-desc">Editorial agents that write, edit, publish and iterate across your channels.</p>
+          <div class="c-card-meta"><span>Agents: Content × 3</span><span class="accent">→ Deploy</span></div>
+        </div>
+        <div class="c-card">
+          <div class="c-card-head">
+            <span class="c-card-id">MOD.02 / GROWTH</span>
+            <span class="c-card-status">● ACTIVE</span>
+          </div>
+          <h3 class="c-card-title">Growth &amp; Targeting</h3>
+          <p class="c-card-desc">Campaign agents that run, monitor and self-tune your paid channels.</p>
+          <div class="c-card-meta"><span>Agents: Growth × 2</span><span class="accent">→ Deploy</span></div>
+        </div>
+        <div class="c-card">
+          <div class="c-card-head">
+            <span class="c-card-id">MOD.03 / INSIGHT</span>
+            <span class="c-card-status">● ACTIVE</span>
+          </div>
+          <h3 class="c-card-title">Analytics &amp; Signal</h3>
+          <p class="c-card-desc">A live signal feed. What moved. What broke. What to ship next.</p>
+          <div class="c-card-meta"><span>Agents: Analytics × 1</span><span class="accent">→ Deploy</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 КИРИЛЛИКА -->
+    <div class="block">
+      <div class="block-label"># 06 · Кириллика — проверка эстетики</div>
+      <div class="c-cyril-grid">
+
+        <!-- Hero на тёмном -->
+        <div class="c-cyril-hero-card">
+          <div class="c-cyril-hero-topbar">
+            <span class="pill-ru">Concept C</span>
+            <span class="pill-ru active">OS · v.0.1</span>
+            <span class="pill-ru status"><span class="dot"></span>Система активна</span>
+            <span class="pill-ru">Модулей: 06</span>
+          </div>
+          <div class="c-cyril-big-title">Маркетинг<br>как <span class="accent">операционка</span><span style="color:#4A5CFF;">.</span></div>
+          <div class="c-cyril-hero-sub">THNKFOR.ME — платформа. Агенты — модули, которые на ней работают. Разверни. Следи. Оптимизируй.</div>
+          <div class="c-cyril-metric-row">
+            <div class="c-cyril-metric">
+              <div class="c-cyril-metric-label">// контент опубликован</div>
+              <div class="c-cyril-metric-value">128</div>
+              <div class="c-cyril-metric-delta">+42 вчера</div>
+            </div>
+            <div class="c-cyril-metric">
+              <div class="c-cyril-metric-label">// средний CPL</div>
+              <div class="c-cyril-metric-value">₽380</div>
+              <div class="c-cyril-metric-delta">−18% нед/нед</div>
+            </div>
+            <div class="c-cyril-metric">
+              <div class="c-cyril-metric-label">// аптайм агентов</div>
+              <div class="c-cyril-metric-value">99.8%</div>
+              <div class="c-cyril-metric-delta" style="color:rgba(255,255,255,0.4);">стабильно</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточки в кириллице -->
+        <div class="c-cyril-card-ru">
+          <div class="c-cyril-card-id">МОД.01 / КОНТЕНТ</div>
+          <div class="c-cyril-card-title">Контент-операции</div>
+          <div class="c-cyril-card-desc">Агенты, которые пишут, редактируют и публикуют в твоём голосе на всех каналах.</div>
+        </div>
+
+        <div class="c-cyril-card-ru accent">
+          <div class="c-cyril-card-id">МОД.02 / РОСТ</div>
+          <div class="c-cyril-card-title">Рост и таргетинг</div>
+          <div class="c-cyril-card-desc">Рекламные агенты, которые запускают, следят и сами настраивают платные каналы.</div>
+        </div>
+
+        <div class="c-cyril-card-ru dark">
+          <div class="c-cyril-card-id">МОД.03 / АНАЛИТИКА</div>
+          <div class="c-cyril-card-title">Аналитика и сигнал</div>
+          <div class="c-cyril-card-desc">Живой сигнал. Что выросло. Что сломалось. Что запустить следующим.</div>
+        </div>
+
+        <div class="c-cyril-card-ru">
+          <div class="c-cyril-card-id">ТАЙПЧЕКЕР · DM Sans · 24px</div>
+          <div class="c-cyril-card-title">Одна платформа. Множество агентов.</div>
+          <div class="c-cyril-card-desc">Ты конфигурируешь. Агенты шипят. Ты масштабируешься.</div>
+        </div>
+
+        <!-- Командная строка в кириллице -->
+        <div class="c-cyril-strip">
+          <span class="prefix">агент &gt;</span>
+          <span>публикую неделю 36 · запланировано 24 поста на 3 канала<span class="cursor"></span></span>
+          <span class="right">Работает · 00:00:42</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 07 BUTTONS -->
+    <div class="block">
+      <div class="block-label"># 07 · Buttons & micro-elements</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div style="background:#FFFFFF; border:1px solid #DDDDD8; border-radius:12px; padding:32px;">
+          <div style="font-family:'Fira Code',monospace; font-size:10px; color:#888884; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:20px;"># on surface</div>
+          <div class="c-btn-row">
+            <button class="c-btn c-btn-primary">Deploy →</button>
+            <button class="c-btn c-btn-dark">Run agent</button>
+            <button class="c-btn c-btn-outline">View docs</button>
+            <button class="c-btn c-btn-ghost">Learn more →</button>
+          </div>
+          <div style="margin-top:20px; display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="c-microbadge"><span class="dot"></span>SYSTEM · ACTIVE</span>
+            <span class="c-microbadge blue"><span class="dot"></span>AGENT · ONLINE</span>
+            <span class="c-microbadge">v.0.1</span>
+            <span class="c-microbadge">MOD.03</span>
+          </div>
+        </div>
+        <div style="background:#1A1A18; border-radius:12px; padding:32px;">
+          <div style="font-family:'Fira Code',monospace; font-size:10px; color:rgba(255,255,255,0.5); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:20px;"># on ink</div>
+          <div class="c-btn-row">
+            <button class="c-btn c-btn-primary">Deploy →</button>
+            <button class="c-btn" style="background:#FFFFFF; color:#1A1A18;">Run agent</button>
+            <button class="c-btn" style="background:transparent; color:#F2F2F0; border:1px solid rgba(255,255,255,0.25);">View docs</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 INSTAGRAM -->
+    <div class="block">
+      <div class="block-label"># 08 · Social · Instagram 1:1</div>
+      <div class="c-social-grid">
+        <div class="c-ig light">
+          <div class="c-ig-top">
+            <span># POST.001</span>
+            <span class="status"><span class="dot"></span>LIVE</span>
+          </div>
+          <div class="c-ig-title">System<br>active<span class="accent">.</span></div>
+          <div class="c-ig-top">
+            <span>thnkfor<span style="color:#4A5CFF;">.</span>me</span>
+            <span>2026</span>
+          </div>
+        </div>
+        <div class="c-ig dark">
+          <div class="c-ig-top">
+            <span># POST.002</span>
+            <span class="status"><span class="dot"></span>RUNNING</span>
+          </div>
+          <div>
+            <div class="c-ig-metric">99<span class="unit">.8%</span></div>
+            <div style="font-family:'Fira Code',monospace; font-size:12px; color:#888884; letter-spacing:0.06em; text-transform:uppercase; margin-top:8px;">// agent uptime · week 36</div>
+          </div>
+          <div class="c-ig-top">
+            <span>thnkfor<span style="color:#4A5CFF;">.</span>me</span>
+            <span>OS · v.0.1</span>
+          </div>
+        </div>
+        <div class="c-ig accent">
+          <div class="c-ig-top" style="color:rgba(255,255,255,0.85);">
+            <span># POST.003</span>
+            <span>DEPLOY</span>
+          </div>
+          <div class="c-ig-title">Deploy.<br>Scale<br>faster<span class="accent">.</span></div>
+          <div class="c-ig-top" style="color:rgba(255,255,255,0.85);">
+            <span>thnkfor.me</span>
+            <span>2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 ARCHITECTURE -->
+    <div class="block">
+      <div class="block-label"># 09 · Platform architecture</div>
+      <div class="c-arch">
+        <h3 class="c-arch-title">One OS. Many modules.</h3>
+        <div class="c-arch-sub">// thnkfor.me is the platform. Modules deploy as agents.</div>
+        <div class="c-arch-tree">
+          <div class="c-arch-root">
+            <span>thnkfor<span class="dot">.</span>me</span>
+            <span class="badge">OS · Platform</span>
+          </div>
+          <div class="c-arch-branches">
+            <div class="c-arch-node active">
+              <div class="c-arch-node-name">Content</div>
+              <div class="c-arch-node-role">content.ops · live</div>
+            </div>
+            <div class="c-arch-node">
+              <div class="c-arch-node-name">Growth</div>
+              <div class="c-arch-node-role">targeting.agent</div>
+            </div>
+            <div class="c-arch-node">
+              <div class="c-arch-node-name">Analytics</div>
+              <div class="c-arch-node-role">signal.agent</div>
+            </div>
+            <div class="c-arch-node">
+              <div class="c-arch-node-name">Module+</div>
+              <div class="c-arch-node-role">roadmap · 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 VERBAL IDENTITY -->
+    <div class="block">
+      <div class="block-label"># 10 · Verbal identity · Кириллика</div>
+      <div class="c-verbal-grid">
+        <div class="c-verbal-item accent">
+          <div class="c-verbal-quote">Твой маркетинг-стек.<br>Автоматизирован<span class="accent">.</span></div>
+          <div class="c-verbal-role"># первичный слоган</div>
+        </div>
+        <div class="c-verbal-item">
+          <div class="c-verbal-quote">Разверни.<br><span class="accent">Масштабируйся.</span></div>
+          <div class="c-verbal-role"># продуктовая страница</div>
+        </div>
+        <div class="c-verbal-item dark">
+          <div class="c-verbal-quote">Система активна.<br><span class="accent">Результаты идут.</span></div>
+          <div class="c-verbal-role"># статус-баннер</div>
+        </div>
+        <div class="c-verbal-item">
+          <div class="c-verbal-quote">Развернуть. Следить.<br>Оптимизировать<span class="accent">.</span></div>
+          <div class="c-verbal-role"># hero</div>
+        </div>
+        <div class="c-verbal-item">
+          <div class="c-verbal-quote">Одна платформа.<br>Много агентов.</div>
+          <div class="c-verbal-role"># архитектура</div>
+        </div>
+        <div class="c-verbal-item dark">
+          <div class="c-verbal-quote">Ты конфигурируешь.<br><span class="accent">Агенты шипят.</span></div>
+          <div class="c-verbal-role"># закрывающий экран</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+const btns = document.querySelectorAll('.gnav-btn');
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.concept').forEach(s => s.classList.remove('active'));
+    document.getElementById(btn.dataset.target).classList.add('active');
+    window.scrollTo(0, 0);
+  });
+});
+</script>
+</body>
+</html>

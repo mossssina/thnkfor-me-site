@@ -1,0 +1,971 @@
+[
+  {
+    "niche": "Салоны красоты",
+    "category": "Beauty",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для салона красоты",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 14,
+        "results_count": "~50000"
+      },
+      {
+        "query": "продвижение салона красоты в инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~80000"
+      },
+      {
+        "query": "контент для салона красоты соцсети",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": "~40000"
+      },
+      {
+        "query": "продвижение салона красоты вконтакте",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~35000"
+      },
+      {
+        "query": "таргетированная реклама для салона красоты",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 3,
+        "results_count": "~30000"
+      },
+      {
+        "query": "crm для салона красоты",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 154,
+        "results_count": "~120000"
+      },
+      {
+        "query": "онлайн запись салон красоты программа",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 27,
+        "results_count": "~90000"
+      },
+      {
+        "query": "чат-бот для записи в салон красоты телеграм",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~25000"
+      },
+      {
+        "query": "автоматизация салона красоты",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 16,
+        "results_count": "~45000"
+      },
+      {
+        "query": "раскрутка салона красоты",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 4,
+        "results_count": "~60000"
+      },
+      {
+        "query": "агентство для салона красоты маркетинг",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~20000"
+      },
+      {
+        "query": "интернет маркетинг для салона красоты",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~15000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "смм для салона красоты",
+        "position": 1,
+        "url": "https://www.sostav.ru/blogs/275100/72504",
+        "domain": "sostav.ru",
+        "title": "Стоимость SMM для салона красоты в 2026 году: фриланс, агентство или автоматизация",
+        "description": "Обзор вариантов SMM-продвижения для салонов красоты: сравнение стоимости фриланса, агентства и автоматизации в 2026 году",
+        "pages_count": "~50000"
+      },
+      {
+        "query_used": "смм для салона красоты",
+        "position": 2,
+        "url": "https://workspace.ru/cases/smm-dlya-salonov-krasoty/",
+        "domain": "workspace.ru",
+        "title": "СММ для салонов красоты — кейс Цифровые Истории",
+        "description": "Реальный кейс SMM-продвижения для салонов красоты с результатами и стратегией",
+        "pages_count": "~10000"
+      },
+      {
+        "query_used": "смм для салона красоты",
+        "position": 3,
+        "url": "https://workspace.ru/blog/stoimost-smm-dlya-salona-krasoty-v-2026-godu-frilans-agentstvo-ili-avtomatizaciya/",
+        "domain": "workspace.ru",
+        "title": "Стоимость SMM для салона красоты в 2026 году: фриланс, агентство или автоматизация",
+        "description": "Подробный анализ стоимости различных форматов SMM для салонов красоты",
+        "pages_count": "~10000"
+      },
+      {
+        "query_used": "смм для салона красоты",
+        "position": 4,
+        "url": "https://belberry.net/blog/smm-dlya-salona-krasoty/",
+        "domain": "belberry.net",
+        "title": "SMM для салона красоты — Статья от digital-агентства Belberry",
+        "description": "Полное руководство по SMM-продвижению салона красоты от digital-агентства",
+        "pages_count": "~150"
+      },
+      {
+        "query_used": "смм для салона красоты",
+        "position": 5,
+        "url": "https://www.hairmediapro.ru/for-hairdressers/smm-na-million",
+        "domain": "hairmediapro.ru",
+        "title": "SMM для салона красоты: контент-план и продвижение | HairMediaPro",
+        "description": "Готовый контент-план и стратегия продвижения для салонов красоты",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "продвижение салона красоты в инстаграм",
+        "position": 1,
+        "url": "https://smmbox.com/blog/ig/prodvizhenie-salona-krasoty-v-instagram/",
+        "domain": "smmbox.com",
+        "title": "8 способов, как улучшить продвижение салона красоты в Инстаграм",
+        "description": "Практические способы продвижения салона красоты в Instagram с пошаговыми рекомендациями",
+        "pages_count": "~500"
+      },
+      {
+        "query_used": "продвижение салона красоты в инстаграм",
+        "position": 2,
+        "url": "https://easyweek.ru/kak-pravilno-vesti-akkaunt-instagram-salona-krasoty.html",
+        "domain": "easyweek.ru",
+        "title": "Продвижение салона красоты в Инстаграм — EasyWeek",
+        "description": "Как правильно вести аккаунт Instagram салона красоты и привлекать клиентов",
+        "pages_count": "~300"
+      },
+      {
+        "query_used": "продвижение салона красоты в инстаграм",
+        "position": 3,
+        "url": "https://postium.ru/prodvizhenie-salona-krasoty-v-instagrame/",
+        "domain": "postium.ru",
+        "title": "Продвижение салона красоты в Инстаграм: посты, сторис, профиль, реклама | Postium",
+        "description": "Полное руководство по Instagram-продвижению: посты, сторис, профиль, реклама для салонов",
+        "pages_count": "~800"
+      },
+      {
+        "query_used": "продвижение салона красоты в инстаграм",
+        "position": 4,
+        "url": "https://appointer.ua/ru/blog/prodvijenie-salona-krasoty-v-instagram-kak-privlech-novyx-klientov/",
+        "domain": "appointer.ua",
+        "title": "Как продвигать салон красоты в Инстаграм и привлечь новых клиентов — блог CRM Appointer",
+        "description": "Советы по продвижению салона красоты в Instagram от разработчиков CRM-системы",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "продвижение салона красоты в инстаграм",
+        "position": 5,
+        "url": "https://managementspa.ru/manager/marketing/251-marketing-of-beauty-salons-in-instagram-target",
+        "domain": "managementspa.ru",
+        "title": "Продвижение салона красоты в инстаграм. Как и где искать целевую аудиторию?",
+        "description": "Где искать целевую аудиторию для продвижения салона красоты и спа в Instagram",
+        "pages_count": "~400"
+      },
+      {
+        "query_used": "crm для салона красоты",
+        "position": 1,
+        "url": "https://www.matrix.ru/blog/kak-vybrat-crm-dlya-salona-krasoty",
+        "domain": "matrix.ru",
+        "title": "CRM для салона красоты: программа онлайн-записи клиентов [для управления и учета]",
+        "description": "Как выбрать CRM для салона красоты: обзор программ онлайн-записи, управления и учета",
+        "pages_count": "~1000"
+      },
+      {
+        "query_used": "crm для салона красоты",
+        "position": 2,
+        "url": "https://appointer.ua/ru/programma-dlya-salonov-krasoty-i-parikmaherskih/",
+        "domain": "appointer.ua",
+        "title": "CRM для салона красоты | Программа для салонов красоты и парикмахерских — CRM Appointer",
+        "description": "Программа для управления салоном красоты и парикмахерской с функцией онлайн-записи",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "crm для салона красоты",
+        "position": 3,
+        "url": "https://cleverbox-crm.com/ru/crm-salon-krasoty.html",
+        "domain": "cleverbox-crm.com",
+        "title": "CRM для салона красоты. Программа автоматизации для салонов красоты | CleverBox:CRM",
+        "description": "Комплексная автоматизация салона красоты: CRM, онлайн-запись, аналитика, мессенджеры",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "crm для салона красоты",
+        "position": 4,
+        "url": "https://helloclient.by/crm-dlja-salona-krasoty",
+        "domain": "helloclient.by",
+        "title": "Удобная CRM для салона красоты — HelloClient",
+        "description": "CRM-система для салона красоты: онлайн-запись, учет клиентов, аналитика",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "crm для салона красоты",
+        "position": 5,
+        "url": "https://crmindex.ru/for/salon_krasoti",
+        "domain": "crmindex.ru",
+        "title": "10 лучших CRM для салона красоты. Рейтинг и сравнение CRM",
+        "description": "Независимый рейтинг и сравнение 10 лучших CRM-систем для салонов красоты",
+        "pages_count": "~300"
+      }
+    ]
+  },
+  {
+    "niche": "Барбершопы",
+    "category": "Beauty",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для барбершопа",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": "~25000"
+      },
+      {
+        "query": "продвижение барбершопа в инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~20000"
+      },
+      {
+        "query": "контент для барбершопа соцсети",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~15000"
+      },
+      {
+        "query": "продвижение барбершопа вконтакте таргет",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~18000"
+      },
+      {
+        "query": "маркетинг барбершопа реклама привлечение клиентов",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~22000"
+      },
+      {
+        "query": "онлайн запись барбершоп CRM программа",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~40000"
+      },
+      {
+        "query": "crm для барбершопа",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 22,
+        "results_count": "~35000"
+      },
+      {
+        "query": "чат-бот для барбершопа запись клиентов",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~12000"
+      },
+      {
+        "query": "автоматизация барбершопа программа учета",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~20000"
+      },
+      {
+        "query": "раскрутка барбершопа с нуля",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~30000"
+      },
+      {
+        "query": "агентство для продвижения барбершопа",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~10000"
+      },
+      {
+        "query": "реклама барбершопа яндекс директ",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex",
+        "frequency": 0,
+        "results_count": "~15000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "смм для барбершопа контент маркетинг",
+        "position": 1,
+        "url": "https://blog.tochkadostupa.pro/reklama-barbershopa-kak-zapustit-biznes-i-raskrutitsya/",
+        "domain": "blog.tochkadostupa.pro",
+        "title": "Как открыть барбершоп: маркетинг, реклама, УТП | Кейс: продвижение барбершопа",
+        "description": "Полный гайд по маркетингу и рекламе барбершопа: кейсы продвижения, реальные результаты",
+        "pages_count": "~500"
+      },
+      {
+        "query_used": "смм для барбершопа контент маркетинг",
+        "position": 2,
+        "url": "https://smm.academy/blog/biznes-plan-barbershopa/",
+        "domain": "smm.academy",
+        "title": "Бизнес-план барбершопа: от открытия до продвижения | SMM-Академия",
+        "description": "SMM-стратегия и бизнес-план барбершопа с акцентом на продвижение в соцсетях",
+        "pages_count": "~300"
+      },
+      {
+        "query_used": "смм для барбершопа контент маркетинг",
+        "position": 3,
+        "url": "https://vc.ru/marketing/1629113-barbershop-20-onlain-strategiya-dlya-zavoevaniya-muzhskoi-auditorii",
+        "domain": "vc.ru",
+        "title": "Барбершоп 2.0: онлайн-стратегия для завоевания мужской аудитории — Маркетинг на vc.ru",
+        "description": "Современная онлайн-стратегия продвижения барбершопа для привлечения мужской аудитории",
+        "pages_count": "~500000"
+      },
+      {
+        "query_used": "смм для барбершопа контент маркетинг",
+        "position": 4,
+        "url": "https://magnetto.pro/media/article/reklama-i-marketing-barbershopa/",
+        "domain": "magnetto.pro",
+        "title": "Реклама и маркетинг барбершопа — рабочие способы, инструменты и кейсы",
+        "description": "Рабочие инструменты рекламы и маркетинга барбершопа с реальными кейсами",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "смм для барбершопа контент маркетинг",
+        "position": 5,
+        "url": "https://abs-marketing.ru/otraslevye-resheniya/barbershopy/",
+        "domain": "abs-marketing.ru",
+        "title": "Маркетинг барбершопов | ABS-Marketing",
+        "description": "Отраслевые маркетинговые решения для барбершопов от агентства ABS-Marketing",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "раскрутка барбершопа реклама привлечение клиентов агентство",
+        "position": 1,
+        "url": "https://direct.yandex.ru/base/articles/reklama-barbershopa-effektivnoe-prodvizhenie-muzhskoy-parikmaherskoy",
+        "domain": "direct.yandex.ru",
+        "title": "Продвижение барбершопа: эффективный маркетинг для мужских парикмахерских",
+        "description": "Яндекс Директ: как эффективно продвигать барбершоп через контекстную рекламу",
+        "pages_count": "~5000"
+      },
+      {
+        "query_used": "раскрутка барбершопа реклама привлечение клиентов агентство",
+        "position": 2,
+        "url": "https://vc.ru/marketing/2024386-prodvizhenie-barbershopa-reklama-yandeks-biznes-i-2gis",
+        "domain": "vc.ru",
+        "title": "Кейс: реклама барбершопа. Продвижение барбершопа. Как привлечь клиентов в барбершоп! — vc.ru",
+        "description": "Реальный кейс: продвижение барбершопа через Яндекс Бизнес и 2ГИС с результатами",
+        "pages_count": "~500000"
+      },
+      {
+        "query_used": "раскрутка барбершопа реклама привлечение клиентов агентство",
+        "position": 3,
+        "url": "https://geoleads.ru/blog/reklama-barbershopa",
+        "domain": "geoleads.ru",
+        "title": "Реклама барбершопа: как раскрутить с нуля в 2026 году | GeoLeads",
+        "description": "Пошаговое руководство по рекламе и раскрутке барбершопа с нуля в 2026 году",
+        "pages_count": "~150"
+      },
+      {
+        "query_used": "раскрутка барбершопа реклама привлечение клиентов агентство",
+        "position": 4,
+        "url": "https://skibl.ru/usluga/prodvizenie-proektov/barber-shop",
+        "domain": "skibl.ru",
+        "title": "Продвижение и реклама барбершоп — SKIBL",
+        "description": "Комплексное продвижение и реклама барбершопа от агентства SKIBL",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "раскрутка барбершопа реклама привлечение клиентов агентство",
+        "position": 5,
+        "url": "https://everest-solution.com/cases/kejs-po-prodvizheniyu-dlya-barbershopa-kak-my-sdelali-etot-biznes-uspeshnym/",
+        "domain": "everest-solution.com",
+        "title": "Кейс по продвижению барбершопа: успешные стратегии и результаты",
+        "description": "Кейс агентства Everest Solution по продвижению барбершопа: стратегии и конкретные результаты",
+        "pages_count": "~120"
+      },
+      {
+        "query_used": "онлайн запись барбершоп CRM программа",
+        "position": 1,
+        "url": "https://rubitime.ru/barbershop",
+        "domain": "rubitime.ru",
+        "title": "CRM для барбершопа от Rubitime. Программа онлайн-записи и управления клиентами",
+        "description": "CRM и онлайн-запись для барбершопа: управление расписанием, клиентами и доходами",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "онлайн запись барбершоп CRM программа",
+        "position": 2,
+        "url": "https://www.arnica.pro/barbershop",
+        "domain": "arnica.pro",
+        "title": "CRM для барбершопа Арника с бесплатной онлайн-записью",
+        "description": "CRM-система для барбершопа Арника: удобное расписание, онлайн-запись, учет клиентов",
+        "pages_count": "~150"
+      },
+      {
+        "query_used": "онлайн запись барбершоп CRM программа",
+        "position": 3,
+        "url": "https://salon1c.ru/for-barbershop/",
+        "domain": "salon1c.ru",
+        "title": "Программа для барбершопов — CRM система для учета и автоматизации | 1С:Салон",
+        "description": "CRM-система 1С:Салон для барбершопов: учет, автоматизация, онлайн-запись",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "онлайн запись барбершоп CRM программа",
+        "position": 4,
+        "url": "https://cleverbox-crm.com/barbershopy.html",
+        "domain": "cleverbox-crm.com",
+        "title": "CRM для барбершопов. Автоматизация барбершопов | CleverBox:CRM",
+        "description": "Автоматизация барбершопа с помощью CleverBox:CRM: запись, уведомления, аналитика",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "онлайн запись барбершоп CRM программа",
+        "position": 5,
+        "url": "https://kwikbi.ru/programma-dlya-barbershopa",
+        "domain": "kwikbi.ru",
+        "title": "Программа для барбершопа и парикмахерской — CRM, онлайн-запись и работа с отзывами — КВИКБИ",
+        "description": "Автоматизация барбершопа: CRM, онлайн-запись 24/7, управление репутацией и отзывами",
+        "pages_count": "~80"
+      }
+    ]
+  },
+  {
+    "niche": "Ногтевые студии",
+    "category": "Beauty",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для ногтевой студии маникюр",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~20000"
+      },
+      {
+        "query": "продвижение маникюрного салона в инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~30000"
+      },
+      {
+        "query": "контент план для мастера маникюра",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 59,
+        "results_count": "~15000"
+      },
+      {
+        "query": "продвижение ногтевой студии вконтакте",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~12000"
+      },
+      {
+        "query": "таргет реклама маникюр привлечение клиентов",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~18000"
+      },
+      {
+        "query": "crm для студии маникюра",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~35000"
+      },
+      {
+        "query": "онлайн запись ногтевая студия программа",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~25000"
+      },
+      {
+        "query": "автоматизация записи клиентов маникюр",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~15000"
+      },
+      {
+        "query": "чат-бот для записи на маникюр телеграм",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~10000"
+      },
+      {
+        "query": "раскрутка ногтевой студии маникюр",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~25000"
+      },
+      {
+        "query": "агентство продвижение маникюрный салон",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~8000"
+      },
+      {
+        "query": "реклама мастера маникюра яндекс",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex",
+        "frequency": 9,
+        "results_count": "~12000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "продвижение ногтевой студии маникюр смм агентство",
+        "position": 1,
+        "url": "https://direct.yandex.ru/base/articles/reklama-manikyura-i-pedikyura-kak-privlech-klientov",
+        "domain": "direct.yandex.ru",
+        "title": "Продвижение для мастера маникюра и педикюра: продвижение и привлечение новых клиентов",
+        "description": "Яндекс Директ: как привлечь клиентов на маникюр и педикюр через рекламу",
+        "pages_count": "~5000"
+      },
+      {
+        "query_used": "продвижение ногтевой студии маникюр смм агентство",
+        "position": 2,
+        "url": "https://alterainvest.ru/rus/blogi/reklama-salona-manikyura/",
+        "domain": "alterainvest.ru",
+        "title": "Как привлечь клиентов на маникюр | Реклама маникюра — секреты раскрутки",
+        "description": "Секреты раскрутки маникюрного салона и привлечения новых клиентов",
+        "pages_count": "~2000"
+      },
+      {
+        "query_used": "продвижение ногтевой студии маникюр смм агентство",
+        "position": 3,
+        "url": "https://vc.ru/marketing/1913831-prodvizhenie-manikyura-yandex-biznes-2gis",
+        "domain": "vc.ru",
+        "title": "Продвижение маникюра. Реклама студии маникюра и педикюра. Как привлечь клиентов на маникюр! — vc.ru",
+        "description": "Кейс по продвижению маникюрной студии через Яндекс Бизнес и 2ГИС",
+        "pages_count": "~500000"
+      },
+      {
+        "query_used": "продвижение ногтевой студии маникюр смм агентство",
+        "position": 4,
+        "url": "https://daniker.com/blog/prodvizhenie-salona-manikyura",
+        "domain": "daniker.com",
+        "title": "Продвижение салона маникюра, раскрутка маникюрного салона | Daniker Consult",
+        "description": "Комплексное продвижение и раскрутка маникюрного салона от маркетингового агентства",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "продвижение ногтевой студии маникюр смм агентство",
+        "position": 5,
+        "url": "https://flamynails.ru/blog/post/kak_prodvigat_uslugi_nogtevogo_servisa",
+        "domain": "flamynails.ru",
+        "title": "Как продвигать ногтевой сервис",
+        "description": "Практические советы по продвижению услуг ногтевого сервиса и студий маникюра",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "контент план для ногтевой студии маникюр инстаграм вконтакте",
+        "position": 1,
+        "url": "https://texterra.ru/blog/stories-dlya-beauty-akkaunta-privlekaem-novykh-klientov-iz-instagram.html",
+        "domain": "texterra.ru",
+        "title": "Stories для ногтевой студии: 45 универсальных идей, как оформить сториз для бьюти-аккаунта",
+        "description": "45 идей для Instagram Stories ногтевой студии: оформление и привлечение клиентов",
+        "pages_count": "~3000"
+      },
+      {
+        "query_used": "контент план для ногтевой студии маникюр инстаграм вконтакте",
+        "position": 2,
+        "url": "https://blog.tochkadostupa.pro/prodvizhenie-nogtevoj-studii-vkontakte/",
+        "domain": "blog.tochkadostupa.pro",
+        "title": "Кейс по продвижению маникюрного салона ВКонтакте | Контент-план, таргетинг",
+        "description": "Реальный кейс: контент-план и таргетированная реклама для маникюрного салона ВКонтакте",
+        "pages_count": "~500"
+      },
+      {
+        "query_used": "контент план для ногтевой студии маникюр инстаграм вконтакте",
+        "position": 3,
+        "url": "https://smmplanner.com/blog/gotovyi-kontient-plan-dlia-mastiera-manikiura/",
+        "domain": "smmplanner.com",
+        "title": "Готовый контент-план для соцсетей мастера маникюра — SMMplanner",
+        "description": "Готовый шаблон контент-плана для мастера маникюра во всех соцсетях",
+        "pages_count": "~1000"
+      },
+      {
+        "query_used": "контент план для ногтевой студии маникюр инстаграм вконтакте",
+        "position": 4,
+        "url": "https://welovesmm.com.ua/blog/content-plan-for-manicure-master/",
+        "domain": "welovesmm.com.ua",
+        "title": "Контент-план для мастера маникюра: Фейсбук, Инстаграм, Телеграм — WeLoveSmm",
+        "description": "Контент-план для мастера маникюра под разные платформы: Facebook, Instagram, Telegram",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "онлайн запись ногтевая студия CRM автоматизация",
+        "position": 1,
+        "url": "https://rubitime.ru/manicure",
+        "domain": "rubitime.ru",
+        "title": "CRM для мастеров маникюра от Rubitime. Онлайн запись клиентов и управление записями",
+        "description": "CRM и онлайн-запись для мастеров маникюра: управление расписанием и клиентской базой",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "онлайн запись ногтевая студия CRM автоматизация",
+        "position": 2,
+        "url": "https://cleverbox-crm.com/ru/studiya-manikyura.html",
+        "domain": "cleverbox-crm.com",
+        "title": "CRM программа для студий маникюра | CleverBox:CRM",
+        "description": "Специализированная CRM для студий маникюра: запись, учет, мессенджеры, аналитика",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "онлайн запись ногтевая студия CRM автоматизация",
+        "position": 3,
+        "url": "https://kwikbi.ru/programma-zapisi-dlya-manikyura-i-nogtevoj-servis",
+        "domain": "kwikbi.ru",
+        "title": "Программа для онлайн-записи на маникюр — CRM, онлайн-запись 24/7, умные отзывы — КВИКБИ",
+        "description": "Автоматизация маникюрной студии: онлайн-запись 24/7, CRM, управление отзывами",
+        "pages_count": "~80"
+      },
+      {
+        "query_used": "онлайн запись ногтевая студия CRM автоматизация",
+        "position": 4,
+        "url": "https://dnkcrm.online/uslugi-po-otraslyam/crm-dlya-manikyurnogo-salona/",
+        "domain": "dnkcrm.online",
+        "title": "Внедрение CRM для маникюрного салона: Интегратор CRM — DNK CRM",
+        "description": "Профессиональное внедрение CRM для маникюрного салона от интегратора DNK CRM",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "раскрутка ногтевой студии маникюр привлечение клиентов",
+        "position": 1,
+        "url": "https://ads.vk.ru/insights/kak-prodvigat-sebya-masteru-manikyura-i-privlech-novih-klientov",
+        "domain": "ads.vk.ru",
+        "title": "Реклама маникюра: как продвигать свои услуги и найти клиентов",
+        "description": "VK Реклама: как мастеру маникюра продвигать услуги и привлекать новых клиентов",
+        "pages_count": "~3000"
+      },
+      {
+        "query_used": "раскрутка ногтевой студии маникюр привлечение клиентов",
+        "position": 2,
+        "url": "https://simplec.ru/blog/seo-prodvizhenie-manikyura-89/",
+        "domain": "simplec.ru",
+        "title": "SEO продвижение для маникюра",
+        "description": "SEO-продвижение сайта маникюрного салона: ключевые слова, оптимизация, результаты",
+        "pages_count": "~200"
+      }
+    ]
+  },
+  {
+    "niche": "SPA-салоны",
+    "category": "Beauty",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для спа салона",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~20000"
+      },
+      {
+        "query": "продвижение спа салона в инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~18000"
+      },
+      {
+        "query": "контент для спа салона соцсети",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~12000"
+      },
+      {
+        "query": "реклама спа салона таргет вконтакте",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~10000"
+      },
+      {
+        "query": "маркетинг спа салона яндекс директ",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex",
+        "frequency": 0,
+        "results_count": "~15000"
+      },
+      {
+        "query": "crm для спа салона",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~30000"
+      },
+      {
+        "query": "онлайн запись спа салон программа",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~25000"
+      },
+      {
+        "query": "автоматизация спа центра программа учета",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~12000"
+      },
+      {
+        "query": "чат-бот для записи в спа салон телеграм",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~8000"
+      },
+      {
+        "query": "раскрутка спа салона привлечение клиентов",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~22000"
+      },
+      {
+        "query": "агентство для продвижения спа",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~8000"
+      },
+      {
+        "query": "интернет маркетинг для спа салона",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~10000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "продвижение спа салона smm маркетинг реклама",
+        "position": 1,
+        "url": "https://workspace.ru/cases/prodvizhenie-salona-spa-i-massazha-byudzhet-0-rubley/",
+        "domain": "workspace.ru",
+        "title": "Продвижение салона СПА и массажа: бюджет — 0 рублей — кейс E-Shishkova Agency",
+        "description": "Кейс: продвижение спа-салона с нулевым бюджетом от агентства E-Shishkova",
+        "pages_count": "~10000"
+      },
+      {
+        "query_used": "продвижение спа салона smm маркетинг реклама",
+        "position": 2,
+        "url": "https://salon1c.ru/blog/prodvizhenie-salona-krasoty-v-soczialnyh-setyah-kratkij-gajd/",
+        "domain": "salon1c.ru",
+        "title": "Продвижение салона красоты в социальных сетях: краткий гайд | 1С:Салон красоты",
+        "description": "Краткий гайд по продвижению салона красоты и спа в социальных сетях",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "продвижение спа салона smm маркетинг реклама",
+        "position": 3,
+        "url": "https://vc.ru/marketing/1871359-trendy-smm-marketinga-dlya-salonov-krasoty",
+        "domain": "vc.ru",
+        "title": "Тренды SMM-маркетинга для салонов красоты — Маркетинг на vc.ru",
+        "description": "Актуальные тренды SMM-маркетинга для салонов красоты и спа в 2025–2026 году",
+        "pages_count": "~500000"
+      },
+      {
+        "query_used": "продвижение спа салона smm маркетинг реклама",
+        "position": 4,
+        "url": "https://voropaevmedia.com/blog/reklama-spa-salona",
+        "domain": "voropaevmedia.com",
+        "title": "Реклама СПА-салона: Как эффективно использовать современные маркетинговые инструменты",
+        "description": "Современные маркетинговые инструменты для рекламы спа-салона: обзор и рекомендации",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "продвижение спа салона smm маркетинг реклама",
+        "position": 5,
+        "url": "https://smm-agentstvo.ru/blog/smm-dlia-spa-salonov/",
+        "domain": "smm-agentstvo.ru",
+        "title": "Эффективные стратегии SMM для спа-салона",
+        "description": "Полный гайд по SMM для спа-салонов: стратегия, контент, реклама, результаты",
+        "pages_count": "~300"
+      },
+      {
+        "query_used": "маркетинг спа салон привлечение клиентов агентство раскрутка",
+        "position": 1,
+        "url": "https://vc.ru/marketing/2002537-prodvizhenie-spa-salona-v-moskve-s-pomoshchyu-yandeks-direkt",
+        "domain": "vc.ru",
+        "title": "Кейс: Продвижение СПА салона в Москве — реклама Яндекс Директ — vc.ru",
+        "description": "Кейс по продвижению спа-салона в Москве через Яндекс Директ с конкретными результатами",
+        "pages_count": "~500000"
+      },
+      {
+        "query_used": "маркетинг спа салон привлечение клиентов агентство раскрутка",
+        "position": 2,
+        "url": "https://voropaevmedia.com/blog/reklama-spa-salona",
+        "domain": "voropaevmedia.com",
+        "title": "Реклама СПА-салона: Как эффективно использовать современные маркетинговые инструменты",
+        "description": "Инструменты рекламы спа-салона: таргет, контекст, SEO, работа с блогерами",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "маркетинг спа салон привлечение клиентов агентство раскрутка",
+        "position": 3,
+        "url": "https://webstripe.ru/blog/effektivnyy-marketing-dlya-sayta-spa-salona",
+        "domain": "webstripe.ru",
+        "title": "Маркетинг для сайта спа-услуг: привлечение клиентов, увеличение продаж, укрепление бренда",
+        "description": "Комплексный интернет-маркетинг для сайта спа-салона: клиенты, продажи, бренд",
+        "pages_count": "~150"
+      },
+      {
+        "query_used": "маркетинг спа салон привлечение клиентов агентство раскрутка",
+        "position": 4,
+        "url": "https://stom-media.ru/effective-strategies-for-promoting-spa-services-how-to-attract-customers-and-create-a-successful-business/",
+        "domain": "stom-media.ru",
+        "title": "Эффективные стратегии продвижения спа-услуг: Как привлечь клиентов и создать успешный бизнес | Stom Media",
+        "description": "Стратегии продвижения спа-услуг для успешного бизнеса от агентства Stom Media",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "автоматизация спа салона CRM онлайн запись чат-бот",
+        "position": 1,
+        "url": "https://rubitime.ru/spa",
+        "domain": "rubitime.ru",
+        "title": "CRM для спа-салона от Rubitime — программа записи и автоматизации процессов",
+        "description": "CRM и онлайн-запись для спа-салона: автоматизация, учет клиентов, аналитика",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "автоматизация спа салона CRM онлайн запись чат-бот",
+        "position": 2,
+        "url": "https://www.yclients.com/spa",
+        "domain": "yclients.com",
+        "title": "CRM для спа-салонов — приложение для онлайн-записи и автоматизация YCLIENTS",
+        "description": "YCLIENTS: CRM и онлайн-запись для спа-салонов с полной автоматизацией бизнес-процессов",
+        "pages_count": "~500"
+      },
+      {
+        "query_used": "автоматизация спа салона CRM онлайн запись чат-бот",
+        "position": 3,
+        "url": "https://cleverbox-crm.com/spa.html",
+        "domain": "cleverbox-crm.com",
+        "title": "CRM для SPA салонов. Автоматизация для SPA | CleverBox:CRM",
+        "description": "Автоматизация спа-салона: CRM, запись, мессенджеры, история клиентов, аналитика",
+        "pages_count": "~50"
+      },
+      {
+        "query_used": "автоматизация спа салона CRM онлайн запись чат-бот",
+        "position": 4,
+        "url": "https://salebot.pro/crm",
+        "domain": "salebot.pro",
+        "title": "CRM для бизнеса с мессенджерами и автоматизацией продаж | Salebot",
+        "description": "CRM с чат-ботами: онлайн-запись, напоминания в WhatsApp и Telegram, предоплата, аналитика",
+        "pages_count": "~200"
+      },
+      {
+        "query_used": "раскрутка спа салона привлечение клиентов продвижение",
+        "position": 1,
+        "url": "https://vc.ru/id793767/583396-reklama-spa-salona-prodvizhenie-v-internete",
+        "domain": "vc.ru",
+        "title": "Реклама спа-салона: продвижение в интернете — Вадим Резяпов на vc.ru",
+        "description": "Методы интернет-продвижения спа-салона: каналы, инструменты, бюджеты",
+        "pages_count": "~500000"
+      },
+      {
+        "query_used": "раскрутка спа салона привлечение клиентов продвижение",
+        "position": 2,
+        "url": "https://vechkasov.ru/blog/articles/13-metodov-prodvizheniya-spa-salona-sayt-reklama-sots-seti",
+        "domain": "vechkasov.ru",
+        "title": "13 методов продвижения спа салона: сайт, реклама, соц. сети",
+        "description": "13 проверенных методов продвижения спа-салона: сайт, контекстная реклама, соцсети",
+        "pages_count": "~100"
+      },
+      {
+        "query_used": "раскрутка спа салона привлечение клиентов продвижение",
+        "position": 3,
+        "url": "https://ios-apps.ru/blog/smm-dlia-spa-salonov/",
+        "domain": "ios-apps.ru",
+        "title": "SMM для спа-салонов: эффективные стратегии продвижения",
+        "description": "Эффективные SMM-стратегии для спа-салонов: контент, таргет, вовлечённость аудитории",
+        "pages_count": "~100"
+      }
+    ]
+  }
+]

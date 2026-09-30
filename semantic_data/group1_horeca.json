@@ -1,0 +1,1037 @@
+[
+  {
+    "niche": "Рестораны",
+    "category": "HoReCa",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для ресторана",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 43,
+        "results_count": "~15000"
+      },
+      {
+        "query": "продвижение ресторана в инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~80000"
+      },
+      {
+        "query": "маркетинговое агентство для ресторана",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 19,
+        "results_count": "~25000"
+      },
+      {
+        "query": "таргетированная реклама для ресторана",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~12000"
+      },
+      {
+        "query": "ведение соцсетей ресторана",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 2,
+        "results_count": "~9000"
+      },
+      {
+        "query": "автоматизация ресторана чат-бот",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~8000"
+      },
+      {
+        "query": "CRM для ресторана",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 42,
+        "results_count": "~20000"
+      },
+      {
+        "query": "чат-бот для бронирования ресторана",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~5000"
+      },
+      {
+        "query": "telegram бот для ресторана",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~6000"
+      },
+      {
+        "query": "раскрутка ресторана",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 23,
+        "results_count": "~35000"
+      },
+      {
+        "query": "агентство для ресторана контент",
+        "cluster": "SMM/контент",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~10000"
+      },
+      {
+        "query": "реклама ресторана Москва",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 56,
+        "results_count": "~40000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "смм для ресторана услуги агентство",
+        "position": 1,
+        "url": "https://novikovspace.com/school/smm-dlya-restoranov",
+        "domain": "novikovspace.com",
+        "title": "СММ для ресторанов - от SMM стратегии до профессионального управления SMM-кампаниями ресторана",
+        "description": "Курсы и обучение SMM для ресторанов в Novikov Space — от стратегии до управления кампаниями.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для ресторана услуги агентство",
+        "position": 2,
+        "url": "https://vc.ru/marketing/232757-smm-dlya-restoranov-kakie-osobennosti",
+        "domain": "vc.ru",
+        "title": "SMM для ресторанов: какие особенности? — Маркетинг на vc.ru",
+        "description": "Статья о специфике SMM для ресторанного бизнеса: контент, стратегия, продвижение.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для ресторана услуги агентство",
+        "position": 3,
+        "url": "https://ugolek.agency/smm-almaty/dlya-restoranov",
+        "domain": "ugolek.agency",
+        "title": "SMM для ресторанов в Алматы - продвижение в Instagram и соцсетях",
+        "description": "Агентство Ugolek — SMM-продвижение ресторанов в Instagram и социальных сетях.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для ресторана услуги агентство",
+        "position": 4,
+        "url": "https://voropaevmedia.com/blog/smm-dlya-restoranov-sekrety-effektivnogo-prodvizheniya-v-socialnyh-setyah",
+        "domain": "voropaevmedia.com",
+        "title": "Вкусное SMM продвижение ресторана: Особенности, стратегия, кейсы",
+        "description": "Секреты эффективного SMM-продвижения ресторанов в социальных сетях, стратегия и кейсы.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для ресторана услуги агентство",
+        "position": 5,
+        "url": "https://horecadigital.ru/tpost/uhrcj599v1-smm-agentstvo-dlya-restoranov-zachem-nuz",
+        "domain": "horecadigital.ru",
+        "title": "СММ агентство для ресторанов: зачем нужен профессиональный подход",
+        "description": "Агентство HORECA DIGITAL — профессиональный SMM для ресторанов, отелей и заведений общепита.",
+        "pages_count": "~7"
+      },
+      {
+        "query_used": "смм для ресторана услуги агентство",
+        "position": 6,
+        "url": "https://freud-pr.ru/smm-prodvizhenie/smm-dlya-restoranov",
+        "domain": "freud-pr.ru",
+        "title": "SMM для ресторанов, доставок и food-брендов",
+        "description": "Агентство Freud PR — SMM-продвижение ресторанов, доставок и food-брендов.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для ресторана услуги агентство",
+        "position": 7,
+        "url": "https://araich.pro/smm",
+        "domain": "araich.pro",
+        "title": "SMM продвижение ресторана",
+        "description": "Профессиональное SMM-продвижение ресторанного бизнеса.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для ресторана Москва",
+        "position": 1,
+        "url": "https://ratingruneta.ru/seo+context/food/",
+        "domain": "ratingruneta.ru",
+        "title": "Лучшие маркетинговые агентства для ресторанов | Рейтинг Рунета",
+        "description": "Рейтинг агентств, специализирующихся на продвижении ресторанов и food-бизнеса.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для ресторана Москва",
+        "position": 2,
+        "url": "https://www.restoria.agency/horeca",
+        "domain": "restoria.agency",
+        "title": "Агентство ресторанного маркетинга — Restoria",
+        "description": "Restoria — маркетинговое агентство для ресторанов, SMM-продвижение, разработка сайтов и рекламные кампании. Москва и Санкт-Петербург.",
+        "pages_count": "~1"
+      },
+      {
+        "query_used": "маркетинговое агентство для ресторана Москва",
+        "position": 3,
+        "url": "https://a-m.agency/",
+        "domain": "a-m.agency",
+        "title": "Аппетитный маркетинг, 2026",
+        "description": "Агентство ресторанного маркетинга — современные инструменты и тренды для продвижения.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинговое агентство для ресторана Москва",
+        "position": 4,
+        "url": "https://paler.agency/",
+        "domain": "paler.agency",
+        "title": "Paler Agency — маркетинговое агентство для ресторанов, баров, клубов в Москве",
+        "description": "Paler Agency — комплексный маркетинг для ресторанов, баров, клубов: сайты, чат-боты, SMM, реклама.",
+        "pages_count": "~1"
+      },
+      {
+        "query_used": "маркетинговое агентство для ресторана Москва",
+        "position": 5,
+        "url": "https://horeca-marketing.ru/",
+        "domain": "horeca-marketing.ru",
+        "title": "Маркетинговое агентство полного цикла №1 для ресторанов HoReCa",
+        "description": "15+ лет опыта в ресторанном маркетинге. 45+ ресторанов. Полный цикл: стратегия, сайты, SMM, реклама.",
+        "pages_count": "~3"
+      },
+      {
+        "query_used": "маркетинговое агентство для ресторана Москва",
+        "position": 6,
+        "url": "https://maxcrow.ru/",
+        "domain": "maxcrow.ru",
+        "title": "Продвижение ресторана, маркетинг и реклама — агентство MaxcroW HORECA",
+        "description": "MaxcroW — специализированное агентство для HoReCa: 117+ клиентов, 18+ лет опыта. SMM, SERM, геосервисы, аналитика.",
+        "pages_count": "~7"
+      },
+      {
+        "query_used": "автоматизация ресторана чат-бот CRM",
+        "position": 1,
+        "url": "https://twin24.ai/products/horeca/",
+        "domain": "twin24.ai",
+        "title": "Голосовые и чат-боты для ресторана и отеля, боты для бизнеса — TWIN",
+        "description": "TWIN — голосовые и чат-боты для HoReCa: автоматизация бронирований, ответов на вопросы, интеграция с CRM.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация ресторана чат-бот CRM",
+        "position": 2,
+        "url": "https://remarked.ru/telegram-bot-for-restoran",
+        "domain": "remarked.ru",
+        "title": "Чат-бот в Telegram для ресторана от CRM ReMarked",
+        "description": "CRM ReMarked — Telegram-бот для ресторана: бронирование столиков, предзаказы, лояльность.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация ресторана чат-бот CRM",
+        "position": 3,
+        "url": "https://www.voxys.ru/cifrovye-reshenija/chat-bot/dlja-kafe-i-restoranov.html",
+        "domain": "voxys.ru",
+        "title": "Чат-бот для кафе и ресторанов — Voxys",
+        "description": "Voxys — разработка чат-ботов для кафе и ресторанного бизнеса под ключ.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация ресторана чат-бот CRM",
+        "position": 4,
+        "url": "https://loona.ai/articles/chat-bot-dlya-restorana",
+        "domain": "loona.ai",
+        "title": "Чат-боты и цифровые CRM системы для ресторанов — примеры сценариев",
+        "description": "Loona AI — примеры сценариев чат-ботов и CRM для ресторанного бизнеса.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация ресторана чат-бот CRM",
+        "position": 5,
+        "url": "https://vc.ru/marketing/2303206-chat-bot-dlya-restorana-avtomatizatsiya",
+        "domain": "vc.ru",
+        "title": "Разбор чат-бота для ресторана: как автоматизация повышает лояльность гостей — vc.ru",
+        "description": "Разбор кейса: чат-бот для ресторана снижает нагрузку на персонал на 15–20%, сокращает отмены бронирований на 20–30%.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация ресторана чат-бот CRM",
+        "position": 6,
+        "url": "https://tochka-marketinga.ru/tpost/kocob2e2b1-chat-boti-dlya-restorana-kak-avtomatizat",
+        "domain": "tochka-marketinga.ru",
+        "title": "Чат-боты для ресторана: как автоматизация бронирований увеличивает прибыль",
+        "description": "Как чат-боты для ресторанов увеличивают объём бронирований на 15–25% и снижают отмены.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация ресторана чат-бот CRM",
+        "position": 7,
+        "url": "https://premiumbonus.ru/blog/advantages_chatbot",
+        "domain": "premiumbonus.ru",
+        "title": "Чат-боты в ресторанном бизнесе: автоматизация, сервис и повышение лояльности",
+        "description": "PremiumBonus — CRM и программы лояльности для ресторанов с интеграцией чат-ботов.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация ресторана чат-бот CRM",
+        "position": 8,
+        "url": "https://chatim.io/chat-bot-restoran-kafe",
+        "domain": "chatim.io",
+        "title": "Чат-бот для ресторана, кафе и службы доставки еды — Чатим",
+        "description": "Chatim — готовый чат-бот для ресторана, кафе и доставки: меню, заказы, бронирование.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация ресторана чат-бот CRM",
+        "position": 9,
+        "url": "https://lubava.ai/zakazat-chat-bota/dlya-restoranov/",
+        "domain": "lubava.ai",
+        "title": "Чат-бот для ресторанов и кафе — заказать ИИ бота под ключ",
+        "description": "Lubava AI — разработка AI-ботов для ресторанов под ключ: бронирование, заказы, лояльность.",
+        "pages_count": null
+      }
+    ],
+    "top_domains": [
+      {
+        "domain": "horecadigital.ru",
+        "pages_count": "~7",
+        "note": "Специализированное HoReCa-агентство, Москва. Блог, кейсы, услуги SMM, сайты, реклама."
+      },
+      {
+        "domain": "maxcrow.ru",
+        "pages_count": "~7",
+        "note": "Агентство MaxcroW — HoReCa-специализация, 117+ клиентов, SMM, SERM, геосервисы, аналитика."
+      },
+      {
+        "domain": "horeca-marketing.ru",
+        "pages_count": "~3",
+        "note": "15+ лет в ресторанном маркетинге, 50+ сайтов. Маркетинг полного цикла для ресторанов."
+      },
+      {
+        "domain": "restoria.agency",
+        "pages_count": "~1",
+        "note": "Маркетинговое агентство Москва/СПб. SMM, сайты, реклама для HoReCa."
+      },
+      {
+        "domain": "paler.agency",
+        "pages_count": "~1",
+        "note": "Агентство для ресторанов, баров, клубов Москвы. Комплексный маркетинг, чат-боты."
+      }
+    ]
+  },
+  {
+    "niche": "Кафе",
+    "category": "HoReCa",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для кафе",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 8,
+        "results_count": "~12000"
+      },
+      {
+        "query": "продвижение кафе в инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~25000"
+      },
+      {
+        "query": "маркетинговое агентство для кафе",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~8000"
+      },
+      {
+        "query": "ведение соцсетей кафе",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 5,
+        "results_count": "~6000"
+      },
+      {
+        "query": "таргетированная реклама для кафе",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 7,
+        "results_count": "~7000"
+      },
+      {
+        "query": "автоматизация кафе чат-бот telegram",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~4000"
+      },
+      {
+        "query": "CRM для кафе программа лояльности",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~10000"
+      },
+      {
+        "query": "бот для кафе автоматизация заказов",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3000"
+      },
+      {
+        "query": "автоматизация бизнес-процессов кафе",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": "~5000"
+      },
+      {
+        "query": "раскрутка кафе",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 27,
+        "results_count": "~20000"
+      },
+      {
+        "query": "агентство для кафе контент",
+        "cluster": "SMM/контент",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~5000"
+      },
+      {
+        "query": "продвижение кофейни кафе интернет",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~15000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "смм для кафе продвижение социальные сети агентство",
+        "position": 1,
+        "url": "https://restoplace.cc/blog/prodvizheniya-v-socsetyah",
+        "domain": "restoplace.cc",
+        "title": "Продвижение в соцсетях, SMM и идеи для контента ресторана",
+        "description": "Блог Restoplace — стратегии SMM и идеи для контента ресторанов и кафе в социальных сетях.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для кафе продвижение социальные сети агентство",
+        "position": 2,
+        "url": "https://leadmachine.ru/kejsy/smm-dlya-kafe/",
+        "domain": "leadmachine.ru",
+        "title": "Продвижение кофейни: как вести соцсети кафе и ресторанов",
+        "description": "LeadMachine — кейс SMM-продвижения кофейни: ведение соцсетей кафе и ресторанов.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для кафе продвижение социальные сети агентство",
+        "position": 3,
+        "url": "https://qwer.agency/prodvizhenie-cafe-i-restoranov",
+        "domain": "qwer.agency",
+        "title": "Продвижение кафе и ресторанов под ключ | Создание сайтов, SMM, дизайн | QWER",
+        "description": "QWER — продвижение кафе и ресторанов под ключ: сайты, SMM, дизайн, реклама, съёмки.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для кафе продвижение социальные сети агентство",
+        "position": 4,
+        "url": "https://zolotoykod.ru/regions/moskva/smm/cafe/",
+        "domain": "zolotoykod.ru",
+        "title": "СММ продвижение кафе в социальных сетях в Москве | Золотой Код",
+        "description": "Золотой Код — SMM-продвижение кафе в Москве: расчёт бюджета онлайн.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для кафе продвижение социальные сети агентство",
+        "position": 5,
+        "url": "https://zolotoykod.ru/smm/cafe/",
+        "domain": "zolotoykod.ru",
+        "title": "СММ продвижение кафе в социальных сетях | Золотой Код",
+        "description": "Золотой Код — SMM-продвижение кафе в социальных сетях по всей России.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для кафе продвижение социальные сети агентство",
+        "position": 6,
+        "url": "https://www.apptask.ru/blog/smm-dlia-kafe",
+        "domain": "apptask.ru",
+        "title": "Как использовать SMM для привлечения клиентов в ваше кафе — Apptask",
+        "description": "Apptask — статья об использовании SMM для привлечения клиентов в кафе.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение кафе инстаграм маркетинг",
+        "position": 1,
+        "url": "https://restoplace.cc/blog/prodvizheniya-v-socsetyah",
+        "domain": "restoplace.cc",
+        "title": "Продвижение в соцсетях, SMM и идеи для контента ресторана",
+        "description": "Стратегии продвижения кафе и ресторанов в Instagram и других соцсетях.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение кафе инстаграм маркетинг",
+        "position": 2,
+        "url": "https://postium.ru/prodvizhenie-restorana-kafe/",
+        "domain": "postium.ru",
+        "title": "Продвижение ресторана/кафе: в интернете, соцсетях, бесплатно | Postium",
+        "description": "Postium — полное руководство по продвижению кафе и ресторана: интернет, соцсети, бесплатные методы.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение кафе инстаграм маркетинг",
+        "position": 3,
+        "url": "https://www.mad7.ru/blog/pishha-bogov-kak-sdelat-tak-chtoby-vash-restoran-polyubili-cherez-instagram",
+        "domain": "mad7.ru",
+        "title": "Как красиво продвигать ресторан в Instagram: реальный кейс и советы",
+        "description": "MAD7 — кейс продвижения ресторана в Instagram с реальными результатами и советами.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение кафе инстаграм маркетинг",
+        "position": 4,
+        "url": "https://oz-agency.kz/blog/post/kak-prodvigat-restoran-i-kafe-v-instagram",
+        "domain": "oz-agency.kz",
+        "title": "Как продвигать ресторан и кафе в Instagram",
+        "description": "OZ Agency — практическое руководство по продвижению ресторана и кафе в Instagram.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение кафе инстаграм маркетинг",
+        "position": 5,
+        "url": "https://food-marketing.ru/case-promotion-cafe-in-vkontakte-instagram-facebook",
+        "domain": "food-marketing.ru",
+        "title": "Кейс продвижения кафе «Амстердам» в социальных сетях (Instagram, ВКонтакте)",
+        "description": "Food-marketing.ru — кейс реального продвижения кафе в соцсетях с результатами.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение кафе инстаграм маркетинг",
+        "position": 6,
+        "url": "https://iproweb.org/vkusnyj-marketing-prodvigaem-kafe-i-restorany-v-instagram/",
+        "domain": "iproweb.org",
+        "title": "Вкусный маркетинг: продвигаем кафе и рестораны в Instagram | iProWeb",
+        "description": "iProWeb — советы по маркетингу кафе и ресторанов в Instagram.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение кафе инстаграм маркетинг",
+        "position": 7,
+        "url": "https://socialkit.ru/strategiya-prodvizhenie-kafe-restorana-v-instagram",
+        "domain": "socialkit.ru",
+        "title": "Стратегия продвижения кафе/ресторана в Инстаграм — SocialKit",
+        "description": "SocialKit — стратегия и инструменты продвижения кафе и ресторана в Instagram.",
+        "pages_count": null
+      },
+      {
+        "query_used": "CRM для кафе автоматизация программа лояльности",
+        "position": 1,
+        "url": "https://restik.com/blog/crm-dlya-kafe-i-restoranov/",
+        "domain": "restik.com",
+        "title": "CRM для кафе и ресторанов | Restik",
+        "description": "Restik — облачная CRM для автоматизации кафе, кофейни, бара, фастфуда. Программы лояльности.",
+        "pages_count": null
+      },
+      {
+        "query_used": "CRM для кафе автоматизация программа лояльности",
+        "position": 2,
+        "url": "https://www.bitrix24.ru/journal/crm-dlya-kofejni/",
+        "domain": "bitrix24.ru",
+        "title": "CRM для кофейни: автоматизация бизнес-процессов и рост продаж",
+        "description": "Bitrix24 — как CRM помогает автоматизировать бизнес-процессы кофейни и увеличить продажи.",
+        "pages_count": null
+      },
+      {
+        "query_used": "CRM для кафе автоматизация программа лояльности",
+        "position": 3,
+        "url": "https://remarked.ru/crm-for-coffee-shops",
+        "domain": "remarked.ru",
+        "title": "CRM-система ReMarked для кофейни",
+        "description": "ReMarked — CRM для кофейни: автоматизация маркетинга, программы лояльности, сегментация клиентов.",
+        "pages_count": null
+      },
+      {
+        "query_used": "CRM для кафе автоматизация программа лояльности",
+        "position": 4,
+        "url": "https://www.arbus.biz/solutions/sistema-loyalnosti-i-crm-marketing/",
+        "domain": "arbus.biz",
+        "title": "CRM для ресторанов, кафе, баров и кофеен | СРМ-системы для общепита — ARBUS",
+        "description": "ARBUS — CRM и системы лояльности для общепита: рестораны, кафе, бары, кофейни.",
+        "pages_count": null
+      },
+      {
+        "query_used": "CRM для кафе автоматизация программа лояльности",
+        "position": 5,
+        "url": "https://a2is.ru/catalog/crm-dlya-kafe-i-restoranov",
+        "domain": "a2is.ru",
+        "title": "20 лучших CRM для кафе и ресторанов 2026 — цены, отзывы",
+        "description": "A2IS — каталог с рейтингом и обзором 20 лучших CRM-систем для кафе и ресторанов.",
+        "pages_count": null
+      },
+      {
+        "query_used": "CRM для кафе автоматизация программа лояльности",
+        "position": 6,
+        "url": "https://axle-crm.com/spheres/coffee",
+        "domain": "axle-crm.com",
+        "title": "CRM для автоматизации кафе, программа учёта | Axle-CRM",
+        "description": "Axle-CRM — специализированная CRM для автоматизации кафе и программ учёта.",
+        "pages_count": null
+      },
+      {
+        "query_used": "CRM для кафе автоматизация программа лояльности",
+        "position": 7,
+        "url": "https://place.lemma.ru/article/obzor-crmsistem-dlya-restoranov",
+        "domain": "place.lemma.ru",
+        "title": "Обзор CRM-систем для ресторанов — Lemma",
+        "description": "Lemma — обзор популярных CRM-систем для ресторанов с анализом функций и цен.",
+        "pages_count": null
+      },
+      {
+        "query_used": "CRM для кафе автоматизация программа лояльности",
+        "position": 8,
+        "url": "https://lemma-group.ru/working_with_guests/programma_loyalnosti/",
+        "domain": "lemma-group.ru",
+        "title": "CRM-системы и программы лояльности для ресторанов — Lemma Group",
+        "description": "Lemma Group — CRM и программы лояльности для ресторанов: автоматизация и увеличение прибыли. Реферальный маркетинг увеличивает выручку на 15%.",
+        "pages_count": null
+      }
+    ],
+    "top_domains": [
+      {
+        "domain": "zolotoykod.ru",
+        "pages_count": "~2 (для кафе)",
+        "note": "Специализированные страницы SMM для кафе: отдельно Москва и вся Россия. Ценовой калькулятор онлайн."
+      },
+      {
+        "domain": "restoplace.cc",
+        "pages_count": "~15+",
+        "note": "Блог-платформа для рестораторов. Большой охват по ресторанной тематике."
+      },
+      {
+        "domain": "remarked.ru",
+        "pages_count": "~5+",
+        "note": "CRM-сервис для кафе, кофеен, ресторанов. Telegram-боты + программы лояльности."
+      },
+      {
+        "domain": "qwer.agency",
+        "pages_count": "~3+",
+        "note": "Агентство продвижения кафе и ресторанов под ключ: сайты, SMM, дизайн."
+      },
+      {
+        "domain": "food-marketing.ru",
+        "pages_count": "~10+",
+        "note": "Специализированный сайт по маркетингу в food-сегменте. Кейсы, статьи, стратегии."
+      }
+    ]
+  },
+  {
+    "niche": "Бары и пабы",
+    "category": "HoReCa",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для бара",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 8,
+        "results_count": "~5000"
+      },
+      {
+        "query": "продвижение бара в инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~8000"
+      },
+      {
+        "query": "маркетинговое агентство для бара паба",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3000"
+      },
+      {
+        "query": "ведение соцсетей бара",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "таргетированная реклама для бара",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~3000"
+      },
+      {
+        "query": "автоматизация бара чат-бот telegram бронирование",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "CRM для бара программа лояльности",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~4000"
+      },
+      {
+        "query": "бот для бронирования столика в баре",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~1500"
+      },
+      {
+        "query": "автоматизация ночного клуба бара",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~2000"
+      },
+      {
+        "query": "раскрутка бара паба",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~7000"
+      },
+      {
+        "query": "реклама бара агентство контент",
+        "cluster": "SMM/контент",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~4000"
+      },
+      {
+        "query": "продвижение паба Москва",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~5000"
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "смм для баров и пабов продвижение социальные сети",
+        "position": 1,
+        "url": "https://tilda.education/articles-promotion-social-networks",
+        "domain": "tilda.education",
+        "title": "Продвижение в социальных сетях (СММ) бизнеса товаров и услуг",
+        "description": "Tilda Education — общая статья о SMM-продвижении бизнеса в социальных сетях.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для баров и пабов продвижение социальные сети",
+        "position": 2,
+        "url": "https://joinposter.com/post/smm-dlya-restorana",
+        "domain": "joinposter.com",
+        "title": "SMM для ресторана. Продвижение ресторанного бизнеса в соцсетях — Poster POS",
+        "description": "Poster POS — руководство по SMM-продвижению ресторанного бизнеса в соцсетях.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для баров и пабов продвижение социальные сети",
+        "position": 3,
+        "url": "https://restoplace.cc/blog/prodvizheniya-v-socsetyah",
+        "domain": "restoplace.cc",
+        "title": "Продвижение в соцсетях, SMM и идеи для контента ресторана",
+        "description": "Restoplace — SMM и идеи для контента ресторана, кафе, бара.",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для баров и пабов продвижение социальные сети",
+        "position": 4,
+        "url": "https://smmhoreca.ru/",
+        "domain": "smmhoreca.ru",
+        "title": "Комплексное продвижение ресторанов, кафе, баров в Москве и области",
+        "description": "SMMHoReCa — комплексное SMM-продвижение ресторанов, кафе, баров в Москве и Московской области.",
+        "pages_count": "не индексируется (новый/малоизвестный домен)"
+      },
+      {
+        "query_used": "смм для баров и пабов продвижение социальные сети",
+        "position": 5,
+        "url": "https://zolotoykod.ru/smm/bar/",
+        "domain": "zolotoykod.ru",
+        "title": "СММ продвижение для баров | Золотой Код",
+        "description": "Золотой Код — SMM-продвижение баров в социальных сетях, расчёт стоимости онлайн.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение бара паба маркетинг агентство",
+        "position": 1,
+        "url": "https://business.yandex.ru/custom/bar/",
+        "domain": "business.yandex.ru",
+        "title": "Реклама бара — продвижение от 5000₽ — Яндекс Бизнес",
+        "description": "Яндекс Бизнес — реклама бара от 5 000 руб./мес. Локальное продвижение на картах и в поиске.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение бара паба маркетинг агентство",
+        "position": 2,
+        "url": "https://reklama.tochka.com/blog/kak-reklamirovat-nochnoj-klub-ili-bar",
+        "domain": "reklama.tochka.com",
+        "title": "Как рекламировать бар или ночной клуб, чтобы не было отбоя от посетителей",
+        "description": "Точка — практическое руководство по рекламе баров и ночных клубов.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение бара паба маркетинг агентство",
+        "position": 3,
+        "url": "https://alterainvest.ru/rus/blogi/reklama-bara/",
+        "domain": "alterainvest.ru",
+        "title": "Как рекламировать бар — пример рекламы и продвижения заведения",
+        "description": "Alterainvest — примеры и методы рекламы бара: инструменты, каналы, бюджеты.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение бара паба маркетинг агентство",
+        "position": 4,
+        "url": "https://vc.ru/marketing/2709845-prodvizhenie-bara-effektivnye-metody",
+        "domain": "vc.ru",
+        "title": "Продвижение бара: как привлекать гостей ежедневно — vc.ru",
+        "description": "vc.ru — эффективные методы продвижения бара и привлечения гостей через экосистему каналов.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение бара паба маркетинг агентство",
+        "position": 5,
+        "url": "https://vc.ru/marketing/2190212-metody-prodvizheniya-barov-v-2025-godu",
+        "domain": "vc.ru",
+        "title": "15 методов продвижения баров: что работает в 2025 году — vc.ru",
+        "description": "vc.ru — 15 проверенных методов продвижения баров: соцсети, Telegram, карты, бонусы.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение бара паба маркетинг агентство",
+        "position": 6,
+        "url": "https://www.waiterio.com/blog/ru/revolyucionnye-marketingovye-strategii-dlya-raboty-vashego-bara/",
+        "domain": "waiterio.com",
+        "title": "Революционные маркетинговые стратегии для вашего бара — Waiterio",
+        "description": "Waiterio — маркетинговые стратегии для баров: контент, соцсети, программы лояльности.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение бара паба маркетинг агентство",
+        "position": 7,
+        "url": "https://voropaevmedia.com/blog/effektivnaya-reklama-bara-ili-paba-kak-privlech-posetiteley",
+        "domain": "voropaevmedia.com",
+        "title": "Эффективная реклама бара или паба: Как привлечь посетителей",
+        "description": "Voropaev Media — эффективная реклама бара и паба: инструменты привлечения посетителей.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение бара паба маркетинг агентство",
+        "position": 8,
+        "url": "https://maxcrow.ru/horeca/reklama-bara/",
+        "domain": "maxcrow.ru",
+        "title": "Реклама бара — гости в будни и полные залы в выходные | MaxcroW",
+        "description": "MaxcroW — комплексная реклама бара: SMM, контекст, карты, воронка под банкеты.",
+        "pages_count": "~7"
+      },
+      {
+        "query_used": "автоматизация бара паба чат-бот telegram бронирование",
+        "position": 1,
+        "url": "https://www.travelline.ru/support/knowledge-base/kak-v-telegram-sozdat-chat-bot-dlya-bronirovaniya-nomerov/",
+        "domain": "travelline.ru",
+        "title": "Как в Telegram создать чат-бот для бронирования номеров — TravelLine",
+        "description": "TravelLine — инструкция по созданию Telegram-бота для бронирования (для отелей и HoReCa).",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация бара паба чат-бот telegram бронирование",
+        "position": 2,
+        "url": "https://remarked.ru/telegram-bot-for-restoran",
+        "domain": "remarked.ru",
+        "title": "Чат-бот в Telegram для ресторана от CRM ReMarked",
+        "description": "ReMarked CRM — Telegram-бот для ресторана, бара: бронирование столиков, предзаказы, лояльность.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация бара паба чат-бот telegram бронирование",
+        "position": 3,
+        "url": "https://i-dgtl.ru/cases/chat-bot-dlya-laundzh-bara-munterra/",
+        "domain": "i-dgtl.ru",
+        "title": "Чат-бот для лаундж-бара Munterra — i-Digital",
+        "description": "i-Digital — кейс разработки чат-бота для лаундж-бара Munterra. +100 новых пользователей в мес., рост бронирований из Telegram.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация бара паба чат-бот telegram бронирование",
+        "position": 4,
+        "url": "https://www.directline.pro/razrabotka/telegram-bot-dlya-kafe-i-restoranov/",
+        "domain": "directline.pro",
+        "title": "Разработка Telegram-ботов для кафе и ресторанов под ключ — DirectLine",
+        "description": "DirectLine — разработка Telegram-ботов под ключ для кафе, ресторанов и баров.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация бара паба чат-бот telegram бронирование",
+        "position": 5,
+        "url": "https://service.joinchat.us/food/",
+        "domain": "service.joinchat.us",
+        "title": "Готовый чат-бот для ресторана и кафе за 2 часа — JoinChat",
+        "description": "JoinChat — готовый чат-бот для ресторана, кафе и бара за 2 часа. Меню, заказы, бронирование.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация бара паба чат-бот telegram бронирование",
+        "position": 6,
+        "url": "https://premiumbonus.ru/blog/advantages_chatbot",
+        "domain": "premiumbonus.ru",
+        "title": "Чат-боты в ресторанном бизнесе: автоматизация, сервис и повышение лояльности",
+        "description": "PremiumBonus — чат-боты и программы лояльности для ресторанов, кафе и баров.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация бара паба чат-бот telegram бронирование",
+        "position": 7,
+        "url": "https://chatfood.ru/",
+        "domain": "chatfood.ru",
+        "title": "ChatFood — чат-бот Telegram и Max для ресторанов и кафе бесплатно",
+        "description": "ChatFood — бесплатный Telegram Mini App / Max-бот для ресторанов, кафе и баров.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация бара паба чат-бот telegram бронирование",
+        "position": 8,
+        "url": "https://alsn.ru/tbbot-restoran-kafe-kofeynya-bar",
+        "domain": "alsn.ru",
+        "title": "Чат-бот для ресторана, 1С Telegram-бот для кафе, кофейни, бара — Аллсан Интеграция",
+        "description": "Аллсан Интеграция — недорогой Telegram-бот с интеграцией 1С для ресторана, кофейни и бара.",
+        "pages_count": null
+      },
+      {
+        "query_used": "раскрутка бара паба контент агентство продвижение",
+        "position": 1,
+        "url": "https://reklama.tochka.com/blog/kak-reklamirovat-nochnoj-klub-ili-bar",
+        "domain": "reklama.tochka.com",
+        "title": "Как рекламировать бар или ночной клуб, чтобы не было отбоя от посетителей",
+        "description": "Точка — методы рекламы бара и ночного клуба, включая контент и SMM.",
+        "pages_count": null
+      },
+      {
+        "query_used": "раскрутка бара паба контент агентство продвижение",
+        "position": 2,
+        "url": "https://alterainvest.ru/rus/blogi/reklama-bara/",
+        "domain": "alterainvest.ru",
+        "title": "Как рекламировать бар — пример рекламы и продвижения заведения",
+        "description": "Alterainvest — пример и план продвижения бара с конкретными инструментами.",
+        "pages_count": null
+      },
+      {
+        "query_used": "раскрутка бара паба контент агентство продвижение",
+        "position": 3,
+        "url": "https://voropaevmedia.com/blog/effektivnaya-reklama-bara-ili-paba-kak-privlech-posetiteley",
+        "domain": "voropaevmedia.com",
+        "title": "Эффективная реклама бара или паба: Как привлечь посетителей",
+        "description": "Voropaev Media — инструменты для привлечения посетителей в бар или паб.",
+        "pages_count": null
+      },
+      {
+        "query_used": "раскрутка бара паба контент агентство продвижение",
+        "position": 4,
+        "url": "https://otdel.me/case/kak-raskrutit-zavedenie-za-15-mesyaca-do-otkrytiya",
+        "domain": "otdel.me",
+        "title": "Раскрутка и продвижение бара через контент до открытия — otdel.me",
+        "description": "Otdel.me — кейс раскрутки заведения до открытия через контент: 1 000+ подписчиков за 1,5 месяца.",
+        "pages_count": null
+      },
+      {
+        "query_used": "раскрутка бара паба контент агентство продвижение",
+        "position": 5,
+        "url": "https://gurulabs.ru/blog/promotion/prodvizhenie-barov/",
+        "domain": "gurulabs.ru",
+        "title": "Продвижение баров и их раскрутка, услуги от компании GuruLabs",
+        "description": "GuruLabs — агентство комплексного продвижения баров: контент, SMM, реклама.",
+        "pages_count": null
+      },
+      {
+        "query_used": "раскрутка бара паба контент агентство продвижение",
+        "position": 6,
+        "url": "https://on-context.ru/articles/kak-reklamirovat-bar",
+        "domain": "on-context.ru",
+        "title": "Как рекламировать бар. Рассказываем на конкретном примере",
+        "description": "On-Context — конкретный пример рекламы бара с результатами и бюджетами.",
+        "pages_count": null
+      },
+      {
+        "query_used": "раскрутка бара паба контент агентство продвижение",
+        "position": 7,
+        "url": "https://maxcrow.ru/horeca/reklama-bara/",
+        "domain": "maxcrow.ru",
+        "title": "Реклама бара — гости в будни и полные залы в выходные | MaxcroW",
+        "description": "MaxcroW — реклама и раскрутка бара: SMM, карты, контент, воронки продаж.",
+        "pages_count": "~7"
+      }
+    ],
+    "top_domains": [
+      {
+        "domain": "maxcrow.ru",
+        "pages_count": "~7",
+        "note": "Единственное агентство, появившееся во всех 3 нишах HoReCa. Специализированная страница для баров. 117+ клиентов."
+      },
+      {
+        "domain": "smmhoreca.ru",
+        "pages_count": "не индексируется",
+        "note": "Специализируется именно на баре/кафе/ресторане в Москве и МО. Сайт с ограниченной индексацией — потенциально новый конкурент."
+      },
+      {
+        "domain": "gurulabs.ru",
+        "pages_count": "~10+",
+        "note": "Агентство с отдельной страницей по продвижению баров."
+      },
+      {
+        "domain": "voropaevmedia.com",
+        "pages_count": "~20+",
+        "note": "Широкий охват HoReCa-тематики: рестораны, кафе, бары, пабы — отдельные статьи и кейсы."
+      },
+      {
+        "domain": "paler.agency",
+        "pages_count": "~1",
+        "note": "Специализируется на ресторанах, барах, клубах в Москве. Упомянут в нишах баров и ресторанов."
+      }
+    ]
+  }
+]

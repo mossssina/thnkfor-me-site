@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THNKFOR.ME — Brand Style Guide (Dark)</title>
+    <link rel="canonical" href="https://thnkfor.me/brand_preview/">
+    <meta property="og:title" content="THNKFOR.ME — Brand Style Guide (Dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+/* ─── TOKENS ─── */
+:root {
+  --bone:        #F8F8F8;
+  --paper:       #161616;
+  --signal:      #FF3B00;
+  --ink:         #0A0A0A;
+  --surface:     #1A1A1A;
+  --surface-2:   #222222;
+  --text:        #C0C0C0;
+  --muted:       #666666;
+  --border:      rgba(255,255,255,0.08);
+  --border-soft: rgba(255,255,255,0.05);
+
+  --font-primary: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+  --container: 1200px;
+  --pad-x: 64px;
+}
+
+/* ─── BASE (DARK) ─── */
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--pad-x); }
+
+/* ─── HEADER ─── */
+.sg-header {
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(16px);
+  z-index: 100;
+}
+.sg-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+.sg-logo {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  color: #F8F8F8;
+}
+.sg-logo .cursor {
+  color: var(--signal);
+  animation: blink 1s infinite;
+  font-weight: 300;
+}
+.sg-logo .dot { color: var(--signal); }
+@keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+.sg-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+}
+
+/* ─── CHAPTER ─── */
+.chapter { padding: 80px 0 60px; }
+.chapter + .chapter { border-top: 1px solid var(--border); }
+.chapter-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.chapter-label::after { content:''; flex:1; height:1px; background:var(--border); }
+
+/* ─── COLORS ─── */
+.color-grid { display: flex; flex-wrap: wrap; gap: 16px; }
+.swatch { width: 160px; }
+.swatch-block { width: 160px; height: 96px; border: 1px solid var(--border); margin-bottom: 12px; }
+.swatch-block.bone { border-color: rgba(255,255,255,0.15); }
+.swatch-block.signal, .swatch-block.noborder { border-color: transparent; }
+.swatch-name {
+  font-family: var(--font-primary); font-size: 13px; font-weight: 500;
+  color: #F8F8F8; display: block; margin-bottom: 3px;
+}
+.swatch-hex { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+.swatch-role { font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+
+/* ─── TYPE ─── */
+.type-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px; align-items: baseline;
+  padding: 28px 0; border-bottom: 1px solid var(--border-soft);
+}
+.type-meta { font-family:var(--font-mono); font-size:10px; color:var(--muted); letter-spacing:0.06em; text-transform:uppercase; line-height:1.7; padding-top:4px; }
+.type-meta .var { color: var(--signal); }
+.t-display { font-family:var(--font-primary); font-weight:500; font-size:clamp(64px,8vw,120px); letter-spacing:-0.05em; line-height:0.9; color:#F8F8F8; }
+.t-display .accent { color: var(--signal); }
+.t-h1 { font-family:var(--font-primary); font-weight:500; font-size:clamp(40px,5vw,64px); letter-spacing:-0.03em; line-height:1; color:#F8F8F8; }
+.t-h2 { font-family:var(--font-primary); font-weight:400; font-size:clamp(24px,3vw,36px); letter-spacing:-0.02em; line-height:1.15; color:#F8F8F8; }
+.t-body { font-family:var(--font-primary); font-weight:400; font-size:17px; line-height:1.55; color:var(--text); max-width:640px; }
+.t-mono { font-family:var(--font-mono); font-size:13px; color:var(--muted); letter-spacing:0.04em; }
+.t-label { font-family:var(--font-mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); }
+
+/* ─── BUTTONS ─── */
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn {
+  font-family: var(--font-primary); font-weight: 500; font-size: 14px;
+  letter-spacing: -0.005em; padding: 14px 26px; border-radius: 0; border: none;
+  cursor: pointer; display: inline-flex; align-items: center; gap: 10px; transition: all 0.15s;
+}
+.btn-primary { background: #F8F8F8; color: #0A0A0A; }
+.btn-primary:hover { background: var(--signal); color: #FFFFFF; }
+.btn-accent { background: var(--signal); color: #FFFFFF; }
+.btn-accent:hover { background: #F8F8F8; color: #0A0A0A; }
+.btn-outline { background: transparent; color: #F8F8F8; border: 1px solid rgba(255,255,255,0.3); }
+.btn-outline:hover { border-color: #F8F8F8; }
+.btn-ghost { background: transparent; color: #F8F8F8; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.3); border-radius: 0; }
+
+/* ─── DEMO PANELS ─── */
+.demo-dark  { background: var(--surface); border: 1px solid var(--border); padding: 36px; }
+.demo-bone  { background: #F8F8F8; padding: 36px; }
+.demo-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; display: block; }
+.demo-bone .demo-label { color: #999999; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* ─── MICROBADGES ─── */
+.microbadge {
+  display: inline-flex; align-items: center; gap: 8px; padding: 5px 10px;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.microbadge.sys { background: #F8F8F8; color: #0A0A0A; }
+.microbadge.acc { background: var(--signal); color: #FFFFFF; }
+.microbadge.brd { background: transparent; border: 1px solid var(--border); color: var(--text); }
+.microbadge .dot { width:6px; height:6px; border-radius:50%; background:var(--signal); }
+.microbadge.sys .dot { background: var(--signal); }
+.microbadge.acc .dot { background:#FFFFFF; }
+.microbadge.brd .dot { background:var(--muted); }
+.badge-row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ─── CARDS ─── */
+.card-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  padding: 28px; min-height: 280px;
+  display: flex; flex-direction: column; transition: border-color 0.15s;
+}
+.card:hover { border-color: var(--signal); }
+.card.accent { background: var(--signal); border-color: transparent; }
+.card.bone   { background: #F8F8F8; border-color: transparent; }
+.card-topline {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); padding-bottom: 16px; border-bottom: 1px solid var(--border);
+  margin-bottom: 24px; display: flex; justify-content: space-between;
+}
+.card.accent .card-topline { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.2); }
+.card.bone .card-topline   { color: #999; border-color: rgba(0,0,0,0.08); }
+.card-title {
+  font-family: var(--font-primary); font-weight: 500; font-size: 24px;
+  letter-spacing: -0.02em; line-height: 1.1; color: #F8F8F8; flex:1;
+}
+.card.accent .card-title { color: #FFFFFF; }
+.card.bone .card-title   { color: #0A0A0A; }
+.card-title .accent { color: var(--signal); }
+.card-desc { font-family: var(--font-primary); font-size: 14px; line-height: 1.55; color: var(--muted); margin-top: 10px; }
+.card.accent .card-desc { color: rgba(255,255,255,0.85); }
+.card.bone .card-desc   { color: #666; }
+.card-cta { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 20px; }
+.card.bone .card-cta { color: #999; }
+
+/* ─── SPACING ─── */
+.sp-row { display: flex; flex-direction: column; }
+.sp-item { display: flex; align-items: center; gap: 24px; padding: 14px 0; border-bottom: 1px solid var(--border-soft); }
+.sp-bar  { background: var(--signal); height: 4px; min-width: 4px; }
+.sp-name { font-family: var(--font-mono); font-size: 11px; color: var(--muted); letter-spacing:0.04em; min-width: 120px; }
+.sp-val  { font-family: var(--font-mono); font-size: 11px; color: #F8F8F8; }
+.sp-use  { font-family: var(--font-mono); font-size: 10px; color: var(--muted); flex:1; }
+
+/* ─── VERBAL ─── */
+.verbal-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+.verbal-item {
+  background: var(--surface); border: 1px solid var(--border);
+  padding: 32px; min-height: 140px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.verbal-item.bone   { background: #F8F8F8; border-color: transparent; }
+.verbal-item.accent { background: var(--signal); border-color: transparent; }
+.verbal-quote {
+  font-family: var(--font-primary); font-weight: 500; font-size: 28px;
+  letter-spacing: -0.02em; line-height: 1.1; color: #F8F8F8;
+}
+.verbal-item.bone .verbal-quote { color: #0A0A0A; }
+.verbal-item.accent .verbal-quote { color: #FFFFFF; }
+.verbal-quote .accent { color: var(--signal); }
+.verbal-item.bone .verbal-quote .accent { color: var(--signal); }
+.verbal-item.accent .verbal-quote .accent { color: #0A0A0A; }
+.verbal-role { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 16px; }
+.verbal-item.accent .verbal-role { color: rgba(255,255,255,0.55); }
+
+/* ─── SOCIAL ─── */
+.social-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.ig { aspect-ratio:1; padding:28px; display:flex; flex-direction:column; justify-content:space-between; }
+.ig.dark   { background: #141414; border: 1px solid var(--border); }
+.ig.accent { background: var(--signal); }
+.ig.bone   { background: #F8F8F8; }
+.ig-tag { font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
+.ig.accent .ig-tag { color: rgba(255,255,255,0.6); }
+.ig.bone .ig-tag { color: #999; }
+.ig-title {
+  font-family: var(--font-primary); font-weight:500; font-size:clamp(32px,4vw,48px);
+  line-height:0.95; letter-spacing:-0.04em; color:#F8F8F8;
+}
+.ig.accent .ig-title { color: #FFFFFF; }
+.ig.bone .ig-title { color: #0A0A0A; }
+.ig-title .accent { color: var(--signal); }
+.ig.accent .ig-title .accent { color: #0A0A0A; }
+.ig.bone .ig-title .accent { color: var(--signal); }
+.ig-footer { font-family:var(--font-mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
+.ig.accent .ig-footer { color: rgba(255,255,255,0.6); }
+.ig.bone .ig-footer { color: #999; }
+
+/* ─── RULES ─── */
+.rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.rule-item { display:flex; gap:14px; padding:20px; align-items:flex-start; border:1px solid; }
+.rule-item.no  { border-color: rgba(200,50,50,0.2); background: rgba(200,50,50,0.05); }
+.rule-item.yes { border-color: rgba(50,180,80,0.2); background: rgba(50,180,80,0.05); }
+.rule-icon { font-size:16px; flex-shrink:0; margin-top:1px; }
+.rule-text { font-family:var(--font-primary); font-size:14px; color:var(--text); line-height:1.5; }
+.rule-text strong { color:#F8F8F8; font-weight:500; display:block; margin-bottom:2px; }
+
+</style>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header class="sg-header">
+  <div class="container">
+    <div class="sg-header-inner">
+      <span class="sg-logo">THNK<span class="cursor">|</span>FOR<span class="dot">.</span>ME</span>
+      <span class="sg-badge">Brand Style Guide · Dark · v1.0</span>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ 01 · ЦВЕТА ══════════ -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label">// 01 · Цветовая система</div>
+    <div class="color-grid">
+      <div class="swatch">
+        <div class="swatch-block bone" style="background:#F8F8F8;"></div>
+        <span class="swatch-name">Bone</span>
+        <span class="swatch-hex">#F8F8F8</span>
+        <span class="swatch-role">Light background, bone white</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#FFFFFF; border-color:rgba(255,255,255,0.2);"></div>
+        <span class="swatch-name">Paper</span>
+        <span class="swatch-hex">#FFFFFF</span>
+        <span class="swatch-role">Cards, panels on light bg</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block signal" style="background:#FF3B00;"></div>
+        <span class="swatch-name">Signal</span>
+        <span class="swatch-hex">#FF3B00</span>
+        <span class="swatch-role">Accent · CTA · cursor · highlight</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block noborder" style="background:#0A0A0A; border:1px solid rgba(255,255,255,0.2);"></div>
+        <span class="swatch-name">Machine Black</span>
+        <span class="swatch-hex">#0A0A0A</span>
+        <span class="swatch-role">Primary dark background, ink</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block noborder" style="background:#666666;"></div>
+        <span class="swatch-name">System Grey</span>
+        <span class="swatch-hex">#666666</span>
+        <span class="swatch-role">Muted text, labels, captions</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 02 · ТИПОГРАФИКА ══════════ -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label">// 02 · Типографика</div>
+    <div class="type-row">
+      <div class="type-meta"><span class="var">$display</span><br>Space Grotesk · 500<br>140px · −0.05em</div>
+      <div class="t-display">TH<span class="accent">|</span>NK</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><span class="var">$h1</span><br>Space Grotesk · 500<br>60px · −0.03em</div>
+      <div class="t-h1">Маркетинг × Машина</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><span class="var">$h2</span><br>Space Grotesk · 400<br>32px · −0.02em</div>
+      <div class="t-h2">Убери «Я». Оставь результат.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><span class="var">$body</span><br>Space Grotesk · 400<br>17px · 1.55</div>
+      <div class="t-body">Мы строим маркетинговые агенты, которые работают 24/7 — контент, таргетинг, аналитика, итерации. Ты принимаешь стратегические решения. Мы берём на себя объём, настройку, операции.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><span class="var">$mono</span><br>IBM Plex Mono · 400<br>13px · 0.04em</div>
+      <div class="t-mono">// system.status = active · last_deploy = 2026.09.07</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><span class="var">$label</span><br>IBM Plex Mono · 400<br>10px · 0.14em · CAPS</div>
+      <div class="t-label">МОДУЛЬ.01 · КОНТЕНТ · АКТИВЕН</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 03 · КНОПКИ ══════════ -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label">// 03 · Кнопки и micro-элементы</div>
+    <div class="two-col" style="margin-bottom:16px;">
+      <div class="demo-dark">
+        <span class="demo-label">// on machine black</span>
+        <div class="btn-row">
+          <button class="btn btn-primary">DEPLOY →</button>
+          <button class="btn btn-accent">RUN SYSTEM</button>
+          <button class="btn btn-outline">READ DOCS</button>
+          <button class="btn btn-ghost">MANIFESTO →</button>
+        </div>
+      </div>
+      <div class="demo-bone">
+        <span class="demo-label">// on bone</span>
+        <div class="btn-row">
+          <button class="btn" style="background:#0A0A0A; color:#F8F8F8; border-radius:0;">DEPLOY →</button>
+          <button class="btn" style="background:#FF3B00; color:#FFFFFF; border-radius:0;">RUN SYSTEM</button>
+          <button class="btn" style="background:transparent; color:#0A0A0A; border:1px solid #0A0A0A; border-radius:0;">READ DOCS</button>
+        </div>
+      </div>
+    </div>
+    <div class="demo-dark">
+      <span class="demo-label">// micro-badges</span>
+      <div class="badge-row">
+        <span class="microbadge sys"><span class="dot"></span>SYSTEM.ACTIVE</span>
+        <span class="microbadge acc"><span class="dot"></span>AGENT · LIVE</span>
+        <span class="microbadge brd"><span class="dot"></span>MODULE.01</span>
+        <span class="microbadge sys">v.0.1</span>
+        <span class="microbadge brd">МАРКЕТИНГ × МАШИНА</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 04 · КАРТОЧКИ ══════════ -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label">// 04 · Карточки</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-topline"><span>MODULE.01</span><span>ACTIVE</span></div>
+        <div class="card-title">Content <span class="accent">×</span> Machine</div>
+        <div class="card-desc">Editorial agents that write, edit, and publish in your voice. Human oversight. Machine consistency.</div>
+        <div class="card-cta">→ Deploy</div>
+      </div>
+      <div class="card accent">
+        <div class="card-topline"><span>MODULE.02</span><span>FLAGSHIP</span></div>
+        <div class="card-title">Performance × Automation</div>
+        <div class="card-desc">Targeted campaigns that self-optimise. You set the goal. The system iterates. We tune the outputs.</div>
+        <div class="card-cta">→ Deploy</div>
+      </div>
+      <div class="card bone">
+        <div class="card-topline"><span>MODULE.03</span><span>ACTIVE</span></div>
+        <div class="card-title">Strategy <span class="accent">×</span> Signal</div>
+        <div class="card-desc">Analytics that surface the decisions worth making. Less dashboard. More direction.</div>
+        <div class="card-cta">→ Deploy</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 05 · ГОЛОС ══════════ -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label">// 05 · Вербальная идентика</div>
+    <div class="verbal-grid">
+      <div class="verbal-item accent">
+        <div class="verbal-quote">TH<span style="opacity:0.4;border-bottom:2px dotted rgba(255,255,255,0.4);padding:0 4px;">&nbsp;</span>NK<br>FOR<span class="accent">.</span>ME</div>
+        <div class="verbal-role">// primary lockup</div>
+      </div>
+      <div class="verbal-item">
+        <div class="verbal-quote">The <span class="accent">"I"</span> is<br>optional.</div>
+        <div class="verbal-role">// tagline · EN</div>
+      </div>
+      <div class="verbal-item bone">
+        <div class="verbal-quote">Убери «Я».<br>Оставь результат.</div>
+        <div class="verbal-role">// манифест · RU</div>
+      </div>
+      <div class="verbal-item">
+        <div class="verbal-quote">Human strategy.<br>Machine <span class="accent">execution.</span></div>
+        <div class="verbal-role">// о нас · EN</div>
+      </div>
+      <div class="verbal-item">
+        <div class="verbal-quote">Стратегия человека.<br>Исполнение <span class="accent">машины.</span></div>
+        <div class="verbal-role">// о нас · RU</div>
+      </div>
+      <div class="verbal-item accent">
+        <div class="verbal-quote">You bring the view.<br><span class="accent">We bring the volume.</span></div>
+        <div class="verbal-role">// closer · EN</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 06 · СОЦСЕТИ ══════════ -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label">// 06 · Соцсети · Instagram 1:1</div>
+    <div class="social-grid">
+      <div class="ig dark">
+        <div class="ig-tag">// POST.001</div>
+        <div class="ig-title">TH<span style="opacity:0.35;border-bottom:2px dotted;padding:0 3px;">&nbsp;</span>NK<br>FOR<span class="ig-title-accent" style="color:#FF3B00;">.</span>ME</div>
+        <div class="ig-footer">// The I is optional.</div>
+      </div>
+      <div class="ig accent">
+        <div class="ig-tag">// POST.002</div>
+        <div class="ig-title">Remove the "I".<br>Keep the work.</div>
+        <div class="ig-footer">// THNK|FOR.ME · 2026</div>
+      </div>
+      <div class="ig bone">
+        <div class="ig-tag">// POST.003</div>
+        <div class="ig-title">THINK less.<br><span style="color:#FF3B00;">DO more.</span></div>
+        <div class="ig-footer">// SYSTEM v.0.1</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 07 · ОТСТУПЫ ══════════ -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label">// 07 · Отступы и сетка</div>
+    <div class="sp-row">
+      <div class="sp-item"><div class="sp-bar" style="width:4px;"></div><span class="sp-name">xs · 4px</span><span class="sp-val">4px</span><span class="sp-use">icon gap, micro</span></div>
+      <div class="sp-item"><div class="sp-bar" style="width:8px;"></div><span class="sp-name">sm · 8px</span><span class="sp-val">8px</span><span class="sp-use">badge padding, tight gap</span></div>
+      <div class="sp-item"><div class="sp-bar" style="width:12px;"></div><span class="sp-name">12px</span><span class="sp-val">12px</span><span class="sp-use">grid gap (small)</span></div>
+      <div class="sp-item"><div class="sp-bar" style="width:16px;"></div><span class="sp-name">md · 16px</span><span class="sp-val">16px</span><span class="sp-use">grid gap default, component gap</span></div>
+      <div class="sp-item"><div class="sp-bar" style="width:24px;"></div><span class="sp-name">24px</span><span class="sp-val">24px</span><span class="sp-use">card inner sections</span></div>
+      <div class="sp-item"><div class="sp-bar" style="width:32px;"></div><span class="sp-name">lg · 32px</span><span class="sp-val">32px</span><span class="sp-use">card padding, button area</span></div>
+      <div class="sp-item"><div class="sp-bar" style="width:48px;"></div><span class="sp-name">xl · 48px</span><span class="sp-val">48px</span><span class="sp-use">logo tile padding</span></div>
+      <div class="sp-item"><div class="sp-bar" style="width:64px;"></div><span class="sp-name">2xl · 64px</span><span class="sp-val">64px</span><span class="sp-use">page horizontal padding</span></div>
+      <div class="sp-item"><div class="sp-bar" style="width:80px;"></div><span class="sp-name">3xl · 80px</span><span class="sp-val">80px</span><span class="sp-use">section top padding</span></div>
+      <div class="sp-item"><div class="sp-bar" style="width:120px;"></div><span class="sp-name">4xl · 120px</span><span class="sp-val">120px</span><span class="sp-use">section bottom, page footer</span></div>
+    </div>
+    <div style="margin-top:48px; padding:24px; background:var(--surface); border:1px solid var(--border);">
+      <div style="font-family:var(--font-mono); font-size:10px; color:var(--muted); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:16px;">// Layout grid</div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:8px; font-family:var(--font-mono); font-size:10px; color:var(--muted);">
+        <div style="padding:12px 0; border-top:2px solid var(--signal);">Max width<br><span style="color:#F8F8F8;">1440px</span></div>
+        <div style="padding:12px 0; border-top:2px solid var(--signal);">Side padding<br><span style="color:#F8F8F8;">60px</span></div>
+        <div style="padding:12px 0; border-top:2px solid var(--signal);">Grid cols<br><span style="color:#F8F8F8;">12 / 3 / 2</span></div>
+        <div style="padding:12px 0; border-top:2px solid var(--signal);">Gutter<br><span style="color:#F8F8F8;">16px</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 08 · ПРАВИЛА ══════════ -->
+<section class="chapter" style="padding-bottom:120px;">
+  <div class="container">
+    <div class="chapter-label">// 08 · Правила использования</div>
+    <div class="rules-grid">
+      <div class="rule-item yes">
+        <span class="rule-icon">✓</span>
+        <div class="rule-text"><strong>Квадратные углы у кнопок</strong>Все primary/accent кнопки — border-radius: 0. Brutalist-линия как часть идентики.</div>
+      </div>
+      <div class="rule-item no">
+        <span class="rule-icon">✕</span>
+        <div class="rule-text"><strong>Скруглённые кнопки</strong>Не использовать border-radius на кнопках. Это разрушает концепцию Human × Machine.</div>
+      </div>
+      <div class="rule-item yes">
+        <span class="rule-icon">✓</span>
+        <div class="rule-text"><strong>Курсор | в бренде</strong>Использовать мигающий | в Signal Orange в логотипе, hero-блоках, системных элементах.</div>
+      </div>
+      <div class="rule-item no">
+        <span class="rule-icon">✕</span>
+        <div class="rule-text"><strong>Signal Orange как фон</strong>Не заливать большие секции в #FF3B00 — только акценты, CTA, мелкие элементы.</div>
+      </div>
+      <div class="rule-item yes">
+        <span class="rule-icon">✓</span>
+        <div class="rule-text"><strong>Глаголы сначала в CTA</strong>DEPLOY, RUN, LAUNCH, Развернуть, Запустить — всегда начинать с действия.</div>
+      </div>
+      <div class="rule-item no">
+        <span class="rule-icon">✕</span>
+        <div class="rule-text"><strong>Серифные шрифты</strong>Не смешивать Space Grotesk с Playfair или другими серифами. Только гротеск + моно.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

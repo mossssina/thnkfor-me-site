@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О нас — команда THNKFOR.ME | AI-агентство маркетинга</title>
+    <link rel="canonical" href="https://thnkfor.me/about/">
+    <meta property="og:title" content="О нас — команда THNKFOR.ME | AI-агентство маркетинга">
+<meta name="description" content="THNKFOR.ME — агентство AI-маркетинга для малого и среднего бизнеса. Работаем с конкретными нишами, мыслим данными.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@keyframes b-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+img{max-width:100%;display:block;}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:100;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#fff;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:32px;}
+.header-nav a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);transition:color .15s;}
+.header-nav a:hover,.header-nav a.active{color:#fff;}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#fff;padding:10px 20px;transition:background .15s;}
+.header-cta:hover{background:#fff;color:#0A0A0A;}
+
+/* SECTION BASE */
+.section{padding:80px 48px;border-bottom:1px solid rgba(0,0,0,0.1);}
+.section-dark{background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);}
+.section-white{background:#fff;}
+.section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#666;margin-bottom:48px;display:flex;align-items:center;gap:16px;}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(0,0,0,0.1);}
+.section-dark .section-label{color:rgba(255,255,255,0.3);}
+.section-dark .section-label::after{background:rgba(255,255,255,0.08);}
+
+/* HERO */
+.hero{background:#0A0A0A;padding:80px 48px 0;overflow:hidden;}
+.hero-meta{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:48px;display:flex;gap:32px;}
+.hero-body{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;padding-bottom:80px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.hero-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(44px,6vw,80px);letter-spacing:-0.04em;line-height:0.95;color:#fff;}
+.hero-h1 span{color:#FF3B00;}
+.hero-right{display:flex;flex-direction:column;gap:24px;padding-bottom:4px;}
+.hero-desc{font-size:17px;color:rgba(255,255,255,0.5);line-height:1.55;max-width:440px;}
+.hero-desc strong{color:#fff;font-weight:500;}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);}
+.hero-stat{background:#0A0A0A;padding:20px 24px;}
+.hero-stat-n{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:36px;letter-spacing:-0.04em;color:#FF3B00;line-height:1;margin-bottom:4px;}
+.hero-stat-l{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);}
+
+/* FOUNDER */
+.founder-grid{display:grid;grid-template-columns:340px 1fr;gap:1px;background:rgba(0,0,0,0.1);border:1px solid rgba(0,0,0,0.1);align-items:stretch;}
+.founder-photo{background:#E8E8E8;overflow:hidden;min-height:480px;}
+.founder-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+.founder-info{background:#fff;padding:48px 48px;display:flex;flex-direction:column;gap:32px;justify-content:center;}
+.founder-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#FF3B00;display:inline-flex;align-items:center;gap:8px;}
+.founder-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:#FF3B00;flex-shrink:0;}
+.founder-name{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(28px,4vw,44px);letter-spacing:-0.03em;line-height:1.05;}
+.founder-role{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#666;}
+.founder-bio{font-size:15px;color:#555;line-height:1.65;max-width:520px;}
+.founder-bio strong{color:#0A0A0A;font-weight:500;}
+.founder-links{display:flex;gap:16px;flex-wrap:wrap;}
+.founder-link{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#666;border-bottom:1px solid rgba(0,0,0,0.15);padding-bottom:2px;transition:color .15s,border-color .15s;}
+.founder-link:hover{color:#FF3B00;border-color:#FF3B00;}
+
+/* TEAM GRID */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.team-card{background:#fff;display:flex;flex-direction:column;overflow:hidden;transition:background .2s;}
+.team-card:hover{background:#F8F8F8;}
+.team-card-photo{aspect-ratio:3/4;overflow:hidden;background:#EBEBEB;}
+.team-card-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .4s;}
+.team-card:hover .team-card-photo img{transform:scale(1.03);}
+.team-card-info{padding:20px 20px 24px;}
+.team-card-name{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;letter-spacing:-0.01em;margin-bottom:4px;}
+.team-card-role{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#888;}
+.team-card-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:12px;}
+.team-tag{font-family:'IBM Plex Mono',monospace;font-size:8px;padding:2px 7px;border:1px solid rgba(0,0,0,0.1);color:#666;}
+
+/* MASCOT */
+.mascot-section{display:grid;grid-template-columns:380px 1fr;gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);margin-top:1px;}
+.mascot-text{background:#0A0A0A;padding:48px;}
+.mascot-text h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(24px,3vw,36px);letter-spacing:-0.03em;color:#fff;line-height:1.1;margin-bottom:20px;}
+.mascot-text h2 span{color:#FF3B00;}
+.mascot-text p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.65;max-width:480px;margin-bottom:24px;}
+.mascot-chips{display:flex;flex-wrap:wrap;gap:6px;}
+.mascot-chip{font-family:'IBM Plex Mono',monospace;font-size:9px;padding:3px 10px;border:1px solid rgba(255,59,0,.35);color:#FF3B00;}
+.mascot-photo{background:#111;overflow:hidden;}
+.mascot-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;}
+
+/* VALUES */
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.value-card{background:#fff;padding:36px 32px;display:flex;flex-direction:column;gap:16px;}
+.value-n{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#FF3B00;font-weight:500;}
+.value-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.02em;}
+.value-desc{font-size:14px;color:#666;line-height:1.6;}
+
+/* CTA */
+.cta-bar{background:#0A0A0A;padding:64px 48px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.cta-bar h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(24px,3vw,40px);letter-spacing:-0.03em;color:#fff;line-height:1.1;max-width:500px;}
+.cta-bar h2 span{color:#FF3B00;}
+.cta-buttons{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap;}
+.btn{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;padding:14px 28px;border-radius:0;border:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s;display:inline-flex;align-items:center;gap:8px;text-decoration:none;}
+.btn-accent{background:#FF3B00;color:#fff;}
+.btn-accent:hover{background:#fff;color:#0A0A0A;}
+.btn-outline-light{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.3);}
+.btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,0.06);}
+
+/* FOOTER */
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#fff;margin-bottom:16px;}
+.footer-logo .dot{color:#FF3B00;}
+.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:24px;}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;}
+.footer-links a:hover{color:#fff;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:0.06em;}
+
+/* ═══ UNIFIED SITE HEADER + FOOTER ═══ */
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,59,0,0);}60%{box-shadow:0 0 0 6px rgba(255,59,0,0.18);}}
+.site-header{position:sticky!important;top:0!important;z-index:200!important;background:#0A0A0A!important;border-bottom:1px solid rgba(255,255,255,0.08)!important;display:block!important;padding:0!important;height:auto!important;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item > span:hover,.nav-item:hover > a,.nav-item:hover > span{color:#FFFFFF;}
+.nav-item > a.active,.nav-item > span.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover,.header-nav .header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;box-shadow:none;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid!important;grid-template-columns:1fr 1fr 1fr 1fr!important;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" / loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "url": "https://thnkfor.me/about/",
+      "name": "О нас — команда THNKFOR.ME | AI-агентство маркетинга",
+      "description": "THNKFOR.ME — агентство AI-маркетинга для малого и среднего бизнеса. Работаем с конкретными нишами, мыслим данными.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "THNKFOR.ME",
+        "url": "https://thnkfor.me",
+        "logo": "https://thnkfor.me/logo.svg",
+        "image": "https://thnkfor.me/team/team_group.jpg",
+        "foundingDate": "2024-09-13",
+        "description": "AI-агентство контент-маркетинга. Автоматизируем SMM, производство контента и аналитику с помощью AI-систем.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+7-995-629-39-31",
+          "contactType": "customer service",
+          "email": "hello@thnkfor.me",
+          "availableLanguage": [
+            "Russian",
+            "English"
+          ]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "sameAs": [
+          "https://t.me/anastasiia_thinkfor"
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Анастасия Мосина",
+          "jobTitle": "Founder & CEO"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://thnkfor.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "О нас",
+          "item": "https://thnkfor.me/about/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="../services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="../services/smm/">SMM и соцсети</a>
+          <a href="../services/targeting/">Таргетированная реклама</a>
+          <a href="../services/direct/">Яндекс Директ</a>
+          <div class="nav-subitem">
+          <a href="../services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+          <div class="nav-subdropdown">
+            <a href="../services/content-machine/restaurant/">Для ресторанов</a>
+            <a href="../services/content-machine/beauty/">Для салонов красоты</a>
+            <a href="../services/content-machine/ecom/">Для интернет-магазинов</a>
+            <a href="../services/content-machine/marketplace/">Для маркетплейсов</a>
+            <a href="../services/content-machine/fitness/">Для фитнеса</a>
+            <a href="../services/content-machine/construction/">Для строительства</a>
+          </div>
+        </div>
+          <a href="../services/video/">Видеопроизводство</a>
+          <a href="../services/reputation/">Управление репутацией</a>
+          <a href="../services/seo/">Продвижение в поиске</a>
+          <a href="../services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="../niches/restaurants/">Рестораны</a>
+          <a href="../niches/beauty/">Салоны красоты</a>
+          <a href="../niches/clinic/">Медицина</a>
+          <a href="../niches/fitness/">Фитнес</a>
+          <a href="../niches/saas/">IT и SaaS</a>
+          <a href="../niches/ecommerce-fashion/">E-commerce</a>
+          <a href="../niches/realestate/">Недвижимость</a>
+          <a href="../niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../cases/">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="../cases/werent/">WeRent — Content Machine</a>
+          <a href="../cases/tennispoint/">Tennis Point — бот новинок</a>
+          <a href="../cases/4room/">4room.studio — три AI-системы</a>
+          <a href="../cases/studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="../cases/">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../blog/">Блог</a>
+        <div class="nav-dropdown">
+          <a href="../blog/ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="../blog/content-factory/">Контент-завод</a>
+          <a href="../blog/midjourney-business/">Midjourney для бизнеса</a>
+          <a href="../blog/prompt-engineering/">Prompt Engineering</a>
+          <a href="../blog/n8n-vs-make/">n8n vs Make</a>
+          <a href="../blog/seo-ai-2026/">SEO и AI 2026</a>
+          <a href="../blog/">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../pricing/">Цены</a><a href="../contacts/">Контакты</a>
+      </div>
+      <div class="nav-item">
+        <a href="../about/" class="active">О нас</a>
+      </div>
+      <a href="../contacts/" class="header-cta">Обсудить проект</a>
+    
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="../services/smm/" class="header-pill">01 · SMM</a>
+    <a href="../services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="../services/direct/" class="header-pill">03 · Директ</a>
+    <a href="../services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="../services/video/" class="header-pill">05 · Видео</a>
+    <a href="../services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="../services/seo/" class="header-pill">07 · SEO</a>
+    <a href="../services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-meta">
+    <span>THNKFOR.ME · Команда</span>
+    <span>8 специалистов</span>
+    <span>Москва · 2024</span>
+  </div>
+  <div class="hero-body">
+    <h1 class="hero-h1">
+      Люди,<br>которые<br>заставляют<br><span>AI работать</span>
+    </h1>
+    <div class="hero-right">
+      <p class="hero-desc">
+        Мы не верим в агентства, где за AI прячется рутина.
+        <strong>THNKFOR.ME — это команда</strong>, которая сама строит системы,
+        тестирует модели и отвечает за результат руками, а не слайдами.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-n">8</div>
+          <div class="hero-stat-l">Специалистов в штате</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-n">40<span style="color:#fff;font-size:24px;">+</span></div>
+          <div class="hero-stat-l">Ниш и рынков</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-n">3<span style="color:#fff;font-size:24px;">x</span></div>
+          <div class="hero-stat-l">Быстрее ручного SMM</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-n">∞</div>
+          <div class="hero-stat-l">Контент без выгорания</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="section section-white">
+  <div class="section-label">// 01 · Основатель</div>
+  <div class="founder-grid">
+    <div class="founder-photo">
+      <img src="../team/01_anastasia_mosina_v2.jpg" alt="Анастасия Мосина — Founder & CEO, THNKFOR.ME" loading="lazy">
+    </div>
+    <div class="founder-info">
+      <div>
+        <div class="founder-badge">Founder & CEO</div>
+      </div>
+      <div>
+        <div class="founder-name">Анастасия<br>Мосина</div>
+        <div class="founder-role" style="margin-top:8px;">Founder · CEO · AI Strategy</div>
+      </div>
+      <p class="founder-bio">
+        Основала THNKFOR.ME с одной идеей: <strong>маркетинг должен думать, а не просто публиковать.</strong>
+        До этого — 7 лет в digital-агентствах, запуски для ретейла, HoReCa и IT-компаний.
+        Первая в команде, кто начала заменять ручные процессы нейросетями — не потому что модно,
+        а потому что это работает быстрее и точнее.
+      </p>
+      <p class="founder-bio">
+        Отвечает за AI-стратегию, продуктовое мышление и то, чтобы каждый клиент
+        получал систему, а не набор услуг.
+      </p>
+      <div class="founder-links">
+        <a href="https://t.me/anastasiia_thinkfor" class="founder-link">Telegram</a>
+        <a href="mailto:hello@thnkfor.me" class="founder-link">hello@thnkfor.me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section">
+  <div class="section-label">// 02 · Команда</div>
+  <div class="team-grid">
+
+    <div class="team-card">
+      <div class="team-card-photo">
+        <img src="../team/02_maxim_lyovin_v2.jpg" alt="Максим Лёвин — Head of AI & Automation, THNKFOR.ME" loading="lazy">
+      </div>
+      <div class="team-card-info">
+        <div class="team-card-name">Максим Лёвин</div>
+        <div class="team-card-role">Head of AI & Automation</div>
+        <div class="team-card-tags">
+          <span class="team-tag">Make.com</span>
+          <span class="team-tag">n8n</span>
+          <span class="team-tag">GPT fine-tune</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-card-photo">
+        <img src="../team/03_sofia_petrova_v2.jpg" alt="София Петрова — Creative Director, THNKFOR.ME" loading="lazy">
+      </div>
+      <div class="team-card-info">
+        <div class="team-card-name">София Петрова</div>
+        <div class="team-card-role">Creative Director</div>
+        <div class="team-card-tags">
+          <span class="team-tag">Midjourney</span>
+          <span class="team-tag">Figma</span>
+          <span class="team-tag">Brand</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-card-photo">
+        <img src="../team/04_artem_volkov_v2.jpg" alt="Артём Волков — Lead Developer, THNKFOR.ME" loading="lazy">
+      </div>
+      <div class="team-card-info">
+        <div class="team-card-name">Артём Волков</div>
+        <div class="team-card-role">Lead Developer</div>
+        <div class="team-card-tags">
+          <span class="team-tag">Python</span>
+          <span class="team-tag">API</span>
+          <span class="team-tag">RAG</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-card-photo">
+        <img src="../team/05_mira_akhmetova_v2.jpg" alt="Мира Ахметова — Content Strategist, THNKFOR.ME" loading="lazy">
+      </div>
+      <div class="team-card-info">
+        <div class="team-card-name">Мира Ахметова</div>
+        <div class="team-card-role">Content Strategist</div>
+        <div class="team-card-tags">
+          <span class="team-tag">SMM</span>
+          <span class="team-tag">Контент-план</span>
+          <span class="team-tag">SEO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-card-photo">
+        <img src="../team/06_dmitry_smirnov_v2.jpg" alt="Дмитрий Смирнов — Head of Performance, THNKFOR.ME" loading="lazy">
+      </div>
+      <div class="team-card-info">
+        <div class="team-card-name">Дмитрий Смирнов</div>
+        <div class="team-card-role">Head of Performance</div>
+        <div class="team-card-tags">
+          <span class="team-tag">Таргет</span>
+          <span class="team-tag">Analytics</span>
+          <span class="team-tag">A/B</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-card-photo">
+        <img src="../team/07_elena_kozlova_v2.jpg" alt="Елена Козлова — Head of Video, THNKFOR.ME" loading="lazy">
+      </div>
+      <div class="team-card-info">
+        <div class="team-card-name">Елена Козлова</div>
+        <div class="team-card-role">Account Manager</div>
+        <div class="team-card-tags">
+          <span class="team-tag">Client Relations</span>
+          <span class="team-tag">Отчёты</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-card-photo">
+        <img src="../team/08_aleksandr_orlov_v2.jpg" alt="Александр Орлов — Account Manager, THNKFOR.ME" loading="lazy">
+      </div>
+      <div class="team-card-info">
+        <div class="team-card-name">Александр Орлов</div>
+        <div class="team-card-role">Head of Video</div>
+        <div class="team-card-tags">
+          <span class="team-tag">Reels</span>
+          <span class="team-tag">Runway</span>
+          <span class="team-tag">HeyGen</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Bot card -->
+    <div class="team-card" style="background:#0A0A0A;">
+      <div class="team-card-photo" style="background:#111;">
+        <img src="../team/00_mascot_portrait.jpg" alt="THNK AI-BOT — AI-ассистент THNKFOR.ME, работает 24/7" style="object-position:top center;" loading="lazy">
+      </div>
+      <div class="team-card-info" style="background:#0A0A0A;">
+        <div class="team-card-name" style="color:#fff;">THNK AI-BOT</div>
+        <div class="team-card-role" style="color:#FF3B00;">AI · Работает 24/7</div>
+        <div class="team-card-tags">
+          <span class="team-tag" style="border-color:rgba(255,59,0,.3);color:#FF3B00;">GPT-4o</span>
+          <span class="team-tag" style="border-color:rgba(255,59,0,.3);color:#FF3B00;">Claude</span>
+          <span class="team-tag" style="border-color:rgba(255,59,0,.3);color:#FF3B00;">Fine-tune</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- QUOTE DIVIDER -->
+  <div style="border:1px solid rgba(0,0,0,0.08);border-top:none;background:#F8F8F8;padding:40px 48px;display:flex;align-items:center;justify-content:center;">
+    <div style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(22px,3.5vw,44px);letter-spacing:-0.04em;color:#0A0A0A;line-height:1;white-space:nowrap;text-align:center;">
+      Remove the <span style="color:#FF3B00;font-style:italic;">I.</span> Keep the work.
+    </div>
+  </div>
+
+  <!-- MASCOT STRIP -->
+  <div class="mascot-section">
+    <div class="mascot-photo">
+      <img src="../team/00_mascot_thnkforme.jpg" alt="THNK AI-BOT — AI-маскот агентства THNKFOR.ME" style="object-position:center top;" loading="lazy">
+    </div>
+    <div class="mascot-text">
+      <h2>Девятый член команды —<br><span>THNK AI-BOT</span></h2>
+      <p>
+        Специально обученная нейросеть под нишу каждого клиента.
+        Пишет тексты в голосе бренда, генерирует идеи, анализирует тренды
+        и никогда не уходит в отпуск. Обучается на данных клиента и становится
+        лучше каждый месяц.
+      </p>
+      <div class="mascot-chips">
+        <span class="mascot-chip">GPT-4o fine-tune</span>
+        <span class="mascot-chip">Claude 3.5 Sonnet</span>
+        <span class="mascot-chip">RAG-база знаний</span>
+        <span class="mascot-chip">Memory по клиенту</span>
+        <span class="mascot-chip">YandexGPT Pro</span>
+        <span class="mascot-chip">Работает 24/7</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section section-white">
+  <div class="section-label">// 03 · Как мы работаем</div>
+  <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(24px,3vw,40px);letter-spacing:-0.03em;margin-bottom:40px;line-height:1.1;">
+    Принципы, которые не меняются
+  </h2>
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-n">01_</div>
+      <div class="value-title">Строим системы</div>
+      <p class="value-desc">Мы не делаем посты — мы строим контент-машины. Каждый проект заканчивается работающей системой, которая живёт без нас.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-n">02_</div>
+      <div class="value-title">AI усиливает людей</div>
+      <p class="value-desc">Нейросеть усиливает людей, не заменяет стратегическое мышление. За каждым алгоритмом стоит человек, который понимает, зачем он нужен.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-n">03_</div>
+      <div class="value-title">Данные решают</div>
+      <p class="value-desc">Гипотезы → тесты → данные → решения. Никаких ощущений и «кажется, что работает». Только метрики и аналитика.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-n">04_</div>
+      <div class="value-title">Голос клиента — главное</div>
+      <p class="value-desc">AI обучается на языке бренда, а не пишет шаблонные тексты. Читатель не должен чувствовать, что это написала машина.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-n">05_</div>
+      <div class="value-title">Скорость без потери качества</div>
+      <p class="value-desc">Автоматизация нужна не чтобы делать хуже, а чтобы делать больше хорошего. Стандарты не снижаются — растёт объём.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-n">06_</div>
+      <div class="value-title">Открытость и честность</div>
+      <p class="value-desc">Показываем что работает, а что нет. Ежемесячные отчёты с реальными цифрами — не только успехи, но и выводы из ошибок.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-bar">
+  <h2>Хотите работать<br>с <span>этой командой?</span></h2>
+  <div class="cta-buttons">
+    <a href="../contacts/" class="btn btn-accent">Обсудить проект</a>
+    <a href="https://t.me/anastasiia_thinkfor" class="btn btn-outline-light">Написать в Telegram</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="./" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="../services/smm/">SMM и ведение соцсетей</a>
+        <a href="../services/targeting/">Таргетированная реклама</a>
+        <a href="../services/direct/">Яндекс Директ</a>
+        <a href="../services/content-machine/">Контент завод</a>
+        <a href="../services/video/">Видеопроизводство</a>
+        <a href="../services/reputation/">Управление репутацией</a>
+        <a href="../services/seo/">Продвижение в поиске</a>
+        <a href="../services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="../niches/restaurants/">Рестораны</a>
+        <a href="../niches/beauty/">Салоны красоты</a>
+        <a href="../niches/clinic/">Медицина</a>
+        <a href="../niches/fitness/">Фитнес</a>
+        <a href="../niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="../niches/saas/">IT и SaaS</a>
+        <a href="../niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="../about/">О нас</a>
+        <a href="../cases/">Кейсы</a>
+        <a href="../blog/">Блог</a>
+        <a href="../pricing/">Цены</a><a href="../contacts/">Контакты</a>
+        <a href="../contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+</body>
+</html>

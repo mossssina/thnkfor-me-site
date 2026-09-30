@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ниши — маркетинг для вашего бизнеса | THNKFOR.ME</title>
+<meta name="description" content="THNKFOR.ME работает с 40+ нишами: HoReCa, Beauty, медицина, фитнес, e-commerce, IT. Выберите свою нишу — покажем конкретные стратегии и кейсы.">
+<meta name="keywords" content="маркетинг для ресторанов, SMM для салонов красоты, реклама для клиник, маркетинг для фитнеса, продвижение интернет-магазина">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Ниши — THNKFOR.ME">
+<meta property="og:description" content="Работаем с 40+ нишами. Выберите свой тип бизнеса — покажем стратегию.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://thnkfor.me/niches/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #F8F8F8;
+  color: #0A0A0A;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+ul, ol { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* ─── ANIMATIONS ─── */
+@keyframes b-blink {
+  0%, 49%  { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* ─── HEADER ─── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0A0A0A;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 56px;
+}
+.header-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 48px 10px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.header-pill {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  padding: 3px 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.header-pill:hover {
+  color: #FF3B00;
+  border-color: rgba(255,59,0,0.4);
+}
+.header-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+.header-logo .dot { color: #FF3B00; }
+.header-logo .cur { color: #FF3B00; animation: b-blink 1s infinite; }
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.header-nav a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.15s;
+}
+.header-nav a:hover { color: #FFFFFF; }
+.header-nav a.active { color: #FF3B00; }
+.header-cta {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  background: #FF3B00;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  transition: background 0.15s;
+}
+.header-cta:hover { background: #FFFFFF; color: #0A0A0A; }
+
+/* ─── SECTION ─── */
+.section {
+  padding: 80px 48px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.section-dark {
+  background: #0A0A0A;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ─── SECTION LABEL ─── */
+.section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(0,0,0,0.1);
+}
+.section-dark .section-label { color: rgba(255,255,255,0.3); }
+.section-dark .section-label::after { background: rgba(255,255,255,0.08); }
+
+/* ─── BUTTONS ─── */
+.btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 14px 28px;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.btn-primary { background: #0A0A0A; color: #F8F8F8; }
+.btn-primary:hover { background: #FF3B00; color: #FFFFFF; }
+.btn-accent { background: #FF3B00; color: #FFFFFF; }
+.btn-accent:hover { background: #0A0A0A; color: #F8F8F8; }
+.btn-outline { background: transparent; color: #0A0A0A; border: 1.5px solid #0A0A0A; }
+.btn-outline:hover { background: #0A0A0A; color: #F8F8F8; }
+.btn-outline-light { background: transparent; color: #FFFFFF; border: 1.5px solid rgba(255,255,255,0.3); }
+.btn-outline-light:hover { border-color: #FFFFFF; background: rgba(255,255,255,0.06); }
+.btn-ghost { background: transparent; color: #0A0A0A; border: none; border-bottom: 1.5px solid #0A0A0A; padding-left: 0; padding-right: 0; }
+.btn-ghost:hover { color: #FF3B00; border-color: #FF3B00; }
+.btn-lg { font-size: 17px; padding: 18px 36px; }
+
+/* ─── BADGES ─── */
+.badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+.badge-system { background: #0A0A0A; color: #F8F8F8; }
+.badge-system::before { background: #FF3B00; }
+.badge-outline { background: transparent; color: #0A0A0A; border: 1px solid rgba(0,0,0,0.2); }
+.badge-outline::before { background: #666666; }
+
+/* ─── HERO (COMPACT DARK) ─── */
+.page-hero {
+  background: #0A0A0A;
+  padding: 80px 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+}
+.hero-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 40px;
+  display: flex;
+  gap: 32px;
+}
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+}
+.hero-h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: clamp(40px, 6vw, 80px);
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: #FFFFFF;
+  margin-bottom: 32px;
+}
+.hero-h1 em { font-style: normal; color: #FF3B00; }
+.hero-sub {
+  font-size: 17px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.55;
+  max-width: 440px;
+  margin-bottom: 40px;
+}
+.hero-sub strong { color: rgba(255,255,255,0.75); font-weight: 500; }
+.hero-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.hero-stat {
+  background: #111111;
+  padding: 28px 24px;
+}
+.hero-stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: -0.04em;
+  color: #FFFFFF;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.hero-stat-num span { color: #FF3B00; }
+.hero-stat-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ─── FILTER TABS ─── */
+.filter-strip {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-bottom: 32px;
+  border: 1px solid rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+.filter-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #666666;
+  padding: 12px 20px;
+  border: none;
+  background: #FFFFFF;
+  border-right: 1px solid rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: color 0.12s, background 0.12s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+}
+.filter-btn:last-child { border-right: none; }
+.filter-btn:hover { color: #0A0A0A; background: #F8F8F8; }
+.filter-btn.active {
+  color: #0A0A0A;
+  background: #F8F8F8;
+}
+.filter-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #FF3B00;
+}
+.filter-count {
+  font-size: 8px;
+  color: #FF3B00;
+  margin-left: 4px;
+  letter-spacing: 0;
+}
+
+/* ─── NICHES GRID ─── */
+.niches-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.niches-counter {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999999;
+}
+.niches-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.niche-card {
+  background: #FFFFFF;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+  text-decoration: none;
+  color: inherit;
+  min-height: 160px;
+}
+.niche-card:nth-child(even) { background: #F8F8F8; }
+.niche-card:hover {
+  background: #0A0A0A;
+}
+.niche-card:hover .niche-code { color: #FF3B00; }
+.niche-card:hover .niche-name { color: #FFFFFF; }
+.niche-card:hover .niche-desc { color: rgba(255,255,255,0.4); }
+.niche-card:hover .niche-arrow { color: #FF3B00; }
+.niche-card.hidden { display: none; }
+
+.niche-code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 18px;
+  color: rgba(255,59,0,0.25);
+  line-height: 1;
+  transition: color 0.15s;
+}
+.niche-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  color: #0A0A0A;
+  line-height: 1.25;
+  transition: color 0.15s;
+}
+.niche-desc {
+  font-size: 12px;
+  color: #888888;
+  line-height: 1.5;
+  flex: 1;
+  transition: color 0.15s;
+}
+.niche-arrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: rgba(0,0,0,0.2);
+  transition: color 0.15s;
+  margin-top: auto;
+}
+
+/* ─── CTA SECTION ─── */
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.cta-card {
+  background: #111111;
+  padding: 48px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cta-card-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+.cta-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+.cta-card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* ─── FOOTER ─── */
+.site-footer {
+  background: #0A0A0A;
+  padding: 48px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+.footer-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+.footer-logo .dot { color: #FF3B00; }
+.footer-logo .cur { color: #FF3B00; animation: b-blink 1s infinite; }
+.footer-tagline {
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.footer-col-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
+  margin-bottom: 16px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-links a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: #FFFFFF; }
+.footer-bottom {
+  background: #0A0A0A;
+  padding: 20px 48px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.footer-copy {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.15);
+}
+
+/* ═══ UNIFIED SITE HEADER + FOOTER ═══ */
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,59,0,0);}60%{box-shadow:0 0 0 6px rgba(255,59,0,0.18);}}
+.site-header{position:sticky!important;top:0!important;z-index:200!important;background:#0A0A0A!important;border-bottom:1px solid rgba(255,255,255,0.08)!important;display:block!important;padding:0!important;height:auto!important;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item > span:hover,.nav-item:hover > a,.nav-item:hover > span{color:#FFFFFF;}
+.nav-item > a.active,.nav-item > span.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover,.header-nav .header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;box-shadow:none;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid!important;grid-template-columns:1fr 1fr 1fr 1fr!important;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" / loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "url": "https://thnkfor.me/niches/",
+      "name": "Ниши — маркетинг для вашего бизнеса | THNKFOR.ME",
+      "description": "THNKFOR.ME работает с 40+ нишами: HoReCa, Beauty, медицина, фитнес, e-commerce, IT. Выберите свою нишу — покажем конкретные стратегии и кейсы."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://thnkfor.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ниши",
+          "item": "https://thnkfor.me/niches/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="services/smm/">SMM и соцсети</a>
+          <a href="services/targeting/">Таргетированная реклама</a>
+          <a href="services/direct/">Яндекс Директ</a>
+          <div class="nav-subitem">
+          <a href="services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+          <div class="nav-subdropdown">
+            <a href="services/content-machine/restaurant/">Для ресторанов</a>
+            <a href="services/content-machine/beauty/">Для салонов красоты</a>
+            <a href="services/content-machine/ecom/">Для интернет-магазинов</a>
+            <a href="services/content-machine/marketplace/">Для маркетплейсов</a>
+            <a href="services/content-machine/fitness/">Для фитнеса</a>
+            <a href="services/content-machine/construction/">Для строительства</a>
+          </div>
+        </div>
+          <a href="services/video/">Видеопроизводство</a>
+          <a href="services/reputation/">Управление репутацией</a>
+          <a href="services/seo/">Продвижение в поиске</a>
+          <a href="services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="niches/restaurants/">Рестораны</a>
+          <a href="niches/beauty/">Салоны красоты</a>
+          <a href="niches/clinic/">Медицина</a>
+          <a href="niches/fitness/">Фитнес</a>
+          <a href="niches/saas/">IT и SaaS</a>
+          <a href="niches/ecommerce-fashion/">E-commerce</a>
+          <a href="niches/realestate/">Недвижимость</a>
+          <a href="niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="cases/">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="cases/werent/">WeRent — Content Machine</a>
+          <a href="cases/tennispoint/">Tennis Point — бот новинок</a>
+          <a href="cases/4room/">4room.studio — три AI-системы</a>
+          <a href="cases/studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="cases/">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="blog/">Блог</a>
+        <div class="nav-dropdown">
+          <a href="blog/ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="blog/content-factory/">Контент-завод</a>
+          <a href="blog/midjourney-business/">Midjourney для бизнеса</a>
+          <a href="blog/prompt-engineering/">Prompt Engineering</a>
+          <a href="blog/n8n-vs-make/">n8n vs Make</a>
+          <a href="blog/seo-ai-2026/">SEO и AI 2026</a>
+          <a href="blog/">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="pricing/">Цены</a><a href="contacts/">Контакты</a>
+      </div>
+      <div class="nav-item">
+        <a href="about/">О нас</a>
+      </div>
+      <a href="contacts/" class="header-cta">Обсудить проект</a>
+    
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="services/smm/" class="header-pill">01 · SMM</a>
+    <a href="services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="services/direct/" class="header-pill">03 · Директ</a>
+    <a href="services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="services/video/" class="header-pill">05 · Видео</a>
+    <a href="services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="services/seo/" class="header-pill">07 · SEO</a>
+    <a href="services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<!-- ─── HERO ─── -->
+<section class="page-hero">
+  <div class="hero-meta">
+    <span>AI-агентство · Москва</span>
+    <span>40+ ниш · конкретные стратегии</span>
+  </div>
+  <div class="hero-layout">
+    <div>
+      <h1 class="hero-h1">
+        Работаем<br>
+        с вашей<br>
+        <em>нишей</em>
+      </h1>
+      <p class="hero-sub">
+        Не универсальный маркетинг для всех —
+        <strong>точные стратегии</strong> для конкретного типа бизнеса.
+        Ресторан и стоматология продвигаются по-разному. Мы это знаем.
+      </p>
+      <a href="contacts/" class="btn btn-accent btn-lg">Обсудить проект →</a>
+    </div>
+    <div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">40<span>+</span></div>
+          <div class="hero-stat-label">Ниш в работе</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">8</div>
+          <div class="hero-stat-label">Направлений услуг</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">3<span>x</span></div>
+          <div class="hero-stat-label">Быстрее ручного SMM</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">∞</div>
+          <div class="hero-stat-label">Контент без выгорания</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── NICHES ─── -->
+<section class="section">
+  <div class="section-label">// 01 · Ниши · 43 категории бизнеса</div>
+
+  <!-- Фильтр по категориям -->
+  <div class="filter-strip" role="tablist" aria-label="Категории ниш">
+    <button class="filter-btn active" data-cat="all" role="tab" aria-selected="true">
+      Все <span class="filter-count" id="cnt-all">43</span>
+    </button>
+    <button class="filter-btn" data-cat="horeca" role="tab" aria-selected="false">
+      HoReCa <span class="filter-count" id="cnt-horeca">3</span>
+    </button>
+    <button class="filter-btn" data-cat="beauty" role="tab" aria-selected="false">
+      Beauty <span class="filter-count" id="cnt-beauty">7</span>
+    </button>
+    <button class="filter-btn" data-cat="med" role="tab" aria-selected="false">
+      Медицина <span class="filter-count" id="cnt-med">4</span>
+    </button>
+    <button class="filter-btn" data-cat="fitness" role="tab" aria-selected="false">
+      Фитнес <span class="filter-count" id="cnt-fitness">4</span>
+    </button>
+    <button class="filter-btn" data-cat="ecom" role="tab" aria-selected="false">
+      E-com / IT <span class="filter-count" id="cnt-ecom">13</span>
+    </button>
+    <button class="filter-btn" data-cat="other" role="tab" aria-selected="false">
+      Другие <span class="filter-count" id="cnt-other">12</span>
+    </button>
+  </div>
+
+  <div class="niches-meta">
+    <span class="niches-counter" id="niches-counter">// 43 ниши</span>
+  </div>
+
+  <div class="niches-grid" id="niches-grid">
+
+    <!-- ── HoReCa ── -->
+    <a href="niches/restaurants/" class="niche-card" data-cat="horeca">
+      <div class="niche-code">01_</div>
+      <div class="niche-name">Рестораны и кафе</div>
+      <div class="niche-desc">SMM, таргет, контент завод, управление репутацией</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/cafe/" class="niche-card" data-cat="horeca">
+      <div class="niche-code">02_</div>
+      <div class="niche-name">Кофейни</div>
+      <div class="niche-desc">Reels, сторис, геотаргет, программы лояльности</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/bars/" class="niche-card" data-cat="horeca">
+      <div class="niche-code">03_</div>
+      <div class="niche-name">Бары и пабы</div>
+      <div class="niche-desc">Events-маркетинг, репутация, SMM, контент мероприятий</div>
+      <div class="niche-arrow">→</div>
+    </a>
+
+    <!-- ── Beauty ── -->
+    <a href="niches/beauty/" class="niche-card" data-cat="beauty">
+      <div class="niche-code">04_</div>
+      <div class="niche-name">Салоны красоты</div>
+      <div class="niche-desc">Запись, отзывы, Reels, таргет на женскую аудиторию</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/barbershop/" class="niche-card" data-cat="beauty">
+      <div class="niche-code">05_</div>
+      <div class="niche-name">Барбершопы</div>
+      <div class="niche-desc">SMM, таргет, Reels, онлайн-запись, retention</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/nail-studio/" class="niche-card" data-cat="beauty">
+      <div class="niche-code">06_</div>
+      <div class="niche-name">Ногтевые студии</div>
+      <div class="niche-desc">Портфолио Reels, таргет, поток новых клиенток</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/spa/" class="niche-card" data-cat="beauty">
+      <div class="niche-code">07_</div>
+      <div class="niche-name">SPA-салоны</div>
+      <div class="niche-desc">SMM, Яндекс Директ, репутация, контент-маркетинг</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/permanent-makeup/" class="niche-card" data-cat="beauty">
+      <div class="niche-code">08_</div>
+      <div class="niche-name">Перманентный макияж</div>
+      <div class="niche-desc">Reels до/после, таргет, портфолио, отзывы</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/brows/" class="niche-card" data-cat="beauty">
+      <div class="niche-code">09_</div>
+      <div class="niche-name">Бровисты и лешмейкеры</div>
+      <div class="niche-desc">Reels, таргет, онлайн-запись, сезонные акции</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/massage/" class="niche-card" data-cat="beauty">
+      <div class="niche-code">10_</div>
+      <div class="niche-name">Массажные студии</div>
+      <div class="niche-desc">SMM, репутация, Директ, геотаргет</div>
+      <div class="niche-arrow">→</div>
+    </a>
+
+    <!-- ── Медицина ── -->
+    <a href="niches/cosmetology/" class="niche-card" data-cat="med">
+      <div class="niche-code">11_</div>
+      <div class="niche-name">Косметологические клиники</div>
+      <div class="niche-desc">Директ, SEO, репутация, до/после контент</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/dentistry/" class="niche-card" data-cat="med">
+      <div class="niche-code">12_</div>
+      <div class="niche-name">Стоматологии</div>
+      <div class="niche-desc">Яндекс Директ, управление отзывами, SEO</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/clinic/" class="niche-card" data-cat="med">
+      <div class="niche-code">13_</div>
+      <div class="niche-name">Частные клиники</div>
+      <div class="niche-desc">Контент-маркетинг, репутация, SEO, Директ</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/laser-epilation/" class="niche-card" data-cat="med">
+      <div class="niche-code">14_</div>
+      <div class="niche-name">Лазерная эпиляция</div>
+      <div class="niche-desc">Таргет, Reels, Директ, сезонные кампании</div>
+      <div class="niche-arrow">→</div>
+    </a>
+
+    <!-- ── Фитнес ── -->
+    <a href="niches/fitness/" class="niche-card" data-cat="fitness">
+      <div class="niche-code">15_</div>
+      <div class="niche-name">Фитнес-клубы</div>
+      <div class="niche-desc">SMM, таргет, абонементы, сообщество, события</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/yoga/" class="niche-card" data-cat="fitness">
+      <div class="niche-code">16_</div>
+      <div class="niche-name">Йога-студии</div>
+      <div class="niche-desc">SMM, сообщество, таргет, пробные уроки</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/pilates/" class="niche-card" data-cat="fitness">
+      <div class="niche-code">17_</div>
+      <div class="niche-name">Пилатес-студии</div>
+      <div class="niche-desc">Reels, таргет, онлайн-запись, retention</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/crossfit/" class="niche-card" data-cat="fitness">
+      <div class="niche-code">18_</div>
+      <div class="niche-name">Кроссфит-боксы</div>
+      <div class="niche-desc">SMM, Reels, таргет, события и соревнования</div>
+      <div class="niche-arrow">→</div>
+    </a>
+
+    <!-- ── E-com / IT ── -->
+    <a href="niches/marketplace/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">19_</div>
+      <div class="niche-name">Маркетплейсы WB и Ozon</div>
+      <div class="niche-desc">Контент завод, инфографика, карточки товаров</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/ecommerce-furniture/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">20_</div>
+      <div class="niche-name">ИМ мебели и декора</div>
+      <div class="niche-desc">SMM, таргет, контент завод, Директ</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/ecommerce-jewelry/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">21_</div>
+      <div class="niche-name">ИМ ювелирных украшений</div>
+      <div class="niche-desc">SMM, Reels, таргет, видеопроизводство</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/saas/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">22_</div>
+      <div class="niche-name">SaaS и IT-продукты</div>
+      <div class="niche-desc">B2B-контент, Telegram, SEO, performance-маркетинг</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/ecommerce-sport/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">23_</div>
+      <div class="niche-name">ИМ спортивных товаров</div>
+      <div class="niche-desc">Контент завод, таргет, маркетплейс</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/ecommerce-lighting/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">24_</div>
+      <div class="niche-name">ИМ освещения и светильников</div>
+      <div class="niche-desc">Контент, SEO, Яндекс Директ, маркетплейс</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/ecommerce-fashion/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">25_</div>
+      <div class="niche-name">ИМ одежды и аксессуаров</div>
+      <div class="niche-desc">Reels, таргет, контент завод, lookbook</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/ecommerce-kids/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">26_</div>
+      <div class="niche-name">ИМ детских товаров</div>
+      <div class="niche-desc">SMM, таргет, контент, маркетплейс</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/ecommerce-beauty-products/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">27_</div>
+      <div class="niche-name">ИМ косметики и ухода</div>
+      <div class="niche-desc">SMM, Reels, маркетплейс, таргет</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/ecommerce-pets/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">28_</div>
+      <div class="niche-name">ИМ товаров для животных</div>
+      <div class="niche-desc">SMM, таргет, контент завод, WB/Ozon</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/ecommerce-electronics/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">29_</div>
+      <div class="niche-name">ИМ электроники и гаджетов</div>
+      <div class="niche-desc">Директ, SEO, контент, видеообзоры</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/ecommerce-home/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">30_</div>
+      <div class="niche-name">ИМ товаров для дома</div>
+      <div class="niche-desc">Контент завод, таргет, маркетплейс</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/ecommerce-health/" class="niche-card" data-cat="ecom">
+      <div class="niche-code">31_</div>
+      <div class="niche-name">ИМ здорового питания и БАД</div>
+      <div class="niche-desc">Контент, таргет, репутация, Директ</div>
+      <div class="niche-arrow">→</div>
+    </a>
+
+    <!-- ── Другие ── -->
+    <a href="niches/kids-center/" class="niche-card" data-cat="other">
+      <div class="niche-code">32_</div>
+      <div class="niche-name">Детские центры развития</div>
+      <div class="niche-desc">SMM, таргет, мероприятия, отзывы родителей</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/vet/" class="niche-card" data-cat="other">
+      <div class="niche-code">33_</div>
+      <div class="niche-name">Ветеринарные клиники</div>
+      <div class="niche-desc">SMM, репутация, таргет, контент-маркетинг</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/online-school/" class="niche-card" data-cat="other">
+      <div class="niche-code">34_</div>
+      <div class="niche-name">Онлайн-школы и курсы</div>
+      <div class="niche-desc">Таргет, Директ, контент-воронка, вебинары</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/interior-design/" class="niche-card" data-cat="other">
+      <div class="niche-code">35_</div>
+      <div class="niche-name">Дизайн-студии интерьеров</div>
+      <div class="niche-desc">SMM, портфолио, Reels, таргет</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/realestate/" class="niche-card" data-cat="other">
+      <div class="niche-code">36_</div>
+      <div class="niche-name">Агентства недвижимости</div>
+      <div class="niche-desc">Директ, SEO, контент, лидогенерация</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/autoservice/" class="niche-card" data-cat="other">
+      <div class="niche-code">37_</div>
+      <div class="niche-name">Автосервисы</div>
+      <div class="niche-desc">Директ, SEO, репутация, геотаргет</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/construction/" class="niche-card" data-cat="other">
+      <div class="niche-code">38_</div>
+      <div class="niche-name">Строительство и ремонт</div>
+      <div class="niche-desc">SEO, кейсы, контент, репутация, Директ</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/travel/" class="niche-card" data-cat="other">
+      <div class="niche-code">39_</div>
+      <div class="niche-name">Турагентства и отели</div>
+      <div class="niche-desc">SMM, таргет, сезонный контент, репутация</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/events/" class="niche-card" data-cat="other">
+      <div class="niche-code">40_</div>
+      <div class="niche-name">Event-агентства</div>
+      <div class="niche-desc">SMM, Reels, портфолио мероприятий, таргет</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/language-school/" class="niche-card" data-cat="other">
+      <div class="niche-code">41_</div>
+      <div class="niche-name">Языковые школы</div>
+      <div class="niche-desc">Таргет, контент, SMM, пробные уроки</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/legal/" class="niche-card" data-cat="other">
+      <div class="niche-code">42_</div>
+      <div class="niche-name">Юридические фирмы</div>
+      <div class="niche-desc">SEO, Директ, репутация, экспертный контент</div>
+      <div class="niche-arrow">→</div>
+    </a>
+    <a href="niches/cleaning/" class="niche-card" data-cat="other">
+      <div class="niche-code">43_</div>
+      <div class="niche-name">Клининговые компании</div>
+      <div class="niche-desc">Директ, SEO, отзывы, геотаргет</div>
+      <div class="niche-arrow">→</div>
+    </a>
+
+  </div><!-- /niches-grid -->
+</section>
+
+<!-- ─── CTA ─── -->
+<section class="section section-dark">
+  <div class="section-label">// 02 · Начать работу</div>
+  <div class="cta-grid">
+    <div class="cta-card">
+      <div class="cta-card-label">Шаг 01</div>
+      <h3>Бесплатный аудит</h3>
+      <p>Разберём текущий маркетинг, найдём слабые места и покажем точки роста. Без обязательств.</p>
+      <a href="contacts/" class="btn btn-accent" style="align-self:flex-start;">Получить аудит →</a>
+    </div>
+    <div class="cta-card">
+      <div class="cta-card-label">Шаг 02</div>
+      <h3>Стратегия под нишу</h3>
+      <p>Составим план продвижения с учётом специфики вашего рынка, сезонности и конкурентов.</p>
+      <a href="services/" class="btn btn-outline-light" style="align-self:flex-start;">Смотреть услуги →</a>
+    </div>
+    <div class="cta-card">
+      <div class="cta-card-label">Шаг 03</div>
+      <h3>Запуск за 7 дней</h3>
+      <p>Первые результаты — в течение недели. SMM, таргет или контент завод — стартуем быстро.</p>
+      <a href="pricing/" class="btn btn-outline-light" style="align-self:flex-start;">Цены и пакеты →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="./" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="services/smm/">SMM и ведение соцсетей</a>
+        <a href="services/targeting/">Таргетированная реклама</a>
+        <a href="services/direct/">Яндекс Директ</a>
+        <a href="services/content-machine/">Контент завод</a>
+        <a href="services/video/">Видеопроизводство</a>
+        <a href="services/reputation/">Управление репутацией</a>
+        <a href="services/seo/">Продвижение в поиске</a>
+        <a href="services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="niches/restaurants/">Рестораны</a>
+        <a href="niches/beauty/">Салоны красоты</a>
+        <a href="niches/clinic/">Медицина</a>
+        <a href="niches/fitness/">Фитнес</a>
+        <a href="niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="niches/saas/">IT и SaaS</a>
+        <a href="niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="about/">О нас</a>
+        <a href="cases/">Кейсы</a>
+        <a href="blog/">Блог</a>
+        <a href="pricing/">Цены</a><a href="contacts/">Контакты</a>
+        <a href="contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.filter-btn');
+  var cards   = document.querySelectorAll('.niche-card');
+  var counter = document.getElementById('niches-counter');
+
+  function updateCounter(n) {
+    var word = (n === 1) ? 'ниша' : (n >= 2 && n <= 4) ? 'ниши' : 'ниш';
+    counter.textContent = '// ' + n + ' ' + word;
+  }
+
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var cat = this.dataset.cat;
+
+      buttons.forEach(function(b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      this.classList.add('active');
+      this.setAttribute('aria-selected', 'true');
+
+      var visible = 0;
+      cards.forEach(function(card) {
+        var show = (cat === 'all') || (card.dataset.cat === cat);
+        card.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+      updateCounter(visible);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

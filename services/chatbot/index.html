@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Чат-бот для бизнеса — запись, напоминания, отзывы | THNKFOR.ME</title>
+<link rel="canonical" href="https://thnkfor.me/services/chatbot/">
+<meta name="description" content="Чат-бот в Telegram и WhatsApp принимает запись 24/7, напоминает клиентам, отвечает на отзывы. Запуск за 7 дней. Бесплатная консультация — thnkfor.me">
+<meta property="og:title" content="Чат-бот для бизнеса — запись, напоминания, отзывы | THNKFOR.ME">
+<meta property="og:description" content="Чат-бот в Telegram и WhatsApp принимает запись 24/7, напоминает клиентам, отвечает на отзывы. Запуск за 7 дней.">
+<meta property="og:url" content="https://thnkfor.me/services/chatbot/">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Чат-бот для бизнеса",
+      "url": "https://thnkfor.me/services/chatbot/",
+      "description": "Чат-бот в Telegram и WhatsApp принимает запись 24/7, напоминает клиентам, отвечает на отзывы.",
+      "provider": {
+        "@type": "Organization",
+        "name": "THNKFOR.ME",
+        "url": "https://thnkfor.me"
+      },
+      "offers": [
+        {"@type": "Offer", "name": "Старт", "price": "25000", "priceCurrency": "RUB"},
+        {"@type": "Offer", "name": "Стандарт", "price": "45000", "priceCurrency": "RUB"},
+        {"@type": "Offer", "name": "Про", "price": "75000", "priceCurrency": "RUB"}
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://thnkfor.me/"},
+        {"@type": "ListItem", "position": 2, "name": "Услуги", "item": "https://thnkfor.me/services/"},
+        {"@type": "ListItem", "position": 3, "name": "Чат-бот для бизнеса", "item": "https://thnkfor.me/services/chatbot/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Сколько стоит чат-бот для бизнеса?", "acceptedAnswer": {"@type": "Answer", "text": "Базовый бот — от 25 000 ₽ за разработку и запуск. Ежемесячное обслуживание — от 5 000 ₽."}},
+        {"@type": "Question", "name": "Как быстро запускается бот?", "acceptedAnswer": {"@type": "Answer", "text": "Стандартный срок — 7 рабочих дней от старта до первой живой записи."}},
+        {"@type": "Question", "name": "Нужно ли разбираться в технологиях?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Вы получаете готовый инструмент с простой панелью управления. Обучаем за 1–2 часа."}}
+      ]
+    }
+  ]
+}
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757','ym');
+ym(112546757,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute;left:-9999px;" alt="" loading="lazy"></div></noscript>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+<style>
+@keyframes b-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+/* ═══ UNIFIED SITE HEADER + FOOTER ═══ */
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,59,0,0);}60%{box-shadow:0 0 0 6px rgba(255,59,0,0.18);}}
+.site-header{position:sticky!important;top:0!important;z-index:200!important;background:#0A0A0A!important;border-bottom:1px solid rgba(255,255,255,0.08)!important;display:block!important;padding:0!important;height:auto!important;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item > span:hover,.nav-item:hover > a,.nav-item:hover > span{color:#FFFFFF;}
+.nav-item > a.active,.nav-item > span.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover,.header-nav .header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;box-shadow:none;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.header-pill.active{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+
+/* HERO */
+.hero{background:#0A0A0A;padding:88px 48px 80px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.hero-meta{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:52px;}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;}
+.hero-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(36px,5vw,64px);letter-spacing:-0.04em;line-height:0.97;color:#fff;}
+.hero-h1 span{color:#FF3B00;}
+.hero-right{display:flex;flex-direction:column;gap:28px;}
+.hero-desc{font-size:17px;color:rgba(255,255,255,0.45);line-height:1.6;max-width:460px;}
+.hero-desc strong{color:#fff;font-weight:500;}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;}
+.hero-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;padding:13px 26px;border:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s;display:inline-flex;align-items:center;gap:6px;text-decoration:none;line-height:1;}
+.btn-accent{background:#FF3B00;color:#fff;}
+.btn-accent:hover{background:#fff;color:#0A0A0A;}
+.btn-outline-light{background:transparent;color:rgba(255,255,255,0.6);border:1.5px solid rgba(255,255,255,0.18);}
+.btn-outline-light:hover{color:#fff;border-color:rgba(255,255,255,0.5);}
+.btn-outline{background:transparent;color:#0A0A0A;border:1.5px solid rgba(0,0,0,0.2);}
+.btn-outline:hover{background:#0A0A0A;color:#fff;}
+.btn-primary{background:#0A0A0A;color:#fff;}
+.btn-primary:hover{background:#FF3B00;color:#fff;}
+.btn-lg{padding:16px 32px;font-size:15px;}
+
+/* SECTIONS */
+.section{padding:80px 48px;border-bottom:1px solid rgba(0,0,0,0.09);}
+.section-dark{background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.06);}
+.section-white{background:#fff;}
+.section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#888;margin-bottom:48px;display:flex;align-items:center;gap:16px;}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(0,0,0,0.1);}
+.section-dark .section-label{color:rgba(255,255,255,0.25);}
+.section-dark .section-label::after{background:rgba(255,255,255,0.08);}
+.section-h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(26px,3.5vw,44px);letter-spacing:-0.035em;line-height:1.05;margin-bottom:48px;}
+.section-dark .section-h2{color:#fff;}
+
+/* ABOUT BLOCK */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.about-text{font-size:16px;color:rgba(255,255,255,0.5);line-height:1.7;}
+.about-text p{margin-bottom:20px;}
+.about-text strong{color:#fff;font-weight:500;}
+.about-checks{display:flex;flex-direction:column;gap:14px;margin-top:4px;}
+.about-check{display:flex;align-items:flex-start;gap:14px;font-size:15px;color:rgba(255,255,255,0.6);line-height:1.45;}
+.about-check::before{content:'✓';font-family:'IBM Plex Mono',monospace;color:#FF3B00;flex-shrink:0;font-size:13px;margin-top:2px;}
+
+/* FUNCTIONS GRID */
+.fn-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.08);}
+.fn-card{background:#111;padding:32px 28px;display:flex;flex-direction:column;gap:14px;}
+.fn-num{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;color:#FF3B00;}
+.fn-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.02em;color:#fff;line-height:1.2;}
+.fn-desc{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.6;}
+
+/* STEPS */
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);}
+.step-card{background:#fff;padding:40px 36px;display:flex;flex-direction:column;gap:16px;}
+.step-num{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#FF3B00;}
+.step-days{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#bbb;margin-bottom:4px;}
+.step-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:19px;letter-spacing:-0.02em;line-height:1.15;color:#0A0A0A;}
+.step-desc{font-size:14px;color:#555;line-height:1.65;}
+
+/* NICHES GRID */
+.niches-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(0,0,0,0.08);}
+.niche-card{background:#fff;padding:28px 28px;display:flex;flex-direction:column;gap:10px;}
+.niche-icon{font-size:22px;line-height:1;}
+.niche-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;letter-spacing:-0.02em;color:#0A0A0A;}
+.niche-desc{font-size:13px;color:#777;line-height:1.55;}
+
+/* METRICS */
+.metrics-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,0.06);margin-bottom:48px;}
+.metric-card{background:#111;padding:36px 28px;display:flex;flex-direction:column;gap:8px;text-align:center;}
+.metric-val{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(28px,4vw,48px);letter-spacing:-0.04em;color:#FF3B00;line-height:1;}
+.metric-desc{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);}
+.quote-block{background:#0D0D0D;border-left:3px solid #FF3B00;padding:32px 40px;margin-top:0;}
+.quote-text{font-size:16px;color:rgba(255,255,255,0.55);line-height:1.7;font-style:italic;margin-bottom:16px;}
+.quote-author{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.25);}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);}
+.pricing-card{background:#fff;padding:40px 36px;display:flex;flex-direction:column;gap:20px;}
+.pricing-card.featured{background:#0A0A0A;}
+.pricing-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#888;}
+.pricing-card.featured .pricing-label{color:rgba(255,255,255,0.3);}
+.pricing-name{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.03em;color:#0A0A0A;}
+.pricing-card.featured .pricing-name{color:#fff;}
+.pricing-price{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(28px,4vw,40px);letter-spacing:-0.04em;color:#0A0A0A;line-height:1;}
+.pricing-card.featured .pricing-price{color:#FF3B00;}
+.pricing-features{display:flex;flex-direction:column;gap:10px;flex:1;}
+.pricing-feature{font-size:14px;color:#555;line-height:1.5;display:flex;align-items:flex-start;gap:10px;}
+.pricing-card.featured .pricing-feature{color:rgba(255,255,255,0.5);}
+.pricing-feature::before{content:'·';font-family:'IBM Plex Mono',monospace;color:#FF3B00;flex-shrink:0;font-size:16px;line-height:1.3;}
+.pricing-note{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.06em;color:#bbb;border-top:1px solid rgba(0,0,0,0.08);padding-top:16px;}
+.pricing-card.featured .pricing-note{color:rgba(255,255,255,0.2);border-top-color:rgba(255,255,255,0.08);}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:0;}
+.faq-item{border-bottom:1px solid rgba(0,0,0,0.08);}
+.faq-q{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.01em;color:#0A0A0A;padding:22px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.faq-q::after{content:'+';font-family:'IBM Plex Mono',monospace;font-size:18px;color:#FF3B00;flex-shrink:0;transition:transform .2s;}
+.faq-item.open .faq-q::after{content:'−';}
+.faq-a{font-size:15px;color:#555;line-height:1.7;padding-bottom:22px;display:none;}
+.faq-item.open .faq-a{display:block;}
+
+/* CTA BAR */
+.cta-bar{background:#0A0A0A;padding:64px 48px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.06);}
+.cta-bar h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(22px,3vw,40px);letter-spacing:-0.03em;color:#fff;line-height:1.1;max-width:520px;}
+.cta-bar h2 span{color:#FF3B00;}
+.cta-buttons{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap;}
+
+/* FOOTER */
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#fff;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#fff;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+.footer-links a.active{color:#FF3B00;}
+.internal-link{color:inherit;border-bottom:1px solid currentColor;opacity:.75;text-decoration:none;transition:opacity .2s}.internal-link:hover{opacity:1}</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="../../services/" class="active">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="../../services/smm/">SMM и соцсети</a>
+          <a href="../../services/targeting/">Таргетированная реклама</a>
+          <a href="../../services/direct/">Яндекс Директ</a>
+          <div class="nav-subitem">
+          <a href="../../services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+          <div class="nav-subdropdown">
+            <a href="../../services/content-machine/restaurant/">Для ресторанов</a>
+            <a href="../../services/content-machine/beauty/">Для салонов красоты</a>
+            <a href="../../services/content-machine/ecom/">Для интернет-магазинов</a>
+            <a href="../../services/content-machine/marketplace/">Для маркетплейсов</a>
+            <a href="../../services/content-machine/fitness/">Для фитнеса</a>
+            <a href="../../services/content-machine/construction/">Для строительства</a>
+          </div>
+        </div>
+          <a href="../../services/video/">Видеопроизводство</a>
+          <a href="../../services/reputation/">Управление репутацией</a>
+          <a href="../../services/seo/">Продвижение в поиске</a>
+          <a href="../../services/chatbot/" class="active">Чат-бот для бизнеса</a>
+          <a href="../../services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="../../niches/restaurants/">Рестораны</a>
+          <a href="../../niches/beauty/">Салоны красоты</a>
+          <a href="../../niches/clinic/">Медицина</a>
+          <a href="../../niches/fitness/">Фитнес</a>
+          <a href="../../niches/saas/">IT и SaaS</a>
+          <a href="../../niches/ecommerce-fashion/">E-commerce</a>
+          <a href="../../niches/realestate/">Недвижимость</a>
+          <a href="../../niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../cases/">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="../../cases/werent/">WeRent — Content Machine</a>
+          <a href="../../cases/tennispoint/">Tennis Point — бот новинок</a>
+          <a href="../../cases/4room/">4room.studio — три AI-системы</a>
+          <a href="../../cases/studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="../../cases/">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../blog/">Блог</a>
+        <div class="nav-dropdown">
+          <a href="../../blog/ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="../../blog/content-factory/">Контент-завод</a>
+          <a href="../../blog/midjourney-business/">Midjourney для бизнеса</a>
+          <a href="../../blog/prompt-engineering/">Prompt Engineering</a>
+          <a href="../../blog/n8n-vs-make/">n8n vs Make</a>
+          <a href="../../blog/seo-ai-2026/">SEO и AI 2026</a>
+          <a href="../../blog/">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../pricing/">Цены</a><a href="../../contacts/">Контакты</a>
+      </div>
+      <div class="nav-item">
+        <a href="../../about/">О нас</a>
+      </div>
+      <a href="../../contacts/" class="header-cta">Обсудить проект</a>
+
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="../../services/smm/" class="header-pill">01 · SMM</a>
+    <a href="../../services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="../../services/direct/" class="header-pill">03 · Директ</a>
+    <a href="../../services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="../../services/video/" class="header-pill">05 · Видео</a>
+    <a href="../../services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="../../services/seo/" class="header-pill">07 · SEO</a>
+    <a href="../../services/chatbot/" class="header-pill active">08 · Чат-бот</a>
+    <a href="../../services/full-package/" class="header-pill">09 · Комплекс</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-meta">THNKFOR.ME · Услуги · Автоматизация</div>
+  <div class="hero-grid">
+    <h1 class="hero-h1">
+      Чат-бот<br>для бизнеса:<br>клиенты<br>записываются<br><span>сами</span>
+    </h1>
+    <div class="hero-right">
+      <p class="hero-desc">
+        AI-бот в Telegram и WhatsApp принимает запись, берёт предоплату и напоминает о визите —
+        <strong>круглосуточно, без участия администратора.</strong>
+        Запуск за 7 дней.
+      </p>
+      <div class="hero-badges">
+        <span class="hero-badge">Работает 24/7</span>
+        <span class="hero-badge">Запуск за 7 дней</span>
+        <span class="hero-badge">−40% отмен</span>
+      </div>
+      <div class="hero-actions">
+        <a href="../../contacts/" class="btn btn-accent btn-lg">Запустить бота</a>
+        <a href="#pricing" class="btn btn-outline-light btn-lg">Смотреть тарифы</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1: ABOUT -->
+<section class="section section-dark">
+  <div class="section-label">// 01 · Что это</div>
+  <h2 class="section-h2">Не просто бот — полноценный<br>AI-администратор для вашего бизнеса</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Обычный чат-бот отвечает на FAQ и умолкает. Наш AI-бот ведёт клиента от первого сообщения до повторного визита (часть нашей <a href="/services/automation/" class="internal-link">системы автоматизации</a>) — и делает это персонально, как живой менеджер.</p>
+      <p>Клиент пишет в Telegram или WhatsApp в любое время дня и ночи. Бот мгновенно отвечает, уточняет удобное время, предлагает свободные слоты, принимает предоплату и подтверждает запись — особенно популярно у <a href="/niches/beauty/" class="internal-link">салонов красоты</a>. За день до визита — автоматическое напоминание. Если клиент не приходил 3 месяца — бот сам напишет с предложением вернуться. Подробнее о производстве контента — в нашем <a href="/blog/content-factory/" class="internal-link">контент-заводе</a>.</p>
+      <p>Вы получаете инструмент, который работает, пока вы спите, не берёт выходных и не болеет. Интегрируется с <a href="../../services/reputation/" style="color:#FF3B00;border-bottom:1px solid rgba(255,59,0,.3);">управлением репутацией</a> и <a href="../../services/smm/" style="color:#FF3B00;border-bottom:1px solid rgba(255,59,0,.3);">SMM</a>.</p>
+    </div>
+    <div class="about-checks">
+      <div class="about-check">Принимает запись без участия администратора</div>
+      <div class="about-check">Работает в Telegram, WhatsApp и Instagram одновременно</div>
+      <div class="about-check">Интегрируется с вашей CRM или yclients</div>
+      <div class="about-check">Запускается за 7 дней под ключ</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: FUNCTIONS -->
+<section class="section section-dark" style="padding-top:0;">
+  <div class="section-label">// 02 · Функции</div>
+  <h2 class="section-h2">8 задач, которые бот решает<br>вместо вашего администратора</h2>
+  <div class="fn-grid">
+    <div class="fn-card">
+      <div class="fn-num">01_</div>
+      <div class="fn-title">Принимает запись 24/7</div>
+      <div class="fn-desc">Клиент пишет в любое время — бот показывает свободные слоты, помогает выбрать услугу и мастера, фиксирует запись. Без звонков, без ожидания.</div>
+    </div>
+    <div class="fn-card">
+      <div class="fn-num">02_</div>
+      <div class="fn-title">Берёт предоплату</div>
+      <div class="fn-desc">Интегрируется с платёжной системой и собирает депозит при записи. Клиент с оплатой отменяет в 4 раза реже.</div>
+    </div>
+    <div class="fn-card">
+      <div class="fn-num">03_</div>
+      <div class="fn-title">Напоминает о визите</div>
+      <div class="fn-desc">За 24 часа и за 2 часа до записи клиент получает персональное напоминание. Процент «забытых» визитов падает на 40%.</div>
+    </div>
+    <div class="fn-card">
+      <div class="fn-num">04_</div>
+      <div class="fn-title">Реактивирует клиентов</div>
+      <div class="fn-desc">Бот сам пишет клиентам, которые не приходили 1–3 месяца. Без спама, персонально. Возвращает 15–25% ушедших.</div>
+    </div>
+    <div class="fn-card">
+      <div class="fn-num">05_</div>
+      <div class="fn-title">Отвечает на вопросы</div>
+      <div class="fn-desc">Цены, адрес, парковка, что взять с собой — бот отвечает мгновенно, без участия сотрудников.</div>
+    </div>
+    <div class="fn-card">
+      <div class="fn-num">06_</div>
+      <div class="fn-title">Отвечает на отзывы</div>
+      <div class="fn-desc">AI формирует персональные ответы на отзывы в Яндекс Картах, 2ГИС и Google — в вашем стиле, за минуту.</div>
+    </div>
+    <div class="fn-card">
+      <div class="fn-num">07_</div>
+      <div class="fn-title">Telegram и WhatsApp</div>
+      <div class="fn-desc">Клиент пишет туда, где удобно. Все сообщения из разных каналов в одном окне для команды.</div>
+    </div>
+    <div class="fn-card">
+      <div class="fn-num">08_</div>
+      <div class="fn-title">Поздравляет с ДР</div>
+      <div class="fn-desc">Бот знает дни рождения клиентов и отправляет персональное поздравление с промокодом — автоматически, каждый день.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: HOW IT WORKS -->
+<section class="section section-white">
+  <div class="section-label">// 03 · Как это работает</div>
+  <h2 class="section-h2">Три шага до<br>работающего бота</h2>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">01_</div>
+      <div class="step-days">Дни 1–2</div>
+      <div class="step-title">Аудит и настройка</div>
+      <div class="step-desc">Изучаем ваш бизнес: услуги, цены, расписание, частые вопросы. Настраиваем сценарии под вашу нишу. Никаких технических знаний от вас не требуется.</div>
+    </div>
+    <div class="step-card" style="background:#F8F8F8;">
+      <div class="step-num">02_</div>
+      <div class="step-days">Дни 3–5</div>
+      <div class="step-title">Интеграция</div>
+      <div class="step-desc">Подключаем бота к Telegram и WhatsApp, интегрируем с вашей системой записи (yclients, СБИС, Google Календарь или любая CRM). Тестируем все сценарии.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">03_</div>
+      <div class="step-days">Дни 6–7</div>
+      <div class="step-title">Запуск и обучение</div>
+      <div class="step-desc">Запускаем бота, проводим тест-запись, обучаем вашу команду работать с панелью управления. Первые 30 дней — на связи и мониторим.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: NICHES -->
+<section class="section">
+  <div class="section-label">// 04 · Ниши</div>
+  <h2 class="section-h2">Чат-бот работает в любом<br>бизнесе, где есть запись клиентов</h2>
+  <div class="niches-grid">
+    <div class="niche-card">
+      <div class="niche-title">Салоны красоты и beauty</div>
+      <div class="niche-desc">Запись к мастеру, предоплата, напоминания, реактивация через <a href="../../niches/beauty/" style="color:#FF3B00;">Telegram бот</a></div>
+    </div>
+    <div class="niche-card">
+      <div class="niche-title">Фитнес и йога</div>
+      <div class="niche-desc">Запись на тренировки, продление абонементов, уведомления об изменениях расписания</div>
+    </div>
+    <div class="niche-card">
+      <div class="niche-title">Стоматология и медицина</div>
+      <div class="niche-desc">Запись к врачу, напоминания о приёме, уведомления о готовности результатов</div>
+    </div>
+    <div class="niche-card">
+      <div class="niche-title">Рестораны и кафе</div>
+      <div class="niche-desc">Бронирование столиков, подтверждение, ответы на отзывы в <a href="../../niches/restaurants/" style="color:#FF3B00;">Яндекс Картах</a></div>
+    </div>
+    <div class="niche-card">
+      <div class="niche-title">Барбершопы</div>
+      <div class="niche-desc">Онлайн-запись к мастеру, повторные визиты, программа лояльности</div>
+    </div>
+    <div class="niche-card">
+      <div class="niche-title">Ветеринария</div>
+      <div class="niche-desc">Запись на приём, напоминания о вакцинации и профилактике</div>
+    </div>
+    <div class="niche-card">
+      <div class="niche-title">Клининг и услуги на дому</div>
+      <div class="niche-desc">Приём заявок, подтверждение визита, обратная связь</div>
+    </div>
+    <div class="niche-card">
+      <div class="niche-title">Образование</div>
+      <div class="niche-desc">Запись на пробный урок, напоминания о занятиях, оплата курсов</div>
+    </div>
+  </div>
+  <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#aaa;letter-spacing:.06em;margin-top:16px;">Смотреть <a href="../../niches/" style="color:#FF3B00;border-bottom:1px solid rgba(255,59,0,.3);">все ниши →</a></p>
+</section>
+
+<!-- SECTION 5: RESULTS -->
+<section class="section section-dark">
+  <div class="section-label">// 05 · Результаты</div>
+  <h2 class="section-h2">Что меняется<br>после запуска бота</h2>
+  <div class="metrics-row">
+    <div class="metric-card">
+      <div class="metric-val">−40%</div>
+      <div class="metric-desc">отмен и неявок</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-val">+30%</div>
+      <div class="metric-desc">повторных визитов</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-val">×3</div>
+      <div class="metric-desc">быстрее обработка</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-val">24/7</div>
+      <div class="metric-desc">приём заявок</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-val">7 дней</div>
+      <div class="metric-desc">срок запуска</div>
+    </div>
+  </div>
+  <div class="quote-block">
+    <div class="quote-text">«После запуска бота количество отмен в нашем салоне упало с 28% до 11%. Клиенты стали реже забывать о записи, а администратор освободился для живого общения с гостями.»</div>
+    <div class="quote-author">— Владелец салона красоты, Москва</div>
+  </div>
+</section>
+
+<!-- SECTION 6: PRICING -->
+<section class="section section-white" id="pricing">
+  <div class="section-label">// 06 · Тарифы</div>
+  <h2 class="section-h2">Выберите<br>подходящий пакет</h2>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div>
+        <div class="pricing-label">Тариф</div>
+        <div class="pricing-name">Старт</div>
+      </div>
+      <div class="pricing-price">25 000 ₽</div>
+      <div class="pricing-features">
+        <div class="pricing-feature">Telegram или WhatsApp (один канал)</div>
+        <div class="pricing-feature">Запись + напоминания</div>
+        <div class="pricing-feature">Ответы на FAQ (до 20 вопросов)</div>
+        <div class="pricing-feature">Интеграция с Google Календарём</div>
+        <div class="pricing-feature">Техподдержка 30 дней</div>
+      </div>
+      <div class="pricing-note">Обслуживание: от 5 000 ₽/мес</div>
+      <a href="../../contacts/" class="btn btn-outline" style="margin-top:8px;">Выбрать →</a>
+    </div>
+    <div class="pricing-card featured">
+      <div>
+        <div class="pricing-label" style="color:#FF3B00;">Популярный</div>
+        <div class="pricing-name">Стандарт</div>
+      </div>
+      <div class="pricing-price">45 000 ₽</div>
+      <div class="pricing-features">
+        <div class="pricing-feature">Telegram + WhatsApp одновременно</div>
+        <div class="pricing-feature">Запись + напоминания + реактивация</div>
+        <div class="pricing-feature">Ответы на отзывы (Яндекс, 2ГИС, Google)</div>
+        <div class="pricing-feature">Интеграция с yclients или CRM</div>
+        <div class="pricing-feature">Аналитика и отчёты</div>
+        <div class="pricing-feature">Техподдержка 60 дней</div>
+      </div>
+      <div class="pricing-note">Обслуживание: от 5 000 ₽/мес</div>
+      <a href="../../contacts/" class="btn btn-accent" style="margin-top:8px;">Выбрать →</a>
+    </div>
+    <div class="pricing-card">
+      <div>
+        <div class="pricing-label">Тариф</div>
+        <div class="pricing-name">Про</div>
+      </div>
+      <div class="pricing-price">75 000 ₽</div>
+      <div class="pricing-features">
+        <div class="pricing-feature">Все функции Стандарта</div>
+        <div class="pricing-feature">Instagram Direct + ВКонтакте</div>
+        <div class="pricing-feature">Персональные сценарии под нишу</div>
+        <div class="pricing-feature">Поздравления с днём рождения</div>
+        <div class="pricing-feature">Программа лояльности (баллы, скидки)</div>
+        <div class="pricing-feature">Техподдержка 90 дней + приоритет</div>
+      </div>
+      <div class="pricing-note">Обслуживание: от 5 000 ₽/мес</div>
+      <a href="../../contacts/" class="btn btn-outline" style="margin-top:8px;">Выбрать →</a>
+    </div>
+  </div>
+  <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#aaa;letter-spacing:.06em;margin-top:20px;">Все цены на услуги → <a href="../../pricing/" style="color:#FF3B00;border-bottom:1px solid rgba(255,59,0,.3);">thnkfor.me/pricing</a></p>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="section-label">// 07 · FAQ</div>
+  <h2 class="section-h2">Отвечаем на вопросы<br>о чат-ботах</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">Сколько стоит чат-бот для бизнеса?</div>
+      <div class="faq-a">Стоимость зависит от набора функций и каналов. Базовый бот (Telegram + запись + напоминания) — от 25 000 ₽ за разработку и запуск. Ежемесячное обслуживание — от 5 000 ₽. Рассчитаем точную стоимость под вашу задачу на бесплатной консультации.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Как быстро запускается бот?</div>
+      <div class="faq-a">Стандартный срок — 7 рабочих дней от старта до первой живой записи. Сложные интеграции с нестандартными CRM могут занять до 14 дней.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Нужно ли разбираться в технологиях?</div>
+      <div class="faq-a">Нет. Вы получаете готовый инструмент с простой панелью управления. Мы обучаем вашу команду за 1–2 часа и остаёмся на связи первые 30 дней.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Бот работает с моей системой записи (yclients, СБИС)?</div>
+      <div class="faq-a">Да, интегрируемся с yclients, СБИС, Google Календарём, Битрикс24, amoCRM и большинством популярных CRM. Уточните вашу систему — скажем точно.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Что если клиент напишет что-то нестандартное?</div>
+      <div class="faq-a">Бот обрабатывает типовые сценарии. Если вопрос выходит за рамки — бот вежливо переключает на живого сотрудника. Ни один клиент не остаётся без ответа.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Можно ли добавить бота в WhatsApp?</div>
+      <div class="faq-a">Да. Работаем через официальный WhatsApp Business API. Для подключения потребуется верифицированный номер бизнеса — поможем оформить.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Как бот реактивирует ушедших клиентов?</div>
+      <div class="faq-a">Бот анализирует базу записей и автоматически пишет клиентам, которые не приходили N недель (вы задаёте период). Сообщение персональное — с именем клиента и релевантным предложением. Без массовой рассылки, без спама.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-bar">
+  <h2>Запустите бота<br><span>за 7 дней</span></h2>
+  <div class="cta-buttons">
+    <a href="../../contacts/" class="btn btn-accent btn-lg">Получить консультацию</a>
+    <a href="https://t.me/anastasiia_thinkfor" class="btn btn-outline-light btn-lg">Написать в Telegram</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="../../" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="../../services/smm/">SMM и ведение соцсетей</a>
+        <a href="../../services/targeting/">Таргетированная реклама</a>
+        <a href="../../services/direct/">Яндекс Директ</a>
+        <a href="../../services/content-machine/">Контент завод</a>
+        <a href="../../services/video/">Видеопроизводство</a>
+        <a href="../../services/reputation/">Управление репутацией</a>
+        <a href="../../services/seo/">Продвижение в поиске</a>
+        <a href="../../services/chatbot/" class="active">Чат-бот для бизнеса</a>
+        <a href="../../services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="../../niches/restaurants/">Рестораны</a>
+        <a href="../../niches/beauty/">Салоны красоты</a>
+        <a href="../../niches/clinic/">Медицина</a>
+        <a href="../../niches/fitness/">Фитнес</a>
+        <a href="../../niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="../../niches/saas/">IT и SaaS</a>
+        <a href="../../niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="../../about/">О нас</a>
+        <a href="../../cases/">Кейсы</a>
+        <a href="../../blog/">Блог</a>
+        <a href="../../pricing/">Цены</a>
+        <a href="../../contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

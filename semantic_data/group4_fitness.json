@@ -1,0 +1,1124 @@
+[
+  {
+    "niche": "Фитнес-клубы",
+    "category": "Фитнес",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "смм для фитнес клуба",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 2,
+        "results_count": "~8 результатов"
+      },
+      {
+        "query": "продвижение фитнес клуба в соцсетях",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~8 результатов"
+      },
+      {
+        "query": "контент для фитнес клуба инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "раскрутка тренажерного зала ВКонтакте",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "таргетированная реклама для фитнес клуба",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "crm для фитнес клуба автоматизация записи",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~6 результатов"
+      },
+      {
+        "query": "онлайн запись фитнес клуб программа",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "чат-бот для тренажерного зала автоматизация",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~5 результатов"
+      },
+      {
+        "query": "автоматизация абонементов фитнес клуб",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": null
+      },
+      {
+        "query": "маркетинг для фитнеса",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 16,
+        "results_count": "~8 результатов"
+      },
+      {
+        "query": "агентство для фитнес клуба",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 6,
+        "results_count": null
+      },
+      {
+        "query": "интернет маркетинг для спортивного клуба",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "смм для фитнес клуба продвижение социальные сети",
+        "position": 1,
+        "url": "https://www.1cbit.ru/blog/prodvizhenie-fitnes-kluba-v-sots-setyakh/",
+        "domain": "1cbit.ru",
+        "title": "Продвижение фитнес-клуба в соц сетях",
+        "description": "Статья о стратегиях продвижения фитнес-клуба в социальных сетях",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для фитнес клуба продвижение социальные сети",
+        "position": 2,
+        "url": "https://soldimarketing.ru/prodvizhenie-v-internete/prodvizhenie-fitnes-kluba/",
+        "domain": "soldimarketing.ru",
+        "title": "Продвижение фитнес-клуба: стратегии для привлечения клиентов",
+        "description": "Эффективные стратегии продвижения фитнес-клуба в интернете",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для фитнес клуба продвижение социальные сети",
+        "position": 3,
+        "url": "https://smm-agentstvo.ru/blog/smm-dlia-fitnes-klubov/",
+        "domain": "smm-agentstvo.ru",
+        "title": "Эффективные стратегии smm для фитнес-клубов: увеличивайте клиентскую базу и продвигайте свои услуги",
+        "description": "SMM агентство в Москве предлагает услуги продвижения фитнес-клубов в социальных сетях. Опыт с 2008 года, более 100 проектов.",
+        "pages_count": "~10 страниц на сайте (блог + услуги)"
+      },
+      {
+        "query_used": "смм для фитнес клуба продвижение социальные сети",
+        "position": 4,
+        "url": "https://inmediaagency.ru/prodvizhenie-fitnes-kluba",
+        "domain": "inmediaagency.ru",
+        "title": "Продвижение фитнес-клуба в Москве: SMM, реклама, сайт и заявки | INMEDIA",
+        "description": "Полный цикл продвижения фитнес-клуба: SMM, контекстная реклама, сайт, контент-маркетинг",
+        "pages_count": "~8 страниц (услуги + кейсы)"
+      },
+      {
+        "query_used": "смм для фитнес клуба продвижение социальные сети",
+        "position": 5,
+        "url": "https://inmediaagency.ru/smm-dlya-fitnes-kluba",
+        "domain": "inmediaagency.ru",
+        "title": "SMM для фитнес-клуба в Москве — контент, заявки и продвижение | INMEDIA",
+        "description": "SMM-продвижение фитнес-клубов под ключ: контент, таргет, аналитика",
+        "pages_count": "~8 страниц (услуги + кейсы)"
+      },
+      {
+        "query_used": "смм для фитнес клуба продвижение социальные сети",
+        "position": 6,
+        "url": "https://www.apptask.ru/blog/smm-dlia-fitnes-klubov",
+        "domain": "apptask.ru",
+        "title": "Эффективные стратегии smm для фитнес-клубов: увеличьте привлечение клиентов",
+        "description": "Статья о SMM-стратегиях для фитнес-клубов",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для фитнес клуба продвижение социальные сети",
+        "position": 7,
+        "url": "https://seo-kompaniya.ru/blog/smm-dlia-fitnes-klubov/",
+        "domain": "seo-kompaniya.ru",
+        "title": "Эффективное smm для фитнес-клубов: продвижение и привлечение клиентов",
+        "description": "Статья о продвижении фитнес-клубов в соцсетях",
+        "pages_count": null
+      },
+      {
+        "query_used": "смм для фитнес клуба продвижение социальные сети",
+        "position": 8,
+        "url": "https://ios-apps.ru/blog/smm-dlia-fitnes-klubov/",
+        "domain": "ios-apps.ru",
+        "title": "Эффективные стратегии smm для фитнес-клубов: как привлечь больше клиентов",
+        "description": "Стратегии SMM для привлечения клиентов в фитнес-клуб",
+        "pages_count": null
+      },
+      {
+        "query_used": "crm для фитнес клуба автоматизация записи",
+        "position": 1,
+        "url": "https://fitbase.io/",
+        "domain": "fitbase.io",
+        "title": "CRM для фитнеса | Fitbase | Автоматизация работы фитнес-клуба",
+        "description": "Мобильное приложение и CRM для автоматизации фитнес-бизнеса: привлечение клиентов, удержание, рост продаж и продлений. Интеграция с СКУД.",
+        "pages_count": "~15 страниц (главная, тарифы, блог, обновления)"
+      },
+      {
+        "query_used": "crm для фитнес клуба автоматизация записи",
+        "position": 2,
+        "url": "https://sportpriority.com/crm/",
+        "domain": "sportpriority.com",
+        "title": "CRM для фитнес-клуба и спортивной студии — учёт клиентов, расписание, абонементы | Sport Priority",
+        "description": "CRM для фитнес-клуба автоматизирует рутинные задачи: запись, работа с клиентами, контроль абонементов, оплаты, уведомления, аналитика, расписание.",
+        "pages_count": "~20 страниц (по нишам + документация)"
+      },
+      {
+        "query_used": "crm для фитнес клуба автоматизация записи",
+        "position": 3,
+        "url": "https://www.fitness1c.ru/crm-fitness-clubs",
+        "domain": "fitness1c.ru",
+        "title": "CRM система для фитнес-клуба | 1С:Фитнес клуб",
+        "description": "Программа автоматизации всех бизнес-процессов: онлайн-запись, виджет расписания, интеграции с сервисами и внешним оборудованием.",
+        "pages_count": "~30 страниц (функции, тарифы, вебинары, франшизы, обучение)"
+      },
+      {
+        "query_used": "crm для фитнес клуба автоматизация записи",
+        "position": 4,
+        "url": "https://www.yclients.com/fitness",
+        "domain": "yclients.com",
+        "title": "CRM для фитнес-клуба – программа для автоматизации и приложение для спортзалов YCLIENTS",
+        "description": "YCLIENTS — сервис для автоматизации фитнес-клубов и тренажерных залов. Онлайн-запись, уведомления, управление персоналом, складской и финансовый учёт.",
+        "pages_count": "~50+ страниц (маркетплейс, база знаний, онлайн-запись, приложение)"
+      },
+      {
+        "query_used": "crm для фитнес клуба автоматизация записи",
+        "position": 5,
+        "url": "https://impulsecrm.ru/sportklub",
+        "domain": "impulsecrm.ru",
+        "title": "CRM для фитнес клуба",
+        "description": "Запись на тренировки, покупка и продление абонементов, личный кабинет в мобильном телефоне с push-уведомлениями.",
+        "pages_count": "~25 страниц (по нишам + блог)"
+      },
+      {
+        "query_used": "crm для фитнес клуба автоматизация записи",
+        "position": 6,
+        "url": "https://smart-retail.app/industry/fitness-automation/",
+        "domain": "smart-retail.app",
+        "title": "Автоматизация фитнес-клуба: CRM для фитнеса Киоски Камеры хранения",
+        "description": "Комплексная автоматизация фитнес-клуба: CRM, киоски самообслуживания, камеры хранения.",
+        "pages_count": null
+      },
+      {
+        "query_used": "чат-бот для тренажерного зала автоматизация",
+        "position": 1,
+        "url": "https://secrets.tbank.ru/blogi-kompanij/chat-boty-pomogayut-prodavat-sportivnye-abonementy/",
+        "domain": "secrets.tbank.ru",
+        "title": "Чат-бот для фитнес-клуба: как автоматизировать продажи абонементов 24/7",
+        "description": "Как чат-боты помогают продавать спортивные абонементы, записывать на занятия и отвечать на вопросы 24/7.",
+        "pages_count": null
+      },
+      {
+        "query_used": "чат-бот для тренажерного зала автоматизация",
+        "position": 2,
+        "url": "https://itmagic.spb.ru/uslugi/chat-bot-dlya-fitnes-kluba-v-moskve.html",
+        "domain": "itmagic.spb.ru",
+        "title": "Чат-бот для фитнес-клуба: автоматизация записи на тренировки и абонементы в Москве | ITMagic.SPB",
+        "description": "Разработка чат-бота для фитнес-клуба: автоматизация записи, продажа абонементов, напоминания.",
+        "pages_count": null
+      },
+      {
+        "query_used": "чат-бот для тренажерного зала автоматизация",
+        "position": 3,
+        "url": "https://lubava.ai/zakazat-chat-bota/dlya-fitnes-kluba/",
+        "domain": "lubava.ai",
+        "title": "Чат-бот для фитнес-клуба - заказать ИИ бота для спортзала под ключ",
+        "description": "Разработка ИИ чат-бота для фитнес-клуба и спортзала под ключ.",
+        "pages_count": null
+      },
+      {
+        "query_used": "чат-бот для тренажерного зала автоматизация",
+        "position": 4,
+        "url": "https://chatim.io/chat-bot-fitness-club",
+        "domain": "chatim.io",
+        "title": "Чат-бот для фитнес-клуба, школы танцев, йога-студии - Чатим",
+        "description": "Чат-бот для фитнес-клуба, школы танцев и йога-студии: автоматизация записи, напоминания, продажи абонементов.",
+        "pages_count": null
+      },
+      {
+        "query_used": "чат-бот для тренажерного зала автоматизация",
+        "position": 5,
+        "url": "https://gymcoach.ru/fitness-bot/",
+        "domain": "gymcoach.ru",
+        "title": "Тренер-бот: фитнес программы тренировок",
+        "description": "Telegram-бот с фитнес-программами тренировок для спортзала.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинг для фитнес клуба агентство продвижение",
+        "position": 1,
+        "url": "https://direct.yandex.ru/base/articles/reklama-fitnes-kluba-i-basseyna-effektivnye-sposoby-prodvizheniya",
+        "domain": "direct.yandex.ru",
+        "title": "Реклама фитнес-клуба и бассейна: как начать продвижение и привлечь клиентов",
+        "description": "Яндекс Директ: эффективные способы продвижения фитнес-клуба и бассейна.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинг для фитнес клуба агентство продвижение",
+        "position": 2,
+        "url": "https://fitbase.io/blog/prodvizhenie-fitnes-kluba",
+        "domain": "fitbase.io",
+        "title": "Продвижение фитнес-клуба: 11 кейсов по привлечению клиентов",
+        "description": "11 рабочих кейсов по продвижению фитнес-клуба и привлечению клиентов.",
+        "pages_count": "~15 страниц"
+      },
+      {
+        "query_used": "маркетинг для фитнес клуба агентство продвижение",
+        "position": 3,
+        "url": "https://collaba.digital/fitness_club_marketing_agency",
+        "domain": "collaba.digital",
+        "title": "Маркетинговое агентство для фитнес-клубов | Collaba Digital",
+        "description": "Комплексный интернет-маркетинг для фитнес-клубов: заявки, продажи, от 90 000 руб/мес.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинг для фитнес клуба агентство продвижение",
+        "position": 4,
+        "url": "https://fitness-marketing.ru/",
+        "domain": "fitness-marketing.ru",
+        "title": "Агентство фитнес-маркетинга",
+        "description": "Специализированное агентство по маркетингу для фитнес-индустрии.",
+        "pages_count": null
+      }
+    ]
+  },
+  {
+    "niche": "Йога-студии",
+    "category": "Фитнес",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "SMM для студии йоги",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~7 результатов"
+      },
+      {
+        "query": "продвижение йога студии в инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~7 результатов"
+      },
+      {
+        "query": "контент план для студии йоги соцсети",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "ведение соцсетей йога студии",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "таргетированная реклама для йога студии",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~8 результатов"
+      },
+      {
+        "query": "CRM автоматизация йога студии онлайн запись",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~7 результатов"
+      },
+      {
+        "query": "онлайн запись на йогу программа",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "чат-бот для йога студии telegram",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~8 результатов"
+      },
+      {
+        "query": "автоматизация записи на йогу",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "маркетинг для йога студии",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": null
+      },
+      {
+        "query": "продвижение студии йоги в интернете",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~7 результатов"
+      },
+      {
+        "query": "агентство для йога студии реклама",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "продвижение йога студии в инстаграм SMM контент",
+        "position": 1,
+        "url": "https://www.youtube.com/watch?v=X8tdp5uYJGw",
+        "domain": "youtube.com",
+        "title": "Продвижение студии йоги. Как продвигать занятия йоги в facebook и instagram. SMM для студии йоги",
+        "description": "Видео о стратегиях продвижения студии йоги в Facebook и Instagram.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение йога студии в инстаграм SMM контент",
+        "position": 2,
+        "url": "https://t4ka.ru/statya-prodvizhenie-joga-studii",
+        "domain": "t4ka.ru",
+        "title": "Продвижение йога-студии. Что важно учесть в рекламе",
+        "description": "Статья о ключевых аспектах продвижения и рекламы йога-студии.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение йога студии в инстаграм SMM контент",
+        "position": 3,
+        "url": "https://freelance.youdo.com/st6251295/",
+        "domain": "freelance.youdo.com",
+        "title": "Smm продвижение студии йоги недорого | YouDo",
+        "description": "18 объявлений от специалистов по SMM продвижению студии йоги.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение йога студии в инстаграм SMM контент",
+        "position": 4,
+        "url": "https://smmplanner.com/blog/gotovyi-kontient-plan-dlia-sotssietiei-studii-ioghi/",
+        "domain": "smmplanner.com",
+        "title": "Готовый контент-план для соцсетей студии йоги",
+        "description": "Готовый контент-план с темами постов для ведения соцсетей студии йоги.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение йога студии в инстаграм SMM контент",
+        "position": 5,
+        "url": "https://yogajournal.ru/blogs/dyshi-studiya/kak-razvivat-instagram-yoga-studii/",
+        "domain": "yogajournal.ru",
+        "title": "Как развивать Instagram йога студии?",
+        "description": "Советы по развитию Instagram-аккаунта студии йоги: контент, вовлечённость, аудитория.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение йога студии в инстаграм SMM контент",
+        "position": 6,
+        "url": "https://yudena.agency/smm-prodvizhenie-studii-yogi-kak-privlech-novyh-klientov-i-razvit-soobschestvo",
+        "domain": "yudena.agency",
+        "title": "SMM для студии йоги: как привлечь клиентов и развить сообщество",
+        "description": "Как с помощью SMM привлечь клиентов в студию йоги и построить лояльное сообщество.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение йога студии в инстаграм SMM контент",
+        "position": 7,
+        "url": "https://fantasyjam.ru/portfolio-item/кейс-smm-продвижения-студии-йоги/",
+        "domain": "fantasyjam.ru",
+        "title": "Кейс SMM продвижения студии Йоги - Fantasy Jam",
+        "description": "Кейс: результаты SMM-продвижения студии йоги агентством Fantasy Jam.",
+        "pages_count": null
+      },
+      {
+        "query_used": "таргетированная реклама йога студия привлечение клиентов",
+        "position": 1,
+        "url": "https://blog.tochkadostupa.pro/kejs-prodvizhenie-joga-studii-vkontakte/",
+        "domain": "blog.tochkadostupa.pro",
+        "title": "Продвижение йога-студии ВКонтакте | Кейс по таргетированной рекламе",
+        "description": "Кейс по таргетированной рекламе в ВКонтакте для йога-студии.",
+        "pages_count": null
+      },
+      {
+        "query_used": "таргетированная реклама йога студия привлечение клиентов",
+        "position": 2,
+        "url": "https://t4ka.ru/statya-prodvizhenie-joga-studii",
+        "domain": "t4ka.ru",
+        "title": "Продвижение йога-студии. Что важно учесть в рекламе",
+        "description": "Что нужно учесть при запуске рекламы йога-студии: целевая аудитория, бюджет, каналы.",
+        "pages_count": null
+      },
+      {
+        "query_used": "таргетированная реклама йога студия привлечение клиентов",
+        "position": 3,
+        "url": "https://tenchat.ru/media/159498-keys-studiya-yogi",
+        "domain": "tenchat.ru",
+        "title": "Кейс «Студия йоги» — Оксана Филатова на TenChat.ru",
+        "description": "Кейс по продвижению студии йоги с помощью таргетированной рекламы.",
+        "pages_count": null
+      },
+      {
+        "query_used": "таргетированная реклама йога студия привлечение клиентов",
+        "position": 4,
+        "url": "https://vkusnovk.ru/target-dlya-studii-jogi",
+        "domain": "vkusnovk.ru",
+        "title": "Продвижение студии йоги через таргетированную рекламу",
+        "description": "Инструкция по запуску таргетированной рекламы для студии йоги.",
+        "pages_count": null
+      },
+      {
+        "query_used": "таргетированная реклама йога студия привлечение клиентов",
+        "position": 5,
+        "url": "https://yoga-academy.online/blog/kak-prepodavatelyu-jogi-pravilno-sebya-reklamirovat",
+        "domain": "yoga-academy.online",
+        "title": "Как преподавателю йоги правильно себя рекламировать: с чего начать продвижение студии йоги",
+        "description": "Пошаговый гайд по рекламе и продвижению студии йоги и центра йоги.",
+        "pages_count": null
+      },
+      {
+        "query_used": "таргетированная реклама йога студия привлечение клиентов",
+        "position": 6,
+        "url": "https://raish.ru/blog/idei-dlya-reklamy-yogi-top-20-ceplyayushchih-prodayushchih-primerov",
+        "domain": "raish.ru",
+        "title": "Идеи для рекламы йоги: ТОП-20 цепляющих продающих примеров",
+        "description": "20 идей для рекламных объявлений и постов для студии йоги.",
+        "pages_count": null
+      },
+      {
+        "query_used": "таргетированная реклама йога студия привлечение клиентов",
+        "position": 7,
+        "url": "https://vechkasov.ru/blog/articles/13-metodov-prodvizheniya-yoga-studii-sayt-reklama-sots-seti",
+        "domain": "vechkasov.ru",
+        "title": "13 методов продвижения йога-студии: сайт, реклама, соц. сети",
+        "description": "13 эффективных методов продвижения йога-студии: от сайта до соцсетей.",
+        "pages_count": null
+      },
+      {
+        "query_used": "CRM автоматизация йога студии онлайн запись",
+        "position": 1,
+        "url": "https://sportpriority.com/yoga/crm/",
+        "domain": "sportpriority.com",
+        "title": "CRM для йога-студии - онлайн-запись, продажи и автоматизация",
+        "description": "CRM для йога-студии: онлайн-запись, контроль абонементов, расписание, аналитика, уведомления.",
+        "pages_count": "~20 страниц"
+      },
+      {
+        "query_used": "CRM автоматизация йога студии онлайн запись",
+        "position": 2,
+        "url": "https://sportpriority.com/yoga/",
+        "domain": "sportpriority.com",
+        "title": "CRM для йога-студий — онлайн-запись и мобильное приложение | Sport Priority",
+        "description": "Полная автоматизация йога-студии: CRM, мобильное приложение, онлайн-запись.",
+        "pages_count": "~20 страниц"
+      },
+      {
+        "query_used": "CRM автоматизация йога студии онлайн запись",
+        "position": 3,
+        "url": "https://mobifitness.ru/yoga/",
+        "domain": "mobifitness.ru",
+        "title": "CRM для студии йоги: программа для управления студией йоги",
+        "description": "CRM-программа для студии йоги: онлайн-запись, оплата, учёт клиентов.",
+        "pages_count": null
+      },
+      {
+        "query_used": "CRM автоматизация йога студии онлайн запись",
+        "position": 4,
+        "url": "https://www.fitness1c.ru/yoga",
+        "domain": "fitness1c.ru",
+        "title": "CRM для йога-студии – программа для автоматизации и управления | 1С:Фитнес клуб",
+        "description": "Программа автоматизации для йога-студии с CRM, управлением персоналом и финансовым учётом.",
+        "pages_count": "~30 страниц"
+      },
+      {
+        "query_used": "CRM автоматизация йога студии онлайн запись",
+        "position": 5,
+        "url": "https://rubitime.ru/studiya-jogi",
+        "domain": "rubitime.ru",
+        "title": "Приложение для студии йоги: программа для записи от Rubitime",
+        "description": "Приложение для онлайн-записи и управления студией йоги.",
+        "pages_count": null
+      },
+      {
+        "query_used": "CRM автоматизация йога студии онлайн запись",
+        "position": 6,
+        "url": "https://www.yclients.com/yoga_studio",
+        "domain": "yclients.com",
+        "title": "CRM для студии йоги – приложение для онлайн-записи и автоматизация YCLIENTS",
+        "description": "YCLIENTS: онлайн-запись на йогу, управление расписанием, абонементы, уведомления.",
+        "pages_count": "~50+ страниц"
+      },
+      {
+        "query_used": "CRM автоматизация йога студии онлайн запись",
+        "position": 7,
+        "url": "https://impulsecrm.ru/studija-jogi",
+        "domain": "impulsecrm.ru",
+        "title": "CRM для студии йоги",
+        "description": "Запись на занятия, покупка абонементов, личный кабинет клиента с push-уведомлениями.",
+        "pages_count": "~25 страниц"
+      }
+    ]
+  },
+  {
+    "niche": "Пилатес-студии",
+    "category": "Фитнес",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "SMM для пилатес студии",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": "~5 результатов"
+      },
+      {
+        "query": "продвижение пилатес студии в соцсетях",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~5 результатов"
+      },
+      {
+        "query": "контент для пилатес студии инстаграм",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "реклама студии пилатеса таргет ВКонтакте",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "привлечение клиентов в студию пилатеса",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 1,
+        "results_count": null
+      },
+      {
+        "query": "CRM для пилатес студии автоматизация",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~6 результатов"
+      },
+      {
+        "query": "онлайн запись на пилатес программа",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "чат-бот для пилатес студии telegram",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~6 результатов"
+      },
+      {
+        "query": "автоматизация записи пилатес",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "маркетинг для студии пилатеса",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~7 результатов"
+      },
+      {
+        "query": "продвижение студии пилатеса в интернете",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "агентство для пилатес студии реклама SMM",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "SMM для пилатес студии продвижение социальные сети реклама",
+        "position": 1,
+        "url": "https://fedproject.tsu.ru/internet",
+        "domain": "fedproject.tsu.ru",
+        "title": "SMM-старт: продвижение в социальных сетях",
+        "description": "Образовательный проект по SMM-продвижению в социальных сетях.",
+        "pages_count": null
+      },
+      {
+        "query_used": "SMM для пилатес студии продвижение социальные сети реклама",
+        "position": 2,
+        "url": "https://ads.vk.ru/insights/chto-takoe-smm",
+        "domain": "ads.vk.ru",
+        "title": "SMM: что это, методы и способы продвижения в социальных сетях",
+        "description": "Гайд по SMM от ВКонтакте: методы, инструменты и оценка эффективности.",
+        "pages_count": null
+      },
+      {
+        "query_used": "SMM для пилатес студии продвижение социальные сети реклама",
+        "position": 3,
+        "url": "https://t4ka.ru/smm-agency-promotion",
+        "domain": "t4ka.ru",
+        "title": "SMM агентство - заказать услугу продвижения и раскрутки в социальных сетях",
+        "description": "SMM под ключ от агентства t4ka: кейсы, цены, тарифы.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинг для пилатес студии агентство реклама",
+        "position": 1,
+        "url": "https://vc.ru/marketing/1703324-chek-list-dlya-uspeshnogo-razvitiya-studii-pilatesa-klyuchevye-shagi-k-uspehu",
+        "domain": "vc.ru",
+        "title": "Чек-лист для успешного развития студии пилатеса: ключевые шаги к успеху — vc.ru",
+        "description": "Чек-лист по маркетингу и развитию студии пилатеса: партнёрства, реклама, соцсети.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинг для пилатес студии агентство реклама",
+        "position": 2,
+        "url": "https://impulsecrm.ru/news/kak-otkryt-sobstvennuyu-studiyu-pilatesa",
+        "domain": "impulsecrm.ru",
+        "title": "Бизнес план студии пилатеса: пошаговое руководство и секреты успешного старта",
+        "description": "Как открыть студию пилатеса: бизнес-план, расчёты, маркетинг.",
+        "pages_count": "~25 страниц"
+      },
+      {
+        "query_used": "маркетинг для пилатес студии агентство реклама",
+        "position": 3,
+        "url": "https://klnv.ru/blog/marketing-prodvizhenie-studii-pilatesa",
+        "domain": "klnv.ru",
+        "title": "Маркетинг и продвижение студии пилатеса. Полное руководство",
+        "description": "Полное руководство по маркетингу и продвижению студии пилатеса: инструменты, каналы, бюджет.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинг для пилатес студии агентство реклама",
+        "position": 4,
+        "url": "https://cmdigital.ru/catalog/marketing-po-podpiske/tpost/sph808akb1-marketing-dlya-studii-pilatesa",
+        "domain": "cmdigital.ru",
+        "title": "Кейс маркетинговой стратегии для студии Пилатеса | Cheapmedia",
+        "description": "Кейс разработки маркетинговой стратегии для студии пилатеса.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинг для пилатес студии агентство реклама",
+        "position": 5,
+        "url": "https://status-digital.ru/cases/targetirovannaya-reklama-dlya-studii-pilatesa/",
+        "domain": "status-digital.ru",
+        "title": "Таргетированная реклама для студии пилатеса - Status Digital",
+        "description": "Кейс по таргетированной рекламе для студии пилатеса в соцсетях.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинг для пилатес студии агентство реклама",
+        "position": 6,
+        "url": "https://vechkasov.ru/blog/articles/13-metodov-prodvizheniya-studii-pilatesa-sayt-reklama-sots-seti",
+        "domain": "vechkasov.ru",
+        "title": "13 методов продвижения студии пилатеса: сайт, реклама, соц. сети",
+        "description": "13 рабочих методов продвижения студии пилатеса.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация пилатес студии CRM онлайн запись чат-бот",
+        "position": 1,
+        "url": "https://rubitime.ru/crm-dlya-studii-pilatesa",
+        "domain": "rubitime.ru",
+        "title": "CRM для студии пилатеса: автоматизация записи и учета клиентов для развития бизнеса",
+        "description": "CRM для пилатеса: онлайн-запись, учёт клиентов, автоматические уведомления.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация пилатес студии CRM онлайн запись чат-бот",
+        "position": 2,
+        "url": "https://mobifitness.ru/pilates",
+        "domain": "mobifitness.ru",
+        "title": "CRM для студии пилатеса",
+        "description": "Мобильная CRM-система для пилатес-студии: запись, оплата, управление клиентами.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация пилатес студии CRM онлайн запись чат-бот",
+        "position": 3,
+        "url": "https://mobifitness.ru/crm/",
+        "domain": "mobifitness.ru",
+        "title": "CRM для фитнес-клуба: система управления для фитнеса",
+        "description": "Профессиональная CRM для фитнес и спортивных студий: онлайн-запись, оплата, аналитика.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация пилатес студии CRM онлайн запись чат-бот",
+        "position": 4,
+        "url": "https://www.yclients.com/yoga_studio",
+        "domain": "yclients.com",
+        "title": "CRM для студии йоги – приложение для онлайн-записи и автоматизация YCLIENTS",
+        "description": "YCLIENTS: чат-боты для записи, напоминания, приглашения на повторные занятия.",
+        "pages_count": "~50+ страниц"
+      },
+      {
+        "query_used": "автоматизация пилатес студии CRM онлайн запись чат-бот",
+        "position": 5,
+        "url": "https://fightcrm.ru/studios/pilates",
+        "domain": "fightcrm.ru",
+        "title": "CRM для студии пилатеса — учёт без лишнего | FightCRM",
+        "description": "Онлайн-запись, заморозки абонементов и напоминания о продлениях для студии пилатеса.",
+        "pages_count": null
+      }
+    ]
+  },
+  {
+    "niche": "Кроссфит-боксы",
+    "category": "Фитнес",
+    "priority": "P0",
+    "queries": [
+      {
+        "query": "SMM для кроссфит бокса",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~6 результатов"
+      },
+      {
+        "query": "продвижение кроссфит клуба в соцсетях",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~6 результатов"
+      },
+      {
+        "query": "контент для кроссфит бокса инстаграм ВКонтакте",
+        "cluster": "SMM/контент",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "реклама кроссфит зала таргет",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "привлечение клиентов в кроссфит бокс",
+        "cluster": "Продвижение/реклама",
+        "type": "SMM",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "CRM для кроссфит центра автоматизация",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~8 результатов"
+      },
+      {
+        "query": "онлайн запись кроссфит программа управление",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "чат-бот для кроссфит зала telegram",
+        "cluster": "Боты/AI",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~8 результатов"
+      },
+      {
+        "query": "автоматизация кроссфит бокса абонементы",
+        "cluster": "Автоматизация/CRM",
+        "type": "Автоматизация",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "маркетинг для кроссфита",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": "~5 результатов"
+      },
+      {
+        "query": "продвижение кроссфит бокса в интернете",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      },
+      {
+        "query": "агентство для кроссфит клуба реклама",
+        "cluster": "Продвижение/реклама",
+        "type": "Общий",
+        "search_engines": "Yandex, Google",
+        "frequency": 0,
+        "results_count": null
+      }
+    ],
+    "competitors": [
+      {
+        "query_used": "продвижение кроссфит бокса SMM реклама привлечение клиентов",
+        "position": 1,
+        "url": "https://www.sostav.ru/blogs/275100/69665",
+        "domain": "sostav.ru",
+        "title": "SMM и контент для фитнес-клуба во ВКонтакте: как привлекать клиентов без агрессивной рекламы",
+        "description": "Как создавать контент для фитнес-клуба во ВКонтакте, чтобы привлекать клиентов органически.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение кроссфит бокса SMM реклама привлечение клиентов",
+        "position": 2,
+        "url": "https://welovesmm.com.ua/blog/smm-for-fitness/",
+        "domain": "welovesmm.com.ua",
+        "title": "SMM для фитнеса — Продвижение фитнес-тренера или клуба в Facebook и Instagram",
+        "description": "Как продвигать фитнес-тренера или клуб через SMM в Facebook и Instagram.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение кроссфит бокса SMM реклама привлечение клиентов",
+        "position": 3,
+        "url": "https://inmediaagency.ru/prodvizhenie-fitnes-kluba",
+        "domain": "inmediaagency.ru",
+        "title": "Продвижение фитнес-клуба в Москве: SMM, реклама, сайт и заявки | INMEDIA",
+        "description": "Комплексное продвижение фитнес-клуба: SMM, контекстная реклама, сайт, заявки.",
+        "pages_count": "~8 страниц"
+      },
+      {
+        "query_used": "продвижение кроссфит бокса SMM реклама привлечение клиентов",
+        "position": 4,
+        "url": "https://www.apptask.ru/blog/smm-dlia-fitnes-klubov",
+        "domain": "apptask.ru",
+        "title": "Эффективные стратегии smm для фитнес-клубов: увеличьте привлечение клиентов",
+        "description": "Стратегии SMM для привлечения клиентов в фитнес-клубы.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение кроссфит бокса SMM реклама привлечение клиентов",
+        "position": 5,
+        "url": "https://seo-kompaniya.ru/blog/smm-dlia-fitnes-klubov/",
+        "domain": "seo-kompaniya.ru",
+        "title": "Эффективное smm для фитнес-клубов: продвижение и привлечение клиентов",
+        "description": "Стратегии SMM-продвижения для фитнес-клубов.",
+        "pages_count": null
+      },
+      {
+        "query_used": "продвижение кроссфит бокса SMM реклама привлечение клиентов",
+        "position": 6,
+        "url": "https://seo-kompaniya.ru/blog/smm-dlia-sportivnyx-klubov/",
+        "domain": "seo-kompaniya.ru",
+        "title": "Smm для спортивных клубов: привлечение клиентов и развитие",
+        "description": "SMM для спортивных клубов: инструменты, стратегии, привлечение клиентов.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация кроссфит бокса CRM система управления",
+        "position": 1,
+        "url": "https://fitbase.io/trainer",
+        "domain": "fitbase.io",
+        "title": "CRM для тренажерного зала | Fitbase | Программа для автоматизации бизнеса",
+        "description": "Fitbase — CRM для тренажерного зала и кроссфит-центра: управление клиентами, расписание, аналитика.",
+        "pages_count": "~15 страниц"
+      },
+      {
+        "query_used": "автоматизация кроссфит бокса CRM система управления",
+        "position": 2,
+        "url": "https://www.bitrix24.ru/journal/crm_dlya_fitnes_klubov/",
+        "domain": "bitrix24.ru",
+        "title": "Преимущества CRM системы для автоматизации фитнес-клуба",
+        "description": "Как CRM Битрикс24 помогает автоматизировать управление фитнес-клубом.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация кроссфит бокса CRM система управления",
+        "position": 3,
+        "url": "https://mobifitness.ru/crm/",
+        "domain": "mobifitness.ru",
+        "title": "CRM для фитнес-клуба: система управления для фитнеса",
+        "description": "Профессиональная CRM для фитнеса и спортивных студий.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация кроссфит бокса CRM система управления",
+        "position": 4,
+        "url": "https://www.fitness1c.ru/crossfit",
+        "domain": "fitness1c.ru",
+        "title": "CRM для кроссфит-центра | Программное обеспечение по управлению, учету и контролю клиентов клубов и студий кроссфита - 1С:Фитнес клуб",
+        "description": "Специализированная CRM для кроссфит-центров: учёт посещений, управление персоналом, финансовый учёт.",
+        "pages_count": "~30 страниц"
+      },
+      {
+        "query_used": "автоматизация кроссфит бокса CRM система управления",
+        "position": 5,
+        "url": "https://www.yclients.com/fitness",
+        "domain": "yclients.com",
+        "title": "CRM для фитнес-клуба – программа для автоматизации и приложение для спортзалов YCLIENTS",
+        "description": "YCLIENTS для кроссфит-залов: онлайн-запись, расписание, управление персоналом.",
+        "pages_count": "~50+ страниц"
+      },
+      {
+        "query_used": "автоматизация кроссфит бокса CRM система управления",
+        "position": 6,
+        "url": "https://vc.ru/marketing/2061003-top-9-crm-sistem-dlya-fitnes-klubov-v-2025",
+        "domain": "vc.ru",
+        "title": "ТОП-9 CRM-систем для фитнес-клубов в 2025: автоматизация, аналитика и маркетинг",
+        "description": "Обзор 9 лучших CRM-систем для фитнес-клубов: автоматизация, аналитика, маркетинг.",
+        "pages_count": null
+      },
+      {
+        "query_used": "автоматизация кроссфит бокса CRM система управления",
+        "position": 7,
+        "url": "https://impulsecrm.ru/krossfit",
+        "domain": "impulsecrm.ru",
+        "title": "CRM-система для кроссфит-центров",
+        "description": "ImpulseCRM для кроссфит-центров: подключение только нужных модулей, личный кабинет клиента, онлайн-расписание.",
+        "pages_count": "~25 страниц"
+      },
+      {
+        "query_used": "маркетинг кроссфит бокса реклама агентство",
+        "position": 1,
+        "url": "https://direct.yandex.ru/base/articles/reklama-fitnes-kluba-i-basseyna-effektivnye-sposoby-prodvizheniya",
+        "domain": "direct.yandex.ru",
+        "title": "Реклама фитнес-клуба и бассейна: как начать продвижение и привлечь клиентов",
+        "description": "Яндекс Директ: эффективные способы рекламы и продвижения фитнес-клуба.",
+        "pages_count": null
+      },
+      {
+        "query_used": "маркетинг кроссфит бокса реклама агентство",
+        "position": 2,
+        "url": "https://collaba.digital/sport_marketing_agency",
+        "domain": "collaba.digital",
+        "title": "Агентство спортивного маркетинга — Collaba",
+        "description": "Специализированное агентство спортивного маркетинга Collaba Digital.",
+        "pages_count": null
+      },
+      {
+        "query_used": "чат-бот для пилатес кроссфит студии telegram автоматизация",
+        "position": 1,
+        "url": "https://www.sostav.ru/blogs/284979/70505/",
+        "domain": "sostav.ru",
+        "title": "Кейс: чат-бот для фитнес-студии. Как применять Telegram-бота для бизнеса в сфере услуг",
+        "description": "Кейс применения Telegram-бота в фитнес-студии: автоматизация записи, продажи, коммуникация.",
+        "pages_count": null
+      },
+      {
+        "query_used": "чат-бот для пилатес кроссфит студии telegram автоматизация",
+        "position": 2,
+        "url": "https://secrets.tbank.ru/blogi-kompanij/chat-boty-pomogayut-prodavat-sportivnye-abonementy/",
+        "domain": "secrets.tbank.ru",
+        "title": "Чат-бот для фитнес-клуба: как автоматизировать продажи абонементов 24/7",
+        "description": "Как чат-бот автоматизирует продажи абонементов в фитнес-клубах и кроссфит-центрах.",
+        "pages_count": null
+      },
+      {
+        "query_used": "чат-бот для пилатес кроссфит студии telegram автоматизация",
+        "position": 3,
+        "url": "https://impulsecrm.ru/news/crm-chat-bot-avtomatizaciya-obscheniya",
+        "domain": "impulsecrm.ru",
+        "title": "CRM система, чат бот: автоматизация общения и маркетинга в фитнес-клубе",
+        "description": "Как CRM и чат-бот автоматизируют общение с клиентами в фитнес-клубе.",
+        "pages_count": "~25 страниц"
+      },
+      {
+        "query_used": "чат-бот для пилатес кроссфит студии telegram автоматизация",
+        "position": 4,
+        "url": "https://contez.ru/dlya/chatbot-fitnes/",
+        "domain": "contez.ru",
+        "title": "Чат-бот для фитнес-клуба — запись на тренировки через Telegram | Contez",
+        "description": "Разработка чат-бота для фитнес-клуба: запись, уведомления, продажи абонементов через Telegram.",
+        "pages_count": null
+      },
+      {
+        "query_used": "чат-бот для пилатес кроссфит студии telegram автоматизация",
+        "position": 5,
+        "url": "https://vc.ru/services/1512998-ii-fitnes-bot-v-telegram-za-2-chasa-i-kak-ego-mozhno-primenit-v-fitnes-centrah",
+        "domain": "vc.ru",
+        "title": "ИИ фитнес-бот в Telegram за 2 часа и как его можно применить в фитнес-центрах — vc.ru",
+        "description": "Как создать ИИ-бот для фитнес-центра в Telegram и применить его для кроссфита.",
+        "pages_count": null
+      }
+    ]
+  }
+]

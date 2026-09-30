@@ -1,0 +1,2667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THNKFOR.ME — Brand Guide v1.0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ─── RESET ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #F8F8F8;
+  color: #0A0A0A;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── ANIMATIONS ─────────────────────────────────────────── */
+@keyframes b-blink {
+  0%, 49%  { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes hero-loop {
+  0%      { opacity: 1; }
+  25%     { opacity: 1; }
+  30%     { opacity: 0; width: 0; letter-spacing: 0; padding: 0; overflow: hidden; }
+  60%     { opacity: 0; width: 0; }
+  95%     { opacity: 1; width: auto; }
+  100%    { opacity: 1; }
+}
+
+@keyframes forme-rise {
+  0%   { opacity: 0; transform: translateY(16px); }
+  55%  { opacity: 0; transform: translateY(16px); }
+  75%  { opacity: 1; transform: translateY(0); }
+  95%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(16px); }
+}
+
+@keyframes forme-rise-fast {
+  0%   { opacity: 0; transform: translateY(16px); }
+  30%  { opacity: 0; transform: translateY(16px); }
+  42%  { opacity: 1; transform: translateY(0); }
+  95%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(16px); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── STICKY HEADER ──────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #F8F8F8;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 56px;
+}
+.header-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: #0A0A0A;
+  user-select: none;
+}
+.header-cursor {
+  color: #FF3B00;
+  animation: b-blink 1s infinite;
+  display: inline-block;
+}
+.header-dot { color: #FF3B00; }
+.header-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: #0A0A0A;
+  color: #F8F8F8;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header-badge::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #FF3B00;
+  border-radius: 50%;
+}
+
+/* ─── SECTION LABEL ──────────────────────────────────────── */
+.section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(0,0,0,0.1);
+}
+
+/* ─── SECTION WRAPPER ────────────────────────────────────── */
+.section {
+  padding: 80px 48px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.section:last-of-type { border-bottom: none; }
+
+/* ─── COVER ──────────────────────────────────────────────── */
+.cover {
+  background: #0A0A0A;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 80px 48px;
+  position: relative;
+  overflow: hidden;
+}
+.cover-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 80px;
+  display: flex;
+  gap: 32px;
+}
+.cover-hero {
+  position: relative;
+  margin-bottom: 48px;
+}
+.cover-think {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+}
+.cover-thnk {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: clamp(80px, 12vw, 140px);
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  color: #FFFFFF;
+  display: flex;
+  align-items: baseline;
+}
+.letter-i {
+  display: inline-block;
+  color: #FFFFFF;
+  animation: hero-loop 6s infinite;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.cover-forme {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: clamp(80px, 12vw, 140px);
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  color: #FFFFFF;
+  animation: forme-rise 6s infinite;
+}
+.cover-forme-dot { color: #FF3B00; }
+.cover-cursor-lg {
+  color: #FF3B00;
+  animation: b-blink 1s infinite;
+}
+.cover-manifesto {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #666666;
+  max-width: 480px;
+  line-height: 1.55;
+  margin-bottom: 64px;
+}
+.cover-manifesto strong { color: #FFFFFF; font-weight: 500; }
+.cover-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 32px;
+}
+.cover-footer-left {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: #666666;
+  letter-spacing: 0.04em;
+}
+.cover-footer-right {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+}
+.cover-noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* ─── LOGO SECTION ───────────────────────────────────────── */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 48px;
+}
+.logo-tile {
+  background: #F8F8F8;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 200px;
+  justify-content: space-between;
+  position: relative;
+}
+.logo-tile.on-dark    { background: #0A0A0A; }
+.logo-tile.on-accent  { background: #FF3B00; }
+.logo-tile.on-light   { background: #FFFFFF; }
+
+.logo-display {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: -0.03em;
+  color: #0A0A0A;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.logo-display .cursor  { color: #FF3B00; animation: b-blink 1s infinite; }
+.logo-display .dot     { color: #FF3B00; }
+.logo-display.white    { color: #FFFFFF; }
+.logo-display.white .dot { color: #FFFFFF; }
+
+.logo-gap {
+  display: inline-block;
+  width: 0.35em;
+  height: 1em;
+  vertical-align: text-bottom;
+}
+.logo-underscore {
+  display: inline-block;
+  width: 0.6em;
+  border-bottom: 2px dotted #0A0A0A;
+  vertical-align: text-bottom;
+  height: 0.8em;
+}
+
+.logo-stacked { flex-direction: column; gap: 0; line-height: 1; }
+.logo-stacked .logo-display {
+  font-size: 26px;
+  display: block;
+  flex: none;
+  align-items: unset;
+}
+
+.tile-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+}
+.tile-tag.on-dark   { color: rgba(255,255,255,0.4); }
+.tile-tag.on-accent { color: rgba(255,255,255,0.7); }
+
+.logo-rules-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.logo-rule {
+  border: 1px solid rgba(0,0,0,0.1);
+  background: #FFFFFF;
+  padding: 24px;
+}
+.logo-rule h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 12px;
+}
+.logo-rule p {
+  font-size: 14px;
+  color: #0A0A0A;
+  line-height: 1.5;
+}
+.logo-rule p strong { color: #FF3B00; }
+
+.dont-logo {
+  position: relative;
+  opacity: 0.5;
+}
+.dont-strike {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #FF3B00;
+  transform: rotate(-8deg);
+}
+
+/* ─── COLOUR SECTION ─────────────────────────────────────── */
+.colour-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border: 1px solid rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+.colour-swatch {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.swatch-block {
+  height: 160px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.swatch-info {
+  padding: 20px 20px 24px;
+  background: #FFFFFF;
+  flex: 1;
+}
+.swatch-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.swatch-hex {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #666666;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+.swatch-role {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 8px;
+}
+.swatch-usage {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.4;
+}
+.colour-do-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.colour-example {
+  border: 1px solid rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.colour-example-preview {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.colour-example-label {
+  padding: 12px 16px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: #FFFFFF;
+  color: #666666;
+}
+
+/* ─── TYPOGRAPHY SECTION ─────────────────────────────────── */
+.type-scale { display: flex; flex-direction: column; gap: 0; }
+.type-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  align-items: start;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.type-row:first-child { padding-top: 0; }
+.type-meta { padding-top: 4px; }
+.type-meta-name {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 10px;
+}
+.type-meta-detail {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: #666666;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+}
+.type-display {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: clamp(48px, 8vw, 140px);
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  color: #0A0A0A;
+}
+.type-h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: clamp(36px, 5vw, 60px);
+  letter-spacing: -0.03em;
+  color: #0A0A0A;
+}
+.type-h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #0A0A0A;
+}
+.type-body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #0A0A0A;
+}
+.type-mono {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: #0A0A0A;
+}
+.type-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #0A0A0A;
+}
+
+/* ─── MOTION SECTION ─────────────────────────────────────── */
+.motion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 48px;
+}
+.motion-demo {
+  background: #0A0A0A;
+  padding: 64px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+}
+.motion-demo.light { background: #F8F8F8; }
+.motion-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 32px;
+}
+.cursor-demo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  letter-spacing: -0.04em;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.cursor-demo .cur {
+  color: #FF3B00;
+  animation: b-blink 1s infinite;
+  display: inline-block;
+}
+.cursor-demo .dot { color: #FF3B00; }
+
+.hero-anim-demo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  letter-spacing: -0.04em;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+}
+.ha-thnk { display: flex; align-items: baseline; }
+.ha-i {
+  display: inline-block;
+  animation: hero-loop 6s infinite;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ha-forme {
+  animation: forme-rise 6s infinite;
+  color: #FFFFFF;
+}
+.ha-forme span { color: #FF3B00; }
+
+.motion-spec {
+  background: #FFFFFF;
+  padding: 32px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.motion-spec table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+}
+.motion-spec th {
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.motion-spec td {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  color: #0A0A0A;
+  vertical-align: top;
+}
+.motion-spec td:first-child { color: #666666; padding-right: 24px; white-space: nowrap; }
+.motion-spec tr:last-child td { border-bottom: none; }
+
+/* ─── COMPONENTS SECTION ─────────────────────────────────── */
+.comp-group { margin-bottom: 64px; }
+.comp-group:last-child { margin-bottom: 0; }
+.comp-group-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Buttons */
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0;
+  padding: 14px 28px;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.btn-primary {
+  background: #0A0A0A;
+  color: #F8F8F8;
+}
+.btn-primary:hover { background: #FF3B00; }
+.btn-accent {
+  background: #FF3B00;
+  color: #FFFFFF;
+}
+.btn-accent:hover { background: #0A0A0A; }
+.btn-outline {
+  background: transparent;
+  color: #0A0A0A;
+  border: 1.5px solid #0A0A0A;
+}
+.btn-outline:hover { background: #0A0A0A; color: #F8F8F8; }
+.btn-ghost {
+  background: transparent;
+  color: #0A0A0A;
+  border: none;
+  border-bottom: 1.5px solid #0A0A0A;
+  padding-left: 0;
+  padding-right: 0;
+}
+.btn-ghost:hover { color: #FF3B00; border-color: #FF3B00; }
+.btn-sm {
+  font-size: 12px;
+  padding: 10px 20px;
+}
+.btn-lg {
+  font-size: 17px;
+  padding: 18px 36px;
+}
+.btn-note {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: #666666;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Microbadges */
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 0;
+}
+.badge::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.badge-system {
+  background: #0A0A0A;
+  color: #F8F8F8;
+}
+.badge-system::before { background: #FF3B00; }
+.badge-accent {
+  background: #FF3B00;
+  color: #FFFFFF;
+}
+.badge-accent::before { background: #FFFFFF; }
+.badge-outline {
+  background: transparent;
+  color: #0A0A0A;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+.badge-outline::before { background: #666666; }
+.badge-muted {
+  background: rgba(0,0,0,0.06);
+  color: #666666;
+}
+.badge-muted::before { background: #666666; }
+
+/* Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.card {
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 32px;
+  background: #FFFFFF;
+  transition: border-color 0.2s;
+  cursor: default;
+}
+.card:hover { border-color: #FF3B00; }
+.card-accent {
+  background: #FF3B00;
+  color: #FFFFFF;
+  border: none;
+}
+.card-dark {
+  background: #0A0A0A;
+  color: #FFFFFF;
+  border: none;
+}
+.card-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #666666;
+}
+.card-accent .card-label { color: rgba(255,255,255,0.7); }
+.card-dark .card-label   { color: rgba(255,255,255,0.4); }
+.card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.card p { font-size: 14px; line-height: 1.5; color: #666666; }
+.card-accent p { color: rgba(255,255,255,0.85); }
+.card-dark p   { color: rgba(255,255,255,0.6); }
+
+/* Service module cards */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.service-card {
+  background: #F8F8F8;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.service-card-alt { background: #FFFFFF; }
+.service-icon {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 24px;
+  color: #FF3B00;
+}
+.service-card h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+.service-card p { font-size: 14px; color: #666666; line-height: 1.5; }
+.service-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin-top: auto;
+}
+
+/* System topbar */
+.topbar-example {
+  background: #0A0A0A;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.topbar-logo-small {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+.topbar-logo-small .cur { color: #FF3B00; animation: b-blink 1s infinite; }
+.topbar-logo-small .dot { color: #FF3B00; }
+.topbar-nav {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.topbar-nav li a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.topbar-nav li a:hover { color: #FFFFFF; }
+.topbar-nav li a.active { color: #FFFFFF; }
+
+/* ─── VOICE & TONE ───────────────────────────────────────── */
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 48px;
+}
+.voice-tile {
+  background: #FFFFFF;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 180px;
+}
+.voice-tile.dark-bg    { background: #0A0A0A; }
+.voice-tile.accent-bg  { background: #FF3B00; }
+.voice-tile.muted-bg   { background: #F8F8F8; }
+.voice-tile-lang {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+}
+.voice-tile.dark-bg .voice-tile-lang   { color: rgba(255,255,255,0.35); }
+.voice-tile.accent-bg .voice-tile-lang { color: rgba(255,255,255,0.6); }
+.voice-tile-quote {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #0A0A0A;
+}
+.voice-tile.dark-bg .voice-tile-quote   { color: #FFFFFF; }
+.voice-tile.accent-bg .voice-tile-quote { color: #FFFFFF; }
+.voice-tile-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: #666666;
+  letter-spacing: 0.04em;
+  margin-top: auto;
+}
+.voice-tile.dark-bg .voice-tile-sub   { color: rgba(255,255,255,0.35); }
+.voice-tile.accent-bg .voice-tile-sub { color: rgba(255,255,255,0.6); }
+
+.voice-principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.voice-principle {
+  border-left: 3px solid #FF3B00;
+  padding-left: 20px;
+}
+.voice-principle h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0A0A0A;
+  margin-bottom: 8px;
+}
+.voice-principle p { font-size: 14px; color: #666666; line-height: 1.5; }
+
+/* ─── SOCIAL MEDIA ───────────────────────────────────────── */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.insta-tile {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.insta-light  { background: #F8F8F8; border: 1px solid rgba(0,0,0,0.1); }
+.insta-accent { background: #FF3B00; }
+.insta-dark   { background: #0A0A0A; }
+.insta-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: auto;
+}
+.insta-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+}
+.insta-light  .insta-badge { background: #0A0A0A; color: #F8F8F8; }
+.insta-accent .insta-badge { background: #FFFFFF; color: #FF3B00; }
+.insta-dark   .insta-badge { background: #FF3B00; color: #FFFFFF; }
+.insta-logo-small {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+.insta-light  .insta-logo-small { color: #666666; }
+.insta-accent .insta-logo-small { color: rgba(255,255,255,0.7); }
+.insta-dark   .insta-logo-small { color: rgba(255,255,255,0.35); }
+.insta-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 0;
+}
+.insta-headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: clamp(22px, 3vw, 28px);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.insta-light  .insta-headline { color: #0A0A0A; }
+.insta-accent .insta-headline { color: #FFFFFF; }
+.insta-dark   .insta-headline { color: #FFFFFF; }
+.insta-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  margin-top: 12px;
+}
+.insta-light  .insta-sub { color: #666666; }
+.insta-accent .insta-sub { color: rgba(255,255,255,0.75); }
+.insta-dark   .insta-sub { color: rgba(255,255,255,0.4); }
+.insta-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid;
+  padding-top: 16px;
+}
+.insta-light  .insta-footer { border-color: rgba(0,0,0,0.1); }
+.insta-accent .insta-footer { border-color: rgba(255,255,255,0.25); }
+.insta-dark   .insta-footer { border-color: rgba(255,255,255,0.1); }
+.insta-footer-brand {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.insta-light  .insta-footer-brand { color: #0A0A0A; }
+.insta-accent .insta-footer-brand { color: rgba(255,255,255,0.8); }
+.insta-dark   .insta-footer-brand { color: rgba(255,255,255,0.4); }
+.insta-footer-dot {
+  width: 4px; height: 4px; border-radius: 50%;
+}
+.insta-light  .insta-footer-dot { background: #FF3B00; }
+.insta-accent .insta-footer-dot { background: #FFFFFF; }
+.insta-dark   .insta-footer-dot { background: #FF3B00; }
+.insta-accent-stripe {
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 40%;
+  height: 3px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* ─── SPACING SECTION ────────────────────────────────────── */
+.spacing-scale {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+.spacing-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  align-items: center;
+  gap: 20px;
+}
+.spacing-bar-wrap {
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+.spacing-bar {
+  height: 100%;
+  background: #0A0A0A;
+  max-width: 100%;
+}
+.spacing-bar.orange { background: #FF3B00; }
+.spacing-val {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: #666666;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+.spacing-name {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: #0A0A0A;
+  letter-spacing: 0.04em;
+}
+
+.grid-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.grid-spec-card {
+  border: 1px solid rgba(0,0,0,0.1);
+  background: #FFFFFF;
+  padding: 28px 28px 32px;
+}
+.grid-spec-card h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.grid-spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-size: 14px;
+}
+.grid-spec-row:last-child { border-bottom: none; }
+.grid-spec-row span:first-child { color: #666666; }
+.grid-spec-row span:last-child {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #0A0A0A;
+}
+
+/* ─── DO / DON'T SECTION ────────────────────────────────── */
+.dodont-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.dodont-item {
+  background: #FFFFFF;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.dodont-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dodont-marker {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+}
+.do-marker   { background: #0A0A0A; color: #F8F8F8; }
+.dont-marker { background: #FF3B00; color: #FFFFFF; }
+.dodont-rule-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: #0A0A0A;
+}
+.dodont-rule-desc {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.5;
+}
+.dodont-demo {
+  margin-top: 8px;
+}
+.do-example {
+  border: 2px solid #0A0A0A;
+  padding: 20px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  background: #0A0A0A;
+  color: #F8F8F8;
+}
+.dont-example {
+  border: 2px solid rgba(255,59,0,0.3);
+  padding: 20px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  background: rgba(255,59,0,0.04);
+  color: #666666;
+  text-decoration: line-through;
+  text-decoration-color: #FF3B00;
+  text-decoration-thickness: 2px;
+}
+.orange-bg-example {
+  background: #FF3B00;
+  padding: 20px 24px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+/* ─── UTILITIES ──────────────────────────────────────────── */
+.mt-32 { margin-top: 32px; }
+.mt-48 { margin-top: 48px; }
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+.brand-footer {
+  background: #0A0A0A;
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand-footer-left {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+.brand-footer-left .cur { color: #FF3B00; animation: b-blink 1s infinite; }
+.brand-footer-left .dot { color: #FF3B00; }
+.brand-footer-right {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666666;
+  text-align: right;
+  line-height: 1.7;
+}
+</style>
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     STICKY HEADER
+════════════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-logo">THNK<span class="header-cursor">|</span>FOR<span class="header-dot">.</span>ME</div>
+  <div class="header-badge">Brand Guide · v1.0 · 2026</div>
+</header>
+
+<!-- ════════════════════════════════════════════════════════
+     COVER
+════════════════════════════════════════════════════════ -->
+<section class="cover">
+  <div class="cover-noise"></div>
+  <div class="cover-meta">
+    <span>THNKFOR.ME</span>
+    <span>Brand System</span>
+    <span>Version 1.0 — 2026</span>
+    <span>Concept B · Human × Machine</span>
+  </div>
+
+  <div class="cover-hero">
+    <div class="cover-thnk">
+      <span>TH</span><span class="letter-i">I</span><span>NK</span>
+    </div>
+    <div class="cover-forme">
+      FOR<span class="cover-forme-dot">.</span>ME<span class="cover-cursor-lg">|</span>
+    </div>
+  </div>
+
+  <div class="cover-manifesto">
+    <strong>Remove the I. Keep the work.</strong><br><br>
+    THNKFOR.ME is an AI marketing agency built on a single premise: the best work happens when <strong>human strategy</strong> drives <strong>machine execution</strong>. The brand lives at that intersection — precise, direct, and relentlessly useful.
+  </div>
+
+  <div class="cover-footer">
+    <div class="cover-footer-left">
+      Concept B — Human × Machine<br>
+      Formerly and36.studio
+    </div>
+    <div class="cover-footer-right">
+      Marketing built by machines,<br>
+      tuned by humans.
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     01 · LOGO SYSTEM
+════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-label">// 01 · Logo System</div>
+
+  <div class="logo-grid">
+
+    <!-- Variant 1: Cursor -->
+    <div class="logo-tile">
+      <div class="logo-display">
+        THNK<span class="cursor">|</span>FOR<span class="dot">.</span>ME
+      </div>
+      <div class="tile-tag">01 — Primary · Cursor</div>
+    </div>
+
+    <!-- Variant 2: Gap -->
+    <div class="logo-tile on-light">
+      <div class="logo-display">
+        THNK<span class="logo-gap"></span>FOR<span class="dot">.</span>ME
+      </div>
+      <div class="tile-tag">02 — Gap · Missing "I"</div>
+    </div>
+
+    <!-- Variant 3: Placeholder -->
+    <div class="logo-tile">
+      <div class="logo-display">
+        TH<span class="logo-underscore"></span>NK&nbsp;FOR<span class="dot">.</span>ME
+      </div>
+      <div class="tile-tag">03 — Placeholder · Underscore</div>
+    </div>
+
+    <!-- Variant 4: Stacked -->
+    <div class="logo-tile on-light">
+      <div class="logo-stacked">
+        <div class="logo-display" style="font-size:26px; display:block;">THNK</div>
+        <div class="logo-display" style="font-size:26px; display:block;">FOR<span class="dot">.</span>ME</div>
+      </div>
+      <div class="tile-tag">04 — Stacked · 2-line</div>
+    </div>
+
+    <!-- Variant 5: On Accent -->
+    <div class="logo-tile on-accent">
+      <div class="logo-display white">
+        THNK<span style="color:rgba(255,255,255,0.6); animation: b-blink 1s infinite; display:inline-block;">|</span>FOR<span class="dot">.</span>ME
+      </div>
+      <div class="tile-tag on-accent">05 — On Accent · #FF3B00</div>
+    </div>
+
+    <!-- Variant 6: On Dark -->
+    <div class="logo-tile on-dark">
+      <div class="logo-display white">
+        THNK<span class="cursor">|</span>FOR<span class="dot">.</span>ME
+      </div>
+      <div class="tile-tag on-dark">06 — On Dark · #0A0A0A</div>
+    </div>
+
+  </div>
+
+  <!-- Rules -->
+  <div class="logo-rules-grid">
+    <div class="logo-rule">
+      <h4>Clearspace</h4>
+      <p>Minimum clearspace around the logo equals the cap-height of the letter "T". On digital surfaces use <strong>24px</strong> minimum on all sides.</p>
+    </div>
+    <div class="logo-rule">
+      <h4>Minimum size</h4>
+      <p>Digital: <strong>120px wide</strong> minimum. Print: <strong>28mm wide</strong> minimum. Below these sizes switch to the stacked variant or monogram.</p>
+    </div>
+    <div class="logo-rule">
+      <h4>Color rules</h4>
+      <p>The cursor <strong>|</strong> and DOT <strong>.</strong> always appear in <strong>#FF3B00</strong> on light backgrounds. On accent or dark surfaces — white or reduced opacity white.</p>
+    </div>
+  </div>
+
+  <!-- Don'ts -->
+  <div class="section-label" style="margin-bottom:24px;">// Donts</div>
+  <div class="three-col">
+    <div class="logo-rule">
+      <h4>Don't stretch</h4>
+      <p>Never distort the logo proportionally. Width and height must scale together.</p>
+      <div style="margin-top:16px; padding:16px; background:#F8F8F8; transform:scaleX(1.4); transform-origin:left; opacity:0.4; font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:18px; letter-spacing:-0.02em; position:relative;">
+        THNK|FOR.ME
+        <div class="dont-strike"></div>
+      </div>
+    </div>
+    <div class="logo-rule">
+      <h4>Don't recolor the wordmark</h4>
+      <p>The main letterforms stay #0A0A0A or #FFFFFF. Only the cursor and dot use #FF3B00.</p>
+      <div style="margin-top:16px; padding:16px; background:#F8F8F8; font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:18px; letter-spacing:-0.02em; color:#FF3B00; position:relative;">
+        THNKFOR.ME
+        <div class="dont-strike"></div>
+      </div>
+    </div>
+    <div class="logo-rule">
+      <h4>Don't add effects</h4>
+      <p>No drop shadows, gradients, outlines, or textures on the logo mark itself.</p>
+      <div style="margin-top:16px; padding:16px; background:#F8F8F8; font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:18px; letter-spacing:-0.02em; text-shadow:2px 4px 8px rgba(0,0,0,0.3); position:relative; opacity:0.5;">
+        THNK|FOR.ME
+        <div class="dont-strike"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     02 · COLOUR SYSTEM
+════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-label">// 02 · Colour System</div>
+
+  <div class="colour-grid">
+    <div class="colour-swatch">
+      <div class="swatch-block" style="background:#F8F8F8; border-right:1px solid rgba(0,0,0,0.1);"></div>
+      <div class="swatch-info" style="border-right:1px solid rgba(0,0,0,0.06);">
+        <div class="swatch-name">Bone</div>
+        <div class="swatch-hex">#F8F8F8</div>
+        <div class="swatch-role">Primary Background</div>
+        <div class="swatch-usage">Page background, large surface areas, default canvas</div>
+      </div>
+    </div>
+    <div class="colour-swatch">
+      <div class="swatch-block" style="background:#FFFFFF; border-right:1px solid rgba(0,0,0,0.1);"></div>
+      <div class="swatch-info" style="border-right:1px solid rgba(0,0,0,0.06);">
+        <div class="swatch-name">Paper</div>
+        <div class="swatch-hex">#FFFFFF</div>
+        <div class="swatch-role">Surface, Cards</div>
+        <div class="swatch-usage">Card backgrounds, modal surfaces, form inputs, elevated UI</div>
+      </div>
+    </div>
+    <div class="colour-swatch">
+      <div class="swatch-block" style="background:#FF3B00;"></div>
+      <div class="swatch-info" style="border-left:1px solid rgba(0,0,0,0.06); border-right:1px solid rgba(0,0,0,0.06);">
+        <div class="swatch-name">Signal Orange</div>
+        <div class="swatch-hex">#FF3B00</div>
+        <div class="swatch-role">Accent · CTA · Cursor</div>
+        <div class="swatch-usage">CTAs, cursor mark, dots, active states, badges, hover states</div>
+      </div>
+    </div>
+    <div class="colour-swatch">
+      <div class="swatch-block" style="background:#0A0A0A; border-left:1px solid rgba(255,255,255,0.04);"></div>
+      <div class="swatch-info" style="border-left:1px solid rgba(0,0,0,0.06); border-right:1px solid rgba(0,0,0,0.06);">
+        <div class="swatch-name">Machine Black</div>
+        <div class="swatch-hex">#0A0A0A</div>
+        <div class="swatch-role">Ink · Dark UI</div>
+        <div class="swatch-usage">Primary text, dark surfaces, primary buttons, topbar, footer</div>
+      </div>
+    </div>
+    <div class="colour-swatch">
+      <div class="swatch-block" style="background:#666666;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">System Grey</div>
+        <div class="swatch-hex">#666666</div>
+        <div class="swatch-role">Muted Text · Labels</div>
+        <div class="swatch-usage">Secondary text, metadata, captions, disabled states, timestamps</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Colour usage examples -->
+  <div class="section-label" style="margin-bottom:24px; margin-top:48px;">// Usage Examples</div>
+  <div class="colour-do-grid">
+    <div class="colour-example">
+      <div class="colour-example-preview" style="background:#0A0A0A; color:#FF3B00;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:20px; letter-spacing:-0.03em;">THNK<span>|</span>FOR.ME</span>
+      </div>
+      <div class="colour-example-label">Black surface + Signal Orange accent</div>
+    </div>
+    <div class="colour-example">
+      <div class="colour-example-preview" style="background:#F8F8F8; color:#0A0A0A;">
+        <button class="btn btn-primary" style="margin:0;">Get started</button>
+      </div>
+      <div class="colour-example-label">Bone bg + Primary button</div>
+    </div>
+    <div class="colour-example">
+      <div class="colour-example-preview" style="background:#FFFFFF; border-bottom:1px solid rgba(0,0,0,0.1);">
+        <span class="badge badge-system">AI-powered</span>
+        <span style="display:inline-block; width:8px;"></span>
+        <span class="badge badge-accent">New</span>
+      </div>
+      <div class="colour-example-label">Paper surface + Microbadges</div>
+    </div>
+  </div>
+
+  <!-- Don't: orange as large background -->
+  <div class="mt-48" style="border:1px solid rgba(0,0,0,0.1); overflow:hidden;">
+    <div style="background:#FF3B00; padding:32px 36px; display:flex; align-items:center; gap:16px;">
+      <div>
+        <div class="dont-marker" style="display:inline-block; margin-bottom:12px;">Don't</div>
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:16px; color:#FFFFFF; font-weight:500;">Signal Orange is never used as a large background area.</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:rgba(255,255,255,0.6); margin-top:8px; letter-spacing:0.04em;">Use #0A0A0A or #F8F8F8 for large surfaces. Reserve #FF3B00 for elements under ~400px².</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     03 · TYPOGRAPHY
+════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-label">// 03 · Typography</div>
+
+  <div class="type-scale">
+
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="type-meta-name">Display</div>
+        <div class="type-meta-detail">
+          Space Grotesk<br>
+          Weight 500<br>
+          140px<br>
+          -0.05em tracking<br>
+          0.9 line-height
+        </div>
+      </div>
+      <div class="type-display">Think<br>bigger.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="type-meta-name">H1 — Heading 1</div>
+        <div class="type-meta-detail">
+          Space Grotesk<br>
+          Weight 500<br>
+          60px<br>
+          -0.03em tracking
+        </div>
+      </div>
+      <div class="type-h1">Human strategy.<br>Machine execution.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="type-meta-name">H2 — Heading 2</div>
+        <div class="type-meta-detail">
+          Space Grotesk<br>
+          Weight 400<br>
+          32px<br>
+          -0.02em tracking<br>
+          1.15 line-height
+        </div>
+      </div>
+      <div class="type-h2">Remove the I.<br>Keep the work.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="type-meta-name">Body</div>
+        <div class="type-meta-detail">
+          Space Grotesk<br>
+          Weight 400<br>
+          17px<br>
+          1.55 line-height
+        </div>
+      </div>
+      <div class="type-body" style="max-width:560px;">We build marketing systems that run while you think. AI handles distribution, sequencing, and iteration — so your team stays focused on strategy, narrative, and growth. The machine learns your brand. You set the direction.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="type-meta-name">Mono / System</div>
+        <div class="type-meta-detail">
+          IBM Plex Mono<br>
+          Weight 400<br>
+          13px<br>
+          0.04em tracking
+        </div>
+      </div>
+      <div class="type-mono">
+        system.status = "active"<br>
+        agent.mode = "autonomous"<br>
+        last_run = 2026-09-07T09:14:02Z<br>
+        campaigns_live = 12
+      </div>
+    </div>
+
+    <div class="type-row" style="border-bottom:none; padding-bottom:0;">
+      <div class="type-meta">
+        <div class="type-meta-name">Label</div>
+        <div class="type-meta-detail">
+          IBM Plex Mono<br>
+          Weight 400 / 500<br>
+          10px<br>
+          0.14em tracking<br>
+          UPPERCASE
+        </div>
+      </div>
+      <div>
+        <div class="type-label" style="margin-bottom:12px;">// Section label · System text · UI navigation</div>
+        <div class="type-label" style="color:#FF3B00;">— Signal · Status · Active indicator</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Font pairing note -->
+  <div class="mt-48 two-col">
+    <div style="border:1px solid rgba(0,0,0,0.1); background:#FFFFFF; padding:28px;">
+      <div class="type-meta-name" style="margin-bottom:16px; font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:#666666;">Space Grotesk — Human voice</div>
+      <p style="font-size:14px; color:#666666; line-height:1.6;">All storytelling, headlines, body copy, CTAs. Humanist geometry. Warm but structured.</p>
+    </div>
+    <div style="border:1px solid rgba(0,0,0,0.1); background:#FFFFFF; padding:28px;">
+      <div class="type-meta-name" style="margin-bottom:16px; font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:#666666;">IBM Plex Mono — Machine voice</div>
+      <p style="font-size:14px; color:#666666; line-height:1.6;">Labels, system text, metadata, code. Technical clarity. The machine talking back.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     04 · MOTION
+════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-label">// 04 · Motion</div>
+
+  <div class="motion-grid">
+
+    <!-- Cursor blink demo -->
+    <div class="motion-demo">
+      <div class="motion-label">01 — Cursor blink · b-blink</div>
+      <div class="cursor-demo">
+        THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666666; letter-spacing:0.04em;">
+        1s · infinite · step-based<br>
+        0–49% opaque → 50–100% invisible
+      </div>
+    </div>
+
+    <!-- Hero animation demo -->
+    <div class="motion-demo">
+      <div class="motion-label">02 — Hero loop · THINK → THNK + FOR.ME</div>
+      <div class="hero-anim-demo">
+        <div class="ha-thnk">TH<span class="ha-i">I</span>NK</div>
+        <div class="ha-forme">FOR<span>.</span>ME</div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#666666; letter-spacing:0.04em;">
+        6s · infinite · ease-in-out<br>
+        "I" fades at 30% → FOR.ME rises at 55%
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mt-48">
+    <div class="motion-spec">
+      <table>
+        <thead>
+          <tr>
+            <th style="padding-right:32px;">Animation</th>
+            <th style="padding-right:32px;">Keyframes</th>
+            <th style="padding-right:32px;">Duration</th>
+            <th>Timing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>b-blink · cursor</td>
+            <td>0–49% opacity:1 / 50–100% opacity:0</td>
+            <td>1s</td>
+            <td>step-end, infinite</td>
+          </tr>
+          <tr>
+            <td>hero-loop · letter-i</td>
+            <td>0–25% visible → 30–60% opacity:0, width:0 → 95% restore</td>
+            <td>6s</td>
+            <td>ease-in-out, infinite</td>
+          </tr>
+          <tr>
+            <td>forme-rise · FOR.ME</td>
+            <td>0–55% hidden, translateY(16px) → 75% visible, translateY(0)</td>
+            <td>6s</td>
+            <td>ease-out, infinite</td>
+          </tr>
+          <tr>
+            <td>fade-in · content</td>
+            <td>opacity:0, translateY(12px) → opacity:1, translateY(0)</td>
+            <td>0.4s</td>
+            <td>ease-out, once</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="mt-32 three-col">
+    <div style="border:1px solid rgba(0,0,0,0.1); background:#FFFFFF; padding:24px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#666666; margin-bottom:12px;">Easing philosophy</div>
+      <p style="font-size:14px; color:#0A0A0A; line-height:1.5;">Prefer ease-out for entrances. Avoid spring physics — the brand is precise, not bouncy.</p>
+    </div>
+    <div style="border:1px solid rgba(0,0,0,0.1); background:#FFFFFF; padding:24px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#666666; margin-bottom:12px;">Transition speed</div>
+      <p style="font-size:14px; color:#0A0A0A; line-height:1.5;">UI micro-interactions: 150ms. State changes: 200–300ms. Hero sequences: 600ms–6s loops.</p>
+    </div>
+    <div style="border:1px solid rgba(0,0,0,0.1); background:#FFFFFF; padding:24px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#666666; margin-bottom:12px;">Reduced motion</div>
+      <p style="font-size:14px; color:#0A0A0A; line-height:1.5;">Wrap all animations in <code style="font-family:'IBM Plex Mono',monospace; font-size:12px; background:#F8F8F8; padding:1px 4px;">prefers-reduced-motion</code> checks. Cursor blink may stay.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     05 · COMPONENTS
+════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-label">// 05 · Components</div>
+
+  <!-- BUTTONS -->
+  <div class="comp-group">
+    <div class="comp-group-title">Buttons — border-radius: 0 · Brutalist</div>
+    <div class="btn-row">
+      <button class="btn btn-primary">Primary button</button>
+      <button class="btn btn-accent">Accent button</button>
+      <button class="btn btn-outline">Outline button</button>
+      <button class="btn btn-ghost">Ghost button →</button>
+    </div>
+    <span class="btn-note">hover to see state changes</span>
+
+    <div class="mt-32">
+      <div class="comp-group-title" style="border:none; padding:0; margin-bottom:16px;">Sizes</div>
+      <div class="btn-row">
+        <button class="btn btn-primary btn-sm">Small</button>
+        <button class="btn btn-primary">Default</button>
+        <button class="btn btn-primary btn-lg">Large</button>
+      </div>
+    </div>
+
+    <div class="mt-32">
+      <div class="comp-group-title" style="border:none; padding:0; margin-bottom:16px;">With icons / system text</div>
+      <div class="btn-row">
+        <button class="btn btn-primary">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:rgba(248,248,248,0.5); letter-spacing:0.06em;">→</span>
+          Запустить кампанию
+        </button>
+        <button class="btn btn-accent">
+          Get analysis
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:rgba(255,255,255,0.6); letter-spacing:0.06em;">↗</span>
+        </button>
+        <button class="btn btn-outline">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#666666;">AI</span>
+          Generate brief
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MICROBADGES -->
+  <div class="comp-group">
+    <div class="comp-group-title">Microbadges — no border-radius</div>
+    <div class="badge-row">
+      <span class="badge badge-system">AI-powered</span>
+      <span class="badge badge-system">Autonomous</span>
+      <span class="badge badge-system">Live</span>
+      <span class="badge badge-system">v2.4</span>
+    </div>
+    <div class="badge-row">
+      <span class="badge badge-accent">New</span>
+      <span class="badge badge-accent">Beta</span>
+      <span class="badge badge-accent">Hot</span>
+    </div>
+    <div class="badge-row">
+      <span class="badge badge-outline">Strategy</span>
+      <span class="badge badge-outline">Content</span>
+      <span class="badge badge-outline">Automation</span>
+    </div>
+    <div class="badge-row">
+      <span class="badge badge-muted">Archived</span>
+      <span class="badge badge-muted">Draft</span>
+      <span class="badge badge-muted">Paused</span>
+    </div>
+  </div>
+
+  <!-- CARDS -->
+  <div class="comp-group">
+    <div class="comp-group-title">Cards</div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-label">Standard · hover border</div>
+        <h3>Content Strategy</h3>
+        <p>AI-generated content plans calibrated to your audience, tone of voice, and business objectives.</p>
+      </div>
+      <div class="card card-accent">
+        <div class="card-label">Accent · #FF3B00</div>
+        <h3>Get started today</h3>
+        <p>Remove the friction from your marketing stack. Launch in 48 hours.</p>
+      </div>
+      <div class="card card-dark">
+        <div class="card-label">Dark · #0A0A0A</div>
+        <h3>Scale without headcount</h3>
+        <p>Machine execution runs 24/7. Your strategy works while you sleep.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE CARDS -->
+  <div class="comp-group">
+    <div class="comp-group-title">Service Module Cards</div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon">01_</div>
+        <h4>AI Content Engine</h4>
+        <p>Continuous content output across channels — calibrated to brand voice, updated weekly by the system.</p>
+        <div class="service-card-footer">
+          <span class="badge badge-system">Autonomous</span>
+          <button class="btn btn-ghost" style="font-size:13px;">Explore →</button>
+        </div>
+      </div>
+      <div class="service-card service-card-alt">
+        <div class="service-icon">02_</div>
+        <h4>Paid Media Automation</h4>
+        <p>Campaign creation, A/B testing, and budget optimization handled by agents. You approve the strategy.</p>
+        <div class="service-card-footer">
+          <span class="badge badge-accent">Beta</span>
+          <button class="btn btn-ghost" style="font-size:13px;">Explore →</button>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">03_</div>
+        <h4>Brand Intelligence</h4>
+        <p>Real-time monitoring of brand mentions, competitor signals, and audience sentiment shifts.</p>
+        <div class="service-card-footer">
+          <span class="badge badge-system">Live</span>
+          <button class="btn btn-ghost" style="font-size:13px;">Explore →</button>
+        </div>
+      </div>
+      <div class="service-card service-card-alt">
+        <div class="service-icon">04_</div>
+        <h4>Growth Sequencing</h4>
+        <p>Multi-touchpoint user journeys built and iterated by machine logic. Human-reviewed at key checkpoints.</p>
+        <div class="service-card-footer">
+          <span class="badge badge-outline">Strategy</span>
+          <button class="btn btn-ghost" style="font-size:13px;">Explore →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SYSTEM TOPBAR -->
+  <div class="comp-group">
+    <div class="comp-group-title">System Topbar</div>
+    <div class="topbar-example">
+      <div class="topbar-left">
+        <div class="topbar-logo-small">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</div>
+        <nav>
+          <ul class="topbar-nav">
+            <li><a href="#" class="active">Services</a></li>
+            <li><a href="#">Cases</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div style="display:flex; gap:12px; align-items:center;">
+        <span class="badge badge-system" style="font-size:9px;">System online</span>
+        <button class="btn btn-accent btn-sm">Get started</button>
+      </div>
+    </div>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#666666; letter-spacing:0.1em; padding:8px 0; text-transform:uppercase;">Background: #0A0A0A · Height: 56px · Nav links: IBM Plex Mono 11px 0.1em tracking</div>
+  </div>
+
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     06 · VOICE & TONE
+════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-label">// 06 · Voice & Tone</div>
+
+  <div class="voice-grid">
+
+    <div class="voice-tile dark-bg">
+      <div class="voice-tile-lang">EN · Manifesto</div>
+      <div class="voice-tile-quote">"Remove the I.<br>Keep the work."</div>
+      <div class="voice-tile-sub">Core concept line</div>
+    </div>
+
+    <div class="voice-tile muted-bg">
+      <div class="voice-tile-lang">EN · Positioning</div>
+      <div class="voice-tile-quote">"Marketing built by machines, tuned by humans."</div>
+      <div class="voice-tile-sub">Tagline A</div>
+    </div>
+
+    <div class="voice-tile">
+      <div class="voice-tile-lang">EN · Value prop</div>
+      <div class="voice-tile-quote">"Human strategy.<br>Machine execution."</div>
+      <div class="voice-tile-sub">Tagline B · product-led</div>
+    </div>
+
+    <div class="voice-tile accent-bg">
+      <div class="voice-tile-lang">EN · Provocative</div>
+      <div class="voice-tile-quote">"The I is<br>optional."</div>
+      <div class="voice-tile-sub">Social / OOH copy</div>
+    </div>
+
+    <div class="voice-tile muted-bg">
+      <div class="voice-tile-lang">RU · Манифест</div>
+      <div class="voice-tile-quote">«Убери «Я».<br>Оставь результат.»</div>
+      <div class="voice-tile-sub">Основная линия</div>
+    </div>
+
+    <div class="voice-tile dark-bg">
+      <div class="voice-tile-lang">RU · Позиционирование</div>
+      <div class="voice-tile-quote">«Стратегия человека. Исполнение машины.»</div>
+      <div class="voice-tile-sub">Подзаголовок / hero</div>
+    </div>
+
+    <div class="voice-tile">
+      <div class="voice-tile-lang">RU · Провокация</div>
+      <div class="voice-tile-quote">««Я» необязательно.»</div>
+      <div class="voice-tile-sub">СМИ / OOH / слоган</div>
+    </div>
+
+    <div class="voice-tile muted-bg">
+      <div class="voice-tile-lang">RU · CTA</div>
+      <div class="voice-tile-quote">«Думай меньше.<br>Делай больше.»</div>
+      <div class="voice-tile-sub">Призыв к действию</div>
+    </div>
+
+    <div class="voice-tile">
+      <div class="voice-tile-lang">RU · Масштаб</div>
+      <div class="voice-tile-quote">«Твоя точка зрения.<br>Наш масштаб.»</div>
+      <div class="voice-tile-sub">B2B / enterprise pitch</div>
+    </div>
+
+    <div class="voice-tile accent-bg">
+      <div class="voice-tile-lang">EN · Systems</div>
+      <div class="voice-tile-quote">"Your brand.<br>Our automation.<br>Zero guesswork."</div>
+      <div class="voice-tile-sub">Services page</div>
+    </div>
+
+    <div class="voice-tile dark-bg">
+      <div class="voice-tile-lang">EN · Direct</div>
+      <div class="voice-tile-quote">"Scale without<br>headcount."</div>
+      <div class="voice-tile-sub">Ads / paid social</div>
+    </div>
+
+    <div class="voice-tile muted-bg">
+      <div class="voice-tile-lang">RU · Эффективность</div>
+      <div class="voice-tile-quote">«Запускаем за 48 часов. Масштабируем без паузы.»</div>
+      <div class="voice-tile-sub">CTA / onboarding</div>
+    </div>
+
+  </div>
+
+  <div class="voice-principles">
+    <div class="voice-principle">
+      <h4>Confident, not arrogant</h4>
+      <p>State facts about capability directly. Never oversell with hyperbole. "We automate your marketing" beats "We revolutionize your marketing."</p>
+    </div>
+    <div class="voice-principle">
+      <h4>Start headlines with verbs (RU)</h4>
+      <p>Russian copy leads with action: «Запусти», «Убери», «Думай». Commands feel like system prompts — intentional and on-brand.</p>
+    </div>
+    <div class="voice-principle">
+      <h4>Short sentences. Hard stops.</h4>
+      <p>Punchlines under 8 words. Body copy up to 30 words per sentence. No filler — every word earns its place in the system.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     07 · SOCIAL MEDIA
+════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-label">// 07 · Social Media · Instagram Templates</div>
+
+  <div class="social-grid">
+
+    <!-- Template 01: Light -->
+    <div class="insta-tile insta-light">
+      <div class="insta-header">
+        <span class="insta-badge">AI Marketing</span>
+        <span class="insta-logo-small">THNK|FOR.ME</span>
+      </div>
+      <div class="insta-body">
+        <div class="insta-headline">Remove the I.<br>Keep the work.</div>
+        <div class="insta-sub">Human strategy. Machine execution.</div>
+      </div>
+      <div class="insta-footer">
+        <span class="insta-footer-brand">THNK|FOR.ME · 2026</span>
+        <div class="insta-footer-dot"></div>
+      </div>
+    </div>
+
+    <!-- Template 02: Accent -->
+    <div class="insta-tile insta-accent">
+      <div class="insta-accent-stripe"></div>
+      <div class="insta-header">
+        <span class="insta-badge">New · 2026</span>
+        <span class="insta-logo-small">THNK|FOR.ME</span>
+      </div>
+      <div class="insta-body">
+        <div class="insta-headline">«Думай меньше.<br>Делай больше.»</div>
+        <div class="insta-sub">AI-агентство. Запуск за 48 часов.</div>
+      </div>
+      <div class="insta-footer">
+        <span class="insta-footer-brand">THNK|FOR.ME · 2026</span>
+        <div class="insta-footer-dot"></div>
+      </div>
+    </div>
+
+    <!-- Template 03: Dark -->
+    <div class="insta-tile insta-dark">
+      <div class="insta-header">
+        <span class="insta-badge">System live</span>
+        <span class="insta-logo-small">THNK|FOR.ME</span>
+      </div>
+      <div class="insta-body">
+        <div class="insta-headline">Scale without<br>headcount.</div>
+        <div class="insta-sub" style="margin-top:12px;">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.04em; color:rgba(255,255,255,0.3);">01_CONTENT &nbsp; 02_PAID &nbsp; 03_SEO &nbsp; 04_CRM</span>
+        </div>
+      </div>
+      <div class="insta-footer">
+        <span class="insta-footer-brand">THNK|FOR.ME · 2026</span>
+        <div class="insta-footer-dot"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mt-32" style="border:1px solid rgba(0,0,0,0.1); background:#FFFFFF; padding:28px 32px;">
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px;">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#666666; margin-bottom:8px;">Format</div>
+        <div style="font-size:14px;">1:1 square · 1080×1080px</div>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#666666; margin-bottom:8px;">Labels</div>
+        <div style="font-size:14px;">IBM Plex Mono throughout</div>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#666666; margin-bottom:8px;">Footer</div>
+        <div style="font-size:14px;">Always "THNK|FOR.ME · 2026"</div>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#666666; margin-bottom:8px;">Safe zone</div>
+        <div style="font-size:14px;">48px inset on all sides</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     08 · GRID & SPACING
+════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-label">// 08 · Grid & Spacing</div>
+
+  <!-- Spacing scale visual -->
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:#666666; margin-bottom:24px; padding-bottom:12px; border-bottom:1px solid rgba(0,0,0,0.08);">Spacing Scale</div>
+
+  <div class="spacing-scale">
+    <div class="spacing-row">
+      <div class="spacing-name">xs · 4</div>
+      <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:4px;"></div></div>
+      <div class="spacing-val">4px</div>
+    </div>
+    <div class="spacing-row">
+      <div class="spacing-name">sm · 8</div>
+      <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:8px;"></div></div>
+      <div class="spacing-val">8px</div>
+    </div>
+    <div class="spacing-row">
+      <div class="spacing-name">sm2 · 12</div>
+      <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:12px;"></div></div>
+      <div class="spacing-val">12px</div>
+    </div>
+    <div class="spacing-row">
+      <div class="spacing-name">md · 16</div>
+      <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:16px;"></div></div>
+      <div class="spacing-val">16px</div>
+    </div>
+    <div class="spacing-row">
+      <div class="spacing-name">lg · 24</div>
+      <div class="spacing-bar-wrap"><div class="spacing-bar orange" style="width:24px;"></div></div>
+      <div class="spacing-val">24px</div>
+    </div>
+    <div class="spacing-row">
+      <div class="spacing-name">xl · 32</div>
+      <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:32px;"></div></div>
+      <div class="spacing-val">32px</div>
+    </div>
+    <div class="spacing-row">
+      <div class="spacing-name">2xl · 48</div>
+      <div class="spacing-bar-wrap"><div class="spacing-bar orange" style="width:48px;"></div></div>
+      <div class="spacing-val">48px</div>
+    </div>
+    <div class="spacing-row">
+      <div class="spacing-name">3xl · 64</div>
+      <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:64px;"></div></div>
+      <div class="spacing-val">64px</div>
+    </div>
+    <div class="spacing-row">
+      <div class="spacing-name">4xl · 80</div>
+      <div class="spacing-bar-wrap"><div class="spacing-bar orange" style="width:80px;"></div></div>
+      <div class="spacing-val">80px</div>
+    </div>
+    <div class="spacing-row">
+      <div class="spacing-name">5xl · 120</div>
+      <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:120px;"></div></div>
+      <div class="spacing-val">120px</div>
+    </div>
+  </div>
+
+  <!-- Grid spec -->
+  <div class="mt-48" style="font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:#666666; margin-bottom:24px; padding-bottom:12px; border-bottom:1px solid rgba(0,0,0,0.08);">Layout Grid Specifications</div>
+
+  <div class="grid-spec-grid">
+    <div class="grid-spec-card">
+      <h4>Desktop — ≥1280px</h4>
+      <div class="grid-spec-row"><span>Columns</span><span>12</span></div>
+      <div class="grid-spec-row"><span>Gutter</span><span>24px</span></div>
+      <div class="grid-spec-row"><span>Margin</span><span>48px</span></div>
+      <div class="grid-spec-row"><span>Max content width</span><span>1320px</span></div>
+      <div class="grid-spec-row"><span>Section padding</span><span>80px top/bottom</span></div>
+    </div>
+    <div class="grid-spec-card">
+      <h4>Tablet — 768–1279px</h4>
+      <div class="grid-spec-row"><span>Columns</span><span>8</span></div>
+      <div class="grid-spec-row"><span>Gutter</span><span>20px</span></div>
+      <div class="grid-spec-row"><span>Margin</span><span>32px</span></div>
+      <div class="grid-spec-row"><span>Max content width</span><span>100%</span></div>
+      <div class="grid-spec-row"><span>Section padding</span><span>64px top/bottom</span></div>
+    </div>
+    <div class="grid-spec-card">
+      <h4>Mobile — ≤767px</h4>
+      <div class="grid-spec-row"><span>Columns</span><span>4</span></div>
+      <div class="grid-spec-row"><span>Gutter</span><span>16px</span></div>
+      <div class="grid-spec-row"><span>Margin</span><span>20px</span></div>
+      <div class="grid-spec-row"><span>Max content width</span><span>100%</span></div>
+      <div class="grid-spec-row"><span>Section padding</span><span>48px top/bottom</span></div>
+    </div>
+    <div class="grid-spec-card">
+      <h4>Component Spacing Rules</h4>
+      <div class="grid-spec-row"><span>Button padding (default)</span><span>14px 28px</span></div>
+      <div class="grid-spec-row"><span>Card padding</span><span>32px</span></div>
+      <div class="grid-spec-row"><span>Section label margin-bottom</span><span>48px</span></div>
+      <div class="grid-spec-row"><span>Badge padding</span><span>4px 10px</span></div>
+      <div class="grid-spec-row"><span>Header height</span><span>56px</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     09 · DO · DON'T
+════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-label">// 09 · Do · Don't</div>
+
+  <div class="dodont-grid">
+
+    <!-- DO 01 -->
+    <div class="dodont-item">
+      <div class="dodont-header">
+        <span class="dodont-marker do-marker">Do</span>
+        <span class="dodont-rule-title">Square corners on all buttons</span>
+      </div>
+      <div class="dodont-rule-desc">border-radius: 0 always. The brutalist edge communicates precision and machine logic — no softening.</div>
+      <div class="dodont-demo">
+        <div class="do-example">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:rgba(248,248,248,0.4); letter-spacing:0.08em;">→</span>
+          Get started
+        </div>
+      </div>
+    </div>
+
+    <!-- DON'T 01 -->
+    <div class="dodont-item" style="background:#FEFEFE;">
+      <div class="dodont-header">
+        <span class="dodont-marker dont-marker">Don't</span>
+        <span class="dodont-rule-title">Round corners on primary buttons</span>
+      </div>
+      <div class="dodont-rule-desc">Rounded buttons feel like generic SaaS product UI. The brand must feel different — architecturally intentional.</div>
+      <div class="dodont-demo">
+        <div class="dont-example" style="border-radius:8px; text-decoration:none; border:2px solid rgba(255,59,0,0.25); position:relative;">
+          Get started
+          <div class="dont-strike" style="position:absolute; top:50%; left:0; width:100%; height:2px; background:#FF3B00; transform:rotate(-4deg);"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DO 02 -->
+    <div class="dodont-item">
+      <div class="dodont-header">
+        <span class="dodont-marker do-marker">Do</span>
+        <span class="dodont-rule-title">Use the cursor | as brand element</span>
+      </div>
+      <div class="dodont-rule-desc">The blinking cursor is the brand's signature gesture. It signals human input, machine readiness, and the moment between thinking and doing.</div>
+      <div class="dodont-demo">
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:24px; letter-spacing:-0.03em; color:#0A0A0A; padding:16px 0; display:flex; align-items:center;">
+          THNK<span style="color:#FF3B00; animation:b-blink 1s infinite; display:inline-block;">|</span>FOR<span style="color:#FF3B00;">.</span>ME
+        </div>
+      </div>
+    </div>
+
+    <!-- DON'T 02 -->
+    <div class="dodont-item" style="background:#FEFEFE;">
+      <div class="dodont-header">
+        <span class="dodont-marker dont-marker">Don't</span>
+        <span class="dodont-rule-title">Use Signal Orange as large background</span>
+      </div>
+      <div class="dodont-rule-desc">#FF3B00 is an accent color — it works in small doses. Filling entire sections with orange dilutes impact and creates visual fatigue.</div>
+      <div class="dodont-demo" style="position:relative;">
+        <div class="orange-bg-example" style="position:relative;">
+          Full page section in Signal Orange<br>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; opacity:0.7;">— This is too much orange</span>
+          <div style="position:absolute; top:50%; left:0; width:100%; height:2px; background:rgba(0,0,0,0.3); transform:rotate(-2deg);"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DO 03 -->
+    <div class="dodont-item">
+      <div class="dodont-header">
+        <span class="dodont-marker do-marker">Do</span>
+        <span class="dodont-rule-title">Start RU headlines with verbs</span>
+      </div>
+      <div class="dodont-rule-desc">Russian language copy opens with an imperative verb. This creates urgency and feels like a system command — aligned with the Human × Machine concept.</div>
+      <div class="dodont-demo">
+        <div style="padding:16px 0; display:flex; flex-direction:column; gap:8px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:18px; letter-spacing:-0.02em; color:#0A0A0A;">Запусти кампанию за 48 часов</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:18px; letter-spacing:-0.02em; color:#0A0A0A;">Убери лишнее. Оставь результат.</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:18px; letter-spacing:-0.02em; color:#0A0A0A;">Думай меньше. Делай больше.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DON'T 03 -->
+    <div class="dodont-item" style="background:#FEFEFE;">
+      <div class="dodont-header">
+        <span class="dodont-marker dont-marker">Don't</span>
+        <span class="dodont-rule-title">Mix Space Grotesk with serif fonts</span>
+      </div>
+      <div class="dodont-rule-desc">The type system is Space Grotesk (human) + IBM Plex Mono (machine). Introducing serifs breaks the Human × Machine logic and creates an inconsistent voice.</div>
+      <div class="dodont-demo" style="position:relative;">
+        <div style="padding:16px 0; display:flex; flex-direction:column; gap:6px; position:relative; opacity:0.5;">
+          <div style="font-family:'Georgia',serif; font-size:20px; color:#0A0A0A;">Marketing for the modern era</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#FF3B00; letter-spacing:0.08em; margin-top:4px;">Serif + Mono = off-brand</div>
+          <div style="position:absolute; top:40%; left:0; width:100%; height:2px; background:#FF3B00; transform:rotate(-3deg);"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION 10 · AVATAR SYSTEM
+════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-label">// 10 · Avatar System</div>
+
+  <p style="max-width:640px;color:#555;font-size:14px;line-height:1.6;margin-bottom:12px;">
+    Фирменный графический знак — <strong style="color:#0A0A0A;">×</strong> (Human × Machine). Не производная от логотипа, самостоятельная марка. Применяется во всех точках коммуникации кроме основного логотипа.
+  </p>
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#888;margin-bottom:40px;letter-spacing:.04em;">
+    Знак строится из двух диагональных линий с квадратными торцами · Stroke-weight: 10% от размера холста · Зазор от края: 25%
+  </div>
+
+  <!-- ── INTERNAL CHAT ── -->
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#888;margin-bottom:20px;">Internal · Telegram · Slack · WhatsApp Business</div>
+
+  <div style="display:flex;gap:28px;flex-wrap:wrap;margin-bottom:56px;align-items:flex-end;">
+
+    <!-- INT-A: × dark (primary) -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <rect width="96" height="96" fill="#0A0A0A"/>
+        <line x1="24" y1="24" x2="72" y2="72" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+        <line x1="72" y1="24" x2="24" y2="72" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <svg width="60" height="60" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <rect width="96" height="96" fill="#0A0A0A"/>
+        <line x1="24" y1="24" x2="72" y2="72" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+        <line x1="72" y1="24" x2="24" y2="72" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;text-align:center;">INT-A · Dark<br>Основной</div>
+      <button onclick="dlAvatar('INT-A')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#0A0A0A;color:#F8F8F8;border:none;padding:6px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ SVG</button>
+      <button onclick="dlAvatarPng('INT-A')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:rgba(10,10,10,0.06);color:#555;border:none;padding:5px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ PNG</button>
+    </div>
+
+    <!-- INT-B: × signal orange -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <rect width="96" height="96" fill="#FF3B00"/>
+        <line x1="24" y1="24" x2="72" y2="72" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+        <line x1="72" y1="24" x2="24" y2="72" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <svg width="60" height="60" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <rect width="96" height="96" fill="#FF3B00"/>
+        <line x1="24" y1="24" x2="72" y2="72" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+        <line x1="72" y1="24" x2="24" y2="72" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;text-align:center;">INT-B · Signal<br>Акция / Alert</div>
+      <button onclick="dlAvatar('INT-B')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#FF3B00;color:#F8F8F8;border:none;padding:6px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ SVG</button>
+      <button onclick="dlAvatarPng('INT-B')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:rgba(255,59,0,0.08);color:#FF3B00;border:none;padding:5px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ PNG</button>
+    </div>
+
+    <!-- INT-C: × bone (light) -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <rect width="96" height="96" fill="#F8F8F8"/>
+        <rect width="96" height="96" fill="none" stroke="#E0E0E0" stroke-width="1"/>
+        <line x1="24" y1="24" x2="72" y2="72" stroke="#0A0A0A" stroke-width="9" stroke-linecap="square"/>
+        <line x1="72" y1="24" x2="24" y2="72" stroke="#0A0A0A" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <svg width="60" height="60" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <rect width="96" height="96" fill="#F8F8F8"/>
+        <rect width="96" height="96" fill="none" stroke="#E0E0E0" stroke-width="1"/>
+        <line x1="24" y1="24" x2="72" y2="72" stroke="#0A0A0A" stroke-width="9" stroke-linecap="square"/>
+        <line x1="72" y1="24" x2="24" y2="72" stroke="#0A0A0A" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;text-align:center;">INT-C · Light<br>Светлый фон</div>
+      <button onclick="dlAvatar('INT-C')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#F8F8F8;color:#0A0A0A;border:1px solid #0A0A0A;padding:6px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ SVG</button>
+      <button onclick="dlAvatarPng('INT-C')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:rgba(10,10,10,0.04);color:#555;border:1px solid #DDD;padding:5px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ PNG</button>
+    </div>
+
+    <!-- INT-D: × orange stroke on black -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <rect width="96" height="96" fill="#0A0A0A"/>
+        <line x1="24" y1="24" x2="72" y2="72" stroke="#FF3B00" stroke-width="9" stroke-linecap="square"/>
+        <line x1="72" y1="24" x2="24" y2="72" stroke="#FF3B00" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <svg width="60" height="60" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <rect width="96" height="96" fill="#0A0A0A"/>
+        <line x1="24" y1="24" x2="72" y2="72" stroke="#FF3B00" stroke-width="9" stroke-linecap="square"/>
+        <line x1="72" y1="24" x2="24" y2="72" stroke="#FF3B00" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;text-align:center;">INT-D · Accent<br>Бот / Система</div>
+      <button onclick="dlAvatar('INT-D')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#0A0A0A;color:#FF3B00;border:1px solid #FF3B00;padding:6px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ SVG</button>
+      <button onclick="dlAvatarPng('INT-D')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:rgba(10,10,10,0.06);color:#888;border:1px solid rgba(255,59,0,0.3);padding:5px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ PNG</button>
+    </div>
+
+  </div>
+
+  <!-- ── SOCIAL MEDIA ── -->
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#888;margin-bottom:20px;">Social · ВКонтакте · Instagram · Telegram Channel</div>
+
+  <div style="display:flex;gap:28px;flex-wrap:wrap;margin-bottom:40px;align-items:flex-end;">
+
+    <!-- SOC-A: × dark circle -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="48" cy="48" r="48" fill="#0A0A0A"/>
+        <line x1="27" y1="27" x2="69" y2="69" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+        <line x1="69" y1="27" x2="27" y2="69" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <svg width="60" height="60" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="48" cy="48" r="48" fill="#0A0A0A"/>
+        <line x1="27" y1="27" x2="69" y2="69" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+        <line x1="69" y1="27" x2="27" y2="69" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;text-align:center;">SOC-A · Dark<br>Основной</div>
+      <button onclick="dlAvatar('SOC-A')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#0A0A0A;color:#F8F8F8;border:none;padding:6px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ SVG</button>
+      <button onclick="dlAvatarPng('SOC-A')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:rgba(10,10,10,0.06);color:#555;border:none;padding:5px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ PNG</button>
+    </div>
+
+    <!-- SOC-B: × signal circle -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="48" cy="48" r="48" fill="#FF3B00"/>
+        <line x1="27" y1="27" x2="69" y2="69" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+        <line x1="69" y1="27" x2="27" y2="69" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <svg width="60" height="60" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="48" cy="48" r="48" fill="#FF3B00"/>
+        <line x1="27" y1="27" x2="69" y2="69" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+        <line x1="69" y1="27" x2="27" y2="69" stroke="#F8F8F8" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;text-align:center;">SOC-B · Signal<br>Промо-канал</div>
+      <button onclick="dlAvatar('SOC-B')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#FF3B00;color:#F8F8F8;border:none;padding:6px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ SVG</button>
+      <button onclick="dlAvatarPng('SOC-B')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:rgba(255,59,0,0.08);color:#FF3B00;border:none;padding:5px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ PNG</button>
+    </div>
+
+    <!-- SOC-C: × bone circle -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="48" cy="48" r="47" fill="#F8F8F8" stroke="#E0E0E0" stroke-width="1"/>
+        <line x1="27" y1="27" x2="69" y2="69" stroke="#0A0A0A" stroke-width="9" stroke-linecap="square"/>
+        <line x1="69" y1="27" x2="27" y2="69" stroke="#0A0A0A" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <svg width="60" height="60" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="48" cy="48" r="47" fill="#F8F8F8" stroke="#E0E0E0" stroke-width="1"/>
+        <line x1="27" y1="27" x2="69" y2="69" stroke="#0A0A0A" stroke-width="9" stroke-linecap="square"/>
+        <line x1="69" y1="27" x2="27" y2="69" stroke="#0A0A0A" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;text-align:center;">SOC-C · Light<br>Светлые платформы</div>
+      <button onclick="dlAvatar('SOC-C')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#F8F8F8;color:#0A0A0A;border:1px solid #0A0A0A;padding:6px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ SVG</button>
+      <button onclick="dlAvatarPng('SOC-C')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:rgba(10,10,10,0.04);color:#555;border:1px solid #DDD;padding:5px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ PNG</button>
+    </div>
+
+    <!-- SOC-D: × orange × on dark circle (two-tone) -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="48" cy="48" r="48" fill="#0A0A0A"/>
+        <line x1="27" y1="27" x2="69" y2="69" stroke="#FF3B00" stroke-width="9" stroke-linecap="square"/>
+        <line x1="69" y1="27" x2="27" y2="69" stroke="#FF3B00" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <svg width="60" height="60" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="48" cy="48" r="48" fill="#0A0A0A"/>
+        <line x1="27" y1="27" x2="69" y2="69" stroke="#FF3B00" stroke-width="9" stroke-linecap="square"/>
+        <line x1="69" y1="27" x2="27" y2="69" stroke="#FF3B00" stroke-width="9" stroke-linecap="square"/>
+      </svg>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;text-align:center;">SOC-D · Accent<br>Бот / AI-канал</div>
+      <button onclick="dlAvatar('SOC-D')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:#0A0A0A;color:#FF3B00;border:1px solid #FF3B00;padding:6px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ SVG</button>
+      <button onclick="dlAvatarPng('SOC-D')" style="font-family:'IBM Plex Mono',monospace;font-size:10px;background:rgba(10,10,10,0.06);color:#888;border:1px solid rgba(255,59,0,0.3);padding:5px 12px;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;">↓ PNG</button>
+    </div>
+
+  </div>
+
+  <!-- Usage rule -->
+  <div style="background:#fff;border:1px solid #E0E0E0;border-left:3px solid #FF3B00;padding:16px 20px;font-size:13px;color:#555;line-height:1.7;max-width:580px;">
+    <strong style="color:#0A0A0A;display:block;margin-bottom:6px;">Правила применения марки ×</strong>
+    INT-A (Dark) — основной для всех внутренних чатов · INT-B (Signal) — только акционные и alert-каналы · INT-D (Accent) — бот, автоответчик, AI-уведомления<br>
+    SOC-A — профиль ВКонтакте, Telegram · SOC-B — промо-канал · SOC-C — платформы со светлым интерфейсом<br>
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#999;margin-top:8px;display:block;">Знак × не используется рядом с логотипом на одном носителе</span>
+  </div>
+
+</section>
+
+
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION 11 · LOGO DOWNLOADS
+════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-label">// 11 · Logo & Downloads</div>
+
+  <!-- Animated logo previews -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px;max-width:800px;">
+
+    <!-- Dark version -->
+    <div style="background:#0A0A0A;padding:48px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;min-height:180px;">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:500;letter-spacing:-0.05em;color:#F8F8F8;line-height:0.9;">
+        <div style="display:flex;align-items:baseline;">
+          <span>TH</span><span style="animation:hero-loop 6s infinite;display:inline-block;overflow:hidden;white-space:nowrap;">I</span><span>NK</span>
+        </div>
+        <div style="animation:forme-rise-fast 6s infinite;display:block;">
+          FOR<span style="color:#FF3B00;">.</span>ME<span style="color:#FF3B00;animation:b-blink 1s infinite;display:inline-block;">|</span>
+        </div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(248,248,248,0.35);letter-spacing:.12em;text-transform:uppercase;">Dark · #0A0A0A</div>
+    </div>
+
+    <!-- Light version -->
+    <div style="background:#F8F8F8;padding:48px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;border:1px solid #E0E0E0;min-height:180px;">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:500;letter-spacing:-0.05em;color:#0A0A0A;line-height:0.9;">
+        <div style="display:flex;align-items:baseline;">
+          <span>TH</span><span style="animation:hero-loop 6s infinite;display:inline-block;overflow:hidden;white-space:nowrap;">I</span><span>NK</span>
+        </div>
+        <div style="animation:forme-rise-fast 6s infinite;display:block;">
+          FOR<span style="color:#FF3B00;">.</span>ME<span style="color:#FF3B00;animation:b-blink 1s infinite;display:inline-block;">|</span>
+        </div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#BBB;letter-spacing:.12em;text-transform:uppercase;">Light · #F8F8F8</div>
+    </div>
+
+  </div>
+
+  <!-- Animated logo demo -->
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#888;margin-bottom:16px;">Logo Animation Preview</div>
+  <div style="background:#0A0A0A;padding:64px 48px;max-width:800px;margin-bottom:40px;display:flex;align-items:center;justify-content:center;">
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:500;letter-spacing:-0.05em;color:#F8F8F8;line-height:0.9;">
+      <div style="display:flex;align-items:baseline;">
+        <span>TH</span><span style="animation:hero-loop 6s infinite;display:inline-block;overflow:hidden;white-space:nowrap;">I</span><span>NK</span>
+      </div>
+      <div style="animation:forme-rise-fast 6s infinite;display:block;">
+        FOR<span style="color:#FF3B00;">.</span>ME<span style="color:#FF3B00;animation:b-blink 1s infinite;display:inline-block;">|</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download buttons -->
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#888;margin-bottom:16px;">Download Assets</div>
+
+  <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start;">
+
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button onclick="downloadLogo('dark')" style="display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.07em;text-transform:uppercase;background:#0A0A0A;color:#F8F8F8;border:none;padding:14px 20px;cursor:pointer;">
+        <span style="font-size:16px;">↓</span> Logo Dark · SVG
+      </button>
+      <button onclick="downloadLogoPng('dark')" style="display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;background:rgba(10,10,10,0.06);color:#555;border:none;padding:8px 20px;cursor:pointer;">
+        <span style="font-size:13px;">↓</span> PNG 960×160
+      </button>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button onclick="downloadLogo('light')" style="display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.07em;text-transform:uppercase;background:#F8F8F8;color:#0A0A0A;border:1px solid #0A0A0A;padding:14px 20px;cursor:pointer;">
+        <span style="font-size:16px;">↓</span> Logo Light · SVG
+      </button>
+      <button onclick="downloadLogoPng('light')" style="display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;background:rgba(10,10,10,0.04);color:#555;border:1px solid #DDD;padding:8px 20px;cursor:pointer;">
+        <span style="font-size:13px;">↓</span> PNG 960×160
+      </button>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button onclick="downloadLogo('signal')" style="display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.07em;text-transform:uppercase;background:#FF3B00;color:#F8F8F8;border:none;padding:14px 20px;cursor:pointer;">
+        <span style="font-size:16px;">↓</span> Logo Signal · SVG
+      </button>
+      <button onclick="downloadLogoPng('signal')" style="display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;background:rgba(255,59,0,0.08);color:#FF3B00;border:none;padding:8px 20px;cursor:pointer;">
+        <span style="font-size:13px;">↓</span> PNG 960×160
+      </button>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button onclick="downloadLogoAnimated()" style="display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.07em;text-transform:uppercase;background:#0A0A0A;color:#FF3B00;border:1px solid #FF3B00;padding:14px 20px;cursor:pointer;">
+        <span style="font-size:16px;animation:b-blink 1s infinite;display:inline-block;">|</span> Logo Animated · SVG
+      </button>
+      <button disabled style="display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;background:transparent;color:#CCC;border:none;padding:8px 20px;cursor:default;">
+        <span style="font-size:13px;">—</span> PNG (анимация)
+      </button>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <button onclick="downloadFavicon()" style="display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.07em;text-transform:uppercase;background:#F8F8F8;color:#0A0A0A;border:1px solid #CCCCCC;padding:14px 20px;cursor:pointer;">
+        <span style="font-size:16px;">↓</span> Favicon · SVG
+      </button>
+      <button onclick="downloadFaviconPng()" style="display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;background:rgba(10,10,10,0.04);color:#555;border:1px solid #DDD;padding:8px 20px;cursor:pointer;">
+        <span style="font-size:13px;">↓</span> PNG 32×32
+      </button>
+    </div>
+
+  </div>
+
+  <div style="margin-top:24px;padding:14px 20px;background:#fff;border:1px solid #E0E0E0;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#888;letter-spacing:.05em;line-height:1.8;max-width:600px;">
+    SVG масштабируется до любого размера без потери качества · Для соцсетей конвертируй в PNG 1024×1024 · Для фавикона — 32×32 и 16×16 · Анимированный SVG поддерживается в браузере и Telegram
+  </div>
+
+</section>
+
+<script>
+/* ── Download helpers ─────────────────────────────────── */
+function dl(content, filename, mime) {
+  const blob = new Blob([content], {type: mime || 'image/svg+xml'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename; a.click();
+  URL.revokeObjectURL(url);
+}
+
+/* ── Logo SVGs ────────────────────────────────────────── */
+const LOGOS = {
+  dark: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80" width="480" height="80">
+  <rect width="480" height="80" fill="#0A0A0A"/>
+  <text x="24" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" letter-spacing="-2" fill="#F8F8F8">THNK</text>
+  <text x="194" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="400" font-size="44" fill="#FF3B00">|</text>
+  <text x="208" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" letter-spacing="-2" fill="#F8F8F8">FOR</text>
+  <text x="344" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" fill="#FF3B00">.</text>
+  <text x="360" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" letter-spacing="-2" fill="#F8F8F8">ME</text>
+</svg>`,
+  light: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80" width="480" height="80">
+  <rect width="480" height="80" fill="#F8F8F8"/>
+  <text x="24" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" letter-spacing="-2" fill="#0A0A0A">THNK</text>
+  <text x="194" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="400" font-size="44" fill="#FF3B00">|</text>
+  <text x="208" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" letter-spacing="-2" fill="#0A0A0A">FOR</text>
+  <text x="344" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" fill="#FF3B00">.</text>
+  <text x="360" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" letter-spacing="-2" fill="#0A0A0A">ME</text>
+</svg>`,
+  signal: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80" width="480" height="80">
+  <rect width="480" height="80" fill="#FF3B00"/>
+  <text x="24" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" letter-spacing="-2" fill="#F8F8F8">THNK</text>
+  <text x="194" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="400" font-size="44" fill="#0A0A0A">|</text>
+  <text x="208" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" letter-spacing="-2" fill="#F8F8F8">FOR</text>
+  <text x="344" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" fill="#0A0A0A">.</text>
+  <text x="360" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" letter-spacing="-2" fill="#F8F8F8">ME</text>
+</svg>`
+};
+
+function downloadLogo(variant) {
+  dl(LOGOS[variant], `thnkforme-logo-${variant}.svg`);
+}
+
+function downloadLogoAnimated() {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80" width="480" height="80">
+  <style>
+    @keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+    @keyframes fade  { 0%,25%{opacity:1} 30%,60%{opacity:0} 95%,100%{opacity:1} }
+    .cur { animation: blink 1s infinite; }
+    .loop { animation: fade 4s ease-in-out infinite; }
+  </style>
+  <rect width="480" height="80" fill="#0A0A0A"/>
+  <text x="24" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" letter-spacing="-2" fill="#F8F8F8">THNK</text>
+  <text x="194" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="400" font-size="44" fill="#FF3B00" class="cur">|</text>
+  <text x="208" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" letter-spacing="-2" fill="#F8F8F8" class="loop">FOR</text>
+  <text x="344" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" fill="#FF3B00">.</text>
+  <text x="360" y="56" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="44" letter-spacing="-2" fill="#F8F8F8">ME</text>
+</svg>`;
+  dl(svg, 'thnkforme-logo-animated.svg');
+}
+
+function downloadFavicon() {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" fill="#0A0A0A"/>
+  <text x="6" y="22" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="18" fill="#F8F8F8">T</text>
+  <text x="17" y="22" font-family="Space Grotesk, system-ui, sans-serif" font-weight="400" font-size="18" fill="#FF3B00">|</text>
+</svg>`;
+  dl(svg, 'thnkforme-favicon.svg');
+}
+
+/* ── Avatar SVGs ──────────────────────────────────────── */
+const AVATARS = {
+  'INT-A': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#0A0A0A"/>
+  <line x1="128" y1="128" x2="384" y2="384" stroke="#F8F8F8" stroke-width="48" stroke-linecap="square"/>
+  <line x1="384" y1="128" x2="128" y2="384" stroke="#F8F8F8" stroke-width="48" stroke-linecap="square"/>
+</svg>`,
+  'INT-B': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#FF3B00"/>
+  <line x1="128" y1="128" x2="384" y2="384" stroke="#F8F8F8" stroke-width="48" stroke-linecap="square"/>
+  <line x1="384" y1="128" x2="128" y2="384" stroke="#F8F8F8" stroke-width="48" stroke-linecap="square"/>
+</svg>`,
+  'INT-C': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#F8F8F8"/>
+  <rect width="512" height="512" fill="none" stroke="#E0E0E0" stroke-width="4"/>
+  <line x1="128" y1="128" x2="384" y2="384" stroke="#0A0A0A" stroke-width="48" stroke-linecap="square"/>
+  <line x1="384" y1="128" x2="128" y2="384" stroke="#0A0A0A" stroke-width="48" stroke-linecap="square"/>
+</svg>`,
+  'INT-D': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#0A0A0A"/>
+  <line x1="128" y1="128" x2="384" y2="384" stroke="#FF3B00" stroke-width="48" stroke-linecap="square"/>
+  <line x1="384" y1="128" x2="128" y2="384" stroke="#FF3B00" stroke-width="48" stroke-linecap="square"/>
+</svg>`,
+  'SOC-A': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <circle cx="256" cy="256" r="256" fill="#0A0A0A"/>
+  <line x1="144" y1="144" x2="368" y2="368" stroke="#F8F8F8" stroke-width="48" stroke-linecap="square"/>
+  <line x1="368" y1="144" x2="144" y2="368" stroke="#F8F8F8" stroke-width="48" stroke-linecap="square"/>
+</svg>`,
+  'SOC-B': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <circle cx="256" cy="256" r="256" fill="#FF3B00"/>
+  <line x1="144" y1="144" x2="368" y2="368" stroke="#F8F8F8" stroke-width="48" stroke-linecap="square"/>
+  <line x1="368" y1="144" x2="144" y2="368" stroke="#F8F8F8" stroke-width="48" stroke-linecap="square"/>
+</svg>`,
+  'SOC-C': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <circle cx="256" cy="256" r="254" fill="#F8F8F8" stroke="#E0E0E0" stroke-width="4"/>
+  <line x1="144" y1="144" x2="368" y2="368" stroke="#0A0A0A" stroke-width="48" stroke-linecap="square"/>
+  <line x1="368" y1="144" x2="144" y2="368" stroke="#0A0A0A" stroke-width="48" stroke-linecap="square"/>
+</svg>`,
+  'SOC-D': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <circle cx="256" cy="256" r="256" fill="#0A0A0A"/>
+  <line x1="144" y1="144" x2="368" y2="368" stroke="#FF3B00" stroke-width="48" stroke-linecap="square"/>
+  <line x1="368" y1="144" x2="144" y2="368" stroke="#FF3B00" stroke-width="48" stroke-linecap="square"/>
+</svg>`
+};
+
+function dlAvatar(variant) {
+  dl(AVATARS[variant], 'thnkforme-×-' + variant + '.svg');
+}
+
+function svgToPng(svgStr, w, h, filename) {
+  const blob = new Blob([svgStr], {type:'image/svg+xml'});
+  const url = URL.createObjectURL(blob);
+  const img = new Image();
+  img.onload = function() {
+    const c = document.createElement('canvas');
+    c.width = w; c.height = h;
+    c.getContext('2d').drawImage(img, 0, 0, w, h);
+    URL.revokeObjectURL(url);
+    c.toBlob(function(b) {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(b);
+      a.download = filename; a.click();
+    }, 'image/png');
+  };
+  img.src = url;
+}
+function downloadLogoPng(variant) {
+  svgToPng(LOGOS[variant], 960, 160, 'thnkforme-logo-' + variant + '.png');
+}
+function dlAvatarPng(variant) {
+  svgToPng(AVATARS[variant], 512, 512, 'thnkforme-×-' + variant + '.png');
+}
+function downloadFaviconPng() {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" fill="#0A0A0A"/>
+  <text x="6" y="22" font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="18" fill="#F8F8F8">T</text>
+  <text x="17" y="22" font-family="Space Grotesk, system-ui, sans-serif" font-weight="400" font-size="18" fill="#FF3B00">|</text>
+</svg>`;
+  svgToPng(svg, 32, 32, 'thnkforme-favicon.png');
+}
+
+</script>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer class="brand-footer">
+  <div class="brand-footer-left">
+    THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME
+  </div>
+  <div class="brand-footer-right">
+    Brand System v1.0 · 2026<br>
+    Concept B — Human × Machine<br>
+    Confidential · Internal use only
+  </div>
+</footer>
+
+</body>
+</html>

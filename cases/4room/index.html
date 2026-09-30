@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кейс 4room.studio — THNKFOR.ME</title>
+    <link rel="canonical" href="https://thnkfor.me/cases/4room/">
+    <meta property="og:title" content="Кейс 4room.studio — THNKFOR.ME">
+<meta name="description" content="Три AI-системы для интерьерной студии: автопостинг в соцсети, Яндекс Дзен на семантике, и запуск международного бренда 4room.me с нуля — брендинг, сайт, соцсети через нейросети.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}ul,ol{list-style:none;}
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:100;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.header-nav{display:flex;align-items:center;gap:32px;}
+.header-nav a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);transition:color .15s;}
+.header-nav a:hover{color:#FFFFFF;}.header-nav a.active{color:#FF3B00;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;}
+.header-logo .dot{color:#FF3B00;}.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 20px;transition:background .15s;}
+.header-cta:hover{background:#FFFFFF;color:#0A0A0A;}
+
+/* HERO */
+.case-hero{background:#0A0A0A;padding:96px 48px 80px;position:relative;overflow:hidden;}
+.case-hero::before{content:'';position:absolute;top:0;right:0;width:55%;height:100%;background:radial-gradient(ellipse at 75% 50%,rgba(255,59,0,0.07) 0%,transparent 65%);pointer-events:none;}
+.case-breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:40px;display:flex;align-items:center;gap:12px;}
+.case-breadcrumb a{color:rgba(255,255,255,0.2);transition:color .12s;}.case-breadcrumb a:hover{color:#FF3B00;}
+.case-breadcrumb-sep{opacity:.3;}
+.case-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;}
+.case-tag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;border:1px solid rgba(255,59,0,0.3);padding:4px 10px;}
+.case-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(40px,6vw,88px);letter-spacing:-0.05em;line-height:0.93;color:#FFFFFF;margin-bottom:28px;max-width:820px;animation:fadeUp .6s ease both;}
+.case-h1 em{font-style:normal;color:#FF3B00;}
+.case-hero-desc{font-size:18px;color:rgba(255,255,255,0.45);line-height:1.65;max-width:580px;margin-bottom:48px;}
+.case-hero-meta{display:flex;gap:40px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.08);padding-top:32px;}
+.meta-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:6px;}
+.meta-val{font-size:15px;color:rgba(255,255,255,0.7);}
+
+/* RESULTS BAR */
+.results-bar{background:#FF3B00;padding:48px;}
+.results-bar-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.15);}
+.result-cell{background:#FF3B00;padding:32px 28px;}
+.result-num{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(40px,5vw,72px);letter-spacing:-0.05em;line-height:1;color:#FFFFFF;margin-bottom:8px;}
+.result-desc{font-size:13px;color:rgba(255,255,255,0.7);line-height:1.5;}
+
+/* SECTIONS */
+.section{padding:80px 48px;border-bottom:1px solid rgba(0,0,0,0.08);}
+.section-dark{background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.06);}
+.section-white{background:#FFFFFF;}
+.section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#999;margin-bottom:48px;display:flex;align-items:center;gap:16px;}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(0,0,0,0.1);}
+.section-dark .section-label{color:rgba(255,255,255,0.2);}
+.section-dark .section-label::after{background:rgba(255,255,255,0.08);}
+.section-h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(28px,4vw,52px);letter-spacing:-0.04em;line-height:1.05;color:#0A0A0A;margin-bottom:20px;}
+.section-dark .section-h2{color:#FFFFFF;}
+.section-sub{font-size:16px;color:#666;line-height:1.7;max-width:640px;margin-bottom:48px;}
+.section-dark .section-sub{color:rgba(255,255,255,0.4);}
+
+/* COMPANY CARD */
+.company-card{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.company-left{background:#0A0A0A;padding:48px;}
+.company-right{background:#FFFFFF;padding:48px;}
+.company-name{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:32px;letter-spacing:-0.04em;color:#FFFFFF;margin-bottom:16px;}
+.company-desc{font-size:15px;color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:28px;}
+.company-url{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:#FF3B00;}
+.company-facts{display:flex;flex-direction:column;gap:16px;}
+.company-fact{display:flex;justify-content:space-between;align-items:start;padding-bottom:16px;border-bottom:1px solid rgba(0,0,0,0.08);}
+.company-fact:last-child{border-bottom:none;padding-bottom:0;}
+.cf-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#999;}
+.cf-val{font-size:14px;color:#0A0A0A;text-align:right;max-width:60%;}
+
+/* TRACK TABS */
+.tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);margin-bottom:80px;}
+.track-card{background:#FFFFFF;padding:40px 32px;}
+.track-num{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#FF3B00;margin-bottom:20px;}
+.track-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.03em;color:#0A0A0A;margin-bottom:12px;}
+.track-desc{font-size:14px;color:#666;line-height:1.65;}
+.track-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px;}
+.track-tag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#999;border:1px solid rgba(0,0,0,0.1);padding:3px 8px;}
+
+/* FLOW TABLE */
+.flow-table{display:flex;flex-direction:column;gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.flow-row{background:#FFFFFF;display:grid;grid-template-columns:200px 1fr;transition:background .12s;}
+.flow-row:hover{background:#F8F8F8;}
+.flow-trigger{padding:32px 28px;border-right:1px solid rgba(0,0,0,0.08);display:flex;flex-direction:column;justify-content:center;gap:4px;}
+.flow-trigger.hl{background:#0A0A0A;border-right-color:#0A0A0A;}
+.flow-freq{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#999;margin-bottom:4px;}
+.flow-trigger.hl .flow-freq{color:rgba(255,255,255,0.25);}
+.flow-val{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#0A0A0A;}
+.flow-trigger.hl .flow-val{color:#FF3B00;}
+.flow-body{padding:28px 36px;display:flex;flex-direction:column;justify-content:center;gap:12px;}
+.flow-chain{display:flex;align-items:center;flex-wrap:wrap;gap:0;}
+.flow-step{font-size:13px;color:#0A0A0A;background:#F0F0F0;padding:7px 14px;white-space:nowrap;}
+.flow-step.end{background:#0A0A0A;color:#FFFFFF;}
+.flow-arr{font-size:13px;color:#ccc;padding:0 8px;flex-shrink:0;}
+.flow-note{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#999;line-height:1.6;}
+
+/* CHALLENGE GRID */
+.challenge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.challenge-card{background:#F8F8F8;padding:32px 28px;}
+.challenge-num{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:#FF3B00;margin-bottom:16px;}
+.challenge-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:17px;letter-spacing:-0.02em;color:#0A0A0A;margin-bottom:10px;}
+.challenge-text{font-size:14px;color:#666;line-height:1.65;}
+
+/* SEMANTIC BLOCK */
+.sem-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);margin-bottom:48px;}
+.sem-cell{background:#F8F8F8;padding:40px 36px;}
+.sem-cell.dark{background:#0A0A0A;}
+.sem-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#999;margin-bottom:20px;}
+.sem-cell.dark .sem-label{color:rgba(255,255,255,0.2);}
+.sem-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:20px;letter-spacing:-0.03em;color:#0A0A0A;margin-bottom:12px;}
+.sem-cell.dark .sem-title{color:#FFFFFF;}
+.sem-text{font-size:14px;color:#555;line-height:1.7;}
+.sem-cell.dark .sem-text{color:rgba(255,255,255,0.4);}
+.cluster-list{display:flex;flex-direction:column;gap:10px;margin-top:16px;}
+.cluster-item{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);}
+.cluster-name{font-size:13px;color:#0A0A0A;}
+.cluster-vol{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#FF3B00;letter-spacing:.06em;}
+.cluster-list-dark .cluster-item{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.07);}
+.cluster-list-dark .cluster-name{color:rgba(255,255,255,0.7);}
+
+/* DZEN ARTICLES */
+.article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);margin-bottom:1px;}
+.article-card{background:#FFFFFF;padding:28px 24px;}
+.article-card-cat{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;margin-bottom:12px;}
+.article-card-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.02em;color:#0A0A0A;line-height:1.3;margin-bottom:10px;}
+.article-card-text{font-size:13px;color:#666;line-height:1.55;}
+.article-card-meta{display:flex;gap:12px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(0,0,0,0.06);}
+.article-card-stat{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#999;letter-spacing:.04em;}
+
+/* SPLIT PANEL */
+.split-panel{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.split-dark{background:#0A0A0A;padding:56px 48px;}
+.split-light{background:#FFFFFF;padding:0;}
+.split-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:20px;}
+.split-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(22px,3vw,36px);letter-spacing:-0.04em;line-height:1.1;color:#FFFFFF;margin-bottom:20px;}
+.split-title em{font-style:normal;color:#FF3B00;}
+.split-desc{font-size:15px;color:rgba(255,255,255,0.4);line-height:1.7;}
+.split-steps{display:flex;flex-direction:column;gap:0;}
+.split-step{padding:28px 36px;border-bottom:1px solid rgba(0,0,0,0.06);display:grid;grid-template-columns:28px 1fr;gap:16px;align-items:start;transition:background .12s;}
+.split-step:last-child{border-bottom:none;}
+.split-step:hover{background:#F8F8F8;}
+.split-step-num{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:#FF3B00;padding-top:2px;}
+.split-step-body{font-size:14px;color:#0A0A0A;line-height:1.65;}
+.split-step-body strong{font-weight:500;}
+
+/* BRAND PALETTE */
+.brand-section{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);margin-bottom:48px;}
+.brand-left{background:#1A1916;padding:48px;}
+.brand-right{background:#FDFAF6;padding:48px;}
+.brand-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px;}
+.brand-left .brand-label{color:rgba(255,255,255,0.2);}
+.brand-right .brand-label{color:#999;}
+.brand-name{font-size:28px;font-weight:500;letter-spacing:-0.03em;margin-bottom:12px;}
+.brand-left .brand-name{color:#FDFAF6;}
+.brand-right .brand-name{color:#1A1916;}
+.brand-desc{font-size:14px;line-height:1.7;}
+.brand-left .brand-desc{color:rgba(255,255,255,0.4);}
+.brand-right .brand-desc{color:#7A7470;}
+.color-chips{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap;}
+.color-chip{width:40px;height:40px;border:1px solid rgba(0,0,0,0.08);}
+.font-sample{margin-top:20px;}
+.font-serif{font-size:32px;color:#1A1916;font-family:Georgia,serif;font-style:italic;font-weight:300;line-height:1.1;margin-bottom:8px;}
+.font-sans{font-family:system-ui,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#7A7470;}
+
+/* DELIVERABLES */
+.deliver-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.deliver-card{background:#F8F8F8;padding:32px 28px;transition:background .12s;}
+.deliver-card:hover{background:#FFFFFF;}
+.deliver-icon{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#FF3B00;margin-bottom:16px;}
+.deliver-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:17px;letter-spacing:-0.02em;color:#0A0A0A;margin-bottom:10px;}
+.deliver-text{font-size:14px;color:#555;line-height:1.65;}
+
+/* TECH GRID */
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);}
+.tech-card{background:#F8F8F8;padding:28px 24px;transition:background .12s;}
+.tech-card:hover{background:#FFFFFF;}
+.tech-name{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.02em;color:#0A0A0A;margin-bottom:6px;}
+.tech-role{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#FF3B00;margin-bottom:10px;}
+.tech-desc{font-size:13px;color:#666;line-height:1.55;}
+
+/* STAT ROW */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);margin-bottom:1px;}
+.stat-cell{background:#F8F8F8;padding:40px 36px;}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(44px,5vw,72px);letter-spacing:-0.05em;line-height:1;color:#0A0A0A;margin-bottom:10px;}
+.stat-num em{color:#FF3B00;font-style:normal;}
+.stat-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.02em;color:#0A0A0A;margin-bottom:6px;}
+.stat-text{font-size:13px;color:#666;line-height:1.6;}
+
+/* QUOTE */
+.quote-block{background:#FFFFFF;border-left:3px solid #FF3B00;padding:44px 48px;}
+.quote-text{font-family:'Space Grotesk',sans-serif;font-weight:400;font-size:clamp(17px,2vw,22px);letter-spacing:-0.02em;line-height:1.55;color:#0A0A0A;margin-bottom:20px;max-width:780px;}
+.quote-text em{font-style:normal;color:#FF3B00;}
+.quote-author{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#999;}
+
+/* TRACK DIVIDER */
+.track-divider{background:#0A0A0A;padding:32px 48px;display:flex;align-items:center;gap:24px;}
+.track-divider-num{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#FF3B00;}
+.track-divider-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.03em;color:#FFFFFF;}
+.track-divider-line{flex:1;height:1px;background:rgba(255,255,255,0.08);}
+
+/* CTA */
+.case-cta{background:#FF3B00;padding:80px 48px;}
+.cta-h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(32px,5vw,72px);letter-spacing:-0.05em;line-height:0.95;color:#FFFFFF;margin-bottom:24px;max-width:700px;}
+.cta-sub{font-size:17px;color:rgba(255,255,255,0.7);line-height:1.6;max-width:480px;margin-bottom:48px;}
+.cta-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.cta-btn{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;background:#FFFFFF;color:#0A0A0A;padding:16px 32px;transition:background .15s;}
+.cta-btn:hover{background:#0A0A0A;color:#FFFFFF;}
+.cta-btn-outline{background:transparent;color:#FFFFFF;border:1px solid rgba(255,255,255,0.4);}
+.cta-btn-outline:hover{background:#FFFFFF;color:#0A0A0A;}
+
+/* FOOTER */
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:24px;}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+
+/* ═══ UNIFIED SITE HEADER ═══ */
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,59,0,0);}60%{box-shadow:0 0 0 6px rgba(255,59,0,0.18);}}
+.site-header{position:sticky;top:0;z-index:200;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item > span:hover,.nav-item:hover > a,.nav-item:hover > span{color:#FFFFFF;}
+.nav-item > a.active,.nav-item > span.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover,.header-nav .header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;box-shadow:none;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+/* ═══ UNIFIED SITE FOOTER ═══ */
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" / loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Кейс 4room.studio — THNKFOR.ME",
+      "url": "https://thnkfor.me/cases/4room/",
+      "description": "Три AI-системы для интерьерной студии: автопостинг в соцсети, Яндекс Дзен на семантике, и запуск международного бренда 4room.me с нуля — брендинг, сайт, соцсети через нейросети.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "THNKFOR.ME",
+        "url": "https://thnkfor.me",
+        "logo": "https://thnkfor.me/logo.svg",
+        "image": "https://thnkfor.me/team/team_group.jpg",
+        "foundingDate": "2024-09-13",
+        "description": "AI-агентство контент-маркетинга. Автоматизируем SMM, производство контента и аналитику с помощью AI-систем.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+7-995-629-39-31",
+          "contactType": "customer service",
+          "email": "hello@thnkfor.me",
+          "availableLanguage": [
+            "Russian",
+            "English"
+          ]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "sameAs": [
+          "https://t.me/anastasiia_thinkfor"
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Анастасия Мосина",
+          "jobTitle": "Founder & CEO"
+        }
+      },
+      "datePublished": "2024-09-13",
+      "image": "https://thnkfor.me/team/team_group.jpg"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://thnkfor.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Кейсы",
+          "item": "https://thnkfor.me/cases/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Кейс 4room.studio — THNKFOR.ME",
+          "item": "https://thnkfor.me/cases/4room/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="../../services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="../../services/smm/">SMM и соцсети</a>
+          <a href="../../services/targeting/">Таргетированная реклама</a>
+          <a href="../../services/direct/">Яндекс Директ</a>
+          <div class="nav-subitem">
+          <a href="../../services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+          <div class="nav-subdropdown">
+            <a href="../../services/content-machine/restaurant/">Для ресторанов</a>
+            <a href="../../services/content-machine/beauty/">Для салонов красоты</a>
+            <a href="../../services/content-machine/ecom/">Для интернет-магазинов</a>
+            <a href="../../services/content-machine/marketplace/">Для маркетплейсов</a>
+            <a href="../../services/content-machine/fitness/">Для фитнеса</a>
+            <a href="../../services/content-machine/construction/">Для строительства</a>
+          </div>
+        </div>
+          <a href="../../services/video/">Видеопроизводство</a>
+          <a href="../../services/reputation/">Управление репутацией</a>
+          <a href="../../services/seo/">Продвижение в поиске</a>
+          <a href="../../services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="../../niches/restaurants/">Рестораны</a>
+          <a href="../../niches/beauty/">Салоны красоты</a>
+          <a href="../../niches/clinic/">Медицина</a>
+          <a href="../../niches/fitness/">Фитнес</a>
+          <a href="../../niches/saas/">IT и SaaS</a>
+          <a href="../../niches/ecommerce-fashion/">E-commerce</a>
+          <a href="../../niches/realestate/">Недвижимость</a>
+          <a href="../../niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../" class="active">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="../werent/">WeRent — Content Machine</a>
+          <a href="../tennispoint/">Tennis Point — бот новинок</a>
+          <a href="./">4room.studio — три AI-системы</a>
+          <a href="../studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="../">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../blog/">Блог</a>
+        <div class="nav-dropdown">
+          <a href="../../blog/ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="../../blog/content-factory/">Контент-завод</a>
+          <a href="../../blog/midjourney-business/">Midjourney для бизнеса</a>
+          <a href="../../blog/prompt-engineering/">Prompt Engineering</a>
+          <a href="../../blog/n8n-vs-make/">n8n vs Make</a>
+          <a href="../../blog/seo-ai-2026/">SEO и AI 2026</a>
+          <a href="../../blog/">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../pricing/">Цены</a><a href="../../contacts/">Контакты</a>
+      </div>
+      <div class="nav-item">
+        <a href="../../about/">О нас</a>
+      </div>
+      <a href="../../contacts/" class="header-cta">Обсудить проект</a>
+    
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="../../services/smm/" class="header-pill">01 · SMM</a>
+    <a href="../../services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="../../services/direct/" class="header-pill">03 · Директ</a>
+    <a href="../../services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="../../services/video/" class="header-pill">05 · Видео</a>
+    <a href="../../services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="../../services/seo/" class="header-pill">07 · SEO</a>
+    <a href="../../services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="case-hero">
+  <div class="case-breadcrumb">
+    <a href="../../">Главная</a>
+    <span class="case-breadcrumb-sep">/</span>
+    <a href="../">Кейсы</a>
+    <span class="case-breadcrumb-sep">/</span>
+    4room.studio
+  </div>
+  <div class="case-tags">
+    <span class="case-tag">Интерьерная студия</span>
+    <span class="case-tag">Автопостинг</span>
+    <span class="case-tag">Яндекс Дзен</span>
+    <span class="case-tag">Новый бренд</span>
+    <span class="case-tag">AI-брендинг</span>
+  </div>
+  <h1 class="case-h1">Три AI-системы<br>для <em>4room</em></h1>
+  <p class="case-hero-desc">Автоматизировали SMM, запустили Дзен на семантике, и создали с нуля международный бренд 4room.me — брендинг, сайт, контент-план — силами нейросетей. Всё работает без постоянного участия команды студии.</p>
+  <div class="case-hero-meta">
+    <div>
+      <div class="meta-label">Клиент</div>
+      <div class="meta-val">4room.studio</div>
+    </div>
+    <div>
+      <div class="meta-label">Сфера</div>
+      <div class="meta-val">Дизайн интерьера, 10 лет, 102 проекта</div>
+    </div>
+    <div>
+      <div class="meta-label">Треки</div>
+      <div class="meta-val">SMM · Дзен · Новый бренд 4room.me</div>
+    </div>
+    <div>
+      <div class="meta-label">Период</div>
+      <div class="meta-val">2025–2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS BAR -->
+<div class="results-bar">
+  <div class="results-bar-inner">
+    <div class="result-cell">
+      <div class="result-num">3</div>
+      <div class="result-desc">AI-системы запущены параллельно</div>
+    </div>
+    <div class="result-cell">
+      <div class="result-num">0</div>
+      <div class="result-desc">ручных постов — SMM и Дзен работают автономно</div>
+    </div>
+    <div class="result-cell">
+      <div class="result-num">9</div>
+      <div class="result-desc">проектов в портфолио нового бренда 4room.me</div>
+    </div>
+    <div class="result-cell">
+      <div class="result-num">EN</div>
+      <div class="result-desc">международный сайт и контент на английском</div>
+    </div>
+  </div>
+</div>
+
+<!-- О КЛИЕНТЕ -->
+<section class="section section-white">
+  <div class="section-label">01 · О клиенте</div>
+  <div class="section-h2">4room.studio</div>
+  <p class="section-sub">Московская студия дизайна интерьеров с 10-летней историей. 102 реализованных проекта: от городских квартир до загородных резиденций и пентхаусов площадью 300–570 м². Клиенты — собственники премиальной недвижимости.</p>
+  <div class="company-card">
+    <div class="company-left">
+      <div class="company-name">4room.studio</div>
+      <p class="company-desc">Студия создаёт жилые пространства, которые ощущаются как их владельцы. Авторский подход: глубокое погружение в запрос, минимализм в материалах, максимум в деталях. Проекты — от Москвы до Европы.</p>
+      <div class="company-url">4room.studio · 4room.me</div>
+    </div>
+    <div class="company-right">
+      <div class="company-facts">
+        <div class="company-fact">
+          <span class="cf-label">Опыт</span>
+          <span class="cf-val">10 лет, 102 проекта</span>
+        </div>
+        <div class="company-fact">
+          <span class="cf-label">Сегмент</span>
+          <span class="cf-val">Премиальный жилой интерьер</span>
+        </div>
+        <div class="company-fact">
+          <span class="cf-label">Задача</span>
+          <span class="cf-val">Автоматизировать маркетинг, масштабировать бренд</span>
+        </div>
+        <div class="company-fact">
+          <span class="cf-label">Что сделали</span>
+          <span class="cf-val">SMM-бот · Дзен-машина · Бренд 4room.me</span>
+        </div>
+        <div class="company-fact">
+          <span class="cf-label">Инструменты</span>
+          <span class="cf-val">Claude AI · Midjourney · автопостинг · семантика</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ТРИ ТРЕКА ОБЗОР -->
+<section class="section">
+  <div class="section-label">02 · Три трека</div>
+  <div class="section-h2">Параллельная автоматизация</div>
+  <p class="section-sub">Три независимые AI-системы, которые работают одновременно. Каждая решает свою задачу, все вместе — формируют полноценный цифровой маркетинг студии без найма нескольких специалистов.</p>
+  <div class="tracks">
+    <div class="track-card">
+      <div class="track-num">Трек 01</div>
+      <div class="track-title">Автопостинг в соцсети</div>
+      <p class="track-desc">AI генерирует посты из портфолио студии и публикует в соцсети по расписанию. Каждый проект — серия постов: фотографии, текст, детали. Без участия команды.</p>
+      <div class="track-tags">
+        <span class="track-tag">Instagram</span>
+        <span class="track-tag">ВКонтакте</span>
+        <span class="track-tag">Telegram</span>
+        <span class="track-tag">Автопостинг</span>
+      </div>
+    </div>
+    <div class="track-card">
+      <div class="track-num">Трек 02</div>
+      <div class="track-title">Яндекс Дзен</div>
+      <p class="track-desc">Собрали семантику по нише «дизайн интерьера», провели кластеризацию. Нейросеть пишет и публикует SEO-статьи по каждому кластеру — регулярно и автономно.</p>
+      <div class="track-tags">
+        <span class="track-tag">Семантика</span>
+        <span class="track-tag">Кластеризация</span>
+        <span class="track-tag">Дзен</span>
+        <span class="track-tag">SEO-статьи</span>
+      </div>
+    </div>
+    <div class="track-card">
+      <div class="track-num">Трек 03</div>
+      <div class="track-title">Бренд 4room.me</div>
+      <p class="track-desc">Отдельное международное направление студии: новый бренд, сайт на английском с 9 проектами в портфолио, брендбук и контент-план — всё создано нейросетями.</p>
+      <div class="track-tags">
+        <span class="track-tag">Брендинг</span>
+        <span class="track-tag">Сайт EN</span>
+        <span class="track-tag">Instagram @4room.me</span>
+        <span class="track-tag">AI-дизайн</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ТРЕК 1: SMM -->
+<div class="track-divider">
+  <span class="track-divider-num">Трек 01</span>
+  <div class="track-divider-line"></div>
+  <span class="track-divider-title">Автопостинг в соцсети</span>
+</div>
+
+<section class="section section-dark">
+  <div class="section-label">03 · Как работает SMM-автоматизация</div>
+  <div class="section-h2">Проект в портфолио → серия постов</div>
+  <p class="section-sub">Каждый реализованный проект студии превращается в многоуровневую серию публикаций. AI анализирует фотографии, генерирует тексты в голосе бренда и публикует по расписанию.</p>
+  <div class="flow-table">
+    <div class="flow-row">
+      <div class="flow-trigger hl">
+        <div class="flow-freq">Триггер</div>
+        <div class="flow-val">Новый проект</div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-chain">
+          <div class="flow-step">Фото проекта загружены</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">AI анализирует пространство и материалы</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Генерирует серию из 6–10 постов</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step end">Добавляет в очередь ✓</div>
+        </div>
+        <div class="flow-note">Один проект = контент на 2–3 недели. Разные форматы: обзор пространства, детали, материалы, философия решения.</div>
+      </div>
+    </div>
+    <div class="flow-row">
+      <div class="flow-trigger">
+        <div class="flow-freq">Регулярно</div>
+        <div class="flow-val">3× в неделю</div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-chain">
+          <div class="flow-step">Пост из очереди</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Адаптация под платформу</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Instagram · ВКонтакте · Telegram</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step end">Автопубликация ✓</div>
+        </div>
+        <div class="flow-note">Текст, хэштеги и формат адаптируются под каждую платформу автоматически. Instagram — эстетично и коротко, Telegram — с деталями, ВКонтакте — с SEO-ключами.</div>
+      </div>
+    </div>
+    <div class="flow-row">
+      <div class="flow-trigger">
+        <div class="flow-freq">1× в неделю</div>
+        <div class="flow-val">Reel</div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-chain">
+          <div class="flow-step">Подборка фото из проекта</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Монтаж слайд-шоу с музыкой</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">AI-подпись на EN/RU</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step end">Публикация ✓</div>
+        </div>
+        <div class="flow-note">Reels дают органический охват — новые подписчики из рекомендаций. Один раз в неделю вместо одного из обычных постов.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ТРЕК 2: ДЗЕН -->
+<div class="track-divider">
+  <span class="track-divider-num">Трек 02</span>
+  <div class="track-divider-line"></div>
+  <span class="track-divider-title">Яндекс Дзен — SEO-машина</span>
+</div>
+
+<section class="section section-white">
+  <div class="section-label">04 · Семантика и кластеризация</div>
+  <div class="section-h2">Сначала — данные. Потом — статьи</div>
+  <p class="section-sub">Перед запуском Дзен-канала мы не угадывали темы. Собрали полную семантику ниши «дизайн интерьера», кластеризовали запросы по смыслу — и только потом дали AI задачу писать статьи. Каждый кластер = редакционная тема.</p>
+  <div class="sem-grid">
+    <div class="sem-cell dark">
+      <div class="sem-label">Шаг 1 · Сбор семантики</div>
+      <div class="sem-title">Тысячи запросов по нише</div>
+      <p class="sem-text">Собрали поисковые запросы по теме «дизайн интерьера» в Яндекс Вордстат. Фильтрация нерелевантных фраз, чистка от мусора. Итог: база коммерческих и информационных запросов с частотами.</p>
+      <div class="cluster-list cluster-list-dark" style="margin-top:20px;">
+        <div class="cluster-item"><span class="cluster-name">дизайн интерьера квартиры</span><span class="cluster-vol">84 000/мес</span></div>
+        <div class="cluster-item"><span class="cluster-name">дизайн интерьера гостиной</span><span class="cluster-vol">41 000/мес</span></div>
+        <div class="cluster-item"><span class="cluster-name">современный стиль интерьера</span><span class="cluster-vol">29 000/мес</span></div>
+        <div class="cluster-item"><span class="cluster-name">дизайн маленькой квартиры</span><span class="cluster-vol">22 000/мес</span></div>
+        <div class="cluster-item"><span class="cluster-name">минимализм в интерьере</span><span class="cluster-vol">18 000/мес</span></div>
+      </div>
+    </div>
+    <div class="sem-cell">
+      <div class="sem-label">Шаг 2 · Кластеризация</div>
+      <div class="sem-title">Запросы → темы → редплан</div>
+      <p class="sem-text">Запросы сгруппированы по смыслу в тематические кластеры. Каждый кластер становится направлением для статей — с якорным запросом, сопутствующими фразами и частотой спроса.</p>
+      <div class="cluster-list" style="margin-top:20px;">
+        <div class="cluster-item"><span class="cluster-name">Стили интерьера</span><span class="cluster-vol">8 статей</span></div>
+        <div class="cluster-item"><span class="cluster-name">Планировка и метраж</span><span class="cluster-vol">6 статей</span></div>
+        <div class="cluster-item"><span class="cluster-name">Материалы и отделка</span><span class="cluster-vol">7 статей</span></div>
+        <div class="cluster-item"><span class="cluster-name">Конкретные помещения</span><span class="cluster-vol">10 статей</span></div>
+        <div class="cluster-item"><span class="cluster-name">Советы и ошибки</span><span class="cluster-vol">5 статей</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-label">05 · Производство статей</div>
+  <div class="section-h2">Нейросеть пишет — Дзен публикует</div>
+  <p class="section-sub">После кластеризации каждая тема передаётся нейросети как задание. AI пишет полноформатную статью с экспертным взглядом, реальными примерами и фотографиями из портфолио студии. Затем статья автоматически публикуется в Дзен по расписанию.</p>
+  <div class="flow-table" style="margin-bottom:48px;">
+    <div class="flow-row">
+      <div class="flow-trigger hl">
+        <div class="flow-freq">Источник</div>
+        <div class="flow-val">Кластер</div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-chain">
+          <div class="flow-step">Тема из кластера</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Главный запрос + LSI-фразы</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Claude пишет статью 3–5 тыс. знаков</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step end">Готово к публикации ✓</div>
+        </div>
+        <div class="flow-note">Статья написана в голосе эксперта-дизайнера: с объяснениями «почему», реальными примерами из практики и советами по применению.</div>
+      </div>
+    </div>
+    <div class="flow-row">
+      <div class="flow-trigger">
+        <div class="flow-freq">По расписанию</div>
+        <div class="flow-val">2× в неделю</div>
+      </div>
+      <div class="flow-body">
+        <div class="flow-chain">
+          <div class="flow-step">Статья + обложка из портфолио</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">Публикация в Дзен</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step">SEO-метатеги и теги</div>
+          <div class="flow-arr">→</div>
+          <div class="flow-step end">Трафик в студию ✓</div>
+        </div>
+        <div class="flow-note">Регулярность — ключ к росту в Дзен. 2 статьи в неделю = стабильный сигнал алгоритму, постепенный рост охвата и подписчиков.</div>
+      </div>
+    </div>
+  </div>
+  <div class="article-grid">
+    <div class="article-card">
+      <div class="article-card-cat">Стили интерьера</div>
+      <div class="article-card-title">Минимализм в интерьере: 7 принципов, которые работают в реальных квартирах</div>
+      <div class="article-card-text">Минимализм — не про пустые стены. Разбираем, как создать пространство без визуального шума, сохранив функциональность и теплоту.</div>
+      <div class="article-card-meta">
+        <span class="article-card-stat">↗ 18 000 запросов/мес</span>
+        <span class="article-card-stat">· 4 200 знаков</span>
+      </div>
+    </div>
+    <div class="article-card">
+      <div class="article-card-cat">Планировка и метраж</div>
+      <div class="article-card-title">Дизайн квартиры 40 м²: как сделать маленькое пространство удобным и визуально большим</div>
+      <div class="article-card-text">Конкретные приёмы зонирования, выбора мебели и отделки для небольших квартир — из реальных проектов студии.</div>
+      <div class="article-card-meta">
+        <span class="article-card-stat">↗ 22 000 запросов/мес</span>
+        <span class="article-card-stat">· 3 800 знаков</span>
+      </div>
+    </div>
+    <div class="article-card">
+      <div class="article-card-cat">Материалы</div>
+      <div class="article-card-title">Натуральный камень в интерьере: где уместен, как выбрать и сколько стоит в 2026 году</div>
+      <div class="article-card-text">Мрамор, травертин, сланец — разбираем каждый материал с точки зрения эксплуатации, стоимости и эстетики.</div>
+      <div class="article-card-meta">
+        <span class="article-card-stat">↗ 9 400 запросов/мес</span>
+        <span class="article-card-stat">· 5 100 знаков</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ТРЕК 3: 4room.me -->
+<div class="track-divider">
+  <span class="track-divider-num">Трек 03</span>
+  <div class="track-divider-line"></div>
+  <span class="track-divider-title">Бренд 4room.me — международное направление</span>
+</div>
+
+<section class="section section-white">
+  <div class="section-label">06 · Новый бренд с нуля</div>
+  <div class="section-h2">Международная версия студии — создана AI</div>
+  <p class="section-sub">4room.me — отдельное направление для выхода на европейский рынок. Новое имя, новая визуальная идентика, сайт на английском, контент в Instagram на английском языке. Всё — от брендбука до первого поста — создано нейросетями.</p>
+  <div class="brand-section">
+    <div class="brand-left">
+      <div class="brand-label">Визуальная идентика</div>
+      <div class="brand-name">4room.me</div>
+      <p class="brand-desc">Премиальный бренд для европейского рынка. Сдержанность, натуральные материалы, качество. Бренд должен читаться как европейская студия с глубокой экспертизой.</p>
+      <div class="color-chips">
+        <div class="color-chip" style="background:#FDFAF6;" title="Chalk"></div>
+        <div class="color-chip" style="background:#F2EDE5;" title="Stone"></div>
+        <div class="color-chip" style="background:#D8CFC2;" title="Linen"></div>
+        <div class="color-chip" style="background:#B8956A;" title="Sand"></div>
+        <div class="color-chip" style="background:#7A7470;" title="Dusk"></div>
+        <div class="color-chip" style="background:#1A1916;" title="Ink"></div>
+      </div>
+    </div>
+    <div class="brand-right">
+      <div class="brand-label">Система</div>
+      <div class="font-sample">
+        <div class="font-serif">Interiors that feel<br><em style="font-style:italic;">like the people</em></div>
+        <div class="font-sans" style="margin-top:12px;">DM SANS · UPPERCASE · SPACING</div>
+      </div>
+      <p class="brand-desc" style="margin-top:24px;">Cormorant Garamond — элегантный серифный шрифт для заголовков. DM Sans — функциональный гротеск для текста. Палитра из натуральных нейтралей: мел, камень, лён, песчаник, сумерки, чернила.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-label">07 · Сайт и портфолио</div>
+  <div class="section-h2">9 проектов — один сайт на английском</div>
+  <p class="section-sub">Многостраничный сайт 4room.me создан нейросетями: архитектура страниц, копирайтинг на английском, страницы проектов с детальным описанием каждого. Портфолио на уровне европейских студий.</p>
+  <div class="split-panel">
+    <div class="split-dark">
+      <div class="split-label">Сайт 4room.me</div>
+      <div class="split-title">От главной до<br><em>каждого проекта</em></div>
+      <p class="split-desc">Полноценный многостраничный сайт: главная с портфолио, страница студии, страница процесса, контакты — и 9 отдельных страниц проектов с фотографиями и описаниями на английском.</p>
+    </div>
+    <div class="split-light">
+      <div class="split-steps">
+        <div class="split-step">
+          <div class="split-step-num">01</div>
+          <div class="split-step-body"><strong>No. 44</strong> — Penthouse, 180 m². «Less of everything, but better» — высокие потолки, тёплый камень и дуб.</div>
+        </div>
+        <div class="split-step">
+          <div class="split-step-num">02</div>
+          <div class="split-step-body"><strong>The Park</strong> — Family apartment, 133 m². Кухня, растворяющаяся в гостиной, детская, которая вырастет вместе с ребёнком.</div>
+        </div>
+        <div class="split-step">
+          <div class="split-step-num">03</div>
+          <div class="split-step-body"><strong>Crystal</strong> — Country estate, 570 m². Натуральный камень и дуб — материалы, выбранные за то, как они стареют.</div>
+        </div>
+        <div class="split-step">
+          <div class="split-step-num">04</div>
+          <div class="split-step-body"><strong>Altitude</strong> — Penthouse, 220 m². «Вид — не декорация, это архитектура». Всё убрано, что не отвечало на вопрос.</div>
+        </div>
+        <div class="split-step">
+          <div class="split-step-num">+5</div>
+          <div class="split-step-body">The Club, The Lake, Passage, Seventh, Botanic — ещё 5 проектов с полным описанием и фотогалереями.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="section-label">08 · Контент для Instagram @4room.me</div>
+  <div class="section-h2">14 постов на английском — готовый контент-банк</div>
+  <p class="section-sub">AI составил полный контент-план для нового международного аккаунта. 14 единиц контента с готовыми текстами (captions), адаптированными под формат Instagram — карусели, одиночные фото, Reels.</p>
+  <div class="challenge-grid">
+    <div class="challenge-card" style="background:#111;">
+      <div class="challenge-num">Carousel</div>
+      <div class="challenge-title" style="color:#fff;">Studio intro</div>
+      <p class="challenge-text" style="color:rgba(255,255,255,0.4);">«Interiors that feel like the people who live in them. That's the whole idea behind 4room.» Знакомство со студией для новой аудитории.</p>
+    </div>
+    <div class="challenge-card" style="background:#111;">
+      <div class="challenge-num">Carousel</div>
+      <div class="challenge-title" style="color:#fff;">No. 44 Penthouse</div>
+      <p class="challenge-text" style="color:rgba(255,255,255,0.4);">«The brief was unusually precise: less of everything, but better.» Полный разбор пентхауса — 6–8 фотографий с деталями.</p>
+    </div>
+    <div class="challenge-card" style="background:#111;">
+      <div class="challenge-num">Reel</div>
+      <div class="challenge-title" style="color:#fff;">Kitchen detail</div>
+      <p class="challenge-text" style="color:rgba(255,255,255,0.4);">«The island that anchors the whole apartment.» Короткий Reel — панорама кухни-острова для охвата в рекомендациях.</p>
+    </div>
+    <div class="challenge-card" style="background:#111;">
+      <div class="challenge-num">Single</div>
+      <div class="challenge-title" style="color:#fff;">Design philosophy</div>
+      <p class="challenge-text" style="color:rgba(255,255,255,0.4);">«We remove more than we add. Every room starts with: what can this space live without?» Типографика на нейтральном фоне.</p>
+    </div>
+    <div class="challenge-card" style="background:#111;">
+      <div class="challenge-num">Carousel</div>
+      <div class="challenge-title" style="color:#fff;">5 Design myths</div>
+      <p class="challenge-text" style="color:rgba(255,255,255,0.4);">«Five things people get wrong about hiring an interior designer.» Вовлекающий образовательный формат с широким охватом.</p>
+    </div>
+    <div class="challenge-card" style="background:#111;">
+      <div class="challenge-num">+9 постов</div>
+      <div class="challenge-title" style="color:#fff;">Ещё 9 единиц контента</div>
+      <p class="challenge-text" style="color:rgba(255,255,255,0.4);">Crystal, The Park, Altitude, The Club, The Lake, Passage, Seventh, Reel «день в студии», крупный план материала.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ТЕХ СТЕК -->
+<section class="section section-white">
+  <div class="section-label">09 · Технологии</div>
+  <div class="section-h2">Стек трёх систем</div>
+  <p class="section-sub">Каждый трек использует свой набор инструментов, но все они интегрированы: данные из одной системы питают другую. Контент студии — основа и для SMM, и для Дзен, и для 4room.me.</p>
+  <div class="tech-grid">
+    <div class="tech-card">
+      <div class="tech-name">Claude AI</div>
+      <div class="tech-role">Тексты и контент</div>
+      <p class="tech-desc">Генерирует подписи к постам на RU/EN, пишет Дзен-статьи по семантическим кластерам, создаёт страницы проектов для 4room.me. Знает голос каждого бренда.</p>
+    </div>
+    <div class="tech-card">
+      <div class="tech-name">Яндекс Вордстат</div>
+      <div class="tech-role">Семантика</div>
+      <p class="tech-desc">Источник данных о поисковом спросе. Тысячи запросов по нише «дизайн интерьера» — частоты, сезонность, регионы. База для кластеризации и редплана.</p>
+    </div>
+    <div class="tech-card">
+      <div class="tech-name">Кластеризатор</div>
+      <div class="tech-role">Группировка запросов</div>
+      <p class="tech-desc">Автоматическая группировка семантики по смысловым кластерам. Каждый кластер = тема для серии статей. Приоритизация по частоте и конкуренции.</p>
+    </div>
+    <div class="tech-card">
+      <div class="tech-name">Автопостинг</div>
+      <div class="tech-role">Публикация SMM</div>
+      <p class="tech-desc">Управление очередью постов, планирование по времени активности аудитории, публикация в Instagram, ВКонтакте и Telegram одновременно по единому контент-плану.</p>
+    </div>
+    <div class="tech-card">
+      <div class="tech-name">Яндекс Дзен API</div>
+      <div class="tech-role">Публикация статей</div>
+      <p class="tech-desc">Автоматическая публикация готовых статей в Дзен по расписанию. SEO-метатеги, обложки из портфолио студии, рубрикация по кластерам.</p>
+    </div>
+    <div class="tech-card">
+      <div class="tech-name">Midjourney + Claude</div>
+      <div class="tech-role">Брендинг 4room.me</div>
+      <p class="tech-desc">Визуальная идентика нового бренда, брендбук, макеты страниц сайта — разработаны при помощи нейросетей. HTML/CSS сайта написан Claude от архитектуры до деталей.</p>
+    </div>
+  </div>
+</section>
+
+<!-- РЕЗУЛЬТАТ -->
+<section class="section">
+  <div class="section-label">10 · Результат</div>
+  <div class="section-h2">Три системы — один маркетинг</div>
+  <p class="section-sub">Студия получила полностью автоматизированный цифровой маркетинг: соцсети ведутся без SMM-менеджера, Дзен наращивает органический трафик, а 4room.me открывает доступ к европейской аудитории.</p>
+  <div class="stat-row">
+    <div class="stat-cell">
+      <div class="stat-num"><em>0</em></div>
+      <div class="stat-title">Ручного труда на SMM</div>
+      <p class="stat-text">Посты генерируются и публикуются автоматически. Команда студии занимается проектами, а не контентом</p>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num"><em>36</em>+</div>
+      <div class="stat-title">Статей на Дзен</div>
+      <p class="stat-text">2 статьи в неделю по семантическому плану. Каждая закрывает кластер запросов и приводит органический трафик</p>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num"><em>EN</em></div>
+      <div class="stat-title">Международный бренд</div>
+      <p class="stat-text">4room.me — полноценная точка входа для европейских клиентов: сайт, Instagram, брендбук. Всё создано AI</p>
+    </div>
+  </div>
+  <div class="quote-block">
+    <div class="quote-text">Мы давно хотели вести и соцсети, и Дзен, и запустить международный аккаунт — но не хватало ресурса. <em>Теперь всё это работает само</em>, без дополнительного человека в команде. И ещё появился 4room.me — бренд, который мы строили бы год вручную.</div>
+    <div class="quote-author">Команда 4room.studio</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="case-cta">
+  <div class="cta-h2">Нужна<br>такая система?</div>
+  <p class="cta-sub">Строим AI-маркетинг для дизайн-студий: SMM-автоматизация, SEO на семантике, брендинг нового направления. Под ключ.</p>
+  <div class="cta-actions">
+    <a href="../../contacts/" class="cta-btn">Обсудить проект</a>
+    <a href="../" class="cta-btn cta-btn-outline">Все кейсы</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="../../" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="../../services/smm/">SMM и ведение соцсетей</a>
+        <a href="../../services/targeting/">Таргетированная реклама</a>
+        <a href="../../services/direct/">Яндекс Директ</a>
+        <a href="../../services/content-machine/">Контент завод</a>
+        <a href="../../services/video/">Видеопроизводство</a>
+        <a href="../../services/reputation/">Управление репутацией</a>
+        <a href="../../services/seo/">Продвижение в поиске</a>
+        <a href="../../services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="../../niches/restaurants/">Рестораны</a>
+        <a href="../../niches/beauty/">Салоны красоты</a>
+        <a href="../../niches/clinic/">Медицина</a>
+        <a href="../../niches/fitness/">Фитнес</a>
+        <a href="../../niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="../../niches/saas/">IT и SaaS</a>
+        <a href="../../niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="../../about/">О нас</a>
+        <a href="../">Кейсы</a>
+        <a href="../../blog/">Блог</a>
+        <a href="../../pricing/">Цены</a><a href="../../contacts/">Контакты</a>
+        <a href="../../contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROAS vs ROI: как правильно считать эффективность рекламы — THNKFOR.ME</title>
+    <link rel="canonical" href="https://thnkfor.me/blog/roas-vs-roi/">
+    <meta property="og:title" content="ROAS vs ROI: как правильно считать эффективность рекламы — THNKFOR.ME">
+<meta name="description" content="90% маркетологов путают ROAS и ROI. Разбираем формулы, ловушки и когда какая метрика важна. Практические примеры с расчётами.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}ul,ol{list-style:none;}
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+.site-header{position:sticky;top:0;z-index:100;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);white-space:nowrap;text-decoration:none;transition:color .15s,border-color .15s;}
+.header-pill:hover,.header-pill.active{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;}
+.header-logo .dot{color:#FF3B00;}.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:32px;}
+.header-nav a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .15s;}
+.header-nav a:hover{color:#FFFFFF;}.header-nav a.active{color:#FF3B00;}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 20px;transition:background .15s;text-decoration:none;}
+.header-cta:hover{background:#FFFFFF;color:#0A0A0A;}
+.article-hero{background:#0A0A0A;padding:80px 48px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.article-cat{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;margin-bottom:20px;}
+.article-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(40px,6vw,80px);letter-spacing:-0.05em;line-height:0.95;color:#FFFFFF;margin-bottom:28px;max-width:800px;}
+.article-meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(255,255,255,0.25);display:flex;gap:24px;flex-wrap:wrap;}
+.article-layout{display:grid;grid-template-columns:1fr 300px;gap:0;align-items:start;max-width:1200px;margin:0 auto;}
+.article-body{padding:56px 48px;border-right:1px solid rgba(0,0,0,0.1);}
+.article-sidebar{padding:40px 32px;position:sticky;top:80px;}
+.toc-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:16px;}
+.toc-list{display:flex;flex-direction:column;gap:2px;}
+.toc-list a{font-size:13px;color:#666;text-decoration:none;padding:6px 0;border-bottom:1px solid rgba(0,0,0,0.06);transition:color .12s;line-height:1.35;}
+.toc-list a:hover{color:#FF3B00;}
+.sidebar-cta{margin-top:40px;background:#0A0A0A;padding:28px 24px;}
+.sidebar-cta-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:12px;}
+.sidebar-cta-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;color:#FFFFFF;letter-spacing:-0.02em;line-height:1.3;margin-bottom:10px;}
+.sidebar-cta-sub{font-size:12px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.sidebar-cta-btn{display:block;background:#FF3B00;color:#FFFFFF;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:13px;padding:11px 16px;text-align:center;transition:background .12s;}
+.sidebar-cta-btn:hover{background:#e03400;}
+h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:28px;letter-spacing:-0.03em;line-height:1.15;color:#0A0A0A;margin:52px 0 20px;padding-top:8px;}
+h3{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:20px;letter-spacing:-0.02em;color:#0A0A0A;margin:32px 0 12px;}
+p{font-size:17px;color:#2a2a2a;line-height:1.7;margin-bottom:20px;}
+.article-lead{font-size:20px;font-weight:400;color:#0A0A0A;line-height:1.55;margin-bottom:28px;letter-spacing:-0.01em;}
+.callout{border-left:3px solid #FF3B00;padding:18px 24px;background:#FFFFFF;margin:28px 0;}
+.callout p{margin:0;font-size:15px;color:#333;line-height:1.65;}
+.callout-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#FF3B00;margin-bottom:8px;}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);margin:32px 0;}
+.stat-cell{background:#FFFFFF;padding:24px 20px;}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:36px;letter-spacing:-0.04em;color:#FF3B00;line-height:1;}
+.stat-desc{font-size:13px;color:#666;line-height:1.45;margin-top:8px;}
+.format-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);margin:28px 0;}
+.format-card{background:#FFFFFF;padding:24px;}
+.format-card:nth-child(odd){background:#F8F8F8;}
+.fc-num{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:#FF3B00;margin-bottom:10px;}
+.fc-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.02em;margin-bottom:8px;}
+.fc-desc{font-size:13px;color:#666;line-height:1.55;}
+.plan-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;}
+.plan-table th{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#666;padding:10px 12px;border-bottom:2px solid rgba(0,0,0,0.1);text-align:left;background:#F8F8F8;}
+.plan-table td{padding:12px 12px;border-bottom:1px solid rgba(0,0,0,0.06);vertical-align:top;line-height:1.5;}
+.plan-table tr:hover td{background:#FFFBF8;}
+.error-list{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+.error-item{background:#FFFFFF;border:1px solid rgba(0,0,0,0.08);padding:20px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;}
+.error-x{font-family:'IBM Plex Mono',monospace;font-size:16px;color:#FF3B00;font-weight:500;padding-top:2px;}
+.error-title{font-size:15px;font-weight:500;margin-bottom:5px;}
+.error-desc{font-size:13px;color:#666;line-height:1.5;}
+.rule-box{background:#0A0A0A;color:#FFFFFF;padding:32px;margin:32px 0;}
+.rule-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:14px;}
+.rule-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.03em;line-height:1.25;color:#FFFFFF;margin-bottom:12px;}
+.rule-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.08);margin-top:20px;}
+.rule-num-cell{background:#111;padding:16px;text-align:center;}
+.rule-num-val{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:28px;color:#FF3B00;letter-spacing:-0.04em;}
+.rule-num-desc{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.3);margin-top:4px;letter-spacing:.06em;}
+.article-footer-cta{background:#FF3B00;padding:64px 48px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;}
+.afc-text h3{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(24px,3vw,40px);color:#FFFFFF;letter-spacing:-0.04em;line-height:1.1;margin-bottom:12px;}
+.afc-text p{color:rgba(255,255,255,0.7);font-size:15px;margin:0;line-height:1.5;}
+.btn-light{background:#FFFFFF;color:#0A0A0A;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;padding:14px 28px;white-space:nowrap;transition:background .15s;text-decoration:none;display:inline-block;}
+.btn-light:hover{background:#F0F0F0;}
+.site-footer{background:#0A0A0A;padding:48px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:14px;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.3);line-height:1.5;margin-bottom:18px;}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:14px;}
+.footer-links{display:flex;flex-direction:column;gap:9px;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color .15s;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:18px 48px;border-top:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;color:rgba(255,255,255,0.15);}
+@media(max-width:768px){.article-layout{grid-template-columns:1fr;}.article-sidebar{display:none;}.header-main{padding:0 20px;}.article-hero{padding:48px 20px;}.article-body{padding:32px 20px;}.article-footer-cta{grid-template-columns:1fr;}.site-footer{grid-template-columns:1fr 1fr;padding:32px 20px;}.stat-grid{grid-template-columns:1fr;}.rule-nums{grid-template-columns:1fr;}}
+
+/* ═══ UNIFIED SITE HEADER + FOOTER ═══ */
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,59,0,0);}60%{box-shadow:0 0 0 6px rgba(255,59,0,0.18);}}
+.site-header{position:sticky!important;top:0!important;z-index:200!important;background:#0A0A0A!important;border-bottom:1px solid rgba(255,255,255,0.08)!important;display:block!important;padding:0!important;height:auto!important;}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item > span:hover,.nav-item:hover > a,.nav-item:hover > span{color:#FFFFFF;}
+.nav-item > a.active,.nav-item > span.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover,.header-nav .header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;box-shadow:none;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid!important;grid-template-columns:1fr 1fr 1fr 1fr!important;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" / loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "ROAS vs ROI: как правильно считать эффективность рекламы — THNKFOR.ME",
+      "url": "https://thnkfor.me/blog/roas-vs-roi/",
+      "description": "90% маркетологов путают ROAS и ROI. Разбираем формулы, ловушки и когда какая метрика важна. Практические примеры с расчётами.",
+      "datePublished": "2024-09-13",
+      "publisher": {
+        "@type": "Organization",
+        "name": "THNKFOR.ME",
+        "url": "https://thnkfor.me",
+        "logo": "https://thnkfor.me/logo.svg",
+        "image": "https://thnkfor.me/team/team_group.jpg",
+        "foundingDate": "2024-09-13",
+        "description": "AI-агентство контент-маркетинга. Автоматизируем SMM, производство контента и аналитику с помощью AI-систем.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+7-995-629-39-31",
+          "contactType": "customer service",
+          "email": "hello@thnkfor.me",
+          "availableLanguage": [
+            "Russian",
+            "English"
+          ]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "sameAs": [
+          "https://t.me/anastasiia_thinkfor"
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Анастасия Мосина",
+          "jobTitle": "Founder & CEO"
+        }
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "THNKFOR.ME",
+        "url": "https://thnkfor.me",
+        "logo": "https://thnkfor.me/logo.svg",
+        "image": "https://thnkfor.me/team/team_group.jpg",
+        "foundingDate": "2024-09-13",
+        "description": "AI-агентство контент-маркетинга. Автоматизируем SMM, производство контента и аналитику с помощью AI-систем.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+7-995-629-39-31",
+          "contactType": "customer service",
+          "email": "hello@thnkfor.me",
+          "availableLanguage": [
+            "Russian",
+            "English"
+          ]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "sameAs": [
+          "https://t.me/anastasiia_thinkfor"
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Анастасия Мосина",
+          "jobTitle": "Founder & CEO"
+        }
+      },
+      "image": "https://thnkfor.me/team/team_group.jpg"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://thnkfor.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Блог",
+          "item": "https://thnkfor.me/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ROAS vs ROI: как правильно считать эффективность рекламы — THNKFOR.ME",
+          "item": "https://thnkfor.me/blog/roas-vs-roi/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="../../services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="../../services/smm/">SMM и соцсети</a>
+          <a href="../../services/targeting/">Таргетированная реклама</a>
+          <a href="../../services/direct/">Яндекс Директ</a>
+          <div class="nav-subitem">
+          <a href="../../services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+          <div class="nav-subdropdown">
+            <a href="../../services/content-machine/restaurant/">Для ресторанов</a>
+            <a href="../../services/content-machine/beauty/">Для салонов красоты</a>
+            <a href="../../services/content-machine/ecom/">Для интернет-магазинов</a>
+            <a href="../../services/content-machine/marketplace/">Для маркетплейсов</a>
+            <a href="../../services/content-machine/fitness/">Для фитнеса</a>
+            <a href="../../services/content-machine/construction/">Для строительства</a>
+          </div>
+        </div>
+          <a href="../../services/video/">Видеопроизводство</a>
+          <a href="../../services/reputation/">Управление репутацией</a>
+          <a href="../../services/seo/">Продвижение в поиске</a>
+          <a href="../../services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="../../niches/restaurants/">Рестораны</a>
+          <a href="../../niches/beauty/">Салоны красоты</a>
+          <a href="../../niches/clinic/">Медицина</a>
+          <a href="../../niches/fitness/">Фитнес</a>
+          <a href="../../niches/saas/">IT и SaaS</a>
+          <a href="../../niches/ecommerce-fashion/">E-commerce</a>
+          <a href="../../niches/realestate/">Недвижимость</a>
+          <a href="../../niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../cases/">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="../../cases/werent/">WeRent — Content Machine</a>
+          <a href="../../cases/tennispoint/">Tennis Point — бот новинок</a>
+          <a href="../../cases/4room/">4room.studio — три AI-системы</a>
+          <a href="../../cases/studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="../../cases/">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../" class="active">Блог</a>
+        <div class="nav-dropdown">
+          <a href="../ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="../content-factory/">Контент-завод</a>
+          <a href="../midjourney-business/">Midjourney для бизнеса</a>
+          <a href="../prompt-engineering/">Prompt Engineering</a>
+          <a href="../n8n-vs-make/">n8n vs Make</a>
+          <a href="../seo-ai-2026/">SEO и AI 2026</a>
+          <a href="../">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../../pricing/">Цены</a><a href="../../contacts/">Контакты</a>
+      </div>
+      <div class="nav-item">
+        <a href="../../about/">О нас</a>
+      </div>
+      <a href="../../contacts/" class="header-cta">Обсудить проект</a>
+    
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="../../services/smm/" class="header-pill">01 · SMM</a>
+    <a href="../../services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="../../services/direct/" class="header-pill">03 · Директ</a>
+    <a href="../../services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="../../services/video/" class="header-pill">05 · Видео</a>
+    <a href="../../services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="../../services/seo/" class="header-pill">07 · SEO</a>
+    <a href="../../services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<section class="article-hero">
+  <div class="article-cat">Performance · ~200 зап/мес</div>
+  <h1 class="article-h1">ROAS vs ROI: как правильно считать эффективность рекламы</h1>
+  <div class="article-meta">
+    <span>THNKFOR.ME</span>
+    <span>Сентябрь 2026</span>
+    <span>12 мин чтения</span>
+  </div>
+</section>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <p class="article-lead">90% маркетологов путают ROAS и ROI. Это не просто вопрос терминологии — это разные управленческие решения. Можно иметь ROAS 5× и при этом терять деньги на каждой продаже. Разбираем формулы, реальные примеры и когда какая метрика важна.</p>
+
+    <div class="stat-grid">
+      <div class="stat-cell">
+        <div class="stat-num">3–5×</div>
+        <div class="stat-desc">средний ROAS по e-commerce, но это не значит прибыльность</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">3.3×</div>
+        <div class="stat-desc">минимальный ROAS при марже 30%, чтобы выйти в ноль</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">60%</div>
+        <div class="stat-desc">рекламодателей оптимизируют под неправильную метрику</div>
+      </div>
+    </div>
+
+    <h2 id="what-is-roas">Что такое ROAS и как его считать</h2>
+
+    <p>ROAS (Return on Ad Spend) — это отношение выручки от рекламы к рекламным расходам. Формула предельно проста:</p>
+
+    <div class="callout">
+      <div class="callout-label">Формула ROAS</div>
+      <p><strong>ROAS = Выручка от рекламы / Рекламные расходы</strong><br><br>
+      Пример: вы потратили 100 000 ₽ на рекламу и получили продажи на 400 000 ₽.<br>
+      ROAS = 400 000 / 100 000 = 4 (или 400%)</p>
+    </div>
+
+    <p>ROAS показывает, сколько рублей выручки вы получаете на каждый рубль рекламных расходов. Метрика удобная, быстрая и понятная. Именно поэтому её так любят рекламные кабинеты — Facebook Ads, Яндекс Директ, Google Ads — и именно поэтому на неё так легко ориентироваться неправильно.</p>
+
+    <p>Главная проблема ROAS: он не учитывает себестоимость товара, операционные расходы, возвраты и прочие издержки. Вы можете показывать ROAS 10× и при этом работать в убыток, если ваша наценка составляет 5%.</p>
+
+    <h3>Нормативы ROAS по нишам</h3>
+
+    <p>Ориентировочные значения ROAS, ниже которых бизнес чаще всего убыточен по рекламе:</p>
+
+    <table class="plan-table">
+      <thead>
+        <tr>
+          <th>Ниша</th>
+          <th>Средняя маржа</th>
+          <th>Break-even ROAS</th>
+          <th>Целевой ROAS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Одежда и аксессуары</td>
+          <td>50–60%</td>
+          <td>1.7–2.0×</td>
+          <td>3–4×</td>
+        </tr>
+        <tr>
+          <td>Электроника</td>
+          <td>10–20%</td>
+          <td>5–10×</td>
+          <td>12–15×</td>
+        </tr>
+        <tr>
+          <td>Продукты питания</td>
+          <td>20–35%</td>
+          <td>2.9–5×</td>
+          <td>6–8×</td>
+        </tr>
+        <tr>
+          <td>Косметика</td>
+          <td>60–80%</td>
+          <td>1.25–1.7×</td>
+          <td>3–5×</td>
+        </tr>
+        <tr>
+          <td>Мебель и интерьер</td>
+          <td>30–45%</td>
+          <td>2.2–3.3×</td>
+          <td>5–7×</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="what-is-roi">Что такое ROI и почему он важнее</h2>
+
+    <p>ROI (Return on Investment) — возврат на инвестиции. В контексте рекламы формула такая:</p>
+
+    <div class="callout">
+      <div class="callout-label">Формула ROI</div>
+      <p><strong>ROI = (Прибыль от рекламы − Рекламные расходы) / Рекламные расходы × 100%</strong><br><br>
+      Где прибыль = выручка × маржа<br><br>
+      Пример: выручка 400 000 ₽, маржа 30%, рекламный бюджет 100 000 ₽<br>
+      Прибыль от рекламы = 400 000 × 0.30 = 120 000 ₽<br>
+      ROI = (120 000 − 100 000) / 100 000 × 100% = <strong>20%</strong></p>
+    </div>
+
+    <p>В этом примере ROAS = 4×, что выглядит отлично. Но ROI = 20% — бизнес едва покрывает рекламу. Если добавить операционные расходы (зарплаты, логистику, аренду), ROI легко уйдёт в минус при том же ROAS 4×.</p>
+
+    <p>ROI — это честная метрика. Она говорит: заработали ли вы деньги или нет? Именно на неё должны смотреть собственники и финансовые директора при оценке рекламных каналов.</p>
+
+    <h3>Расширенный ROI с учётом всех расходов</h3>
+
+    <p>Профессиональный расчёт ROI включает все косвенные затраты:</p>
+
+    <div class="callout">
+      <div class="callout-label">Полная формула</div>
+      <p><strong>ROI = (Выручка × Маржа − Рекламный бюджет − Комиссии агентства − Стоимость контента − Логистика) / (Рекламный бюджет + Все сопутствующие расходы) × 100%</strong></p>
+    </div>
+
+    <h2 id="when-roas-lies">Когда ROAS «врёт»: примеры ловушек</h2>
+
+    <p>Высокий ROAS не всегда означает прибыльность. Рассмотрим классические ловушки:</p>
+
+    <div class="error-list">
+      <div class="error-item">
+        <div class="error-x">01</div>
+        <div>
+          <div class="error-title">Двойной счёт конверсий</div>
+          <div class="error-desc">Пользователь видит рекламу в поиске, в РСЯ и в ретаргетинге — и все три канала «засчитывают» себе конверсию. Реальный ROAS в 2–3 раза ниже отображаемого. Проверяйте атрибуцию.</div>
+        </div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">02</div>
+        <div>
+          <div class="error-title">ROAS без учёта возвратов</div>
+          <div class="error-desc">В некоторых нишах (fashion, электроника) возвраты достигают 30–40%. Рекламный кабинет считает выручку на момент заказа, не возврата. Реальный ROAS ниже на величину возвратов.</div>
+        </div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">03</div>
+        <div>
+          <div class="error-title">Оптимизация под ROAS убивает масштаб</div>
+          <div class="error-desc">Алгоритмы, оптимизированные на максимальный ROAS, выбирают только «лёгкие» конверсии — ретаргетинг, брендовые запросы. Новые клиенты не привлекаются, база стагнирует.</div>
+        </div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">04</div>
+        <div>
+          <div class="error-title">Игнорирование сезонности</div>
+          <div class="error-desc">В высокий сезон ROAS естественно растёт (спрос выше). Отключать рекламу в низкий сезон только потому что ROAS упал — ошибка. Смотрите на абсолютную прибыль, не кратность.</div>
+        </div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">05</div>
+        <div>
+          <div class="error-title">Сравнение каналов по ROAS без учёта роли в воронке</div>
+          <div class="error-desc">Брендовая реклама в поиске всегда показывает ROAS выше — она «забирает» конверсии у других каналов. Отключив медийную рекламу с низким ROAS, вы уничтожаете верхнюю часть воронки.</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="margin-formulas">Как считать с учётом маржи</h2>
+
+    <p>Для грамотного расчёта break-even ROAS нужно знать маржинальность. Вот ключевые формулы:</p>
+
+    <div class="callout">
+      <div class="callout-label">Break-even ROAS</div>
+      <p><strong>Break-even ROAS = 1 / Маржа</strong><br><br>
+      При марже 30%: Break-even ROAS = 1 / 0.30 = 3.33×<br>
+      При марже 50%: Break-even ROAS = 1 / 0.50 = 2.0×<br>
+      При марже 20%: Break-even ROAS = 1 / 0.20 = 5.0×</p>
+    </div>
+
+    <p>Это минимальный ROAS, при котором рекламные расходы окупаются валовой прибылью. Целевой ROAS должен быть выше с учётом операционных расходов.</p>
+
+    <table class="plan-table">
+      <thead>
+        <tr>
+          <th>Показатель</th>
+          <th>Сценарий A (маржа 30%)</th>
+          <th>Сценарий B (маржа 50%)</th>
+          <th>Сценарий C (маржа 20%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Рекламный бюджет</td>
+          <td>100 000 ₽</td>
+          <td>100 000 ₽</td>
+          <td>100 000 ₽</td>
+        </tr>
+        <tr>
+          <td>Выручка (ROAS 4×)</td>
+          <td>400 000 ₽</td>
+          <td>400 000 ₽</td>
+          <td>400 000 ₽</td>
+        </tr>
+        <tr>
+          <td>Валовая прибыль</td>
+          <td>120 000 ₽</td>
+          <td>200 000 ₽</td>
+          <td>80 000 ₽</td>
+        </tr>
+        <tr>
+          <td>Прибыль после рекламы</td>
+          <td><strong>+20 000 ₽</strong></td>
+          <td><strong>+100 000 ₽</strong></td>
+          <td><strong>−20 000 ₽</strong></td>
+        </tr>
+        <tr>
+          <td>ROI</td>
+          <td>+20%</td>
+          <td>+100%</td>
+          <td>−20%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Один и тот же ROAS 4× даёт принципиально разный результат в зависимости от маржинальности бизнеса. Сценарий C — убыточный при «хорошем» ROAS.</p>
+
+    <h2 id="unit-economics">Unit-экономика: следующий уровень после ROAS</h2>
+
+    <p>Unit-экономика — это расчёт прибыльности на уровне одной единицы: одного клиента, одного заказа, одного товара. Ключевые метрики:</p>
+
+    <div class="format-grid">
+      <div class="format-card">
+        <div class="fc-num">01</div>
+        <div class="fc-title">CAC (стоимость привлечения клиента)</div>
+        <div class="fc-desc">Рекламные расходы / количество новых клиентов. Не путайте с CPO — стоимостью заказа. Клиент может сделать много заказов.</div>
+      </div>
+      <div class="format-card">
+        <div class="fc-num">02</div>
+        <div class="fc-title">LTV (пожизненная ценность клиента)</div>
+        <div class="fc-desc">Средний чек × частота покупок × срок жизни клиента × маржа. Если LTV > CAC в 3× — бизнес здоров.</div>
+      </div>
+      <div class="format-card">
+        <div class="fc-num">03</div>
+        <div class="fc-title">Payback Period</div>
+        <div class="fc-desc">Сколько месяцев нужно клиенту, чтобы окупить CAC. Норма для e-commerce — 3–6 месяцев. Для SaaS — до 12.</div>
+      </div>
+      <div class="format-card">
+        <div class="fc-num">04</div>
+        <div class="fc-title">AOV (средний чек)</div>
+        <div class="fc-desc">Влияет на ROAS и ROI напрямую. Рост AOV на 10% при том же бюджете — это рост ROAS на 10% без изменений в рекламе.</div>
+      </div>
+    </div>
+
+    <div class="rule-box">
+      <div class="rule-label">Золотое правило unit-экономики</div>
+      <div class="rule-title">LTV должен быть как минимум в 3 раза выше CAC</div>
+      <p style="color:rgba(255,255,255,0.5);font-size:14px;margin-top:10px;line-height:1.6;">Если это соотношение ниже — рекламная модель нежизнеспособна при масштабировании. Если выше 5× — есть потенциал для агрессивного роста.</p>
+      <div class="rule-nums">
+        <div class="rule-num-cell">
+          <div class="rule-num-val">3:1</div>
+          <div class="rule-num-desc">мин. LTV:CAC</div>
+        </div>
+        <div class="rule-num-cell">
+          <div class="rule-num-val">5:1</div>
+          <div class="rule-num-desc">хороший LTV:CAC</div>
+        </div>
+        <div class="rule-num-cell">
+          <div class="rule-num-val">10:1</div>
+          <div class="rule-num-desc">отличный, масштаб</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="which-metric-to-use">Какие метрики использовать в зависимости от цели</h2>
+
+    <p>Нет одной правильной метрики для всех ситуаций. Выбор зависит от стадии бизнеса и задачи:</p>
+
+    <table class="plan-table">
+      <thead>
+        <tr>
+          <th>Задача</th>
+          <th>Метрика</th>
+          <th>Почему</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Оперативная оптимизация кампаний</td>
+          <td>ROAS / CPO</td>
+          <td>Быстро считается, доступно в рекламных кабинетах в реальном времени</td>
+        </tr>
+        <tr>
+          <td>Оценка прибыльности канала</td>
+          <td>ROI с учётом маржи</td>
+          <td>Показывает реальный финансовый результат, а не суррогатную метрику</td>
+        </tr>
+        <tr>
+          <td>Масштабирование и инвестиции</td>
+          <td>LTV:CAC, Payback Period</td>
+          <td>Позволяет понять, сколько можно «заплатить» за клиента и когда он окупится</td>
+        </tr>
+        <tr>
+          <td>Сравнение каналов</td>
+          <td>ROI + атрибуция</td>
+          <td>ROAS по каналу не учитывает его роль в воронке — нужна многоканальная атрибуция</td>
+        </tr>
+        <tr>
+          <td>Отчётность для собственника</td>
+          <td>ROI, EBITDA от рекламы</td>
+          <td>Бизнес-язык: заработали или потеряли деньги, сколько прибыли принесла реклама</td>
+        </tr>
+        <tr>
+          <td>Стартап, тест гипотез</td>
+          <td>CPO, CPA, ROAS</td>
+          <td>На старте важно проверить спрос и найти работающие связки, а не считать итоговую прибыль</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <div class="callout-label">Главный вывод</div>
+      <p>ROAS — это тактическая метрика для операционного управления кампаниями. ROI — стратегическая метрика для принятия бизнес-решений. Используйте обе, но помните: ROAS без знания маржи — это иллюзия контроля.</p>
+    </div>
+
+    <p>Хороший performance-маркетолог всегда начинает с вопроса: «Какова ваша маржинальность?» Только зная ответ, можно выставить правильный целевой ROAS и честно оценить эффективность рекламы. Без этого даже самый красивый кабинет с ROAS 8× может скрывать убыточный бизнес.</p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="toc-label">Содержание</div>
+    <nav class="toc-list">
+      <a href="#what-is-roas">Что такое ROAS</a>
+      <a href="#what-is-roi">Что такое ROI и почему важнее</a>
+      <a href="#when-roas-lies">Когда ROAS «врёт»</a>
+      <a href="#margin-formulas">Расчёт с учётом маржи</a>
+      <a href="#unit-economics">Unit-экономика</a>
+      <a href="#which-metric-to-use">Какую метрику выбрать</a>
+    </nav>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-label">Нужен аудит?</div>
+      <div class="sidebar-cta-title">Проверим ваши рекламные кампании</div>
+      <div class="sidebar-cta-sub">Покажем реальный ROI с учётом маржи и найдём где вы теряете деньги.</div>
+      <a href="/contacts/" class="sidebar-cta-btn">Заказать аудит</a>
+    </div>
+  </aside>
+</div>
+
+<section class="article-footer-cta">
+  <div class="afc-text">
+    <h3>Хотите считать рекламу правильно?</h3>
+    <p>Настроим аналитику с учётом маржинальности и unit-экономики. Вы будете знать реальный ROI каждого канала.</p>
+  </div>
+  <a href="/contacts/" class="btn-light">Обсудить проект</a>
+</section>
+
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="../../" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="../../services/smm/">SMM и ведение соцсетей</a>
+        <a href="../../services/targeting/">Таргетированная реклама</a>
+        <a href="../../services/direct/">Яндекс Директ</a>
+        <a href="../../services/content-machine/">Контент завод</a>
+        <a href="../../services/video/">Видеопроизводство</a>
+        <a href="../../services/reputation/">Управление репутацией</a>
+        <a href="../../services/seo/">Продвижение в поиске</a>
+        <a href="../../services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="../../niches/restaurants/">Рестораны</a>
+        <a href="../../niches/beauty/">Салоны красоты</a>
+        <a href="../../niches/clinic/">Медицина</a>
+        <a href="../../niches/fitness/">Фитнес</a>
+        <a href="../../niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="../../niches/saas/">IT и SaaS</a>
+        <a href="../../niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="../../about/">О нас</a>
+        <a href="../../cases/">Кейсы</a>
+        <a href="../">Блог</a>
+        <a href="../../pricing/">Цены</a><a href="../../contacts/">Контакты</a>
+        <a href="../../contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span class="footer-copy">© 2026 THNKFOR.ME — AI-маркетинг</span>
+  <span class="footer-copy">Москва · Санкт-Петербург</span>
+</div>
+
+</body>
+</html>

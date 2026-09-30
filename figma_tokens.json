@@ -1,0 +1,307 @@
+{
+  "global": {
+    "color": {
+      "black": {
+        "value": "#141414",
+        "type": "color",
+        "description": "Основной фон, тёмные секции"
+      },
+      "black-mid": {
+        "value": "#1C1C1C",
+        "type": "color",
+        "description": "Карточки на тёмном фоне"
+      },
+      "black-soft": {
+        "value": "#232323",
+        "type": "color",
+        "description": "Вторичные поверхности"
+      },
+      "white": {
+        "value": "#FFFFFF",
+        "type": "color",
+        "description": "Заголовки и кнопки на тёмном"
+      },
+      "grey-light": {
+        "value": "#F5F5F5",
+        "type": "color",
+        "description": "Фон светлых секций"
+      },
+      "grey-pale": {
+        "value": "#EBEBEB",
+        "type": "color",
+        "description": "Карточки на светлом фоне"
+      },
+      "text-dark": {
+        "value": "#BEBEBE",
+        "type": "color",
+        "description": "Основной текст на тёмном"
+      },
+      "text-light": {
+        "value": "#555555",
+        "type": "color",
+        "description": "Основной текст на светлом"
+      },
+      "muted-dark": {
+        "value": "#777777",
+        "type": "color",
+        "description": "Метки и подписи на тёмном"
+      },
+      "muted-light": {
+        "value": "#999999",
+        "type": "color",
+        "description": "Метки и подписи на светлом"
+      },
+      "border-dark": {
+        "value": "rgba(255,255,255,0.08)",
+        "type": "color",
+        "description": "Бордер на тёмном фоне"
+      },
+      "border-card": {
+        "value": "rgba(255,255,255,0.06)",
+        "type": "color",
+        "description": "Бордер карточки на тёмном"
+      },
+      "border-light": {
+        "value": "rgba(0,0,0,0.07)",
+        "type": "color",
+        "description": "Бордер на светлом фоне"
+      },
+      "border-card-light": {
+        "value": "rgba(0,0,0,0.05)",
+        "type": "color",
+        "description": "Бордер карточки на светлом"
+      }
+    },
+
+    "borderRadius": {
+      "card": {
+        "value": "24",
+        "type": "borderRadius",
+        "description": "Стандартная карточка"
+      },
+      "card-large": {
+        "value": "32",
+        "type": "borderRadius",
+        "description": "Крупная карточка-фичер"
+      },
+      "button": {
+        "value": "50",
+        "type": "borderRadius",
+        "description": "Pill-кнопки"
+      }
+    },
+
+    "spacing": {
+      "section-vertical": {
+        "value": "140",
+        "type": "spacing",
+        "description": "Вертикальный отступ секции (десктоп)"
+      },
+      "container-pad": {
+        "value": "80",
+        "type": "spacing",
+        "description": "Горизонтальный отступ контейнера"
+      },
+      "card-pad": {
+        "value": "40",
+        "type": "spacing",
+        "description": "Внутренний отступ карточки"
+      },
+      "card-pad-large": {
+        "value": "56",
+        "type": "spacing",
+        "description": "Внутренний отступ крупной карточки"
+      },
+      "gap-grid-2": {
+        "value": "24",
+        "type": "spacing",
+        "description": "Зазор двухколоночной сетки"
+      },
+      "gap-grid-3": {
+        "value": "20",
+        "type": "spacing",
+        "description": "Зазор трёхколоночной сетки"
+      }
+    },
+
+    "fontFamilies": {
+      "heading": {
+        "value": "Gilroy",
+        "type": "fontFamilies",
+        "description": "Заголовки H1–H3 (лицензия)"
+      },
+      "body": {
+        "value": "Gilroy",
+        "type": "fontFamilies",
+        "description": "Основной текст (лицензия)"
+      },
+      "ui": {
+        "value": "Raleway",
+        "type": "fontFamilies",
+        "description": "Кнопки, навигация, метки (Google Fonts)"
+      }
+    },
+
+    "fontWeights": {
+      "regular": { "value": "400", "type": "fontWeights" },
+      "medium":  { "value": "500", "type": "fontWeights" },
+      "semibold": { "value": "600", "type": "fontWeights" },
+      "bold":    { "value": "700", "type": "fontWeights" }
+    },
+
+    "lineHeights": {
+      "hero":   { "value": "1.05", "type": "lineHeights" },
+      "heading":{ "value": "1.15", "type": "lineHeights" },
+      "body":   { "value": "1.65", "type": "lineHeights" },
+      "ui":     { "value": "1.20", "type": "lineHeights" }
+    },
+
+    "letterSpacing": {
+      "hero":     { "value": "-2%", "type": "letterSpacing" },
+      "heading":  { "value": "-1%", "type": "letterSpacing" },
+      "body":     { "value": "0%",  "type": "letterSpacing" },
+      "button":   { "value": "3%",  "type": "letterSpacing" },
+      "nav":      { "value": "2%",  "type": "letterSpacing" },
+      "label":    { "value": "10%", "type": "letterSpacing" }
+    },
+
+    "fontSizes": {
+      "hero":    { "value": "130", "type": "fontSizes", "description": "H1 главной страницы" },
+      "h1":      { "value": "80",  "type": "fontSizes", "description": "H1 внутренних страниц" },
+      "h2":      { "value": "56",  "type": "fontSizes", "description": "Заголовки секций" },
+      "h3":      { "value": "36",  "type": "fontSizes", "description": "Заголовки карточек" },
+      "lead":    { "value": "22",  "type": "fontSizes", "description": "Вводный параграф" },
+      "body":    { "value": "18",  "type": "fontSizes", "description": "Основной текст" },
+      "small":   { "value": "15",  "type": "fontSizes", "description": "Вторичный текст" },
+      "button":  { "value": "15",  "type": "fontSizes", "description": "Текст кнопок" },
+      "nav":     { "value": "15",  "type": "fontSizes", "description": "Навигация" },
+      "label":   { "value": "12",  "type": "fontSizes", "description": "Метки UPPERCASE" },
+      "caption": { "value": "14",  "type": "fontSizes", "description": "Подписи под изображениями" }
+    }
+  },
+
+  "typography": {
+    "hero": {
+      "value": {
+        "fontFamily": "{global.fontFamilies.heading}",
+        "fontWeight": "{global.fontWeights.medium}",
+        "fontSize": "{global.fontSizes.hero}",
+        "lineHeight": "{global.lineHeights.hero}",
+        "letterSpacing": "{global.letterSpacing.hero}"
+      },
+      "type": "typography",
+      "description": "Gilroy 500 · 130px · lh 1.05 · ls −2% · H1 главной"
+    },
+    "h1": {
+      "value": {
+        "fontFamily": "{global.fontFamilies.heading}",
+        "fontWeight": "{global.fontWeights.regular}",
+        "fontSize": "{global.fontSizes.h1}",
+        "lineHeight": "{global.lineHeights.hero}",
+        "letterSpacing": "{global.letterSpacing.hero}"
+      },
+      "type": "typography",
+      "description": "Gilroy 400 · 80px · lh 1.05 · ls −2% · H1 страниц"
+    },
+    "h2": {
+      "value": {
+        "fontFamily": "{global.fontFamilies.heading}",
+        "fontWeight": "{global.fontWeights.regular}",
+        "fontSize": "{global.fontSizes.h2}",
+        "lineHeight": "{global.lineHeights.heading}",
+        "letterSpacing": "{global.letterSpacing.heading}"
+      },
+      "type": "typography",
+      "description": "Gilroy 400 · 56px · lh 1.15 · ls −1% · Заголовки секций"
+    },
+    "h3": {
+      "value": {
+        "fontFamily": "{global.fontFamilies.heading}",
+        "fontWeight": "{global.fontWeights.regular}",
+        "fontSize": "{global.fontSizes.h3}",
+        "lineHeight": "{global.lineHeights.heading}",
+        "letterSpacing": "{global.letterSpacing.heading}"
+      },
+      "type": "typography",
+      "description": "Gilroy 400 · 36px · lh 1.15 · Заголовки карточек"
+    },
+    "lead": {
+      "value": {
+        "fontFamily": "{global.fontFamilies.body}",
+        "fontWeight": "{global.fontWeights.regular}",
+        "fontSize": "{global.fontSizes.lead}",
+        "lineHeight": "{global.lineHeights.body}",
+        "letterSpacing": "{global.letterSpacing.body}"
+      },
+      "type": "typography",
+      "description": "Gilroy 400 · 22px · lh 1.65 · Вводный параграф"
+    },
+    "body": {
+      "value": {
+        "fontFamily": "{global.fontFamilies.body}",
+        "fontWeight": "{global.fontWeights.regular}",
+        "fontSize": "{global.fontSizes.body}",
+        "lineHeight": "{global.lineHeights.body}",
+        "letterSpacing": "{global.letterSpacing.body}"
+      },
+      "type": "typography",
+      "description": "Gilroy 400 · 18px · lh 1.65 · Основной текст"
+    },
+    "small": {
+      "value": {
+        "fontFamily": "{global.fontFamilies.body}",
+        "fontWeight": "{global.fontWeights.regular}",
+        "fontSize": "{global.fontSizes.small}",
+        "lineHeight": "{global.lineHeights.body}",
+        "letterSpacing": "{global.letterSpacing.body}"
+      },
+      "type": "typography",
+      "description": "Gilroy 400 · 15px · lh 1.65 · Вторичный текст"
+    },
+    "button": {
+      "value": {
+        "fontFamily": "{global.fontFamilies.ui}",
+        "fontWeight": "{global.fontWeights.semibold}",
+        "fontSize": "{global.fontSizes.button}",
+        "lineHeight": "{global.lineHeights.ui}",
+        "letterSpacing": "{global.letterSpacing.button}"
+      },
+      "type": "typography",
+      "description": "Raleway 600 · 15px · ls 3% · Кнопки"
+    },
+    "nav": {
+      "value": {
+        "fontFamily": "{global.fontFamilies.ui}",
+        "fontWeight": "{global.fontWeights.semibold}",
+        "fontSize": "{global.fontSizes.nav}",
+        "lineHeight": "{global.lineHeights.ui}",
+        "letterSpacing": "{global.letterSpacing.nav}"
+      },
+      "type": "typography",
+      "description": "Raleway 600 · 15px · ls 2% · Навигация"
+    },
+    "label": {
+      "value": {
+        "fontFamily": "{global.fontFamilies.ui}",
+        "fontWeight": "{global.fontWeights.semibold}",
+        "fontSize": "{global.fontSizes.label}",
+        "lineHeight": "{global.lineHeights.ui}",
+        "letterSpacing": "{global.letterSpacing.label}",
+        "textCase": "uppercase"
+      },
+      "type": "typography",
+      "description": "Raleway 600 · 12px UPPERCASE · ls 10% · Теги секций"
+    },
+    "caption": {
+      "value": {
+        "fontFamily": "{global.fontFamilies.ui}",
+        "fontWeight": "{global.fontWeights.regular}",
+        "fontSize": "{global.fontSizes.caption}",
+        "lineHeight": "{global.lineHeights.body}",
+        "letterSpacing": "{global.letterSpacing.body}"
+      },
+      "type": "typography",
+      "description": "Raleway 400 · 14px · Подписи под изображениями"
+    }
+  }
+}

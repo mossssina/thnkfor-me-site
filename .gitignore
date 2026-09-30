@@ -1,0 +1,16 @@
+# Секреты и конфиги
+.env
+.env.*
+
+# Состояние агентов
+direct_agent_state.json
+direct_*.py
+direct_*.md
+interlinking_report.md
+*.log
+*.jsonl
+
+# Системное
+.DS_Store
+Thumbs.db
+*.swp

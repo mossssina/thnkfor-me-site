@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кейсы — THNKFOR.ME</title>
+    <link rel="canonical" href="https://thnkfor.me/cases/">
+    <meta property="og:title" content="Кейсы — THNKFOR.ME">
+<meta name="description" content="Реальные проекты AI-маркетинга: автоматизация контента, боты, брендинг с нейросетями. Каждый кейс — работающая система, не концепт.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Space Grotesk',sans-serif;background:#F8F8F8;color:#0A0A0A;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:100;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+.header-nav{display:flex;align-items:center;gap:32px;}
+.header-nav a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);transition:color .15s;}
+.header-nav a:hover{color:#FFFFFF;}.header-nav a.active{color:#FF3B00;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;}
+.header-logo .dot{color:#FF3B00;}.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 20px;transition:background .15s;}
+.header-cta:hover{background:#FFFFFF;color:#0A0A0A;}
+
+/* HERO */
+.page-hero{background:#0A0A0A;padding:80px 48px 72px;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;top:0;right:0;width:60%;height:100%;background:radial-gradient(ellipse at 80% 40%,rgba(255,59,0,0.06) 0%,transparent 60%);pointer-events:none;}
+.hero-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:32px;}
+.hero-h1{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(44px,7vw,96px);letter-spacing:-0.055em;line-height:0.92;color:#FFFFFF;margin-bottom:24px;animation:fadeUp .5s ease both;}
+.hero-h1 em{font-style:normal;color:#FF3B00;}
+.hero-sub{font-size:17px;color:rgba(255,255,255,0.35);line-height:1.65;max-width:520px;}
+.hero-counter{margin-top:48px;display:flex;gap:40px;border-top:1px solid rgba(255,255,255,0.08);padding-top:32px;}
+.hc-val{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:40px;letter-spacing:-0.05em;line-height:1;color:#FFFFFF;margin-bottom:4px;}
+.hc-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.2);}
+
+/* FILTER BAR */
+.filter-bar{background:#FFFFFF;border-bottom:1px solid rgba(0,0,0,0.08);padding:0 48px;display:flex;align-items:center;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.filter-bar::-webkit-scrollbar{display:none;}
+.filter-btn{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#999;padding:18px 16px;border:none;background:none;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:color .12s,border-color .12s;}
+.filter-btn:hover{color:#0A0A0A;}
+.filter-btn.active{color:#FF3B00;border-bottom-color:#FF3B00;}
+
+/* CASES GRID */
+.cases-section{padding:0 48px 80px;}
+.cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.08);margin-top:1px;}
+
+/* CASE CARD */
+.case-card{background:#FFFFFF;display:flex;flex-direction:column;transition:background .15s;position:relative;overflow:hidden;}
+.case-card:hover{background:#F8F8F8;}
+.case-card-link{display:flex;flex-direction:column;flex:1;padding:40px 40px 36px;}
+.case-card-top{display:flex;align-items:start;justify-content:space-between;margin-bottom:32px;}
+.case-num{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#ccc;}
+.case-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.case-tag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#FF3B00;border:1px solid rgba(255,59,0,0.2);padding:3px 8px;}
+.case-client{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#999;margin-bottom:12px;}
+.case-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(22px,2.5vw,32px);letter-spacing:-0.04em;line-height:1.1;color:#0A0A0A;margin-bottom:14px;}
+.case-title em{font-style:normal;color:#FF3B00;}
+.case-desc{font-size:14px;color:#666;line-height:1.65;flex:1;margin-bottom:28px;}
+.case-stats{display:flex;gap:0;border-top:1px solid rgba(0,0,0,0.06);padding-top:24px;margin-top:auto;}
+.case-stat{flex:1;padding-right:20px;}
+.case-stat:not(:last-child){border-right:1px solid rgba(0,0,0,0.06);margin-right:20px;}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:26px;letter-spacing:-0.04em;line-height:1;color:#0A0A0A;margin-bottom:4px;}
+.stat-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#999;line-height:1.4;}
+.case-arrow{position:absolute;bottom:36px;right:40px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:#ccc;transition:color .15s,transform .15s;}
+.case-card:hover .case-arrow{color:#FF3B00;transform:translate(4px,-4px);}
+
+/* SOON CARD */
+.case-card.soon{background:#F4F4F4;cursor:default;}
+.case-card.soon:hover{background:#F4F4F4;}
+.soon-badge{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#FF3B00;background:rgba(255,59,0,0.08);border:1px solid rgba(255,59,0,0.15);padding:5px 12px;margin-bottom:24px;}
+.soon-dot{width:6px;height:6px;border-radius:50%;background:#FF3B00;animation:pulse 1.8s ease infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.7);}}
+.case-card.soon .case-title{color:#aaa;}
+.case-card.soon .case-desc{color:#bbb;}
+.soon-placeholder{display:flex;flex-direction:column;gap:8px;margin-top:24px;}
+.soon-line{height:10px;background:rgba(0,0,0,0.06);}
+.soon-line:nth-child(1){width:80%;}
+.soon-line:nth-child(2){width:60%;}
+.soon-line:nth-child(3){width:70%;}
+
+/* WIDE CARD (full-width) */
+.case-card.wide{grid-column:1/-1;}
+
+/* CTA */
+.cases-cta{background:#FF3B00;padding:72px 48px;margin-top:1px;}
+.cta-h2{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(32px,5vw,68px);letter-spacing:-0.05em;line-height:0.95;color:#FFFFFF;margin-bottom:20px;}
+.cta-sub{font-size:16px;color:rgba(255,255,255,0.7);max-width:460px;margin-bottom:40px;line-height:1.6;}
+.cta-btn{display:inline-block;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;background:#FFFFFF;color:#0A0A0A;padding:16px 32px;transition:background .15s;}
+.cta-btn:hover{background:#0A0A0A;color:#FFFFFF;}
+
+/* FOOTER */
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:24px;}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+
+/* ═══ UNIFIED SITE HEADER ═══ */
+@keyframes b-blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+@keyframes cta-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,59,0,0);}60%{box-shadow:0 0 0 6px rgba(255,59,0,0.18);}}
+.site-header{position:sticky;top:0;z-index:200;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,0.08);}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.header-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.02em;color:#FFFFFF;text-decoration:none;}
+.header-logo .dot{color:#FF3B00;}
+.header-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.header-nav{display:flex;align-items:center;gap:0;}
+.nav-item{position:relative;display:flex;align-items:center;}
+.nav-item > a,.nav-item > span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);padding:18px 16px;transition:color .15s;text-decoration:none;cursor:pointer;white-space:nowrap;display:block;}
+.nav-item > a:hover,.nav-item > span:hover,.nav-item:hover > a,.nav-item:hover > span{color:#FFFFFF;}
+.nav-item > a.active,.nav-item > span.active{color:#FF3B00!important;}
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:220px;background:#111;border:1px solid rgba(255,255,255,0.1);border-top:2px solid #FF3B00;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:300;}
+.nav-item:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-dropdown a{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.45);padding:11px 18px;border-bottom:1px solid rgba(255,255,255,0.06);transition:color .12s,background .12s;text-decoration:none;}
+.nav-dropdown a:last-child{border-bottom:none;}
+.nav-dropdown a:hover{color:#FF3B00;background:rgba(255,59,0,0.06);}
+.header-cta{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;background:#FF3B00;color:#FFFFFF;padding:10px 22px;margin-left:16px;letter-spacing:0;text-decoration:none;transition:background .15s,color .15s;}
+.header-cta:hover,.header-nav .header-cta:hover{background:#0A0A0A!important;color:#FFFFFF!important;box-shadow:none;}
+.header-pills{display:flex;align-items:center;gap:6px;padding:0 48px 10px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);}
+.header-pill{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);padding:3px 8px;border:1px solid rgba(255,255,255,0.1);transition:color .15s,border-color .15s;white-space:nowrap;text-decoration:none;}
+.header-pill:hover{color:#FF3B00;border-color:rgba(255,59,0,0.4);}
+/* ═══ UNIFIED SITE FOOTER ═══ */
+.site-footer{background:#0A0A0A;padding:48px;border-top:1px solid rgba(255,255,255,0.08);display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:48px;}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.03em;color:#FFFFFF;margin-bottom:16px;text-decoration:none;display:block;}
+.footer-logo .dot{color:#FF3B00;}.footer-logo .cur{color:#FF3B00;animation:b-blink 1s infinite;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.5;margin-bottom:20px;}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;}
+.footer-badge-filled{background:rgba(255,59,0,0.15);color:#FF3B00;border:1px solid rgba(255,59,0,0.2);}
+.footer-badge-outline{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.15);}
+.footer-col-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color .15s;text-decoration:none;}
+.footer-links a:hover{color:#FFFFFF;}
+.footer-bottom{background:#0A0A0A;padding:20px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.footer-copy{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:.06em;}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112546757', 'ym');
+
+    ym(112546757, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112546757" style="position:absolute; left:-9999px;" alt="" / loading="lazy"></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" sizes="32x32" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.svg">
+<meta property="og:image" content="https://thnkfor.me/team/team_group.jpg">
+<meta property="og:site_name" content="THNKFOR.ME">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "url": "https://thnkfor.me/cases/",
+      "name": "Кейсы — THNKFOR.ME",
+      "description": "Кейсы AI-агентства THNKFOR.ME: реальные результаты клиентов"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://thnkfor.me/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Кейсы",
+          "item": "https://thnkfor.me/cases/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/mobile2.css">
+<script src="/mobile2.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-main">
+    <a href="https://thnkfor.me" class="header-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+    <nav class="header-nav">
+      <div class="nav-item">
+        <a href="../services/">Услуги</a>
+        <div class="nav-dropdown">
+          <a href="../services/smm/">SMM и соцсети</a>
+          <a href="../services/targeting/">Таргетированная реклама</a>
+          <a href="../services/direct/">Яндекс Директ</a>
+          <div class="nav-subitem">
+          <a href="../services/content-machine/">Контент завод <span class="sub-arrow">›</span></a>
+          <div class="nav-subdropdown">
+            <a href="../services/content-machine/restaurant/">Для ресторанов</a>
+            <a href="../services/content-machine/beauty/">Для салонов красоты</a>
+            <a href="../services/content-machine/ecom/">Для интернет-магазинов</a>
+            <a href="../services/content-machine/marketplace/">Для маркетплейсов</a>
+            <a href="../services/content-machine/fitness/">Для фитнеса</a>
+            <a href="../services/content-machine/construction/">Для строительства</a>
+          </div>
+        </div>
+          <a href="../services/video/">Видеопроизводство</a>
+          <a href="../services/reputation/">Управление репутацией</a>
+          <a href="../services/seo/">Продвижение в поиске</a>
+          <a href="../services/full-package/">Комплексный маркетинг</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../niches/">Ниши</a>
+        <div class="nav-dropdown">
+          <a href="../niches/restaurants/">Рестораны</a>
+          <a href="../niches/beauty/">Салоны красоты</a>
+          <a href="../niches/clinic/">Медицина</a>
+          <a href="../niches/fitness/">Фитнес</a>
+          <a href="../niches/saas/">IT и SaaS</a>
+          <a href="../niches/ecommerce-fashion/">E-commerce</a>
+          <a href="../niches/realestate/">Недвижимость</a>
+          <a href="../niches/">Все ниши →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="./" class="active">Кейсы</a>
+        <div class="nav-dropdown">
+          <a href="werent/">WeRent — Content Machine</a>
+          <a href="tennispoint/">Tennis Point — бот новинок</a>
+          <a href="4room/">4room.studio — три AI-системы</a>
+          <a href="studiosuccess/">Studio Success — AI-ассистент</a>
+          <a href="./">Все кейсы →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../blog/">Блог</a>
+        <div class="nav-dropdown">
+          <a href="../blog/ai-marketing-2026/">AI-маркетинг 2026</a>
+          <a href="../blog/content-factory/">Контент-завод</a>
+          <a href="../blog/midjourney-business/">Midjourney для бизнеса</a>
+          <a href="../blog/prompt-engineering/">Prompt Engineering</a>
+          <a href="../blog/n8n-vs-make/">n8n vs Make</a>
+          <a href="../blog/seo-ai-2026/">SEO и AI 2026</a>
+          <a href="../blog/">Все статьи →</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="../pricing/">Цены</a><a href="../contacts/">Контакты</a>
+      </div>
+      <div class="nav-item">
+        <a href="../about/">О нас</a>
+      </div>
+      <a href="../contacts/" class="header-cta">Обсудить проект</a>
+    
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="header-pills">
+    <a href="../services/smm/" class="header-pill">01 · SMM</a>
+    <a href="../services/targeting/" class="header-pill">02 · Таргет</a>
+    <a href="../services/direct/" class="header-pill">03 · Директ</a>
+    <a href="../services/content-machine/" class="header-pill">04 · Контент</a>
+    <a href="../services/video/" class="header-pill">05 · Видео</a>
+    <a href="../services/reputation/" class="header-pill">06 · Репутация</a>
+    <a href="../services/seo/" class="header-pill">07 · SEO</a>
+    <a href="../services/full-package/" class="header-pill">08 · Комплекс</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-label">Кейсы · THNKFOR.ME</div>
+  <h1 class="hero-h1">Реальные<br>проекты.<br><em>Работающие</em><br>системы.</h1>
+  <p class="hero-sub">Не концепты и не презентации. Каждый кейс — задача клиента, AI-система которую мы построили, и измеримый результат который она даёт прямо сейчас.</p>
+  <div class="hero-counter">
+    <div>
+      <div class="hc-val">4</div>
+      <div class="hc-label">кейса опубликовано</div>
+    </div>
+    <div>
+      <div class="hc-val">3</div>
+      <div class="hc-label">ниши</div>
+    </div>
+    <div>
+      <div class="hc-val">0</div>
+      <div class="hc-label">ручного труда у клиентов</div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">Все</button>
+  <button class="filter-btn" data-filter="saas">SaaS / IT</button>
+  <button class="filter-btn" data-filter="interior">Интерьер</button>
+  <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+  <button class="filter-btn" data-filter="agency">Агентство</button>
+  <button class="filter-btn" data-filter="auto">Авто</button>
+</div>
+
+<!-- CASES -->
+<div class="cases-section">
+  <div class="cases-grid">
+
+    <!-- WeRent -->
+    <div class="case-card" data-category="saas">
+      <a href="werent/" class="case-card-link">
+        <div class="case-card-top">
+          <span class="case-num">01</span>
+          <div class="case-tags">
+            <span class="case-tag">B2B SaaS</span>
+            <span class="case-tag">Content Machine</span>
+            <span class="case-tag">ИИ-аватар</span>
+          </div>
+        </div>
+        <div class="case-client">WeRent</div>
+        <div class="case-title">Content Machine<br>для <em>WeRent</em></div>
+        <p class="case-desc">Платформа аренды недвижимости. Построили систему: AI-аватар генерирует контент на 4 платформы, отчёты в Telegram и уведомления команде — без SMM-менеджера.</p>
+        <div class="case-stats">
+          <div class="case-stat">
+            <div class="stat-num">4</div>
+            <div class="stat-label">платформы</div>
+          </div>
+          <div class="case-stat">
+            <div class="stat-num">0</div>
+            <div class="stat-label">менеджеров</div>
+          </div>
+          <div class="case-stat">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">контент</div>
+          </div>
+        </div>
+      </a>
+      <div class="case-arrow">↗</div>
+    </div>
+
+    <!-- Tennis Point -->
+    <div class="case-card" data-category="ecommerce">
+      <a href="tennispoint/" class="case-card-link">
+        <div class="case-card-top">
+          <span class="case-num">02</span>
+          <div class="case-tags">
+            <span class="case-tag">E-commerce</span>
+            <span class="case-tag">Автопостинг</span>
+            <span class="case-tag">Парсер</span>
+          </div>
+        </div>
+        <div class="case-client">Tennis Point</div>
+        <div class="case-title">Бот, который<br><em>продаёт</em> новинки сам</div>
+        <p class="case-desc">Интернет-магазин спортивных товаров. Бот парсит новинки с сайта каждые 30 минут и сам публикует карточки товаров в ВКонтакте, Telegram и Instagram.</p>
+        <div class="case-stats">
+          <div class="case-stat">
+            <div class="stat-num">0</div>
+            <div class="stat-label">ручных постов</div>
+          </div>
+          <div class="case-stat">
+            <div class="stat-num">&lt;1ч</div>
+            <div class="stat-label">до публикации</div>
+          </div>
+          <div class="case-stat">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label">мониторинг</div>
+          </div>
+        </div>
+      </a>
+      <div class="case-arrow">↗</div>
+    </div>
+
+    <!-- 4room.studio -->
+    <div class="case-card" data-category="interior">
+      <a href="4room/" class="case-card-link">
+        <div class="case-card-top">
+          <span class="case-num">03</span>
+          <div class="case-tags">
+            <span class="case-tag">Интерьер</span>
+            <span class="case-tag">Дзен</span>
+            <span class="case-tag">Новый бренд</span>
+          </div>
+        </div>
+        <div class="case-client">4room.studio</div>
+        <div class="case-title">Три AI-системы<br>для <em>4room</em></div>
+        <p class="case-desc">Дизайн-студия. Автопостинг SMM, Дзен-машина на семантических кластерах, и с нуля — международный бренд 4room.me: брендинг, сайт, контент-план. Всё через нейросети.</p>
+        <div class="case-stats">
+          <div class="case-stat">
+            <div class="stat-num">3</div>
+            <div class="stat-label">AI-системы</div>
+          </div>
+          <div class="case-stat">
+            <div class="stat-num">36+</div>
+            <div class="stat-label">статей Дзен</div>
+          </div>
+          <div class="case-stat">
+            <div class="stat-num">EN</div>
+            <div class="stat-label">новый бренд</div>
+          </div>
+        </div>
+      </a>
+      <div class="case-arrow">↗</div>
+    </div>
+
+    <!-- Studio Success -->
+    <div class="case-card" data-category="agency">
+      <a href="studiosuccess/" class="case-card-link">
+        <div class="case-card-top">
+          <span class="case-num">04</span>
+          <div class="case-tags">
+            <span class="case-tag">Агентство</span>
+            <span class="case-tag">Telegram-бот</span>
+            <span class="case-tag">ИИ-ассистент</span>
+          </div>
+        </div>
+        <div class="case-client">Studio Success</div>
+        <div class="case-title">AI-ассистент<br>для <em>SMM-агентства</em></div>
+        <p class="case-desc">Маркетинговое агентство. Контент-завод на 4 платформы и умный Telegram-бот, который помнит всё о каждом проекте — вместо менеджера, почты и ручных таблиц.</p>
+        <div class="case-stats">
+          <div class="case-stat">
+            <div class="stat-num">3×</div>
+            <div class="stat-label">быстрее контент</div>
+          </div>
+          <div class="case-stat">
+            <div class="stat-num">−12ч</div>
+            <div class="stat-label">рутины в неделю</div>
+          </div>
+          <div class="case-stat">
+            <div class="stat-num">0</div>
+            <div class="stat-label">писем и звонков</div>
+          </div>
+        </div>
+      </a>
+      <div class="case-arrow">↗</div>
+    </div>
+
+    <!-- Bahome — SOON -->
+    <div class="case-card soon wide">
+      <div class="case-card-link" style="cursor:default;">
+        <div class="case-card-top">
+          <span class="case-num">05</span>
+          <div class="case-tags">
+            <span class="case-tag">Авто</span>
+            <span class="case-tag">Лидогенерация</span>
+          </div>
+        </div>
+        <div class="soon-badge">
+          <span class="soon-dot"></span>
+          В работе
+        </div>
+        <div class="case-client">Bahome Group</div>
+        <div class="case-title">Кейс в подготовке</div>
+        <p class="case-desc">Скоро расскажем, как выстроили AI-систему для этого проекта. Следите за обновлениями.</p>
+        <div class="soon-placeholder">
+          <div class="soon-line"></div>
+          <div class="soon-line"></div>
+          <div class="soon-line"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cases-cta">
+  <div class="cta-h2">Хотите такой<br>же результат?</div>
+  <p class="cta-sub">Расскажите о задаче — предложим конкретную AI-систему под ваш бизнес. Первая консультация бесплатно.</p>
+  <a href="../contacts/" class="cta-btn">Обсудить проект</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="site-footer">
+    <div>
+      <a href="../" class="footer-logo">THNK<span class="cur">|</span>FOR<span class="dot">.</span>ME</a>
+      <p class="footer-tagline">AI-маркетинговое агентство.<br>Human × Machine.</p>
+      <div class="footer-badges">
+        <span class="footer-badge footer-badge-filled">AI-агентство</span>
+        <span class="footer-badge footer-badge-outline">Москва</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Услуги</div>
+      <div class="footer-links">
+        <a href="../services/smm/">SMM и ведение соцсетей</a>
+        <a href="../services/targeting/">Таргетированная реклама</a>
+        <a href="../services/direct/">Яндекс Директ</a>
+        <a href="../services/content-machine/">Контент завод</a>
+        <a href="../services/video/">Видеопроизводство</a>
+        <a href="../services/reputation/">Управление репутацией</a>
+        <a href="../services/seo/">Продвижение в поиске</a>
+        <a href="../services/full-package/">Комплексный маркетинг</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Ниши</div>
+      <div class="footer-links">
+        <a href="../niches/restaurants/">Рестораны</a>
+        <a href="../niches/beauty/">Салоны красоты</a>
+        <a href="../niches/clinic/">Медицина</a>
+        <a href="../niches/fitness/">Фитнес</a>
+        <a href="../niches/ecommerce-fashion/">Интернет-магазины</a>
+        <a href="../niches/saas/">IT и SaaS</a>
+        <a href="../niches/">Все ниши →</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Компания</div>
+      <div class="footer-links">
+        <a href="../about/">О нас</a>
+        <a href="./">Кейсы</a>
+        <a href="../blog/">Блог</a>
+        <a href="../pricing/">Цены</a><a href="../contacts/">Контакты</a>
+        <a href="../contacts/">Контакты</a>
+        <a href="mailto:hello@thnkfor.me">hello@thnkfor.me</a>
+        <a href="tel:+79956293931">+7 995 629-39-31</a>
+        <a href="https://t.me/anastasiia_thinkfor">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 THNKFOR.ME · hello@thnkfor.me · +7 995 629-39-31 · ИП Мосина А.А.</div>
+    <div class="footer-copy">* Instagram принадлежит Meta, признанной экстремистской организацией в РФ</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    var filter = this.getAttribute('data-filter');
+    document.querySelectorAll('.case-card').forEach(card => {
+      if (filter === 'all' || !card.dataset.category) {
+        card.style.display = '';
+      } else {
+        card.style.display = card.dataset.category === filter ? '' : 'none';
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
