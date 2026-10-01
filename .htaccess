@@ -33,7 +33,6 @@ DirectoryIndex index.html index.php
   <FilesMatch "\.(woff|woff2)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
-  Header set Connection keep-alive
 </IfModule>
 
 RewriteEngine On
