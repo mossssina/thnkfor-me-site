@@ -32,7 +32,7 @@
 }
 .nav-subdropdown a:last-child { border-bottom: none !important; }
 .nav-subdropdown a:hover { color: #FF3B00 !important; background: rgba(255,59,0,0.06) !important; }
-.nav-subitem:hover .nav-subdropdown,
+.nav-item:hover .nav-subdropdown,
 .nav-subitem.sub-open .nav-subdropdown { display: flex; }
 
 /* ── Desktop: click-open dropdown state ────────────────────── */

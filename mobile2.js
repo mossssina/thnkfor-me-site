@@ -99,8 +99,11 @@
       trigger.addEventListener('click', function(e) {
         if (header.classList.contains('nav-open')) return; // mobile accordion handles it
 
-        if (item.classList.contains('click-open')) {
-          // Second click on already-open item → allow navigation
+        var dropdown = item.querySelector('.nav-dropdown');
+        var isVisible = dropdown && parseFloat(getComputedStyle(dropdown).opacity) > 0.5;
+
+        if (item.classList.contains('click-open') || isVisible) {
+          // Dropdown already open (hover or click-open) → navigate
           item.classList.remove('click-open');
           return;
         }
